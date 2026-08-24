@@ -16,6 +16,8 @@ import {
   BookOpen,
   Award,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 
 export const Header: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -136,19 +138,18 @@ export const Header: React.FC = () => {
                     <div className="md:col-span-4 md:border-l border-slate-800 md:pl-6">
                       <div className="h-full rounded-xl bg-gradient-to-b from-brand-orange/20 to-slate-900/80 p-5 border border-brand-orange/30 flex flex-col justify-between">
                         <div>
-                          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-yellow/10 text-brand-yellow text-xs font-semibold mb-3">
-                            <Sparkles className="h-3.5 w-3.5 text-brand-yellow" /> Featured AI
-                          </div>
+                          <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-3">
+                            Featured AI
+                          </Badge>
                           <h4 className="text-base font-bold text-white mb-1">Meet OMNiGRC AI</h4>
                           <p className="text-xs text-slate-300 leading-relaxed mb-4">
                             Autonomous evidence collection, auto-mapped controls, and real-time posture protection.
                           </p>
                         </div>
-                        <Link
-                          href="/get-a-demo"
-                          className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-white bg-brand-orange hover:bg-brand-orange/80 px-4 py-2 rounded-lg transition-colors shadow-md shadow-brand-orange/20"
-                        >
-                          Explore Platform AI <ArrowRight className="h-3.5 w-3.5" />
+                        <Link href="/get-a-demo">
+                          <Button variant="primary" size="sm" className="w-full" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
+                            Explore Platform AI
+                          </Button>
                         </Link>
                       </div>
                     </div>
@@ -345,13 +346,10 @@ export const Header: React.FC = () => {
             >
               Login
             </Link>
-            <Link
-              href="/get-a-demo"
-              className="relative group overflow-hidden rounded-xl bg-brand-orange px-4 sm:px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-orange/25 transition-all duration-300 hover:bg-brand-orange/90 hover:shadow-brand-orange/40 hover:scale-[1.03]"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Book a demo <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
-              </span>
+            <Link href="/get-a-demo">
+              <Button variant="primary" size="sm" rightIcon={<ArrowRight className="h-4 w-4" />}>
+                Book a demo
+              </Button>
             </Link>
           </div>
 
@@ -438,19 +436,11 @@ export const Header: React.FC = () => {
               </Link>
             </div>
             <div className="pt-4 border-t border-slate-800 flex flex-col gap-3">
-              <Link
-                href="/get-a-demo"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-xl border border-slate-700 text-slate-200 font-semibold"
-              >
-                Login
+              <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="outline" className="w-full">Login</Button>
               </Link>
-              <Link
-                href="/get-a-demo"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-xl bg-brand-orange text-white font-semibold shadow-lg shadow-brand-orange/20"
-              >
-                Book a demo
+              <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="primary" className="w-full">Book a demo</Button>
               </Link>
             </div>
           </motion.div>
