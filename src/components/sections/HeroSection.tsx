@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { IsometricHeroVisual } from "@/components/3d/IsometricHeroVisual";
+import { Button } from "@/components/ui/Button";
 
 const frameworks = [
   { name: "SOC 2 Type II", badge: "SOC 2" },
@@ -85,24 +87,22 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto"
         >
-          <Link
-            href="/get-a-demo"
-            className="w-full sm:w-auto relative group overflow-hidden rounded-xl bg-brand-orange px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-xl shadow-brand-orange/30 transition-all duration-300 hover:bg-brand-orange/90 hover:shadow-brand-gold/40 hover:scale-[1.04] active:scale-[0.98]"
-          >
-            <span className="relative z-10 flex items-center justify-center gap-2.5">
-              Book a demo <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-orange via-brand-gold to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <Link href="/get-a-demo" className="w-full sm:w-auto">
+            <Button variant="primary" size="lg" className="w-full sm:w-auto" rightIcon={<ArrowRight className="h-5 w-5" />}>
+              Book a demo
+            </Button>
           </Link>
-          <Link
-            href="/products/audit-management"
-            className="w-full sm:w-auto rounded-xl border border-slate-700 bg-slate-900/60 px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-slate-200 hover:border-brand-peach hover:bg-slate-800 hover:text-white transition-all duration-300 backdrop-blur-sm"
-          >
-            Explore Platform Features
+          <Link href="/products/audit-management" className="w-full sm:w-auto">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              Explore Platform Features
+            </Button>
           </Link>
         </motion.div>
+
+        {/* 3D Isometric Hero Visual */}
+        <IsometricHeroVisual />
       </div>
 
       {/* Framework Badges Marquee Carousel */}
@@ -110,7 +110,7 @@ export const HeroSection: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="relative z-10 w-full border-t border-slate-800/80 bg-slate-950/60 py-4 sm:py-6 backdrop-blur-md"
+        className="relative z-10 w-full border-t border-slate-800/80 bg-slate-950/60 py-4 sm:py-6 backdrop-blur-md mt-8"
       >
         <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 mb-2.5 sm:mb-3 flex items-center justify-between text-[11px] sm:text-xs text-slate-400 font-mono">
           <span className="tracking-widest uppercase text-brand-yellow font-semibold flex items-center gap-2">

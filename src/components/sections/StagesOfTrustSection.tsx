@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Activity } from "lucide-react";
-import { TiltCard } from "@/components/ui/TiltCard";
+import { FloatingDepthCard } from "@/components/3d/FloatingDepthCard";
 
 const stages = [
   {
@@ -92,7 +92,7 @@ export const StagesOfTrustSection: React.FC = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              <TiltCard className="p-6 sm:p-10 lg:p-12 border-brand-orange/30 bg-slate-900/70 hover:border-brand-orange/60">
+              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-brand-orange/30 bg-slate-900/70 hover:border-brand-orange/60">
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
                     card.imageLeft ? "lg:flex-row-reverse" : ""
@@ -172,7 +172,7 @@ export const StagesOfTrustSection: React.FC = () => {
                     </motion.div>
                   </div>
                 </div>
-              </TiltCard>
+              </FloatingDepthCard>
             </motion.div>
           ))}
         </div>

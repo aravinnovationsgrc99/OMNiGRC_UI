@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Layers, Cpu, Eye, ArrowDown, CheckCircle2 } from "lucide-react";
+import { ControlMapping3DGraph } from "@/components/3d/ControlMapping3DGraph";
 
 export const ArchitectureSection: React.FC = () => {
   const [activeTier, setActiveTier] = useState<number | null>(null);
@@ -66,6 +67,11 @@ export const ArchitectureSection: React.FC = () => {
           >
             Real time unified obligations, autonomous operations that execute continuously, and universal transparency across all stakeholders.
           </motion.p>
+        </div>
+
+        {/* 3D Control Mapping Graph Display */}
+        <div className="mb-12 sm:mb-16">
+          <ControlMapping3DGraph />
         </div>
 
         {/* 3-Tier Architecture Graphic */}
