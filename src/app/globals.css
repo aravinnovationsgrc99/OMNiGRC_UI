@@ -5,13 +5,11 @@
 :root {
   --background: #0B0F17;
   --foreground: #F8FAFC;
-  --color-teal: #0F766E;
-  --color-cyan: #06B6D4;
-}
-
-.light {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  --color-orange: #f15e1c;
+  --color-green: #2e936f;
+  --color-yellow: #ffec69;
+  --color-gold: #fab60a;
+  --color-peach: #f7d7b0;
 }
 
 html {
@@ -28,15 +26,15 @@ body {
 
 /* Glassmorphism & Card Styles */
 .glass-panel {
-  background: rgba(30, 41, 59, 0.7);
+  background: rgba(30, 41, 59, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(15, 118, 110, 0.25);
+  border: 1px solid rgba(241, 94, 28, 0.25);
 }
 
 .glass-panel:hover {
-  border-color: rgba(6, 182, 212, 0.4);
-  box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);
+  border-color: rgba(241, 94, 28, 0.5);
+  box-shadow: 0 0 25px rgba(241, 94, 28, 0.15);
 }
 
 .glow-border {
@@ -47,7 +45,7 @@ body {
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.5), rgba(6, 182, 212, 0.5));
+  background: linear-gradient(135deg, rgba(241, 94, 28, 0.5), rgba(250, 182, 10, 0.5));
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -70,11 +68,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #1E293B;
   border-radius: 4px;
-  border: 1px solid rgba(15, 118, 110, 0.3);
+  border: 1px solid rgba(241, 94, 28, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0F766E;
+  background: #f15e1c;
 }
 
 /* Hide scrollbar for clean carousels */
@@ -84,13 +82,4 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Perspective for 3D card tilt */
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.transform-style-3d {
-  transform-style: preserve-3d;
 }

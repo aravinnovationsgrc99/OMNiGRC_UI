@@ -14,7 +14,7 @@ interface VideoModalProps {
 export const VideoModal: React.FC<VideoModalProps> = ({
   isOpen,
   onClose,
-  videoTitle = "Arav'sGRC Platform Demo",
+  videoTitle = "OMNiGRC Platform Demo",
   videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ", // fallback placeholder embed
 }) => {
   return (
@@ -32,14 +32,14 @@ export const VideoModal: React.FC<VideoModalProps> = ({
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            exit={{ opacity: 0, scale: 0.9, y: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative z-10 w-[95vw] max-w-4xl max-h-[90vh] overflow-hidden rounded-2xl border border-brand-teal/40 bg-brand-dark-card shadow-2xl flex flex-col"
+            className="relative z-10 w-[95vw] max-w-4xl max-h-[90vh] overflow-hidden rounded-2xl border border-brand-orange/40 bg-brand-dark-card shadow-2xl flex flex-col"
           >
             <div className="flex items-center justify-between border-b border-slate-800 px-4 sm:px-6 py-3 sm:py-4">
               <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-                <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-brand-teal/20 text-brand-cyan">
-                  <Play className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-brand-cyan" />
+                <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-brand-orange/20 text-brand-orange">
+                  <Play className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-brand-orange" />
                 </div>
                 <h3 className="font-semibold text-xs sm:text-sm text-slate-100 truncate max-w-[200px] sm:max-w-md">{videoTitle}</h3>
               </div>

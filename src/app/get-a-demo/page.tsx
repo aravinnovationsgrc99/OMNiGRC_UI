@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { Shield, CheckCircle2, ArrowRight, Sparkles, Lock, Building, Users } from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 
 export default function GetADemoPage() {
   const router = useRouter();
@@ -36,7 +36,6 @@ export default function GetADemoPage() {
       return;
     }
 
-    // Submit successful -> navigate to thank-you page
     router.push("/thank-you");
   };
 
@@ -45,13 +44,13 @@ export default function GetADemoPage() {
       <Header />
       <main className="pt-32 pb-20 flex-1 relative overflow-hidden">
         {/* Background Orbs */}
-        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-brand-teal/15 blur-[120px]" />
+        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-brand-orange/10 blur-[120px]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text & Benefits Column */}
           <div className="lg:col-span-6 space-y-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-teal/40 bg-brand-teal/10 text-brand-cyan text-xs font-mono tracking-widest uppercase">
-              <Sparkles className="h-3.5 w-3.5" /> SEE ARAV&apos;SGRC IN ACTION
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-orange/40 bg-brand-orange/10 text-brand-yellow text-xs font-mono tracking-widest uppercase font-semibold">
+              <Sparkles className="h-3.5 w-3.5 text-brand-yellow" /> SEE OMNiGRC IN ACTION
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
@@ -59,7 +58,7 @@ export default function GetADemoPage() {
             </h1>
 
             <p className="text-slate-300 text-lg leading-relaxed">
-              Discover how Arav&apos;sGRC automates 98% of compliance ops, reduces audit prep times by 10x, and keeps your posture continuously defensible.
+              Discover how OMNiGRC automates 98% of compliance ops, reduces audit prep times by 10x, and keeps your posture continuously defensible.
             </p>
 
             <div className="space-y-4">
@@ -70,7 +69,7 @@ export default function GetADemoPage() {
                 "Custom pricing proposal & implementation timeline for your team size",
               ].map((benefit, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="p-1 rounded-full bg-emerald-500/20 text-emerald-400 mt-1 shrink-0">
+                  <div className="p-1 rounded-full bg-brand-green/20 text-brand-green mt-1 shrink-0">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <span className="text-slate-200 text-sm font-medium">{benefit}</span>
@@ -79,11 +78,11 @@ export default function GetADemoPage() {
             </div>
 
             <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-brand-teal/20 text-brand-cyan flex items-center justify-center font-bold text-lg">
+              <div className="h-12 w-12 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center font-bold text-lg">
                 5.0
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-mono">G2 LEADER & TOP CHOICE 2026</p>
+                <p className="text-xs text-brand-yellow font-mono font-semibold">G2 LEADER & TOP CHOICE 2026</p>
                 <p className="text-sm font-bold text-white">Rated #1 Autonomous GRC & Compliance Platform</p>
               </div>
             </div>
@@ -95,7 +94,7 @@ export default function GetADemoPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl border border-brand-teal/40 bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
+              className="rounded-3xl border border-brand-orange/30 bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
             >
               <h3 className="text-2xl font-bold text-white mb-2">Request Your Personalized Demo</h3>
               <p className="text-xs text-slate-400 mb-6">Fill in your details and a GRC specialist will connect within 2 hours.</p>
@@ -111,7 +110,7 @@ export default function GetADemoPage() {
                     className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
                       errors.name
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-slate-700 focus:border-brand-cyan focus:ring-brand-cyan"
+                        : "border-slate-700 focus:border-brand-orange focus:ring-brand-orange"
                     }`}
                   />
                   {errors.name && <p className="text-[11px] text-red-400 mt-1">{errors.name}</p>}
@@ -127,7 +126,7 @@ export default function GetADemoPage() {
                     className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
                       errors.email
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-slate-700 focus:border-brand-cyan focus:ring-brand-cyan"
+                        : "border-slate-700 focus:border-brand-orange focus:ring-brand-orange"
                     }`}
                   />
                   {errors.email && <p className="text-[11px] text-red-400 mt-1">{errors.email}</p>}
@@ -144,7 +143,7 @@ export default function GetADemoPage() {
                       className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
                         errors.company
                           ? "border-red-500 focus:ring-red-500"
-                          : "border-slate-700 focus:border-brand-cyan focus:ring-brand-cyan"
+                          : "border-slate-700 focus:border-brand-orange focus:ring-brand-orange"
                       }`}
                     />
                     {errors.company && <p className="text-[11px] text-red-400 mt-1">{errors.company}</p>}
@@ -157,7 +156,7 @@ export default function GetADemoPage() {
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-cyan focus:outline-none focus:ring-1 focus:ring-brand-cyan"
+                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
                     />
                   </div>
                 </div>
@@ -168,7 +167,7 @@ export default function GetADemoPage() {
                     <select
                       value={formData.role}
                       onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-cyan focus:outline-none focus:ring-1 focus:ring-brand-cyan"
+                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
                     >
                       <option value="CTO">CTO / Founder</option>
                       <option value="CISO">CISO / Security VP</option>
@@ -183,7 +182,7 @@ export default function GetADemoPage() {
                     <select
                       value={formData.size}
                       onChange={(e) => setFormData({ ...formData, size: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-cyan focus:outline-none focus:ring-1 focus:ring-brand-cyan"
+                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
                     >
                       <option value="<50">&lt; 50 employees</option>
                       <option value="50-200">50 - 200 employees</option>
@@ -201,7 +200,7 @@ export default function GetADemoPage() {
                     placeholder="e.g. Looking to achieve SOC 2 Type II and ISO 27001 by Q3..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-cyan focus:outline-none focus:ring-1 focus:ring-brand-cyan"
+                    className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
                   />
                 </div>
 
@@ -211,17 +210,17 @@ export default function GetADemoPage() {
                     id="agree"
                     checked={formData.agree}
                     onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
-                    className="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-950 text-brand-teal focus:ring-brand-cyan"
+                    className="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-950 text-brand-orange focus:ring-brand-orange"
                   />
                   <label htmlFor="agree" className="text-xs text-slate-400">
-                    I agree to Arav&apos;sGRC&apos;s Terms of Service and Privacy Policy. My information will remain confidential.
+                    I agree to OMNiGRC&apos;s Terms of Service and Privacy Policy. My information will remain confidential.
                   </label>
                 </div>
                 {errors.agree && <p className="text-[11px] text-red-400">{errors.agree}</p>}
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-brand-teal py-4 text-base font-bold text-white shadow-xl shadow-brand-teal/30 hover:bg-brand-teal/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
+                  className="w-full rounded-xl bg-brand-orange py-4 text-base font-bold text-white shadow-xl shadow-brand-orange/30 hover:bg-brand-orange/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
                 >
                   Book a demo now <ArrowRight className="h-5 w-5" />
                 </button>

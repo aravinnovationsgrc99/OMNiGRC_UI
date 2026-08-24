@@ -78,7 +78,7 @@ export const TiltCard: React.FC<TiltCardProps> = ({
       }}
       className={cn(
         "relative rounded-2xl border border-brand-dark-border bg-brand-dark-card/80 backdrop-blur-md p-6 transition-colors duration-300 w-full max-w-full",
-        isHovered && glow && "border-brand-cyan/40 shadow-lg shadow-brand-teal/10",
+        isHovered && glow && "border-brand-orange/40 shadow-lg shadow-brand-orange/10",
         className
       )}
       {...props}
@@ -87,7 +87,7 @@ export const TiltCard: React.FC<TiltCardProps> = ({
         <div
           className="pointer-events-none absolute -inset-px rounded-2xl opacity-60 transition duration-300"
           style={{
-            background: `radial-gradient(400px circle at 50% 50%, rgba(6, 182, 212, 0.15), transparent 70%)`,
+            background: `radial-gradient(400px circle at 50% 50%, rgba(241, 94, 28, 0.15), transparent 70%)`,
           }}
         />
       )}
