@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Play, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { VideoModal } from "@/components/ui/VideoModal";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const pillars = [
   {
@@ -91,7 +91,7 @@ export const UnifiedPlatformSection: React.FC = () => {
           {pillars.map((pillar) => (
             <TiltCard
               key={pillar.id}
-              className="p-6 sm:p-8 border-brand-orange/30 bg-slate-900/80 hover:border-brand-orange/60 flex flex-col justify-between"
+              className="p-6 sm:p-8 border-brand-orange/30 bg-slate-900/80 hover:border-brand-orange/60 flex flex-col justify-between micro-card"
             >
               <div>
                 <div className="flex items-center justify-between mb-4 gap-2">
@@ -101,7 +101,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                   {/* Pulsing Play Button */}
                   <button
                     onClick={() => setSelectedVideo({ title: pillar.videoTitle, open: true })}
-                    className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-brand-orange/20 text-brand-orange border border-brand-orange/40 hover:bg-brand-orange/40 hover:scale-105 transition-all text-xs font-semibold group shrink-0"
+                    className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-brand-orange/20 text-brand-orange border border-brand-orange/40 hover:bg-brand-orange/40 hover:scale-105 transition-all text-xs font-semibold group shrink-0 micro-btn"
                   >
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
@@ -121,7 +121,9 @@ export const UnifiedPlatformSection: React.FC = () => {
                   {pillar.metrics.map((m, mIdx) => (
                     <div key={mIdx}>
                       <p className="text-[10px] sm:text-[11px] text-slate-400 font-mono truncate">{m.name}</p>
-                      <p className="text-sm sm:text-base font-extrabold text-brand-green">{m.value}</p>
+                      <p className="text-sm sm:text-base font-extrabold text-brand-green">
+                        <AnimatedCounter value={m.value} />
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -132,7 +134,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                 className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-orange hover:text-white transition-colors group"
               >
                 Learn more about {pillar.title}
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-150" />
               </Link>
             </TiltCard>
           ))}
@@ -140,7 +142,7 @@ export const UnifiedPlatformSection: React.FC = () => {
 
         {/* Supporting Feature Cards: Risk Management & Trust Center */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          <TiltCard className="p-6 sm:p-8 border-slate-800 bg-slate-900/60">
+          <TiltCard className="p-6 sm:p-8 border-slate-800 bg-slate-900/60 micro-card">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2.5 rounded-xl bg-brand-orange/20 text-brand-orange shrink-0">
                 <Zap className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -158,7 +160,7 @@ export const UnifiedPlatformSection: React.FC = () => {
             </Link>
           </TiltCard>
 
-          <TiltCard className="p-6 sm:p-8 border-slate-800 bg-slate-900/60">
+          <TiltCard className="p-6 sm:p-8 border-slate-800 bg-slate-900/60 micro-card">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2.5 rounded-xl bg-brand-green/20 text-brand-green shrink-0">
                 <ShieldCheck className="h-5 w-5 sm:h-6 sm:w-6" />
