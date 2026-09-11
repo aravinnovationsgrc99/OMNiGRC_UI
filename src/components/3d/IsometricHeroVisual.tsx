@@ -1,122 +1,348 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { ShieldCheck, Activity, Cpu, CheckCircle2, Zap, Server, Lock } from "lucide-react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Shield,
+  Layers,
+  Database,
+  CheckCircle2,
+  Sparkles,
+  ArrowRight,
+  Eye,
+  Server,
+  FileCheck,
+  AlertTriangle,
+  Lock,
+} from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
+type ActiveTab = "overview" | "risk" | "control" | "framework";
+
 export const IsometricHeroVisual: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<ActiveTab>("overview");
+
   return (
-    <div className="relative w-full max-w-4xl mx-auto my-8 sm:my-12 perspective-1000 px-2 sm:px-4">
-      {/* Background Radial Glow */}
-      <div className="pointer-events-none absolute -inset-4 bg-gradient-to-r from-brand-orange/20 via-brand-gold/15 to-brand-green/20 blur-3xl opacity-60 rounded-full" />
+    <div className="relative w-full max-w-5xl mx-auto my-8 sm:my-12 perspective-1000 px-2 sm:px-4">
+      {/* Background Glow using approved palette */}
+      <div className="pointer-events-none absolute -inset-6 bg-gradient-to-r from-brand-orange/20 via-brand-gold/15 to-brand-green/20 blur-3xl opacity-70 rounded-3xl" />
 
       {/* Main Isometric 3D Board Surface */}
       <motion.div
-        initial={{ opacity: 0, rotateX: 12, rotateY: -10, y: 30 }}
-        animate={{ opacity: 1, rotateX: 8, rotateY: -6, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="relative rounded-3xl border border-brand-orange/30 bg-[#0F172A]/90 p-5 sm:p-8 shadow-2xl backdrop-blur-xl transform-gpu"
+        initial={{ opacity: 0, rotateX: 10, rotateY: -4, y: 30 }}
+        animate={{ opacity: 1, rotateX: 6, rotateY: -3, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        className="relative rounded-3xl border border-brand-orange/30 bg-[#0F172A]/95 p-4 sm:p-7 shadow-2xl backdrop-blur-2xl transform-gpu"
         style={{
           transformStyle: "preserve-3d",
-          boxShadow: "0 25px 50px -12px rgba(241, 94, 28, 0.15), 0 0 30px rgba(15, 23, 42, 0.9)",
+          boxShadow:
+            "0 25px 50px -12px rgba(241, 94, 28, 0.2), 0 0 40px rgba(15, 23, 42, 0.95)",
         }}
       >
-        {/* Top Control Bar */}
-        <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-          <div className="flex items-center gap-3">
-            <div className="h-3 w-3 rounded-full bg-red-500/80" />
-            <div className="h-3 w-3 rounded-full bg-amber-500/80" />
-            <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
-            <span className="text-xs font-mono text-slate-300 font-semibold pl-2">
-              OMNiGRC Autonomous Posture Engine v4.2
+        {/* Top Operational Status Bar */}
+        <div className="flex flex-wrap items-center justify-between border-b border-slate-800 pb-3.5 mb-5 gap-3">
+          <div className="flex items-center gap-2.5">
+            <div className="flex gap-1.5">
+              <div className="h-2.5 w-2.5 rounded-full bg-brand-orange" />
+              <div className="h-2.5 w-2.5 rounded-full bg-brand-gold" />
+              <div className="h-2.5 w-2.5 rounded-full bg-brand-green" />
+            </div>
+            <span className="text-xs font-mono text-slate-300 font-semibold pl-1">
+              OMNiGRC Connected Operating System
             </span>
           </div>
+
           <div className="flex items-center gap-2">
-            <Badge variant="success" icon={<Activity className="h-3 w-3 animate-pulse" />}>
-              24/7 Telemetry Active
+            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-green/15 border border-brand-green/30 text-[11px] font-mono text-brand-green font-medium">
+              <Eye className="h-3 w-3" /> Human-in-the-Loop Active
+            </span>
+            <Badge variant="orange" size="sm">
+              Tenant Isolated
             </Badge>
           </div>
         </div>
 
-        {/* Inner Grid Dashboard Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-          {/* Posture Score Ring Card */}
-          <div className="md:col-span-5 rounded-2xl border border-slate-800 bg-slate-950/80 p-5 flex flex-col justify-between">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
-                Global Trust Score
-              </span>
-              <Badge variant="orange">SOC 2 + ISO</Badge>
-            </div>
-
-            <div className="flex items-center justify-center my-4 relative">
-              {/* Circular Gauge */}
-              <div className="h-32 w-32 rounded-full border-4 border-brand-green/30 border-t-brand-green flex flex-col items-center justify-center relative shadow-lg shadow-brand-green/10">
-                <span className="text-3xl font-extrabold text-white">99.4%</span>
-                <span className="text-[9px] font-mono text-brand-green uppercase font-bold">Defensible</span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-2 text-center text-xs">
-              <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
-                <p className="text-[10px] text-slate-400">Controls Met</p>
-                <p className="font-bold text-white">412 / 412</p>
-              </div>
-              <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
-                <p className="text-[10px] text-slate-400">Vendor Risk</p>
-                <p className="font-bold text-brand-green">0 Unmitigated</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Real-time Telemetry Stream */}
-          <div className="md:col-span-7 rounded-2xl border border-slate-800 bg-slate-950/80 p-5 space-y-3">
-            <div className="flex items-center justify-between border-b border-slate-800/80 pb-2">
-              <span className="text-[10px] font-mono text-brand-yellow uppercase tracking-wider font-bold flex items-center gap-1.5">
-                <Zap className="h-3.5 w-3.5 text-brand-orange" /> Real-time Evidence Sync
-              </span>
-              <span className="text-[10px] font-mono text-slate-400">Last check: 2s ago</span>
-            </div>
-
-            {[
-              { node: "AWS Production Cloud", status: "MFA & Encryption Verified", icon: Server },
-              { node: "Okta Identity Provider", status: "Deprovisioning Policy Enforced", icon: Lock },
-              { node: "GitHub Code Repositories", status: "Secret Scanning Clean", icon: Cpu },
-              { node: "ISO 42001 AI Model Registry", status: "LLM Privacy Guardrail Active", icon: ShieldCheck },
-            ].map((stream, sIdx) => {
-              const Icon = stream.icon;
-              return (
-                <div
-                  key={sIdx}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs"
-                >
-                  <div className="flex items-center gap-2.5 truncate">
-                    <Icon className="h-4 w-4 text-brand-orange shrink-0" />
-                    <span className="font-medium text-slate-200 truncate">{stream.node}</span>
-                  </div>
-                  <span className="text-[10px] font-mono text-brand-green flex items-center gap-1 shrink-0 ml-2">
-                    <CheckCircle2 className="h-3 w-3 text-brand-green" /> {stream.status}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
+        {/* Tab Switcher for Operational Perspective */}
+        <div className="flex items-center gap-2 mb-5 overflow-x-auto no-scrollbar pb-1">
+          {[
+            { id: "overview", label: "Connected GRC Flow" },
+            { id: "risk", label: "Risk Register & Heatmap" },
+            { id: "control", label: "Control Mapping & AI Suggest" },
+            { id: "framework", label: "5 Supported Frameworks" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as ActiveTab)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all whitespace-nowrap ${
+                activeTab === tab.id
+                  ? "bg-brand-orange text-white shadow-md shadow-brand-orange/30"
+                  : "bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
-        {/* Floating 3D Depth Card Overlay (Desktop) */}
+        {/* Content based on Active Tab */}
+        <AnimatePresence mode="wait">
+          {activeTab === "overview" && (
+            <motion.div
+              key="overview"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-4"
+            >
+              {/* Node 1: Risk & Asset Layer */}
+              <div className="md:col-span-4 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-3 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-brand-yellow font-bold flex items-center gap-1">
+                      <AlertTriangle className="h-3 w-3 text-brand-gold" /> Risk & Asset Layer
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400">Live Posture</span>
+                  </div>
+                  <h4 className="text-sm font-bold text-white mb-2">Connected Asset Inventory</h4>
+                  <div className="space-y-2 text-xs">
+                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Server className="h-3.5 w-3.5 text-brand-orange shrink-0" />
+                        <span className="text-slate-200 truncate">Production Cloud DB</span>
+                      </div>
+                      <span className="text-[10px] font-mono text-brand-peach">Asset #41</span>
+                    </div>
+                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Database className="h-3.5 w-3.5 text-brand-gold shrink-0" />
+                        <span className="text-slate-200 truncate">Customer PII Store</span>
+                      </div>
+                      <span className="text-[10px] font-mono text-brand-gold">High Impact</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-brand-orange/10 border border-brand-orange/20 text-[11px] text-slate-300">
+                  <p className="font-semibold text-brand-yellow">Risk Linkage:</p>
+                  <p className="text-[10px] text-slate-400">Linked to 4 controls & 2 active treatment plans</p>
+                </div>
+              </div>
+
+              {/* Node 2: Advisory AI Mapping Engine */}
+              <div className="md:col-span-5 rounded-2xl border border-brand-orange/40 bg-slate-950/90 p-4 space-y-3 relative overflow-hidden">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-brand-orange font-bold flex items-center gap-1.5">
+                    <Sparkles className="h-3.5 w-3.5 text-brand-gold" /> Advisory AI Control Matcher
+                  </span>
+                  <Badge variant="ai" size="sm">
+                    Advisory Only
+                  </Badge>
+                </div>
+
+                <div className="p-3 rounded-xl bg-slate-900 border border-brand-orange/30">
+                  <div className="flex items-center justify-between text-[11px] mb-1">
+                    <span className="font-bold text-white">CTRL-084: Mandatory MFA & Passkeys</span>
+                    <span className="font-mono text-brand-green text-[10px]">94% Match</span>
+                  </div>
+                  <p className="text-[10px] text-slate-400 mb-2">
+                    Internal control mapped once. AI suggests matching clauses:
+                  </p>
+                  <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
+                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                      ISO 27001: A.9.4.2
+                    </span>
+                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                      SOC 2: CC6.1
+                    </span>
+                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                      DPDP: Sec 8(5)
+                    </span>
+                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                      Essential 8: MFA-L2
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 text-[11px]">
+                  <span className="text-slate-400">Analyst Review:</span>
+                  <span className="text-brand-green font-semibold flex items-center gap-1">
+                    <CheckCircle2 className="h-3 w-3" /> Approved by GRC Lead
+                  </span>
+                </div>
+              </div>
+
+              {/* Node 3: Compliance & Testing Cadence */}
+              <div className="md:col-span-3 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col justify-between space-y-3">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-brand-green font-bold flex items-center gap-1">
+                      <FileCheck className="h-3 w-3" /> Testing Board
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400">Rolling 30d</span>
+                  </div>
+                  <h4 className="text-sm font-bold text-white mb-2">Evidence Cadence</h4>
+                  <div className="space-y-1.5 text-[11px]">
+                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                      <p className="font-semibold text-slate-200">Access Review</p>
+                      <p className="text-[10px] text-brand-green">Passed • Verified 2d ago</p>
+                    </div>
+                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                      <p className="font-semibold text-slate-200">Encryption Audit</p>
+                      <p className="text-[10px] text-brand-gold">Due in 14 days</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                  <span>5 Frameworks</span>
+                  <span className="text-brand-yellow">100% Auditable</span>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === "risk" && (
+            <motion.div
+              key="risk"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-4"
+            >
+              <div className="md:col-span-7 rounded-2xl border border-slate-800 bg-slate-950/90 p-4">
+                <h4 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
+                  <AlertTriangle className="h-4 w-4 text-brand-orange" /> 5x5 Risk Heatmap & Register
+                </h4>
+                <p className="text-xs text-slate-400 mb-4">
+                  Log, score (Likelihood × Impact), and evaluate residual risk after applying security controls.
+                </p>
+                <div className="grid grid-cols-5 gap-1.5 text-center text-[10px] font-mono">
+                  {["Low", "Low", "Med", "High", "Critical", "Low", "Low", "Med", "Med", "High", "Low", "Low", "Med", "Med", "High", "Low", "Low", "Low", "Med", "Med", "Low", "Low", "Low", "Low", "Med"].map((lvl, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-2 rounded font-bold transition-all ${
+                        lvl === "Critical"
+                          ? "bg-brand-orange text-white border border-brand-orange/80 shadow-md shadow-brand-orange/40"
+                          : lvl === "High"
+                          ? "bg-brand-gold/20 text-brand-gold border border-brand-gold/40"
+                          : lvl === "Med"
+                          ? "bg-brand-yellow/15 text-brand-yellow border border-brand-yellow/30"
+                          : "bg-brand-green/10 text-brand-green border border-brand-green/20"
+                      }`}
+                    >
+                      {lvl[0]}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="md:col-span-5 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-mono text-brand-yellow uppercase font-semibold">Active Risk Items</span>
+                  <div className="space-y-2 mt-2 text-xs">
+                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                      <p className="font-bold text-white">RSK-102: Vendor API Downtime</p>
+                      <p className="text-[10px] text-slate-400">Score: 16 (High) → Residual: 6 (Low)</p>
+                    </div>
+                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                      <p className="font-bold text-white">RSK-088: Cloud Access Drift</p>
+                      <p className="text-[10px] text-slate-400">Score: 20 (Critical) → Mitigated</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-2 rounded-lg bg-brand-green/15 border border-brand-green/30 text-[11px] text-brand-green font-mono">
+                  All risks map directly to controls & assets
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === "control" && (
+            <motion.div
+              key="control"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-4"
+            >
+              <div className="md:col-span-6 rounded-2xl border border-brand-orange/40 bg-slate-950/90 p-4">
+                <span className="text-[10px] font-mono uppercase text-brand-yellow font-bold">1. Control Definition</span>
+                <div className="mt-2 p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                  <p className="text-xs font-bold text-white">CTRL-019: Automated Patch Management</p>
+                  <p className="text-[11px] text-slate-300">
+                    &quot;Critical vulnerabilities must be patched within 14 days of public disclosure with rollback tests.&quot;
+                  </p>
+                  <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-brand-peach">
+                    <Lock className="h-3 w-3" /> Redacted payload sent to LLM router
+                  </div>
+                </div>
+              </div>
+              <div className="md:col-span-6 rounded-2xl border border-slate-800 bg-slate-950/90 p-4 flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-mono uppercase text-brand-green font-bold">2. AI Suggestion + Human Review</span>
+                  <div className="mt-2 space-y-2 text-xs">
+                    <div className="p-2 rounded-lg bg-slate-900 border border-brand-green/30 flex items-center justify-between">
+                      <span className="text-slate-200">ISO 27001:2022 A.8.8 Management of Tech Vulns</span>
+                      <span className="text-brand-green font-mono text-[10px]">96% Conf</span>
+                    </div>
+                    <div className="p-2 rounded-lg bg-slate-900 border border-brand-green/30 flex items-center justify-between">
+                      <span className="text-slate-200">SOC 2 CC7.1 Vulnerability Scans</span>
+                      <span className="text-brand-green font-mono text-[10px]">92% Conf</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-2 rounded-lg bg-brand-orange/15 border border-brand-orange/30 text-[11px] text-brand-yellow font-mono text-center">
+                  Human analyst approval required before committing to Postgres
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === "framework" && (
+            <motion.div
+              key="framework"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-2 sm:grid-cols-5 gap-3"
+            >
+              {[
+                { name: "ISO 27001:2022", badge: "ISMS Global", count: "93 Controls" },
+                { name: "SOC 2 Type II", badge: "Trust Services", count: "Common Criteria" },
+                { name: "GDPR / UK GDPR", badge: "EU & UK Privacy", count: "Data Protection" },
+                { name: "DPDP Act 2023", badge: "India Privacy", count: "Fiduciary Rules" },
+                { name: "Essential 8", badge: "Australian Cyber", count: "Mitigation Strat" },
+              ].map((fw, idx) => (
+                <div
+                  key={idx}
+                  className="p-3.5 rounded-xl border border-slate-800 bg-slate-950/80 text-center hover:border-brand-orange/50 transition-all"
+                >
+                  <Shield className="h-5 w-5 text-brand-orange mx-auto mb-2" />
+                  <p className="font-bold text-xs text-white">{fw.name}</p>
+                  <p className="text-[10px] text-brand-yellow font-mono mt-1">{fw.badge}</p>
+                  <p className="text-[9px] text-slate-400 font-mono mt-0.5">{fw.count}</p>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Floating Operational Badge Overlay */}
         <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="hidden sm:flex absolute -bottom-6 -right-6 rounded-2xl border border-brand-orange/40 bg-slate-900/95 p-4 shadow-2xl backdrop-blur-xl items-center gap-3"
-          style={{ transform: "translateZ(40px)" }}
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="hidden sm:flex absolute -bottom-5 -right-5 rounded-2xl border border-brand-orange/40 bg-slate-900/95 p-3.5 shadow-2xl backdrop-blur-xl items-center gap-3"
+          style={{ transform: "translateZ(30px)" }}
         >
-          <div className="p-2.5 rounded-xl bg-brand-orange/20 text-brand-orange">
-            <ShieldCheck className="h-6 w-6" />
+          <div className="p-2 rounded-xl bg-brand-orange/20 text-brand-orange">
+            <Layers className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs font-bold text-white">Autonomous TPRM Engine</p>
-            <p className="text-[10px] text-brand-peach font-mono">100% Vendor SOC Reports Parsed</p>
+            <p className="text-xs font-bold text-white">One Connected Workflow</p>
+            <p className="text-[10px] text-brand-peach font-mono">Risk ↔ Asset ↔ Control ↔ Framework</p>
           </div>
         </motion.div>
       </motion.div>

@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Mail, Sparkles, CheckCircle2, Shield } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 export const FinalCtaSection: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -17,9 +18,9 @@ export const FinalCtaSection: React.FC = () => {
 
   return (
     <section className="relative bg-[#0B0F17] py-20 sm:py-28 overflow-hidden border-t border-slate-800">
-      {/* Background Orbs */}
+      {/* Background Orbs using approved colors */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] sm:h-[600px] w-[90vw] max-w-[800px] rounded-full bg-gradient-to-r from-brand-orange/25 via-brand-gold/15 to-transparent blur-[120px] sm:blur-[140px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] sm:h-[600px] w-[90vw] max-w-[800px] rounded-full bg-gradient-to-r from-brand-orange/20 via-brand-gold/15 to-transparent blur-[140px]" />
       </div>
 
       <div className="relative z-10 max-w-5xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -31,32 +32,32 @@ export const FinalCtaSection: React.FC = () => {
           className="space-y-4 sm:space-y-6 mb-16 sm:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-orange/40 bg-brand-orange/10 text-brand-yellow text-xs font-mono tracking-widest uppercase font-semibold">
-            <Sparkles className="h-3.5 w-3.5" /> REINVENTING COMPLIANCE
+            <Shield className="h-3.5 w-3.5" /> DEFEDED GRC OPERATIONS
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            The era of autonomous trust starts now.
+            Connect your risk, assets, and controls today.
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Autonomous trust isn&apos;t a feature upgrade. It&apos;s a fundamental shift in how compliance, risk, and security operate.
+            Move away from disconnected spreadsheets and experience a unified GRC operating workflow designed specifically for lean security teams.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 max-w-md sm:max-w-none mx-auto">
             <Link
               href="/get-a-demo"
-              className="w-full sm:w-auto relative group overflow-hidden rounded-xl bg-brand-orange px-8 py-4 text-base font-semibold text-white shadow-xl shadow-brand-orange/30 transition-all duration-300 hover:bg-brand-orange/90 hover:shadow-brand-gold/40 hover:scale-[1.04]"
+              className="w-full sm:w-auto relative group overflow-hidden rounded-xl bg-brand-orange px-8 py-4 text-base font-semibold text-white shadow-xl shadow-brand-orange/30 transition-all duration-300 hover:bg-brand-orange/90 hover:scale-[1.03]"
             >
               <span className="relative z-10 flex items-center justify-center gap-3">
-                Get started with OMNiGRC <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                Request a Demo <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
 
             <Link
-              href="/get-a-demo"
-              className="w-full sm:w-auto rounded-xl border border-slate-700 bg-slate-900/60 px-8 py-4 text-base font-semibold text-slate-200 hover:border-brand-peach hover:bg-slate-800 hover:text-white transition-all duration-300"
+              href="/pricing"
+              className="w-full sm:w-auto rounded-xl border border-slate-700 bg-slate-900/60 px-8 py-4 text-base font-semibold text-slate-200 hover:border-brand-orange/40 hover:bg-slate-800 hover:text-white transition-all duration-300"
             >
-              Book a live demo
+              Talk to us about GRC
             </Link>
           </div>
         </motion.div>
@@ -75,7 +76,7 @@ export const FinalCtaSection: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white">Subscribe to Ctrl + GRC</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                A bi-monthly GRC newsletter delivering clear insights on frameworks, fines, and security trends—plus access to experts & AMAs.
+                A bi-monthly GRC newsletter delivering clear insights on frameworks, clauses, and practical security operations for lean teams.
               </p>
             </div>
 

@@ -4,8 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { motion } from "framer-motion";
-import { Shield, Sparkles, Award, Users, Globe, ArrowRight, Zap } from "lucide-react";
+import { Shield, Award, Users, Globe, ArrowRight, Zap, CheckCircle2, Lock } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 
 export default function AboutUsPage() {
@@ -15,27 +14,27 @@ export default function AboutUsPage() {
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-cyan mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
               OUR MISSION
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-              Making organizational trust continuous, autonomous, and effortless.
+              Empowering lean GRC teams with connected, practical operations.
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed">
-              We founded Arav&apos;sGRC because traditional compliance tools turned security into an annual nightmare of manual evidence gathering. We believe trust should be real-time, automated, and self-defending.
+              We built OMNiGRC to eliminate the operational chaos between disconnected spreadsheets and overly complex enterprise suites. We believe GRC should be structured, connected, and human-supervised.
             </p>
           </div>
 
-          {/* Stats Grid */}
+          {/* Pillars of Purpose Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
             {[
-              { label: "Companies Powered", val: "3,000+" },
-              { label: "Continuous Telemetry Checks", val: "50M+/Day" },
-              { label: "Supported Frameworks", val: "200+" },
-              { label: "Customer Satisfaction", val: "99.4%" },
+              { label: "Core Documented Workflows", val: "4 Pillars" },
+              { label: "Target Frameworks", val: "5 Standards" },
+              { label: "Human Oversight", val: "Mandatory" },
+              { label: "External Data Transmission", val: "Minimized" },
             ].map((stat, idx) => (
               <div key={idx} className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 text-center">
-                <p className="text-3xl sm:text-4xl font-extrabold text-brand-cyan mb-1">{stat.val}</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-brand-orange mb-1">{stat.val}</p>
                 <p className="text-xs font-mono text-slate-400">{stat.label}</p>
               </div>
             ))}
@@ -44,37 +43,37 @@ export default function AboutUsPage() {
           {/* Values Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             <TiltCard className="p-8 border-slate-800 bg-slate-900/70">
-              <Zap className="h-8 w-8 text-brand-cyan mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Autonomous Operations</h3>
+              <Zap className="h-8 w-8 text-brand-orange mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Connected Workflows</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                We believe repetitive compliance chores should be owned by AI telemetry, not human engineers.
+                Risk registers, asset inventories, controls, and compliance testing belong together in one continuous operating layer.
               </p>
             </TiltCard>
 
             <TiltCard className="p-8 border-slate-800 bg-slate-900/70">
-              <Shield className="h-8 w-8 text-brand-cyan mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Uncompromising Defense</h3>
+              <Lock className="h-8 w-8 text-brand-gold mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Data Minimization</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Compliance shouldn&apos;t be a checkbox document. It should represent real, verifiable security posture.
+                We believe external AI tools should receive only sanitized control text, keeping sensitive organizational data strictly isolated.
               </p>
             </TiltCard>
 
             <TiltCard className="p-8 border-slate-800 bg-slate-900/70">
-              <Globe className="h-8 w-8 text-brand-cyan mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Universal Assurance</h3>
+              <Shield className="h-8 w-8 text-brand-green mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Defensible Auditability</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Giving buyers, prospects, and auditors 100% transparency into security posture instantly.
+                Compliance shouldn&apos;t be an annual scramble. Every review and decision is logged with full version history and auditor-ready proof.
               </p>
             </TiltCard>
           </div>
 
-          <div className="rounded-3xl border border-brand-teal/40 bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">Want to join our team?</h2>
+          <div className="rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to experience OMNiGRC?</h2>
             <p className="text-slate-300 text-sm mb-6 max-w-xl mx-auto">
-              We&apos;re hiring across engineering, AI research, product, and customer success globally.
+              Schedule a personalized demonstration tailored to your target frameworks and team structure.
             </p>
-            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-teal text-white font-bold text-xs hover:bg-brand-teal/90">
-              View Open Careers <ArrowRight className="h-4 w-4" />
+            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-orange text-white font-bold text-xs hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/20">
+              Request a Demo <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

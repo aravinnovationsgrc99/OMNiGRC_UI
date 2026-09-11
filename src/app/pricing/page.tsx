@@ -4,52 +4,52 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, ArrowRight, ShieldCheck, Lock } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 
-const pricingPlans = [
+const pricingTiers = [
   {
-    name: "Startup Launch",
-    desc: "For early-stage startups needing their first SOC 2 or ISO 27001 audit fast.",
-    tag: "BEST FOR SERIES A/B",
-    price: "Custom Tier",
+    name: "Starter",
+    desc: "For lean teams establishing their first structured risk register and target compliance framework.",
+    tag: "FOR LEAN TEAMS",
+    scope: "Talk to us about your requirements",
     features: [
-      "1 Framework (SOC 2 or ISO 27001)",
-      "Up to 50 Employee Licenses",
-      "100+ Cloud & Identity Integrations",
-      "Doctor OMNi MDM Agent",
-      "Autonomous Evidence Collector",
-      "Dedicated Audit Success Specialist",
+      "1 Target Framework (ISO 27001 or SOC 2)",
+      "Unified Risk Register & 5x5 Scoring",
+      "Asset & Vendor Inventory Catalog",
+      "Advisory AI Control Mapping (Tier 1 Router)",
+      "Compliance Testing Board (Monthly/Quarterly)",
+      "Immutable Audit Log in PostgreSQL",
     ],
     popular: false,
   },
   {
-    name: "Growth & Scaling",
-    desc: "For growing teams managing multiple frameworks & vendor risks simultaneously.",
-    tag: "MOST POPULAR",
-    price: "Custom Tier",
+    name: "Growth",
+    desc: "For expanding security teams managing multiple frameworks and regional obligations simultaneously.",
+    tag: "MOST PRACTICAL",
+    scope: "Talk to us about your requirements",
     features: [
-      "Up to 3 Frameworks (SOC 2, ISO, HIPAA)",
-      "Unlimited Employee Licenses",
-      "300+ Native Integrations",
-      "Autonomous TPRM Vendor Engine",
-      "Trust Center & AI Security Questionnaire",
-      "24/7 Priority SLA & Auditor Portal",
+      "Multiple Frameworks (ISO 27001, SOC 2, GDPR, DPDP)",
+      "Map-Once Reusable Control Engine",
+      "Asset & PII Data Flow Tracing",
+      "Tiered AI Router with Data Minimization",
+      "Rolling 30/60/90-Day Testing Cadences",
+      "Dedicated Onboarding & Audit Workflow Support",
     ],
     popular: true,
   },
   {
-    name: "Enterprise Trust",
-    desc: "For global enterprises demanding multi-cloud compliance, AI governance, and custom SLAs.",
-    tag: "UNLIMITED",
-    price: "Custom Tier",
+    name: "Scale",
+    desc: "For security leaders demanding multi-framework alignment, custom risk tiers, and regional data boundaries.",
+    tag: "MULTI-REGION",
+    scope: "Talk to us about your requirements",
     features: [
-      "Unlimited 200+ Global Frameworks",
-      "ISO 42001 & EU AI Act Governance",
-      "Custom SLA & Custom Framework Builder",
-      "Multi-Tenant Cloud Governance",
-      "Dedicated Enterprise CISO Success Manager",
-      "Custom Contract & SOC Report AI Parser",
+      "All 5 Documented Frameworks + Essential 8",
+      "Regional Data Residency Alignment (India, UK, EU, AU)",
+      "Custom Treatment Plans & Historical Risk Evolution",
+      "High-Priority Support & GRC Architecture Review",
+      "Tenant-Scoped Isolated Storage",
+      "Full Exportable Defensible Audit Packages",
     ],
     popular: false,
   },
@@ -57,16 +57,16 @@ const pricingPlans = [
 
 const faqs = [
   {
-    q: "How does OMNiGRC differ from traditional GRC software?",
-    a: "Traditional GRC tools merely remind you to upload screenshots manually. OMNiGRC connects directly to your cloud infrastructure, HR systems, and code repositories to continuously collect audit-ready evidence 24/7 without manual labor.",
+    q: "How does OMNiGRC pricing work?",
+    a: "OMNiGRC is tailored to the operational scope of your lean GRC team, including target frameworks and asset complexity. Talk to us to receive a transparent proposal without hidden consultant fees.",
   },
   {
-    q: "How long does it take to achieve SOC 2 or ISO 27001 readiness?",
-    a: "With OMNiGRC's automated scope engine and pre-mapped controls, most startups achieve complete audit readiness in 14-21 days compared to 6+ months manually.",
+    q: "How does OMNiGRC's AI control mapping work?",
+    a: "OMNiGRC uses a tiered model routing pipeline with strict data minimization. Sensitive tenant details and employee identities are stripped before external clause correlation calls. AI suggestions are strictly advisory and require human analyst review before saving.",
   },
   {
-    q: "Can we use our own preferred audit partner?",
-    a: "Yes! OMNiGRC works with your existing accredited auditor or connects you with our network of top CPA and ISO auditing partners who perform audits directly in the OMNiGRC Auditor Portal.",
+    q: "What frameworks are supported in OMNiGRC?",
+    a: "OMNiGRC is built with deep, verified taxonomies for ISO 27001:2022, SOC 2 Type II, GDPR / UK GDPR, DPDP Act India 2023, and Essential 8 (Australia).",
   },
 ];
 
@@ -80,24 +80,24 @@ export default function PricingPage() {
         <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
-              TRANSPARENT VALUE
+              TAILORED FOR LEAN GRC
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-              Predictable pricing for continuous trust.
+              Practical tiers for practical security teams.
             </h1>
             <p className="text-slate-300 text-lg">
-              No hidden fees, no surprise consultant charges. Get everything required for audit readiness & continuous assurance.
+              Talk to us about your specific GRC requirements, framework goals, and team timeline.
             </p>
           </div>
 
           {/* Pricing Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3 gap-8 mb-24">
-            {pricingPlans.map((plan, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            {pricingTiers.map((plan, idx) => (
               <TiltCard
                 key={idx}
                 className={`p-8 flex flex-col justify-between ${
                   plan.popular
-                    ? "border-brand-orange bg-slate-900 shadow-2xl shadow-brand-orange/20"
+                    ? "border-brand-orange bg-slate-900 shadow-2xl shadow-brand-orange/20 scale-[1.02]"
                     : "border-slate-800 bg-slate-900/60"
                 }`}
               >
@@ -118,14 +118,14 @@ export default function PricingPage() {
                   <p className="text-xs text-slate-300 mb-6 leading-relaxed">{plan.desc}</p>
 
                   <div className="border-t border-b border-slate-800 py-4 mb-6">
-                    <p className="text-2xl font-extrabold text-white">{plan.price}</p>
-                    <p className="text-[11px] text-slate-400 font-mono">Tailored to your framework scope</p>
+                    <p className="text-lg font-bold text-brand-yellow">{plan.scope}</p>
+                    <p className="text-[11px] text-slate-400 font-mono mt-0.5">Aligned to your lean GRC goals</p>
                   </div>
 
                   <ul className="space-y-3 mb-8 text-xs text-slate-200">
                     {plan.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-center gap-2.5">
-                        <Check className="h-4 w-4 text-brand-green shrink-0" />
+                      <li key={fIdx} className="flex items-start gap-2.5">
+                        <Check className="h-4 w-4 text-brand-green shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -134,13 +134,14 @@ export default function PricingPage() {
 
                 <Link
                   href="/get-a-demo"
-                  className={`w-full py-3 rounded-xl font-bold text-xs text-center transition-all ${
+                  className={`w-full py-3.5 rounded-xl font-bold text-xs text-center transition-all flex items-center justify-center gap-2 ${
                     plan.popular
                       ? "bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/30"
                       : "bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white"
                   }`}
                 >
-                  Get Pricing Quote
+                  <span>Talk to us about {plan.name}</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </TiltCard>
             ))}

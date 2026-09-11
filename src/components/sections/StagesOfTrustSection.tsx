@@ -3,56 +3,40 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Activity } from "lucide-react";
+import { ArrowRight, CheckCircle2, Activity, ShieldAlert, Server, GitMerge } from "lucide-react";
 import { FloatingDepthCard } from "@/components/3d/FloatingDepthCard";
 
 const stages = [
   {
-    stage: "STAGE 01 — STARTUPS",
-    heading: "Your first compliance operator.",
+    stage: "STAGE 01 — LEAN GRC TEAMS",
+    heading: "From spreadsheet chaos to connected operations.",
     description:
-      "No one owns compliance at your startup. That's fine – until it isn't. OMNiGRC steps in as your compliance team: scopes your SOC 2, ISO 27001, or HIPAA program, connects to your systems, closes the gaps, and gets you to audit readiness without hiring expensive consultants.",
-    ctaText: "Explore Startup Automation",
+      "When managing risk registers and control testing manually, work easily falls out of sync. OMNiGRC provides a unified operating layer to catalog assets, score risks, and map controls without hiring expensive consultants.",
+    ctaText: "Explore Lean GRC Workflows",
     ctaLink: "/solutions/startups",
     imageLeft: false,
-    mockupTitle: "Autonomous SOC 2 Scope Engine",
+    mockupTitle: "Connected Operating System",
     mockupItems: [
-      { label: "AWS & GCP Infrastructure", status: "100% Monitored", pass: true },
-      { label: "Identity & MFA Policies", status: "Auto-Verified", pass: true },
-      { label: "Code Repository Security", status: "Zero Gaps", pass: true },
-      { label: "Employee Onboarding Checks", status: "Enforced", pass: true },
+      { label: "Asset & PII Data Flow Tracing", status: "Cataloged", pass: true },
+      { label: "5x5 Likelihood x Impact Risk Scoring", status: "Evaluated", pass: true },
+      { label: "Map-Once Framework Alignment", status: "AI Suggested", pass: true },
+      { label: "Human Review & Decision State", status: "Approved", pass: true },
     ],
   },
   {
-    stage: "STAGE 02 — MID-MARKET",
-    heading: "Trust ops on autopilot.",
+    stage: "STAGE 02 — EXPANDING OPERATIONS",
+    heading: "Multi-framework compliance without duplicate controls.",
     description:
-      "As you scale into mid-market, compliance becomes a continuous daily burden. OMNiGRC continuous telemetry monitors 300+ integrations, automatically collects audit-grade evidence 24/7, and mitigates posture risks before auditors or prospects ever flag them.",
-    ctaText: "Explore Mid-Market Solutions",
+      "As customer demands expand into ISO 27001, SOC 2, and DPDP, managing separate checklists multiplies overhead. OMNiGRC allows you to map internal controls once and align them across multiple standards simultaneously.",
+    ctaText: "Explore Multi-Framework Mapping",
     ctaLink: "/solutions/mid-market",
     imageLeft: true,
-    mockupTitle: "Continuous Compliance Dashboard",
+    mockupTitle: "Multi-Standard Alignment",
     mockupItems: [
-      { label: "Vulnerability Scan Telemetry", status: "Real-time", pass: true },
-      { label: "Autonomous Evidence Collector", status: "Sync Active", pass: true },
-      { label: "Policy Exception Registry", status: "0 Unapproved", pass: true },
-      { label: "Vendor Risk Scorecards", status: "48 Checked", pass: true },
-    ],
-  },
-  {
-    stage: "STAGE 03 — ENTERPRISE",
-    heading: "A defensible trust posture. Always.",
-    description:
-      "For enterprise security leads and CISOs who demand universal posture visibility across cloud environments, third-party vendor ecosystems, and AI governance. OMNiGRC provides real-time risk intelligence, autonomous TPRM, and zero audit surprises.",
-    ctaText: "Explore Enterprise Trust",
-    ctaLink: "/solutions/enterprise",
-    imageLeft: false,
-    mockupTitle: "Enterprise CISO Risk Command Center",
-    mockupItems: [
-      { label: "Multi-Cloud Governance", status: "Unified Posture", pass: true },
-      { label: "Autonomous Vendor TPRM", status: "Continuous Risk", pass: true },
-      { label: "AI Model Policy Registry", status: "ISO 42001 Guarded", pass: true },
-      { label: "Board Trust Reporting", status: "Export Ready", pass: true },
+      { label: "ISO 27001 Annex A Clauses", status: "Linked", pass: true },
+      { label: "SOC 2 Common Criteria", status: "Mapped", pass: true },
+      { label: "DPDP Section 8 Safeguards", status: "Aligned", pass: true },
+      { label: "Rolling 30/60/90d Testing Cadence", status: "On Schedule", pass: true },
     ],
   },
 ];
@@ -61,7 +45,6 @@ export const StagesOfTrustSection: React.FC = () => {
   return (
     <section className="relative bg-[#0B0F17] py-16 sm:py-24 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -69,7 +52,7 @@ export const StagesOfTrustSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold"
           >
-            BUILT FOR EVERY STAGE OF TRUST
+            PRACTICAL GRC MATURITY
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -78,11 +61,10 @@ export const StagesOfTrustSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight"
           >
-            From your first SOC 2 to enterprise continuous assurance.
+            Built for how security teams actually grow.
           </motion.h2>
         </div>
 
-        {/* Stage Cards */}
         <div className="space-y-12 sm:space-y-20">
           {stages.map((card, idx) => (
             <motion.div
@@ -98,7 +80,6 @@ export const StagesOfTrustSection: React.FC = () => {
                     card.imageLeft ? "lg:flex-row-reverse" : ""
                   }`}
                 >
-                  {/* Content Column */}
                   <div
                     className={`lg:col-span-6 space-y-4 sm:space-y-6 ${
                       card.imageLeft ? "lg:order-2" : "lg:order-1"
@@ -126,41 +107,34 @@ export const StagesOfTrustSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Mockup Display Column */}
                   <div
                     className={`lg:col-span-6 ${
                       card.imageLeft ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.3 }}
-                      className="rounded-2xl border border-slate-700 bg-slate-950 p-5 sm:p-6 shadow-2xl relative overflow-hidden"
-                    >
-                      {/* Top bar header of mockup */}
+                    <div className="rounded-2xl border border-slate-700 bg-slate-950 p-5 sm:p-6 shadow-2xl relative overflow-hidden">
                       <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
                         <div className="flex items-center gap-2">
-                          <div className="h-3 w-3 rounded-full bg-red-500/80" />
-                          <div className="h-3 w-3 rounded-full bg-amber-500/80" />
-                          <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
-                          <span className="ml-2 text-xs font-mono text-slate-400 truncate max-w-[150px] sm:max-w-none">
+                          <div className="h-2.5 w-2.5 rounded-full bg-brand-orange" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-brand-gold" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-brand-green" />
+                          <span className="ml-2 text-xs font-mono text-slate-400">
                             {card.mockupTitle}
                           </span>
                         </div>
-                        <span className="flex items-center gap-1 text-[11px] text-brand-green font-mono shrink-0">
-                          <Activity className="h-3.5 w-3.5 animate-pulse" /> Live Telemetry
+                        <span className="text-[11px] text-brand-green font-mono">
+                          Live Posture
                         </span>
                       </div>
 
-                      {/* Mockup Checklist items */}
-                      <div className="space-y-2.5 sm:space-y-3">
+                      <div className="space-y-2.5">
                         {card.mockupItems.map((item, itemIdx) => (
                           <div
                             key={itemIdx}
                             className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-xs"
                           >
                             <div className="flex items-center gap-2.5 truncate">
-                              <CheckCircle className="h-4 w-4 text-brand-green shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-brand-green shrink-0" />
                               <span className="text-slate-200 font-medium truncate">{item.label}</span>
                             </div>
                             <span className="px-2 py-0.5 rounded bg-brand-green/15 text-brand-green font-mono font-semibold shrink-0 ml-2">
@@ -169,7 +143,7 @@ export const StagesOfTrustSection: React.FC = () => {
                           </div>
                         ))}
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               </FloatingDepthCard>

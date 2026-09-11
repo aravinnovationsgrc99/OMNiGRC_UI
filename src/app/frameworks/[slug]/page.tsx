@@ -4,63 +4,63 @@ import React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Shield, ArrowRight, CheckCircle2, FileCheck } from "lucide-react";
+import { Shield, ArrowRight, CheckCircle2, FileCheck2, Lock } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 
 const frameworkDetails: { [key: string]: { title: string; subtitle: string; desc: string; controls: string[] } } = {
   "soc-2": {
-    title: "SOC 2 Type II Compliance Automation",
-    subtitle: "Achieve and maintain SOC 2 Type II compliance continuously",
-    desc: "Arav'sGRC maps Trust Services Criteria (Security, Availability, Confidentiality, Processing Integrity, Privacy), collects evidence natively, and manages your audit end-to-end.",
+    title: "SOC 2 Type II Alignment & Workflow",
+    subtitle: "Trust Services Criteria for Security, Availability, and Privacy",
+    desc: "OMNiGRC helps lean teams map technical policies and testing dates to AICPA Common Criteria (CC1-CC9). Evidence testing cadences are managed directly on the Compliance Board.",
     controls: [
-      "CC1.0 - CC9.0 Common Criteria pre-mapped controls",
-      "Automated infrastructure & access telemetry",
-      "Continuous gap detection & policy generator",
-      "Direct Auditor Express Portal integration",
+      "CC1.0 - CC5.0 Control Environment & Risk Assessment mapping",
+      "CC6.0 Logical access, password policies, and MFA verification",
+      "CC7.0 System operations & vulnerability management cadence",
+      "CC8.0 - CC9.0 Change management and risk mitigation tracking",
     ],
   },
   "iso-27001": {
-    title: "ISO 27001:2022 ISMS Automation",
-    subtitle: "Complete Annex A controls & ISMS risk management",
-    desc: "Automate your Information Security Management System (ISMS) under ISO 27001:2022 standards. Conduct risk assessments, internal audits, and Annex A control mapping effortlessly.",
+    title: "ISO 27001:2022 ISMS Operations",
+    subtitle: "Information Security Management System & Annex A Controls",
+    desc: "Manage your ISMS risk register, Annex A control mapping, and Statement of Applicability (SoA) within OMNiGRC without spreadsheet duplication.",
     controls: [
-      "93 Annex A controls automatically mapped",
-      "ISO 27001 Risk Treatment Plan (RTP) generator",
-      "Statement of Applicability (SoA) auto-builder",
-      "Continuous management review evidence sync",
-    ],
-  },
-  hipaa: {
-    title: "HIPAA Compliance & ePHI Security",
-    subtitle: "Protect electronic Protected Health Information (ePHI)",
-    desc: "Fulfill HIPAA Security, Privacy, and Breach Notification Rules. Automatically verify access controls, encryption, and Business Associate Agreements (BAAs).",
-    controls: [
-      "Administrative, Physical, and Technical Safeguards",
-      "ePHI encryption & access audit log verification",
-      "Business Associate Agreement (BAA) tracker",
-      "Employee HIPAA security awareness training",
+      "A.5 Organizational controls (policies, asset management, roles)",
+      "A.6 People controls (screening, terms of employment, awareness)",
+      "A.7 Physical security safeguards and working areas",
+      "A.8 Technological controls (access, malware, backup, encryption)",
     ],
   },
   gdpr: {
-    title: "GDPR & EU Privacy Assurance",
-    subtitle: "Fulfill EU General Data Protection Regulation requirements",
-    desc: "Manage Data Protection Impact Assessments (DPIAs), Subject Access Requests (SARs), data mapping, and cross-border data transfer compliance.",
+    title: "GDPR / UK GDPR Data Protection",
+    subtitle: "European & UK General Data Protection Regulation Safeguards",
+    desc: "Track asset repositories, PII data flows, and technical safeguards. Link privacy risks directly to operational controls and human-approved mitigation plans.",
     controls: [
-      "Record of Processing Activities (RoPA) builder",
-      "DPIA impact assessment workflow",
-      "Data subject consent & opt-out tracking",
-      "Data breach notification SLAs",
+      "Article 30 Record of Processing Activities (RoPA) asset tracing",
+      "Article 32 Technical and organizational security safeguards",
+      "Article 33 & 34 Incident logging & breach notification protocols",
+      "Article 35 Data Protection Impact Assessment (DPIA) linkages",
     ],
   },
   dpdp: {
     title: "DPDP Act India 2023 Compliance",
-    subtitle: "Comply with India's Digital Personal Data Protection Act",
-    desc: "Automate Data Fiduciary responsibilities, consent management, data principal rights, and children's data protection rules under DPDP.",
+    subtitle: "Digital Personal Data Protection Act Fiduciary Operations",
+    desc: "Structured compliance for Indian data fiduciaries. Maintain inventory of personal data flows, processing safeguards, and grievance management controls.",
     controls: [
-      "Data Principal Consent & Notice management",
-      "Significant Data Fiduciary risk assessment",
-      "Data protection officer (DPO) governance portal",
-      "Automated breach notification readiness",
+      "Section 6 Notice and consent mechanism management",
+      "Section 8(5) Reasonable security safeguards & technical controls",
+      "Section 8(6) Personal data breach reporting protocols",
+      "Section 11 Data principal rights & audit trail governance",
+    ],
+  },
+  "essential-8": {
+    title: "Essential 8 Cyber Mitigation (Australia)",
+    subtitle: "Australian Cyber Security Centre (ACSC) Baseline Strategies",
+    desc: "Align technical configurations to ACSC Maturity Levels 1-3. Verify recurring backups, patch management, and admin access controls.",
+    controls: [
+      "Patch Applications & Operating Systems cadences",
+      "Multi-Factor Authentication (MFA) enforcement verification",
+      "Restrict Administrative Privileges review workflows",
+      "Regular Backups & disaster recovery simulation records",
     ],
   },
 };
@@ -75,22 +75,22 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-cyan mb-3 font-semibold inline-block">
-              FRAMEWORK AUTOMATION GUIDE
+            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+              FRAMEWORK WORKFLOW GUIDE
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
               {fw.title}
             </h1>
-            <p className="text-xl text-brand-cyan font-semibold mb-4">{fw.subtitle}</p>
+            <p className="text-lg text-brand-peach font-semibold mb-4">{fw.subtitle}</p>
             <p className="text-slate-300 text-base leading-relaxed">{fw.desc}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             {fw.controls.map((c, idx) => (
-              <TiltCard key={idx} className="p-6 border-brand-teal/30 bg-slate-900/80">
+              <TiltCard key={idx} className="p-6 border-slate-800 bg-slate-900/80">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-brand-teal/20 text-brand-cyan shrink-0">
-                    <FileCheck className="h-5 w-5" />
+                  <div className="p-2 rounded-lg bg-brand-orange/15 text-brand-orange shrink-0">
+                    <FileCheck2 className="h-5 w-5" />
                   </div>
                   <p className="text-sm font-semibold text-white mt-0.5">{c}</p>
                 </div>
@@ -98,11 +98,13 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
             ))}
           </div>
 
-          <div className="rounded-3xl border border-brand-teal/40 bg-slate-900/90 p-10 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-2">Automate {fw.title} with Arav&apos;sGRC</h3>
-            <p className="text-xs text-slate-300 mb-6">See how your current tech stack maps to {fw.title} controls in 10 minutes.</p>
-            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-teal text-white font-bold text-xs hover:bg-brand-teal/90 shadow-lg">
-              Book Framework Demo <ArrowRight className="h-4 w-4" />
+          <div className="rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-2">Map {fw.title} with OMNiGRC</h3>
+            <p className="text-xs text-slate-300 mb-6">
+              See how your controls and assets map to {fw.title} with advisory AI assistance and human review.
+            </p>
+            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-orange text-white font-bold text-xs hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/20">
+              Request a Framework Walkthrough <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

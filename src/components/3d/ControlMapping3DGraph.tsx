@@ -2,98 +2,138 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, Zap, CheckCircle2, Cpu, ArrowRight } from "lucide-react";
+import {
+  Shield,
+  Lock,
+  Cpu,
+  UserCheck,
+  Database,
+  ArrowRight,
+  Sparkles,
+  CheckCircle2,
+  AlertCircle,
+} from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
-const graphNodes = [
+const workflowSteps = [
   {
-    id: "framework",
-    title: "Obligation Layer",
-    badge: "SOC 2 + ISO 27001",
-    color: "brand-orange",
-    desc: "200+ Global Standards & Customer Addendums",
+    step: "01",
+    title: "Analyst UI & Input",
+    scope: "OMNiGRC Boundary",
+    desc: "Analyst creates or imports an internal security control description.",
+    icon: Shield,
+    badge: "Tenant Scoped",
   },
   {
-    id: "controls",
-    title: "Unified Controls",
-    badge: "412 Auto-Mapped",
-    color: "brand-gold",
-    desc: "Single control satisfies multiple frameworks",
+    step: "02",
+    title: "Redaction & Minimization",
+    scope: "OMNiGRC Boundary",
+    desc: "Org names, employee identities, and unrelated tenant data are stripped.",
+    icon: Lock,
+    badge: "Zero Sensitive Data",
   },
   {
-    id: "telemetry",
-    title: "Autonomous Telemetry",
-    badge: "300+ Native Integrations",
-    color: "brand-green",
-    desc: "24/7 API evidence collection & gap detection",
+    step: "03",
+    title: "Tiered Model Router",
+    scope: "External LLM API",
+    desc: "Tier 1: Gemini 2.5 Flash-Lite • Tier 2: Claude Haiku • Fallback: DeepSeek.",
+    icon: Cpu,
+    badge: "Minimized Payload",
   },
   {
-    id: "posture",
-    title: "Trust Posture",
-    badge: "Auditor Ready",
-    color: "brand-yellow",
-    desc: "Zero audit surprises & instant customer proof",
+    step: "04",
+    title: "Validation & Human Decision",
+    scope: "OMNiGRC Boundary",
+    desc: "Schema checked, confidence calculated, human analyst approves before saving.",
+    icon: UserCheck,
+    badge: "Human Decides",
   },
 ];
 
 export const ControlMapping3DGraph: React.FC = () => {
-  const [activeNode, setActiveNode] = useState<string>("telemetry");
+  const [activeStep, setActiveStep] = useState<number>(1);
 
   return (
-    <div className="relative w-full rounded-3xl border border-brand-orange/30 bg-slate-950/90 p-6 sm:p-10 shadow-2xl overflow-hidden">
-      <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-        <Badge variant="ai" icon={<Zap className="h-3 w-3" />} className="mb-2">
-          AUTONOMOUS GRAPH ENGINE
+    <div className="relative w-full rounded-3xl border border-brand-orange/30 bg-slate-950/95 p-6 sm:p-10 shadow-2xl overflow-hidden">
+      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-2">
+          DATA MINIMIZATION ARCHITECTURE
         </Badge>
         <h3 className="text-xl sm:text-3xl font-extrabold text-white">
-          Real-time AI Control Mapping & Evidence Flow
+          The Auditable AI Control Mapping Pipeline
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 mt-2">
-          Click any node below to inspect live assurance dependencies.
+          Click through each architectural stage to see how sensitive context is isolated before external model evaluation.
         </p>
       </div>
 
-      {/* Interactive Node Flow */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10">
-        {graphNodes.map((node, idx) => {
-          const isActive = activeNode === node.id;
+      {/* 4 Steps Interactive Pipeline */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10 mb-8">
+        {workflowSteps.map((s, idx) => {
+          const isCurrent = activeStep === idx;
+          const Icon = s.icon;
           return (
-            <React.Fragment key={node.id}>
-              <motion.div
-                whileHover={{ scale: 1.04, y: -4 }}
-                onClick={() => setActiveNode(node.id)}
-                className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                  isActive
-                    ? "border-brand-orange bg-slate-900 shadow-xl shadow-brand-orange/15"
-                    : "border-slate-800 bg-slate-900/50 hover:border-slate-700"
-                }`}
-              >
+            <motion.div
+              key={idx}
+              whileHover={{ scale: 1.02 }}
+              onClick={() => setActiveStep(idx)}
+              className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
+                isCurrent
+                  ? "border-brand-orange bg-slate-900 shadow-xl shadow-brand-orange/20"
+                  : "border-slate-800 bg-slate-900/50 hover:border-slate-700"
+              }`}
+            >
+              <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="p-2 rounded-xl bg-brand-orange/10 text-brand-orange">
-                    {idx === 0 && <Shield className="h-5 w-5" />}
-                    {idx === 1 && <Cpu className="h-5 w-5" />}
-                    {idx === 2 && <Zap className="h-5 w-5" />}
-                    {idx === 3 && <CheckCircle2 className="h-5 w-5 text-brand-green" />}
+                  <div
+                    className={`p-2 rounded-xl ${
+                      isCurrent ? "bg-brand-orange text-white" : "bg-slate-800 text-brand-orange"
+                    }`}
+                  >
+                    <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-brand-peach">NODE 0{idx + 1}</span>
+                  <span className="text-[10px] font-mono font-bold text-brand-yellow">STAGE {s.step}</span>
                 </div>
+                <h4 className="font-bold text-sm text-white mb-1">{s.title}</h4>
+                <p className="text-[11px] text-slate-400 leading-relaxed mb-3">{s.desc}</p>
+              </div>
 
-                <h4 className="font-bold text-sm text-white mb-1">{node.title}</h4>
-                <p className="text-[11px] text-slate-400 leading-relaxed mb-3">{node.desc}</p>
-
-                <Badge variant="orange" size="sm">
-                  {node.badge}
-                </Badge>
-              </motion.div>
-
-              {idx < graphNodes.length - 1 && (
-                <div className="hidden md:flex items-center justify-center -mx-2">
-                  <ArrowRight className="h-4 w-4 text-brand-orange animate-pulse" />
-                </div>
-              )}
-            </React.Fragment>
+              <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                <span className="text-[9px] font-mono text-slate-400">{s.scope}</span>
+                <span className="text-[10px] font-mono font-semibold text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">
+                  {s.badge}
+                </span>
+              </div>
+            </motion.div>
           );
         })}
+      </div>
+
+      {/* Architectural Isolation Visualizer Callout */}
+      <div className="p-5 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/70 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-brand-green" />
+            <span className="text-xs font-mono font-bold text-brand-green uppercase">
+              OMNiGRC Controlled VPC & Database
+            </span>
+          </div>
+          <p className="text-xs text-slate-300">
+            Tenant isolation, PostgreSQL persistence, risk histories, and human approval states reside securely within OMNiGRC infrastructure.
+          </p>
+        </div>
+
+        <div className="space-y-2 md:border-l border-slate-800 md:pl-6">
+          <div className="flex items-center gap-2">
+            <Shield className="h-4 w-4 text-brand-orange" />
+            <span className="text-xs font-mono font-bold text-brand-orange uppercase">
+              External Stateless AI Boundary
+            </span>
+          </div>
+          <p className="text-xs text-slate-300">
+            External models receive only sanitized text strings for clause correlation. Zero training on customer data. Zero retention.
+          </p>
+        </div>
       </div>
     </div>
   );

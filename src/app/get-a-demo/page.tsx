@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles, Shield, Lock } from "lucide-react";
 
 export default function GetADemoPage() {
   const router = useRouter();
@@ -14,7 +14,7 @@ export default function GetADemoPage() {
     email: "",
     company: "",
     phone: "",
-    role: "CISO",
+    role: "GRC Lead",
     size: "50-200",
     message: "",
     agree: false,
@@ -44,29 +44,29 @@ export default function GetADemoPage() {
       <Header />
       <main className="pt-32 pb-20 flex-1 relative overflow-hidden">
         {/* Background Orbs */}
-        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-brand-orange/10 blur-[120px]" />
+        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-brand-orange/10 blur-[140px]" />
 
         <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text & Benefits Column */}
           <div className="lg:col-span-6 space-y-8">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-orange/40 bg-brand-orange/10 text-brand-yellow text-xs font-mono tracking-widest uppercase font-semibold">
-              <Sparkles className="h-3.5 w-3.5 text-brand-yellow" /> SEE OMNiGRC IN ACTION
+              <Sparkles className="h-3.5 w-3.5 text-brand-gold" /> EXPERIENCE OMNiGRC
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
-              Book a custom demo of the Autonomous Trust Platform.
+              Request a walkthrough of the connected GRC platform.
             </h1>
 
             <p className="text-slate-300 text-lg leading-relaxed">
-              Discover how OMNiGRC automates 98% of compliance ops, reduces audit prep times by 10x, and keeps your posture continuously defensible.
+              See how OMNiGRC unifies risk registers, asset inventories, control mapping, and compliance testing in one connected operating workflow for lean teams.
             </p>
 
             <div className="space-y-4">
               {[
-                "Live walkthrough tailored to your tech stack & target frameworks (SOC 2, ISO, HIPAA, AI)",
-                "See 300+ native integrations and automated evidence telemetry in action",
-                "Learn how Autonomous TPRM and AI Questionnaires save 20+ hours per week",
-                "Custom pricing proposal & implementation timeline for your team size",
+                "Live walkthrough tailored to your target frameworks (ISO 27001, SOC 2, GDPR, DPDP, Essential 8)",
+                "See the 5x5 Risk Matrix connected directly to assets and protective controls",
+                "Explore the Advisory AI control mapper with data minimization & human review",
+                "Review the Compliance Testing Board with rolling 30/60/90-day visibility",
               ].map((benefit, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="p-1 rounded-full bg-brand-green/20 text-brand-green mt-1 shrink-0">
@@ -78,12 +78,12 @@ export default function GetADemoPage() {
             </div>
 
             <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center font-bold text-lg">
-                5.0
+              <div className="h-12 w-12 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center font-bold text-lg shrink-0">
+                <Lock className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-xs text-brand-yellow font-mono font-semibold">G2 LEADER & TOP CHOICE 2026</p>
-                <p className="text-sm font-bold text-white">Rated #1 Autonomous GRC & Compliance Platform</p>
+                <p className="text-xs text-brand-yellow font-mono font-semibold">CONFIDENTIAL &amp; TENANT ISOLATED</p>
+                <p className="text-sm font-bold text-white">Built for Practical GRC Operations</p>
               </div>
             </div>
           </div>
@@ -96,8 +96,8 @@ export default function GetADemoPage() {
               transition={{ duration: 0.5 }}
               className="rounded-3xl border border-brand-orange/30 bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
             >
-              <h3 className="text-2xl font-bold text-white mb-2">Request Your Personalized Demo</h3>
-              <p className="text-xs text-slate-400 mb-6">Fill in your details and a GRC specialist will connect within 2 hours.</p>
+              <h3 className="text-2xl font-bold text-white mb-2">Request Your Demo Walkthrough</h3>
+              <p className="text-xs text-slate-400 mb-6">Fill in your details and a GRC specialist will connect to schedule a time.</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -137,7 +137,7 @@ export default function GetADemoPage() {
                     <label className="block text-xs font-semibold text-slate-300 mb-1">Company Name *</label>
                     <input
                       type="text"
-                      placeholder="Acme Corp"
+                      placeholder="Company Inc."
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
@@ -169,10 +169,10 @@ export default function GetADemoPage() {
                       onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                       className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
                     >
-                      <option value="CTO">CTO / Founder</option>
-                      <option value="CISO">CISO / Security VP</option>
                       <option value="GRC Lead">GRC / Compliance Lead</option>
-                      <option value="IT Lead">IT & Infrastructure Manager</option>
+                      <option value="CISO">CISO / Head of Security</option>
+                      <option value="CTO">CTO / Technical Founder</option>
+                      <option value="IT Lead">IT / SecOps Manager</option>
                       <option value="Other">Other Role</option>
                     </select>
                   </div>
@@ -194,10 +194,10 @@ export default function GetADemoPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Target Frameworks or Message</label>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Target Frameworks or Priorities</label>
                   <textarea
                     rows={3}
-                    placeholder="e.g. Looking to achieve SOC 2 Type II and ISO 27001 by Q3..."
+                    placeholder="e.g. Target ISO 27001 & SOC 2, looking to replace spreadsheets..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
@@ -222,7 +222,7 @@ export default function GetADemoPage() {
                   type="submit"
                   className="w-full rounded-xl bg-brand-orange py-4 text-base font-bold text-white shadow-xl shadow-brand-orange/30 hover:bg-brand-orange/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
                 >
-                  Book a demo now <ArrowRight className="h-5 w-5" />
+                  Request Demo <ArrowRight className="h-5 w-5" />
                 </button>
               </form>
             </motion.div>

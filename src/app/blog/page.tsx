@@ -4,41 +4,41 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { BookOpen, Search, ArrowRight, Sparkles, Calendar, User } from "lucide-react";
+import { Search, ArrowRight, Calendar, User, BookOpen } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 
 const blogPosts = [
   {
     id: 1,
-    title: "Understanding SOC 2 Type II vs Type I: Key Differences & Audit Scope",
-    category: "SOC 2 Guide",
-    date: "Aug 22, 2026",
-    author: "Arav'sGRC Research Team",
-    snippet: "Discover how to choose between SOC 2 Type I and Type II, what auditors look for, and how to automate continuous control evidence.",
+    title: "How to Map a Single Control Across ISO 27001, SOC 2, and DPDP",
+    category: "Control Mapping",
+    date: "Sep 2026",
+    author: "OMNiGRC Architecture Team",
+    snippet: "Learn how lean security teams avoid duplicate policy authoring by designing common internal controls and using advisory AI for clause correlation.",
   },
   {
     id: 2,
-    title: "Navigating ISO 42001 AI Governance: A Step-by-Step CISO Checklist",
-    category: "AI Governance",
-    date: "Aug 18, 2026",
-    author: "Security & AI Team",
-    snippet: "ISO 42001 is the global standard for AI management systems. Learn how to map your LLMs, data pipelines, and AI impact assessments.",
+    title: "Designing a Practical 5x5 Risk Heatmap Connected to Asset Inventory",
+    category: "Risk Management",
+    date: "Sep 2026",
+    author: "OMNiGRC Security Team",
+    snippet: "Why standalone risk spreadsheets drift from reality, and how linking risks directly to database assets and protective safeguards keeps your posture defensible.",
   },
   {
     id: 3,
-    title: "How Autonomous TPRM Reduces Vendor Risk Review Times by 90%",
-    category: "Vendor Risk",
-    date: "Aug 14, 2026",
-    author: "Vendor Risk Architects",
-    snippet: "Static vendor questionnaires are broken. Learn how AI report parsing and live security scorecards eliminate procurement bottlenecks.",
+    title: "Data Minimization in Compliance AI: What Should Never Be Sent to LLMs",
+    category: "AI & Privacy",
+    date: "Aug 2026",
+    author: "Privacy Engineering",
+    snippet: "An architectural deep-dive into payload sanitization, tenant isolation, and why human-in-the-loop oversight is mandatory for compliant AI assistance.",
   },
   {
     id: 4,
-    title: "India DPDP Act 2023: What Global SaaS Companies Must Do Now",
-    category: "Data Privacy",
-    date: "Aug 10, 2026",
-    author: "Global Compliance Team",
-    snippet: "A practical guide for engineering & compliance leaders to comply with India's Digital Personal Data Protection Act requirements.",
+    title: "Establishing a Rolling 30/60/90-Day Compliance Testing Cadence",
+    category: "Audit Readiness",
+    date: "Aug 2026",
+    author: "GRC Operations",
+    snippet: "Moving away from annual pre-audit fire drills by distributing recurring evidence checks among team owners on a structured Kanban testing board.",
   },
 ];
 
@@ -57,14 +57,14 @@ export default function BlogPage() {
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-cyan mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
               CTRL + GRC KNOWLEDGE HUB
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-              Insights on autonomous trust, GRC & AI governance.
+              Practical GRC insights for lean security teams.
             </h1>
             <p className="text-slate-300 text-lg mb-8">
-              Deep dives, compliance guides, and security benchmarks written by GRC architects.
+              Framework breakdowns, risk scoring architectures, and operational best practices written by GRC practitioners.
             </p>
 
             {/* Search Input */}
@@ -75,26 +75,26 @@ export default function BlogPage() {
                 placeholder="Search articles, frameworks, guides..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 pl-11 pr-4 py-3 text-xs text-white placeholder-slate-500 focus:border-brand-cyan focus:outline-none"
+                className="w-full rounded-xl border border-slate-700 bg-slate-900 pl-11 pr-4 py-3 text-xs text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none"
               />
             </div>
           </div>
 
           {/* Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {filteredPosts.map((post) => (
               <TiltCard key={post.id} className="p-8 border-slate-800 bg-slate-900/70 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono mb-4">
-                    <span className="px-2.5 py-1 rounded-full bg-brand-teal/20 text-brand-cyan font-semibold">
+                    <span className="px-2.5 py-1 rounded-full bg-brand-orange/15 text-brand-orange font-semibold">
                       {post.category}
                     </span>
                     <span className="text-slate-400 flex items-center gap-1">
-                      <Calendar className="h-3.5 w-3.5" /> {post.date}
+                      <Calendar className="h-3.5 w-3.5 text-brand-gold" /> {post.date}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-brand-cyan transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 hover:text-brand-orange transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-xs text-slate-300 leading-relaxed mb-6">{post.snippet}</p>
@@ -102,9 +102,9 @@ export default function BlogPage() {
 
                 <div className="flex items-center justify-between border-t border-slate-800/80 pt-4 text-xs">
                   <span className="text-slate-400 font-mono flex items-center gap-1">
-                    <User className="h-3.5 w-3.5" /> {post.author}
+                    <User className="h-3.5 w-3.5 text-brand-green" /> {post.author}
                   </span>
-                  <Link href="/trust-vault" className="text-brand-cyan font-semibold hover:underline flex items-center gap-1">
+                  <Link href="/trust-vault" className="text-brand-orange font-semibold hover:underline flex items-center gap-1">
                     Read Article <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>

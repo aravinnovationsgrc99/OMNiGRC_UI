@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OMNiGRC — Autonomous Assurance & Trust Platform",
+  title: "OMNiGRC — Unified Risk, Asset, and Control Management",
   description:
-    "Trust doesn't wait for your next audit. Neither does OMNiGRC. The world's first Autonomous Trust Platform for compliance, vendor risk, and AI governance.",
+    "The connected GRC operating layer for lean security and compliance teams. Unify risk registers, asset inventories, control mapping, and compliance testing with advisory AI and human-in-the-loop oversight.",
   openGraph: {
-    title: "OMNiGRC — Autonomous Assurance & Trust Platform",
+    title: "OMNiGRC — Unified Risk, Asset, and Control Management",
     description:
-      "Automate SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, and 200+ frameworks with continuous autonomous evidence collection and real-time risk intelligence.",
+      "Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ISO 27001, SOC 2, GDPR, DPDP, and Essential 8.",
     type: "website",
   },
 };
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="antialiased selection:bg-brand-orange selection:text-white bg-[#0B0F17] text-slate-100">
+      <body className="antialiased selection:bg-brand-orange selection:text-white bg-[#0B0F17] text-slate-100 min-h-screen">
         {children}
       </body>
     </html>

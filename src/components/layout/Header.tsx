@@ -9,10 +9,12 @@ import {
   X,
   Shield,
   Sparkles,
-  Zap,
   ArrowRight,
-  Cpu,
-  FileCheck,
+  Server,
+  FileCheck2,
+  CalendarCheck,
+  ShieldAlert,
+  Globe,
   BookOpen,
   Award,
 } from "lucide-react";
@@ -45,7 +47,7 @@ export const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0B0F17]/90 backdrop-blur-md border-b border-brand-orange/20 py-3 shadow-xl"
+          ? "bg-[#0B0F17]/95 backdrop-blur-md border-b border-brand-orange/20 py-3 shadow-xl"
           : "bg-transparent py-4 sm:py-5"
       }`}
     >
@@ -64,24 +66,24 @@ export const Header: React.FC = () => {
                 OMNi<span className="text-brand-orange">GRC</span>
               </span>
               <span className="text-[9px] sm:text-[10px] tracking-widest text-brand-peach -mt-1 font-mono uppercase">
-                Autonomous Assurance
+                Unified GRC Platform
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav Items */}
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
-            {/* Platform Dropdown */}
+            {/* Workflows / Product Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setActiveMenu("platform")}
+              onMouseEnter={() => setActiveMenu("product")}
               onMouseLeave={() => setActiveMenu(null)}
             >
               <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-brand-orange transition-colors rounded-lg hover:bg-slate-800/40">
-                Platform <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "platform" ? "rotate-180 text-brand-orange" : ""}`} />
+                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "product" ? "rotate-180 text-brand-orange" : ""}`} />
               </button>
               <AnimatePresence>
-                {activeMenu === "platform" && (
+                {activeMenu === "product" && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -89,66 +91,64 @@ export const Header: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
                   >
-                    <div className="md:col-span-3 space-y-3">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow font-mono">Use Cases</h4>
+                    <div className="md:col-span-4 space-y-3">
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow font-mono">Four Core Workflows</h4>
                       <ul className="space-y-2 text-sm">
-                        <li><Link href="/products/continuous-monitoring" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2"><Zap className="h-3.5 w-3.5 text-brand-orange"/> Compliance Automation</Link></li>
-                        <li><Link href="/products/continuous-monitoring" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2"><Shield className="h-3.5 w-3.5 text-brand-green"/> Continuous Compliance</Link></li>
-                        <li><Link href="/products/risk-management" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2"><Cpu className="h-3.5 w-3.5 text-brand-gold"/> Risk Intelligence</Link></li>
-                        <li><Link href="/products/audit-management" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2"><FileCheck className="h-3.5 w-3.5 text-brand-orange"/> Audit Readiness</Link></li>
-                      </ul>
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow font-mono pt-3">Industry</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li><Link href="/solutions/startups" className="text-slate-300 hover:text-white">OMNiGRC for SaaS</Link></li>
-                        <li><Link href="/solutions/enterprise" className="text-slate-300 hover:text-white">OMNiGRC for BFSI</Link></li>
-                        <li><Link href="/solutions/mid-market" className="text-slate-300 hover:text-white">OMNiGRC for Healthcare</Link></li>
+                        <li>
+                          <Link href="/products/risk-management" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2">
+                            <ShieldAlert className="h-3.5 w-3.5 text-brand-orange" /> Risk Register &amp; Scoring
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/products/continuous-monitoring" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2">
+                            <Server className="h-3.5 w-3.5 text-brand-gold" /> Asset &amp; Inventory Context
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/products/audit-management" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2">
+                            <FileCheck2 className="h-3.5 w-3.5 text-brand-green" /> Control Mapping &amp; AI
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/products/policy-management" className="text-slate-300 hover:text-brand-peach hover:underline flex items-center gap-2">
+                            <CalendarCheck className="h-3.5 w-3.5 text-brand-peach" /> Compliance Testing Board
+                          </Link>
+                        </li>
                       </ul>
                     </div>
 
-                    <div className="md:col-span-5 space-y-3 md:border-l border-slate-800 md:pl-6">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow font-mono">Products & Features</h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <Link href="/products/audit-management" className="p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
-                          <p className="font-medium text-white">Audit Management</p>
-                          <p className="text-xs text-slate-400">Streamline 100% audit ops</p>
+                    <div className="md:col-span-4 space-y-3 md:border-l border-slate-800 md:pl-6">
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow font-mono">Lean GRC Solutions</h4>
+                      <div className="space-y-2 text-xs">
+                        <Link href="/solutions/startups" className="block p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
+                          <p className="font-bold text-white">For Lean Security Teams</p>
+                          <p className="text-[11px] text-slate-400">Replace manual spreadsheets with unified operations</p>
                         </Link>
-                        <Link href="/products/autonomous-tprm" className="p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
-                          <p className="font-medium text-white">Autonomous TPRM</p>
-                          <p className="text-xs text-slate-400">Vendor risk on autopilot</p>
+                        <Link href="/solutions/mid-market" className="block p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
+                          <p className="font-bold text-white">For GRC Leads &amp; CISOs</p>
+                          <p className="text-[11px] text-slate-400">One control mapped across multiple standards</p>
                         </Link>
-                        <Link href="/products/unified-commitments" className="p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
-                          <p className="font-medium text-white">Unified Commitments</p>
-                          <p className="text-xs text-slate-400">Map obligations live</p>
-                        </Link>
-                        <Link href="/products/ai-governance" className="p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
-                          <p className="font-medium text-white">AI Governance</p>
-                          <p className="text-xs text-slate-400">Live AI registry & risks</p>
-                        </Link>
-                        <Link href="/products/risk-management" className="p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
-                          <p className="font-medium text-white">Risk Register</p>
-                          <p className="text-xs text-slate-400">Quantify & trace risks</p>
-                        </Link>
-                        <Link href="/products/continuous-monitoring" className="p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
-                          <p className="font-medium text-white">Continuous Mon.</p>
-                          <p className="text-xs text-slate-400">24/7 security telemetry</p>
+                        <Link href="/solutions/enterprise" className="block p-2 rounded-lg hover:bg-slate-800/80 transition-colors">
+                          <p className="font-bold text-white">For Audit Readiness</p>
+                          <p className="text-[11px] text-slate-400">Continuous rolling testing &amp; immutable history</p>
                         </Link>
                       </div>
                     </div>
 
                     <div className="md:col-span-4 md:border-l border-slate-800 md:pl-6">
-                      <div className="h-full rounded-xl bg-gradient-to-b from-brand-orange/20 to-slate-900/80 p-5 border border-brand-orange/30 flex flex-col justify-between">
+                      <div className="h-full rounded-xl bg-gradient-to-b from-brand-orange/20 to-slate-900/90 p-5 border border-brand-orange/30 flex flex-col justify-between">
                         <div>
                           <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-3">
-                            Featured AI
+                            Advisory AI Engine
                           </Badge>
-                          <h4 className="text-base font-bold text-white mb-1">Meet OMNiGRC AI</h4>
-                          <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                            Autonomous evidence collection, auto-mapped controls, and real-time posture protection.
+                          <h4 className="text-sm font-bold text-white mb-1">AI Assists. Humans Decide.</h4>
+                          <p className="text-[11px] text-slate-300 leading-relaxed mb-4">
+                            Data-minimized clause correlation with mandatory human review and approval.
                           </p>
                         </div>
                         <Link href="/get-a-demo">
                           <Button variant="primary" size="sm" className="w-full" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
-                            Explore Platform AI
+                            Book a Walkthrough
                           </Button>
                         </Link>
                       </div>
@@ -174,35 +174,32 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-6 shadow-2xl backdrop-blur-xl"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-6 shadow-2xl backdrop-blur-xl"
                   >
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                    <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
                       <div>
-                        <h4 className="font-bold text-white text-base">200+ Supported Compliance Frameworks</h4>
-                        <p className="text-xs text-slate-400">Custom standards & automated control translation</p>
+                        <h4 className="font-bold text-white text-sm">Documented Framework Support</h4>
+                        <p className="text-[11px] text-slate-400">Map once and align across core standards</p>
                       </div>
                       <Link
                         href="/frameworks/soc-2"
                         className="text-xs font-semibold text-brand-orange hover:underline flex items-center gap-1"
                       >
-                        Explore 200+ Frameworks <ArrowRight className="h-3.5 w-3.5" />
+                        Explore Coverage <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {[
-                        { name: "SOC 2 Type II", desc: "Security & Trust", link: "/frameworks/soc-2" },
-                        { name: "ISO 27001", desc: "ISMS Global Standard", link: "/frameworks/iso-27001" },
-                        { name: "PCI-DSS v4.0", desc: "Payment Security", link: "/frameworks/soc-2" },
-                        { name: "HIPAA", desc: "Healthcare Privacy", link: "/frameworks/hipaa" },
-                        { name: "GDPR", desc: "EU Data Protection", link: "/frameworks/gdpr" },
-                        { name: "DPDP", desc: "Digital Personal Data", link: "/frameworks/dpdp" },
-                        { name: "NIST CSF 2.0", desc: "Cybersecurity Frame", link: "/frameworks/iso-27001" },
-                        { name: "CSA STAR", desc: "Cloud Security", link: "/frameworks/soc-2" },
+                        { name: "ISO 27001:2022", desc: "ISMS Global Standard & Annex A", link: "/frameworks/iso-27001" },
+                        { name: "SOC 2 Type II", desc: "Trust Services Criteria Security & Ops", link: "/frameworks/soc-2" },
+                        { name: "GDPR / UK GDPR", desc: "European & British Data Protection", link: "/frameworks/gdpr" },
+                        { name: "DPDP Act 2023", desc: "India Personal Data Protection", link: "/frameworks/dpdp" },
+                        { name: "Essential 8", desc: "Australian Cyber Mitigation Strategies", link: "/frameworks/soc-2" },
                       ].map((fw, idx) => (
                         <Link
                           key={idx}
                           href={fw.link}
-                          className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-brand-orange/60 hover:bg-slate-800 transition-all"
+                          className="p-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-brand-orange/60 hover:bg-slate-800 transition-all"
                         >
                           <p className="font-semibold text-xs text-white">{fw.name}</p>
                           <p className="text-[11px] text-slate-400">{fw.desc}</p>
@@ -213,6 +210,14 @@ export const Header: React.FC = () => {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* How It Works Link */}
+            <a
+              href="#core-workflows"
+              className="px-3 py-2 text-sm font-medium text-slate-200 hover:text-brand-orange transition-colors rounded-lg hover:bg-slate-800/40"
+            >
+              How It Works
+            </a>
 
             {/* Resources Dropdown */}
             <div
@@ -230,64 +235,23 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 sm:grid-cols-2 gap-6"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-5 shadow-2xl backdrop-blur-xl space-y-3"
                   >
-                    <div className="space-y-3">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-brand-yellow font-mono">Knowledge Hub</h4>
-                      <div className="grid grid-cols-2 gap-2 text-sm">
-                        <Link href="/blog" className="text-slate-300 hover:text-white flex items-center gap-2 py-1"><BookOpen className="h-4 w-4 text-brand-orange"/> Blogs</Link>
-                        <Link href="/trust-vault" className="text-slate-300 hover:text-white flex items-center gap-2 py-1"><Award className="h-4 w-4 text-brand-green"/> Ebooks</Link>
-                        <Link href="/trust-vault" className="text-slate-300 hover:text-white flex items-center gap-2 py-1"><Zap className="h-4 w-4 text-brand-gold"/> Calculators</Link>
-                        <Link href="/trust-vault" className="text-slate-300 hover:text-white flex items-center gap-2 py-1"><Award className="h-4 w-4 text-brand-orange"/> Templates</Link>
-                      </div>
-                    </div>
-                    <div className="rounded-xl bg-slate-900 p-4 border border-slate-800 flex flex-col justify-between">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-brand-yellow font-semibold">Featured Report 2026</span>
-                      <h5 className="font-bold text-white text-sm mt-1">State of Autonomous Compliance & AI Governance</h5>
-                      <p className="text-xs text-slate-400 mt-1">Insights from 3,000+ GRC leaders globally.</p>
-                      <Link href="/trust-vault" className="mt-3 text-xs font-semibold text-brand-orange flex items-center gap-1 hover:underline">
-                        Download Report <ArrowRight className="h-3.5 w-3.5"/>
+                    <h4 className="text-xs font-mono uppercase text-brand-yellow font-bold">Knowledge &amp; Insights</h4>
+                    <div className="space-y-2 text-xs">
+                      <Link href="/blog" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-white">
+                        <BookOpen className="h-4 w-4 text-brand-orange" />
+                        <div>
+                          <p className="font-bold">Ctrl + GRC Blog</p>
+                          <p className="text-[10px] text-slate-400">Practical guides for lean GRC teams</p>
+                        </div>
                       </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Features Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMenu("features")}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-brand-orange transition-colors rounded-lg hover:bg-slate-800/40">
-                Features <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "features" ? "rotate-180 text-brand-orange" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {activeMenu === "features" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-6 shadow-2xl backdrop-blur-xl"
-                  >
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                      <Link href="/products/continuous-monitoring" className="p-2 rounded-lg hover:bg-slate-800">
-                        <p className="font-semibold text-white">Vulnerability Assessment</p>
-                        <p className="text-xs text-slate-400">Automated CVE scanner & remediation</p>
-                      </Link>
-                      <Link href="/products/continuous-monitoring" className="p-2 rounded-lg hover:bg-slate-800">
-                        <p className="font-semibold text-white">Access Control & People Ops</p>
-                        <p className="text-xs text-slate-400">Offboarding & MFA verification</p>
-                      </Link>
-                      <Link href="/products/policy-management" className="p-2 rounded-lg hover:bg-slate-800">
-                        <p className="font-semibold text-white">Doctor OMNi MDM</p>
-                        <p className="text-xs text-slate-400">Endpoint compliance agent</p>
-                      </Link>
-                      <Link href="/products/audit-management" className="p-2 rounded-lg hover:bg-slate-800">
-                        <p className="font-semibold text-white">Evidence Collection</p>
-                        <p className="text-xs text-slate-400">Zero manual screenshots</p>
+                      <Link href="/trust-vault" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-white">
+                        <Award className="h-4 w-4 text-brand-green" />
+                        <div>
+                          <p className="font-bold">Resource Center</p>
+                          <p className="text-[10px] text-slate-400">Framework checklists &amp; templates</p>
+                        </div>
                       </Link>
                     </div>
                   </motion.div>
@@ -303,52 +267,26 @@ export const Header: React.FC = () => {
               Pricing
             </Link>
 
-            {/* Company Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMenu("company")}
-              onMouseLeave={() => setActiveMenu(null)}
+            {/* Company Link */}
+            <Link
+              href="/about-us"
+              className="px-3 py-2 text-sm font-medium text-slate-200 hover:text-brand-orange transition-colors rounded-lg hover:bg-slate-800/40"
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-brand-orange transition-colors rounded-lg hover:bg-slate-800/40">
-                Company <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "company" ? "rotate-180 text-brand-orange" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {activeMenu === "company" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full right-0 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-brand-orange/30 bg-[#0F172A] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 sm:grid-cols-2 gap-4"
-                  >
-                    <div className="space-y-2 text-sm">
-                      <h4 className="text-xs font-mono uppercase text-brand-yellow font-semibold">About</h4>
-                      <Link href="/about-us" className="block text-slate-300 hover:text-white py-1">About Us</Link>
-                      <Link href="/about-us" className="block text-slate-300 hover:text-white py-1">Careers (Hiring)</Link>
-                      <Link href="/contact-us" className="block text-slate-300 hover:text-white py-1">Contact Us</Link>
-                    </div>
-                    <div className="space-y-2 text-sm sm:border-l border-slate-800 sm:pl-4">
-                      <h4 className="text-xs font-mono uppercase text-brand-yellow font-semibold">Ecosystem</h4>
-                      <Link href="/about-us" className="block text-slate-300 hover:text-white py-1">SPARK Partners</Link>
-                      <Link href="/trust-vault" className="block text-slate-300 hover:text-white py-1">300+ Integrations</Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+              About
+            </Link>
           </nav>
 
           {/* Right Action CTAs */}
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
-              href="/get-a-demo"
-              className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              href="/contact-us"
+              className="text-xs font-semibold text-slate-300 hover:text-white transition-colors px-3 py-2"
             >
-              Login
+              Contact
             </Link>
             <Link href="/get-a-demo">
-              <Button variant="primary" size="sm" rightIcon={<ArrowRight className="h-4 w-4" />}>
-                Book a demo
+              <Button variant="primary" size="sm" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
+                Request a Demo
               </Button>
             </Link>
           </div>
@@ -375,18 +313,18 @@ export const Header: React.FC = () => {
           >
             <div className="space-y-2">
               <button
-                onClick={() => toggleMobileSection("platform")}
+                onClick={() => toggleMobileSection("workflows")}
                 className="flex items-center justify-between w-full py-2 text-base font-medium text-slate-200 hover:text-brand-orange"
               >
-                <span>Platform</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "platform" ? "rotate-180 text-brand-orange" : ""}`} />
+                <span>Workflows</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-brand-orange" : ""}`} />
               </button>
-              {mobileExpandedSection === "platform" && (
+              {mobileExpandedSection === "workflows" && (
                 <div className="pl-4 space-y-2 text-sm border-l border-brand-orange/30 my-2">
-                  <Link href="/products/audit-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Audit Management</Link>
-                  <Link href="/products/autonomous-tprm" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Autonomous TPRM</Link>
-                  <Link href="/products/unified-commitments" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Unified Commitments</Link>
-                  <Link href="/products/ai-governance" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">AI Governance</Link>
+                  <Link href="/products/risk-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Risk Register</Link>
+                  <Link href="/products/continuous-monitoring" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Asset &amp; Inventory</Link>
+                  <Link href="/products/audit-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Control Mapping</Link>
+                  <Link href="/products/policy-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Compliance Board</Link>
                 </div>
               )}
 
@@ -399,10 +337,10 @@ export const Header: React.FC = () => {
               </button>
               {mobileExpandedSection === "frameworks" && (
                 <div className="pl-4 space-y-2 text-sm border-l border-brand-orange/30 my-2">
+                  <Link href="/frameworks/iso-27001" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">ISO 27001:2022</Link>
                   <Link href="/frameworks/soc-2" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">SOC 2 Type II</Link>
-                  <Link href="/frameworks/iso-27001" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">ISO 27001</Link>
-                  <Link href="/frameworks/hipaa" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">HIPAA</Link>
-                  <Link href="/frameworks/gdpr" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">GDPR</Link>
+                  <Link href="/frameworks/gdpr" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">GDPR / UK GDPR</Link>
+                  <Link href="/frameworks/dpdp" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">DPDP Act India</Link>
                 </div>
               )}
 
@@ -421,26 +359,23 @@ export const Header: React.FC = () => {
                 About Us
               </Link>
               <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-2 text-base font-medium text-slate-200 hover:text-brand-orange"
+              >
+                Ctrl + GRC Blog
+              </Link>
+              <Link
                 href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 text-base font-medium text-slate-200 hover:text-brand-orange"
               >
                 Contact Us
               </Link>
-              <Link
-                href="/trust-vault"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-base font-medium text-slate-200 hover:text-brand-orange"
-              >
-                Trust Vault & Resources
-              </Link>
             </div>
-            <div className="pt-4 border-t border-slate-800 flex flex-col gap-3">
+            <div className="pt-4 border-t border-slate-800">
               <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="outline" className="w-full">Login</Button>
-              </Link>
-              <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="primary" className="w-full">Book a demo</Button>
+                <Button variant="primary" className="w-full">Request a Demo</Button>
               </Link>
             </div>
           </motion.div>
