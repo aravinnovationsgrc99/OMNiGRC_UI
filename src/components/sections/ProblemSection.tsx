@@ -136,7 +136,7 @@ export const ProblemSection: React.FC = () => {
                         <Icon className="h-4 w-4" />
                       </div>
                       <div>
-                        <h4 className="text-sm font-bold text-slate-200">{item.title}</h4>
+                        <h3 className="text-sm font-bold text-slate-200">{item.title}</h3>
                         <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">{item.detail}</p>
                       </div>
                     </div>
@@ -172,7 +172,7 @@ export const ProblemSection: React.FC = () => {
                         <Icon className="h-4 w-4" />
                       </div>
                       <div>
-                        <h4 className="text-sm font-bold text-white">{item.title}</h4>
+                        <h3 className="text-sm font-bold text-white">{item.title}</h3>
                         <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">{item.detail}</p>
                       </div>
                     </div>

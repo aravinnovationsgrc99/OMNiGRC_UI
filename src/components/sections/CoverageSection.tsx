@@ -91,20 +91,36 @@ const documentedFrameworks: FrameworkItem[] = [
       "Maintain vendor registers, asset inventories, and safeguard controls tailored specifically to Indian data fiduciary guidelines.",
   },
   {
-    id: "essential-8",
-    name: "Essential 8",
-    region: "Australia & APAC",
-    badge: "ACSC Mitigation",
+    id: "iso-42001",
+    name: "ISO 42001:2023",
+    region: "Global AI Management",
+    badge: "AIMS Governance",
     scopeDesc:
-      "Australian Cyber Security Centre (ACSC) baseline cyber security mitigation strategies designed to prevent malware and protect data.",
+      "Global standard for Artificial Intelligence Management Systems (AIMS). Focuses on responsible AI, impact assessments, and risk treatment.",
     controlDomains: [
-      "Application Control & Patch Applications",
-      "Configure Microsoft Office Macro Settings",
-      "User Application Hardening & Admin Privileges",
-      "Multi-Factor Authentication & Regular Backups",
+      "AI Impact Assessment & Risk Identification",
+      "Algorithmic Data Quality & Bias Governance",
+      "System Transparency & Model Audit Trail",
+      "Human Oversight & Continuous AIMS Monitoring",
     ],
     omniWorkflow:
-      "Map technical hardening controls to ACSC Maturity Levels 1-3. Verify recurring backup restoration and MFA configurations.",
+      "Track AI models, risk assessments, and algorithmic safeguards within OMNiGRC, linking model assets directly to ISO 42001 clauses.",
+  },
+  {
+    id: "hipaa",
+    name: "HIPAA Security Rule",
+    region: "Healthcare & PHI Data",
+    badge: "Health Data Privacy",
+    scopeDesc:
+      "US healthcare privacy and security framework enforcing Administrative, Physical, and Technical Safeguards for Protected Health Information (PHI).",
+    controlDomains: [
+      "Administrative Safeguards & Access Management",
+      "Physical Safeguards & Workstation Security",
+      "Technical Safeguards (Encryption & Integrity)",
+      "Business Associate Agreements & Breach Response",
+    ],
+    omniWorkflow:
+      "Link PHI assets and vendor registers directly to HIPAA safeguards, tracking audit logging and encryption evidence on the Compliance Board.",
   },
 ];
 
@@ -119,98 +135,103 @@ export const CoverageSection: React.FC = () => {
           <span className="text-xs font-mono uppercase tracking-widest text-amber font-semibold inline-block mb-3">
             DOCUMENTED FRAMEWORK COVERAGE
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            Focused coverage for the frameworks you actually need.
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Six frameworks supported natively out of the box.
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-            We don&apos;t claim 200+ unverified frameworks. OMNiGRC provides deep, structured control mapping for the core standards driving enterprise compliance today.
+          <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            One primary control definition maps seamlessly into ISO 27001, ISO 42001, SOC 2, GDPR, DPDP Act, and HIPAA requirements.
           </p>
         </div>
 
-        {/* Interactive Framework Explorer */}
+        {/* Framework Selector & Detail Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Framework Selection Column */}
-          <div className="lg:col-span-4 space-y-3">
-            <span className="text-xs font-mono text-slate-400 uppercase font-semibold">Select Framework:</span>
+          {/* Framework List */}
+          <div className="lg:col-span-5 space-y-3">
             {documentedFrameworks.map((fw) => {
               const isSelected = selectedFw.id === fw.id;
               return (
                 <button
                   key={fw.id}
                   onClick={() => setSelectedFw(fw)}
-                  className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between ${
+                  className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-center justify-between group ${
                     isSelected
-                      ? "border-teal bg-navy-900 shadow-lg shadow-teal/15 scale-[1.02]"
-                      : "border-navy-700/60 bg-[#0A111F]/70 hover:border-navy-600 hover:bg-navy-900/60"
+                      ? "bg-navy-800/90 border-teal/70 shadow-lg shadow-teal/10"
+                      : "bg-navy-900/50 border-navy-700/60 hover:border-slate-600 hover:bg-navy-800/40"
                   }`}
                 >
-                  <div>
-                    <h3 className="font-bold text-sm text-white">{fw.name}</h3>
-                    <p className="text-[11px] text-slate-400 font-mono mt-0.5">{fw.region}</p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-bold text-white group-hover:text-teal transition-colors">
+                        {fw.name}
+                      </span>
+                      <span className="text-[10px] font-mono text-teal-300 bg-teal/15 px-2 py-0.5 rounded font-semibold">
+                        {fw.badge}
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-400 font-mono">{fw.region}</p>
                   </div>
-                  <span
-                    className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold ${
-                      isSelected ? "bg-teal text-white" : "bg-navy-800 text-amber"
+                  <ArrowRight
+                    className={`h-4 w-4 transition-transform ${
+                      isSelected ? "text-teal translate-x-1" : "text-slate-600 group-hover:text-slate-400"
                     }`}
-                  >
-                    {fw.badge}
-                  </span>
+                  />
                 </button>
               );
             })}
           </div>
 
-          {/* Framework Detail Display Card */}
-          <div className="lg:col-span-8">
+          {/* Active Framework Details */}
+          <div className="lg:col-span-7">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedFw.id}
-                initial={{ opacity: 0, x: 15 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -15 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-3xl border border-teal/30 bg-navy-900/90 p-6 sm:p-8 shadow-2xl backdrop-blur-xl space-y-6"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.25 }}
+                className="p-6 sm:p-8 rounded-3xl bg-navy-900/90 border border-teal/30 space-y-6 shadow-xl"
               >
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-navy-700/60 pb-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-navy-700/60 pb-5">
                   <div>
-                    <span className="text-xs font-mono text-amber font-bold uppercase">
-                      {selectedFw.region}
-                    </span>
-                    <h3 className="text-2xl font-extrabold text-white mt-1">{selectedFw.name}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                      {selectedFw.name}
+                    </h3>
+                    <p className="text-xs font-mono text-slate-400">{selectedFw.region}</p>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-teal/15 border border-teal/30 text-xs font-mono text-teal font-semibold">
-                    Supported in OMNiGRC
-                  </span>
+                  <Link
+                    href={`/frameworks/${selectedFw.id}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-teal-300 hover:underline bg-teal/10 px-3 py-1.5 rounded-lg border border-teal/30"
+                  >
+                    View Workflow Map <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-200 leading-relaxed">
                   {selectedFw.scopeDesc}
                 </p>
 
-                {/* Control Areas Grid */}
-                <div className="space-y-2">
-                  <h4 className="text-xs font-mono text-slate-400 uppercase font-semibold flex items-center gap-1.5">
-                    <Layers className="h-3.5 w-3.5 text-teal" /> Key Control Domains:
-                  </h4>
+                <div className="space-y-3">
+                  <span className="text-xs font-mono text-slate-400 font-semibold uppercase block">
+                    Core Control Domains Tracked:
+                  </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {selectedFw.controlDomains.map((cd, idx) => (
+                    {selectedFw.controlDomains.map((domain, idx) => (
                       <div
                         key={idx}
-                        className="p-3 rounded-xl bg-[#0A111F]/80 border border-navy-700/60 text-xs text-slate-200 flex items-start gap-2.5"
+                        className="flex items-center gap-2 p-3 rounded-xl bg-navy-800/70 border border-navy-700/50 text-xs text-slate-200"
                       >
-                        <CheckCircle className="h-4 w-4 text-teal shrink-0 mt-0.5" />
-                        <span className="font-medium">{cd}</span>
+                        <CheckCircle className="h-4 w-4 text-teal shrink-0" />
+                        <span>{domain}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Connected OMNiGRC Workflow */}
-                <div className="p-4 rounded-2xl bg-teal/10 border border-teal/30 text-xs text-slate-200">
-                  <span className="font-mono text-amber font-bold uppercase block mb-1">
+                <div className="p-4 rounded-xl bg-teal/10 border border-teal/30 space-y-1">
+                  <span className="font-mono text-amber font-bold uppercase block mb-1 text-xs">
                     Connected OMNiGRC Workflow:
                   </span>
-                  <p className="leading-relaxed text-slate-300">{selectedFw.omniWorkflow}</p>
+                  <p className="leading-relaxed text-slate-300 text-xs">{selectedFw.omniWorkflow}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -228,7 +249,7 @@ export const CoverageSection: React.FC = () => {
                 Designed for regional data residency.
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                GRC teams operate in specific legal jurisdictions. OMNiGRC&apos;s deployment architecture supports isolated tenant storage with initial MVP hosting focus on India and the United Kingdom, followed by EU and Australia.
+                GRC teams operate in specific legal jurisdictions. OMNiGRC&apos;s deployment architecture supports isolated tenant storage with initial MVP hosting live in India and the United Kingdom, followed by EU and Australia on the post-launch roadmap.
               </p>
             </div>
 
@@ -238,12 +259,12 @@ export const CoverageSection: React.FC = () => {
                   <span className="text-xs font-mono font-bold text-white flex items-center gap-1.5">
                     <MapPin className="h-4 w-4 text-teal" /> India &amp; United Kingdom
                   </span>
-                  <span className="text-[10px] font-mono text-teal bg-teal/15 px-2 py-0.5 rounded font-bold">
-                    MVP Focus
+                  <span className="text-[10px] font-mono text-teal-300 bg-teal/15 px-2 py-0.5 rounded font-bold">
+                    Live at MVP
                   </span>
                 </div>
                 <p className="text-xs text-slate-300">
-                  Dedicated regional hosting focus for Indian DPDP compliance and UK GDPR requirements.
+                  Dedicated regional tenant hosting currently live for Indian DPDP compliance and UK GDPR requirements.
                 </p>
               </div>
 
@@ -252,12 +273,12 @@ export const CoverageSection: React.FC = () => {
                   <span className="text-xs font-mono font-bold text-slate-300 flex items-center gap-1.5">
                     <MapPin className="h-4 w-4 text-amber" /> European Union &amp; Australia
                   </span>
-                  <span className="text-[10px] font-mono text-slate-400 bg-navy-800 px-2 py-0.5 rounded font-medium">
-                    Roadmap Post-POC
+                  <span className="text-[10px] font-mono text-amber bg-amber/15 px-2 py-0.5 rounded font-medium">
+                    Roadmap (Post-Launch)
                   </span>
                 </div>
                 <p className="text-xs text-slate-400">
-                  Planned regional cloud points of presence for EU Data Boundary and Australian ACSC compliance.
+                  Planned cloud points of presence for EU Data Boundary and Australian data sovereignty roadmap.
                 </p>
               </div>
             </div>

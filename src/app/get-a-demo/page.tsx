@@ -63,7 +63,7 @@ export default function GetADemoPage() {
 
             <div className="space-y-4">
               {[
-                "Live walkthrough tailored to your target frameworks (ISO 27001, SOC 2, GDPR, DPDP, Essential 8)",
+                "Live walkthrough tailored to your target frameworks (ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA)",
                 "See the 5x5 Risk Matrix connected directly to assets and protective controls",
                 "Explore the Advisory AI control mapper with data minimization & human review",
                 "Review the Compliance Testing Board with rolling 30/60/90-day visibility",

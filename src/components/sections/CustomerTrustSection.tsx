@@ -30,7 +30,7 @@ const credibilityPillars = [
   },
   {
     title: "Map-Once Controls",
-    desc: "Single control satisfying ISO 27001, SOC 2, GDPR, DPDP, Essential 8.",
+    desc: "Single control satisfying ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA.",
     icon: FileCheck2,
     tag: "Reusable Logic",
   },

@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { fadeInUp, staggerContainer } from "@/lib/motion";
+import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion";
 
 const AuroraBackground = dynamic(
   () => import("@/components/3d/AuroraBackground"),
@@ -20,10 +20,11 @@ const IsometricHeroVisual = dynamic(
 
 const documentedFrameworks = [
   { name: "ISO 27001:2022", badge: "ISMS Global" },
-  { name: "SOC 2 Type II", badge: "Trust Services Criteria" },
-  { name: "GDPR / UK GDPR", badge: "Privacy & Data Protection" },
-  { name: "DPDP Act 2023", badge: "India Data Protection" },
-  { name: "Essential 8", badge: "Cyber Mitigation" },
+  { name: "ISO 42001:2023", badge: "AI Governance" },
+  { name: "SOC 2 Type II", badge: "Trust Services" },
+  { name: "GDPR / UK GDPR", badge: "EU/UK Privacy" },
+  { name: "DPDP Act 2023", badge: "India Privacy" },
+  { name: "HIPAA Security", badge: "PHI Safeguards" },
 ];
 
 export const HeroSection: React.FC = () => {
@@ -40,7 +41,7 @@ export const HeroSection: React.FC = () => {
       >
         {/* Eyebrow badge */}
         <motion.div
-          variants={fadeInUp}
+          variants={fadeIn}
           className="inline-flex items-center gap-2 self-center px-3.5 sm:px-4 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-6 sm:mb-8 shadow-inner max-w-[90vw]"
         >
           <Sparkles className="h-3.5 w-3.5 text-amber shrink-0" />
@@ -49,7 +50,7 @@ export const HeroSection: React.FC = () => {
 
         {/* Main Headline */}
         <motion.h1
-          variants={fadeInUp}
+          variants={fadeIn}
           className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-5 sm:mb-6 max-w-4xl 2xl:max-w-6xl mx-auto"
         >
           Unified risk, asset, and control management{" "}
@@ -60,7 +61,7 @@ export const HeroSection: React.FC = () => {
 
         {/* Subheadline */}
         <motion.p
-          variants={fadeInUp}
+          variants={fadeIn}
           className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal"
         >
           Connect risk registers, asset inventories, control mapping, and compliance testing in one operating workflow. Advisory AI suggests; human oversight approves.

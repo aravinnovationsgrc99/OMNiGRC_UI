@@ -52,15 +52,26 @@ const frameworkDetails: { [key: string]: { title: string; subtitle: string; desc
       "Section 11 Data principal rights & audit trail governance",
     ],
   },
-  "essential-8": {
-    title: "Essential 8 Cyber Mitigation (Australia)",
-    subtitle: "Australian Cyber Security Centre (ACSC) Baseline Strategies",
-    desc: "Align technical configurations to ACSC Maturity Levels 1-3. Verify recurring backups, patch management, and admin access controls.",
+  "iso-42001": {
+    title: "ISO 42001:2023 AI Management System (AIMS)",
+    subtitle: "Artificial Intelligence Management System & Responsible AI Governance",
+    desc: "Establish, implement, maintain, and continually improve an Artificial Intelligence Management System (AIMS). Manage AI risk assessments, algorithmic impact assessments, and AI control objectives.",
     controls: [
-      "Patch Applications & Operating Systems cadences",
-      "Multi-Factor Authentication (MFA) enforcement verification",
-      "Restrict Administrative Privileges review workflows",
-      "Regular Backups & disaster recovery simulation records",
+      "Context of the Organization & AI Impact Assessment mapping",
+      "AI Risk Assessment & Risk Treatment Protocols",
+      "Data Quality, Governance & Algorithmic Bias Management",
+      "AI System Lifecycle, Audit Logging & Transparency Controls",
+    ],
+  },
+  hipaa: {
+    title: "HIPAA Security & Privacy Rule Compliance",
+    subtitle: "Protected Health Information (PHI) Safeguards & Technical Rules",
+    desc: "Demonstrate compliance with HIPAA Security, Privacy, and Breach Notification Rules. Map administrative, physical, and technical safeguards to PHI data stores and audit trails.",
+    controls: [
+      "Administrative Safeguards (Security Management & Access Controls)",
+      "Physical Safeguards (Facility Access & Workstation Security)",
+      "Technical Safeguards (Access Control, Audit Controls, Integrity, Transmission)",
+      "Organizational Requirements & Business Associate Agreements (BAAs)",
     ],
   },
 };
@@ -99,7 +110,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
           </div>
 
           <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-2">Map {fw.title} with OMNiGRC</h3>
+            <h2 className="text-2xl font-bold text-white mb-2">Map {fw.title} with OMNiGRC</h2>
             <p className="text-xs text-slate-300 mb-6">
               See how your controls and assets map to {fw.title} with advisory AI assistance and human review.
             </p>

@@ -44,8 +44,8 @@ const pricingTiers = [
     tag: "MULTI-REGION",
     scope: "Talk to us about your requirements",
     features: [
-      "All 5 Documented Frameworks + Essential 8",
-      "Regional Data Residency Alignment (India, UK, EU, AU)",
+      "All 6 Documented Frameworks (ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA)",
+      "Regional Data Residency Alignment (India, UK live; EU, AU roadmap)",
       "Custom Treatment Plans & Historical Risk Evolution",
       "High-Priority Support & GRC Architecture Review",
       "Tenant-Scoped Isolated Storage",
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "What frameworks are supported in OMNiGRC?",
-    a: "OMNiGRC is built with deep, verified taxonomies for ISO 27001:2022, SOC 2 Type II, GDPR / UK GDPR, DPDP Act India 2023, and Essential 8 (Australia).",
+    a: "OMNiGRC is built with deep, verified taxonomies for ISO 27001:2022, ISO 42001:2023 (AI), SOC 2 Type II, GDPR / UK GDPR, DPDP Act India 2023, and HIPAA Security Rule.",
   },
 ];
 

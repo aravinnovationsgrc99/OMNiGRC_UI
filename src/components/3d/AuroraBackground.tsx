@@ -1,6 +1,45 @@
 "use client";
 
+/**
+ * @component AuroraBackground
+ * @description A performant, responsive WebGL2 shader background component featuring smooth, ambient liquid aurora waves.
+ * Includes automatic fallbacks for prefers-reduced-motion and non-WebGL environments, with viewport-gated rendering via IntersectionObserver.
+ * 
+ * @param {AuroraBackgroundProps} props
+ * @param {AuroraPalette} [props.palette] - Color palette for shader rendering (RGB normalized vectors [0..1]).
+ * @param {number[]} [props.palette.baseNavy=[0.039, 0.067, 0.122]] - Base dark canvas color (#0A111F).
+ * @param {number[]} [props.palette.deepNavy=[0.086, 0.137, 0.247]] - Deep gradient background color (#16233F).
+ * @param {number[]} [props.palette.tealGlow=[0.059, 0.431, 0.416]] - Primary teal wave glow color (#0F6E6A).
+ * @param {number[]} [props.palette.amberPeak=[0.710, 0.459, 0.039]] - Secondary amber peak highlight color (#B5750A).
+ * @param {number} [props.speed=0.12] - Speed multiplier for liquid wave rotation and noise morphing.
+ * @param {number} [props.intensity=1.0] - Brightness and glow intensity scaling factor.
+ * @param {string} [props.className=""] - Optional additional Tailwind/CSS container classes.
+ * 
+ * @example
+ * ```tsx
+ * // Default brand aurora
+ * <AuroraBackground />
+ * 
+ * // Custom speed & intensity
+ * <AuroraBackground speed={0.18} intensity={1.2} className="opacity-90" />
+ * ```
+ */
+
 import React, { useEffect, useRef, useState } from "react";
+
+export interface AuroraPalette {
+  baseNavy?: [number, number, number];
+  deepNavy?: [number, number, number];
+  tealGlow?: [number, number, number];
+  amberPeak?: [number, number, number];
+}
+
+export interface AuroraBackgroundProps {
+  palette?: AuroraPalette;
+  speed?: number;
+  intensity?: number;
+  className?: string;
+}
 
 const VS_SOURCE = `#version 300 es
 in vec2 position;
@@ -13,6 +52,12 @@ const FS_SOURCE = `#version 300 es
 precision highp float;
 uniform vec2 u_resolution;
 uniform float u_time;
+uniform float u_speed;
+uniform float u_intensity;
+uniform vec3 u_baseNavy;
+uniform vec3 u_deepNavy;
+uniform vec3 u_tealGlow;
+uniform vec3 u_amberPeak;
 out vec4 fragColor;
 
 vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
@@ -48,7 +93,7 @@ void main() {
   vec2 uv = gl_FragCoord.xy / u_resolution.xy;
   vec2 st = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.x, u_resolution.y);
   
-  float t = u_time * 0.12;
+  float t = u_time * u_speed;
   
   float angle = t * 0.08;
   mat2 rot = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
@@ -59,28 +104,38 @@ void main() {
   float swirl = snoise(uv * 1.8 + vec2(n2 * 0.6, t * 0.08));
 
   float wave = sin(uv.x * 3.14159 + n1 * 1.1) * 0.25 + 0.45;
-  float glow = smoothstep(0.0, 0.65, 1.0 - abs(uv.y - wave - swirl * 0.2));
+  float glow = smoothstep(0.0, 0.65, 1.0 - abs(uv.y - wave - swirl * 0.2)) * u_intensity;
 
-  vec3 baseNavy = vec3(0.039, 0.067, 0.122);  // #0A111F
-  vec3 deepNavy = vec3(0.086, 0.137, 0.247);  // #16233F
-  vec3 tealGlow = vec3(0.059, 0.431, 0.416);  // #0F6E6A
-  vec3 amberPeak = vec3(0.710, 0.459, 0.039); // #B5750A
-
-  vec3 col = mix(baseNavy, deepNavy, uv.y);
-  col = mix(col, tealGlow, glow * (0.65 + 0.35 * n1));
+  vec3 col = mix(u_baseNavy, u_deepNavy, uv.y);
+  col = mix(col, u_tealGlow, glow * (0.65 + 0.35 * n1));
   
   float amberMix = smoothstep(0.45, 0.85, n2 * glow);
-  col = mix(col, amberPeak, amberMix * 0.4);
+  col = mix(col, u_amberPeak, amberMix * 0.4);
 
   fragColor = vec4(col, 0.9);
 }
 `;
 
-export const AuroraBackground: React.FC = () => {
+const DEFAULT_BASE_NAVY: [number, number, number] = [0.039, 0.067, 0.122];
+const DEFAULT_DEEP_NAVY: [number, number, number] = [0.086, 0.137, 0.247];
+const DEFAULT_TEAL_GLOW: [number, number, number] = [0.059, 0.431, 0.416];
+const DEFAULT_AMBER_PEAK: [number, number, number] = [0.710, 0.459, 0.039];
+
+export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
+  palette,
+  speed = 0.12,
+  intensity = 1.0,
+  className = "",
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [reducedMotion, setReducedMotion] = useState<boolean>(false);
   const [webglSupported, setWebglSupported] = useState<boolean>(true);
+
+  const baseNavy = palette?.baseNavy ?? DEFAULT_BASE_NAVY;
+  const deepNavy = palette?.deepNavy ?? DEFAULT_DEEP_NAVY;
+  const tealGlow = palette?.tealGlow ?? DEFAULT_TEAL_GLOW;
+  const amberPeak = palette?.amberPeak ?? DEFAULT_AMBER_PEAK;
 
   useEffect(() => {
     // Check reduced motion preference
@@ -160,6 +215,12 @@ export const AuroraBackground: React.FC = () => {
     const posLoc = gl.getAttribLocation(program, "position");
     const resLoc = gl.getUniformLocation(program, "u_resolution");
     const timeLoc = gl.getUniformLocation(program, "u_time");
+    const speedLoc = gl.getUniformLocation(program, "u_speed");
+    const intensityLoc = gl.getUniformLocation(program, "u_intensity");
+    const baseNavyLoc = gl.getUniformLocation(program, "u_baseNavy");
+    const deepNavyLoc = gl.getUniformLocation(program, "u_deepNavy");
+    const tealGlowLoc = gl.getUniformLocation(program, "u_tealGlow");
+    const amberPeakLoc = gl.getUniformLocation(program, "u_amberPeak");
 
     let animationFrameId: number;
     let startTime = performance.now();
@@ -189,6 +250,12 @@ export const AuroraBackground: React.FC = () => {
 
       gl.uniform2f(resLoc, width, height);
       gl.uniform1f(timeLoc, elapsed);
+      gl.uniform1f(speedLoc, speed);
+      gl.uniform1f(intensityLoc, intensity);
+      gl.uniform3fv(baseNavyLoc, baseNavy);
+      gl.uniform3fv(deepNavyLoc, deepNavy);
+      gl.uniform3fv(tealGlowLoc, tealGlow);
+      gl.uniform3fv(amberPeakLoc, amberPeak);
 
       gl.drawArrays(gl.TRIANGLES, 0, 6);
 
@@ -233,13 +300,13 @@ export const AuroraBackground: React.FC = () => {
       gl.deleteShader(fs);
       gl.deleteBuffer(positionBuffer);
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, speed, intensity, baseNavy, deepNavy, tealGlow, amberPeak]);
 
   if (reducedMotion || !webglSupported) {
     return (
       <div
         ref={containerRef}
-        className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden"
+        className={`absolute inset-0 w-full h-full pointer-events-none overflow-hidden ${className}`}
       >
         <img
           src="/omnigrc-aurora-static.png"
@@ -253,10 +320,11 @@ export const AuroraBackground: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0"
+      className={`absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0 ${className}`}
     >
       <canvas ref={canvasRef} className="w-full h-full block" />
     </div>
   );
 };
+
 export default AuroraBackground;

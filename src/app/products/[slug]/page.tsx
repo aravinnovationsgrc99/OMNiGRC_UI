@@ -34,10 +34,10 @@ const productDetails: { [key: string]: { title: string; subtitle: string; desc: 
   "audit-management": {
     title: "Advisory AI Control Mapping",
     subtitle: "Map internal controls once and align across documented standards",
-    desc: "Define your technical and organizational controls once. OMNiGRC's advisory AI suggests candidate clauses across ISO 27001, SOC 2, GDPR, DPDP, and Essential 8 for human review.",
+    desc: "Define your technical and organizational controls once. OMNiGRC's advisory AI suggests candidate clauses across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA for human review.",
     features: [
       "Tiered model router with strict data minimization and redaction",
-      "Pre-loaded with ISO 27001, SOC 2, GDPR / UK GDPR, DPDP, Essential 8",
+      "Pre-loaded with ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA",
       "Confidence scores accompanying all AI advisory suggestions",
       "Mandatory human analyst approval before database persistence",
     ],

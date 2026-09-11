@@ -6,23 +6,44 @@ const ibmSans = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-ibm-sans",
+  display: "swap",
 });
 
 const ibmMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-ibm-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://omnigrc.com"),
   title: "OMNiGRC — Unified Risk, Asset, and Control Management",
   description:
-    "The connected GRC operating layer for lean security and compliance teams. Unify risk registers, asset inventories, control mapping, and compliance testing with advisory AI and human-in-the-loop oversight.",
+    "The connected GRC operating layer for lean security and compliance teams. Unify risk registers, asset inventories, control mapping, and compliance testing across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP Act 2023, and HIPAA Security Rule.",
   openGraph: {
     title: "OMNiGRC — Unified Risk, Asset, and Control Management",
     description:
-      "Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ISO 27001, SOC 2, GDPR, DPDP, and Essential 8.",
+      "Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA.",
+    url: "https://omnigrc.com",
+    siteName: "OMNiGRC",
+    images: [
+      {
+        url: "/omnigrc-aurora-og.png",
+        width: 1200,
+        height: 630,
+        alt: "OMNiGRC — Unified Risk, Asset, and Control Management Platform",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OMNiGRC — Unified Risk, Asset, and Control Management",
+    description:
+      "Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA.",
+    images: ["/omnigrc-aurora-og.png"],
   },
 };
 

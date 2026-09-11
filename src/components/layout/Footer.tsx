@@ -55,6 +55,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/frameworks/iso-42001" className="hover:text-teal transition-colors">
+                  ISO 42001:2023 AI Management
+                </Link>
+              </li>
+              <li>
                 <Link href="/frameworks/soc-2" className="hover:text-teal transition-colors">
                   SOC 2 Type II
                 </Link>
@@ -70,8 +75,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/frameworks/soc-2" className="hover:text-teal transition-colors">
-                  Essential 8 (Australia)
+                <Link href="/frameworks/hipaa" className="hover:text-teal transition-colors">
+                  HIPAA Security Rule
                 </Link>
               </li>
             </ul>

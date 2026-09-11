@@ -24,7 +24,7 @@ const solutionDetails: { [key: string]: { title: string; subtitle: string; desc:
     subtitle: "Continuous audit readiness and reusable control mapping across standards",
     desc: "As your organization scales into new markets and jurisdictions, OMNiGRC ensures a single internal security control satisfies multiple global frameworks simultaneously.",
     highlights: [
-      "Multi-framework alignment across ISO 27001, SOC 2, GDPR, DPDP, and Essential 8",
+      "Multi-framework alignment across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA",
       "Advisory AI clause matcher with confidence scores and mandatory human review",
       "Structured treatment plan workflows for accepted, mitigated, or transferred risks",
       "Immutable PostgreSQL audit history and version-tracked change records",
@@ -37,7 +37,7 @@ const solutionDetails: { [key: string]: { title: string; subtitle: string; desc:
     highlights: [
       "Complete visibility into residual risk reduction across registered assets",
       "Data minimization architecture: sanitized payloads with tenant isolation",
-      "Regional data boundary awareness: hosting focus for India, UK, EU, and AU",
+      "Regional data boundary awareness: India & UK live at MVP; EU & AU on post-launch roadmap",
       "Exportable, defensible audit packages ready for external auditor review",
     ],
   },

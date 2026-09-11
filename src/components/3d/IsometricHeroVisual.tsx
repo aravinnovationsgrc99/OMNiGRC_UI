@@ -159,7 +159,7 @@ export const IsometricHeroVisual: React.FC = () => {
                       DPDP: Sec 8(5)
                     </span>
                     <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
-                      Essential 8: MFA-L2
+                      ISO 42001: A.7.3
                     </span>
                   </div>
                 </div>
@@ -303,18 +303,19 @@ export const IsometricHeroVisual: React.FC = () => {
           {activeTab === "framework" && (
             <motion.div
               key="framework"
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-2 sm:grid-cols-5 gap-3"
+              transition={{ delay: 0.4 }}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3"
             >
               {[
                 { name: "ISO 27001:2022", badge: "ISMS Global", count: "93 Controls" },
+                { name: "ISO 42001:2023", badge: "AI Governance", count: "AIMS Standard" },
                 { name: "SOC 2 Type II", badge: "Trust Services", count: "Common Criteria" },
                 { name: "GDPR / UK GDPR", badge: "EU & UK Privacy", count: "Data Protection" },
                 { name: "DPDP Act 2023", badge: "India Privacy", count: "Fiduciary Rules" },
-                { name: "Essential 8", badge: "Australian Cyber", count: "Mitigation Strat" },
+                { name: "HIPAA Security", badge: "Healthcare PHI", count: "Safeguards" },
               ].map((fw, idx) => (
                 <div
                   key={idx}

@@ -77,7 +77,7 @@ export const TiltCard: React.FC<TiltCardProps> = ({
         perspective: 1000,
       }}
       className={cn(
-        "relative rounded-2xl border border-teal/20 bg-navy-900/80 backdrop-blur-md p-6 transition-colors duration-300 w-full max-w-full",
+        "relative rounded-2xl border border-teal/20 bg-navy-900/80 backdrop-blur-md p-6 transition-colors duration-300 w-full max-w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A111F]",
         isHovered && glow && "border-teal/40 shadow-lg shadow-teal/10",
         className
       )}

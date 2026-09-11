@@ -48,3 +48,8 @@ _agents/
 .trae-cn/
 .rovo-dev/
 .vibe/
+
+# Temporary test scripts & lighthouse audit reports
+scratch/
+lh-*.json
+*.log

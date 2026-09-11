@@ -87,7 +87,7 @@ export const FloatingDepthCard: React.FC<FloatingDepthCardProps> = ({
         perspective: 1000,
       }}
       className={cn(
-        "relative rounded-2xl border border-navy-700/60 bg-navy-900/80 backdrop-blur-md p-6 transition-colors duration-300 w-full shadow-2xl",
+        "relative rounded-2xl border border-navy-700/60 bg-navy-900/80 backdrop-blur-md p-6 transition-colors duration-300 w-full shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A111F]",
         isHovered && "border-teal/40 shadow-teal/10",
         className
       )}

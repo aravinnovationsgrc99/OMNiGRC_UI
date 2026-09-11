@@ -191,10 +191,11 @@ export const Header: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {[
                         { name: "ISO 27001:2022", desc: "ISMS Global Standard & Annex A", link: "/frameworks/iso-27001" },
+                        { name: "ISO 42001:2023", desc: "AI Management System (AIMS)", link: "/frameworks/iso-42001" },
                         { name: "SOC 2 Type II", desc: "Trust Services Criteria Security & Ops", link: "/frameworks/soc-2" },
                         { name: "GDPR / UK GDPR", desc: "European & British Data Protection", link: "/frameworks/gdpr" },
                         { name: "DPDP Act 2023", desc: "India Personal Data Protection", link: "/frameworks/dpdp" },
-                        { name: "Essential 8", desc: "Australian Cyber Mitigation Strategies", link: "/frameworks/soc-2" },
+                        { name: "HIPAA Security", desc: "Healthcare PHI Privacy & Safeguards", link: "/frameworks/hipaa" },
                       ].map((fw, idx) => (
                         <Link
                           key={idx}
@@ -338,9 +339,11 @@ export const Header: React.FC = () => {
               {mobileExpandedSection === "frameworks" && (
                 <div className="pl-4 space-y-2 text-sm border-l border-teal/30 my-2">
                   <Link href="/frameworks/iso-27001" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">ISO 27001:2022</Link>
+                  <Link href="/frameworks/iso-42001" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">ISO 42001:2023 (AI)</Link>
                   <Link href="/frameworks/soc-2" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">SOC 2 Type II</Link>
                   <Link href="/frameworks/gdpr" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">GDPR / UK GDPR</Link>
                   <Link href="/frameworks/dpdp" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">DPDP Act India</Link>
+                  <Link href="/frameworks/hipaa" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">HIPAA Security Rule</Link>
                 </div>
               )}
 

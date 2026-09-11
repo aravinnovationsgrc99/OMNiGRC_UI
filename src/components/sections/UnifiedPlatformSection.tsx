@@ -57,9 +57,9 @@ export const UnifiedPlatformSection: React.FC = () => {
       title: "Pillar 3: AI-Assisted Control Mapping",
       tag: "MAP ONCE, COMPLY MANY",
       shortDesc:
-        "Define your security control once. Advisory AI suggests matching clauses across 5 documented frameworks.",
+        "Define your security control once. Advisory AI suggests matching clauses across 6 documented frameworks.",
       points: [
-        "Pre-loaded with ISO 27001, SOC 2, GDPR/UK GDPR, DPDP, Essential 8",
+        "Pre-loaded with ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA",
         "Advisory AI suggests candidate clause matches with confidence scores",
         "Mandatory human review and approval before persistence",
         "Zero duplicate control overhead across multiple framework audits",
@@ -309,11 +309,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                       <div className="space-y-1.5 text-xs">
                         <p className="text-[10px] font-mono text-slate-400 uppercase">AI Suggested Framework Alignments:</p>
                         {[
-                          { fw: "ISO 27001:2022", clause: "A.9.2.5 Review of user access rights", conf: "98%" },
-                          { fw: "SOC 2 Type II", clause: "CC6.2 & CC6.3 Access credential revocation", conf: "95%" },
-                          { fw: "GDPR / UK GDPR", clause: "Article 32 Security of processing (Access)", conf: "91%" },
-                          { fw: "DPDP Act 2023", clause: "Section 8(5) Reasonable security safeguards", conf: "90%" },
-                          { fw: "Essential 8", clause: "Restrict Administrative Privileges (Maturity 2)", conf: "94%" },
+                          { fw: "ISO 27001:2022", clause: "A.8.2 Access rights review cadence", conf: "98%" },
+                          { fw: "ISO 42001:2023", clause: "A.7.3 Algorithmic access control", conf: "96%" },
+                          { fw: "SOC 2 Type II", clause: "CC6.2 & CC6.3 Credential revocation", conf: "95%" },
+                          { fw: "GDPR / UK GDPR", clause: "Article 32 Security of processing", conf: "91%" },
+                          { fw: "DPDP Act 2023", clause: "Section 8(5) Security safeguards", conf: "90%" },
+                          { fw: "HIPAA Security", clause: "§164.312(a) Technical Access Control", conf: "94%" },
                         ].map((m, mIdx) => (
                           <div
                             key={mIdx}
