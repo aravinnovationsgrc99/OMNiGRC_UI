@@ -95,13 +95,13 @@ void main() {
   
   float t = u_time * u_speed;
   
-  float angle = t * 0.08;
+  float angle = t * 0.25;
   mat2 rot = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
   vec2 rSt = rot * st;
 
-  float n1 = snoise(rSt * 1.4 + vec2(t * 0.15, t * 0.08));
-  float n2 = snoise(rSt * 2.2 - vec2(t * 0.1, n1 * 0.4));
-  float swirl = snoise(uv * 1.8 + vec2(n2 * 0.6, t * 0.08));
+  float n1 = snoise(rSt * 1.4 + vec2(t * 0.45, t * 0.25));
+  float n2 = snoise(rSt * 2.2 - vec2(t * 0.35, n1 * 0.4));
+  float swirl = snoise(uv * 1.8 + vec2(n2 * 0.6, t * 0.25));
 
   float wave = sin(uv.x * 3.14159 + n1 * 1.1) * 0.25 + 0.45;
   float glow = smoothstep(0.0, 0.65, 1.0 - abs(uv.y - wave - swirl * 0.2)) * u_intensity;
@@ -123,7 +123,7 @@ const DEFAULT_AMBER_PEAK: [number, number, number] = [0.710, 0.459, 0.039];
 
 export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
   palette,
-  speed = 0.12,
+  speed = 0.45,
   intensity = 1.0,
   className = "",
 }) => {
