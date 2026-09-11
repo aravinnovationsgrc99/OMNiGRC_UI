@@ -42,10 +42,10 @@ export const TestimonialsSection: React.FC = () => {
   const scenario = operationalScenarios[currentIndex];
 
   return (
-    <section className="relative bg-[#0B0F17] py-16 sm:py-24 border-t border-slate-800 overflow-hidden">
+    <section className="relative bg-[#0A111F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <p className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold">
+          <p className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold">
             PRACTICAL GRC OPERATIONS
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
@@ -65,10 +65,10 @@ export const TestimonialsSection: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl relative"
+              className="rounded-3xl border border-teal/40 bg-navy-900/90 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl relative"
             >
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-                <span className="text-xs font-mono text-brand-yellow font-bold uppercase">
+              <div className="flex items-center justify-between border-b border-navy-700/60 pb-4 mb-6">
+                <span className="text-xs font-mono text-amber font-bold uppercase">
                   {scenario.tag}
                 </span>
                 <span className="text-[11px] font-mono text-slate-400">
@@ -81,23 +81,23 @@ export const TestimonialsSection: React.FC = () => {
               </h3>
 
               <div className="space-y-4 text-xs sm:text-sm">
-                <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
-                  <p className="font-mono text-[11px] text-brand-peach font-bold uppercase mb-1">
+                <div className="p-3.5 rounded-xl bg-[#0A111F]/80 border border-navy-700/60">
+                  <p className="font-mono text-[11px] text-amber font-bold uppercase mb-1">
                     Operational Challenge:
                   </p>
                   <p className="text-slate-300 leading-relaxed">{scenario.context}</p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-950/80 border border-brand-orange/30">
-                  <p className="font-mono text-[11px] text-brand-yellow font-bold uppercase mb-1">
+                <div className="p-3.5 rounded-xl bg-[#0A111F]/80 border border-teal/30">
+                  <p className="font-mono text-[11px] text-amber font-bold uppercase mb-1">
                     Connected OMNiGRC Workflow:
                   </p>
                   <p className="text-slate-200 leading-relaxed">{scenario.workflow}</p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-slate-800 pt-4 sm:pt-6 mt-6 gap-3">
-                <div className="flex items-center gap-2 text-xs font-mono text-brand-green">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-navy-700/60 pt-4 sm:pt-6 mt-6 gap-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-teal">
                   <CheckCircle2 className="h-4 w-4 shrink-0" />
                   <span className="font-bold">{scenario.outcome}</span>
                 </div>
@@ -117,7 +117,7 @@ export const TestimonialsSection: React.FC = () => {
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   className={`h-2.5 rounded-full transition-all duration-300 ${
-                    currentIndex === idx ? "w-8 bg-brand-orange" : "w-2.5 bg-slate-700 hover:bg-slate-500"
+                    currentIndex === idx ? "w-8 bg-teal" : "w-2.5 bg-navy-700 hover:bg-navy-600"
                   }`}
                   aria-label={`Go to scenario ${idx + 1}`}
                 />
@@ -127,14 +127,14 @@ export const TestimonialsSection: React.FC = () => {
             <div className="flex items-center space-x-3">
               <button
                 onClick={handlePrev}
-                className="p-2.5 sm:p-3 rounded-full border border-slate-800 bg-slate-900 text-slate-300 hover:border-brand-orange hover:bg-slate-800 hover:text-white transition-all shadow-md active:scale-95"
+                className="p-2.5 sm:p-3 rounded-full border border-navy-700/60 bg-navy-900 text-slate-300 hover:border-teal hover:bg-navy-800 hover:text-white transition-all shadow-md active:scale-95"
                 aria-label="Previous scenario"
               >
                 <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
               <button
                 onClick={handleNext}
-                className="p-2.5 sm:p-3 rounded-full border border-slate-800 bg-slate-900 text-slate-300 hover:border-brand-orange hover:bg-slate-800 hover:text-white transition-all shadow-md active:scale-95"
+                className="p-2.5 sm:p-3 rounded-full border border-navy-700/60 bg-navy-900 text-slate-300 hover:border-teal hover:bg-navy-800 hover:text-white transition-all shadow-md active:scale-95"
                 aria-label="Next scenario"
               >
                 <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />

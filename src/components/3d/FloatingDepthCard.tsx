@@ -57,9 +57,12 @@ export const FloatingDepthCard: React.FC<FloatingDepthCardProps> = ({
   };
 
   const glowStyles = {
-    orange: "radial-gradient(500px circle at 50% 50%, rgba(241, 94, 28, 0.18), transparent 70%)",
-    green: "radial-gradient(500px circle at 50% 50%, rgba(46, 147, 111, 0.18), transparent 70%)",
-    gold: "radial-gradient(500px circle at 50% 50%, rgba(250, 182, 10, 0.18), transparent 70%)",
+    teal: "radial-gradient(500px circle at 50% 50%, rgba(15, 110, 106, 0.18), transparent 70%)",
+    amber: "radial-gradient(500px circle at 50% 50%, rgba(181, 117, 10, 0.18), transparent 70%)",
+    rose: "radial-gradient(500px circle at 50% 50%, rgba(178, 58, 72, 0.18), transparent 70%)",
+    orange: "radial-gradient(500px circle at 50% 50%, rgba(15, 110, 106, 0.18), transparent 70%)",
+    green: "radial-gradient(500px circle at 50% 50%, rgba(15, 110, 106, 0.18), transparent 70%)",
+    gold: "radial-gradient(500px circle at 50% 50%, rgba(181, 117, 10, 0.18), transparent 70%)",
   };
 
   return (
@@ -84,8 +87,8 @@ export const FloatingDepthCard: React.FC<FloatingDepthCardProps> = ({
         perspective: 1000,
       }}
       className={cn(
-        "relative rounded-2xl border border-slate-800 bg-slate-900/80 backdrop-blur-md p-6 transition-colors duration-300 w-full shadow-2xl",
-        isHovered && "border-brand-orange/40 shadow-brand-orange/10",
+        "relative rounded-2xl border border-navy-700/60 bg-navy-900/80 backdrop-blur-md p-6 transition-colors duration-300 w-full shadow-2xl",
+        isHovered && "border-teal/40 shadow-teal/10",
         className
       )}
     >

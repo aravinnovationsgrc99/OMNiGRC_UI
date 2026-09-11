@@ -54,7 +54,7 @@ export const ControlMapping3DGraph: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(1);
 
   return (
-    <div className="relative w-full rounded-3xl border border-brand-orange/30 bg-slate-950/95 p-6 sm:p-10 shadow-2xl overflow-hidden">
+    <div className="relative w-full rounded-3xl border border-teal/30 bg-[#0A111F]/95 p-6 sm:p-10 shadow-2xl overflow-hidden">
       <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
         <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-2">
           DATA MINIMIZATION ARCHITECTURE
@@ -79,28 +79,28 @@ export const ControlMapping3DGraph: React.FC = () => {
               onClick={() => setActiveStep(idx)}
               className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                 isCurrent
-                  ? "border-brand-orange bg-slate-900 shadow-xl shadow-brand-orange/20"
-                  : "border-slate-800 bg-slate-900/50 hover:border-slate-700"
+                  ? "border-teal bg-navy-900 shadow-xl shadow-teal/20"
+                  : "border-navy-700/60 bg-navy-900/50 hover:border-navy-600"
               }`}
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className={`p-2 rounded-xl ${
-                      isCurrent ? "bg-brand-orange text-white" : "bg-slate-800 text-brand-orange"
+                      isCurrent ? "bg-teal text-white" : "bg-navy-800 text-teal"
                     }`}
                   >
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-brand-yellow">STAGE {s.step}</span>
+                  <span className="text-[10px] font-mono font-bold text-amber">STAGE {s.step}</span>
                 </div>
                 <h4 className="font-bold text-sm text-white mb-1">{s.title}</h4>
                 <p className="text-[11px] text-slate-400 leading-relaxed mb-3">{s.desc}</p>
               </div>
 
-              <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div className="pt-2 border-t border-navy-700/60 flex items-center justify-between">
                 <span className="text-[9px] font-mono text-slate-400">{s.scope}</span>
-                <span className="text-[10px] font-mono font-semibold text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">
+                <span className="text-[10px] font-mono font-semibold text-teal bg-teal/10 px-2 py-0.5 rounded">
                   {s.badge}
                 </span>
               </div>
@@ -110,11 +110,11 @@ export const ControlMapping3DGraph: React.FC = () => {
       </div>
 
       {/* Architectural Isolation Visualizer Callout */}
-      <div className="p-5 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/70 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <div className="p-5 sm:p-6 rounded-2xl border border-navy-700/60 bg-navy-900/70 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="h-4 w-4 text-brand-green" />
-            <span className="text-xs font-mono font-bold text-brand-green uppercase">
+            <CheckCircle2 className="h-4 w-4 text-teal" />
+            <span className="text-xs font-mono font-bold text-teal uppercase">
               OMNiGRC Controlled VPC & Database
             </span>
           </div>
@@ -123,10 +123,10 @@ export const ControlMapping3DGraph: React.FC = () => {
           </p>
         </div>
 
-        <div className="space-y-2 md:border-l border-slate-800 md:pl-6">
+        <div className="space-y-2 md:border-l border-navy-700/60 md:pl-6">
           <div className="flex items-center gap-2">
-            <Shield className="h-4 w-4 text-brand-orange" />
-            <span className="text-xs font-mono font-bold text-brand-orange uppercase">
+            <Shield className="h-4 w-4 text-teal" />
+            <span className="text-xs font-mono font-bold text-teal uppercase">
               External Stateless AI Boundary
             </span>
           </div>

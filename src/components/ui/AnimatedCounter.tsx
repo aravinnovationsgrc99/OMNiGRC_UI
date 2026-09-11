@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useSpring, useTransform } from "framer-motion";
 
 interface AnimatedCounterProps {
@@ -12,6 +12,9 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   value,
   className,
 }) => {
+  const containerRef = useRef<HTMLSpanElement>(null);
+  const [isInView, setIsInView] = useState<boolean>(false);
+
   const numericValue = typeof value === "number" ? value : parseFloat(value.toString().replace(/[^0-9.]/g, ""));
   const suffix = typeof value === "string" ? value.replace(/[0-9.]/g, "") : "";
 
@@ -27,6 +30,28 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [renderedValue, setRenderedValue] = useState<string | number>(0);
 
   useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
     if (!isNaN(numericValue)) {
       spring.set(numericValue);
       const unsubscribe = displayValue.on("change", (latest) => {
@@ -36,7 +61,11 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     } else {
       setRenderedValue(value);
     }
-  }, [numericValue, spring, displayValue, value]);
+  }, [isInView, numericValue, spring, displayValue, value]);
 
-  return <motion.span className={className}>{renderedValue}</motion.span>;
+  return (
+    <motion.span ref={containerRef} className={className}>
+      {renderedValue}
+    </motion.span>
+  );
 };

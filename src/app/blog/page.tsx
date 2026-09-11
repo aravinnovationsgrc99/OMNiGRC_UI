@@ -52,12 +52,12 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
               CTRL + GRC KNOWLEDGE HUB
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -75,7 +75,7 @@ export default function BlogPage() {
                 placeholder="Search articles, frameworks, guides..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full rounded-xl border border-slate-700 bg-slate-900 pl-11 pr-4 py-3 text-xs text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none"
+                className="w-full rounded-xl border border-slate-700 bg-slate-900 pl-11 pr-4 py-3 text-xs text-white placeholder-slate-500 focus:border-teal focus:outline-none"
               />
             </div>
           </div>
@@ -86,15 +86,15 @@ export default function BlogPage() {
               <TiltCard key={post.id} className="p-8 border-slate-800 bg-slate-900/70 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono mb-4">
-                    <span className="px-2.5 py-1 rounded-full bg-brand-orange/15 text-brand-orange font-semibold">
+                    <span className="px-2.5 py-1 rounded-full bg-teal/15 text-teal font-semibold">
                       {post.category}
                     </span>
                     <span className="text-slate-400 flex items-center gap-1">
-                      <Calendar className="h-3.5 w-3.5 text-brand-gold" /> {post.date}
+                      <Calendar className="h-3.5 w-3.5 text-amber" /> {post.date}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-brand-orange transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 hover:text-teal transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-xs text-slate-300 leading-relaxed mb-6">{post.snippet}</p>
@@ -102,9 +102,9 @@ export default function BlogPage() {
 
                 <div className="flex items-center justify-between border-t border-slate-800/80 pt-4 text-xs">
                   <span className="text-slate-400 font-mono flex items-center gap-1">
-                    <User className="h-3.5 w-3.5 text-brand-green" /> {post.author}
+                    <User className="h-3.5 w-3.5 text-teal" /> {post.author}
                   </span>
-                  <Link href="/trust-vault" className="text-brand-orange font-semibold hover:underline flex items-center gap-1">
+                  <Link href="/trust-vault" className="text-teal font-semibold hover:underline flex items-center gap-1">
                     Read Article <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>

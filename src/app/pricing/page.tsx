@@ -74,12 +74,12 @@ export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-24 flex-1">
         <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
               TAILORED FOR LEAN GRC
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -97,7 +97,7 @@ export default function PricingPage() {
                 key={idx}
                 className={`p-8 flex flex-col justify-between ${
                   plan.popular
-                    ? "border-brand-orange bg-slate-900 shadow-2xl shadow-brand-orange/20 scale-[1.02]"
+                    ? "border-teal bg-slate-900 shadow-2xl shadow-teal/20 scale-[1.02]"
                     : "border-slate-800 bg-slate-900/60"
                 }`}
               >
@@ -106,8 +106,8 @@ export default function PricingPage() {
                     <span
                       className={`text-[10px] font-mono font-bold px-2.5 py-1 rounded-full ${
                         plan.popular
-                          ? "bg-brand-orange text-white"
-                          : "bg-brand-orange/20 text-brand-yellow"
+                          ? "bg-teal text-white"
+                          : "bg-teal/20 text-amber"
                       }`}
                     >
                       {plan.tag}
@@ -118,14 +118,14 @@ export default function PricingPage() {
                   <p className="text-xs text-slate-300 mb-6 leading-relaxed">{plan.desc}</p>
 
                   <div className="border-t border-b border-slate-800 py-4 mb-6">
-                    <p className="text-lg font-bold text-brand-yellow">{plan.scope}</p>
+                    <p className="text-lg font-bold text-amber">{plan.scope}</p>
                     <p className="text-[11px] text-slate-400 font-mono mt-0.5">Aligned to your lean GRC goals</p>
                   </div>
 
                   <ul className="space-y-3 mb-8 text-xs text-slate-200">
                     {plan.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
-                        <Check className="h-4 w-4 text-brand-green shrink-0 mt-0.5" />
+                        <Check className="h-4 w-4 text-teal shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -136,7 +136,7 @@ export default function PricingPage() {
                   href="/get-a-demo"
                   className={`w-full py-3.5 rounded-xl font-bold text-xs text-center transition-all flex items-center justify-center gap-2 ${
                     plan.popular
-                      ? "bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/30"
+                      ? "bg-teal text-white hover:bg-teal/90 shadow-lg shadow-teal/30"
                       : "bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white"
                   }`}
                 >
@@ -160,11 +160,11 @@ export default function PricingPage() {
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-white hover:text-brand-orange transition-colors"
+                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-white hover:text-teal transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`h-4 w-4 text-brand-orange transition-transform ${
+                      className={`h-4 w-4 text-teal transition-transform ${
                         openFaq === idx ? "rotate-180" : ""
                       }`}
                     />

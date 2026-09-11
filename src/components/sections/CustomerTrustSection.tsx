@@ -13,6 +13,8 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+import { fadeInUp, staggerContainer } from "@/lib/motion";
+
 const credibilityPillars = [
   {
     title: "Unified Risk Register",
@@ -54,14 +56,14 @@ const credibilityPillars = [
 
 export const CustomerTrustSection: React.FC = () => {
   return (
-    <section className="relative border-y border-slate-800/80 bg-[#0F172A] py-14 sm:py-20 overflow-hidden">
+    <section className="relative border-y border-navy-700/60 bg-[#16233F] py-14 sm:py-20 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-green/30 bg-brand-green/10 text-brand-green text-[11px] font-mono tracking-widest uppercase mb-3 font-semibold"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-teal/30 bg-teal/10 text-teal text-[11px] font-mono tracking-widest uppercase mb-3 font-semibold"
           >
             <Lock className="h-3 w-3" /> DESIGNED FOR PRACTICAL GRC OPERATIONS
           </motion.div>
@@ -86,23 +88,26 @@ export const CustomerTrustSection: React.FC = () => {
         </div>
 
         {/* 6 Core Credibility Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+        >
           {credibilityPillars.map((item, idx) => {
             const Icon = item.icon;
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="p-5 sm:p-6 rounded-2xl border border-slate-800 bg-slate-950/80 hover:border-brand-orange/40 hover:bg-slate-900/90 transition-all group"
+                variants={fadeInUp}
+                className="p-5 sm:p-6 rounded-2xl border border-navy-700/60 bg-[#0A111F]/80 hover:border-teal/40 hover:bg-navy-900/90 transition-all group"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <div className="p-2.5 rounded-xl bg-slate-900 text-brand-orange group-hover:bg-brand-orange/10 group-hover:scale-105 transition-all">
+                  <div className="p-2.5 rounded-xl bg-navy-800 text-teal group-hover:bg-teal/10 group-hover:scale-105 transition-all">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[10px] font-mono text-brand-peach font-semibold uppercase bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+                  <span className="text-[10px] font-mono text-amber font-semibold uppercase bg-navy-800 px-2 py-0.5 rounded border border-navy-700/60">
                     {item.tag}
                   </span>
                 </div>
@@ -110,14 +115,14 @@ export const CustomerTrustSection: React.FC = () => {
                   {item.title}
                 </h3>
                 <p className="text-xs text-slate-300 leading-relaxed">{item.desc}</p>
-                <div className="mt-4 pt-3 border-t border-slate-900 flex items-center gap-1.5 text-[11px] text-brand-green font-mono">
+                <div className="mt-4 pt-3 border-t border-navy-700/60 flex items-center gap-1.5 text-[11px] text-teal font-mono">
                   <CheckCircle2 className="h-3.5 w-3.5" />
                   <span>Documented Architecture</span>
                 </div>
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

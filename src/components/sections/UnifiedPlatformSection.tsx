@@ -18,6 +18,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 export const UnifiedPlatformSection: React.FC = () => {
   const [activePillar, setActivePillar] = useState<number>(0);
@@ -82,13 +83,13 @@ export const UnifiedPlatformSection: React.FC = () => {
   ];
 
   return (
-    <section id="core-workflows" className="relative bg-[#0F172A] py-16 sm:py-24 border-t border-slate-800 overflow-hidden">
+    <section id="core-workflows" className="relative bg-[#16233F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
       {/* Background radial glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] sm:h-[700px] w-[90vw] max-w-[900px] rounded-full bg-brand-orange/10 blur-[140px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] sm:h-[700px] w-[90vw] max-w-[900px] rounded-full bg-teal/10 blur-[140px]" />
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <p className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold">
+          <p className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold">
             THE FOUR CORE WORKFLOWS
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -109,11 +110,11 @@ export const UnifiedPlatformSection: React.FC = () => {
                 onClick={() => setActivePillar(idx)}
                 className={`p-4 rounded-2xl border text-left transition-all duration-200 ${
                   isSelected
-                    ? "border-brand-orange bg-slate-900 shadow-lg shadow-brand-orange/20 scale-[1.02]"
-                    : "border-slate-800 bg-slate-950/60 hover:border-slate-700 hover:bg-slate-900/60"
+                    ? "border-teal bg-navy-900 shadow-lg shadow-teal/20 scale-[1.02]"
+                    : "border-navy-700/60 bg-[#0A111F]/60 hover:border-navy-600 hover:bg-navy-900/60"
                 }`}
               >
-                <span className="text-[10px] font-mono uppercase tracking-wider text-brand-yellow font-bold block mb-1">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-amber font-bold block mb-1">
                   {pillar.tag}
                 </span>
                 <h3 className="text-xs sm:text-sm font-bold text-white leading-snug truncate">
@@ -132,13 +133,13 @@ export const UnifiedPlatformSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.3 }}
-            className="rounded-3xl border border-brand-orange/30 bg-slate-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl"
+            className="rounded-3xl border border-teal/30 bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column: Pillar Details & Points */}
               <div className="lg:col-span-5 space-y-6">
                 <div>
-                  <span className="text-xs font-mono font-bold tracking-widest text-brand-orange uppercase bg-brand-orange/10 px-3 py-1 rounded-full inline-block mb-3">
+                  <span className="text-xs font-mono font-bold tracking-widest text-teal uppercase bg-teal/10 px-3 py-1 rounded-full inline-block mb-3">
                     {pillars[activePillar].tag}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
@@ -152,16 +153,16 @@ export const UnifiedPlatformSection: React.FC = () => {
                 <div className="space-y-3 pt-2">
                   {pillars[activePillar].points.map((pt, pIdx) => (
                     <div key={pIdx} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-4 w-4 text-brand-green shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-4 w-4 text-teal shrink-0 mt-0.5" />
                       <span className="text-xs sm:text-sm text-slate-200">{pt}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-slate-800">
+                <div className="pt-4 border-t border-navy-700/60">
                   <Link
                     href="/get-a-demo"
-                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-orange hover:text-white transition-colors group"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-teal hover:text-white transition-colors group"
                   >
                     <span>Request a walkthrough of this workflow</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -173,15 +174,15 @@ export const UnifiedPlatformSection: React.FC = () => {
               <div className="lg:col-span-7">
                 {activePillar === 0 && (
                   /* Pillar 1: Risk Matrix Interactive View */
-                  <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <ShieldAlert className="h-4 w-4 text-brand-orange" />
+                        <ShieldAlert className="h-4 w-4 text-teal" />
                         <span className="text-xs font-mono font-bold text-white">
                           Risk Quantification Engine (5x5 Matrix)
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-brand-green">14 Active Risks</span>
+                      <span className="text-[10px] font-mono text-teal">14 Active Risks</span>
                     </div>
 
                     <div className="grid grid-cols-5 gap-1.5 text-center text-[10px] font-mono">
@@ -216,12 +217,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                           key={cIdx}
                           className={`p-2 rounded font-bold transition-all ${
                             cell.color === "orange"
-                              ? "bg-brand-orange/80 text-white shadow-sm"
+                              ? "bg-rose text-white shadow-sm"
                               : cell.color === "gold"
-                              ? "bg-brand-gold/30 text-brand-gold border border-brand-gold/40"
+                              ? "bg-amber/30 text-amber border border-amber/40"
                               : cell.color === "yellow"
-                              ? "bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/30"
-                              : "bg-brand-green/15 text-brand-green border border-brand-green/20"
+                              ? "bg-amber/20 text-amber border border-amber/30"
+                              : "bg-teal/15 text-teal border border-teal/20"
                           }`}
                         >
                           {cell.label.split(" ")[1]}
@@ -229,12 +230,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                       ))}
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                    <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 flex items-center justify-between text-xs">
                       <div>
                         <p className="font-bold text-white">RSK-042: Database Backup Restoration Failure</p>
                         <p className="text-[11px] text-slate-400">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
                       </div>
-                      <span className="px-2.5 py-1 rounded bg-brand-orange/20 text-brand-orange font-mono font-bold text-[10px]">
+                      <span className="px-2.5 py-1 rounded bg-teal/20 text-teal font-mono font-bold text-[10px]">
                         Residual: Low
                       </span>
                     </div>
@@ -243,40 +244,40 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                 {activePillar === 1 && (
                   /* Pillar 2: Asset & Relationship Graph View */
-                  <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <Server className="h-4 w-4 text-brand-gold" />
+                        <Server className="h-4 w-4 text-amber" />
                         <span className="text-xs font-mono font-bold text-white">
                           Asset ↔ Vendor ↔ Risk ↔ Control Relationship Flow
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-brand-peach">Interactive Graph</span>
+                      <span className="text-[10px] font-mono text-amber">Interactive Graph</span>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-                      <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-xs">
+                    <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
+                      <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-[#0A111F] border border-navy-700/60 text-xs">
                         <div className="flex items-center gap-2">
-                          <Database className="h-4 w-4 text-brand-orange" />
+                          <Database className="h-4 w-4 text-teal" />
                           <span className="font-bold text-white">Asset: AWS RDS PostgreSQL (Cluster-Prod)</span>
                         </div>
-                        <span className="text-[10px] font-mono text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded">
+                        <span className="text-[10px] font-mono text-amber bg-amber/10 px-2 py-0.5 rounded">
                           PII Data Flow
                         </span>
                       </div>
 
-                      <div className="pl-6 border-l-2 border-brand-orange/40 space-y-2 text-xs">
-                        <div className="p-2 rounded-lg bg-slate-950/70 border border-slate-800 flex items-center justify-between">
+                      <div className="pl-6 border-l-2 border-teal/40 space-y-2 text-xs">
+                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
                           <span className="text-slate-300">Vendor: Amazon Web Services Inc.</span>
-                          <span className="text-[10px] font-mono text-brand-green">SOC 2 Verified</span>
+                          <span className="text-[10px] font-mono text-teal">SOC 2 Verified</span>
                         </div>
-                        <div className="p-2 rounded-lg bg-slate-950/70 border border-slate-800 flex items-center justify-between">
+                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
                           <span className="text-slate-300">Linked Risk: RSK-019 (Unauthorized Data Access)</span>
-                          <span className="text-[10px] font-mono text-brand-yellow">High Impact</span>
+                          <span className="text-[10px] font-mono text-amber">High Impact</span>
                         </div>
-                        <div className="p-2 rounded-lg bg-slate-950/70 border border-brand-green/30 flex items-center justify-between">
+                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-teal/30 flex items-center justify-between">
                           <span className="text-slate-200 font-semibold">Associated Control: CTRL-088 (KMS AES-256 Encryption)</span>
-                          <span className="text-[10px] font-mono text-brand-green">Enforced</span>
+                          <span className="text-[10px] font-mono text-teal">Enforced</span>
                         </div>
                       </div>
                     </div>
@@ -285,20 +286,20 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                 {activePillar === 2 && (
                   /* Pillar 3: Control Mapping & AI Suggestion View */
-                  <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <Sparkles className="h-4 w-4 text-brand-gold" />
+                        <Sparkles className="h-4 w-4 text-amber" />
                         <span className="text-xs font-mono font-bold text-white">
                           Map-Once Clause Alignment (AI Advisory + Human Review)
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-brand-green">Human Verified</span>
+                      <span className="text-[10px] font-mono text-teal">Human Verified</span>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-                      <div className="p-3 rounded-lg bg-slate-950 border border-brand-orange/30">
-                        <p className="text-[10px] font-mono text-brand-yellow font-bold uppercase">Source Internal Control:</p>
+                    <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
+                      <div className="p-3 rounded-lg bg-[#0A111F] border border-teal/30">
+                        <p className="text-[10px] font-mono text-amber font-bold uppercase">Source Internal Control:</p>
                         <p className="text-xs font-bold text-white mt-1">CTRL-005: Quarterly User Access & Privilege Reviews</p>
                         <p className="text-[11px] text-slate-300 mt-1">
                           &quot;Privileged access rights to production databases are reviewed and recertified every 90 days by team leads.&quot;
@@ -316,17 +317,17 @@ export const UnifiedPlatformSection: React.FC = () => {
                         ].map((m, mIdx) => (
                           <div
                             key={mIdx}
-                            className="p-2 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center justify-between text-[11px]"
+                            className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-[11px]"
                           >
-                            <span className="font-bold text-brand-peach">{m.fw}:</span>
+                            <span className="font-bold text-amber">{m.fw}:</span>
                             <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
-                            <span className="font-mono text-brand-green text-[10px]">{m.conf} match</span>
+                            <span className="font-mono text-teal text-[10px]">{m.conf} match</span>
                           </div>
                         ))}
                       </div>
 
-                      <div className="p-2 rounded-lg bg-brand-green/15 border border-brand-green/30 flex items-center justify-between text-xs">
-                        <span className="text-brand-green font-semibold flex items-center gap-1.5">
+                      <div className="p-2 rounded-lg bg-teal/15 border border-teal/30 flex items-center justify-between text-xs">
+                        <span className="text-teal font-semibold flex items-center gap-1.5">
                           <UserCheck className="h-3.5 w-3.5" /> Approved by GRC Analyst
                         </span>
                         <span className="text-[10px] font-mono text-slate-300">Saved to Postgres</span>
@@ -337,61 +338,61 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                 {activePillar === 3 && (
                   /* Pillar 4: Compliance Testing Board View */
-                  <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <CalendarCheck className="h-4 w-4 text-brand-green" />
+                        <CalendarCheck className="h-4 w-4 text-teal" />
                         <span className="text-xs font-mono font-bold text-white">
                           Testing Cadence & Owner Kanban Board
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-brand-yellow">Rolling 30/60/90d</span>
+                      <span className="text-[10px] font-mono text-amber">Rolling 30/60/90d</span>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2.5 text-xs">
                       {/* Column 1: Next 30 Days */}
-                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-brand-orange uppercase">
+                      <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
+                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-teal uppercase">
                           <span>Next 30 Days</span>
-                          <span className="bg-brand-orange/20 px-1.5 py-0.5 rounded">2 Due</span>
+                          <span className="bg-teal/20 px-1.5 py-0.5 rounded">2 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-slate-950 border border-slate-800 text-[11px]">
+                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
                           <p className="font-bold text-white">MFA Configuration Test</p>
                           <p className="text-[10px] text-slate-400 mt-0.5">Owner: SecOps Lead</p>
-                          <p className="text-[9px] font-mono text-brand-gold mt-1">Due in 6 days</p>
+                          <p className="text-[9px] font-mono text-amber mt-1">Due in 6 days</p>
                         </div>
                       </div>
 
                       {/* Column 2: 30-60 Days */}
-                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-brand-gold uppercase">
+                      <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
+                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-amber uppercase">
                           <span>30 - 60 Days</span>
-                          <span className="bg-brand-gold/20 px-1.5 py-0.5 rounded">3 Due</span>
+                          <span className="bg-amber/20 px-1.5 py-0.5 rounded">3 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-slate-950 border border-slate-800 text-[11px]">
+                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
                           <p className="font-bold text-white">Vendor SOC 2 Check</p>
                           <p className="text-[10px] text-slate-400 mt-0.5">Owner: Procurement</p>
-                          <p className="text-[9px] font-mono text-brand-yellow mt-1">Due in 38 days</p>
+                          <p className="text-[9px] font-mono text-amber mt-1">Due in 38 days</p>
                         </div>
                       </div>
 
                       {/* Column 3: 60-90 Days */}
-                      <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-brand-green uppercase">
+                      <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
+                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-teal uppercase">
                           <span>60 - 90 Days</span>
-                          <span className="bg-brand-green/20 px-1.5 py-0.5 rounded">1 Due</span>
+                          <span className="bg-teal/20 px-1.5 py-0.5 rounded">1 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-slate-950 border border-slate-800 text-[11px]">
+                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
                           <p className="font-bold text-white">Annual DRP Simulation</p>
                           <p className="text-[10px] text-slate-400 mt-0.5">Owner: CTO</p>
-                          <p className="text-[9px] font-mono text-brand-green mt-1">Due in 74 days</p>
+                          <p className="text-[9px] font-mono text-teal mt-1">Due in 74 days</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between text-[11px]">
+                    <div className="p-2.5 rounded-lg bg-navy-900 border border-navy-700/60 flex items-center justify-between text-[11px]">
                       <span className="text-slate-300">Auditor Export Readiness:</span>
-                      <span className="text-brand-green font-mono font-bold">100% On Schedule</span>
+                      <span className="text-teal font-mono font-bold">100% On Schedule</span>
                     </div>
                   </div>
                 )}

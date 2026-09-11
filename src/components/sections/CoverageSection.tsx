@@ -112,11 +112,11 @@ export const CoverageSection: React.FC = () => {
   const [selectedFw, setSelectedFw] = useState<FrameworkItem>(documentedFrameworks[0]);
 
   return (
-    <section className="relative bg-[#0F172A] py-16 sm:py-24 border-t border-slate-800 overflow-hidden">
+    <section className="relative bg-[#16233F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow font-semibold inline-block mb-3">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber font-semibold inline-block mb-3">
             DOCUMENTED FRAMEWORK COVERAGE
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -140,8 +140,8 @@ export const CoverageSection: React.FC = () => {
                   onClick={() => setSelectedFw(fw)}
                   className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between ${
                     isSelected
-                      ? "border-brand-orange bg-slate-900 shadow-lg shadow-brand-orange/15 scale-[1.02]"
-                      : "border-slate-800 bg-slate-950/70 hover:border-slate-700 hover:bg-slate-900/60"
+                      ? "border-teal bg-navy-900 shadow-lg shadow-teal/15 scale-[1.02]"
+                      : "border-navy-700/60 bg-[#0A111F]/70 hover:border-navy-600 hover:bg-navy-900/60"
                   }`}
                 >
                   <div>
@@ -150,7 +150,7 @@ export const CoverageSection: React.FC = () => {
                   </div>
                   <span
                     className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold ${
-                      isSelected ? "bg-brand-orange text-white" : "bg-slate-800 text-brand-peach"
+                      isSelected ? "bg-teal text-white" : "bg-navy-800 text-amber"
                     }`}
                   >
                     {fw.badge}
@@ -169,16 +169,16 @@ export const CoverageSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -15 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-3xl border border-brand-orange/30 bg-slate-900/90 p-6 sm:p-8 shadow-2xl backdrop-blur-xl space-y-6"
+                className="rounded-3xl border border-teal/30 bg-navy-900/90 p-6 sm:p-8 shadow-2xl backdrop-blur-xl space-y-6"
               >
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-navy-700/60 pb-4">
                   <div>
-                    <span className="text-xs font-mono text-brand-yellow font-bold uppercase">
+                    <span className="text-xs font-mono text-amber font-bold uppercase">
                       {selectedFw.region}
                     </span>
                     <h3 className="text-2xl font-extrabold text-white mt-1">{selectedFw.name}</h3>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-brand-green/15 border border-brand-green/30 text-xs font-mono text-brand-green font-semibold">
+                  <span className="px-3 py-1 rounded-full bg-teal/15 border border-teal/30 text-xs font-mono text-teal font-semibold">
                     Supported in OMNiGRC
                   </span>
                 </div>
@@ -190,15 +190,15 @@ export const CoverageSection: React.FC = () => {
                 {/* Control Areas Grid */}
                 <div className="space-y-2">
                   <h4 className="text-xs font-mono text-slate-400 uppercase font-semibold flex items-center gap-1.5">
-                    <Layers className="h-3.5 w-3.5 text-brand-orange" /> Key Control Domains:
+                    <Layers className="h-3.5 w-3.5 text-teal" /> Key Control Domains:
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {selectedFw.controlDomains.map((cd, idx) => (
                       <div
                         key={idx}
-                        className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-200 flex items-start gap-2.5"
+                        className="p-3 rounded-xl bg-[#0A111F]/80 border border-navy-700/60 text-xs text-slate-200 flex items-start gap-2.5"
                       >
-                        <CheckCircle className="h-4 w-4 text-brand-green shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-teal shrink-0 mt-0.5" />
                         <span className="font-medium">{cd}</span>
                       </div>
                     ))}
@@ -206,8 +206,8 @@ export const CoverageSection: React.FC = () => {
                 </div>
 
                 {/* Connected OMNiGRC Workflow */}
-                <div className="p-4 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 text-xs text-slate-200">
-                  <span className="font-mono text-brand-yellow font-bold uppercase block mb-1">
+                <div className="p-4 rounded-2xl bg-teal/10 border border-teal/30 text-xs text-slate-200">
+                  <span className="font-mono text-amber font-bold uppercase block mb-1">
                     Connected OMNiGRC Workflow:
                   </span>
                   <p className="leading-relaxed text-slate-300">{selectedFw.omniWorkflow}</p>
@@ -218,11 +218,11 @@ export const CoverageSection: React.FC = () => {
         </div>
 
         {/* Regional Awareness & Hosting Section */}
-        <div className="rounded-3xl border border-slate-800 bg-slate-950/90 p-6 sm:p-10">
+        <div className="rounded-3xl border border-navy-700/60 bg-[#0A111F]/90 p-6 sm:p-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-5 space-y-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow font-semibold flex items-center gap-1.5">
-                <Globe className="h-4 w-4 text-brand-orange" /> REGIONAL HOSTING AWARENESS
+              <span className="text-xs font-mono uppercase tracking-widest text-amber font-semibold flex items-center gap-1.5">
+                <Globe className="h-4 w-4 text-teal" /> REGIONAL HOSTING AWARENESS
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                 Designed for regional data residency.
@@ -233,12 +233,12 @@ export const CoverageSection: React.FC = () => {
             </div>
 
             <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-brand-green/30 space-y-2">
+              <div className="p-5 rounded-2xl bg-navy-900/80 border border-teal/30 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono font-bold text-white flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4 text-brand-green" /> India &amp; United Kingdom
+                    <MapPin className="h-4 w-4 text-teal" /> India &amp; United Kingdom
                   </span>
-                  <span className="text-[10px] font-mono text-brand-green bg-brand-green/15 px-2 py-0.5 rounded font-bold">
+                  <span className="text-[10px] font-mono text-teal bg-teal/15 px-2 py-0.5 rounded font-bold">
                     MVP Focus
                   </span>
                 </div>
@@ -247,12 +247,12 @@ export const CoverageSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+              <div className="p-5 rounded-2xl bg-navy-900/80 border border-navy-700/60 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono font-bold text-slate-300 flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4 text-brand-peach" /> European Union &amp; Australia
+                    <MapPin className="h-4 w-4 text-amber" /> European Union &amp; Australia
                   </span>
-                  <span className="text-[10px] font-mono text-slate-400 bg-slate-800 px-2 py-0.5 rounded font-medium">
+                  <span className="text-[10px] font-mono text-slate-400 bg-navy-800 px-2 py-0.5 rounded font-medium">
                     Roadmap Post-POC
                   </span>
                 </div>

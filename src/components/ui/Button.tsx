@@ -24,19 +24,19 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-150 cubic-bezier(0.16, 1, 0.3, 1) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0B0F17] disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] micro-btn";
+    "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-150 cubic-bezier(0.16, 1, 0.3, 1) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0A111F] disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] micro-btn";
 
   const variants = {
     primary:
-      "bg-brand-orange text-white hover:bg-brand-orange/95 hover:shadow-lg hover:shadow-brand-orange/30 hover:-translate-y-0.5 focus:ring-brand-orange",
+      "bg-teal text-white hover:bg-teal-600 hover:shadow-lg hover:shadow-teal/30 hover:-translate-y-0.5 focus:ring-teal",
     secondary:
-      "bg-slate-900 border border-brand-green/40 text-brand-green hover:bg-brand-green/10 hover:border-brand-green hover:-translate-y-0.5 focus:ring-brand-green",
+      "bg-navy-900 border border-teal/40 text-teal-300 hover:bg-teal/10 hover:border-teal hover:-translate-y-0.5 focus:ring-teal",
     outline:
-      "bg-slate-900/60 border border-slate-700 text-slate-200 hover:bg-slate-800 hover:border-brand-orange/40 hover:text-white hover:-translate-y-0.5 focus:ring-brand-orange",
+      "bg-navy-900/60 border border-navy-700 text-slate-200 hover:bg-navy-800 hover:border-teal/40 hover:text-white hover:-translate-y-0.5 focus:ring-teal",
     tertiary:
-      "bg-transparent text-slate-300 hover:text-white hover:bg-slate-800/60 focus:ring-slate-600",
+      "bg-transparent text-slate-300 hover:text-white hover:bg-navy-800/60 focus:ring-slate-600",
     destructive:
-      "bg-red-600 text-white hover:bg-red-700 hover:shadow-md hover:shadow-red-600/20 hover:-translate-y-0.5 focus:ring-red-500",
+      "bg-rose text-white hover:bg-rose-600 hover:shadow-md hover:shadow-rose/20 hover:-translate-y-0.5 focus:ring-rose-500",
   };
 
   const sizes = {

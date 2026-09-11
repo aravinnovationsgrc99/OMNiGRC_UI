@@ -40,17 +40,17 @@ export default function GetADemoPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-20 flex-1 relative overflow-hidden">
         {/* Background Orbs */}
-        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-brand-orange/10 blur-[140px]" />
+        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-teal/10 blur-[140px]" />
 
         <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text & Benefits Column */}
           <div className="lg:col-span-6 space-y-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-orange/40 bg-brand-orange/10 text-brand-yellow text-xs font-mono tracking-widest uppercase font-semibold">
-              <Sparkles className="h-3.5 w-3.5 text-brand-gold" /> EXPERIENCE OMNiGRC
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber text-xs font-mono tracking-widest uppercase font-semibold">
+              <Sparkles className="h-3.5 w-3.5 text-amber" /> EXPERIENCE OMNiGRC
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
@@ -69,7 +69,7 @@ export default function GetADemoPage() {
                 "Review the Compliance Testing Board with rolling 30/60/90-day visibility",
               ].map((benefit, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="p-1 rounded-full bg-brand-green/20 text-brand-green mt-1 shrink-0">
+                  <div className="p-1 rounded-full bg-teal/20 text-teal mt-1 shrink-0">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <span className="text-slate-200 text-sm font-medium">{benefit}</span>
@@ -78,11 +78,11 @@ export default function GetADemoPage() {
             </div>
 
             <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center font-bold text-lg shrink-0">
+              <div className="h-12 w-12 rounded-xl bg-teal/20 text-teal flex items-center justify-center font-bold text-lg shrink-0">
                 <Lock className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-xs text-brand-yellow font-mono font-semibold">CONFIDENTIAL &amp; TENANT ISOLATED</p>
+                <p className="text-xs text-amber font-mono font-semibold">CONFIDENTIAL &amp; TENANT ISOLATED</p>
                 <p className="text-sm font-bold text-white">Built for Practical GRC Operations</p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function GetADemoPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl border border-brand-orange/30 bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
+              className="rounded-3xl border border-teal/30 bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
             >
               <h3 className="text-2xl font-bold text-white mb-2">Request Your Demo Walkthrough</h3>
               <p className="text-xs text-slate-400 mb-6">Fill in your details and a GRC specialist will connect to schedule a time.</p>
@@ -110,7 +110,7 @@ export default function GetADemoPage() {
                     className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
                       errors.name
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-slate-700 focus:border-brand-orange focus:ring-brand-orange"
+                        : "border-slate-700 focus:border-teal focus:ring-teal"
                     }`}
                   />
                   {errors.name && <p className="text-[11px] text-red-400 mt-1">{errors.name}</p>}
@@ -126,7 +126,7 @@ export default function GetADemoPage() {
                     className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
                       errors.email
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-slate-700 focus:border-brand-orange focus:ring-brand-orange"
+                        : "border-slate-700 focus:border-teal focus:ring-teal"
                     }`}
                   />
                   {errors.email && <p className="text-[11px] text-red-400 mt-1">{errors.email}</p>}
@@ -143,7 +143,7 @@ export default function GetADemoPage() {
                       className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
                         errors.company
                           ? "border-red-500 focus:ring-red-500"
-                          : "border-slate-700 focus:border-brand-orange focus:ring-brand-orange"
+                          : "border-slate-700 focus:border-teal focus:ring-teal"
                       }`}
                     />
                     {errors.company && <p className="text-[11px] text-red-400 mt-1">{errors.company}</p>}
@@ -156,7 +156,7 @@ export default function GetADemoPage() {
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
+                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                     />
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function GetADemoPage() {
                     <select
                       value={formData.role}
                       onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
+                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                     >
                       <option value="GRC Lead">GRC / Compliance Lead</option>
                       <option value="CISO">CISO / Head of Security</option>
@@ -182,7 +182,7 @@ export default function GetADemoPage() {
                     <select
                       value={formData.size}
                       onChange={(e) => setFormData({ ...formData, size: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
+                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                     >
                       <option value="<50">&lt; 50 employees</option>
                       <option value="50-200">50 - 200 employees</option>
@@ -200,7 +200,7 @@ export default function GetADemoPage() {
                     placeholder="e.g. Target ISO 27001 & SOC 2, looking to replace spreadsheets..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange"
+                    className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                   />
                 </div>
 
@@ -210,7 +210,7 @@ export default function GetADemoPage() {
                     id="agree"
                     checked={formData.agree}
                     onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
-                    className="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-950 text-brand-orange focus:ring-brand-orange"
+                    className="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-950 text-teal focus:ring-teal"
                   />
                   <label htmlFor="agree" className="text-xs text-slate-400">
                     I agree to OMNiGRC&apos;s Terms of Service and Privacy Policy. My information will remain confidential.
@@ -220,7 +220,7 @@ export default function GetADemoPage() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-brand-orange py-4 text-base font-bold text-white shadow-xl shadow-brand-orange/30 hover:bg-brand-orange/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
+                  className="w-full rounded-xl bg-teal py-4 text-base font-bold text-white shadow-xl shadow-teal/30 hover:bg-teal/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
                 >
                   Request Demo <ArrowRight className="h-5 w-5" />
                 </button>

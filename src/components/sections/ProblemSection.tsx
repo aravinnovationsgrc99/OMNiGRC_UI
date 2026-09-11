@@ -17,6 +17,8 @@ import {
   GitMerge,
 } from "lucide-react";
 
+import { fadeInUp, staggerContainer } from "@/lib/motion";
+
 export const ProblemSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"fragmented" | "connected">("fragmented");
 
@@ -67,18 +69,18 @@ export const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-[#0B0F17] py-16 sm:py-24 border-t border-slate-800 overflow-hidden">
+    <section className="relative bg-[#0A111F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
       {/* Background soft glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[85vw] max-w-[800px] rounded-full bg-brand-orange/10 blur-[130px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[85vw] max-w-[800px] rounded-full bg-teal/10 blur-[130px]" />
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
             THE REALITY OF LEAN GRC
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
             Compliance isn&apos;t hard because of frameworks. <br className="hidden sm:inline" />
-            <span className="text-brand-orange">It&apos;s hard because work is fragmented.</span>
+            <span className="text-teal">It&apos;s hard because work is fragmented.</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
             Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise GRC suites. OMNiGRC bridges that gap with a unified operating layer.
@@ -87,12 +89,12 @@ export const ProblemSection: React.FC = () => {
 
         {/* Interactive Comparison Switcher */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1 rounded-xl bg-slate-900 border border-slate-800">
+          <div className="inline-flex p-1 rounded-xl bg-navy-900 border border-navy-700/60">
             <button
               onClick={() => setActiveTab("fragmented")}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "fragmented"
-                  ? "bg-slate-800 text-brand-orange shadow-md"
+                  ? "bg-navy-800 text-teal shadow-md"
                   : "text-slate-400 hover:text-white"
               }`}
             >
@@ -102,7 +104,7 @@ export const ProblemSection: React.FC = () => {
               onClick={() => setActiveTab("connected")}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "connected"
-                  ? "bg-brand-orange text-white shadow-md shadow-brand-orange/30"
+                  ? "bg-teal text-white shadow-md shadow-teal/30"
                   : "text-slate-400 hover:text-white"
               }`}
             >
@@ -114,11 +116,11 @@ export const ProblemSection: React.FC = () => {
         {/* Comparison Visual Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left / State Card */}
-          <div className="lg:col-span-6 rounded-3xl border border-slate-800 bg-slate-900/80 p-6 sm:p-8 flex flex-col justify-between">
+          <div className="lg:col-span-6 rounded-3xl border border-navy-700/60 bg-navy-900/80 p-6 sm:p-8 flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-400 flex items-center gap-1.5">
-                  <XCircle className="h-4 w-4 text-red-400" /> Fragmented Operations
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-navy-700/60">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-rose-400 flex items-center gap-1.5">
+                  <XCircle className="h-4 w-4 text-rose-400" /> Fragmented Operations
                 </span>
                 <span className="text-[11px] font-mono text-slate-500">Without OMNiGRC</span>
               </div>
@@ -128,9 +130,9 @@ export const ProblemSection: React.FC = () => {
                   return (
                     <div
                       key={idx}
-                      className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-start gap-3"
+                      className="p-3.5 rounded-xl bg-[#0A111F]/70 border border-navy-700/60 flex items-start gap-3"
                     >
-                      <div className="p-2 rounded-lg bg-red-500/10 text-red-400 shrink-0 mt-0.5">
+                      <div className="p-2 rounded-lg bg-rose/10 text-rose-400 shrink-0 mt-0.5">
                         <Icon className="h-4 w-4" />
                       </div>
                       <div>
@@ -143,20 +145,20 @@ export const ProblemSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-xs text-red-300">
+            <div className="mt-6 p-4 rounded-xl bg-rose/10 border border-rose/20 text-xs text-rose-300">
               <strong className="block mb-1">Resulting Impact:</strong>
               Duplicate mapping work, audit preparation scramble, and zero confidence in posture between audits.
             </div>
           </div>
 
           {/* Right / Connected OMNiGRC Card */}
-          <div className="lg:col-span-6 rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-brand-orange/10">
+          <div className="lg:col-span-6 rounded-3xl border border-teal/40 bg-navy-900/90 p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-teal/10">
             <div>
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-brand-green flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand-green" /> Connected OMNiGRC Workflow
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-navy-700/60">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-teal flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-teal" /> Connected OMNiGRC Workflow
                 </span>
-                <span className="text-[11px] font-mono text-brand-yellow">Unified Operating Layer</span>
+                <span className="text-[11px] font-mono text-amber">Unified Operating Layer</span>
               </div>
               <div className="space-y-4">
                 {connectedSolutions.map((item, idx) => {
@@ -164,9 +166,9 @@ export const ProblemSection: React.FC = () => {
                   return (
                     <div
                       key={idx}
-                      className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 flex items-start gap-3 hover:border-brand-orange/30 transition-all"
+                      className="p-3.5 rounded-xl bg-[#0A111F]/80 border border-navy-700/60 flex items-start gap-3 hover:border-teal/30 transition-all"
                     >
-                      <div className="p-2 rounded-lg bg-brand-green/15 text-brand-green shrink-0 mt-0.5">
+                      <div className="p-2 rounded-lg bg-teal/15 text-teal shrink-0 mt-0.5">
                         <Icon className="h-4 w-4" />
                       </div>
                       <div>
@@ -179,7 +181,7 @@ export const ProblemSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl bg-brand-green/15 border border-brand-green/30 text-xs text-brand-green font-medium">
+            <div className="mt-6 p-4 rounded-xl bg-teal/15 border border-teal/30 text-xs text-teal-300 font-medium">
               <strong className="block mb-1 text-white">OMNiGRC Advantage:</strong>
               Single source of truth where risk, asset, control, and testing workflows inform each other seamlessly.
             </div>

@@ -13,7 +13,7 @@ import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 selection:bg-brand-orange/30 selection:text-white">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 selection:bg-teal/30 selection:text-white">
       <Header />
       <main>
         {/* 1. Hero Section */}

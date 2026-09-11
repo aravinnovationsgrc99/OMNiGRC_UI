@@ -15,7 +15,7 @@ interface EmptyStateProps {
 }
 
 export const EmptyState: React.FC<EmptyStateProps> = ({
-  icon = <ShieldAlert className="h-10 w-10 text-brand-orange" />,
+  icon = <ShieldAlert className="h-10 w-10 text-teal" />,
   title,
   description,
   actionText,
@@ -23,8 +23,8 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
   className,
 }) => {
   return (
-    <div className={cn("flex flex-col items-center justify-center p-8 sm:p-12 text-center rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md", className)}>
-      <div className="p-4 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 mb-4">
+    <div className={cn("flex flex-col items-center justify-center p-8 sm:p-12 text-center rounded-2xl border border-navy-700/60 bg-navy-900/60 backdrop-blur-md", className)}>
+      <div className="p-4 rounded-2xl bg-teal/10 border border-teal/20 mb-4">
         {icon}
       </div>
       <h3 className="text-lg font-bold text-white mb-2">{title}</h3>

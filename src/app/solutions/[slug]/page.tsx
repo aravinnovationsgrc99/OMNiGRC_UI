@@ -48,18 +48,18 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
   const sol = solutionDetails[slug] || solutionDetails["startups"];
 
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
               TAILORED GRC SOLUTION
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
               {sol.title}
             </h1>
-            <p className="text-lg text-brand-peach font-semibold mb-4">{sol.subtitle}</p>
+            <p className="text-lg text-slateSoft font-semibold mb-4">{sol.subtitle}</p>
             <p className="text-slate-300 text-base leading-relaxed">{sol.desc}</p>
           </div>
 
@@ -67,7 +67,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
             {sol.highlights.map((h, idx) => (
               <TiltCard key={idx} className="p-6 border-slate-800 bg-slate-900/80">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-brand-orange/15 text-brand-orange shrink-0">
+                  <div className="p-2 rounded-lg bg-teal/15 text-teal shrink-0">
                     <CheckCircle2 className="h-5 w-5" />
                   </div>
                   <p className="text-sm font-semibold text-white mt-0.5">{h}</p>
@@ -76,12 +76,12 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
             ))}
           </div>
 
-          <div className="rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
+          <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-2">Ready to explore OMNiGRC?</h3>
             <p className="text-xs text-slate-300 mb-6">
               Talk to our team to see how OMNiGRC connects your risk, assets, and controls.
             </p>
-            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-orange text-white font-bold text-xs hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/20">
+            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
               Request a Demo <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

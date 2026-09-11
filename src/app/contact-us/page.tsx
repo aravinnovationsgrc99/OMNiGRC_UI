@@ -15,12 +15,12 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
               CONNECT WITH US
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -36,7 +36,7 @@ export default function ContactUsPage() {
             <div className="lg:col-span-5 space-y-6">
               <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-brand-orange/15 text-brand-orange">
+                  <div className="p-2.5 rounded-xl bg-teal/15 text-teal">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
@@ -46,7 +46,7 @@ export default function ContactUsPage() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-brand-gold/15 text-brand-gold">
+                  <div className="p-2.5 rounded-xl bg-amber/15 text-amber">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -56,8 +56,8 @@ export default function ContactUsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl border border-brand-orange/30 bg-gradient-to-b from-brand-orange/10 to-slate-900/80">
-                <Lock className="h-6 w-6 text-brand-orange mb-2" />
+              <div className="p-6 rounded-2xl border border-teal/30 bg-gradient-to-b from-teal/10 to-slate-900/80">
+                <Lock className="h-6 w-6 text-teal mb-2" />
                 <h4 className="font-bold text-white text-sm mb-1">Confidential &amp; Tenant-Isolated</h4>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   All discussions and technical architecture requirements are held in strict confidentiality.
@@ -70,7 +70,7 @@ export default function ContactUsPage() {
               <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-8 shadow-xl">
                 {submitted ? (
                   <div className="p-8 text-center space-y-4">
-                    <CheckCircle2 className="h-12 w-12 text-brand-green mx-auto" />
+                    <CheckCircle2 className="h-12 w-12 text-teal mx-auto" />
                     <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
                     <p className="text-xs text-slate-300">
                       Thank you for reaching out to OMNiGRC. A GRC architect will respond within 2 business hours.
@@ -86,7 +86,7 @@ export default function ContactUsPage() {
                           required
                           type="text"
                           placeholder="Alex Morgan"
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-brand-orange focus:outline-none"
+                          className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
                         />
                       </div>
                       <div>
@@ -95,7 +95,7 @@ export default function ContactUsPage() {
                           required
                           type="email"
                           placeholder="alex@company.com"
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-brand-orange focus:outline-none"
+                          className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
                         />
                       </div>
                     </div>
@@ -105,7 +105,7 @@ export default function ContactUsPage() {
                         required
                         type="text"
                         placeholder="Inquiry about ISO 27001 & SOC 2 Mapping"
-                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-brand-orange focus:outline-none"
+                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
                       />
                     </div>
                     <div>
@@ -114,12 +114,12 @@ export default function ContactUsPage() {
                         required
                         rows={4}
                         placeholder="Tell us about your team's GRC operations..."
-                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-brand-orange focus:outline-none"
+                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full rounded-xl bg-brand-orange py-3.5 text-xs font-bold text-white hover:bg-brand-orange/90 shadow-md flex items-center justify-center gap-2"
+                      className="w-full rounded-xl bg-teal py-3.5 text-xs font-bold text-white hover:bg-teal/90 shadow-md flex items-center justify-center gap-2"
                     >
                       Send Message <Send className="h-4 w-4" />
                     </button>

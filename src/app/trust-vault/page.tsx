@@ -32,12 +32,12 @@ const resources = [
 
 export default function TrustVaultPage() {
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
               PRACTICAL GRC RESOURCES
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -53,10 +53,10 @@ export default function TrustVaultPage() {
               <TiltCard key={idx} className="p-8 border-slate-800 bg-slate-900/80 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono mb-4">
-                    <span className="px-2.5 py-1 rounded-full bg-brand-orange/15 text-brand-orange font-semibold">
+                    <span className="px-2.5 py-1 rounded-full bg-teal/15 text-teal font-semibold">
                       {res.type}
                     </span>
-                    <Download className="h-4 w-4 text-brand-gold" />
+                    <Download className="h-4 w-4 text-amber" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{res.title}</h3>
                   <p className="text-xs text-slate-300 leading-relaxed mb-6">{res.desc}</p>
@@ -64,7 +64,7 @@ export default function TrustVaultPage() {
 
                 <Link
                   href="/get-a-demo"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-brand-orange hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-teal hover:text-white transition-colors"
                 >
                   Request Resource <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -72,10 +72,10 @@ export default function TrustVaultPage() {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
+          <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-2">Need a custom framework mapping template?</h3>
             <p className="text-xs text-slate-300 mb-6">Our team can help configure your controls across ISO 27001, SOC 2, and DPDP.</p>
-            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-orange text-white font-bold text-xs hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/20">
+            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
               Talk to Our Team <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

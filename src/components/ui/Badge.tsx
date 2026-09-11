@@ -4,7 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?: "success" | "warning" | "ai" | "peach" | "orange" | "neutral";
+  variant?: "teal" | "amber" | "rose" | "success" | "warning" | "ai" | "peach" | "orange" | "neutral";
   size?: "sm" | "md";
   icon?: React.ReactNode;
 }
@@ -12,7 +12,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 export const Badge: React.FC<BadgeProps> = ({
   children,
   className,
-  variant = "success",
+  variant = "teal",
   size = "sm",
   icon,
   ...props
@@ -21,18 +21,24 @@ export const Badge: React.FC<BadgeProps> = ({
     "inline-flex items-center gap-1.5 font-mono font-semibold rounded-full border tracking-wide uppercase transition-all duration-150 hover:scale-105 cursor-default";
 
   const variants = {
+    teal:
+      "bg-teal/15 text-teal-300 border-teal/30 hover:border-teal/60",
+    amber:
+      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
     success:
-      "bg-brand-green/15 text-brand-green border-brand-green/30 hover:border-brand-green/60",
+      "bg-teal/15 text-teal-300 border-teal/30 hover:border-teal/60",
     warning:
-      "bg-brand-gold/15 text-brand-gold border-brand-gold/30 hover:border-brand-gold/60",
+      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
     ai:
-      "bg-brand-yellow/15 text-brand-yellow border-brand-yellow/30 hover:border-brand-yellow/60",
+      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
     peach:
-      "bg-brand-peach/15 text-brand-peach border-brand-peach/30 hover:border-brand-peach/60",
+      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
     orange:
-      "bg-brand-orange/15 text-brand-orange border-brand-orange/30 hover:border-brand-orange/60",
+      "bg-teal/15 text-teal-300 border-teal/30 hover:border-teal/60",
+    rose:
+      "bg-rose/15 text-rose-300 border-rose/30 hover:border-rose/60",
     neutral:
-      "bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-600",
+      "bg-navy-800 text-slate-300 border-navy-700 hover:border-navy-600",
   };
 
   const sizes = {

@@ -26,3 +26,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Impeccable & AI Agent Harnesses
+.agent/
+_agent/
+.agents/
+_agents/
+.codex/
+.claude/
+.cursor/
+.dsh/
+.gemini/
+.github/
+.grok/
+.ermes/
+.kiro/
+.opencode/
+.pi/
+.qoder/
+.trae/
+.trae-cn/
+.rovo-dev/
+.vibe/

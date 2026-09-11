@@ -9,12 +9,12 @@ import { TiltCard } from "@/components/ui/TiltCard";
 
 export default function AboutUsPage() {
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="pt-32 pb-24 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold inline-block">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
               OUR MISSION
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
@@ -34,7 +34,7 @@ export default function AboutUsPage() {
               { label: "External Data Transmission", val: "Minimized" },
             ].map((stat, idx) => (
               <div key={idx} className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 text-center">
-                <p className="text-2xl sm:text-3xl font-extrabold text-brand-orange mb-1">{stat.val}</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-teal mb-1">{stat.val}</p>
                 <p className="text-xs font-mono text-slate-400">{stat.label}</p>
               </div>
             ))}
@@ -43,7 +43,7 @@ export default function AboutUsPage() {
           {/* Values Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             <TiltCard className="p-8 border-slate-800 bg-slate-900/70">
-              <Zap className="h-8 w-8 text-brand-orange mb-4" />
+              <Zap className="h-8 w-8 text-teal mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Connected Workflows</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Risk registers, asset inventories, controls, and compliance testing belong together in one continuous operating layer.
@@ -51,7 +51,7 @@ export default function AboutUsPage() {
             </TiltCard>
 
             <TiltCard className="p-8 border-slate-800 bg-slate-900/70">
-              <Lock className="h-8 w-8 text-brand-gold mb-4" />
+              <Lock className="h-8 w-8 text-amber mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Data Minimization</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 We believe external AI tools should receive only sanitized control text, keeping sensitive organizational data strictly isolated.
@@ -59,7 +59,7 @@ export default function AboutUsPage() {
             </TiltCard>
 
             <TiltCard className="p-8 border-slate-800 bg-slate-900/70">
-              <Shield className="h-8 w-8 text-brand-green mb-4" />
+              <Shield className="h-8 w-8 text-teal mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Defensible Auditability</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Compliance shouldn&apos;t be an annual scramble. Every review and decision is logged with full version history and auditor-ready proof.
@@ -67,12 +67,12 @@ export default function AboutUsPage() {
             </TiltCard>
           </div>
 
-          <div className="rounded-3xl border border-brand-orange/40 bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto">
+          <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to experience OMNiGRC?</h2>
             <p className="text-slate-300 text-sm mb-6 max-w-xl mx-auto">
               Schedule a personalized demonstration tailored to your target frameworks and team structure.
             </p>
-            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-orange text-white font-bold text-xs hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/20">
+            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
               Request a Demo <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

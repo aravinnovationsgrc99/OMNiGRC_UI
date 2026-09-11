@@ -45,13 +45,13 @@ const comparisonRows = [
 
 export const ComparisonSection: React.FC = () => {
   return (
-    <section className="relative bg-[#0B0F17] py-16 sm:py-24 border-t border-slate-800 overflow-hidden">
+    <section className="relative bg-[#0A111F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold"
+            className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold"
           >
             WHY OMNiGRC
           </motion.p>
@@ -73,53 +73,53 @@ export const ComparisonSection: React.FC = () => {
         </div>
 
         {/* Comparison Table */}
-        <div className="max-w-5xl 2xl:max-w-6xl mx-auto overflow-x-auto rounded-3xl border border-brand-orange/30 bg-slate-900/90 shadow-2xl backdrop-blur-xl">
+        <div className="max-w-5xl 2xl:max-w-6xl mx-auto overflow-x-auto rounded-3xl border border-teal/30 bg-navy-900/90 shadow-2xl backdrop-blur-xl">
           <div className="min-w-[750px]">
             {/* Header Row */}
-            <div className="grid grid-cols-12 bg-slate-950 border-b border-slate-800 text-xs sm:text-sm font-bold text-slate-200">
+            <div className="grid grid-cols-12 bg-[#0A111F] border-b border-navy-700/60 text-xs sm:text-sm font-bold text-slate-200">
               <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-400">
                 CAPABILITY
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 border-l border-slate-800">
+              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 border-l border-navy-700/60">
                 MANUAL SPREADSHEETS
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 border-l border-slate-800">
+              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 border-l border-navy-700/60">
                 ENTERPRISE GRC SUITES
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-white bg-brand-orange/25 border-l border-brand-orange/50">
-                <span className="flex items-center gap-1.5 font-bold text-brand-yellow">
-                  <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-orange" /> OMNiGRC
+              <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-white bg-teal/25 border-l border-teal/50">
+                <span className="flex items-center gap-1.5 font-bold text-amber">
+                  <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal" /> OMNiGRC
                 </span>
-                <span className="px-2 py-0.5 rounded bg-brand-orange/40 text-white text-[9px] font-bold">UNIFIED</span>
+                <span className="px-2 py-0.5 rounded bg-teal/40 text-white text-[9px] font-bold">UNIFIED</span>
               </div>
             </div>
 
             {/* Comparison Rows */}
-            <div className="divide-y divide-slate-800/80">
+            <div className="divide-y divide-navy-700/60">
               {comparisonRows.map((row, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.25, delay: idx * 0.05 }}
-                  className="grid grid-cols-12 hover:bg-slate-800/40 transition-colors text-xs"
+                  className="grid grid-cols-12 hover:bg-navy-800/40 transition-colors text-xs"
                 >
                   <div className="col-span-3 p-4 font-bold text-white flex items-center">
                     {row.feature}
                   </div>
-                  <div className="col-span-3 p-4 text-slate-400 border-l border-slate-800/80 flex items-center gap-2">
+                  <div className="col-span-3 p-4 text-slate-400 border-l border-navy-700/60 flex items-center gap-2">
                     <Minus className="h-3.5 w-3.5 text-slate-600 shrink-0" />
                     <span>{row.manual}</span>
                   </div>
-                  <div className="col-span-3 p-4 text-slate-400 border-l border-slate-800/80 flex items-center gap-2">
+                  <div className="col-span-3 p-4 text-slate-400 border-l border-navy-700/60 flex items-center gap-2">
                     <Minus className="h-3.5 w-3.5 text-slate-600 shrink-0" />
                     <span>{row.heavy}</span>
                   </div>
-                  <div className="col-span-3 p-4 text-slate-100 font-medium bg-brand-orange/10 border-l border-brand-orange/30 flex items-center gap-2">
-                    <div className="h-4 w-4 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0">
+                  <div className="col-span-3 p-4 text-slate-100 font-medium bg-teal/10 border-l border-teal/30 flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-teal/20 text-teal flex items-center justify-center shrink-0">
                       <Check className="h-3 w-3 stroke-[3]" />
                     </div>
-                    <span className="text-brand-green font-semibold">{row.omni}</span>
+                    <span className="text-teal font-semibold">{row.omni}</span>
                   </div>
                 </motion.div>
               ))}

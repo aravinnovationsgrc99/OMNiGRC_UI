@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+
+const ibmSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-ibm-sans",
+});
+
+const ibmMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-ibm-mono",
+});
 
 export const metadata: Metadata = {
   title: "OMNiGRC — Unified Risk, Asset, and Control Management",
@@ -19,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased selection:bg-brand-orange selection:text-white bg-[#0B0F17] text-slate-100 min-h-screen">
+    <html lang="en" className={`dark ${ibmSans.variable} ${ibmMono.variable}`}>
+      <body className="antialiased selection:bg-teal/30 selection:text-white bg-[#0A111F] text-slate-100 min-h-screen font-sans">
         {children}
       </body>
     </html>

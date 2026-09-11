@@ -4,7 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Activity, ShieldAlert, Server, GitMerge } from "lucide-react";
-import { FloatingDepthCard } from "@/components/3d/FloatingDepthCard";
+import dynamic from "next/dynamic";
+import { fadeInUp, staggerContainer } from "@/lib/motion";
+
+const FloatingDepthCard = dynamic(
+  () => import("@/components/3d/FloatingDepthCard").then((m) => m.FloatingDepthCard),
+  { ssr: false }
+);
 
 const stages = [
   {
@@ -43,14 +49,14 @@ const stages = [
 
 export const StagesOfTrustSection: React.FC = () => {
   return (
-    <section className="relative bg-[#0B0F17] py-16 sm:py-24 overflow-hidden">
+    <section className="relative bg-[#0A111F] py-16 sm:py-24 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-mono uppercase tracking-widest text-brand-yellow mb-3 font-semibold"
+            className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold"
           >
             PRACTICAL GRC MATURITY
           </motion.p>
@@ -74,7 +80,7 @@ export const StagesOfTrustSection: React.FC = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-brand-orange/30 bg-slate-900/70 hover:border-brand-orange/60">
+              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-teal/30 bg-navy-900/70 hover:border-teal/60">
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
                     card.imageLeft ? "lg:flex-row-reverse" : ""
@@ -85,7 +91,7 @@ export const StagesOfTrustSection: React.FC = () => {
                       card.imageLeft ? "lg:order-2" : "lg:order-1"
                     }`}
                   >
-                    <span className="inline-block px-3 py-1 rounded-full border border-brand-peach/40 bg-brand-peach/10 text-brand-peach text-xs font-mono font-semibold">
+                    <span className="inline-block px-3 py-1 rounded-full border border-amber/40 bg-amber/10 text-amber text-xs font-mono font-semibold">
                       {card.stage}
                     </span>
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
@@ -97,9 +103,9 @@ export const StagesOfTrustSection: React.FC = () => {
                     <div>
                       <Link
                         href={card.ctaLink}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-white transition-colors group"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-teal hover:text-white transition-colors group"
                       >
-                        <span className="border-b border-brand-orange/50 group-hover:border-white pb-0.5">
+                        <span className="border-b border-teal/50 group-hover:border-white pb-0.5">
                           {card.ctaText}
                         </span>
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -112,17 +118,17 @@ export const StagesOfTrustSection: React.FC = () => {
                       card.imageLeft ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    <div className="rounded-2xl border border-slate-700 bg-slate-950 p-5 sm:p-6 shadow-2xl relative overflow-hidden">
-                      <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                    <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
+                      <div className="flex items-center justify-between border-b border-navy-700/60 pb-3 mb-4">
                         <div className="flex items-center gap-2">
-                          <div className="h-2.5 w-2.5 rounded-full bg-brand-orange" />
-                          <div className="h-2.5 w-2.5 rounded-full bg-brand-gold" />
-                          <div className="h-2.5 w-2.5 rounded-full bg-brand-green" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-teal" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-amber" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-teal-300" />
                           <span className="ml-2 text-xs font-mono text-slate-400">
                             {card.mockupTitle}
                           </span>
                         </div>
-                        <span className="text-[11px] text-brand-green font-mono">
+                        <span className="text-[11px] text-teal font-mono">
                           Live Posture
                         </span>
                       </div>
@@ -131,13 +137,13 @@ export const StagesOfTrustSection: React.FC = () => {
                         {card.mockupItems.map((item, itemIdx) => (
                           <div
                             key={itemIdx}
-                            className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-xs"
+                            className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-navy-900/90 border border-navy-700/60 text-xs"
                           >
                             <div className="flex items-center gap-2.5 truncate">
-                              <CheckCircle2 className="h-4 w-4 text-brand-green shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-teal shrink-0" />
                               <span className="text-slate-200 font-medium truncate">{item.label}</span>
                             </div>
-                            <span className="px-2 py-0.5 rounded bg-brand-green/15 text-brand-green font-mono font-semibold shrink-0 ml-2">
+                            <span className="px-2 py-0.5 rounded bg-teal/15 text-teal font-mono font-semibold shrink-0 ml-2">
                               {item.status}
                             </span>
                           </div>
