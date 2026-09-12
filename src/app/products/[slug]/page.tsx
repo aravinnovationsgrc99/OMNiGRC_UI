@@ -7,6 +7,9 @@ import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { Shield, CheckCircle2, ArrowRight, Sparkles, Cpu, Layers, Server, ShieldAlert, CalendarCheck, FileCheck2 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { FRAMEWORKS } from "@/lib/frameworks";
+
+const frameworkListStr = FRAMEWORKS.map((f) => f.code).join(", ");
 
 const productDetails: { [key: string]: { title: string; subtitle: string; desc: string; features: string[] } } = {
   "risk-management": {
@@ -34,10 +37,10 @@ const productDetails: { [key: string]: { title: string; subtitle: string; desc: 
   "audit-management": {
     title: "Advisory AI Control Mapping",
     subtitle: "Map internal controls once and align across documented standards",
-    desc: "Define your technical and organizational controls once. OMNiGRC's advisory AI suggests candidate clauses across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA for human review.",
+    desc: `Define your technical and organizational controls once. OMNiGRC's advisory AI suggests candidate clauses across ${frameworkListStr} for human review.`,
     features: [
       "Tiered model router with strict data minimization and redaction",
-      "Pre-loaded with ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA",
+      `Pre-loaded with ${frameworkListStr}`,
       "Confidence scores accompanying all AI advisory suggestions",
       "Mandatory human analyst approval before database persistence",
     ],

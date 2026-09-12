@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 const AuroraBackground = dynamic(
   () => import("@/components/3d/AuroraBackground"),
@@ -17,15 +18,6 @@ const IsometricHeroVisual = dynamic(
   () => import("@/components/3d/IsometricHeroVisual").then((m) => m.IsometricHeroVisual),
   { ssr: false }
 );
-
-const documentedFrameworks = [
-  { name: "ISO 27001:2022", badge: "ISMS Global" },
-  { name: "ISO 42001:2023", badge: "AI Governance" },
-  { name: "SOC 2 Type II", badge: "Trust Services" },
-  { name: "GDPR / UK GDPR", badge: "EU/UK Privacy" },
-  { name: "DPDP Act 2023", badge: "India Privacy" },
-  { name: "HIPAA Security", badge: "PHI Safeguards" },
-];
 
 export const HeroSection: React.FC = () => {
   return (
@@ -102,9 +94,9 @@ export const HeroSection: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-            {documentedFrameworks.map((fw, idx) => (
+            {FRAMEWORKS.map((fw) => (
               <div
-                key={idx}
+                key={fw.code}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-navy-700/60 bg-navy-900/80 text-[11px] font-medium text-slate-300"
               >
                 <CheckCircle2 className="h-3 w-3 text-teal" />

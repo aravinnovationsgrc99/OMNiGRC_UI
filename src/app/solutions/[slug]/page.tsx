@@ -6,6 +6,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Shield, ArrowRight, CheckCircle2, Zap, Layers, Server } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { FRAMEWORKS } from "@/lib/frameworks";
+
+const frameworkListStr = FRAMEWORKS.map((f) => f.code).join(", ");
 
 const solutionDetails: { [key: string]: { title: string; subtitle: string; desc: string; highlights: string[] } } = {
   startups: {
@@ -24,7 +27,7 @@ const solutionDetails: { [key: string]: { title: string; subtitle: string; desc:
     subtitle: "Continuous audit readiness and reusable control mapping across standards",
     desc: "As your organization scales into new markets and jurisdictions, OMNiGRC ensures a single internal security control satisfies multiple global frameworks simultaneously.",
     highlights: [
-      "Multi-framework alignment across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA",
+      `Multi-framework alignment across ${frameworkListStr}`,
       "Advisory AI clause matcher with confidence scores and mandatory human review",
       "Structured treatment plan workflows for accepted, mitigated, or transferred risks",
       "Immutable PostgreSQL audit history and version-tracked change records",

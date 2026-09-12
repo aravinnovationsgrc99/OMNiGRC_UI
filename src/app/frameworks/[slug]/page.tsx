@@ -1,84 +1,14 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Shield, ArrowRight, CheckCircle2, FileCheck2, Lock } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
-
-const frameworkDetails: { [key: string]: { title: string; subtitle: string; desc: string; controls: string[] } } = {
-  "soc-2": {
-    title: "SOC 2 Type II Alignment & Workflow",
-    subtitle: "Trust Services Criteria for Security, Availability, and Privacy",
-    desc: "OMNiGRC helps lean teams map technical policies and testing dates to AICPA Common Criteria (CC1-CC9). Evidence testing cadences are managed directly on the Compliance Board.",
-    controls: [
-      "CC1.0 - CC5.0 Control Environment & Risk Assessment mapping",
-      "CC6.0 Logical access, password policies, and MFA verification",
-      "CC7.0 System operations & vulnerability management cadence",
-      "CC8.0 - CC9.0 Change management and risk mitigation tracking",
-    ],
-  },
-  "iso-27001": {
-    title: "ISO 27001:2022 ISMS Operations",
-    subtitle: "Information Security Management System & Annex A Controls",
-    desc: "Manage your ISMS risk register, Annex A control mapping, and Statement of Applicability (SoA) within OMNiGRC without spreadsheet duplication.",
-    controls: [
-      "A.5 Organizational controls (policies, asset management, roles)",
-      "A.6 People controls (screening, terms of employment, awareness)",
-      "A.7 Physical security safeguards and working areas",
-      "A.8 Technological controls (access, malware, backup, encryption)",
-    ],
-  },
-  gdpr: {
-    title: "GDPR / UK GDPR Data Protection",
-    subtitle: "European & UK General Data Protection Regulation Safeguards",
-    desc: "Track asset repositories, PII data flows, and technical safeguards. Link privacy risks directly to operational controls and human-approved mitigation plans.",
-    controls: [
-      "Article 30 Record of Processing Activities (RoPA) asset tracing",
-      "Article 32 Technical and organizational security safeguards",
-      "Article 33 & 34 Incident logging & breach notification protocols",
-      "Article 35 Data Protection Impact Assessment (DPIA) linkages",
-    ],
-  },
-  dpdp: {
-    title: "DPDP Act India 2023 Compliance",
-    subtitle: "Digital Personal Data Protection Act Fiduciary Operations",
-    desc: "Structured compliance for Indian data fiduciaries. Maintain inventory of personal data flows, processing safeguards, and grievance management controls.",
-    controls: [
-      "Section 6 Notice and consent mechanism management",
-      "Section 8(5) Reasonable security safeguards & technical controls",
-      "Section 8(6) Personal data breach reporting protocols",
-      "Section 11 Data principal rights & audit trail governance",
-    ],
-  },
-  "iso-42001": {
-    title: "ISO 42001:2023 AI Management System (AIMS)",
-    subtitle: "Artificial Intelligence Management System & Responsible AI Governance",
-    desc: "Establish, implement, maintain, and continually improve an Artificial Intelligence Management System (AIMS). Manage AI risk assessments, algorithmic impact assessments, and AI control objectives.",
-    controls: [
-      "Context of the Organization & AI Impact Assessment mapping",
-      "AI Risk Assessment & Risk Treatment Protocols",
-      "Data Quality, Governance & Algorithmic Bias Management",
-      "AI System Lifecycle, Audit Logging & Transparency Controls",
-    ],
-  },
-  hipaa: {
-    title: "HIPAA Security & Privacy Rule Compliance",
-    subtitle: "Protected Health Information (PHI) Safeguards & Technical Rules",
-    desc: "Demonstrate compliance with HIPAA Security, Privacy, and Breach Notification Rules. Map administrative, physical, and technical safeguards to PHI data stores and audit trails.",
-    controls: [
-      "Administrative Safeguards (Security Management & Access Controls)",
-      "Physical Safeguards (Facility Access & Workstation Security)",
-      "Technical Safeguards (Access Control, Audit Controls, Integrity, Transmission)",
-      "Organizational Requirements & Business Associate Agreements (BAAs)",
-    ],
-  },
-};
+import { FRAMEWORKS, getFrameworkBySlug } from "@/lib/frameworks";
 
 export default function FrameworkDetailPage({ params }: { params: { slug: string } }) {
   const slug = params.slug || "soc-2";
-  const fw = frameworkDetails[slug] || frameworkDetails["soc-2"];
+  const fw = getFrameworkBySlug(slug) || FRAMEWORKS[2]; // Default to SOC 2
 
   return (
     <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
@@ -90,7 +20,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
               FRAMEWORK WORKFLOW GUIDE
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-              {fw.title}
+              {fw.name} Alignment &amp; Workflow
             </h1>
             <p className="text-lg text-slateSoft font-semibold mb-4">{fw.subtitle}</p>
             <p className="text-slate-300 text-base leading-relaxed">{fw.desc}</p>
@@ -110,9 +40,9 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
           </div>
 
           <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-2">Map {fw.title} with OMNiGRC</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Map {fw.name} with OMNiGRC</h2>
             <p className="text-xs text-slate-300 mb-6">
-              See how your controls and assets map to {fw.title} with advisory AI assistance and human review.
+              See how your controls and assets map to {fw.name} with advisory AI assistance and human review.
             </p>
             <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
               Request a Framework Walkthrough <ArrowRight className="h-4 w-4" />

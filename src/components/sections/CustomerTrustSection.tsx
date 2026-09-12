@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { fadeInUp, staggerContainer } from "@/lib/motion";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 const credibilityPillars = [
   {
@@ -30,7 +31,7 @@ const credibilityPillars = [
   },
   {
     title: "Map-Once Controls",
-    desc: "Single control satisfying ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA.",
+    desc: `Single control satisfying ${FRAMEWORKS.map((f) => f.code).join(", ")}.`,
     icon: FileCheck2,
     tag: "Reusable Logic",
   },

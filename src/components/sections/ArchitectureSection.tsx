@@ -44,10 +44,10 @@ export const ArchitectureSection: React.FC = () => {
       id: 2,
       name: "STEP 3 - 5: TIERED MODEL ROUTER & EXTERNAL CALL",
       title: "2. Tiered Model Router & Clause Analysis",
-      desc: "Sanitized control text and candidate framework clauses are routed to high-speed LLM APIs. Tier 1 (Gemini 2.5 Flash-Lite) / Tier 2 (Claude Haiku candidate) / Fallback (DeepSeek).",
+      desc: "Sanitized control text and candidate framework clauses are routed to high-speed LLM APIs. Tier 1 (Gemini 2.5 Flash-Lite) and Tier 2 (Claude Haiku 4.5).",
       icon: Cpu,
       boundary: "External LLM API (Ephemeral & Stateless)",
-      items: ["Gemini 2.5 Flash-Lite Tier", "Claude Haiku Candidate Tier", "DeepSeek Fallback Option", "Zero-Retention Call"],
+      items: ["Gemini 2.5 Flash-Lite — Tier 1", "Claude Haiku 4.5 — Tier 2", "Tiered Model Routing", "Zero-Retention Call"],
       borderColor: "border-amber",
       badgeColor: "text-amber bg-amber/10",
     },
@@ -169,7 +169,7 @@ export const ArchitectureSection: React.FC = () => {
                   isHovered ? "scale-[1.01] border-teal shadow-2xl shadow-teal/20" : ""
                 }`}
               >
-                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
                   <div className="flex items-start gap-4 max-w-xl">
                     <div className="p-3 rounded-xl bg-navy-800 text-teal shrink-0 mt-1">
                       <Icon className="h-6 w-6" />
@@ -188,14 +188,14 @@ export const ArchitectureSection: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="w-full md:w-auto grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div className="w-full lg:w-auto grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                     {tier.items.map((item, itemIdx) => (
                       <div
                         key={itemIdx}
-                        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 text-slate-200 font-medium"
+                        className="flex items-start gap-2 px-3 py-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 text-slate-200 font-medium min-w-0"
                       >
-                        <CheckCircle2 className="h-3.5 w-3.5 text-teal shrink-0" />
-                        <span className="whitespace-nowrap">{item}</span>
+                        <CheckCircle2 className="h-3.5 w-3.5 text-teal shrink-0 mt-0.5" />
+                        <span className="leading-snug break-words">{item}</span>
                       </div>
                     ))}
                   </div>

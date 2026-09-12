@@ -16,15 +16,20 @@ const ibmMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+import { FRAMEWORKS } from "@/lib/frameworks";
+
+const frameworkNamesStr = FRAMEWORKS.map((f) => f.name).join(", ");
+const frameworkCodesStr = FRAMEWORKS.map((f) => f.code).join(", ");
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://omnigrc.com"),
   title: "OMNiGRC — Unified Risk, Asset, and Control Management",
   description:
-    "The connected GRC operating layer for lean security and compliance teams. Unify risk registers, asset inventories, control mapping, and compliance testing across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP Act 2023, and HIPAA Security Rule.",
+    `The connected GRC operating layer for lean security and compliance teams. Unify risk registers, asset inventories, control mapping, and compliance testing across ${frameworkNamesStr}.`,
   openGraph: {
     title: "OMNiGRC — Unified Risk, Asset, and Control Management",
     description:
-      "Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA.",
+      `Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ${frameworkCodesStr}.`,
     url: "https://omnigrc.com",
     siteName: "OMNiGRC",
     images: [

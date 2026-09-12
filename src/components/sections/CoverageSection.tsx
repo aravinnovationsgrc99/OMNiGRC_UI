@@ -14,118 +14,10 @@ import {
   Layers,
 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
-
-interface FrameworkItem {
-  id: string;
-  name: string;
-  region: string;
-  badge: string;
-  scopeDesc: string;
-  controlDomains: string[];
-  omniWorkflow: string;
-}
-
-const documentedFrameworks: FrameworkItem[] = [
-  {
-    id: "iso-27001",
-    name: "ISO 27001:2022",
-    region: "Global Standard",
-    badge: "ISMS Management",
-    scopeDesc:
-      "Global standard for Information Security Management Systems (ISMS). Focuses on risk treatment, Annex A controls, and management review.",
-    controlDomains: [
-      "A.5 Organizational Controls (37 Controls)",
-      "A.6 People Controls (8 Controls)",
-      "A.7 Physical Controls (14 Controls)",
-      "A.8 Technological Controls (34 Controls)",
-    ],
-    omniWorkflow:
-      "Map internal security policies once; OMNiGRC links policies to ISO 27001 Annex A clauses and populates your Statement of Applicability (SoA) automatically.",
-  },
-  {
-    id: "soc-2",
-    name: "SOC 2 Type II",
-    region: "North America & Global SaaS",
-    badge: "Trust Services Criteria",
-    scopeDesc:
-      "AICPA Trust Services Criteria evaluating Security, Availability, Confidentiality, Processing Integrity, and Privacy over time.",
-    controlDomains: [
-      "CC1 - CC5 Control Environment & Risk Assessment",
-      "CC6 Logical and Physical Access Controls",
-      "CC7 System Operations & Vulnerability Detection",
-      "CC8 - CC9 Change Management & Risk Mitigation",
-    ],
-    omniWorkflow:
-      "Align technical configurations and testing dates to Common Criteria. Evidence cadences are tracked on the Compliance Board with rolling 30/60/90-day visibility.",
-  },
-  {
-    id: "gdpr",
-    name: "GDPR / UK GDPR",
-    region: "European Union & United Kingdom",
-    badge: "Data Privacy & Governance",
-    scopeDesc:
-      "Strict data protection regulations for handling European and British citizens' personal data, processing records, and consent management.",
-    controlDomains: [
-      "Article 30: Record of Processing Activities (RoPA)",
-      "Article 32: Technical & Organizational Security",
-      "Article 33/34: Data Breach Notification Protocols",
-      "Article 35: Data Protection Impact Assessments (DPIA)",
-    ],
-    omniWorkflow:
-      "Track data flows and asset inventories within OMNiGRC, directly connecting PII data stores to required technical safeguards and encryption controls.",
-  },
-  {
-    id: "dpdp",
-    name: "DPDP Act 2023",
-    region: "India Digital Privacy",
-    badge: "Data Fiduciary Mandate",
-    scopeDesc:
-      "India's comprehensive privacy regulation governing digital personal data, fiduciary duties, user consent, and notice standards.",
-    controlDomains: [
-      "Section 6: Clear & Granular Consent Notices",
-      "Section 8(5): Reasonable Security Safeguards",
-      "Section 8(6): Personal Data Breach Notification",
-      "Section 11: Data Principal Rights & Grievance Redressal",
-    ],
-    omniWorkflow:
-      "Maintain vendor registers, asset inventories, and safeguard controls tailored specifically to Indian data fiduciary guidelines.",
-  },
-  {
-    id: "iso-42001",
-    name: "ISO 42001:2023",
-    region: "Global AI Management",
-    badge: "AIMS Governance",
-    scopeDesc:
-      "Global standard for Artificial Intelligence Management Systems (AIMS). Focuses on responsible AI, impact assessments, and risk treatment.",
-    controlDomains: [
-      "AI Impact Assessment & Risk Identification",
-      "Algorithmic Data Quality & Bias Governance",
-      "System Transparency & Model Audit Trail",
-      "Human Oversight & Continuous AIMS Monitoring",
-    ],
-    omniWorkflow:
-      "Track AI models, risk assessments, and algorithmic safeguards within OMNiGRC, linking model assets directly to ISO 42001 clauses.",
-  },
-  {
-    id: "hipaa",
-    name: "HIPAA Security Rule",
-    region: "Healthcare & PHI Data",
-    badge: "Health Data Privacy",
-    scopeDesc:
-      "US healthcare privacy and security framework enforcing Administrative, Physical, and Technical Safeguards for Protected Health Information (PHI).",
-    controlDomains: [
-      "Administrative Safeguards & Access Management",
-      "Physical Safeguards & Workstation Security",
-      "Technical Safeguards (Encryption & Integrity)",
-      "Business Associate Agreements & Breach Response",
-    ],
-    omniWorkflow:
-      "Link PHI assets and vendor registers directly to HIPAA safeguards, tracking audit logging and encryption evidence on the Compliance Board.",
-  },
-];
+import { FRAMEWORKS, Framework } from "@/lib/frameworks";
 
 export const CoverageSection: React.FC = () => {
-  const [selectedFw, setSelectedFw] = useState<FrameworkItem>(documentedFrameworks[0]);
+  const [selectedFw, setSelectedFw] = useState<Framework>(FRAMEWORKS[0]);
 
   return (
     <section className="relative bg-[#16233F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
@@ -139,7 +31,7 @@ export const CoverageSection: React.FC = () => {
             Six frameworks supported natively out of the box.
           </h2>
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            One primary control definition maps seamlessly into ISO 27001, ISO 42001, SOC 2, GDPR, DPDP Act, and HIPAA requirements.
+            One primary control definition maps seamlessly into {FRAMEWORKS.map((f) => f.code).join(", ")} requirements.
           </p>
         </div>
 
@@ -147,11 +39,11 @@ export const CoverageSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Framework List */}
           <div className="lg:col-span-5 space-y-3">
-            {documentedFrameworks.map((fw) => {
-              const isSelected = selectedFw.id === fw.id;
+            {FRAMEWORKS.map((fw) => {
+              const isSelected = selectedFw.code === fw.code;
               return (
                 <button
-                  key={fw.id}
+                  key={fw.code}
                   onClick={() => setSelectedFw(fw)}
                   className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-center justify-between group ${
                     isSelected
@@ -184,7 +76,7 @@ export const CoverageSection: React.FC = () => {
           <div className="lg:col-span-7">
             <AnimatePresence mode="wait">
               <motion.div
-                key={selectedFw.id}
+                key={selectedFw.code}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
@@ -199,7 +91,7 @@ export const CoverageSection: React.FC = () => {
                     <p className="text-xs font-mono text-slate-400">{selectedFw.region}</p>
                   </div>
                   <Link
-                    href={`/frameworks/${selectedFw.id}`}
+                    href={`/frameworks/${selectedFw.slug}`}
                     className="inline-flex items-center gap-1.5 text-xs font-mono text-teal-300 hover:underline bg-teal/10 px-3 py-1.5 rounded-lg border border-teal/30"
                   >
                     View Workflow Map <ArrowRight className="h-3.5 w-3.5" />
@@ -207,7 +99,7 @@ export const CoverageSection: React.FC = () => {
                 </div>
 
                 <p className="text-sm text-slate-200 leading-relaxed">
-                  {selectedFw.scopeDesc}
+                  {selectedFw.desc}
                 </p>
 
                 <div className="space-y-3">

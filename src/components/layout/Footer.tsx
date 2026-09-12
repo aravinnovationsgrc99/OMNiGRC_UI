@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Shield, Lock, ArrowRight } from "lucide-react";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const Footer: React.FC = () => {
   return (
@@ -16,27 +17,27 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/products/risk-management" className="hover:text-teal transition-colors">
-                  Risk Register &amp; Scoring
+                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
+                  5x5 Risk Register
                 </Link>
               </li>
               <li>
-                <Link href="/products/continuous-monitoring" className="hover:text-teal transition-colors">
-                  Asset &amp; Vendor Inventory
+                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
+                  Asset &amp; PII Graph
                 </Link>
               </li>
               <li>
-                <Link href="/products/audit-management" className="hover:text-teal transition-colors">
-                  Control Mapping &amp; Advisory AI
+                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
+                  AI Clause Mapper
                 </Link>
               </li>
               <li>
-                <Link href="/products/policy-management" className="hover:text-teal transition-colors">
-                  Compliance Testing Board
+                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
+                  Compliance Board
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-teal transition-colors">
+                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
                   Platform Architecture
                 </Link>
               </li>
@@ -49,36 +50,13 @@ export const Footer: React.FC = () => {
               Frameworks
             </h4>
             <ul className="space-y-2 text-xs">
-              <li>
-                <Link href="/frameworks/iso-27001" className="hover:text-teal transition-colors">
-                  ISO 27001:2022 ISMS
-                </Link>
-              </li>
-              <li>
-                <Link href="/frameworks/iso-42001" className="hover:text-teal transition-colors">
-                  ISO 42001:2023 AI Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/frameworks/soc-2" className="hover:text-teal transition-colors">
-                  SOC 2 Type II
-                </Link>
-              </li>
-              <li>
-                <Link href="/frameworks/gdpr" className="hover:text-teal transition-colors">
-                  GDPR &amp; UK GDPR
-                </Link>
-              </li>
-              <li>
-                <Link href="/frameworks/dpdp" className="hover:text-teal transition-colors">
-                  DPDP Act India 2023
-                </Link>
-              </li>
-              <li>
-                <Link href="/frameworks/hipaa" className="hover:text-teal transition-colors">
-                  HIPAA Security Rule
-                </Link>
-              </li>
+              {FRAMEWORKS.map((fw) => (
+                <li key={fw.code}>
+                  <Link href={`/frameworks/${fw.slug}`} className="hover:text-teal transition-colors">
+                    {fw.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

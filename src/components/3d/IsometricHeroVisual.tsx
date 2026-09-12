@@ -19,6 +19,8 @@ import { Badge } from "@/components/ui/Badge";
 
 type ActiveTab = "overview" | "risk" | "control" | "framework";
 
+import { FRAMEWORKS } from "@/lib/frameworks";
+
 export const IsometricHeroVisual: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>("overview");
 
@@ -309,22 +311,15 @@ export const IsometricHeroVisual: React.FC = () => {
               transition={{ delay: 0.4 }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3"
             >
-              {[
-                { name: "ISO 27001:2022", badge: "ISMS Global", count: "93 Controls" },
-                { name: "ISO 42001:2023", badge: "AI Governance", count: "AIMS Standard" },
-                { name: "SOC 2 Type II", badge: "Trust Services", count: "Common Criteria" },
-                { name: "GDPR / UK GDPR", badge: "EU & UK Privacy", count: "Data Protection" },
-                { name: "DPDP Act 2023", badge: "India Privacy", count: "Fiduciary Rules" },
-                { name: "HIPAA Security", badge: "Healthcare PHI", count: "Safeguards" },
-              ].map((fw, idx) => (
+              {FRAMEWORKS.map((fw) => (
                 <div
-                  key={idx}
+                  key={fw.code}
                   className="p-3.5 rounded-xl border border-slate-800 bg-slate-950/80 text-center hover:border-teal/50 transition-all"
                 >
                   <Shield className="h-5 w-5 text-teal mx-auto mb-2" />
                   <p className="font-bold text-xs text-white">{fw.name}</p>
-                  <p className="text-[10px] text-amber font-mono mt-1">{fw.badge}</p>
-                  <p className="text-[9px] text-slate-400 font-mono mt-0.5">{fw.count}</p>
+                  <p className="text-[10px] text-teal font-mono font-semibold mt-1">{fw.badge}</p>
+                  <p className="text-[9px] text-slate-400 mt-0.5">{fw.region}</p>
                 </div>
               ))}
             </motion.div>

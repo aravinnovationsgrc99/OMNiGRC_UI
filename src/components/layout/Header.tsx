@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const Header: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -189,21 +190,14 @@ export const Header: React.FC = () => {
                       </Link>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {[
-                        { name: "ISO 27001:2022", desc: "ISMS Global Standard & Annex A", link: "/frameworks/iso-27001" },
-                        { name: "ISO 42001:2023", desc: "AI Management System (AIMS)", link: "/frameworks/iso-42001" },
-                        { name: "SOC 2 Type II", desc: "Trust Services Criteria Security & Ops", link: "/frameworks/soc-2" },
-                        { name: "GDPR / UK GDPR", desc: "European & British Data Protection", link: "/frameworks/gdpr" },
-                        { name: "DPDP Act 2023", desc: "India Personal Data Protection", link: "/frameworks/dpdp" },
-                        { name: "HIPAA Security", desc: "Healthcare PHI Privacy & Safeguards", link: "/frameworks/hipaa" },
-                      ].map((fw, idx) => (
+                      {FRAMEWORKS.map((fw) => (
                         <Link
-                          key={idx}
-                          href={fw.link}
+                          key={fw.code}
+                          href={`/frameworks/${fw.slug}`}
                           className="p-3 rounded-xl border border-navy-700/60 bg-navy-900/60 hover:border-teal/60 hover:bg-navy-800 transition-all"
                         >
                           <p className="font-semibold text-xs text-white">{fw.name}</p>
-                          <p className="text-[11px] text-slate-400">{fw.desc}</p>
+                          <p className="text-[11px] text-slate-400">{fw.headerDesc}</p>
                         </Link>
                       ))}
                     </div>
@@ -338,12 +332,16 @@ export const Header: React.FC = () => {
               </button>
               {mobileExpandedSection === "frameworks" && (
                 <div className="pl-4 space-y-2 text-sm border-l border-teal/30 my-2">
-                  <Link href="/frameworks/iso-27001" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">ISO 27001:2022</Link>
-                  <Link href="/frameworks/iso-42001" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">ISO 42001:2023 (AI)</Link>
-                  <Link href="/frameworks/soc-2" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">SOC 2 Type II</Link>
-                  <Link href="/frameworks/gdpr" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">GDPR / UK GDPR</Link>
-                  <Link href="/frameworks/dpdp" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">DPDP Act India</Link>
-                  <Link href="/frameworks/hipaa" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">HIPAA Security Rule</Link>
+                  {FRAMEWORKS.map((fw) => (
+                    <Link
+                      key={fw.code}
+                      href={`/frameworks/${fw.slug}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-slate-300 hover:text-white py-1"
+                    >
+                      {fw.name}
+                    </Link>
+                  ))}
                 </div>
               )}
 

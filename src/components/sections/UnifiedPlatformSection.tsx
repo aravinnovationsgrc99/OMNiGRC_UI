@@ -19,9 +19,19 @@ import {
 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const UnifiedPlatformSection: React.FC = () => {
   const [activePillar, setActivePillar] = useState<number>(0);
+
+  const pillar3FrameworkAlignments = [
+    { code: "ISO27001", clause: "A.8.2 Access rights review cadence", conf: "98%" },
+    { code: "ISO42001", clause: "A.7.3 Algorithmic access control", conf: "96%" },
+    { code: "SOC2", clause: "CC6.2 & CC6.3 Credential revocation", conf: "95%" },
+    { code: "GDPR", clause: "Article 32 Security of processing", conf: "91%" },
+    { code: "DPDP", clause: "Section 8(5) Security safeguards", conf: "90%" },
+    { code: "HIPAA", clause: "§164.312(a) Technical Access Control", conf: "94%" },
+  ];
 
   const pillars = [
     {
@@ -59,7 +69,7 @@ export const UnifiedPlatformSection: React.FC = () => {
       shortDesc:
         "Define your security control once. Advisory AI suggests matching clauses across 6 documented frameworks.",
       points: [
-        "Pre-loaded with ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA",
+        `Pre-loaded with ${FRAMEWORKS.map((f) => f.code).join(", ")}`,
         "Advisory AI suggests candidate clause matches with confidence scores",
         "Mandatory human review and approval before persistence",
         "Zero duplicate control overhead across multiple framework audits",
@@ -308,23 +318,19 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                       <div className="space-y-1.5 text-xs">
                         <p className="text-[10px] font-mono text-slate-400 uppercase">AI Suggested Framework Alignments:</p>
-                        {[
-                          { fw: "ISO 27001:2022", clause: "A.8.2 Access rights review cadence", conf: "98%" },
-                          { fw: "ISO 42001:2023", clause: "A.7.3 Algorithmic access control", conf: "96%" },
-                          { fw: "SOC 2 Type II", clause: "CC6.2 & CC6.3 Credential revocation", conf: "95%" },
-                          { fw: "GDPR / UK GDPR", clause: "Article 32 Security of processing", conf: "91%" },
-                          { fw: "DPDP Act 2023", clause: "Section 8(5) Security safeguards", conf: "90%" },
-                          { fw: "HIPAA Security", clause: "§164.312(a) Technical Access Control", conf: "94%" },
-                        ].map((m, mIdx) => (
-                          <div
-                            key={mIdx}
-                            className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-[11px]"
-                          >
-                            <span className="font-bold text-amber">{m.fw}:</span>
-                            <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
-                            <span className="font-mono text-teal text-[10px]">{m.conf} match</span>
-                          </div>
-                        ))}
+                        {pillar3FrameworkAlignments.map((m, mIdx) => {
+                          const fwObj = FRAMEWORKS.find((f) => f.code === m.code);
+                          return (
+                            <div
+                              key={mIdx}
+                              className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-[11px]"
+                            >
+                              <span className="font-bold text-amber">{fwObj?.name || m.code}:</span>
+                              <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
+                              <span className="font-mono text-teal text-[10px]">{m.conf} match</span>
+                            </div>
+                          );
+                        })}
                       </div>
 
                       <div className="p-2 rounded-lg bg-teal/15 border border-teal/30 flex items-center justify-between text-xs">

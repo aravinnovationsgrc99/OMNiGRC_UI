@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Check, ChevronDown, ArrowRight, ShieldCheck, Lock } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 const pricingTiers = [
   {
@@ -44,7 +45,7 @@ const pricingTiers = [
     tag: "MULTI-REGION",
     scope: "Talk to us about your requirements",
     features: [
-      "All 6 Documented Frameworks (ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA)",
+      `All 6 Documented Frameworks (${FRAMEWORKS.map((f) => f.code).join(", ")})`,
       "Regional Data Residency Alignment (India, UK live; EU, AU roadmap)",
       "Custom Treatment Plans & Historical Risk Evolution",
       "High-Priority Support & GRC Architecture Review",
@@ -66,7 +67,7 @@ const faqs = [
   },
   {
     q: "What frameworks are supported in OMNiGRC?",
-    a: "OMNiGRC is built with deep, verified taxonomies for ISO 27001:2022, ISO 42001:2023 (AI), SOC 2 Type II, GDPR / UK GDPR, DPDP Act India 2023, and HIPAA Security Rule.",
+    a: `OMNiGRC is built with deep, verified taxonomies for ${FRAMEWORKS.map((f) => f.name).join(", ")}.`,
   },
 ];
 

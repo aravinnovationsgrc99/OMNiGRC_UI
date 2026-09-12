@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Award, FileText, Download, ArrowRight, ShieldCheck, Layers, BookOpen } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { FRAMEWORKS } from "@/lib/frameworks";
 
 const resources = [
   {
@@ -74,7 +75,7 @@ export default function TrustVaultPage() {
 
           <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-2">Need a custom framework mapping template?</h3>
-            <p className="text-xs text-slate-300 mb-6">Our team can help configure your controls across ISO 27001, SOC 2, and DPDP.</p>
+            <p className="text-xs text-slate-300 mb-6">Our team can help configure your controls across {FRAMEWORKS.map((f) => f.code).join(", ")}.</p>
             <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
               Talk to Our Team <ArrowRight className="h-4 w-4" />
             </Link>
