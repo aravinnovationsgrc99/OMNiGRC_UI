@@ -45,9 +45,11 @@ export const AmbientGridBackground: React.FC = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      const isDark = document.documentElement.classList.contains("dark");
+
       // Draw faint dot grid lines
       const gridSize = 48;
-      ctx.strokeStyle = "rgba(15, 110, 106, 0.04)";
+      ctx.strokeStyle = isDark ? "rgba(15, 110, 106, 0.04)" : "rgba(15, 110, 106, 0.09)";
       ctx.lineWidth = 1;
 
       for (let x = 0; x < canvas.width; x += gridSize) {
@@ -74,7 +76,9 @@ export const AmbientGridBackground: React.FC = () => {
           if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
         }
 
-        ctx.fillStyle = `rgba(14, 165, 233, ${node.alpha})`;
+        ctx.fillStyle = isDark
+          ? `rgba(14, 165, 233, ${node.alpha})`
+          : `rgba(15, 110, 106, ${node.alpha * 1.4})`;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -87,7 +91,9 @@ export const AmbientGridBackground: React.FC = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < 130) {
-            ctx.strokeStyle = `rgba(139, 92, 246, ${0.12 * (1 - dist / 130)})`;
+            ctx.strokeStyle = isDark
+              ? `rgba(139, 92, 246, ${0.12 * (1 - dist / 130)})`
+              : `rgba(181, 117, 10, ${0.15 * (1 - dist / 130)})`;
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(other.x, other.y);

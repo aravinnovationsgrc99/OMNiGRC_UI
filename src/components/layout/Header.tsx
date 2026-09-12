@@ -18,11 +18,14 @@ import {
   BookOpen,
   Award,
 } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const Header: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -283,6 +286,23 @@ export const Header: React.FC = () => {
 
           {/* Right Action CTAs */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-xl border border-navy-700/60 bg-navy-900/60 dark:bg-navy-900/80 text-amber hover:text-white hover:border-teal/40 transition-all focus:outline-none focus:ring-2 focus:ring-teal"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            >
+              {theme === "dark" ? (
+                <Sun className="h-4 w-4 text-amber" />
+              ) : (
+                <Moon className="h-4 w-4 text-teal" />
+              )}
+            </button>
+            <div aria-live="polite" className="sr-only">
+              Current theme is {theme}
+            </div>
+
             <Link
               href="/contact-us"
               className="text-xs font-semibold text-slate-300 hover:text-white transition-colors px-3 py-2"
@@ -296,14 +316,24 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden rounded-lg p-2 text-slate-300 hover:bg-navy-800 hover:text-white"
-            aria-label="Toggle Navigation Menu"
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile Theme Toggle & Hamburger Button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg border border-navy-700/60 bg-navy-900/60 text-amber hover:text-white"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            >
+              {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-teal" />}
+            </button>
+
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="rounded-lg p-2 text-slate-300 hover:bg-navy-800 hover:text-white"
+              aria-label="Toggle Navigation Menu"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 

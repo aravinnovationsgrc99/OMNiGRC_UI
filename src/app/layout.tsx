@@ -52,6 +52,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/context/ThemeContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,8 +61,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark ${ibmSans.variable} ${ibmMono.variable}`}>
-      <body className="antialiased selection:bg-teal/30 selection:text-white bg-[#0A111F] text-slate-100 min-h-screen font-sans">
-        {children}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('omnigrc-theme');
+                  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="antialiased selection:bg-teal/30 selection:text-white bg-[#F6F7F6] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

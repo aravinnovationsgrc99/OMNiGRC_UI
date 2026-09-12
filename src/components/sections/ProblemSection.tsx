@@ -69,7 +69,7 @@ export const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-[#0A111F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
+    <section className="relative bg-[#F6F7F6] dark:bg-[#0A111F] py-16 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200 overflow-hidden">
       {/* Background soft glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[85vw] max-w-[800px] rounded-full bg-teal/10 blur-[130px]" />
 
@@ -78,13 +78,26 @@ export const ProblemSection: React.FC = () => {
           <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
             THE REALITY OF LEAN GRC
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
             Compliance isn&apos;t hard because of frameworks. <br className="hidden sm:inline" />
             <span className="text-teal">It&apos;s hard because work is fragmented.</span>
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
             Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise GRC suites. OMNiGRC bridges that gap with a unified operating layer.
           </p>
+
+          {/* Stat-Free Qualitative Pain Callout Chips */}
+          <div className="flex flex-wrap items-center justify-center gap-2.5 font-mono text-xs">
+            <span className="px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-500 font-semibold flex items-center gap-1.5">
+              <XCircle className="h-3.5 w-3.5" /> Disconnected Spreadsheets
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-amber/10 border border-amber/30 text-amber font-semibold flex items-center gap-1.5">
+              <XCircle className="h-3.5 w-3.5" /> Duplicate Policy Authoring
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-teal/10 border border-teal/30 text-teal font-semibold flex items-center gap-1.5">
+              <XCircle className="h-3.5 w-3.5" /> Pre-Audit Scrambles
+            </span>
+          </div>
         </div>
 
         {/* Interactive Comparison Switcher */}

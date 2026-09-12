@@ -17,7 +17,7 @@ export const FinalCtaSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#0A111F] py-20 sm:py-28 overflow-hidden border-t border-navy-700/60">
+    <section className="relative bg-[#F6F7F6] dark:bg-[#0A111F] py-20 sm:py-28 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
       {/* Background Orbs using approved colors */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] sm:h-[600px] w-[90vw] max-w-[800px] rounded-full bg-gradient-to-r from-teal/20 via-amber/15 to-transparent blur-[140px]" />
@@ -35,15 +35,28 @@ export const FinalCtaSection: React.FC = () => {
             <Shield className="h-3.5 w-3.5" /> DEFENDED GRC OPERATIONS
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Connect your risk, assets, and controls today.
           </h2>
 
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed mb-4">
             Move away from disconnected spreadsheets and experience a unified GRC operating workflow designed specifically for lean security teams.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 max-w-md sm:max-w-none mx-auto">
+          {/* Verified Workflow Checkmarks */}
+          <div className="flex flex-wrap items-center justify-center gap-3 font-mono text-xs max-w-2xl mx-auto pb-2">
+            <span className="px-3.5 py-1.5 rounded-full bg-teal/15 border border-teal/40 text-teal font-semibold flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Map-Once Control Engine
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-amber/15 border border-amber/40 text-amber font-semibold flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Rolling 30/60/90d Cadence
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 font-semibold flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Zero LLM Data Retention
+            </span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 max-w-md sm:max-w-none mx-auto">
             <Link
               href="/get-a-demo"
               className="w-full sm:w-auto relative group overflow-hidden rounded-xl bg-teal px-8 py-4 text-base font-semibold text-white shadow-xl shadow-teal/30 transition-all duration-300 hover:bg-teal-600 hover:scale-[1.03]"

@@ -57,7 +57,7 @@ const credibilityPillars = [
 
 export const CustomerTrustSection: React.FC = () => {
   return (
-    <section className="relative border-y border-navy-700/60 bg-[#16233F] py-14 sm:py-20 overflow-hidden">
+    <section className="relative border-y border-slate-200 dark:border-navy-700/60 bg-[#F6F7F6] dark:bg-[#16233F] py-14 sm:py-20 transition-colors duration-200 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <motion.div
@@ -73,7 +73,7 @@ export const CustomerTrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight"
           >
             Built around the workflows lean GRC teams actually manage.
           </motion.h2>
@@ -82,10 +82,23 @@ export const CustomerTrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-300 text-xs sm:text-sm sm:max-w-2xl mx-auto mt-2"
+            className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm sm:max-w-2xl mx-auto mt-2 mb-4"
           >
             No complex consultant bloat or unneeded enterprise machinery. Just the core capabilities needed to keep risk, assets, and controls aligned and audit-ready.
           </motion.p>
+
+          {/* Stat-Free Qualitative Capability Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-2.5 font-mono text-xs">
+            <span className="px-3.5 py-1.5 rounded-full bg-teal/15 border border-teal/40 text-teal font-semibold flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" /> No Consultant Bloat
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-amber/15 border border-amber/40 text-amber font-semibold flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Mandatory Human Decision
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-500/40 text-sky-400 font-semibold flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Immutable Postgres History
+            </span>
+          </div>
         </div>
 
         {/* 6 Core Credibility Cards Grid */}

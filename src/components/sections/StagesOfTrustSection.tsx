@@ -18,6 +18,7 @@ const stages = [
     heading: "From spreadsheet chaos to connected operations.",
     description:
       "When managing risk registers and control testing manually, work easily falls out of sync. OMNiGRC provides a unified operating layer to catalog assets, score risks, and map controls without hiring expensive consultants.",
+    steps: ["1. Catalog Assets", "2. 5x5 Risk Scoring", "3. Map-Once Controls"],
     ctaText: "Explore Lean GRC Workflows",
     ctaLink: "/solutions/startups",
     imageLeft: false,
@@ -34,6 +35,7 @@ const stages = [
     heading: "Multi-framework compliance without duplicate controls.",
     description:
       "As customer demands expand into ISO 27001, SOC 2, and DPDP, managing separate checklists multiplies overhead. OMNiGRC allows you to map internal controls once and align them across multiple standards simultaneously.",
+    steps: ["1. Select Standards", "2. AI Clause Alignment", "3. Rolling 30/60/90d Cadence"],
     ctaText: "Explore Multi-Framework Mapping",
     ctaLink: "/solutions/mid-market",
     imageLeft: true,
@@ -94,18 +96,33 @@ export const StagesOfTrustSection: React.FC = () => {
                     <span className="inline-block px-3 py-1 rounded-full border border-amber/40 bg-amber/10 text-amber text-xs font-mono font-semibold">
                       {card.stage}
                     </span>
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 dark:text-white tracking-tight">
                       {card.heading}
                     </h3>
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                       {card.description}
                     </p>
+
+                    {/* Qualitative Workflow Step Chips */}
+                    {card.steps && (
+                      <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
+                        {card.steps.map((step, sIdx) => (
+                          <span
+                            key={sIdx}
+                            className="px-3 py-1 rounded-xl bg-teal/10 border border-teal/30 text-teal dark:text-teal-300 font-semibold"
+                          >
+                            {step}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
                     <div>
                       <Link
                         href={card.ctaLink}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-teal hover:text-white transition-colors group"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-teal hover:text-navy-900 dark:hover:text-white transition-colors group"
                       >
-                        <span className="border-b border-teal/50 group-hover:border-white pb-0.5">
+                        <span className="border-b border-teal/50 group-hover:border-teal pb-0.5">
                           {card.ctaText}
                         </span>
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
