@@ -36,7 +36,7 @@ const workflowSteps = [
     step: "03",
     title: "Tiered Model Router",
     scope: "External LLM API",
-    desc: "Tier 1: Gemini 2.5 Flash-Lite • Tier 2: Claude Haiku • Fallback: DeepSeek.",
+    desc: "Tier 1: Gemini Top Tier Model • Tier 2: Claude Haiku Top Tier Model.",
     icon: Cpu,
     badge: "Minimized Payload",
   },
