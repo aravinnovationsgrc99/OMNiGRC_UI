@@ -13,7 +13,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
   const fw = getFrameworkBySlug(slug) || FRAMEWORKS[2]; // Default to SOC 2
 
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0A111F] text-slate-800 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -32,23 +32,23 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
           }
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 shadow-[0_-1px_20px_rgba(15,110,106,0.06)]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             {fw.controls.map((c, idx) => (
-              <TiltCard key={idx} className="p-6 border-slate-800 bg-slate-900/80">
+              <TiltCard key={idx} className="p-6 border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/80 shadow-lg">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-teal/15 text-teal shrink-0">
+                  <div className="p-2 rounded-lg bg-teal/15 text-teal-700 dark:text-teal-300 shrink-0">
                     <FileCheck2 className="h-5 w-5" />
                   </div>
-                  <p className="text-sm font-semibold text-white mt-0.5">{c}</p>
+                  <p className="text-sm font-semibold text-navy-900 dark:text-white mt-0.5">{c}</p>
                 </div>
               </TiltCard>
             ))}
           </div>
 
-          <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-2">Map {fw.name} with OMNiGRC</h2>
-            <p className="text-xs text-slate-300 mb-6">
+          <div className="rounded-3xl border border-slate-200 dark:border-teal/40 bg-white/95 dark:bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto shadow-2xl backdrop-blur-xl">
+            <h2 className="text-2xl font-bold text-navy-900 dark:text-white mb-2">Map {fw.name} with OMNiGRC</h2>
+            <p className="text-xs text-slate-600 dark:text-slate-300 mb-6">
               See how your controls and assets map to {fw.name} with advisory AI assistance and human review.
             </p>
             <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">

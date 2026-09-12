@@ -104,23 +104,56 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[94vw] max-w-5xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
                   >
-                    <div className="md:col-span-4 space-y-3">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">Four Core Workflows</h4>
-                      <ul className="space-y-2 text-sm">
-                        {PILLARS.map((p) => (
-                          <li key={p.code}>
-                            <Link href={`/products/${p.slug}`} className="text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-300 hover:underline flex items-center gap-2 font-medium">
-                              <span className="h-2 w-2 rounded-full" style={{ backgroundColor: p.accentColor }} />
-                              {p.name}
+                    {/* Visual Card Grid for 4 Core Workflows */}
+                    <div className="md:col-span-5 space-y-3">
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">
+                        Four Core Workflows
+                      </h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        {PILLARS.map((p) => {
+                          const iconMap: Record<string, React.ReactNode> = {
+                            RISK: <ShieldAlert className="h-3.5 w-3.5" />,
+                            ASSET: <Server className="h-3.5 w-3.5" />,
+                            CONTROL: <Sparkles className="h-3.5 w-3.5" />,
+                            BOARD: <CalendarCheck className="h-3.5 w-3.5" />,
+                          };
+                          return (
+                            <Link key={p.code} href={`/products/${p.slug}`}>
+                              <motion.div
+                                whileHover={{ y: -3, scale: 1.01 }}
+                                transition={{ duration: 0.2 }}
+                                className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all flex flex-col justify-between group h-full relative overflow-hidden"
+                              >
+                                <div
+                                  className="absolute top-0 left-0 bottom-0 w-1 rounded-l-xl"
+                                  style={{ backgroundColor: p.accentColor }}
+                                />
+                                <div className="pl-1.5">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <div
+                                      className="p-1 rounded-lg text-white shrink-0"
+                                      style={{ backgroundColor: p.accentColor }}
+                                    >
+                                      {iconMap[p.code] || <Shield className="h-3.5 w-3.5" />}
+                                    </div>
+                                    <span className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
+                                      {p.name}
+                                    </span>
+                                  </div>
+                                  <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight line-clamp-2">
+                                    {p.oneLiner}
+                                  </p>
+                                </div>
+                              </motion.div>
                             </Link>
-                          </li>
-                        ))}
-                      </ul>
+                          );
+                        })}
+                      </div>
                     </div>
 
-                    <div className="md:col-span-4 space-y-3 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
+                    <div className="md:col-span-3 space-y-3 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
                       <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">Lean GRC Solutions</h4>
                       <div className="space-y-2 text-xs">
                         <Link href="/solutions/startups" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">

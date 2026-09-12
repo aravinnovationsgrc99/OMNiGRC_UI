@@ -2,7 +2,11 @@
 
 import React, { useEffect, useRef } from "react";
 
-export const AmbientGridBackground: React.FC = () => {
+interface AmbientGridBackgroundProps {
+  fullPage?: boolean;
+}
+
+export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fullPage = false }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -19,16 +23,20 @@ export const AmbientGridBackground: React.FC = () => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const resizeCanvas = () => {
-      if (!canvas.parentElement) return;
-      canvas.width = canvas.parentElement.clientWidth;
-      canvas.height = canvas.parentElement.clientHeight;
+      if (fullPage) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      } else if (canvas.parentElement) {
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight;
+      }
     };
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
     // Node & grid setup
-    const nodeCount = 35;
+    const nodeCount = fullPage ? 50 : 35;
     const nodes: Array<{ x: number; y: number; vx: number; vy: number; radius: number; alpha: number }> = [];
 
     for (let i = 0; i < nodeCount; i++) {
@@ -49,7 +57,7 @@ export const AmbientGridBackground: React.FC = () => {
 
       // Draw faint dot grid lines
       const gridSize = 48;
-      ctx.strokeStyle = isDark ? "rgba(15, 110, 106, 0.04)" : "rgba(15, 110, 106, 0.09)";
+      ctx.strokeStyle = isDark ? "rgba(15, 110, 106, 0.05)" : "rgba(15, 110, 106, 0.08)";
       ctx.lineWidth = 1;
 
       for (let x = 0; x < canvas.width; x += gridSize) {
@@ -77,8 +85,8 @@ export const AmbientGridBackground: React.FC = () => {
         }
 
         ctx.fillStyle = isDark
-          ? `rgba(14, 165, 233, ${node.alpha})`
-          : `rgba(15, 110, 106, ${node.alpha * 1.4})`;
+          ? `rgba(14, 165, 233, ${node.alpha * 0.9})`
+          : `rgba(15, 110, 106, ${node.alpha * 1.2})`;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -92,8 +100,8 @@ export const AmbientGridBackground: React.FC = () => {
 
           if (dist < 130) {
             ctx.strokeStyle = isDark
-              ? `rgba(139, 92, 246, ${0.12 * (1 - dist / 130)})`
-              : `rgba(181, 117, 10, ${0.15 * (1 - dist / 130)})`;
+              ? `rgba(139, 92, 246, ${0.1 * (1 - dist / 130)})`
+              : `rgba(181, 117, 10, ${0.12 * (1 - dist / 130)})`;
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(other.x, other.y);
@@ -116,20 +124,23 @@ export const AmbientGridBackground: React.FC = () => {
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    // IntersectionObserver to pause when off-screen
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          isVisible = entry.isIntersecting && !document.hidden;
-          if (isVisible && !prefersReducedMotion) {
-            cancelAnimationFrame(animationFrameId);
-            draw();
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    observer.observe(canvas);
+    // IntersectionObserver if not fullPage
+    let observer: IntersectionObserver | null = null;
+    if (!fullPage) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            isVisible = entry.isIntersecting && !document.hidden;
+            if (isVisible && !prefersReducedMotion) {
+              cancelAnimationFrame(animationFrameId);
+              draw();
+            }
+          });
+        },
+        { threshold: 0.05 }
+      );
+      observer.observe(canvas);
+    }
 
     // Initial render
     draw();
@@ -137,16 +148,18 @@ export const AmbientGridBackground: React.FC = () => {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
-      observer.disconnect();
+      if (observer) observer.disconnect();
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [fullPage]);
 
   return (
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 h-full w-full opacity-40 z-0"
+      className={`pointer-events-none z-0 opacity-40 ${
+        fullPage ? "fixed inset-0 h-screen w-screen" : "absolute inset-0 h-full w-full"
+      }`}
     />
   );
 };

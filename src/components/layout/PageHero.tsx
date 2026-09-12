@@ -16,6 +16,7 @@ export interface PageHeroProps {
   accentColor?: string;
   visual: React.ReactNode;
   className?: string;
+  fullPageBackground?: boolean;
 }
 
 export const PageHero: React.FC<PageHeroProps> = ({
@@ -26,18 +27,19 @@ export const PageHero: React.FC<PageHeroProps> = ({
   accentColor,
   visual,
   className = "",
+  fullPageBackground = true,
 }) => {
   return (
     <section className={`relative bg-[#F6F7F6] dark:bg-[#0A111F] pt-28 sm:pt-36 pb-16 sm:pb-24 border-b border-slate-200 dark:border-navy-700/60 transition-colors duration-200 overflow-hidden ${className}`}>
-      {/* Ambient Grid Background - dynamic import ssr:false */}
-      <AmbientGridBackground />
+      {/* Full-Page Ambient Grid Canvas */}
+      <AmbientGridBackground fullPage={fullPageBackground} />
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Headline / Eyebrow / Subhead / CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
             {eyebrow && (
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber font-mono text-xs tracking-widest uppercase font-semibold">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber-600 dark:text-amber font-mono text-xs tracking-widest uppercase font-semibold">
                 <span>{eyebrow}</span>
               </div>
             )}
