@@ -55,28 +55,10 @@ export const PageHero: React.FC<PageHeroProps> = ({
             {cta && <div className="pt-2 flex flex-wrap items-center gap-4">{cta}</div>}
           </div>
 
-          {/* Right Column: Framed Visual Panel (~45-50% width on desktop) */}
-          <div className="lg:col-span-6">
-            <div
-              className="relative rounded-3xl border border-teal/30 bg-white/90 dark:bg-navy-900/90 p-4 sm:p-6 shadow-2xl backdrop-blur-xl overflow-hidden transition-all duration-300 hover:border-teal/50"
-              style={accentColor ? { borderColor: `${accentColor}50` } : undefined}
-            >
-              {/* Soft Inner Glow Header Bar */}
-              <div aria-hidden="true" className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="h-2.5 w-2.5 rounded-full bg-teal" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-amber" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-teal-300" />
-                </div>
-                <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-widest">
-                  OMNiGRC Visual Panel
-                </span>
-              </div>
-
-              {/* SVG Motif Visual Container */}
-              <div aria-hidden="true" className="w-full flex items-center justify-center">
-                {visual}
-              </div>
+          {/* Right Column: Visual Panel (Merged edge-to-edge without outer card chrome) */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[640px]">
+              {visual}
             </div>
           </div>
         </div>

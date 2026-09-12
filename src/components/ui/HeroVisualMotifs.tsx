@@ -22,18 +22,19 @@ export const HeroImageWithFallback: React.FC<HeroImageWithFallbackProps> = ({
   }
 
   return (
-    <div className="relative w-full h-[260px] sm:h-[320px] rounded-2xl overflow-hidden shadow-xl border border-teal/20 bg-navy-950/80 group">
+    <div className="relative w-full aspect-[16/10] min-h-[280px] sm:min-h-[360px] rounded-3xl overflow-hidden shadow-2xl border border-teal/30 dark:border-teal/30 bg-navy-900/90 backdrop-blur-xl group transition-all duration-500 hover:border-teal/50 hover:shadow-teal/20">
       <Image
         src={src}
         alt={alt}
         fill
         priority
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-        quality={85}
-        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px"
+        quality={90}
+        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         onError={() => setImageError(true)}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/30 via-transparent to-transparent pointer-events-none" />
     </div>
   );
 };
@@ -50,7 +51,7 @@ export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColo
   const fwName = fw?.code || "FRAMEWORK";
 
   return (
-    <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
+    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/80 dark:bg-navy-900/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex items-center justify-center min-h-[280px] sm:min-h-[360px] transition-all duration-300 hover:border-teal/50">
       <svg
         aria-hidden="true"
         viewBox="0 0 400 300"
@@ -107,7 +108,7 @@ export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColo
 
 export const ProductMotifSvg: React.FC<{ slug: string }> = ({ slug }) => {
   return (
-    <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
+    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/80 dark:bg-navy-900/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex items-center justify-center min-h-[280px] sm:min-h-[360px] transition-all duration-300 hover:border-teal/50">
       <svg
         aria-hidden="true"
         viewBox="0 0 400 300"
@@ -278,7 +279,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
 
 export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
   return (
-    <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
+    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/80 dark:bg-navy-900/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex items-center justify-center min-h-[280px] sm:min-h-[360px] transition-all duration-300 hover:border-teal/50">
       <svg
         aria-hidden="true"
         viewBox="0 0 400 300"
@@ -307,7 +308,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
 
 export const PricingMotif: React.FC = () => {
   return (
-    <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
+    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/80 dark:bg-navy-900/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex items-center justify-center min-h-[280px] sm:min-h-[360px] transition-all duration-300 hover:border-teal/50">
       <svg
         aria-hidden="true"
         viewBox="0 0 400 300"
@@ -341,7 +342,7 @@ export const PricingMotif: React.FC = () => {
 
 export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" | "blog" | "vault" }> = ({ type }) => {
   return (
-    <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
+    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/80 dark:bg-navy-900/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex items-center justify-center min-h-[280px] sm:min-h-[360px] transition-all duration-300 hover:border-teal/50">
       <svg
         aria-hidden="true"
         viewBox="0 0 400 300"
