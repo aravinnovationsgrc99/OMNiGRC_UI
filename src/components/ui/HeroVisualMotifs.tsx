@@ -206,77 +206,129 @@ export const ProductMotifSvg: React.FC<{ slug: string }> = ({ slug }) => {
   const [selectedNode, setSelectedNode] = useState<string>("rds");
 
   return (
-    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/90 dark:bg-navy-900/90 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center min-h-[320px] sm:min-h-[400px] transition-all duration-300 hover:border-teal/50 overflow-hidden">
+    <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/90 dark:bg-navy-900/90 p-3 sm:p-4 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center min-h-[360px] sm:min-h-[440px] transition-all duration-300 hover:border-teal/50 overflow-hidden">
       <svg
         aria-hidden="true"
-        viewBox="0 0 440 310"
+        viewBox="0 0 460 345"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto max-w-[420px] filter drop-shadow-2xl z-10"
+        className="w-full h-auto max-w-full filter drop-shadow-2xl z-10"
       >
         {(slug === "risk-management" || slug === "risk-register") && (
           /* Pillar 1: Interactive 5x5 Heatmap Matrix Motif */
           <g>
-            <rect x="20" y="20" width="400" height="270" rx="16" fill="#0A111F" stroke="#0F6E6A" strokeWidth="2" />
-            <text x="40" y="48" fill="#0F6E6A" fontSize="12" fontFamily="monospace" fontWeight="bold">
+            <rect x="10" y="10" width="440" height="325" rx="16" fill="#0A111F" stroke="#0F6E6A" strokeWidth="2" />
+            <text x="35" y="36" fill="#0F6E6A" fontSize="13" fontFamily="monospace" fontWeight="bold">
               INTERACTIVE 5x5 RISK HEATMAP MATRIX
             </text>
-            <text x="40" y="64" fill="#94A3B8" fontSize="9">
+            <text x="35" y="52" fill="#94A3B8" fontSize="9.5">
               Hover cells to calculate Likelihood × Impact scores in real time
             </text>
 
+            {/* Column Headers (Impact 1 - 5) */}
+            {["I1", "I2", "I3", "I4", "I5"].map((header, idx) => (
+              <text
+                key={idx}
+                x={92 + idx * 70}
+                y={68}
+                textAnchor="middle"
+                fill="#64748B"
+                fontSize="9"
+                fontFamily="monospace"
+                fontWeight="bold"
+              >
+                {header}
+              </text>
+            ))}
+
+            {/* Row Headers (Likelihood L5 - L1) */}
+            {["L5", "L4", "L3", "L2", "L1"].map((header, idx) => (
+              <text
+                key={idx}
+                x={44}
+                y={96 + idx * 35}
+                textAnchor="middle"
+                fill="#64748B"
+                fontSize="9"
+                fontFamily="monospace"
+                fontWeight="bold"
+              >
+                {header}
+              </text>
+            ))}
+
             {/* Matrix Axis Labels */}
-            <text x="15" y="170" fill="#64748B" fontSize="8" fontFamily="monospace" fontWeight="bold" transform="rotate(-90 15 170)">
+            <text x="14" y="165" fill="#64748B" fontSize="8" fontFamily="monospace" fontWeight="bold" transform="rotate(-90 14 165)">
               LIKELIHOOD →
             </text>
+            <text x="232" y="262" textAnchor="middle" fill="#64748B" fontSize="8" fontFamily="monospace" fontWeight="bold">
+              IMPACT →
+            </text>
 
-            {/* Heatmap Grid Interactive Cells */}
-            <g transform="translate(50, 80)">
+            {/* Heatmap Grid Interactive Cells (25 Full Matrix Cells) */}
+            <g transform="translate(60, 76)">
               {[
+                // Row L5
                 { l: 5, i: 1, score: 5, fill: "#0F6E6A", label: "L5 x I1", risk: "Low" },
                 { l: 5, i: 2, score: 10, fill: "#B5750A", label: "L5 x I2", risk: "Medium" },
                 { l: 5, i: 3, score: 15, fill: "#F59E0B", label: "L5 x I3", risk: "High" },
                 { l: 5, i: 4, score: 20, fill: "#EF4444", label: "L5 x I4", risk: "Critical" },
                 { l: 5, i: 5, score: 25, fill: "#DC2626", label: "L5 x I5", risk: "Critical" },
 
+                // Row L4
                 { l: 4, i: 1, score: 4, fill: "#0F6E6A", label: "L4 x I1", risk: "Low" },
                 { l: 4, i: 2, score: 8, fill: "#B5750A", label: "L4 x I2", risk: "Medium" },
                 { l: 4, i: 3, score: 12, fill: "#F59E0B", label: "L4 x I3", risk: "High" },
                 { l: 4, i: 4, score: 16, fill: "#EF4444", label: "L4 x I4", risk: "Critical" },
                 { l: 4, i: 5, score: 20, fill: "#EF4444", label: "L4 x I5", risk: "Critical" },
 
+                // Row L3
                 { l: 3, i: 1, score: 3, fill: "#0F6E6A", label: "L3 x I1", risk: "Low" },
                 { l: 3, i: 2, score: 6, fill: "#0F6E6A", label: "L3 x I2", risk: "Low" },
                 { l: 3, i: 3, score: 9, fill: "#B5750A", label: "L3 x I3", risk: "Medium" },
                 { l: 3, i: 4, score: 12, fill: "#F59E0B", label: "L3 x I4", risk: "High" },
                 { l: 3, i: 5, score: 15, fill: "#F59E0B", label: "L3 x I5", risk: "High" },
+
+                // Row L2
+                { l: 2, i: 1, score: 2, fill: "#0F6E6A", label: "L2 x I1", risk: "Low" },
+                { l: 2, i: 2, score: 4, fill: "#0F6E6A", label: "L2 x I2", risk: "Low" },
+                { l: 2, i: 3, score: 6, fill: "#B5750A", label: "L2 x I3", risk: "Medium" },
+                { l: 2, i: 4, score: 8, fill: "#B5750A", label: "L2 x I4", risk: "Medium" },
+                { l: 2, i: 5, score: 10, fill: "#B5750A", label: "L2 x I5", risk: "Medium" },
+
+                // Row L1
+                { l: 1, i: 1, score: 1, fill: "#0F6E6A", label: "L1 x I1", risk: "Low" },
+                { l: 1, i: 2, score: 2, fill: "#0F6E6A", label: "L1 x I2", risk: "Low" },
+                { l: 1, i: 3, score: 3, fill: "#0F6E6A", label: "L1 x I3", risk: "Low" },
+                { l: 1, i: 4, score: 4, fill: "#0F6E6A", label: "L1 x I4", risk: "Low" },
+                { l: 1, i: 5, score: 5, fill: "#0F6E6A", label: "L1 x I5", risk: "Low" },
               ].map((cell, idx) => {
                 const row = Math.floor(idx / 5);
                 const col = idx % 5;
-                const x = col * 66;
-                const y = row * 40;
+                const x = col * 70;
+                const y = row * 35;
                 return (
                   <g key={idx} className="cursor-pointer group">
                     <rect
                       x={x}
                       y={y}
-                      width="60"
-                      height="34"
+                      width="64"
+                      height="30"
                       rx="6"
                       fill={cell.fill}
-                      opacity={hoveredCell?.score === cell.score ? 0.95 : 0.45}
-                      stroke={hoveredCell?.score === cell.score ? "#FFFFFF" : "none"}
+                      opacity={hoveredCell?.score === cell.score && hoveredCell?.l === cell.l && hoveredCell?.i === cell.i ? 1.0 : 0.55}
+                      stroke={hoveredCell?.l === cell.l && hoveredCell?.i === cell.i ? "#FFFFFF" : "none"}
                       strokeWidth="2"
                       className="transition-all duration-200 hover:opacity-100"
                       onMouseEnter={() => setHoveredCell(cell)}
                       onMouseLeave={() => setHoveredCell(null)}
                     />
                     <text
-                      x={x + 30}
-                      y={y + 21}
+                      x={x + 32}
+                      y={y + 19}
                       textAnchor="middle"
                       fill="#FFFFFF"
-                      fontSize="10"
+                      fontSize="11"
                       fontFamily="monospace"
                       fontWeight="bold"
                       className="pointer-events-none"
@@ -289,9 +341,9 @@ export const ProductMotifSvg: React.FC<{ slug: string }> = ({ slug }) => {
             </g>
 
             {/* Dynamic Calculated Score Tooltip Banner */}
-            <g transform="translate(50, 220)">
-              <rect x="0" y="0" width="330" height="38" rx="8" fill="#16233F" stroke="#0F6E6A" strokeWidth="1.5" />
-              <text x="15" y="24" fill="#60A5FA" fontSize="10" fontFamily="monospace" fontWeight="bold">
+            <g transform="translate(60, 275)">
+              <rect x="0" y="0" width="344" height="42" rx="8" fill="#16233F" stroke="#0F6E6A" strokeWidth="1.5" />
+              <text x="172" y="25" textAnchor="middle" fill="#60A5FA" fontSize="10" fontFamily="monospace" fontWeight="bold">
                 {hoveredCell
                   ? `HOVER: Likelihood ${hoveredCell.l} × Impact ${hoveredCell.i} = Score ${hoveredCell.score} (${hoveredCell.risk.toUpperCase()})`
                   : "HOVER ANY CELL: Likelihood × Impact = Score"}
