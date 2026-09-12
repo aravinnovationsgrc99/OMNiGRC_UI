@@ -155,9 +155,78 @@ export const UnifiedPlatformSection: React.FC = () => {
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
                     {pillars[activePillar].title}
                   </h3>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
                     {pillars[activePillar].shortDesc}
                   </p>
+
+                  {/* Inline Mini-Diagram / Icon Flow Visual per Workflow Tab */}
+                  <div aria-hidden="true" className="p-3.5 rounded-xl bg-[#0A111F]/80 border border-teal/30 font-mono text-xs">
+                    {activePillar === 0 && (
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                          <span>5x5 Likelihood × Impact Matrix Flow</span>
+                          <span className="text-teal">Quantified</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
+                          <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">Inherent Risk</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">5x5 Score</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">Residual Score</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {activePillar === 1 && (
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                          <span>Dependency Node Flow</span>
+                          <span className="text-teal">Traced</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
+                          <span className="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 font-bold">Asset</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">PII Stream</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">Vendor</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">Control</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {activePillar === 2 && (
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                          <span>Map-Once Crosswalk Alignment</span>
+                          <span className="text-teal">AI + Human</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
+                          <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">1 Control</span>
+                          <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">AI Matcher</span>
+                          <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">6 Frameworks</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {activePillar === 3 && (
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                          <span>Rolling Kanban Testing Cadence</span>
+                          <span className="text-teal">Audit-Ready</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
+                          <span className="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">30d Due</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">60d Due</span>
+                          <ArrowRight className="h-3 w-3 text-amber shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">90d Due</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 <div className="space-y-3 pt-2">

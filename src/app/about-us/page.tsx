@@ -1,9 +1,9 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { PageHero } from "@/components/layout/PageHero";
+import { GenericHeroMotif } from "@/components/ui/HeroVisualMotifs";
 import { Shield, Award, Users, Globe, ArrowRight, Zap, CheckCircle2, Lock } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 
@@ -11,19 +11,23 @@ export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
-      <main className="pt-32 pb-24 flex-1">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
-              OUR MISSION
-            </span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-              Empowering lean GRC teams with connected, practical operations.
-            </h1>
-            <p className="text-slate-300 text-lg leading-relaxed">
-              We built OMNiGRC to eliminate the operational chaos between disconnected spreadsheets and overly complex enterprise suites. We believe GRC should be structured, connected, and human-supervised.
-            </p>
-          </div>
+      <main className="flex-1">
+        <PageHero
+          eyebrow="OUR MISSION"
+          title="Empowering lean GRC teams with connected, practical operations."
+          subtitle="We built OMNiGRC to eliminate operational chaos between disconnected spreadsheets and overly complex enterprise suites. We believe GRC should be structured, connected, and human-supervised."
+          visual={<GenericHeroMotif type="about" />}
+          cta={
+            <Link
+              href="/get-a-demo"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20"
+            >
+              Learn More &amp; Request Demo <ArrowRight className="h-4 w-4" />
+            </Link>
+          }
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
 
           {/* Pillars of Purpose Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">

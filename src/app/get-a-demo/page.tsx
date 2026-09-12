@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { PageHero } from "@/components/layout/PageHero";
+import { GenericHeroMotif } from "@/components/ui/HeroVisualMotifs";
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight, Sparkles, Shield, Lock } from "lucide-react";
+import { CheckCircle2, Lock, ArrowRight } from "lucide-react";
 
 export default function GetADemoPage() {
   const router = useRouter();
@@ -42,25 +44,17 @@ export default function GetADemoPage() {
   return (
     <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
-      <main className="pt-32 pb-20 flex-1 relative overflow-hidden">
-        {/* Background Orbs */}
-        <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-teal/10 blur-[140px]" />
+      <main className="flex-1">
+        <PageHero
+          eyebrow="EXPERIENCE OMNiGRC"
+          title="Request a walkthrough of the connected GRC platform."
+          subtitle="See how OMNiGRC unifies risk registers, asset inventories, control mapping, and compliance testing in one connected operating workflow for lean teams."
+          visual={<GenericHeroMotif type="demo" />}
+        />
 
-        <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Text & Benefits Column */}
           <div className="lg:col-span-6 space-y-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber text-xs font-mono tracking-widest uppercase font-semibold">
-              <Sparkles className="h-3.5 w-3.5 text-amber" /> EXPERIENCE OMNiGRC
-            </div>
-
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
-              Request a walkthrough of the connected GRC platform.
-            </h1>
-
-            <p className="text-slate-300 text-lg leading-relaxed">
-              See how OMNiGRC unifies risk registers, asset inventories, control mapping, and compliance testing in one connected operating workflow for lean teams.
-            </p>
-
             <div className="space-y-4">
               {[
                 "Live walkthrough tailored to your target frameworks (ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA)",

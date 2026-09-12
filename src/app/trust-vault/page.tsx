@@ -4,7 +4,9 @@ import React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Award, FileText, Download, ArrowRight, ShieldCheck, Layers, BookOpen } from "lucide-react";
+import { PageHero } from "@/components/layout/PageHero";
+import { GenericHeroMotif } from "@/components/ui/HeroVisualMotifs";
+import { Download, ArrowRight } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { FRAMEWORKS } from "@/lib/frameworks";
 
@@ -35,20 +37,15 @@ export default function TrustVaultPage() {
   return (
     <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
       <Header />
-      <main className="pt-32 pb-24 flex-1">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
-              PRACTICAL GRC RESOURCES
-            </span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
-              OMNiGRC Resource Hub
-            </h1>
-            <p className="text-slate-300 text-lg">
-              Framework guides, checklists, and operational resources for lean security and compliance teams.
-            </p>
-          </div>
+      <main className="flex-1">
+        <PageHero
+          eyebrow="PRACTICAL GRC RESOURCES"
+          title="OMNiGRC Resource Hub"
+          subtitle="Framework guides, checklists, and operational whitepapers for lean security and compliance teams."
+          visual={<GenericHeroMotif type="vault" />}
+        />
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             {resources.map((res, idx) => (
               <TiltCard key={idx} className="p-8 border-slate-800 bg-slate-900/80 flex flex-col justify-between">
@@ -86,3 +83,4 @@ export default function TrustVaultPage() {
     </div>
   );
 }
+

@@ -26,10 +26,14 @@ export const Header: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [mobileExpandedSection, setMobileExpandedSection] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      setScrollProgress(progress);
       if (window.scrollY > 20) {
         setScrolled(true);
       } else {
@@ -52,6 +56,12 @@ export const Header: React.FC = () => {
           : "bg-transparent py-4 sm:py-5"
       }`}
     >
+      {/* Subtle Scroll Progress Indicator Bar */}
+      <div
+        aria-hidden="true"
+        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-teal via-teal-300 to-amber transition-all duration-150 z-50 opacity-90 shadow-sm"
+        style={{ width: `${scrollProgress}%` }}
+      />
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}

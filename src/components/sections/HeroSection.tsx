@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion";
@@ -20,6 +20,9 @@ const IsometricHeroVisual = dynamic(
 );
 
 export const HeroSection: React.FC = () => {
+  const { scrollY } = useScroll();
+  const parallaxY = useTransform(scrollY, [0, 600], [0, -35]);
+  const parallaxScale = useTransform(scrollY, [0, 600], [1, 0.98]);
   return (
     <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#0A111F] pt-28 sm:pt-36 pb-12 sm:pb-16">
       {/* WebGL2 Swirling Aurora Background Atmosphere */}
@@ -76,8 +79,10 @@ export const HeroSection: React.FC = () => {
           </a>
         </motion.div>
 
-        {/* 3D Isometric Hero Visual */}
-        <IsometricHeroVisual />
+        {/* 3D Isometric Hero Visual with Parallax Depth Shift */}
+        <motion.div style={{ y: parallaxY, scale: parallaxScale }}>
+          <IsometricHeroVisual />
+        </motion.div>
       </motion.div>
 
       {/* Documented Framework Coverage Bar */}

@@ -16,6 +16,7 @@ import {
   AlertTriangle,
   Server,
   FileCode,
+  GitMerge,
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
@@ -44,7 +45,7 @@ export const ArchitectureSection: React.FC = () => {
       id: 2,
       name: "STEP 3 - 5: TIERED MODEL ROUTER & EXTERNAL CALL",
       title: "2. Tiered Model Router & Clause Analysis",
-      desc: "Sanitized control text and candidate framework clauses are routed to high-speed LLM APIs. Tier 1 (Gemini Top Tier Model) and Tier 2 (Claude Haiku Top Tier Model).",
+      desc: "Sanitized control text and candidate framework clauses are routed to high-speed LLM APIs. Tier 1 (Gemini 2.5 Flash-Lite) and Tier 2 (Claude Haiku 4.5).",
       icon: Cpu,
       boundary: "External LLM API (Ephemeral & Stateless)",
       items: ["Gemini Top Tier Model — Tier 1", "Claude Haiku Top Tier Model — Tier 2", "Tiered Model Routing", "Zero-Retention Call"],
@@ -151,6 +152,117 @@ export const ArchitectureSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Real 8-Stage Connected AI Flow Diagram */}
+        <div className="mb-14 rounded-3xl border border-teal/30 bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <span className="px-3 py-1 rounded-full bg-teal/15 text-teal text-[10px] font-mono font-bold uppercase tracking-widest border border-teal/30">
+              END-TO-END DATA FLOW
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+              8-Stage AI API Execution Pipeline
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 mt-1">
+              From analyst trigger to immutable database record, every step is isolated, sanitized, and human-supervised.
+            </p>
+          </div>
+
+          {/* 8 Connected Nodes Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
+            {[
+              {
+                step: "01",
+                label: "Analyst UI",
+                sub: "Initiates Request",
+                icon: UserCheck,
+                color: "teal",
+              },
+              {
+                step: "02",
+                label: "API Layer",
+                sub: "Auth & Rate Limit",
+                icon: Server,
+                color: "teal",
+              },
+              {
+                step: "03",
+                label: "Redaction Engine",
+                sub: "Zero PII Payload",
+                icon: Lock,
+                color: "amber",
+              },
+              {
+                step: "04",
+                label: "Tiered Router",
+                sub: "Cost & Speed Router",
+                icon: GitMerge,
+                color: "amber",
+              },
+              {
+                step: "05",
+                label: "External LLM API",
+                sub: "Gemini 2.5 Flash-Lite / Claude Haiku 4.5",
+                icon: Cpu,
+                color: "amber",
+                highlight: true,
+              },
+              {
+                step: "06",
+                label: "Response Validator",
+                sub: "Schema & Confidence",
+                icon: FileCode,
+                color: "teal",
+              },
+              {
+                step: "07",
+                label: "Human Review",
+                sub: "Mandatory Decision",
+                icon: ShieldCheck,
+                color: "teal",
+              },
+              {
+                step: "08",
+                label: "Primary DB",
+                sub: "PostgreSQL Record",
+                icon: Database,
+                color: "teal",
+              },
+            ].map((node, nIdx) => {
+              const NodeIcon = node.icon;
+              return (
+                <div key={nIdx} className="relative group">
+                  <div
+                    className={`h-full p-4 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                      node.highlight
+                        ? "border-amber bg-amber/10 shadow-lg shadow-amber/20"
+                        : "border-navy-700/60 bg-[#0A111F]/90 hover:border-teal/50 hover:bg-navy-900"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-[10px] font-mono font-bold text-slate-400">
+                        STAGE {node.step}
+                      </span>
+                      <div className={`p-1.5 rounded-lg ${node.highlight ? "bg-amber/20 text-amber" : "bg-teal/15 text-teal"}`}>
+                        <NodeIcon className="h-4 w-4" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-sm font-bold text-white mb-1 leading-tight">{node.label}</h4>
+                      <p className="text-[11px] text-slate-300 font-mono leading-snug">{node.sub}</p>
+                    </div>
+
+                    {nIdx < 7 && (
+                      <div aria-hidden="true" className="hidden md:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10 text-slate-500">
+                        <ArrowRight className="h-4 w-4 text-teal/60" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         {/* 3-Tier Layered Architecture Graphic */}
         <div className="max-w-4xl 2xl:max-w-5xl mx-auto space-y-4 sm:space-y-6">
           {architectureLayers.map((tier, idx) => {
@@ -170,7 +282,7 @@ export const ArchitectureSection: React.FC = () => {
                 }`}
               >
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-                  <div className="flex items-start gap-4 max-w-xl">
+                  <div className="flex items-start gap-4">
                     <div className="p-3 rounded-xl bg-navy-800 text-teal shrink-0 mt-1">
                       <Icon className="h-6 w-6" />
                     </div>
@@ -186,18 +298,6 @@ export const ArchitectureSection: React.FC = () => {
                       <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{tier.title}</h3>
                       <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{tier.desc}</p>
                     </div>
-                  </div>
-
-                  <div className="w-full lg:w-auto grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    {tier.items.map((item, itemIdx) => (
-                      <div
-                        key={itemIdx}
-                        className="flex items-start gap-2 px-3 py-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 text-slate-200 font-medium min-w-0"
-                      >
-                        <CheckCircle2 className="h-3.5 w-3.5 text-teal shrink-0 mt-0.5" />
-                        <span className="leading-snug break-words">{item}</span>
-                      </div>
-                    ))}
                   </div>
                 </div>
               </motion.div>
