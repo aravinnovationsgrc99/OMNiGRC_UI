@@ -17,7 +17,7 @@ export const FinalCtaSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#F6F7F6] dark:bg-[#0A111F] py-20 sm:py-28 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
+    <section className="relative bg-[#F6F7F6] dark:bg-[#0A111F] py-12 sm:py-28 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
       {/* Background Orbs using approved colors */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] sm:h-[600px] w-[90vw] max-w-[800px] rounded-full bg-gradient-to-r from-teal/20 via-amber/15 to-transparent blur-[140px]" />
@@ -29,13 +29,13 @@ export const FinalCtaSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="space-y-4 sm:space-y-6 mb-16 sm:mb-20"
+          className="space-y-4 sm:space-y-6 mb-10 sm:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber text-xs font-mono tracking-widest uppercase font-semibold">
             <Shield className="h-3.5 w-3.5" /> DEFENDED GRC OPERATIONS
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Connect your risk, assets, and controls today.
           </h2>
 

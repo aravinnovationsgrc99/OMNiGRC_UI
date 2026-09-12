@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
   const parallaxY = useTransform(scrollY, [0, 600], [0, -35]);
   const parallaxScale = useTransform(scrollY, [0, 600], [1, 0.98]);
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#0A111F] pt-28 sm:pt-36 pb-12 sm:pb-16">
+    <section className="relative min-h-[80svh] sm:min-h-[90svh] flex flex-col justify-between overflow-hidden bg-[#0A111F] pt-20 sm:pt-36 pb-8 sm:pb-16">
       {/* WebGL2 Swirling Aurora Background Atmosphere */}
       <AuroraBackground />
 
@@ -32,21 +32,21 @@ export const HeroSection: React.FC = () => {
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
-        className="relative z-10 max-w-5xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex-1 flex flex-col justify-center"
+        className="relative z-10 w-full max-w-5xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex-1 flex flex-col justify-center overflow-hidden"
       >
         {/* Eyebrow badge */}
         <motion.div
           variants={fadeIn}
-          className="inline-flex items-center gap-2 self-center px-3.5 sm:px-4 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber text-[11px] sm:text-xs font-mono tracking-widest uppercase mb-6 sm:mb-8 shadow-inner max-w-[90vw]"
+          className="inline-flex items-center gap-1.5 self-center px-3 py-1 rounded-full border border-teal/40 bg-teal/10 text-amber text-[10px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase mb-4 sm:mb-8 shadow-inner max-w-[92vw]"
         >
-          <Sparkles className="h-3.5 w-3.5 text-amber shrink-0" />
-          <span className="truncate font-semibold">THE CONNECTED GRC OPERATING LAYER</span>
+          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-amber shrink-0" />
+          <span className="truncate font-semibold text-[10px] sm:text-xs">THE CONNECTED GRC OPERATING LAYER</span>
         </motion.div>
 
         {/* Main Headline */}
         <motion.h1
           variants={fadeIn}
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-5 sm:mb-6 max-w-4xl 2xl:max-w-6xl mx-auto"
+          className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.18] mb-4 sm:mb-6 max-w-4xl 2xl:max-w-6xl mx-auto break-words"
         >
           Unified risk, asset, and control management{" "}
           <span className="bg-gradient-to-r from-teal via-teal-300 to-amber bg-clip-text text-transparent">
@@ -57,7 +57,7 @@ export const HeroSection: React.FC = () => {
         {/* Subheadline */}
         <motion.p
           variants={fadeIn}
-          className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal"
+          className="text-xs sm:text-lg md:text-xl text-slate-300 max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-10 font-normal px-1 break-words"
         >
           Connect risk registers, asset inventories, control mapping, and compliance testing in one operating workflow. Advisory AI suggests; human oversight approves.
         </motion.p>
@@ -65,22 +65,22 @@ export const HeroSection: React.FC = () => {
         {/* CTAs */}
         <motion.div
           variants={fadeInUp}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-12 w-full max-w-xs sm:max-w-none mx-auto"
         >
           <Link href="/get-a-demo" className="w-full sm:w-auto">
-            <Button variant="primary" size="lg" className="w-full sm:w-auto" rightIcon={<ArrowRight className="h-5 w-5" />}>
+            <Button variant="primary" size="lg" className="w-full sm:w-auto min-h-[44px]" rightIcon={<ArrowRight className="h-5 w-5" />}>
               Request a Demo
             </Button>
           </Link>
           <a href="#core-workflows" className="w-full sm:w-auto">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[44px]">
               Explore OMNiGRC
             </Button>
           </a>
         </motion.div>
 
         {/* 3D Isometric Hero Visual with Parallax Depth Shift */}
-        <motion.div style={{ y: parallaxY, scale: parallaxScale }}>
+        <motion.div style={{ y: parallaxY, scale: parallaxScale }} className="w-full max-w-full overflow-hidden">
           <IsometricHeroVisual />
         </motion.div>
       </motion.div>

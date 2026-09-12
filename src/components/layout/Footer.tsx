@@ -8,7 +8,7 @@ import { PILLARS } from "@/lib/pillars";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-navy-700/60 bg-[#0A111F] text-slate-400 pt-16 pb-12">
+    <footer className="border-t border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-[#0A111F] text-slate-500 dark:text-slate-400 pt-16 pb-12 transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 pb-12 border-b border-navy-700/60">
           {/* Col 1: Platform & Workflows */}

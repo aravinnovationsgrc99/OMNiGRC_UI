@@ -51,9 +51,9 @@ const stages = [
 
 export const StagesOfTrustSection: React.FC = () => {
   return (
-    <section className="relative bg-[#0A111F] py-16 sm:py-24 overflow-hidden">
+    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,13 +67,13 @@ export const StagesOfTrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight"
+            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight"
           >
             Built for how security teams actually grow.
           </motion.h2>
         </div>
 
-        <div className="space-y-12 sm:space-y-20">
+        <div className="space-y-8 sm:space-y-20">
           {stages.map((card, idx) => (
             <motion.div
               key={idx}
@@ -82,7 +82,7 @@ export const StagesOfTrustSection: React.FC = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-teal/30 bg-navy-900/70 hover:border-teal/60">
+              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-teal/30 bg-white dark:bg-navy-900/70 hover:border-teal/60">
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
                     card.imageLeft ? "lg:flex-row-reverse" : ""
@@ -135,8 +135,8 @@ export const StagesOfTrustSection: React.FC = () => {
                       card.imageLeft ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
-                      <div className="flex items-center justify-between border-b border-navy-700/60 pb-3 mb-4">
+                    <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
+                      <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                         <div className="flex items-center gap-2">
                           <div className="h-2.5 w-2.5 rounded-full bg-teal" />
                           <div className="h-2.5 w-2.5 rounded-full bg-amber" />
@@ -154,11 +154,11 @@ export const StagesOfTrustSection: React.FC = () => {
                         {card.mockupItems.map((item, itemIdx) => (
                           <div
                             key={itemIdx}
-                            className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-navy-900/90 border border-navy-700/60 text-xs"
+                            className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-navy-900/90 border border-slate-200 dark:border-navy-700/60 text-xs"
                           >
                             <div className="flex items-center gap-2.5 truncate">
                               <CheckCircle2 className="h-4 w-4 text-teal shrink-0" />
-                              <span className="text-slate-200 font-medium truncate">{item.label}</span>
+                              <span className="text-navy-900 dark:text-slate-200 font-medium truncate">{item.label}</span>
                             </div>
                             <span className="px-2 py-0.5 rounded bg-teal/15 text-teal font-mono font-semibold shrink-0 ml-2">
                               {item.status}

@@ -44,19 +44,19 @@ export const UnifiedPlatformSection: React.FC = () => {
   }));
 
   return (
-    <section id="core-workflows" className="relative bg-[#16233F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
+    <section id="core-workflows" className="relative bg-slate-100 dark:bg-[#16233F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       {/* Background radial glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] sm:h-[700px] w-[90vw] max-w-[900px] rounded-full bg-teal/10 blur-[140px]" />
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <p className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold">
             THE FOUR CORE WORKFLOWS
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
             Everything connects. Nothing lives in isolation.
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base lg:text-lg">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg">
             Explore how OMNiGRC brings risk, assets, control mapping, and compliance testing into one unified workflow.
           </p>
         </div>
@@ -69,16 +69,16 @@ export const UnifiedPlatformSection: React.FC = () => {
               <button
                 key={pillar.id}
                 onClick={() => setActivePillar(idx)}
-                className={`p-4 rounded-2xl border text-left transition-all duration-200 ${
+                className={`p-3 sm:p-4 rounded-2xl border text-left transition-all duration-200 ${
                   isSelected
-                    ? "border-teal bg-navy-900 shadow-lg shadow-teal/20 scale-[1.02]"
-                    : "border-navy-700/60 bg-[#0A111F]/60 hover:border-navy-600 hover:bg-navy-900/60"
+                    ? "border-teal bg-white dark:bg-navy-900 shadow-lg shadow-teal/20 scale-[1.02]"
+                    : "border-slate-200 dark:border-navy-700/60 bg-white/60 dark:bg-[#0A111F]/60 hover:border-teal/40 dark:hover:bg-navy-900/60"
                 }`}
               >
                 <span className="text-[10px] font-mono uppercase tracking-wider text-amber font-bold block mb-1">
                   {pillar.tag}
                 </span>
-                <h3 className="text-xs sm:text-sm font-bold text-white leading-snug truncate">
+                <h3 className="text-xs sm:text-sm font-bold text-navy-900 dark:text-white leading-snug truncate">
                   {pillar.title.split(": ")[1]}
                 </h3>
               </button>
@@ -94,7 +94,7 @@ export const UnifiedPlatformSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.3 }}
-            className="rounded-3xl border border-teal/30 bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl"
+            className="rounded-3xl border border-teal/30 bg-white dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column: Pillar Details & Points */}
@@ -103,15 +103,15 @@ export const UnifiedPlatformSection: React.FC = () => {
                   <span className="text-xs font-mono font-bold tracking-widest text-teal uppercase bg-teal/10 px-3 py-1 rounded-full inline-block mb-3">
                     {pillars[activePillar].tag}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white mb-3">
                     {pillars[activePillar].title}
                   </h3>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
                     {pillars[activePillar].shortDesc}
                   </p>
 
                   {/* Inline Mini-Diagram / Icon Flow Visual per Workflow Tab */}
-                  <div aria-hidden="true" className="p-3.5 rounded-xl bg-[#0A111F]/80 border border-teal/30 font-mono text-xs">
+                  <div aria-hidden="true" className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#0A111F]/80 border border-teal/30 font-mono text-xs">
                     {activePillar === 0 && (
                       <div className="space-y-2">
                         <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">

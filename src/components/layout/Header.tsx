@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0A111F]/95 backdrop-blur-md border-b border-teal/20 py-3 shadow-xl"
+          ? "bg-white/95 dark:bg-[#0A111F]/95 backdrop-blur-md border-b border-slate-200 dark:border-teal/20 py-3 shadow-xl"
           : "bg-transparent py-4 sm:py-5"
       }`}
     >
@@ -77,7 +77,7 @@ export const Header: React.FC = () => {
               <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
             </motion.div>
             <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-teal transition-colors">
+              <span className="text-lg sm:text-xl font-bold tracking-tight text-navy-900 dark:text-white group-hover:text-teal transition-colors">
                 OMNi<span className="text-teal">GRC</span>
               </span>
               <span className="text-[9px] sm:text-[10px] tracking-widest text-amber -mt-1 font-mono uppercase">
@@ -345,7 +345,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-navy-700/60 bg-navy-900/60 text-amber hover:text-white"
+              className="p-2 rounded-lg border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-amber hover:text-teal"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
               {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-teal" />}
@@ -369,12 +369,12 @@ export const Header: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-b border-navy-700/60 bg-[#16233F] px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto"
+            className="lg:hidden border-b border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#16233F] px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto"
           >
             <div className="space-y-2">
               <button
                 onClick={() => toggleMobileSection("workflows")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal"
               >
                 <span>Workflows</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-teal" : ""}`} />
@@ -423,7 +423,7 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => toggleMobileSection("frameworks")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal"
               >
                 <span>Frameworks</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "frameworks" ? "rotate-180 text-teal" : ""}`} />
@@ -435,7 +435,7 @@ export const Header: React.FC = () => {
                       key={fw.code}
                       href={`/frameworks/${fw.slug}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block text-slate-300 hover:text-white py-2 min-h-[44px] flex items-center"
+                className="block text-navy-900 dark:text-slate-300 hover:text-teal py-2 min-h-[44px] flex items-center"
                     >
                       {fw.name}
                     </Link>
@@ -446,33 +446,33 @@ export const Header: React.FC = () => {
               <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 Pricing
               </Link>
               <Link
                 href="/about-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 About Us
               </Link>
               <Link
                 href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 Ctrl + GRC Blog
               </Link>
               <Link
                 href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 Contact Us
               </Link>
             </div>
-            <div className="pt-4 border-t border-navy-700/60">
+            <div className="pt-4 border-t border-slate-200 dark:border-navy-700/60">
               <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="primary" className="w-full min-h-[44px]">Request a Demo</Button>
               </Link>

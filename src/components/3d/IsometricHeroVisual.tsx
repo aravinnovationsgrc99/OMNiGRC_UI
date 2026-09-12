@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Shield,
@@ -23,20 +23,30 @@ import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const IsometricHeroVisual: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>("overview");
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto my-8 sm:my-12 perspective-1000 px-2 sm:px-4">
+    <div className="relative w-full max-w-5xl mx-auto my-6 sm:my-12 perspective-1000 px-1 sm:px-4 overflow-hidden">
       {/* Background Glow using approved palette */}
       <div className="pointer-events-none absolute -inset-6 bg-gradient-to-r from-teal/20 via-amber/15 to-teal/20 blur-3xl opacity-70 rounded-3xl" />
 
       {/* Main Isometric 3D Board Surface */}
       <motion.div
-        initial={{ opacity: 0, rotateX: 10, rotateY: -4, y: 30 }}
-        animate={{ opacity: 1, rotateX: 6, rotateY: -3, y: 0 }}
+        initial={{ opacity: 0, rotateX: isMobile ? 0 : 10, rotateY: isMobile ? 0 : -4, y: 30 }}
+        animate={{ opacity: 1, rotateX: isMobile ? 0 : 6, rotateY: isMobile ? 0 : -3, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="relative rounded-3xl border border-teal/30 bg-navy/95 p-4 sm:p-7 shadow-2xl backdrop-blur-2xl transform-gpu"
+        className="relative rounded-2xl sm:rounded-3xl border border-teal/30 bg-navy/95 p-3.5 sm:p-7 shadow-2xl backdrop-blur-2xl transform-gpu w-full max-w-full overflow-hidden"
         style={{
-          transformStyle: "preserve-3d",
+          transformStyle: isMobile ? "flat" : "preserve-3d",
           boxShadow:
             "0 25px 50px -12px rgba(15, 110, 106, 0.2), 0 0 40px rgba(22, 35, 63, 0.95)",
         }}

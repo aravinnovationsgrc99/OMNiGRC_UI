@@ -66,9 +66,9 @@ export const ArchitectureSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-[#0A111F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
+    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -79,7 +79,7 @@ export const ArchitectureSection: React.FC = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4"
+            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4"
           >
             How AI control mapping actually works.
           </motion.h2>
@@ -87,7 +87,7 @@ export const ArchitectureSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-300 text-sm sm:text-base lg:text-lg"
+            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg"
           >
             No black boxes. No autonomous hallucinated approvals. Complete data minimization and mandatory human decision-making.
           </motion.p>
@@ -99,27 +99,27 @@ export const ArchitectureSection: React.FC = () => {
         </div>
 
         {/* AI Trust Model: "AI ASSISTS. HUMANS DECIDE." Dedicated Callout */}
-        <div className="mb-14 rounded-3xl border border-teal/40 bg-gradient-to-r from-teal/15 via-navy-900/90 to-amber/15 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        <div className="mb-10 rounded-3xl border border-teal/40 bg-gradient-to-r from-teal/15 via-white dark:via-navy-900/90 to-amber/15 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-3">
               <span className="px-3 py-1 rounded-full bg-amber/15 border border-amber/30 text-amber text-xs font-mono font-bold uppercase">
                 Core Operating Principle
               </span>
-              <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              <h3 className="text-2xl sm:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                 AI ASSISTS. <br />
                 <span className="text-teal">HUMANS DECIDE.</span>
               </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 OMNiGRC never makes unsupervised compliance decisions. AI provides advisory clause correlations, accompanied by confidence indicators. Human approval is mandatory.
               </p>
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl bg-[#0A111F]/80 border border-teal/30 space-y-2">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#0A111F]/80 border border-teal/30 space-y-2">
                 <span className="text-xs font-mono font-bold text-teal uppercase flex items-center gap-1.5">
                   <CheckCircle2 className="h-4 w-4 text-teal" /> What is SENT to LLMs:
                 </span>
-                <ul className="space-y-1.5 text-xs text-slate-300">
+                <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-teal" /> Generic control text
                   </li>
@@ -132,11 +132,11 @@ export const ArchitectureSection: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="p-4 rounded-2xl bg-[#0A111F]/80 border border-rose/30 space-y-2">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#0A111F]/80 border border-rose/30 space-y-2">
                 <span className="text-xs font-mono font-bold text-rose-400 uppercase flex items-center gap-1.5">
                   <XCircle className="h-4 w-4 text-rose-400" /> What is NEVER Sent:
                 </span>
-                <ul className="space-y-1.5 text-xs text-slate-300">
+                <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-rose-400" /> Organization name or brand
                   </li>
@@ -153,7 +153,7 @@ export const ArchitectureSection: React.FC = () => {
         </div>
 
         {/* Real 8-Stage Connected AI Flow Diagram */}
-        <div className="mb-14 rounded-3xl border border-teal/30 bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        <div className="mb-10 rounded-3xl border border-teal/30 bg-white dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="px-3 py-1 rounded-full bg-teal/15 text-teal text-[10px] font-mono font-bold uppercase tracking-widest border border-teal/30">
               END-TO-END DATA FLOW

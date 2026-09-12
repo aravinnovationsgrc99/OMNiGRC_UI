@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -20,6 +20,12 @@ import { FRAMEWORKS } from "@/lib/frameworks";
 
 const frameworkNamesStr = FRAMEWORKS.map((f) => f.name).join(", ");
 const frameworkCodesStr = FRAMEWORKS.map((f) => f.code).join(", ");
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://omnigrc.com"),
@@ -60,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${ibmSans.variable} ${ibmMono.variable}`}>
+    <html lang="en" className={`dark ${ibmSans.variable} ${ibmMono.variable} overflow-x-hidden w-full max-w-full`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -79,7 +85,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased selection:bg-teal/30 selection:text-white bg-[#F6F7F6] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200">
+      <body className="antialiased selection:bg-teal/30 selection:text-white bg-[#F6F7F6] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200 overflow-x-hidden w-full max-w-full relative">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
