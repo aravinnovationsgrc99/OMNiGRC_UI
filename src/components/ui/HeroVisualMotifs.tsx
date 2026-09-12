@@ -1,7 +1,42 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import { getFrameworkBySlug, FRAMEWORKS } from "@/lib/frameworks";
+
+interface HeroImageWithFallbackProps {
+  src: string;
+  alt: string;
+  fallbackMotif: React.ReactNode;
+}
+
+export const HeroImageWithFallback: React.FC<HeroImageWithFallbackProps> = ({
+  src,
+  alt,
+  fallbackMotif,
+}) => {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    return <>{fallbackMotif}</>;
+  }
+
+  return (
+    <div className="relative w-full h-[260px] sm:h-[320px] rounded-2xl overflow-hidden shadow-xl border border-teal/20 bg-navy-950/80 group">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+        quality={85}
+        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        onError={() => setImageError(true)}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent pointer-events-none" />
+    </div>
+  );
+};
 
 interface FrameworkMotifProps {
   slug: string;
@@ -70,7 +105,7 @@ export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColo
   );
 };
 
-export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
+export const ProductMotifSvg: React.FC<{ slug: string }> = ({ slug }) => {
   return (
     <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
       <svg
@@ -80,7 +115,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-auto max-w-[360px] drop-shadow-2xl"
       >
-        {slug === "risk-management" && (
+        {(slug === "risk-management" || slug === "risk-register") && (
           /* Pillar 1: 5x5 Heatmap Matrix Motif */
           <g>
             <rect x="40" y="40" width="320" height="220" rx="16" fill="#0A111F" stroke="#0F6E6A" strokeWidth="2" />
@@ -117,7 +152,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </g>
         )}
 
-        {slug === "continuous-monitoring" && (
+        {(slug === "continuous-monitoring" || slug === "asset-inventory") && (
           /* Pillar 2: Asset & PII Data Flow Graph Motif */
           <g>
             <rect x="40" y="40" width="320" height="220" rx="16" fill="#0A111F" stroke="#3B82F6" strokeWidth="2" />
@@ -142,7 +177,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </g>
         )}
 
-        {slug === "audit-management" && (
+        {(slug === "audit-management" || slug === "control-mapping") && (
           /* Pillar 3: Advisory AI Control Mapper Motif */
           <g>
             <rect x="40" y="40" width="320" height="220" rx="16" fill="#0A111F" stroke="#8B5CF6" strokeWidth="2" />
@@ -177,7 +212,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </g>
         )}
 
-        {slug === "policy-management" && (
+        {(slug === "policy-management" || slug === "compliance-board") && (
           /* Pillar 4: Compliance Testing Board Motif */
           <g>
             <rect x="40" y="40" width="320" height="220" rx="16" fill="#0A111F" stroke="#10B981" strokeWidth="2" />
@@ -205,6 +240,40 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
       </svg>
     </div>
   );
+};
+
+export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
+  if (slug === "audit-management" || slug === "control-mapping") {
+    return (
+      <HeroImageWithFallback
+        src="/hero-signoff.jpg"
+        alt="A compliance manager reviewing an AI-suggested control mapping on screen before giving mandatory analyst signoff."
+        fallbackMotif={<ProductMotifSvg slug={slug} />}
+      />
+    );
+  }
+
+  if (slug === "policy-management" || slug === "compliance-board") {
+    return (
+      <HeroImageWithFallback
+        src="/hero-audit-trail.png"
+        alt="An auditor verifying defensible testing history and immutable PostgreSQL change logs on a rolling 30/60/90-day compliance board."
+        fallbackMotif={<ProductMotifSvg slug={slug} />}
+      />
+    );
+  }
+
+  if (slug === "continuous-monitoring" || slug === "asset-inventory") {
+    return (
+      <HeroImageWithFallback
+        src="/hero-redaction.png"
+        alt="A security engineer inspecting automated PII redaction and data minimization logs before external LLM transmission."
+        fallbackMotif={<ProductMotifSvg slug={slug} />}
+      />
+    );
+  }
+
+  return <ProductMotifSvg slug={slug} />;
 };
 
 export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
@@ -270,7 +339,7 @@ export const PricingMotif: React.FC = () => {
   );
 };
 
-export const GenericHeroMotif: React.FC<{ type: "about" | "demo" | "contact" | "blog" | "vault" }> = ({ type }) => {
+export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" | "blog" | "vault" }> = ({ type }) => {
   return (
     <div aria-hidden="true" className="relative w-full h-full flex items-center justify-center p-6 min-h-[260px] sm:min-h-[300px]">
       <svg
@@ -359,3 +428,18 @@ export const GenericHeroMotif: React.FC<{ type: "about" | "demo" | "contact" | "
     </div>
   );
 };
+
+export const GenericHeroMotif: React.FC<{ type: "about" | "demo" | "contact" | "blog" | "vault" }> = ({ type }) => {
+  if (type === "about") {
+    return (
+      <HeroImageWithFallback
+        src="/hero-collab.png"
+        alt="GRC architects collaborating around a screen to structure practical compliance workflows for lean security teams."
+        fallbackMotif={<GenericHeroMotifSvg type={type} />}
+      />
+    );
+  }
+
+  return <GenericHeroMotifSvg type={type} />;
+};
+

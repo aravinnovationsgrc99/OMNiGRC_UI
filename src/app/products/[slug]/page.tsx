@@ -58,6 +58,25 @@ const productDetails: { [key: string]: { title: string; subtitle: string; desc: 
   },
 };
 
+// Map friendly product aliases
+productDetails["control-mapping"] = productDetails["audit-management"];
+productDetails["compliance-board"] = productDetails["policy-management"];
+productDetails["asset-inventory"] = productDetails["continuous-monitoring"];
+productDetails["risk-register"] = productDetails["risk-management"];
+
+export function generateStaticParams() {
+  return [
+    { slug: "risk-management" },
+    { slug: "continuous-monitoring" },
+    { slug: "audit-management" },
+    { slug: "policy-management" },
+    { slug: "control-mapping" },
+    { slug: "compliance-board" },
+    { slug: "asset-inventory" },
+    { slug: "risk-register" },
+  ];
+}
+
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
   const slug = params.slug || "risk-management";
   const product = productDetails[slug] || productDetails["risk-management"];
