@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Shield, Lock, ArrowRight } from "lucide-react";
 import { FRAMEWORKS } from "@/lib/frameworks";
+import { PILLARS } from "@/lib/pillars";
 
 export const Footer: React.FC = () => {
   return (
@@ -16,26 +17,13 @@ export const Footer: React.FC = () => {
               Core Workflows
             </h4>
             <ul className="space-y-2 text-xs">
-              <li>
-                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
-                  5x5 Risk Register
-                </Link>
-              </li>
-              <li>
-                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
-                  Asset &amp; PII Graph
-                </Link>
-              </li>
-              <li>
-                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
-                  AI Clause Mapper
-                </Link>
-              </li>
-              <li>
-                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
-                  Compliance Board
-                </Link>
-              </li>
+              {PILLARS.map((p) => (
+                <li key={p.code}>
+                  <Link href={`/products/${p.slug}`} className="hover:text-teal transition-colors">
+                    {p.name}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <Link href="/#core-workflows" className="hover:text-teal transition-colors">
                   Platform Architecture

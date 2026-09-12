@@ -45,10 +45,11 @@ interface FrameworkMotifProps {
 }
 
 export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColor }) => {
-  // CRITICAL: Pull accentColor directly from frameworks.ts single source of truth
+  // CRITICAL: Pull accentColor & authentic citations directly from frameworks.ts single source of truth
   const fw = getFrameworkBySlug(slug);
   const color = accentColor || fw?.accentColor || "#0F6E6A";
   const fwName = fw?.code || "FRAMEWORK";
+  const citations = fw?.citations || ['A.5', 'A.7', 'A.8'];
 
   return (
     <div aria-hidden="true" className="relative w-full rounded-3xl border border-teal/30 bg-white/80 dark:bg-navy-900/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl flex items-center justify-center min-h-[280px] sm:min-h-[360px] transition-all duration-300 hover:border-teal/50">
@@ -83,17 +84,17 @@ export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColo
         <circle cx="200" cy="140" r="45" fill="#0A111F" stroke={color} strokeWidth="2.5" />
         <path d="M185 140 L195 150 L218 127" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
 
-        {/* Orbiting Clause Nodes */}
-        <circle cx="130" cy="100" r="14" fill="#16233F" stroke="#3B82F6" strokeWidth="1.5" />
-        <text x="130" y="103" textAnchor="middle" fill="#93C5FD" fontSize="8" fontFamily="monospace" fontWeight="bold">A.5</text>
+        {/* Orbiting Clause Nodes — Dynamically pulled from framework citations */}
+        <circle cx="130" cy="100" r="15" fill="#16233F" stroke="#3B82F6" strokeWidth="1.5" />
+        <text x="130" y="103" textAnchor="middle" fill="#93C5FD" fontSize="7.5" fontFamily="monospace" fontWeight="bold">{citations[0]}</text>
         <line x1="144" y1="107" x2="165" y2="123" stroke="#3B82F6" strokeWidth="1" strokeDasharray="3 3" />
 
-        <circle cx="270" cy="100" r="14" fill="#16233F" stroke="#8B5CF6" strokeWidth="1.5" />
-        <text x="270" y="103" textAnchor="middle" fill="#DDD6FE" fontSize="8" fontFamily="monospace" fontWeight="bold">CC6</text>
+        <circle cx="270" cy="100" r="15" fill="#16233F" stroke="#8B5CF6" strokeWidth="1.5" />
+        <text x="270" y="103" textAnchor="middle" fill="#DDD6FE" fontSize="7.5" fontFamily="monospace" fontWeight="bold">{citations[1]}</text>
         <line x1="256" y1="107" x2="235" y2="123" stroke="#8B5CF6" strokeWidth="1" strokeDasharray="3 3" />
 
-        <circle cx="200" cy="215" r="14" fill="#16233F" stroke="#10B981" strokeWidth="1.5" />
-        <text x="200" y="218" textAnchor="middle" fill="#A7F3D0" fontSize="8" fontFamily="monospace" fontWeight="bold">Sec8</text>
+        <circle cx="200" cy="215" r="16" fill="#16233F" stroke="#10B981" strokeWidth="1.5" />
+        <text x="200" y="218" textAnchor="middle" fill="#A7F3D0" fontSize="7" fontFamily="monospace" fontWeight="bold">{citations[2]}</text>
         <line x1="200" y1="185" x2="200" y2="201" stroke="#10B981" strokeWidth="1" strokeDasharray="3 3" />
 
         {/* Framework Code Badge */}

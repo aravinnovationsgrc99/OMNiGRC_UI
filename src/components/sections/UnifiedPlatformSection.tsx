@@ -20,6 +20,7 @@ import {
 import { TiltCard } from "@/components/ui/TiltCard";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 import { FRAMEWORKS } from "@/lib/frameworks";
+import { PILLARS } from "@/lib/pillars";
 
 export const UnifiedPlatformSection: React.FC = () => {
   const [activePillar, setActivePillar] = useState<number>(0);
@@ -33,64 +34,14 @@ export const UnifiedPlatformSection: React.FC = () => {
     { code: "HIPAA", clause: "§164.312(a) Technical Access Control", conf: "94%" },
   ];
 
-  const pillars = [
-    {
-      id: "risk-register",
-      title: "Pillar 1: Risk Register & Scoring",
-      tag: "RISK VISIBILITY",
-      shortDesc:
-        "Log risks, quantify Likelihood × Impact, assign treatment plans, and track residual risk reduction over time.",
-      points: [
-        "Structured 5x5 Likelihood and Impact scoring matrix",
-        "Direct linkage from risks to mitigating controls and assets",
-        "Treatment plans: Accept, Mitigate, Transfer, or Avoid",
-        "Historical score evolution and audit-ready risk history",
-      ],
-      interactiveType: "risk-matrix",
-    },
-    {
-      id: "asset-inventory",
-      title: "Pillar 2: Asset & Inventory Management",
-      tag: "RELATIONSHIP GRAPH",
-      shortDesc:
-        "Maintain a live record of hardware, cloud resources, vendors, and data flows with direct dependency tracing.",
-      points: [
-        "Hardware, software, SaaS vendors, and databases in one view",
-        "Data flow tracking and classification (PII, Financial, Sensitive)",
-        "Vendor dependency and third-party risk context",
-        "Direct mapping to related security controls and risk items",
-      ],
-      interactiveType: "asset-graph",
-    },
-    {
-      id: "control-mapping",
-      title: "Pillar 3: AI-Assisted Control Mapping",
-      tag: "MAP ONCE, COMPLY MANY",
-      shortDesc:
-        "Define your security control once. Advisory AI suggests matching clauses across 6 documented frameworks.",
-      points: [
-        `Pre-loaded with ${FRAMEWORKS.map((f) => f.code).join(", ")}`,
-        "Advisory AI suggests candidate clause matches with confidence scores",
-        "Mandatory human review and approval before persistence",
-        "Zero duplicate control overhead across multiple framework audits",
-      ],
-      interactiveType: "control-mapper",
-    },
-    {
-      id: "compliance-board",
-      title: "Pillar 4: Compliance Testing Board",
-      tag: "OPERATIONAL CADENCE",
-      shortDesc:
-        "Kanban and calendar views for control ownership, recurring testing dates, and rolling 30/60/90-day visibility.",
-      points: [
-        "Control ownership assigned to individual engineers or team leads",
-        "Recurring testing cadence (Monthly, Quarterly, Semi-Annual, Annual)",
-        "Rolling 30, 60, and 90-day upcoming evidence deadlines",
-        "Defensible testing history ready for external audit review",
-      ],
-      interactiveType: "kanban-board",
-    },
-  ];
+  const pillars = PILLARS.map((p, idx) => ({
+    id: p.slug,
+    title: `Pillar ${idx + 1}: ${p.name}`,
+    tag: p.badge.toUpperCase(),
+    shortDesc: p.oneLiner,
+    points: p.features,
+    interactiveType: idx === 0 ? "risk-matrix" : idx === 1 ? "asset-graph" : idx === 2 ? "control-mapper" : "kanban-board",
+  }));
 
   return (
     <section id="core-workflows" className="relative bg-[#16233F] py-16 sm:py-24 border-t border-navy-700/60 overflow-hidden">
@@ -261,7 +212,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                           Risk Quantification Engine (5x5 Matrix)
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-teal">14 Active Risks</span>
+                      <span className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300">14 Active Risks</span>
                     </div>
 
                     <div className="grid grid-cols-5 gap-1.5 text-center text-[10px] font-mono">
@@ -301,7 +252,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                               ? "bg-amber/30 text-amber border border-amber/40"
                               : cell.color === "yellow"
                               ? "bg-amber/20 text-amber border border-amber/30"
-                              : "bg-teal/15 text-teal border border-teal/20"
+                              : "bg-teal/15 text-teal-700 dark:text-teal-300 font-bold border border-teal/20"
                           }`}
                         >
                           {cell.label.split(" ")[1]}
@@ -314,7 +265,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                         <p className="font-bold text-white">RSK-042: Database Backup Restoration Failure</p>
                         <p className="text-[11px] text-slate-400">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
                       </div>
-                      <span className="px-2.5 py-1 rounded bg-teal/20 text-teal font-mono font-bold text-[10px]">
+                      <span className="px-2.5 py-1 rounded bg-teal/20 text-teal-700 dark:text-teal-300 font-mono font-bold text-xs">
                         Residual: Low
                       </span>
                     </div>
@@ -348,7 +299,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                       <div className="pl-6 border-l-2 border-teal/40 space-y-2 text-xs">
                         <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
                           <span className="text-slate-300">Vendor: Amazon Web Services Inc.</span>
-                          <span className="text-[10px] font-mono text-teal">SOC 2 Verified</span>
+                          <span className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300">SOC 2 Verified</span>
                         </div>
                         <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
                           <span className="text-slate-300">Linked Risk: RSK-019 (Unauthorized Data Access)</span>
@@ -356,7 +307,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                         </div>
                         <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-teal/30 flex items-center justify-between">
                           <span className="text-slate-200 font-semibold">Associated Control: CTRL-088 (KMS AES-256 Encryption)</span>
-                          <span className="text-[10px] font-mono text-teal">Enforced</span>
+                          <span className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300">Enforced</span>
                         </div>
                       </div>
                     </div>
@@ -373,7 +324,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                           Map-Once Clause Alignment (AI Advisory + Human Review)
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-teal">Human Verified</span>
+                      <span className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300">Human Verified</span>
                     </div>
 
                     <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
@@ -396,14 +347,14 @@ export const UnifiedPlatformSection: React.FC = () => {
                             >
                               <span className="font-bold text-amber">{fwObj?.name || m.code}:</span>
                               <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
-                              <span className="font-mono text-teal text-[10px]">{m.conf} match</span>
+                              <span className="font-mono font-bold text-teal-700 dark:text-teal-300 text-xs">{m.conf} match</span>
                             </div>
                           );
                         })}
                       </div>
 
                       <div className="p-2 rounded-lg bg-teal/15 border border-teal/30 flex items-center justify-between text-xs">
-                        <span className="text-teal font-semibold flex items-center gap-1.5">
+                        <span className="text-teal-700 dark:text-teal-300 font-bold flex items-center gap-1.5">
                           <UserCheck className="h-3.5 w-3.5" /> Approved by GRC Analyst
                         </span>
                         <span className="text-[10px] font-mono text-slate-300">Saved to Postgres</span>
@@ -428,7 +379,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                     <div className="grid grid-cols-3 gap-2.5 text-xs">
                       {/* Column 1: Next 30 Days */}
                       <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
-                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-teal uppercase">
+                        <div className="flex items-center justify-between text-xs font-mono font-bold text-teal-700 dark:text-teal-300 uppercase">
                           <span>Next 30 Days</span>
                           <span className="bg-teal/20 px-1.5 py-0.5 rounded">2 Due</span>
                         </div>
@@ -454,21 +405,21 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                       {/* Column 3: 60-90 Days */}
                       <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
-                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-teal uppercase">
+                        <div className="flex items-center justify-between text-xs font-mono font-bold text-teal-700 dark:text-teal-300 uppercase">
                           <span>60 - 90 Days</span>
                           <span className="bg-teal/20 px-1.5 py-0.5 rounded">1 Due</span>
                         </div>
                         <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
                           <p className="font-bold text-white">Annual DRP Simulation</p>
                           <p className="text-[10px] text-slate-400 mt-0.5">Owner: CTO</p>
-                          <p className="text-[9px] font-mono text-teal mt-1">Due in 74 days</p>
+                          <p className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300 mt-1">Due in 74 days</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="p-2.5 rounded-lg bg-navy-900 border border-navy-700/60 flex items-center justify-between text-[11px]">
                       <span className="text-slate-300">Auditor Export Readiness:</span>
-                      <span className="text-teal font-mono font-bold">100% On Schedule</span>
+                      <span className="text-teal-700 dark:text-teal-300 font-mono font-bold text-xs">100% On Schedule</span>
                     </div>
                   </div>
                 )}

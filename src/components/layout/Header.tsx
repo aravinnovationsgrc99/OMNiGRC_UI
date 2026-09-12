@@ -23,6 +23,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FRAMEWORKS } from "@/lib/frameworks";
+import { PILLARS } from "@/lib/pillars";
 
 export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -86,15 +87,15 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
-            {/* Workflows / Product Dropdown */}
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+            {/* Mega Menu: Workflows */}
             <div
               className="relative"
               onMouseEnter={() => setActiveMenu("product")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-teal transition-colors rounded-lg hover:bg-navy-800/40">
-                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "product" ? "rotate-180 text-teal" : ""}`} />
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "product" ? "rotate-180 text-teal-600 dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
                 {activeMenu === "product" && (
@@ -103,60 +104,48 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-teal/30 bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
                   >
                     <div className="md:col-span-4 space-y-3">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber font-mono">Four Core Workflows</h4>
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">Four Core Workflows</h4>
                       <ul className="space-y-2 text-sm">
-                        <li>
-                          <Link href="/products/risk-management" className="text-slate-300 hover:text-teal-300 hover:underline flex items-center gap-2">
-                            <ShieldAlert className="h-3.5 w-3.5 text-teal" /> Risk Register &amp; Scoring
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/products/continuous-monitoring" className="text-slate-300 hover:text-teal-300 hover:underline flex items-center gap-2">
-                            <Server className="h-3.5 w-3.5 text-amber" /> Asset &amp; Inventory Context
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/products/audit-management" className="text-slate-300 hover:text-teal-300 hover:underline flex items-center gap-2">
-                            <FileCheck2 className="h-3.5 w-3.5 text-teal-300" /> Control Mapping &amp; AI
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/products/policy-management" className="text-slate-300 hover:text-teal-300 hover:underline flex items-center gap-2">
-                            <CalendarCheck className="h-3.5 w-3.5 text-amber" /> Compliance Testing Board
-                          </Link>
-                        </li>
+                        {PILLARS.map((p) => (
+                          <li key={p.code}>
+                            <Link href={`/products/${p.slug}`} className="text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-300 hover:underline flex items-center gap-2 font-medium">
+                              <span className="h-2 w-2 rounded-full" style={{ backgroundColor: p.accentColor }} />
+                              {p.name}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
 
-                    <div className="md:col-span-4 space-y-3 md:border-l border-navy-700/60 md:pl-6">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber font-mono">Lean GRC Solutions</h4>
+                    <div className="md:col-span-4 space-y-3 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">Lean GRC Solutions</h4>
                       <div className="space-y-2 text-xs">
-                        <Link href="/solutions/startups" className="block p-2 rounded-lg hover:bg-navy-800/80 transition-colors">
-                          <p className="font-bold text-white">For Lean Security Teams</p>
-                          <p className="text-[11px] text-slate-400">Replace manual spreadsheets with unified operations</p>
+                        <Link href="/solutions/startups" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
+                          <p className="font-bold text-navy-900 dark:text-white">For Lean Security Teams</p>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400">Replace manual spreadsheets with unified operations</p>
                         </Link>
-                        <Link href="/solutions/mid-market" className="block p-2 rounded-lg hover:bg-navy-800/80 transition-colors">
-                          <p className="font-bold text-white">For GRC Leads &amp; CISOs</p>
-                          <p className="text-[11px] text-slate-400">One control mapped across multiple standards</p>
+                        <Link href="/solutions/mid-market" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
+                          <p className="font-bold text-navy-900 dark:text-white">For GRC Leads &amp; CISOs</p>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400">One control mapped across multiple standards</p>
                         </Link>
-                        <Link href="/solutions/enterprise" className="block p-2 rounded-lg hover:bg-navy-800/80 transition-colors">
-                          <p className="font-bold text-white">For Audit Readiness</p>
-                          <p className="text-[11px] text-slate-400">Continuous rolling testing &amp; immutable history</p>
+                        <Link href="/solutions/enterprise" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
+                          <p className="font-bold text-navy-900 dark:text-white">For Audit Readiness</p>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400">Continuous rolling testing &amp; immutable history</p>
                         </Link>
                       </div>
                     </div>
 
-                    <div className="md:col-span-4 md:border-l border-navy-700/60 md:pl-6">
-                      <div className="h-full rounded-xl bg-gradient-to-b from-teal/20 to-navy-900/90 p-5 border border-teal/30 flex flex-col justify-between">
+                    <div className="md:col-span-4 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
+                      <div className="h-full rounded-xl bg-gradient-to-b from-teal/10 to-slate-50 dark:from-teal/20 dark:to-navy-900/90 p-5 border border-teal/30 flex flex-col justify-between">
                         <div>
                           <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-3">
                             Advisory AI Engine
                           </Badge>
-                          <h4 className="text-sm font-bold text-white mb-1">AI Assists. Humans Decide.</h4>
-                          <p className="text-[11px] text-slate-300 leading-relaxed mb-4">
+                          <h4 className="text-sm font-bold text-navy-900 dark:text-white mb-1">AI Assists. Humans Decide.</h4>
+                          <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
                             Data-minimized clause correlation with mandatory human review and approval.
                           </p>
                         </div>
@@ -172,14 +161,14 @@ export const Header: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* Frameworks Dropdown */}
+            {/* Mega Menu: Frameworks */}
             <div
               className="relative"
               onMouseEnter={() => setActiveMenu("frameworks")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-teal transition-colors rounded-lg hover:bg-navy-800/40">
-                Frameworks <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "frameworks" ? "rotate-180 text-teal" : ""}`} />
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Frameworks <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "frameworks" ? "rotate-180 text-teal-600 dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
                 {activeMenu === "frameworks" && (
@@ -188,16 +177,16 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-teal/30 bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl"
                   >
-                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3 mb-4">
+                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                       <div>
-                        <h4 className="font-bold text-white text-sm">Documented Framework Support</h4>
-                        <p className="text-[11px] text-slate-400">Map once and align across core standards</p>
+                        <h4 className="font-bold text-navy-900 dark:text-white text-sm">Documented Framework Support</h4>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Map once and align across core standards</p>
                       </div>
                       <Link
                         href="/frameworks/soc-2"
-                        className="text-xs font-semibold text-teal hover:underline flex items-center gap-1"
+                        className="text-xs font-semibold text-teal-700 dark:text-teal hover:underline flex items-center gap-1"
                       >
                         Explore Coverage <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
@@ -207,10 +196,16 @@ export const Header: React.FC = () => {
                         <Link
                           key={fw.code}
                           href={`/frameworks/${fw.slug}`}
-                          className="p-3 rounded-xl border border-navy-700/60 bg-navy-900/60 hover:border-teal/60 hover:bg-navy-800 transition-all"
+                          className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-teal/60 hover:bg-slate-100 dark:hover:bg-navy-800 transition-all"
                         >
-                          <p className="font-semibold text-xs text-white">{fw.name}</p>
-                          <p className="text-[11px] text-slate-400">{fw.headerDesc}</p>
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="font-bold text-navy-900 dark:text-white text-xs">{fw.name}</span>
+                            <span
+                              className="h-2 w-2 rounded-full"
+                              style={{ backgroundColor: fw.accentColor }}
+                            />
+                          </div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{fw.oneLiner}</p>
                         </Link>
                       ))}
                     </div>
@@ -219,22 +214,21 @@ export const Header: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* How It Works Link */}
-            <a
-              href="#core-workflows"
-              className="px-3 py-2 text-sm font-medium text-slate-200 hover:text-teal transition-colors rounded-lg hover:bg-navy-800/40"
+            <Link
+              href="/#how-it-works"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               How It Works
-            </a>
+            </Link>
 
-            {/* Resources Dropdown */}
+            {/* Mega Menu: Resources */}
             <div
               className="relative"
               onMouseEnter={() => setActiveMenu("resources")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-teal transition-colors rounded-lg hover:bg-navy-800/40">
-                Resources <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "resources" ? "rotate-180 text-teal" : ""}`} />
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Resources <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "resources" ? "rotate-180 text-teal-600 dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
                 {activeMenu === "resources" && (
@@ -243,22 +237,22 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-teal/30 bg-[#16233F] p-5 shadow-2xl backdrop-blur-xl space-y-3"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-5 shadow-2xl backdrop-blur-xl space-y-3"
                   >
-                    <h4 className="text-xs font-mono uppercase text-amber font-bold">Knowledge &amp; Insights</h4>
+                    <h4 className="text-xs font-mono uppercase text-amber-600 dark:text-amber font-bold">Knowledge &amp; Insights</h4>
                     <div className="space-y-2 text-xs">
-                      <Link href="/blog" className="flex items-center gap-2 p-2 rounded-lg hover:bg-navy-800 text-slate-200 hover:text-white">
-                        <BookOpen className="h-4 w-4 text-teal" />
+                      <Link href="/blog" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200 hover:text-navy-900 dark:hover:text-white">
+                        <BookOpen className="h-4 w-4 text-teal-600 dark:text-teal" />
                         <div>
                           <p className="font-bold">Ctrl + GRC Blog</p>
-                          <p className="text-[10px] text-slate-400">Practical guides for lean GRC teams</p>
+                          <p className="text-[10px] text-slate-500 dark:text-slate-400">Practical guides for lean GRC teams</p>
                         </div>
                       </Link>
-                      <Link href="/trust-vault" className="flex items-center gap-2 p-2 rounded-lg hover:bg-navy-800 text-slate-200 hover:text-white">
-                        <Award className="h-4 w-4 text-teal-300" />
+                      <Link href="/trust-vault" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200 hover:text-navy-900 dark:hover:text-white">
+                        <Award className="h-4 w-4 text-teal-600 dark:text-teal-300" />
                         <div>
                           <p className="font-bold">Resource Center</p>
-                          <p className="text-[10px] text-slate-400">Framework checklists &amp; templates</p>
+                          <p className="text-[10px] text-slate-500 dark:text-slate-400">Framework checklists &amp; templates</p>
                         </div>
                       </Link>
                     </div>
@@ -267,18 +261,16 @@ export const Header: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* Pricing Direct Link */}
             <Link
               href="/pricing"
-              className="px-3 py-2 text-sm font-medium text-slate-200 hover:text-teal transition-colors rounded-lg hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               Pricing
             </Link>
 
-            {/* Company Link */}
             <Link
               href="/about-us"
-              className="px-3 py-2 text-sm font-medium text-slate-200 hover:text-teal transition-colors rounded-lg hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               About
             </Link>
@@ -356,10 +348,16 @@ export const Header: React.FC = () => {
               </button>
               {mobileExpandedSection === "workflows" && (
                 <div className="pl-4 space-y-2 text-sm border-l border-teal/30 my-2">
-                  <Link href="/products/risk-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Risk Register</Link>
-                  <Link href="/products/continuous-monitoring" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Asset &amp; Inventory</Link>
-                  <Link href="/products/audit-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Control Mapping</Link>
-                  <Link href="/products/policy-management" onClick={() => setMobileMenuOpen(false)} className="block text-slate-300 hover:text-white py-1">Compliance Board</Link>
+                  {PILLARS.map((p) => (
+                    <Link
+                      key={p.code}
+                      href={`/products/${p.slug}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-slate-300 hover:text-white py-1"
+                    >
+                      {p.name}
+                    </Link>
+                  ))}
                 </div>
               )}
 

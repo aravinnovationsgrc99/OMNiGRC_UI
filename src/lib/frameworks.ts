@@ -12,6 +12,7 @@ export interface Framework {
   controls: string[];
   omniWorkflow: string;
   headerDesc: string;
+  citations: [string, string, string];
 }
 
 export const FRAMEWORKS: Framework[] = [
@@ -40,6 +41,7 @@ export const FRAMEWORKS: Framework[] = [
     omniWorkflow:
       'Map internal security policies once; OMNiGRC links policies to ISO 27001 Annex A clauses and populates your Statement of Applicability (SoA) automatically.',
     headerDesc: 'ISMS Global Standard & Annex A',
+    citations: ['A.5', 'A.7', 'A.8'],
   },
   {
     code: 'ISO42001',
@@ -66,6 +68,7 @@ export const FRAMEWORKS: Framework[] = [
     omniWorkflow:
       'Track AI models, risk assessments, and algorithmic safeguards within OMNiGRC, linking model assets directly to ISO 42001 clauses.',
     headerDesc: 'AI Management System (AIMS)',
+    citations: ['A.5', 'A.6', 'A.8'],
   },
   {
     code: 'SOC2',
@@ -92,6 +95,7 @@ export const FRAMEWORKS: Framework[] = [
     omniWorkflow:
       'Align technical configurations and testing dates to Common Criteria. Evidence cadences are tracked on the Compliance Board with rolling 30/60/90-day visibility.',
     headerDesc: 'Trust Services Criteria Security & Ops',
+    citations: ['CC6.1', 'CC7.2', 'CC8.1'],
   },
   {
     code: 'GDPR',
@@ -118,6 +122,7 @@ export const FRAMEWORKS: Framework[] = [
     omniWorkflow:
       'Track data flows and asset inventories within OMNiGRC, directly connecting PII data stores to required technical safeguards and encryption controls.',
     headerDesc: 'European & British Data Protection',
+    citations: ['Art. 5', 'Art. 25', 'Art. 32'],
   },
   {
     code: 'DPDP',
@@ -144,6 +149,7 @@ export const FRAMEWORKS: Framework[] = [
     omniWorkflow:
       'Maintain vendor registers, asset inventories, and safeguard controls tailored specifically to Indian data fiduciary guidelines.',
     headerDesc: 'India Personal Data Protection',
+    citations: ['Sec 6', 'Sec 8', 'Sec 11'],
   },
   {
     code: 'HIPAA',
@@ -170,6 +176,7 @@ export const FRAMEWORKS: Framework[] = [
     omniWorkflow:
       'Link PHI assets and vendor registers directly to HIPAA safeguards, tracking audit logging and encryption evidence on the Compliance Board.',
     headerDesc: 'Healthcare PHI Privacy & Safeguards',
+    citations: ['§164.308', '§164.312', '§164.314'],
   },
 ];
 

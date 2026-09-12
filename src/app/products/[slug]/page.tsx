@@ -8,78 +8,31 @@ import { motion } from "framer-motion";
 import { Shield, CheckCircle2, ArrowRight, Sparkles, Cpu, Layers, Server, ShieldAlert, CalendarCheck, FileCheck2 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { FRAMEWORKS } from "@/lib/frameworks";
-
-const frameworkListStr = FRAMEWORKS.map((f) => f.code).join(", ");
-
-const productDetails: { [key: string]: { title: string; subtitle: string; desc: string; features: string[] } } = {
-  "risk-management": {
-    title: "Unified Risk Register & 5x5 Scoring",
-    subtitle: "Structured risk quantification, treatment planning, and residual tracking",
-    desc: "Log organizational, cloud, and vendor risks with Likelihood × Impact scoring. Link risks directly to mitigating controls and inventory assets for full visibility.",
-    features: [
-      "5x5 Likelihood and Impact scoring matrix with customized risk thresholds",
-      "Direct linkage between identified risks, assets, and mitigating security controls",
-      "Treatment plan management: Accept, Mitigate, Transfer, or Avoid",
-      "Historical score tracking and immutable audit log in PostgreSQL",
-    ],
-  },
-  "continuous-monitoring": {
-    title: "Asset & Inventory Context",
-    subtitle: "Connected repository of hardware, cloud assets, vendors, and data flows",
-    desc: "Maintain complete inventory visibility with direct context into PII data flows, vendor relationships, and protective security controls.",
-    features: [
-      "Unified view of cloud infrastructure, databases, endpoints, and SaaS vendors",
-      "Data flow classification (PII, Financial, Sensitive) linked to safeguards",
-      "Third-party vendor catalog with compliance certification records",
-      "Direct risk and control association for every registered asset",
-    ],
-  },
-  "audit-management": {
-    title: "Advisory AI Control Mapping",
-    subtitle: "Map internal controls once and align across documented standards",
-    desc: `Define your technical and organizational controls once. OMNiGRC's advisory AI suggests candidate clauses across ${frameworkListStr} for human review.`,
-    features: [
-      "Tiered model router with strict data minimization and redaction",
-      `Pre-loaded with ${frameworkListStr}`,
-      "Confidence scores accompanying all AI advisory suggestions",
-      "Mandatory human analyst approval before database persistence",
-    ],
-  },
-  "policy-management": {
-    title: "Compliance Testing Board",
-    subtitle: "Kanban workflow, testing cadences, and rolling 30/60/90-day visibility",
-    desc: "Assign control owners, configure recurring test schedules, and maintain an audit-ready cadence without pre-audit scrambles.",
-    features: [
-      "Kanban board with clear owner assignments and status tracking",
-      "Rolling 30, 60, and 90-day upcoming evidence and review deadlines",
-      "Recurring test frequencies: Monthly, Quarterly, Semi-Annual, and Annual",
-      "Defensible testing history ready for external audit review",
-    ],
-  },
-};
-
-// Map friendly product aliases
-productDetails["control-mapping"] = productDetails["audit-management"];
-productDetails["compliance-board"] = productDetails["policy-management"];
-productDetails["asset-inventory"] = productDetails["continuous-monitoring"];
-productDetails["risk-register"] = productDetails["risk-management"];
+import { PILLARS, getPillarBySlug } from "@/lib/pillars";
 
 export function generateStaticParams() {
   return [
+    { slug: "risk-register" },
+    { slug: "asset-inventory" },
+    { slug: "control-mapping" },
+    { slug: "compliance-board" },
     { slug: "risk-management" },
     { slug: "continuous-monitoring" },
     { slug: "audit-management" },
     { slug: "policy-management" },
-    { slug: "control-mapping" },
-    { slug: "compliance-board" },
-    { slug: "asset-inventory" },
-    { slug: "risk-register" },
   ];
 }
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug || "risk-management";
-  const product = productDetails[slug] || productDetails["risk-management"];
+  const slug = params.slug || "risk-register";
+  const pillar = getPillarBySlug(slug) || PILLARS[0];
+
+  const product = {
+    title: pillar.name,
+    subtitle: pillar.badge,
+    desc: pillar.desc,
+    features: pillar.features,
+  };
 
   return (
     <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
