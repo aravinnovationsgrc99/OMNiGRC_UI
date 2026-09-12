@@ -214,7 +214,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     };
   }, [N]);
 
-  // Pointer drag & tilt handlers
+  // Pointer & Touch Drag Handlers
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
     targetRotationRef.current = null;
@@ -224,14 +224,15 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
-    // Stage tilt parallax
-    if (containerRef.current) {
+    // Stage tilt parallax (only on desktop mouse, disable on touch)
+    const isTouchDevice = typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+    if (!isTouchDevice && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
-      const relX = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
+      const relX = (e.clientX - rect.left) / rect.width - 0.5;
       const relY = (e.clientY - rect.top) / rect.height - 0.5;
       tiltTargetRef.current = {
-        x: -relY * 16, // rotateX tilt range +-13 deg
-        y: relX * 16,  // rotateY tilt range +-13 deg
+        x: -relY * 14,
+        y: relX * 14,
       };
     }
 
@@ -241,7 +242,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     const dx = e.clientX - lastMouseXRef.current;
     const dt = Math.max((now - lastMouseTimeRef.current) / 1000, 0.001);
 
-    const deltaRot = (dx / 350) * Math.PI; // Drag sensitivity
+    const deltaRot = (dx / 320) * Math.PI;
     rotationRef.current += deltaRot;
     velocityRef.current = deltaRot / (dt * 60);
 
@@ -257,6 +258,36 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     isDraggingRef.current = false;
     isHoveredRef.current = false;
     tiltTargetRef.current = { x: 0, y: 0 };
+  };
+
+  // Explicit Touch Event Handlers for Mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length > 0) {
+      isDraggingRef.current = true;
+      targetRotationRef.current = null;
+      lastMouseXRef.current = e.touches[0].clientX;
+      lastMouseTimeRef.current = performance.now();
+      velocityRef.current = 0;
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDraggingRef.current || e.touches.length === 0) return;
+    const now = performance.now();
+    const touchX = e.touches[0].clientX;
+    const dx = touchX - lastMouseXRef.current;
+    const dt = Math.max((now - lastMouseTimeRef.current) / 1000, 0.001);
+
+    const deltaRot = (dx / 280) * Math.PI;
+    rotationRef.current += deltaRot;
+    velocityRef.current = deltaRot / (dt * 60);
+
+    lastMouseXRef.current = touchX;
+    lastMouseTimeRef.current = now;
+  };
+
+  const handleTouchEnd = () => {
+    isDraggingRef.current = false;
   };
 
   // Keyboard navigation
@@ -278,208 +309,226 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
   const currentFw = FRAMEWORKS[activeIndex] || FRAMEWORKS[0];
 
   return (
-    <div
-      ref={containerRef}
-      tabIndex={0}
-      role="region"
-      aria-label={title}
-      onKeyDown={handleKeyDown}
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      onPointerLeave={handlePointerLeave}
-      onMouseEnter={() => { isHoveredRef.current = true; }}
-      className={`relative w-full max-w-[1100px] h-[520px] sm:h-[620px] mx-auto rounded-3xl border border-teal/30 bg-gradient-to-b from-[#0A111F] via-[#16233F] to-[#0A111F] overflow-hidden select-none cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-teal ${className}`}
-    >
-      {/* Injected style block for 3D perspective and iris reveal animation */}
-      <style jsx>{`
-        .orrery-perspective {
-          perspective: 1300px;
-          perspective-origin: 50% 45%;
-        }
-        .orrery-plane {
-          transform-style: preserve-3d;
-          transition: transform 0.1s ease-out;
-        }
-        @keyframes irisReveal {
-          0% {
-            clip-path: circle(0% at 50% 50%);
-            opacity: 0.4;
-          }
-          100% {
-            clip-path: circle(75% at 50% 50%);
-            opacity: 1;
-          }
-        }
-        .iris-bloom {
-          animation: irisReveal 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-      `}</style>
-
-      {/* Screen Reader ARIA Live Notification */}
+    <div className="w-full max-w-[1100px] mx-auto space-y-6">
+      {/* 3D Orbital Gallery Stage Container */}
       <div
-        ref={ariaLiveRef}
-        aria-live="polite"
-        className="sr-only"
+        ref={containerRef}
+        tabIndex={0}
+        role="region"
+        aria-label={title}
+        onKeyDown={handleKeyDown}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerLeave={handlePointerLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onMouseEnter={() => { isHoveredRef.current = true; }}
+        className={`relative w-full h-[460px] sm:h-[560px] rounded-3xl border border-teal/30 bg-gradient-to-b from-[#0A111F] via-[#16233F] to-[#0A111F] overflow-hidden select-none cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-teal touch-pan-y ${className}`}
       >
-        Active Framework: {currentFw.name}
-      </div>
+        {/* Injected style block for 3D perspective and iris reveal animation */}
+        <style jsx>{`
+          .orrery-perspective {
+            perspective: 1200px;
+            perspective-origin: 50% 45%;
+          }
+          .orrery-plane {
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out;
+          }
+          @keyframes irisReveal {
+            0% {
+              clip-path: circle(0% at 50% 50%);
+              opacity: 0.4;
+            }
+            100% {
+              clip-path: circle(75% at 50% 50%);
+              opacity: 1;
+            }
+          }
+          .iris-bloom {
+            animation: irisReveal 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          }
+        `}</style>
 
-      {/* Top Chrome Hint */}
-      <div className="absolute top-4 sm:top-6 left-0 right-0 z-30 pointer-events-none flex items-center justify-between px-6">
-        <div className="flex items-center gap-2">
-          <Sparkles className="h-3.5 w-3.5 text-amber" />
-          <span className="text-[10px] font-mono uppercase tracking-widest text-amber font-bold">
-            {title}
+        {/* Screen Reader ARIA Live Notification */}
+        <div ref={ariaLiveRef} aria-live="polite" className="sr-only">
+          Active Framework: {currentFw.name}
+        </div>
+
+        {/* Top Chrome Hint */}
+        <div className="absolute top-4 sm:top-6 left-0 right-0 z-30 pointer-events-none flex items-center justify-between px-4 sm:px-6">
+          <div className="flex items-center gap-2">
+            <Sparkles className="h-3.5 w-3.5 text-amber" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-amber font-bold">
+              {title}
+            </span>
+          </div>
+          <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest bg-navy-900/80 px-3 py-1 rounded-full border border-navy-700/60 hidden sm:inline-block">
+            Drag to spin • Click disc to focus
           </span>
         </div>
-        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest bg-navy-900/80 px-3 py-1 rounded-full border border-navy-700/60">
-          Drag to spin • Click disc to focus
-        </span>
-      </div>
 
-      {/* 3D Perspective Stage Container */}
-      <div className="w-full h-full flex items-center justify-center orrery-perspective">
-        {/* Tilted Preserve-3D Plane */}
-        <div
-          ref={planeRef}
-          className="relative w-full h-full flex items-center justify-center orrery-plane"
-        >
-          {/* Faint Dashed Orbit Ellipse Vector */}
-          <svg
-            aria-hidden="true"
-            className="absolute pointer-events-none w-[76%] h-[60%] opacity-25"
-            viewBox="0 0 800 450"
-            fill="none"
+        {/* 3D Perspective Stage Container */}
+        <div className="w-full h-full flex items-center justify-center orrery-perspective">
+          {/* Tilted Preserve-3D Plane */}
+          <div
+            ref={planeRef}
+            className="relative w-full h-full flex items-center justify-center orrery-plane"
           >
-            <ellipse
-              cx="400"
-              cy="225"
-              rx="300"
-              ry="135"
-              stroke="#0F6E6A"
-              strokeWidth="1.5"
-              strokeDasharray="6 6"
-            />
-          </svg>
-
-          {/* Central Glassmorphic Iris Lens */}
-          <div className="relative z-20 w-[270px] sm:w-[360px] h-[270px] sm:h-[360px] rounded-full border border-teal/40 bg-navy-900/90 shadow-2xl backdrop-blur-xl flex flex-col justify-between p-6 sm:p-8 text-center overflow-hidden">
-            {/* Soft Ambient Radial Glow behind Lens */}
-            <div
+            {/* Faint Dashed Orbit Ellipse Vector */}
+            <svg
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 rounded-full bg-teal/10 blur-2xl"
-              style={{ background: `radial-gradient(circle, ${currentFw.accentColor}25 0%, transparent 70%)` }}
-            />
+              className="absolute pointer-events-none w-[80%] h-[64%] opacity-25"
+              viewBox="0 0 800 450"
+              fill="none"
+            >
+              <ellipse
+                cx="400"
+                cy="225"
+                rx="300"
+                ry="135"
+                stroke="#0F6E6A"
+                strokeWidth="1.5"
+                strokeDasharray="6 6"
+              />
+            </svg>
 
-            {/* Iris Bloom Content Layer */}
-            <div key={irisKey} className="iris-bloom relative z-10 flex-1 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <span
-                    className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase border"
-                    style={{
-                      borderColor: `${currentFw.accentColor}60`,
-                      color: currentFw.accentColor,
-                      backgroundColor: `${currentFw.accentColor}15`,
-                    }}
-                  >
-                    {currentFw.badge}
-                  </span>
-                  <span className="text-[10px] font-mono text-slate-400">
-                    {currentFw.region}
-                  </span>
-                </div>
+            {/* Central Glassmorphic Iconic Lens (Minimal & Elegant) */}
+            <div className="relative z-20 w-[190px] sm:w-[240px] h-[190px] sm:h-[240px] rounded-full border-2 border-teal/40 bg-navy-900/90 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-4 text-center overflow-hidden">
+              {/* Soft Ambient Radial Glow behind Lens */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-full bg-teal/10 blur-2xl"
+                style={{ background: `radial-gradient(circle, ${currentFw.accentColor}35 0%, transparent 70%)` }}
+              />
 
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight mb-2">
-                  {currentFw.name}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium line-clamp-3">
-                  {currentFw.oneLiner || currentFw.desc}
-                </p>
-              </div>
-
-              {/* Real Control Domains / Clause References from frameworks.ts */}
-              <div className="my-2 space-y-1.5 text-left bg-[#0A111F]/70 p-2.5 sm:p-3 rounded-xl border border-navy-700/60">
-                <span className="text-[9px] font-mono uppercase font-bold text-amber block mb-1">
-                  Tracked Control Domains:
-                </span>
-                {currentFw.controlDomains.slice(0, 2).map((domain, dIdx) => (
-                  <div key={dIdx} className="flex items-center gap-1.5 text-[10px] text-slate-300 truncate">
-                    <CheckCircle2 className="h-3 w-3 text-teal shrink-0" />
-                    <span className="truncate">{domain}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Workflow Link */}
-              <div>
-                <Link
-                  href={`/frameworks/${currentFw.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-teal hover:text-white transition-colors"
-                >
-                  <span>Explore {currentFw.code} Workflow</span>
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* N Framework Discs riding the 3D orbit */}
-          {FRAMEWORKS.map((fw, idx) => {
-            const color = fw.accentColor || "#0F6E6A";
-            const isSelected = activeIndex === idx;
-
-            return (
-              <button
-                key={fw.code}
-                ref={(el) => { discRefs.current[idx] = el; }}
-                onClick={() => seekToFramework(idx)}
-                onMouseEnter={() => seekToFramework(idx)}
-                aria-label={fw.name}
-                className={`absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 shadow-2xl flex flex-col items-center justify-center transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-amber ${
-                  isSelected
-                    ? "border-amber shadow-amber/40 scale-110"
-                    : "border-teal/50 hover:border-teal"
-                }`}
-                style={{
-                  background: `radial-gradient(circle at 35% 35%, ${color}DD 0%, #0A111F 90%)`,
-                  left: "calc(50% - 40px)",
-                  top: "calc(50% - 40px)",
-                }}
-              >
-                <span className="text-xs sm:text-sm font-mono font-bold text-white tracking-wider uppercase text-center px-1 leading-tight">
-                  {fw.code}
-                </span>
+              {/* Iconic Lens Content Layer */}
+              <div key={irisKey} className="iris-bloom relative z-10 flex flex-col items-center justify-center text-center">
                 <span
-                  className="text-[9px] font-mono font-semibold mt-0.5 px-1.5 py-0.2 rounded-full border"
+                  className="px-2.5 py-0.5 mb-1.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold uppercase border"
                   style={{
-                    borderColor: `${color}80`,
-                    color: "#FFFFFF",
-                    backgroundColor: `${color}40`,
+                    borderColor: `${currentFw.accentColor}60`,
+                    color: currentFw.accentColor,
+                    backgroundColor: `${currentFw.accentColor}15`,
                   }}
                 >
-                  {fw.badge.split(" ")[0]}
+                  {currentFw.badge}
                 </span>
-              </button>
-            );
-          })}
+
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-none mb-1">
+                  {currentFw.code}
+                </h3>
+
+                <span className="text-[10px] sm:text-xs font-mono font-semibold text-slate-300">
+                  {currentFw.region}
+                </span>
+              </div>
+            </div>
+
+            {/* N Framework Discs riding the 3D orbit */}
+            {FRAMEWORKS.map((fw, idx) => {
+              const color = fw.accentColor || "#0F6E6A";
+              const isSelected = activeIndex === idx;
+
+              return (
+                <button
+                  key={fw.code}
+                  ref={(el) => { discRefs.current[idx] = el; }}
+                  onClick={() => seekToFramework(idx)}
+                  onMouseEnter={() => seekToFramework(idx)}
+                  aria-label={fw.name}
+                  className={`absolute w-16 h-16 sm:w-22 sm:h-22 rounded-full border-2 shadow-2xl flex flex-col items-center justify-center transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-amber ${
+                    isSelected
+                      ? "border-amber shadow-amber/40 scale-110"
+                      : "border-teal/50 hover:border-teal"
+                  }`}
+                  style={{
+                    background: `radial-gradient(circle at 35% 35%, ${color}DD 0%, #0A111F 90%)`,
+                    left: "calc(50% - 32px)",
+                    top: "calc(50% - 32px)",
+                  }}
+                >
+                  <span className="text-xs font-mono font-bold text-white tracking-wider uppercase text-center px-1 leading-tight">
+                    {fw.code}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Bottom Readout Chrome */}
+        <div className="absolute bottom-3 sm:bottom-5 left-0 right-0 z-30 pointer-events-none flex items-center justify-between px-4 sm:px-6 text-xs font-mono">
+          <span className="text-slate-400 flex items-center gap-1.5 text-[11px]">
+            <ShieldCheck className="h-4 w-4 text-teal" />
+            <span>{FRAMEWORKS.length} Documented Taxonomies</span>
+          </span>
+          <span
+            ref={readoutRef}
+            className="text-amber font-bold bg-navy-900/90 px-3 py-1 rounded-full border border-teal/40 shadow-md text-[11px]"
+          >
+            01 / {String(N).padStart(2, "0")} · 90°
+          </span>
         </div>
       </div>
 
-      {/* Bottom Readout Chrome */}
-      <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 z-30 pointer-events-none flex items-center justify-between px-6 text-xs font-mono">
-        <span className="text-slate-400 flex items-center gap-1.5">
-          <ShieldCheck className="h-4 w-4 text-teal" />
-          <span>{FRAMEWORKS.length} Documented Taxonomies</span>
-        </span>
-        <span
-          ref={readoutRef}
-          className="text-amber font-bold bg-navy-900/90 px-3.5 py-1 rounded-full border border-teal/40 shadow-md"
-        >
-          01 / {String(N).padStart(2, "0")} · 90°
-        </span>
+      {/* Part 2: Synchronized Detail Readout Panel (Positioned Below Orbital Stage) */}
+      <div 
+        key={`readout-${irisKey}`}
+        className="iris-bloom w-full max-w-2xl mx-auto rounded-2xl border border-teal/40 bg-navy-900/95 p-5 sm:p-6 shadow-2xl backdrop-blur-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-5 relative overflow-hidden"
+      >
+        <div 
+          className="absolute top-0 left-0 bottom-0 w-1.5 rounded-l-2xl"
+          style={{ backgroundColor: currentFw.accentColor }}
+        />
+
+        <div className="space-y-2 pl-2 flex-1">
+          <div className="flex items-center gap-2">
+            <span 
+              className="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase border"
+              style={{
+                borderColor: `${currentFw.accentColor}60`,
+                color: currentFw.accentColor,
+                backgroundColor: `${currentFw.accentColor}15`,
+              }}
+            >
+              {currentFw.badge}
+            </span>
+            <h4 className="text-lg font-extrabold text-white tracking-tight">
+              {currentFw.name}
+            </h4>
+          </div>
+
+          <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+            {currentFw.oneLiner || currentFw.desc}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            <span className="text-[10px] font-mono font-bold uppercase text-amber">
+              Authentic Citations:
+            </span>
+            {currentFw.citations.map((cit, cIdx) => (
+              <span 
+                key={cIdx}
+                className="px-2 py-0.5 rounded bg-navy-800 border border-teal/30 text-teal-300 font-mono font-bold text-[10px]"
+              >
+                {cit}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="shrink-0 pt-2 md:pt-0 w-full md:w-auto">
+          <Link
+            href={`/frameworks/${currentFw.slug}`}
+            className="inline-flex items-center justify-center gap-2 w-full md:w-auto px-5 py-2.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-md shadow-teal/20 transition-all"
+          >
+            <span>Explore {currentFw.code} Workflow</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </div>
   );

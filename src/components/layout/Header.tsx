@@ -374,29 +374,56 @@ export const Header: React.FC = () => {
             <div className="space-y-2">
               <button
                 onClick={() => toggleMobileSection("workflows")}
-                className="flex items-center justify-between w-full py-2 text-base font-medium text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal"
               >
                 <span>Workflows</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-teal" : ""}`} />
               </button>
               {mobileExpandedSection === "workflows" && (
-                <div className="pl-4 space-y-2 text-sm border-l border-teal/30 my-2">
-                  {PILLARS.map((p) => (
-                    <Link
-                      key={p.code}
-                      href={`/products/${p.slug}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block text-slate-300 hover:text-white py-1"
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
+                <div className="space-y-2.5 my-2.5">
+                  {PILLARS.map((p) => {
+                    const iconMap: Record<string, React.ReactNode> = {
+                      RISK: <ShieldAlert className="h-4 w-4" />,
+                      ASSET: <Server className="h-4 w-4" />,
+                      CONTROL: <Sparkles className="h-4 w-4" />,
+                      BOARD: <CalendarCheck className="h-4 w-4" />,
+                    };
+                    return (
+                      <Link
+                        key={p.code}
+                        href={`/products/${p.slug}`}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="p-3 rounded-xl border border-navy-700/80 bg-navy-900/90 flex items-start gap-3 relative overflow-hidden min-h-[44px] block active:bg-navy-800 transition-colors"
+                      >
+                        <div
+                          className="absolute top-0 left-0 bottom-0 w-1 rounded-l-xl"
+                          style={{ backgroundColor: p.accentColor }}
+                        />
+                        <div className="pl-1 flex-1">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <div
+                              className="p-1 rounded-md text-white shrink-0"
+                              style={{ backgroundColor: p.accentColor }}
+                            >
+                              {iconMap[p.code] || <Shield className="h-3.5 w-3.5" />}
+                            </div>
+                            <span className="font-bold text-xs text-white">
+                              {p.name}
+                            </span>
+                          </div>
+                          <p className="text-[11px] text-slate-400 leading-tight">
+                            {p.oneLiner}
+                          </p>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
 
               <button
                 onClick={() => toggleMobileSection("frameworks")}
-                className="flex items-center justify-between w-full py-2 text-base font-medium text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal"
               >
                 <span>Frameworks</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "frameworks" ? "rotate-180 text-teal" : ""}`} />
@@ -408,7 +435,7 @@ export const Header: React.FC = () => {
                       key={fw.code}
                       href={`/frameworks/${fw.slug}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block text-slate-300 hover:text-white py-1"
+                      className="block text-slate-300 hover:text-white py-2 min-h-[44px] flex items-center"
                     >
                       {fw.name}
                     </Link>
@@ -419,35 +446,35 @@ export const Header: React.FC = () => {
               <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-base font-medium text-slate-200 hover:text-teal"
+                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
               >
                 Pricing
               </Link>
               <Link
                 href="/about-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-base font-medium text-slate-200 hover:text-teal"
+                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
               >
                 About Us
               </Link>
               <Link
                 href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-base font-medium text-slate-200 hover:text-teal"
+                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
               >
                 Ctrl + GRC Blog
               </Link>
               <Link
                 href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-base font-medium text-slate-200 hover:text-teal"
+                className="block py-3 min-h-[44px] text-base font-medium text-slate-200 hover:text-teal flex items-center"
               >
                 Contact Us
               </Link>
             </div>
             <div className="pt-4 border-t border-navy-700/60">
               <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="primary" className="w-full">Request a Demo</Button>
+                <Button variant="primary" className="w-full min-h-[44px]">Request a Demo</Button>
               </Link>
             </div>
           </motion.div>

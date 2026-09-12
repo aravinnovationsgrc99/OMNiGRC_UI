@@ -232,8 +232,10 @@ export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
 
       const elapsed = (now - startTime) / 1000;
 
-      // Handle dpr cap at 2
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      // Handle dpr cap (1.5 on mobile viewports < 768px, 2.0 on desktop)
+      const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+      const maxDpr = isMobile ? 1.5 : 2.0;
+      const dpr = Math.min(window.devicePixelRatio || 1, maxDpr);
       const width = Math.floor(container.clientWidth * dpr);
       const height = Math.floor(container.clientHeight * dpr);
 
