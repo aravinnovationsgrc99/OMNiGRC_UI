@@ -30,7 +30,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
   fullPageBackground = true,
 }) => {
   return (
-    <section className={`relative bg-[#F6F7F6] dark:bg-[#0A111F] pt-28 sm:pt-36 pb-16 sm:pb-24 border-b border-slate-200 dark:border-navy-700/60 transition-colors duration-200 overflow-hidden ${className}`}>
+    <section className={`relative bg-transparent dark:bg-transparent pt-28 sm:pt-36 pb-16 sm:pb-24 border-b border-slate-200 dark:border-navy-700/60 transition-colors duration-200 overflow-hidden ${className}`}>
       {/* Full-Page Ambient Grid Canvas */}
       <AmbientGridBackground fullPage={fullPageBackground} />
 

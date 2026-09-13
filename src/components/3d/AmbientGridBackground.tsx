@@ -31,27 +31,31 @@ const RAW_CIRCLES = [
   { r: 37, cx: 829, cy: 388 }, // 20: Teal
 ];
 
-// Pre-calculate circle metadata (color split, opacity range 8-15%, animation params)
+// Pre-calculate circle metadata (color split, opacity range 10-20%, animation params)
 const PROCESSED_CIRCLES = RAW_CIRCLES.map((c, index) => {
   // Deterministic 20% amber rule: every 5th circle in document order (4, 9, 14, 19)
   const isAmber = index % 5 === 4;
-  const fill = isAmber ? "#B5750A" : "#0F6E6A";
+  
+  // High-contrast vibrant brand colors for rich dark-mode aesthetics
+  const fill = isAmber ? "#B5750A" : "#14B8A6";
+  const glowColor = isAmber ? "#F59E0B" : "#2DD4BF";
 
-  // Per-circle opacity variation based on radius depth: 8% (0.08) for r=4 to 15% (0.15) for r=58
+  // Per-circle opacity variation based on radius depth: 10% (0.10) to 20% (0.20)
   const normalizedRadius = (c.r - 4) / (58 - 4);
-  const opacity = 0.08 + normalizedRadius * 0.07;
+  const opacity = 0.10 + normalizedRadius * 0.10;
 
   // Motion formula parameters
   const duration = 25 + (index % 5) * 3; // 25s - 37s
   const delay = (index * 1.7) % 20;       // 0s - 20s
-  const ampX = 14 + (index % 4) * 4;       // 14 - 26px in viewBox space
-  const ampY = 10 + (index % 3) * 5;       // 10 - 20px in viewBox space
+  const ampX = 16 + (index % 4) * 4;       // 16 - 28px in viewBox space
+  const ampY = 12 + (index % 3) * 5;       // 12 - 22px in viewBox space
 
   return {
     ...c,
     index,
     isAmber,
     fill,
+    glowColor,
     opacity,
     duration,
     delay,
@@ -135,7 +139,13 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
         const finalY = offsetY + (circle.cy + dy) * scale;
         const finalR = circle.r * scale;
 
-        ctx.fillStyle = circle.fill;
+        // Soft radial glow depth
+        const grad = ctx.createRadialGradient(finalX, finalY, 0, finalX, finalY, finalR);
+        grad.addColorStop(0, circle.glowColor);
+        grad.addColorStop(0.65, circle.fill);
+        grad.addColorStop(1, circle.fill);
+
+        ctx.fillStyle = grad;
         ctx.globalAlpha = circle.opacity;
         ctx.beginPath();
         ctx.arc(finalX, finalY, finalR, 0, Math.PI * 2);
@@ -192,7 +202,7 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={`pointer-events-none z-0 ${
+      className={`pointer-events-none z-[1] ${
         fullPage ? "fixed inset-0 h-screen w-screen" : "absolute inset-0 h-full w-full"
       }`}
     />
