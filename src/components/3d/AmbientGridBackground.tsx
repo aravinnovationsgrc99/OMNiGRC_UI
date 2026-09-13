@@ -6,6 +6,60 @@ interface AmbientGridBackgroundProps {
   fullPage?: boolean;
 }
 
+// 21 circles from public/circle-scatter-haikei.svg in exact document order
+const RAW_CIRCLES = [
+  { r: 58, cx: 446, cy: 378 }, // 0: Teal
+  { r: 4, cx: 819, cy: 521 },  // 1: Teal
+  { r: 37, cx: 608, cy: 429 }, // 2: Teal
+  { r: 36, cx: 231, cy: 209 }, // 3: Teal
+  { r: 39, cx: 735, cy: 315 }, // 4: AMBER (5th circle, 0-indexed 4)
+  { r: 54, cx: 380, cy: 236 }, // 5: Teal
+  { r: 8, cx: 136, cy: 497 },  // 6: Teal
+  { r: 10, cx: 552, cy: 278 }, // 7: Teal
+  { r: 24, cx: 360, cy: 489 }, // 8: Teal
+  { r: 7, cx: 58, cy: 94 },    // 9: AMBER (10th circle, 0-indexed 9)
+  { r: 55, cx: 248, cy: 538 }, // 10: Teal
+  { r: 4, cx: 817, cy: 66 },   // 11: Teal
+  { r: 39, cx: 471, cy: 520 }, // 12: Teal
+  { r: 10, cx: 598, cy: 141 }, // 13: Teal
+  { r: 44, cx: 106, cy: 270 }, // 14: AMBER (15th circle, 0-indexed 14)
+  { r: 17, cx: 209, cy: 340 }, // 15: Teal
+  { r: 53, cx: 736, cy: 198 }, // 16: Teal
+  { r: 40, cx: 235, cy: 79 },  // 17: Teal
+  { r: 7, cx: 728, cy: 446 },  // 18: Teal
+  { r: 41, cx: 423, cy: 99 },  // 19: AMBER (20th circle, 0-indexed 19)
+  { r: 37, cx: 829, cy: 388 }, // 20: Teal
+];
+
+// Pre-calculate circle metadata (color split, opacity range 8-15%, animation params)
+const PROCESSED_CIRCLES = RAW_CIRCLES.map((c, index) => {
+  // Deterministic 20% amber rule: every 5th circle in document order (4, 9, 14, 19)
+  const isAmber = index % 5 === 4;
+  const fill = isAmber ? "#B5750A" : "#0F6E6A";
+
+  // Per-circle opacity variation based on radius depth: 8% (0.08) for r=4 to 15% (0.15) for r=58
+  const normalizedRadius = (c.r - 4) / (58 - 4);
+  const opacity = 0.08 + normalizedRadius * 0.07;
+
+  // Motion formula parameters
+  const duration = 25 + (index % 5) * 3; // 25s - 37s
+  const delay = (index * 1.7) % 20;       // 0s - 20s
+  const ampX = 14 + (index % 4) * 4;       // 14 - 26px in viewBox space
+  const ampY = 10 + (index % 3) * 5;       // 10 - 20px in viewBox space
+
+  return {
+    ...c,
+    index,
+    isAmber,
+    fill,
+    opacity,
+    duration,
+    delay,
+    ampX,
+    ampY,
+  };
+});
+
 export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fullPage = false }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -18,108 +72,89 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
 
     let animationFrameId: number;
     let isVisible = true;
+    let isIntersecting = true;
+    const startTime = performance.now();
 
     // Respect prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const resizeCanvas = () => {
-      if (fullPage) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      } else if (canvas.parentElement) {
-        canvas.width = canvas.parentElement.clientWidth;
-        canvas.height = canvas.parentElement.clientHeight;
+      const parent = canvas.parentElement;
+      const dpr = window.devicePixelRatio || 1;
+
+      let displayWidth = window.innerWidth;
+      let displayHeight = window.innerHeight;
+
+      if (!fullPage && parent) {
+        displayWidth = parent.clientWidth;
+        displayHeight = parent.clientHeight;
       }
+
+      canvas.width = Math.floor(displayWidth * dpr);
+      canvas.height = Math.floor(displayHeight * dpr);
+      canvas.style.width = `${displayWidth}px`;
+      canvas.style.height = `${displayHeight}px`;
     };
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Node & grid setup
-    const nodeCount = fullPage ? 50 : 35;
-    const nodes: Array<{ x: number; y: number; vx: number; vy: number; radius: number; alpha: number }> = [];
+    const render = () => {
+      const dpr = window.devicePixelRatio || 1;
+      const width = canvas.width / dpr;
+      const height = canvas.height / dpr;
 
-    for (let i = 0; i < nodeCount; i++) {
-      nodes.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: (Math.random() - 0.5) * 0.25,
-        radius: Math.random() * 1.5 + 1,
-        alpha: Math.random() * 0.35 + 0.15,
-      });
-    }
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, width, height);
 
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // SVG viewBox dimensions (900x600)
+      const viewBoxWidth = 900;
+      const viewBoxHeight = 600;
 
-      const isDark = document.documentElement.classList.contains("dark");
+      // Fit SVG viewBox with preserveAspectRatio="xMidYMid slice"
+      const scale = Math.max(width / viewBoxWidth, height / viewBoxHeight);
+      const offsetX = (width - viewBoxWidth * scale) / 2;
+      const offsetY = (height - viewBoxHeight * scale) / 2;
 
-      // Draw faint dot grid lines
-      const gridSize = 48;
-      ctx.strokeStyle = isDark ? "rgba(15, 110, 106, 0.05)" : "rgba(15, 110, 106, 0.08)";
-      ctx.lineWidth = 1;
+      const elapsedSeconds = (performance.now() - startTime) / 1000;
 
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
+      PROCESSED_CIRCLES.forEach((circle) => {
+        let dx = 0;
+        let dy = 0;
 
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      // Draw drifting nodes and interconnecting lines
-      nodes.forEach((node, i) => {
-        if (!prefersReducedMotion && isVisible) {
-          node.x += node.vx;
-          node.y += node.vy;
-
-          if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
-          if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+        if (!prefersReducedMotion) {
+          const tEff = elapsedSeconds + circle.delay;
+          const phase = (2 * Math.PI * tEff) / circle.duration;
+          // Loose figure-8 / elliptical drift path
+          dx = circle.ampX * Math.sin(phase);
+          dy = circle.ampY * Math.sin(2 * phase);
         }
 
-        ctx.fillStyle = isDark
-          ? `rgba(14, 165, 233, ${node.alpha * 0.9})`
-          : `rgba(15, 110, 106, ${node.alpha * 1.2})`;
+        const finalX = offsetX + (circle.cx + dx) * scale;
+        const finalY = offsetY + (circle.cy + dy) * scale;
+        const finalR = circle.r * scale;
+
+        ctx.fillStyle = circle.fill;
+        ctx.globalAlpha = circle.opacity;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.arc(finalX, finalY, finalR, 0, Math.PI * 2);
         ctx.fill();
-
-        // Connect nearby nodes
-        for (let j = i + 1; j < nodes.length; j++) {
-          const other = nodes[j];
-          const dx = other.x - node.x;
-          const dy = other.y - node.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 130) {
-            ctx.strokeStyle = isDark
-              ? `rgba(139, 92, 246, ${0.1 * (1 - dist / 130)})`
-              : `rgba(181, 117, 10, ${0.12 * (1 - dist / 130)})`;
-            ctx.beginPath();
-            ctx.moveTo(node.x, node.y);
-            ctx.lineTo(other.x, other.y);
-            ctx.stroke();
-          }
-        }
       });
 
-      if (!prefersReducedMotion && isVisible) {
-        animationFrameId = requestAnimationFrame(draw);
+      ctx.restore();
+
+      if (!prefersReducedMotion && isVisible && isIntersecting) {
+        animationFrameId = requestAnimationFrame(render);
       }
     };
 
     // Tab visibility listener
     const handleVisibilityChange = () => {
       isVisible = !document.hidden;
-      if (isVisible && !prefersReducedMotion) {
-        draw();
+      if (isVisible && isIntersecting && !prefersReducedMotion) {
+        cancelAnimationFrame(animationFrameId);
+        render();
       }
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
@@ -130,10 +165,10 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
       observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            isVisible = entry.isIntersecting && !document.hidden;
-            if (isVisible && !prefersReducedMotion) {
+            isIntersecting = entry.isIntersecting;
+            if (isVisible && isIntersecting && !prefersReducedMotion) {
               cancelAnimationFrame(animationFrameId);
-              draw();
+              render();
             }
           });
         },
@@ -142,8 +177,8 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
       observer.observe(canvas);
     }
 
-    // Initial render
-    draw();
+    // Initial render call
+    render();
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
@@ -157,7 +192,7 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={`pointer-events-none z-0 opacity-40 ${
+      className={`pointer-events-none z-0 ${
         fullPage ? "fixed inset-0 h-screen w-screen" : "absolute inset-0 h-full w-full"
       }`}
     />

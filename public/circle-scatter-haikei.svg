@@ -1,0 +1,30 @@
+<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <rect x="0" y="0" width="900" height="600" fill="#0A111F"></rect>
+  <!-- Teal Group (~80.9% of circles) -->
+  <g fill="#0F6E6A">
+    <circle r="58" cx="446" cy="378"></circle>
+    <circle r="4" cx="819" cy="521"></circle>
+    <circle r="37" cx="608" cy="429"></circle>
+    <circle r="36" cx="231" cy="209"></circle>
+    <circle r="54" cx="380" cy="236"></circle>
+    <circle r="8" cx="136" cy="497"></circle>
+    <circle r="10" cx="552" cy="278"></circle>
+    <circle r="24" cx="360" cy="489"></circle>
+    <circle r="55" cx="248" cy="538"></circle>
+    <circle r="4" cx="817" cy="66"></circle>
+    <circle r="39" cx="471" cy="520"></circle>
+    <circle r="10" cx="598" cy="141"></circle>
+    <circle r="17" cx="209" cy="340"></circle>
+    <circle r="53" cx="736" cy="198"></circle>
+    <circle r="40" cx="235" cy="79"></circle>
+    <circle r="7" cx="728" cy="446"></circle>
+    <circle r="37" cx="829" cy="388"></circle>
+  </g>
+  <!-- Amber Group (~19.1% of circles: 0-indexed positions 4, 9, 14, 19 in source order) -->
+  <g fill="#B5750A">
+    <circle r="39" cx="735" cy="315"></circle>
+    <circle r="7" cx="58" cy="94"></circle>
+    <circle r="44" cx="106" cy="270"></circle>
+    <circle r="41" cx="423" cy="99"></circle>
+  </g>
+</svg>
