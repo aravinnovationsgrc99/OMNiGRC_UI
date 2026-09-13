@@ -540,110 +540,263 @@ export const PricingMotif: React.FC = () => {
   );
 };
 
-export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" | "blog" | "vault" }> = ({ type }) => {
+export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" | "privacy" | "terms" | "blog" | "vault" }> = ({ type }) => {
   return (
     <div aria-hidden="true" className="relative w-full flex items-center justify-center min-h-[300px] sm:min-h-[360px] overflow-visible">
-      {/* Soft Ambient Radial Blur Background */}
-      <div className="absolute w-72 h-72 rounded-full bg-teal/20 blur-3xl pointer-events-none" />
+      {/* Soft Luminous Ambient Glow Background */}
+      <div className="absolute w-72 h-72 rounded-full bg-teal/15 blur-3xl pointer-events-none" />
 
-      {/* Floating Diagram Without Card Enclosure Box */}
+      {/* Clean Vector SVG Visual */}
       <svg
         aria-hidden="true"
-        viewBox="0 0 420 300"
+        viewBox="0 0 440 310"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto max-w-[420px] filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.6)] z-10"
+        className="w-full h-auto max-w-[440px] filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.5)] z-10"
       >
         {type === "about" && (
           <g>
-            <text x="210" y="30" textAnchor="middle" fill="#14B8A6" fontSize="13" fontFamily="monospace" fontWeight="bold">
+            <text x="220" y="28" textAnchor="middle" fill="#14B8A6" fontSize="12" fontFamily="monospace" fontWeight="bold">
               CONNECTED GRC OPERATING SYSTEM
             </text>
 
-            <circle cx="210" cy="150" r="46" fill="#16233F" stroke="#14B8A6" strokeWidth="2.5" />
-            <circle cx="120" cy="100" r="24" fill="#16233F" stroke="#3B82F6" strokeWidth="2" />
-            <circle cx="300" cy="100" r="24" fill="#16233F" stroke="#8B5CF6" strokeWidth="2" />
-            <circle cx="120" cy="200" r="24" fill="#16233F" stroke="#10B981" strokeWidth="2" />
-            <circle cx="300" cy="200" r="24" fill="#16233F" stroke="#F59E0B" strokeWidth="2" />
+            <circle cx="220" cy="155" r="46" fill="#16233F" stroke="#14B8A6" strokeWidth="2.5" />
+            <circle cx="125" cy="105" r="24" fill="#16233F" stroke="#3B82F6" strokeWidth="2" />
+            <circle cx="315" cy="105" r="24" fill="#16233F" stroke="#8B5CF6" strokeWidth="2" />
+            <circle cx="125" cy="205" r="24" fill="#16233F" stroke="#10B981" strokeWidth="2" />
+            <circle cx="315" cy="205" r="24" fill="#16233F" stroke="#F59E0B" strokeWidth="2" />
 
-            <line x1="140" y1="112" x2="175" y2="132" stroke="#3B82F6" strokeWidth="2" strokeDasharray="3 3" />
-            <line x1="280" y1="112" x2="245" y2="132" stroke="#8B5CF6" strokeWidth="2" strokeDasharray="3 3" />
-            <line x1="140" y1="188" x2="175" y2="168" stroke="#10B981" strokeWidth="2" strokeDasharray="3 3" />
-            <line x1="280" y1="188" x2="245" y2="168" stroke="#F59E0B" strokeWidth="2" strokeDasharray="3 3" />
+            <line x1="145" y1="117" x2="182" y2="137" stroke="#3B82F6" strokeWidth="2" strokeDasharray="3 3" />
+            <line x1="295" y1="117" x2="258" y2="137" stroke="#8B5CF6" strokeWidth="2" strokeDasharray="3 3" />
+            <line x1="145" y1="193" x2="182" y2="173" stroke="#10B981" strokeWidth="2" strokeDasharray="3 3" />
+            <line x1="295" y1="193" x2="258" y2="173" stroke="#F59E0B" strokeWidth="2" strokeDasharray="3 3" />
 
-            <text x="210" y="154" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold">OMNiGRC</text>
-            <text x="120" y="104" textAnchor="middle" fill="#93C5FD" fontSize="8" fontFamily="monospace">RISK</text>
-            <text x="300" y="104" textAnchor="middle" fill="#DDD6FE" fontSize="8" fontFamily="monospace">CTRL</text>
-            <text x="120" y="204" textAnchor="middle" fill="#A7F3D0" fontSize="8" fontFamily="monospace">ASSET</text>
-            <text x="300" y="204" textAnchor="middle" fill="#FDE68A" fontSize="8" fontFamily="monospace">TEST</text>
+            <text x="220" y="159" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold">OMNiGRC</text>
+            <text x="125" y="109" textAnchor="middle" fill="#93C5FD" fontSize="8" fontFamily="monospace">RISK</text>
+            <text x="315" y="109" textAnchor="middle" fill="#DDD6FE" fontSize="8" fontFamily="monospace">CTRL</text>
+            <text x="125" y="209" textAnchor="middle" fill="#A7F3D0" fontSize="8" fontFamily="monospace">ASSET</text>
+            <text x="315" y="209" textAnchor="middle" fill="#FDE68A" fontSize="8" fontFamily="monospace">TEST</text>
           </g>
         )}
 
         {type === "demo" && (
           <g>
-            <text x="210" y="30" textAnchor="middle" fill="#F59E0B" fontSize="13" fontFamily="monospace" fontWeight="bold">
+            <text x="220" y="28" textAnchor="middle" fill="#F59E0B" fontSize="12" fontFamily="monospace" fontWeight="bold">
               INTERACTIVE DEMO WALKTHROUGH
             </text>
 
-            <rect x="60" y="60" width="300" height="180" rx="14" fill="#16233F" stroke="#14B8A6" strokeWidth="2" />
-            <circle cx="210" cy="140" r="30" fill="#14B8A6" />
-            <polygon points="204,126 224,140 204,154" fill="#FFFFFF" />
+            <rect x="60" y="55" width="320" height="185" rx="14" fill="#16233F" stroke="#14B8A6" strokeWidth="2" />
+            <circle cx="220" cy="135" r="28" fill="#14B8A6" />
+            <polygon points="214,121 234,135 214,149" fill="#FFFFFF" />
 
-            <rect x="80" y="190" width="260" height="30" rx="8" fill="#0A111F" stroke="#F59E0B" strokeWidth="1.5" />
-            <text x="210" y="209" textAnchor="middle" fill="#FBBF24" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+            <rect x="80" y="188" width="280" height="30" rx="8" fill="#0A111F" stroke="#F59E0B" strokeWidth="1.5" />
+            <text x="220" y="207" textAnchor="middle" fill="#FBBF24" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
               ✓ Tailored ISO 27001, SOC 2, &amp; GDPR Walkthrough
             </text>
           </g>
         )}
 
         {type === "contact" && (
+          /* Minimalist Contact Architect Desk UI Widget */
           <g>
-            <text x="210" y="30" textAnchor="middle" fill="#38BDF8" fontSize="13" fontFamily="monospace" fontWeight="bold">
-              DIRECT SPECIALIST CONNECT
+            <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#14B8A6" strokeWidth="1.5" />
+            
+            {/* Header bar */}
+            <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
+            <circle cx="52" cy="48" r="4" fill="#EF4444" />
+            <circle cx="66" cy="48" r="4" fill="#F59E0B" />
+            <circle cx="80" cy="48" r="4" fill="#10B981" />
+            <text x="220" y="52" textAnchor="middle" fill="#14B8A6" fontSize="10" fontFamily="monospace" fontWeight="bold">
+              ARCHITECT DESK • DIRECT CONNECT
             </text>
 
-            <rect x="70" y="70" width="280" height="160" rx="14" fill="#16233F" stroke="#38BDF8" strokeWidth="2" />
-            <path d="M90 95 L210 160 L330 95" stroke="#38BDF8" strokeWidth="2.5" fill="none" />
+            {/* Row 1: Email Direct */}
+            <g transform="translate(50, 82)">
+              <rect x="0" y="0" width="340" height="42" rx="10" fill="#0A111F" stroke="#38BDF8" strokeWidth="1" />
+              <text x="16" y="18" fill="#38BDF8" fontSize="8.5" fontFamily="monospace" fontWeight="bold">EMAIL DIRECT</text>
+              <text x="16" y="32" fill="#FFFFFF" fontSize="10" fontWeight="bold">contact@omnigrc.com</text>
+              <rect x="250" y="10" width="76" height="22" rx="11" fill="#38BDF8" opacity="0.15" />
+              <text x="288" y="24" textAnchor="middle" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">&lt; 2h SLA</text>
+            </g>
 
-            <rect x="110" y="185" width="200" height="28" rx="8" fill="#0A111F" stroke="#10B981" strokeWidth="1.5" />
-            <text x="210" y="202" textAnchor="middle" fill="#34D399" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
-              ✓ Direct GRC Architect Response
+            {/* Row 2: Regional Presence */}
+            <g transform="translate(50, 134)">
+              <rect x="0" y="0" width="340" height="42" rx="10" fill="#0A111F" stroke="#F59E0B" strokeWidth="1" />
+              <text x="16" y="18" fill="#F59E0B" fontSize="8.5" fontFamily="monospace" fontWeight="bold">REGIONAL DESKS</text>
+              <text x="16" y="32" fill="#FFFFFF" fontSize="10" fontWeight="bold">India (IST) &amp; United Kingdom (GMT)</text>
+              <rect x="250" y="10" width="76" height="22" rx="11" fill="#F59E0B" opacity="0.15" />
+              <text x="288" y="24" textAnchor="middle" fill="#FBBF24" fontSize="8" fontFamily="monospace" fontWeight="bold">ACTIVE</text>
+            </g>
+
+            {/* Bottom Status Pill */}
+            <g transform="translate(50, 194)">
+              <rect x="0" y="0" width="340" height="34" rx="10" fill="#0A111F" stroke="#10B981" strokeWidth="1.2" />
+              <circle cx="20" cy="17" r="4" fill="#10B981" />
+              <text x="32" y="21" fill="#34D399" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                ✓ Confidential &amp; Tenant-Isolated Architectural Channel
+              </text>
+            </g>
+          </g>
+        )}
+
+        {type === "privacy" && (
+          /* Minimalist Privacy Data Minimization Engine UI Widget */
+          <g>
+            <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#10B981" strokeWidth="1.5" />
+            
+            {/* Header bar */}
+            <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
+            <circle cx="52" cy="48" r="4" fill="#10B981" />
+            <text x="220" y="52" textAnchor="middle" fill="#34D399" fontSize="10" fontFamily="monospace" fontWeight="bold">
+              PRIVACY PIPELINE • ZERO DATA RETENTION
             </text>
+
+            {/* Sanitization Pipeline Diagram */}
+            <g transform="translate(45, 82)">
+              {/* Step 1 */}
+              <rect x="0" y="0" width="95" height="60" rx="8" fill="#0A111F" stroke="#38BDF8" strokeWidth="1" />
+              <text x="47" y="24" textAnchor="middle" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">1. PAYLOAD</text>
+              <text x="47" y="42" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Control Query</text>
+
+              {/* Arrow 1 */}
+              <line x1="97" y1="30" x2="123" y2="30" stroke="#14B8A6" strokeWidth="2" strokeDasharray="3 3" />
+
+              {/* Step 2 (Engine) */}
+              <rect x="125" y="0" width="100" height="60" rx="8" fill="#0A111F" stroke="#14B8A6" strokeWidth="1.5" />
+              <text x="175" y="24" textAnchor="middle" fill="#14B8A6" fontSize="8" fontFamily="monospace" fontWeight="bold">2. SANITIZER</text>
+              <text x="175" y="42" textAnchor="middle" fill="#34D399" fontSize="8">PII Redacted</text>
+
+              {/* Arrow 2 */}
+              <line x1="227" y1="30" x2="253" y2="30" stroke="#14B8A6" strokeWidth="2" strokeDasharray="3 3" />
+
+              {/* Step 3 */}
+              <rect x="255" y="0" width="95" height="60" rx="8" fill="#0A111F" stroke="#C084FC" strokeWidth="1" />
+              <text x="302" y="24" textAnchor="middle" fill="#C084FC" fontSize="8" fontFamily="monospace" fontWeight="bold">3. ADVISORY AI</text>
+              <text x="302" y="42" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">0-Day Log</text>
+            </g>
+
+            {/* Regulatory Alignment Row */}
+            <g transform="translate(45, 158)">
+              <rect x="0" y="0" width="350" height="42" rx="10" fill="#0A111F" stroke="#34D399" strokeWidth="1" />
+              <text x="15" y="25" fill="#A7F3D0" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                ✓ DPDP Act 2023 • EU GDPR • ISO 27001 Annex A Compliant
+              </text>
+            </g>
+
+            {/* Bottom Status Pill */}
+            <g transform="translate(45, 210)">
+              <rect x="0" y="0" width="350" height="34" rx="10" fill="#0A111F" stroke="#F59E0B" strokeWidth="1.2" />
+              <circle cx="20" cy="17" r="4" fill="#F59E0B" />
+              <text x="32" y="21" fill="#FBBF24" fontSize="9" fontFamily="monospace" fontWeight="bold">
+                Customer Data Is NEVER Used to Train Public AI Models
+              </text>
+            </g>
+          </g>
+        )}
+
+        {type === "terms" && (
+          /* Minimalist Terms Master Service Agreement UI Widget */
+          <g>
+            <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#F59E0B" strokeWidth="1.5" />
+            
+            {/* Header bar */}
+            <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
+            <circle cx="52" cy="48" r="4" fill="#F59E0B" />
+            <text x="220" y="52" textAnchor="middle" fill="#FBBF24" fontSize="10" fontFamily="monospace" fontWeight="bold">
+              MASTER SERVICE AGREEMENT • TERMS
+            </text>
+
+            {/* Item 1 */}
+            <g transform="translate(50, 82)">
+              <rect x="0" y="0" width="340" height="40" rx="10" fill="#0A111F" stroke="#14B8A6" strokeWidth="1" />
+              <text x="16" y="24" fill="#2DD4BF" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                1. Logical Schema Isolation per Customer Tenant
+              </text>
+            </g>
+
+            {/* Item 2 */}
+            <g transform="translate(50, 130)">
+              <rect x="0" y="0" width="340" height="40" rx="10" fill="#0A111F" stroke="#38BDF8" strokeWidth="1" />
+              <text x="16" y="24" fill="#60A5FA" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                2. Advisory AI Output Requires Human Sign-off
+              </text>
+            </g>
+
+            {/* Item 3 */}
+            <g transform="translate(50, 178)">
+              <rect x="0" y="0" width="340" height="40" rx="10" fill="#0A111F" stroke="#C084FC" strokeWidth="1" />
+              <text x="16" y="24" fill="#C084FC" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                3. AES-256 (At Rest) &amp; TLS 1.3 (In Transit) Encryption
+              </text>
+            </g>
+
+            {/* Bottom Status */}
+            <g transform="translate(50, 226)">
+              <rect x="0" y="0" width="340" height="28" rx="8" fill="#0A111F" stroke="#10B981" strokeWidth="1" />
+              <text x="170" y="18" textAnchor="middle" fill="#34D399" fontSize="8.5" fontFamily="monospace" fontWeight="bold">
+                ✓ 100% Customer Data Ownership Retained
+              </text>
+            </g>
           </g>
         )}
 
         {type === "blog" && (
           <g>
-            <text x="210" y="30" textAnchor="middle" fill="#C084FC" fontSize="13" fontFamily="monospace" fontWeight="bold">
+            <text x="220" y="28" textAnchor="middle" fill="#C084FC" fontSize="12" fontFamily="monospace" fontWeight="bold">
               PRACTICAL GRC INSIGHTS
             </text>
 
-            <rect x="60" y="65" width="135" height="170" rx="10" fill="#16233F" stroke="#C084FC" strokeWidth="2" />
-            <rect x="225" y="65" width="135" height="170" rx="10" fill="#16233F" stroke="#38BDF8" strokeWidth="2" />
+            <rect x="60" y="65" width="145" height="175" rx="10" fill="#16233F" stroke="#C084FC" strokeWidth="2" />
+            <rect x="235" y="65" width="145" height="175" rx="10" fill="#16233F" stroke="#38BDF8" strokeWidth="2" />
 
-            <line x1="75" y1="95" x2="175" y2="95" stroke="#C084FC" strokeWidth="2.5" />
-            <line x1="75" y1="115" x2="160" y2="115" stroke="#94A3B8" strokeWidth="1.5" />
-            <line x1="75" y1="130" x2="145" y2="130" stroke="#94A3B8" strokeWidth="1.5" />
+            <line x1="75" y1="95" x2="185" y2="95" stroke="#C084FC" strokeWidth="2.5" />
+            <line x1="75" y1="115" x2="170" y2="115" stroke="#94A3B8" strokeWidth="1.5" />
+            <line x1="75" y1="130" x2="155" y2="130" stroke="#94A3B8" strokeWidth="1.5" />
 
-            <line x1="240" y1="95" x2="340" y2="95" stroke="#38BDF8" strokeWidth="2.5" />
-            <line x1="240" y1="115" x2="325" y2="115" stroke="#94A3B8" strokeWidth="1.5" />
-            <line x1="240" y1="130" x2="310" y2="130" stroke="#94A3B8" strokeWidth="1.5" />
+            <line x1="250" y1="95" x2="360" y2="95" stroke="#38BDF8" strokeWidth="2.5" />
+            <line x1="250" y1="115" x2="345" y2="115" stroke="#94A3B8" strokeWidth="1.5" />
+            <line x1="250" y1="130" x2="330" y2="130" stroke="#94A3B8" strokeWidth="1.5" />
           </g>
         )}
 
         {type === "vault" && (
+          /* Minimalist Trust & Resource Vault UI Widget */
           <g>
-            <text x="210" y="30" textAnchor="middle" fill="#34D399" fontSize="13" fontFamily="monospace" fontWeight="bold">
-              TRUST &amp; RESOURCE VAULT
+            <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#10B981" strokeWidth="1.5" />
+            
+            {/* Header bar */}
+            <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
+            <circle cx="52" cy="48" r="4" fill="#10B981" />
+            <text x="220" y="52" textAnchor="middle" fill="#34D399" fontSize="10" fontFamily="monospace" fontWeight="bold">
+              TRUST &amp; RESOURCE VAULT • AUDIT READY
             </text>
 
-            <rect x="100" y="65" width="220" height="170" rx="14" fill="#16233F" stroke="#10B981" strokeWidth="2" />
-            <circle cx="210" cy="130" r="30" fill="#0A111F" stroke="#10B981" strokeWidth="2.5" />
-            <rect x="204" y="122" width="12" height="16" rx="3" fill="#10B981" />
+            {/* Checklist 1 */}
+            <g transform="translate(50, 82)">
+              <rect x="0" y="0" width="340" height="42" rx="10" fill="#0A111F" stroke="#14B8A6" strokeWidth="1" />
+              <text x="16" y="25" fill="#2DD4BF" fontSize="9.5" fontStyle="bold" fontFamily="monospace">
+                ISO 27001:2022 Control Mapping Guide (PDF)
+              </text>
+              <text x="290" y="25" fill="#14B8A6" fontSize="8.5" fontFamily="monospace">DOWNLOAD</text>
+            </g>
 
-            <text x="210" y="195" textAnchor="middle" fill="#A7F3D0" fontSize="10" fontFamily="monospace" fontWeight="bold">
-              ✓ Audit-Ready Evidence Vault
-            </text>
+            {/* Checklist 2 */}
+            <g transform="translate(50, 134)">
+              <rect x="0" y="0" width="340" height="42" rx="10" fill="#0A111F" stroke="#F59E0B" strokeWidth="1" />
+              <text x="16" y="25" fill="#FBBF24" fontSize="9.5" fontStyle="bold" fontFamily="monospace">
+                SOC 2 Type II Preparation Checklist (CSV)
+              </text>
+              <text x="290" y="25" fill="#F59E0B" fontSize="8.5" fontFamily="monospace">DOWNLOAD</text>
+            </g>
+
+            {/* Bottom Status Pill */}
+            <g transform="translate(50, 194)">
+              <rect x="0" y="0" width="340" height="34" rx="10" fill="#0A111F" stroke="#38BDF8" strokeWidth="1.2" />
+              <circle cx="20" cy="17" r="4" fill="#38BDF8" />
+              <text x="32" y="21" fill="#60A5FA" fontSize="9" fontFamily="monospace" fontWeight="bold">
+                ✓ Verified SHA-256 Audit Trail Integrity
+              </text>
+            </g>
           </g>
         )}
       </svg>
@@ -651,7 +804,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
   );
 };
 
-export const GenericHeroMotif: React.FC<{ type: "about" | "demo" | "contact" | "blog" | "vault" }> = ({ type }) => {
+export const GenericHeroMotif: React.FC<{ type: "about" | "demo" | "contact" | "privacy" | "terms" | "blog" | "vault" }> = ({ type }) => {
   if (type === "about") {
     return (
       <HeroImageWithFallback
@@ -662,5 +815,46 @@ export const GenericHeroMotif: React.FC<{ type: "about" | "demo" | "contact" | "
     );
   }
 
+  if (type === "contact") {
+    return (
+      <HeroImageWithFallback
+        src="/images/contact-us-saas-ui.png"
+        alt="3D dark glassmorphic support dashboard showing live architect communication desk and SLA response metrics."
+        fallbackMotif={<GenericHeroMotifSvg type={type} />}
+      />
+    );
+  }
+
+  if (type === "privacy") {
+    return (
+      <HeroImageWithFallback
+        src="/images/privacy-policy-saas-ui.png"
+        alt="3D dark glassmorphic data privacy dashboard showing zero-retention payload sanitizer engine."
+        fallbackMotif={<GenericHeroMotifSvg type={type} />}
+      />
+    );
+  }
+
+  if (type === "terms") {
+    return (
+      <HeroImageWithFallback
+        src="/images/terms-of-service-saas-ui.png"
+        alt="3D dark glassmorphic legal master service agreement matrix showing customer schema isolation boundaries."
+        fallbackMotif={<GenericHeroMotifSvg type={type} />}
+      />
+    );
+  }
+
+  if (type === "vault") {
+    return (
+      <HeroImageWithFallback
+        src="/images/trust-vault-saas-ui.png"
+        alt="3D dark glassmorphic trust vault resource hub showing audit-ready evidence checklists."
+        fallbackMotif={<GenericHeroMotifSvg type={type} />}
+      />
+    );
+  }
+
   return <GenericHeroMotifSvg type={type} />;
 };
+

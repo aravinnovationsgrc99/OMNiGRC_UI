@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/layout/PageHero";
@@ -10,9 +11,15 @@ import { Mail, Phone, MapPin, Send, CheckCircle2, Shield, Lock } from "lucide-re
 
 export default function ContactUsPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [agree, setAgree] = useState(false);
+  const [agreeError, setAgreeError] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!agree) {
+      setAgreeError(true);
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -115,6 +122,40 @@ export default function ContactUsPage() {
                         className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                       />
                     </div>
+                    <div className="flex items-start gap-2.5 pt-1">
+                      <input
+                        type="checkbox"
+                        id="contact-agree"
+                        checked={agree}
+                        onChange={(e) => {
+                          setAgree(e.target.checked);
+                          if (e.target.checked) setAgreeError(false);
+                        }}
+                        className="mt-1 h-4 w-4 rounded border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-teal focus:ring-teal"
+                      />
+                      <label htmlFor="contact-agree" className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        I agree to OMNiGRC&apos;s{" "}
+                        <Link
+                          href="/terms-of-service"
+                          target="_blank"
+                          className="text-teal underline font-semibold hover:text-navy-900 dark:hover:text-white transition-colors"
+                        >
+                          Terms of Service
+                        </Link>{" "}
+                        and{" "}
+                        <Link
+                          href="/privacy-policy"
+                          target="_blank"
+                          className="text-teal underline font-semibold hover:text-navy-900 dark:hover:text-white transition-colors"
+                        >
+                          Privacy Policy
+                        </Link>
+                        . My information will remain confidential.
+                      </label>
+                    </div>
+                    {agreeError && (
+                      <p className="text-[11px] text-red-500">You must agree to the Terms of Service & Privacy Policy before sending.</p>
+                    )}
                     <button
                       type="submit"
                       className="w-full rounded-xl bg-teal py-3.5 text-xs font-bold text-white hover:bg-teal/90 shadow-md flex items-center justify-center gap-2"

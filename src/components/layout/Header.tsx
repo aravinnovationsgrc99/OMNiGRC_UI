@@ -313,6 +313,7 @@ export const Header: React.FC = () => {
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             {/* Theme Toggle Button */}
             <button
+              suppressHydrationWarning
               onClick={toggleTheme}
               className="p-2 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/80 text-amber hover:text-teal dark:hover:text-white hover:border-teal/40 transition-all focus:outline-none focus:ring-2 focus:ring-teal"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
@@ -344,6 +345,7 @@ export const Header: React.FC = () => {
           {/* Mobile Theme Toggle & Hamburger Button */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
+              suppressHydrationWarning
               onClick={toggleTheme}
               className="p-2 rounded-lg border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-amber hover:text-teal"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
@@ -352,6 +354,7 @@ export const Header: React.FC = () => {
             </button>
 
             <button
+              suppressHydrationWarning
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="rounded-lg p-2 text-navy-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-navy-800 hover:text-teal"
               aria-label="Toggle Navigation Menu"

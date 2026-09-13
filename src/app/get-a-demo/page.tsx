@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -198,7 +199,7 @@ export default function GetADemoPage() {
                   />
                 </div>
 
-                <div className="flex items-start gap-2 pt-2">
+                <div className="flex items-start gap-2.5 pt-2">
                   <input
                     type="checkbox"
                     id="agree"
@@ -206,8 +207,24 @@ export default function GetADemoPage() {
                     onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
                     className="mt-1 h-4 w-4 rounded border-cardBorderWarm dark:border-slate-700 bg-white dark:bg-slate-950 text-teal focus:ring-teal"
                   />
-                  <label htmlFor="agree" className="text-xs text-slate-500 dark:text-slate-400">
-                    I agree to OMNiGRC&apos;s Terms of Service and Privacy Policy. My information will remain confidential.
+                  <label htmlFor="agree" className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    I agree to OMNiGRC&apos;s{" "}
+                    <Link
+                      href="/terms-of-service"
+                      target="_blank"
+                      className="text-teal underline font-semibold hover:text-navy-900 dark:hover:text-white transition-colors"
+                    >
+                      Terms of Service
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                      href="/privacy-policy"
+                      target="_blank"
+                      className="text-teal underline font-semibold hover:text-navy-900 dark:hover:text-white transition-colors"
+                    >
+                      Privacy Policy
+                    </Link>
+                    . My information will remain confidential.
                   </label>
                 </div>
                 {errors.agree && <p className="text-[11px] text-red-500">{errors.agree}</p>}

@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
           eyebrow="DATA PROTECTION & TRUST"
           title="Privacy Policy"
           subtitle="Our explicit commitment to zero-retention compliance AI, payload sanitization, tenant isolation, and regulatory data protection."
-          visual={<GenericHeroMotif type="vault" />}
+          visual={<GenericHeroMotif type="privacy" />}
         />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-12">

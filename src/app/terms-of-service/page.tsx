@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
           eyebrow="LEGAL & OPERATIONAL TERMS"
           title="Terms of Service"
           subtitle="Governing terms for access and use of the OMNiGRC platform, advisory AI assistance, tenant isolation, and risk/control operating workflows."
-          visual={<GenericHeroMotif type="contact" />}
+          visual={<GenericHeroMotif type="terms" />}
         />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-12">

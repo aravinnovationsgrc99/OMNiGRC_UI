@@ -66,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${ibmSans.variable} ${ibmMono.variable} overflow-x-hidden w-full max-w-full`}>
+    <html lang="en" suppressHydrationWarning className={`dark ${ibmSans.variable} ${ibmMono.variable} overflow-x-hidden w-full max-w-full`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -85,7 +85,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased selection:bg-teal/30 selection:text-white bg-[#F6F7F6] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200 overflow-x-hidden w-full max-w-full relative">
+      <body suppressHydrationWarning className="antialiased selection:bg-teal/30 selection:text-white bg-[#F6F7F6] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200 overflow-x-hidden w-full max-w-full relative">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
