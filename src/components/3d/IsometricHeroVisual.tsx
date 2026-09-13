@@ -221,7 +221,7 @@ export const IsometricHeroVisual: React.FC = () => {
                 <p className="text-xs text-slate-400 mb-4">
                   Log, score (Likelihood × Impact), and evaluate residual risk after applying security controls.
                 </p>
-                <div className="grid grid-cols-5 gap-2 text-center text-xs font-mono">
+                <div className="grid grid-cols-5 gap-1 sm:gap-2 text-center text-xs font-mono">
                   {[
                     { lvl: "Critical", score: 25 }, { lvl: "Critical", score: 20 }, { lvl: "High", score: 15 }, { lvl: "High", score: 12 }, { lvl: "Med", score: 10 },
                     { lvl: "Critical", score: 20 }, { lvl: "High", score: 16 }, { lvl: "High", score: 12 }, { lvl: "Med", score: 8 }, { lvl: "Med", score: 6 },
@@ -231,7 +231,7 @@ export const IsometricHeroVisual: React.FC = () => {
                   ].map((cell, idx) => (
                     <div
                       key={idx}
-                      className={`py-3 sm:py-3.5 px-1 rounded-lg font-bold transition-all flex flex-col items-center justify-center ${
+                      className={`py-2 sm:py-3.5 px-0.5 sm:px-1 rounded-lg font-bold transition-all flex flex-col items-center justify-center ${
                         cell.lvl === "Critical"
                           ? "bg-rose/80 text-white border border-rose shadow-md shadow-rose/40"
                           : cell.lvl === "High"
@@ -241,8 +241,8 @@ export const IsometricHeroVisual: React.FC = () => {
                           : "bg-teal/15 text-teal border border-teal/30"
                       }`}
                     >
-                      <span className="text-[11px] leading-none">{cell.score}</span>
-                      <span className="text-[9px] opacity-75 font-sans mt-0.5">{cell.lvl[0]}</span>
+                      <span className="text-[10px] sm:text-[11px] leading-none">{cell.score}</span>
+                      <span className="text-[8px] sm:text-[9px] opacity-75 font-sans mt-0.5">{cell.lvl[0]}</span>
                     </div>
                   ))}
                 </div>

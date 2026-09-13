@@ -139,9 +139,9 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-6 text-slate-400">
-            <Link href="/contact-us" className="hover:text-teal transition-colors">Privacy Policy</Link>
-            <Link href="/contact-us" className="hover:text-teal transition-colors">Terms of Service</Link>
-            <Link href="/contact-us" className="hover:text-teal transition-colors">Security Overview</Link>
+            <Link href="/privacy-policy" className="hover:text-teal transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-teal transition-colors">Terms of Service</Link>
+            <Link href="/trust-vault" className="hover:text-teal transition-colors">Security Overview</Link>
           </div>
         </div>
       </div>

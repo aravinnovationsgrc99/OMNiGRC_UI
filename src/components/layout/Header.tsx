@@ -314,7 +314,7 @@ export const Header: React.FC = () => {
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-xl border border-navy-700/60 bg-navy-900/60 dark:bg-navy-900/80 text-amber hover:text-white hover:border-teal/40 transition-all focus:outline-none focus:ring-2 focus:ring-teal"
+              className="p-2 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/80 text-amber hover:text-teal dark:hover:text-white hover:border-teal/40 transition-all focus:outline-none focus:ring-2 focus:ring-teal"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
               title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
@@ -330,7 +330,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/contact-us"
-              className="text-xs font-semibold text-slate-300 hover:text-white transition-colors px-3 py-2"
+              className="text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white transition-colors px-3 py-2"
             >
               Contact
             </Link>
@@ -353,7 +353,7 @@ export const Header: React.FC = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-slate-300 hover:bg-navy-800 hover:text-white"
+              className="rounded-lg p-2 text-navy-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-navy-800 hover:text-teal"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -369,12 +369,12 @@ export const Header: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-b border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#16233F] px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto"
+            className="lg:hidden border-b border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#16233F] px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto shadow-2xl"
           >
             <div className="space-y-2">
               <button
                 onClick={() => toggleMobileSection("workflows")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal"
               >
                 <span>Workflows</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-teal" : ""}`} />
@@ -393,7 +393,7 @@ export const Header: React.FC = () => {
                         key={p.code}
                         href={`/products/${p.slug}`}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="p-3 rounded-xl border border-navy-700/80 bg-navy-900/90 flex items-start gap-3 relative overflow-hidden min-h-[44px] block active:bg-navy-800 transition-colors"
+                        className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 flex items-start gap-3 relative overflow-hidden min-h-[44px] block active:bg-slate-100 dark:active:bg-navy-800 transition-colors"
                       >
                         <div
                           className="absolute top-0 left-0 bottom-0 w-1 rounded-l-xl"
@@ -407,11 +407,11 @@ export const Header: React.FC = () => {
                             >
                               {iconMap[p.code] || <Shield className="h-3.5 w-3.5" />}
                             </div>
-                            <span className="font-bold text-xs text-white">
+                            <span className="font-bold text-xs text-navy-900 dark:text-white">
                               {p.name}
                             </span>
                           </div>
-                          <p className="text-[11px] text-slate-400 leading-tight">
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
                             {p.oneLiner}
                           </p>
                         </div>
@@ -423,7 +423,7 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => toggleMobileSection("frameworks")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal"
               >
                 <span>Frameworks</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "frameworks" ? "rotate-180 text-teal" : ""}`} />
@@ -435,7 +435,7 @@ export const Header: React.FC = () => {
                       key={fw.code}
                       href={`/frameworks/${fw.slug}`}
                       onClick={() => setMobileMenuOpen(false)}
-                className="block text-navy-900 dark:text-slate-300 hover:text-teal py-2 min-h-[44px] flex items-center"
+                      className="block text-navy-900 dark:text-slate-300 hover:text-teal py-2 min-h-[44px] flex items-center"
                     >
                       {fw.name}
                     </Link>
@@ -446,28 +446,28 @@ export const Header: React.FC = () => {
               <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 Pricing
               </Link>
               <Link
                 href="/about-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 About Us
               </Link>
               <Link
                 href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 Ctrl + GRC Blog
               </Link>
               <Link
                 href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-medium text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
               >
                 Contact Us
               </Link>
