@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Check, ChevronDown, ArrowRight, ShieldCheck, Lock } from "lucide-react";
+import { Check, ChevronDown, ArrowRight } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { FRAMEWORKS } from "@/lib/frameworks";
+import { PageHero } from "@/components/layout/PageHero";
+import { PricingMotif } from "@/components/ui/HeroVisualMotifs";
 
 const pricingTiers = [
   {
@@ -71,9 +73,6 @@ const faqs = [
   },
 ];
 
-import { PageHero } from "@/components/layout/PageHero";
-import { PricingMotif } from "@/components/ui/HeroVisualMotifs";
-
 export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -103,10 +102,10 @@ export default function PricingPage() {
             {pricingTiers.map((plan, idx) => (
               <TiltCard
                 key={idx}
-                className={`p-8 flex flex-col justify-between ${
+                className={`p-8 flex flex-col justify-between opacity-100 backdrop-blur-none transition-all duration-300 relative z-10 ${
                   plan.popular
-                    ? "border-teal bg-slate-900 shadow-2xl shadow-teal/20 scale-[1.02]"
-                    : "border-slate-800 bg-slate-900/60"
+                    ? "border-2 border-teal bg-[#0E172A] shadow-2xl shadow-teal/25 scale-[1.03]"
+                    : "border border-slate-800 bg-[#0B1220] hover:border-slate-700"
                 }`}
               >
                 <div>
@@ -125,7 +124,7 @@ export default function PricingPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-xs text-slate-300 mb-6 leading-relaxed">{plan.desc}</p>
 
-                  <div className="border-t border-b border-slate-800 py-4 mb-6">
+                  <div className="border-t border-b border-slate-800/80 py-4 mb-6">
                     <p className="text-lg font-bold text-amber">{plan.scope}</p>
                     <p className="text-[11px] text-slate-400 font-mono mt-0.5">Aligned to your lean GRC goals</p>
                   </div>
@@ -156,7 +155,7 @@ export default function PricingPage() {
           </div>
 
           {/* FAQs Accordion */}
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto relative z-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8">
               Frequently Asked Questions
             </h2>
@@ -164,7 +163,7 @@ export default function PricingPage() {
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-800 bg-slate-900/70 overflow-hidden"
+                  className="rounded-2xl border border-slate-800 bg-[#0B1220] opacity-100 overflow-hidden"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}

@@ -202,7 +202,7 @@ export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fu
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={`pointer-events-none z-[1] ${
+      className={`pointer-events-none z-0 ${
         fullPage ? "fixed inset-0 h-screen w-screen" : "absolute inset-0 h-full w-full"
       }`}
     />
