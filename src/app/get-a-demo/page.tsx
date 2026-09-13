@@ -42,7 +42,7 @@ export default function GetADemoPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-canvas dark:bg-[#0A111F] text-navy-900 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -66,18 +66,18 @@ export default function GetADemoPage() {
                   <div className="p-1 rounded-full bg-teal/20 text-teal mt-1 shrink-0">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
-                  <span className="text-slate-200 text-sm font-medium">{benefit}</span>
+                  <span className="text-slate-700 dark:text-slate-200 text-sm font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
 
-            <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-md flex items-center gap-4">
+            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 backdrop-blur-md flex items-center gap-4">
               <div className="h-12 w-12 rounded-xl bg-teal/20 text-teal flex items-center justify-center font-bold text-lg shrink-0">
                 <Lock className="h-6 w-6" />
               </div>
               <div>
                 <p className="text-xs text-amber font-mono font-semibold">CONFIDENTIAL &amp; TENANT ISOLATED</p>
-                <p className="text-sm font-bold text-white">Built for Practical GRC Operations</p>
+                <p className="text-sm font-bold text-navy-900 dark:text-white">Built for Practical GRC Operations</p>
               </div>
             </div>
           </div>
@@ -88,80 +88,80 @@ export default function GetADemoPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl border border-teal/30 bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
+              className="rounded-3xl border border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-slate-900/90 p-8 sm:p-10 shadow-2xl backdrop-blur-xl"
             >
-              <h3 className="text-2xl font-bold text-white mb-2">Request Your Demo Walkthrough</h3>
-              <p className="text-xs text-slate-400 mb-6">Fill in your details and a GRC specialist will connect to schedule a time.</p>
+              <h3 className="text-2xl font-bold text-navy-900 dark:text-white mb-2">Request Your Demo Walkthrough</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mb-6">Fill in your details and a GRC specialist will connect to schedule a time.</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Full Name *</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Full Name *</label>
                   <input
                     type="text"
                     placeholder="e.g. Alex Morgan"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
+                    className={`w-full rounded-xl border bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 ${
                       errors.name
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-slate-700 focus:border-teal focus:ring-teal"
+                        : "border-cardBorderWarm dark:border-slate-700 focus:border-teal focus:ring-teal"
                     }`}
                   />
-                  {errors.name && <p className="text-[11px] text-red-400 mt-1">{errors.name}</p>}
+                  {errors.name && <p className="text-[11px] text-red-500 mt-1">{errors.name}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Work Email *</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Work Email *</label>
                   <input
                     type="email"
                     placeholder="alex@company.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
+                    className={`w-full rounded-xl border bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 ${
                       errors.email
                         ? "border-red-500 focus:ring-red-500"
-                        : "border-slate-700 focus:border-teal focus:ring-teal"
+                        : "border-cardBorderWarm dark:border-slate-700 focus:border-teal focus:ring-teal"
                     }`}
                   />
-                  {errors.email && <p className="text-[11px] text-red-400 mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">Company Name *</label>
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Company Name *</label>
                     <input
                       type="text"
                       placeholder="Company Inc."
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className={`w-full rounded-xl border bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 ${
+                      className={`w-full rounded-xl border bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 ${
                         errors.company
                           ? "border-red-500 focus:ring-red-500"
-                          : "border-slate-700 focus:border-teal focus:ring-teal"
+                          : "border-cardBorderWarm dark:border-slate-700 focus:border-teal focus:ring-teal"
                       }`}
                     />
-                    {errors.company && <p className="text-[11px] text-red-400 mt-1">{errors.company}</p>}
+                    {errors.company && <p className="text-[11px] text-red-500 mt-1">{errors.company}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
                     <input
                       type="tel"
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
+                      className="w-full rounded-xl border border-cardBorderWarm dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">Your Role</label>
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Role</label>
                     <select
                       value={formData.role}
                       onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
+                      className="w-full rounded-xl border border-cardBorderWarm dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                     >
                       <option value="GRC Lead">GRC / Compliance Lead</option>
                       <option value="CISO">CISO / Head of Security</option>
@@ -172,11 +172,11 @@ export default function GetADemoPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1">Company Size</label>
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Company Size</label>
                     <select
                       value={formData.size}
                       onChange={(e) => setFormData({ ...formData, size: e.target.value })}
-                      className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
+                      className="w-full rounded-xl border border-cardBorderWarm dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                     >
                       <option value="<50">&lt; 50 employees</option>
                       <option value="50-200">50 - 200 employees</option>
@@ -188,13 +188,13 @@ export default function GetADemoPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Target Frameworks or Priorities</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Target Frameworks or Priorities</label>
                   <textarea
                     rows={3}
                     placeholder="e.g. Target ISO 27001 & SOC 2, looking to replace spreadsheets..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
+                    className="w-full rounded-xl border border-cardBorderWarm dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-navy-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
                   />
                 </div>
 
@@ -204,13 +204,13 @@ export default function GetADemoPage() {
                     id="agree"
                     checked={formData.agree}
                     onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
-                    className="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-950 text-teal focus:ring-teal"
+                    className="mt-1 h-4 w-4 rounded border-cardBorderWarm dark:border-slate-700 bg-white dark:bg-slate-950 text-teal focus:ring-teal"
                   />
-                  <label htmlFor="agree" className="text-xs text-slate-400">
+                  <label htmlFor="agree" className="text-xs text-slate-500 dark:text-slate-400">
                     I agree to OMNiGRC&apos;s Terms of Service and Privacy Policy. My information will remain confidential.
                   </label>
                 </div>
-                {errors.agree && <p className="text-[11px] text-red-400">{errors.agree}</p>}
+                {errors.agree && <p className="text-[11px] text-red-500">{errors.agree}</p>}
 
                 <button
                   type="submit"

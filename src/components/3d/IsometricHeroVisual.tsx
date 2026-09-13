@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Shield,
@@ -23,36 +23,27 @@ import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const IsometricHeroVisual: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>("overview");
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto my-6 sm:my-12 perspective-1000 px-1 sm:px-4 overflow-hidden">
-      {/* Background Glow using approved palette */}
+    <div className="relative w-full max-w-5xl mx-auto my-6 sm:my-12 px-1 sm:px-4 overflow-hidden">
+      {/* Background Glow */}
       <div className="pointer-events-none absolute -inset-6 bg-gradient-to-r from-teal/20 via-amber/15 to-teal/20 blur-3xl opacity-70 rounded-3xl" />
 
-      {/* Main Isometric 3D Board Surface */}
+      {/* Main Dashboard Card — no 3D rotateX/Y to prevent subpixel blur during scroll */}
       <motion.div
-        initial={{ opacity: 0, rotateX: isMobile ? 0 : 10, rotateY: isMobile ? 0 : -4, y: 30 }}
-        animate={{ opacity: 1, rotateX: isMobile ? 0 : 6, rotateY: isMobile ? 0 : -3, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="relative rounded-2xl sm:rounded-3xl border border-teal/30 bg-navy/95 p-3.5 sm:p-7 shadow-2xl backdrop-blur-2xl transform-gpu w-full max-w-full overflow-hidden"
+        className="relative rounded-2xl sm:rounded-3xl border border-teal/30 bg-navy-900/95 dark:bg-navy/95 p-3.5 sm:p-7 shadow-2xl backdrop-blur-2xl w-full max-w-full overflow-hidden"
         style={{
-          transformStyle: isMobile ? "flat" : "preserve-3d",
+          willChange: "transform",
+          transform: "translateZ(0)",
           boxShadow:
             "0 25px 50px -12px rgba(15, 110, 106, 0.2), 0 0 40px rgba(22, 35, 63, 0.95)",
         }}
       >
         {/* Top Operational Status Bar */}
-        <div className="flex flex-wrap items-center justify-between border-b border-slate-800 pb-3.5 mb-5 gap-3">
+        <div className="flex flex-wrap items-center justify-between border-b border-slate-700 dark:border-slate-800 pb-3.5 mb-5 gap-3">
           <div className="flex items-center gap-2.5">
             <div className="flex gap-1.5">
               <div className="h-2.5 w-2.5 rounded-full bg-teal" />
@@ -88,7 +79,7 @@ export const IsometricHeroVisual: React.FC = () => {
               className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all whitespace-nowrap ${
                 activeTab === tab.id
                   ? "bg-teal text-white shadow-md shadow-teal/30"
-                  : "bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800"
+                  : "bg-slate-800/80 dark:bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-700 dark:hover:bg-slate-800 border border-slate-700 dark:border-slate-800"
               }`}
             >
               {tab.label}
@@ -108,7 +99,7 @@ export const IsometricHeroVisual: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-12 gap-4"
             >
               {/* Node 1: Risk & Asset Layer */}
-              <div className="md:col-span-4 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 space-y-3 flex flex-col justify-between">
+              <div className="md:col-span-4 rounded-2xl border border-slate-700 dark:border-slate-800 bg-slate-900/80 dark:bg-slate-950/80 p-4 space-y-3 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-amber font-bold flex items-center gap-1">
@@ -118,17 +109,17 @@ export const IsometricHeroVisual: React.FC = () => {
                   </div>
                   <h4 className="text-sm font-bold text-white mb-2">Connected Asset Inventory</h4>
                   <div className="space-y-2 text-xs">
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800 flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Server className="h-3.5 w-3.5 text-teal shrink-0" />
-                        <span className="text-slate-200 truncate">Production Cloud DB</span>
+                        <span className="text-slate-100 dark:text-slate-200 truncate">Production Cloud DB</span>
                       </div>
-                      <span className="text-[10px] font-mono text-slateSoft">Asset #41</span>
+                      <span className="text-[10px] font-mono text-slate-400">Asset #41</span>
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800 flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Database className="h-3.5 w-3.5 text-amber shrink-0" />
-                        <span className="text-slate-200 truncate">Customer PII Store</span>
+                        <span className="text-slate-100 dark:text-slate-200 truncate">Customer PII Store</span>
                       </div>
                       <span className="text-[10px] font-mono text-amber">High Impact</span>
                     </div>
@@ -142,8 +133,8 @@ export const IsometricHeroVisual: React.FC = () => {
               </div>
 
               {/* Node 2: Advisory AI Mapping Engine */}
-              <div className="md:col-span-5 rounded-2xl border border-teal/40 bg-slate-950/90 p-4 space-y-3 relative overflow-hidden">
-                <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+              <div className="md:col-span-5 rounded-2xl border border-teal/40 bg-slate-900/90 dark:bg-slate-950/90 p-4 space-y-3 relative overflow-hidden">
+                <div className="flex items-center justify-between border-b border-slate-700 dark:border-slate-800 pb-2">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-teal font-bold flex items-center gap-1.5">
                     <Sparkles className="h-3.5 w-3.5 text-amber" /> Advisory AI Control Matcher
                   </span>
@@ -152,7 +143,7 @@ export const IsometricHeroVisual: React.FC = () => {
                   </Badge>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-900 border border-teal/30">
+                <div className="p-3 rounded-xl bg-slate-800 dark:bg-slate-900 border border-teal/30">
                   <div className="flex items-center justify-between text-[11px] mb-1">
                     <span className="font-bold text-white">CTRL-084: Mandatory MFA & Passkeys</span>
                     <span className="font-mono text-teal text-[10px]">94% Match</span>
@@ -161,22 +152,22 @@ export const IsometricHeroVisual: React.FC = () => {
                     Internal control mapped once. AI suggests matching clauses:
                   </p>
                   <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
-                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
                       ISO 27001: A.9.4.2
                     </span>
-                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
                       SOC 2: CC6.1
                     </span>
-                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
                       DPDP: Sec 8(5)
                     </span>
-                    <span className="p-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
+                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
                       ISO 42001: A.7.3
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 text-[11px]">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 dark:bg-slate-900/60 border border-slate-700 dark:border-slate-800 text-[11px]">
                   <span className="text-slate-400">Analyst Review:</span>
                   <span className="text-teal font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3 w-3" /> Approved by GRC Lead
@@ -185,7 +176,7 @@ export const IsometricHeroVisual: React.FC = () => {
               </div>
 
               {/* Node 3: Compliance & Testing Cadence */}
-              <div className="md:col-span-3 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col justify-between space-y-3">
+              <div className="md:col-span-3 rounded-2xl border border-slate-700 dark:border-slate-800 bg-slate-900/80 dark:bg-slate-950/80 p-4 flex flex-col justify-between space-y-3">
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-teal font-bold flex items-center gap-1">
@@ -195,18 +186,18 @@ export const IsometricHeroVisual: React.FC = () => {
                   </div>
                   <h4 className="text-sm font-bold text-white mb-2">Evidence Cadence</h4>
                   <div className="space-y-1.5 text-[11px]">
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800">
                       <p className="font-semibold text-slate-200">Access Review</p>
                       <p className="text-[10px] text-teal">Passed • Verified 2d ago</p>
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800">
                       <p className="font-semibold text-slate-200">Encryption Audit</p>
                       <p className="text-[10px] text-amber">Due in 14 days</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <div className="pt-2 border-t border-slate-700 dark:border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
                   <span>5 Frameworks</span>
                   <span className="text-amber">100% Auditable</span>
                 </div>
@@ -343,21 +334,15 @@ export const IsometricHeroVisual: React.FC = () => {
           )}
         </AnimatePresence>
 
-        {/* Floating Operational Badge Overlay */}
-        <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="hidden sm:flex absolute -bottom-5 -right-5 rounded-2xl border border-teal/40 bg-slate-900/95 p-3.5 shadow-2xl backdrop-blur-xl items-center gap-3"
-          style={{ transform: "translateZ(30px)" }}
-        >
-          <div className="p-2 rounded-xl bg-teal/20 text-teal">
-            <Layers className="h-5 w-5" />
+        {/* Bottom Status Row — replaces the old floating badge that clipped outside the container */}
+        <div className="mt-5 pt-3 border-t border-slate-700 dark:border-slate-800 flex items-center justify-between gap-3 text-[11px] font-mono">
+          <div className="flex items-center gap-2 text-teal">
+            <Layers className="h-4 w-4 shrink-0" />
+            <span className="font-bold text-white">One Connected Workflow</span>
+            <span className="text-slate-400 hidden sm:inline">Risk ↔ Asset ↔ Control ↔ Framework</span>
           </div>
-          <div>
-            <p className="text-xs font-bold text-white">One Connected Workflow</p>
-            <p className="text-[10px] text-slateSoft font-mono">Risk ↔ Asset ↔ Control ↔ Framework</p>
-          </div>
-        </motion.div>
+          <span className="text-slate-500 hidden sm:inline">All changes saved to PostgreSQL</span>
+        </div>
       </motion.div>
     </div>
   );

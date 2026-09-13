@@ -118,12 +118,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>5x5 Likelihood × Impact Matrix Flow</span>
                           <span className="text-teal">Quantified</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
+                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">Inherent Risk</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">5x5 Score</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
-                          <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">Residual Score</span>
+                          <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold">Residual Score</span>
                         </div>
                       </div>
                     )}
@@ -134,12 +134,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>Dependency Node Flow</span>
                           <span className="text-teal">Traced</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
-                          <span className="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 font-bold">Asset</span>
+                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
+                          <span className="px-2 py-0.5 rounded bg-sky-500/20 text-sky-600 dark:text-sky-300 font-bold">Asset</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">PII Stream</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
-                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">Vendor</span>
+                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-300 font-bold">Vendor</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">Control</span>
                         </div>
@@ -152,10 +152,10 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>Map-Once Crosswalk Alignment</span>
                           <span className="text-teal">AI + Human</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
+                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">1 Control</span>
                           <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
-                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">AI Matcher</span>
+                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-300 font-bold">AI Matcher</span>
                           <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">6 Frameworks</span>
                         </div>
@@ -168,12 +168,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>Rolling Kanban Testing Cadence</span>
                           <span className="text-teal">Audit-Ready</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-slate-200">
-                          <span className="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">30d Due</span>
+                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
+                          <span className="px-2 py-0.5 rounded bg-rose-500/20 text-rose-500 dark:text-rose-300 font-bold">30d Due</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">60d Due</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
-                          <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">90d Due</span>
+                          <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold">90d Due</span>
                         </div>
                       </div>
                     )}
@@ -184,12 +184,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                   {pillars[activePillar].points.map((pt, pIdx) => (
                     <div key={pIdx} className="flex items-start gap-3">
                       <CheckCircle2 className="h-4 w-4 text-teal shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm text-slate-200">{pt}</span>
+                      <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-200">{pt}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-navy-700/60">
+                <div className="pt-4 border-t border-slate-200 dark:border-navy-700/60">
                   <Link
                     href="/get-a-demo"
                     className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-teal hover:text-white transition-colors group"
@@ -204,11 +204,11 @@ export const UnifiedPlatformSection: React.FC = () => {
               <div className="lg:col-span-7">
                 {activePillar === 0 && (
                   /* Pillar 1: Risk Matrix Interactive View */
-                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
+                  <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
                         <ShieldAlert className="h-4 w-4 text-teal" />
-                        <span className="text-xs font-mono font-bold text-white">
+                        <span className="text-xs font-mono font-bold text-navy-900 dark:text-white">
                           Risk Quantification Engine (5x5 Matrix)
                         </span>
                       </div>
@@ -260,9 +260,9 @@ export const UnifiedPlatformSection: React.FC = () => {
                       ))}
                     </div>
 
-                    <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 flex items-center justify-between text-xs">
+                    <div className="p-3 rounded-xl bg-slate-100 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-xs">
                       <div>
-                        <p className="font-bold text-white">RSK-042: Database Backup Restoration Failure</p>
+                        <p className="font-bold text-navy-900 dark:text-white">RSK-042: Database Backup Restoration Failure</p>
                         <p className="text-[11px] text-slate-400">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
                       </div>
                       <span className="px-2.5 py-1 rounded bg-teal/20 text-teal-700 dark:text-teal-300 font-mono font-bold text-xs">
@@ -286,10 +286,10 @@ export const UnifiedPlatformSection: React.FC = () => {
                     </div>
 
                     <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
-                      <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-[#0A111F] border border-navy-700/60 text-xs">
+                       <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 text-xs">
                         <div className="flex items-center gap-2">
                           <Database className="h-4 w-4 text-teal" />
-                          <span className="font-bold text-white">Asset: AWS RDS PostgreSQL (Cluster-Prod)</span>
+                           <span className="font-bold text-navy-900 dark:text-white">Asset: AWS RDS PostgreSQL (Cluster-Prod)</span>
                         </div>
                         <span className="text-[10px] font-mono text-amber bg-amber/10 px-2 py-0.5 rounded">
                           PII Data Flow
@@ -298,15 +298,15 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                       <div className="pl-6 border-l-2 border-teal/40 space-y-2 text-xs">
                         <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
-                          <span className="text-slate-300">Vendor: Amazon Web Services Inc.</span>
+                           <span className="text-slate-600 dark:text-slate-300">Vendor: Amazon Web Services Inc.</span>
                           <span className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300">SOC 2 Verified</span>
                         </div>
                         <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
-                          <span className="text-slate-300">Linked Risk: RSK-019 (Unauthorized Data Access)</span>
+                           <span className="text-slate-600 dark:text-slate-300">Linked Risk: RSK-019 (Unauthorized Data Access)</span>
                           <span className="text-[10px] font-mono text-amber">High Impact</span>
                         </div>
-                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-teal/30 flex items-center justify-between">
-                          <span className="text-slate-200 font-semibold">Associated Control: CTRL-088 (KMS AES-256 Encryption)</span>
+                         <div className="p-2 rounded-lg bg-white dark:bg-[#0A111F]/70 border border-teal/30 flex items-center justify-between">
+                           <span className="text-slate-700 dark:text-slate-200 font-semibold">Associated Control: CTRL-088 (KMS AES-256 Encryption)</span>
                           <span className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300">Enforced</span>
                         </div>
                       </div>
@@ -328,10 +328,10 @@ export const UnifiedPlatformSection: React.FC = () => {
                     </div>
 
                     <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
-                      <div className="p-3 rounded-lg bg-[#0A111F] border border-teal/30">
+                       <div className="p-3 rounded-lg bg-slate-50 dark:bg-[#0A111F] border border-teal/30">
                         <p className="text-[10px] font-mono text-amber font-bold uppercase">Source Internal Control:</p>
-                        <p className="text-xs font-bold text-white mt-1">CTRL-005: Quarterly User Access & Privilege Reviews</p>
-                        <p className="text-[11px] text-slate-300 mt-1">
+                         <p className="text-xs font-bold text-navy-900 dark:text-white mt-1">CTRL-005: Quarterly User Access & Privilege Reviews</p>
+                         <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-1">
                           &quot;Privileged access rights to production databases are reviewed and recertified every 90 days by team leads.&quot;
                         </p>
                       </div>
@@ -343,10 +343,10 @@ export const UnifiedPlatformSection: React.FC = () => {
                           return (
                             <div
                               key={mIdx}
-                              className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-[11px]"
+                              className="p-2 rounded-lg bg-white dark:bg-[#0A111F]/80 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-[11px]"
                             >
                               <span className="font-bold text-amber">{fwObj?.name || m.code}:</span>
-                              <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
+                               <span className="text-slate-600 dark:text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
                               <span className="font-mono font-bold text-teal-700 dark:text-teal-300 text-xs">{m.conf} match</span>
                             </div>
                           );
@@ -357,7 +357,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                         <span className="text-teal-700 dark:text-teal-300 font-bold flex items-center gap-1.5">
                           <UserCheck className="h-3.5 w-3.5" /> Approved by GRC Analyst
                         </span>
-                        <span className="text-[10px] font-mono text-slate-300">Saved to Postgres</span>
+                         <span className="text-[10px] font-mono text-slate-500 dark:text-slate-300">Saved to Postgres</span>
                       </div>
                     </div>
                   </div>
@@ -384,8 +384,8 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span className="bg-teal/20 px-1.5 py-0.5 rounded">2 Due</span>
                         </div>
                         <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
-                          <p className="font-bold text-white">MFA Configuration Test</p>
-                          <p className="text-[10px] text-slate-400 mt-0.5">Owner: SecOps Lead</p>
+                           <p className="font-bold text-navy-900 dark:text-white">MFA Configuration Test</p>
+                           <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Owner: SecOps Lead</p>
                           <p className="text-[9px] font-mono text-amber mt-1">Due in 6 days</p>
                         </div>
                       </div>
@@ -397,8 +397,8 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span className="bg-amber/20 px-1.5 py-0.5 rounded">3 Due</span>
                         </div>
                         <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
-                          <p className="font-bold text-white">Vendor SOC 2 Check</p>
-                          <p className="text-[10px] text-slate-400 mt-0.5">Owner: Procurement</p>
+                           <p className="font-bold text-navy-900 dark:text-white">Vendor SOC 2 Check</p>
+                           <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Owner: Procurement</p>
                           <p className="text-[9px] font-mono text-amber mt-1">Due in 38 days</p>
                         </div>
                       </div>
@@ -410,15 +410,15 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span className="bg-teal/20 px-1.5 py-0.5 rounded">1 Due</span>
                         </div>
                         <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
-                          <p className="font-bold text-white">Annual DRP Simulation</p>
-                          <p className="text-[10px] text-slate-400 mt-0.5">Owner: CTO</p>
+                           <p className="font-bold text-navy-900 dark:text-white">Annual DRP Simulation</p>
+                           <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Owner: CTO</p>
                           <p className="text-xs font-mono font-bold text-teal-700 dark:text-teal-300 mt-1">Due in 74 days</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-2.5 rounded-lg bg-navy-900 border border-navy-700/60 flex items-center justify-between text-[11px]">
-                      <span className="text-slate-300">Auditor Export Readiness:</span>
+                     <div className="p-2.5 rounded-lg bg-slate-100 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-[11px]">
+                       <span className="text-slate-600 dark:text-slate-300">Auditor Export Readiness:</span>
                       <span className="text-teal-700 dark:text-teal-300 font-mono font-bold text-xs">100% On Schedule</span>
                     </div>
                   </div>

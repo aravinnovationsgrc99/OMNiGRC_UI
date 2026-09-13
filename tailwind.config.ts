@@ -73,6 +73,8 @@ const config: Config = {
           DEFAULT: "#F6F7F6",
           dark: "#0A111F",
         },
+        cardWarm: "#F8F3EA",
+        cardBorderWarm: "#E8DDD0",
         slateText: "#5B6672",
         slateSoft: "#8B95A1",
         brand: {

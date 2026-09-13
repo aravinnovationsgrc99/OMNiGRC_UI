@@ -77,7 +77,7 @@ export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-canvas dark:bg-[#0A111F] text-navy-900 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -104,8 +104,8 @@ export default function PricingPage() {
                 key={idx}
                 className={`p-8 flex flex-col justify-between opacity-100 backdrop-blur-none transition-all duration-300 relative z-10 ${
                   plan.popular
-                    ? "border-2 border-teal bg-[#0E172A] shadow-2xl shadow-teal/25 scale-[1.03]"
-                    : "border border-slate-800 bg-[#0B1220] hover:border-slate-700"
+                    ? "border-2 border-teal bg-cardWarm dark:bg-[#0E172A] shadow-2xl shadow-teal/25 scale-[1.03]"
+                    : "border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-[#0B1220] hover:border-teal/40 dark:hover:border-slate-700"
                 }`}
               >
                 <div>
@@ -121,15 +121,15 @@ export default function PricingPage() {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-xs text-slate-300 mb-6 leading-relaxed">{plan.desc}</p>
+                  <h3 className="text-2xl font-bold text-navy-900 dark:text-white mb-2">{plan.name}</h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">{plan.desc}</p>
 
-                  <div className="border-t border-b border-slate-800/80 py-4 mb-6">
+                  <div className="border-t border-b border-cardBorderWarm dark:border-slate-800/80 py-4 mb-6">
                     <p className="text-lg font-bold text-amber">{plan.scope}</p>
-                    <p className="text-[11px] text-slate-400 font-mono mt-0.5">Aligned to your lean GRC goals</p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 font-mono mt-0.5">Aligned to your lean GRC goals</p>
                   </div>
 
-                  <ul className="space-y-3 mb-8 text-xs text-slate-200">
+                  <ul className="space-y-3 mb-8 text-xs text-slate-700 dark:text-slate-200">
                     {plan.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
                         <Check className="h-4 w-4 text-teal shrink-0 mt-0.5" />
@@ -144,7 +144,7 @@ export default function PricingPage() {
                   className={`w-full py-3.5 rounded-xl font-bold text-xs text-center transition-all flex items-center justify-center gap-2 ${
                     plan.popular
                       ? "bg-teal text-white hover:bg-teal/90 shadow-lg shadow-teal/30"
-                      : "bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white"
+                      : "bg-cardBorderWarm dark:bg-slate-800 text-navy-900 dark:text-slate-200 hover:bg-[#E8DDD0] dark:hover:bg-slate-700 hover:text-navy-900 dark:hover:text-white"
                   }`}
                 >
                   <span>Talk to us about {plan.name}</span>
@@ -156,18 +156,18 @@ export default function PricingPage() {
 
           {/* FAQs Accordion */}
           <div className="max-w-3xl mx-auto relative z-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white text-center mb-8">
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-slate-800 bg-[#0B1220] opacity-100 overflow-hidden"
+                  className="rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-[#0B1220] overflow-hidden"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-white hover:text-teal transition-colors"
+                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-navy-900 dark:text-white hover:text-teal dark:hover:text-teal transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
@@ -177,7 +177,7 @@ export default function PricingPage() {
                     />
                   </button>
                   {openFaq === idx && (
-                    <div className="p-5 pt-0 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60">
+                    <div className="p-5 pt-0 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-cardBorderWarm dark:border-slate-800/60">
                       {faq.a}
                     </div>
                   )}

@@ -17,7 +17,7 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-canvas dark:bg-[#0A111F] text-navy-900 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -32,14 +32,14 @@ export default function ContactUsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
             {/* Contact Details */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 space-y-4">
+              <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-xl bg-teal/15 text-teal">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-mono">EMAIL DIRECT</p>
-                    <p className="text-sm font-bold text-white">contact@omnigrc.com</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">EMAIL DIRECT</p>
+                    <p className="text-sm font-bold text-navy-900 dark:text-white">contact@omnigrc.com</p>
                   </div>
                 </div>
 
@@ -48,16 +48,16 @@ export default function ContactUsPage() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-mono">REGIONAL PRESENCE</p>
-                    <p className="text-sm font-bold text-white">India &amp; United Kingdom</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">REGIONAL PRESENCE</p>
+                    <p className="text-sm font-bold text-navy-900 dark:text-white">India &amp; United Kingdom</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl border border-teal/30 bg-gradient-to-b from-teal/10 to-slate-900/80">
+              <div className="p-6 rounded-2xl border border-teal/30 bg-teal/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80">
                 <Lock className="h-6 w-6 text-teal mb-2" />
-                <h4 className="font-bold text-white text-sm mb-1">Confidential &amp; Tenant-Isolated</h4>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <h4 className="font-bold text-navy-900 dark:text-white text-sm mb-1">Confidential &amp; Tenant-Isolated</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                   All discussions and technical architecture requirements are held in strict confidentiality.
                 </p>
               </div>
@@ -65,54 +65,54 @@ export default function ContactUsPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-7">
-              <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-8 shadow-xl">
+              <div className="rounded-3xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 p-8 shadow-xl">
                 {submitted ? (
                   <div className="p-8 text-center space-y-4">
                     <CheckCircle2 className="h-12 w-12 text-teal mx-auto" />
-                    <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
-                    <p className="text-xs text-slate-300">
+                    <h3 className="text-2xl font-bold text-navy-900 dark:text-white">Message Sent!</h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-300">
                       Thank you for reaching out to OMNiGRC. A GRC architect will respond within 2 business hours.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <h3 className="text-xl font-bold text-white mb-4">Send a Message</h3>
+                    <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-4">Send a Message</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs text-slate-300 mb-1">Your Name</label>
+                        <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
                         <input
                           required
                           type="text"
                           placeholder="Alex Morgan"
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
+                          className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs text-slate-300 mb-1">Work Email</label>
+                        <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Work Email</label>
                         <input
                           required
                           type="email"
                           placeholder="alex@company.com"
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
+                          className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs text-slate-300 mb-1">Subject</label>
+                      <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Subject</label>
                       <input
                         required
                         type="text"
                         placeholder="Inquiry about ISO 27001 & SOC 2 Mapping"
-                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs text-slate-300 mb-1">Message</label>
+                      <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Message</label>
                       <textarea
                         required
                         rows={4}
                         placeholder="Tell us about your team's GRC operations..."
-                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-white focus:border-teal focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                       />
                     </div>
                     <button

@@ -53,7 +53,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
   const sol = solutionDetails[slug] || solutionDetails["startups"];
 
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-canvas dark:bg-[#0A111F] text-navy-900 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -74,23 +74,23 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             {sol.highlights.map((h, idx) => (
-              <TiltCard key={idx} className="p-6 border-slate-800 bg-slate-900/80">
+              <TiltCard key={idx} className="p-6 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80">
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-teal/15 text-teal shrink-0 mt-0.5">
                     <CheckCircle2 className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-sm text-white mb-1">Key Workflow Advantage #{idx + 1}</h3>
-                    <p className="text-xs text-slate-300 leading-relaxed">{h}</p>
+                    <h3 className="font-bold text-sm text-navy-900 dark:text-white mb-1">Key Workflow Advantage #{idx + 1}</h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{h}</p>
                   </div>
                 </div>
               </TiltCard>
             ))}
           </div>
 
-          <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-2">Explore {sol.title}</h3>
-            <p className="text-xs text-slate-300 mb-6">
+          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-navy-900 dark:text-white mb-2">Explore {sol.title}</h3>
+            <p className="text-xs text-slate-600 dark:text-slate-300 mb-6">
               Connect with a GRC specialist to see how OMNiGRC fits your team&apos;s exact maturity stage.
             </p>
             <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">

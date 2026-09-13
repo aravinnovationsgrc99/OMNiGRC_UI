@@ -21,8 +21,8 @@ const IsometricHeroVisual = dynamic(
 
 export const HeroSection: React.FC = () => {
   const { scrollY } = useScroll();
-  const parallaxY = useTransform(scrollY, [0, 600], [0, -35]);
-  const parallaxScale = useTransform(scrollY, [0, 600], [1, 0.98]);
+  // Gentle parallax — only Y axis, no scale, to avoid GPU subpixel blur during scroll
+  const parallaxY = useTransform(scrollY, [0, 600], [0, -20]);
   return (
     <section className="relative min-h-[80svh] sm:min-h-[90svh] flex flex-col justify-between overflow-hidden bg-[#0A111F] pt-20 sm:pt-36 pb-8 sm:pb-16">
       {/* WebGL2 Swirling Aurora Background Atmosphere */}
@@ -79,8 +79,12 @@ export const HeroSection: React.FC = () => {
           </a>
         </motion.div>
 
-        {/* 3D Isometric Hero Visual with Parallax Depth Shift */}
-        <motion.div style={{ y: parallaxY, scale: parallaxScale }} className="w-full max-w-full overflow-hidden">
+        {/* 3D Isometric Hero Visual with gentle parallax — translateZ(0) forces GPU layer to prevent subpixel blur */}
+        <motion.div
+          style={{ y: parallaxY, willChange: "transform" }}
+          className="w-full max-w-full overflow-hidden"
+          // Force GPU compositing layer to prevent subpixel drift that causes blur
+        >
           <IsometricHeroVisual />
         </motion.div>
       </motion.div>

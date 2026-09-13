@@ -35,7 +35,7 @@ const resources = [
 
 export default function TrustVaultPage() {
   return (
-    <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-canvas dark:bg-[#0A111F] text-navy-900 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -48,7 +48,7 @@ export default function TrustVaultPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             {resources.map((res, idx) => (
-              <TiltCard key={idx} className="p-8 border-slate-800 bg-slate-900/80 flex flex-col justify-between">
+              <TiltCard key={idx} className="p-8 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono mb-4">
                     <span className="px-2.5 py-1 rounded-full bg-teal/15 text-teal font-semibold">
@@ -56,13 +56,13 @@ export default function TrustVaultPage() {
                     </span>
                     <Download className="h-4 w-4 text-amber" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{res.title}</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed mb-6">{res.desc}</p>
+                  <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">{res.title}</h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">{res.desc}</p>
                 </div>
 
                 <Link
                   href="/get-a-demo"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-teal hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-teal hover:text-navy-900 dark:hover:text-white transition-colors"
                 >
                   Request Resource <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
@@ -70,9 +70,9 @@ export default function TrustVaultPage() {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-teal/40 bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-2">Need a custom framework mapping template?</h3>
-            <p className="text-xs text-slate-300 mb-6">Our team can help configure your controls across {FRAMEWORKS.map((f) => f.code).join(", ")}.</p>
+          <div className="rounded-3xl border border-cardBorderWarm dark:border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-8 sm:p-10 text-center max-w-3xl mx-auto shadow-xl">
+            <h3 className="text-2xl font-bold text-navy-900 dark:text-white mb-2">Need a custom framework mapping template?</h3>
+            <p className="text-xs text-slate-600 dark:text-slate-300 mb-6">Our team can help configure your controls across {FRAMEWORKS.map((f) => f.code).join(", ")}.</p>
             <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
               Talk to Our Team <ArrowRight className="h-4 w-4" />
             </Link>
@@ -83,4 +83,3 @@ export default function TrustVaultPage() {
     </div>
   );
 }
-

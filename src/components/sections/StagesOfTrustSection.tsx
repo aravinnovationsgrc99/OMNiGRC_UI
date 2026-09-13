@@ -3,12 +3,17 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Activity, ShieldAlert, Server, GitMerge } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 const FloatingDepthCard = dynamic(
   () => import("@/components/3d/FloatingDepthCard").then((m) => m.FloatingDepthCard),
+  { ssr: false }
+);
+
+const AmbientGridBackground = dynamic(
+  () => import("@/components/3d/AmbientGridBackground"),
   { ssr: false }
 );
 
@@ -52,7 +57,34 @@ const stages = [
 export const StagesOfTrustSection: React.FC = () => {
   return (
     <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
-      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Ambient circle-scatter background — z-0, pointer-events-none */}
+      <AmbientGridBackground />
+
+      {/*
+        Radial content mask — transparent at page margins so circles show in gutters,
+        softens to the section bg behind the main content column.
+        z-[1] so it sits above the canvas but strictly below all card/text content.
+      */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 90% at 50% 50%, transparent 0%, transparent 35%, rgba(246,247,246,0.7) 65%, rgba(246,247,246,0.92) 100%)",
+        }}
+      />
+      {/* Dark-mode version of the same mask */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[1] hidden dark:block"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 90% at 50% 50%, transparent 0%, transparent 35%, rgba(10,17,31,0.7) 65%, rgba(10,17,31,0.92) 100%)",
+        }}
+      />
+
+      {/* Content — z-10, above both canvas and mask */}
+      <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -82,7 +114,8 @@ export const StagesOfTrustSection: React.FC = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-teal/30 bg-white dark:bg-navy-900/70 hover:border-teal/60">
+              {/* FloatingDepthCard uses bg-cardWarm in light mode, navy in dark */}
+              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-navy-900/70 hover:border-teal/60">
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
                     card.imageLeft ? "lg:flex-row-reverse" : ""
@@ -135,7 +168,7 @@ export const StagesOfTrustSection: React.FC = () => {
                       card.imageLeft ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
+                    <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
                       <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                         <div className="flex items-center gap-2">
                           <div className="h-2.5 w-2.5 rounded-full bg-teal" />
