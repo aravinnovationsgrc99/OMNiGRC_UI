@@ -57,14 +57,14 @@ const credibilityPillars = [
 
 export const CustomerTrustSection: React.FC = () => {
   return (
-    <section className="relative border-y border-slate-200 dark:border-navy-700/60 bg-[#F6F7F6] dark:bg-[#16233F] py-10 sm:py-20 transition-colors duration-200 overflow-hidden">
+    <section className="relative border-y border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#131C38] section-rhythm transition-colors duration-200 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#2E936F]/30 bg-[#2E936F]/10 text-[#2E936F] dark:border-teal/30 dark:bg-teal/10 dark:text-teal text-[11px] font-mono tracking-widest uppercase mb-3 font-semibold"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2E936F]/30 bg-[#2E936F]/10 text-[#2E936F] dark:border-teal/30 dark:bg-teal/10 dark:text-teal font-mono tracking-widest uppercase mb-3 font-semibold" style={{fontSize: 'max(0.8125rem, 0.6875rem)'}}
           >
             <Lock className="h-3 w-3" /> DESIGNED FOR PRACTICAL GRC OPERATIONS
           </motion.div>
@@ -82,7 +82,7 @@ export const CustomerTrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm sm:max-w-2xl mx-auto mt-2 mb-4"
+            className="text-[#334155] dark:text-slate-300 text-sm sm:max-w-2xl mx-auto mt-2 mb-4 leading-relaxed"
           >
             No complex consultant bloat or unneeded enterprise machinery. Just the core capabilities needed to keep risk, assets, and controls aligned and audit-ready.
           </motion.p>
@@ -107,7 +107,7 @@ export const CustomerTrustSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {credibilityPillars.map((item, idx) => {
             const Icon = item.icon;
@@ -115,21 +115,21 @@ export const CustomerTrustSection: React.FC = () => {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="p-3.5 sm:p-6 rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/80 hover:border-teal/40 dark:hover:bg-navy-900/90 hover:bg-slate-50 transition-all group"
+                className="p-4 sm:p-6 rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0D1626] card-elevated hover:border-[#2E936F]/40 dark:hover:border-teal/40 transition-all group"
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-navy-800 text-[#2E936F] dark:text-teal group-hover:bg-[#2E936F]/10 dark:group-hover:bg-teal/10 group-hover:scale-105 transition-all">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[10px] font-mono text-[#D4521A] dark:text-amber font-semibold uppercase bg-slate-100 dark:bg-navy-800 px-2 py-0.5 rounded border border-slate-200 dark:border-navy-700/60">
+                  <span className="text-[13px] font-mono text-[#D4521A] dark:text-amber font-semibold uppercase bg-[#FAB60A]/10 dark:bg-navy-800 px-2.5 py-1 rounded border border-[#FAB60A]/30 dark:border-navy-700/60 tracking-wider">
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="font-bold text-sm sm:text-base text-navy-900 dark:text-white mb-1.5 flex items-center gap-1.5">
+                <h3 className="font-bold text-sm sm:text-base text-[#0F172A] dark:text-white mb-1.5">
                   {item.title}
                 </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{item.desc}</p>
-                <div className="mt-4 pt-3 border-t border-slate-200 dark:border-navy-700/60 flex items-center gap-1.5 text-[11px] text-teal font-mono">
+                <p className="text-[13px] text-[#334155] dark:text-slate-300 leading-relaxed">{item.desc}</p>
+                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center gap-1.5 text-[13px] text-[#2E936F] dark:text-teal font-mono font-semibold">
                   <CheckCircle2 className="h-3.5 w-3.5" />
                   <span>Documented Architecture</span>
                 </div>

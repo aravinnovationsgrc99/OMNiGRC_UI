@@ -90,7 +90,7 @@ export const StagesOfTrustSection: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold"
+            className="text-[13px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold"
           >
             PRACTICAL GRC MATURITY
           </motion.p>
@@ -168,17 +168,17 @@ export const StagesOfTrustSection: React.FC = () => {
                       card.imageLeft ? "lg:order-1" : "lg:order-2"
                     }`}
                   >
-                    <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
+                    <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl shadow-slate-200/60 dark:shadow-none border border-slate-200/80 dark:border-teal/20 relative overflow-hidden">
                       <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                         <div className="flex items-center gap-2">
                           <div className="h-2.5 w-2.5 rounded-full bg-[#2E936F] dark:bg-teal" />
                           <div className="h-2.5 w-2.5 rounded-full bg-[#FAB60A] dark:bg-amber" />
                           <div className="h-2.5 w-2.5 rounded-full bg-teal-300" />
-                          <span className="ml-2 text-xs font-mono text-slate-400">
+                          <span className="ml-2 text-xs font-mono text-slate-500 dark:text-slate-400">
                             {card.mockupTitle}
                           </span>
                         </div>
-                        <span className="text-[11px] text-[#2E936F] dark:text-teal font-mono">
+                        <span className="text-[11px] text-[#2E936F] dark:text-teal font-mono font-semibold">
                           Live Posture
                         </span>
                       </div>
@@ -190,10 +190,10 @@ export const StagesOfTrustSection: React.FC = () => {
                             className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-navy-900/90 border border-slate-200 dark:border-navy-700/60 text-xs"
                           >
                             <div className="flex items-center gap-2.5 truncate">
-                              <CheckCircle2 className="h-4 w-4 text-teal shrink-0" />
-                              <span className="text-navy-900 dark:text-slate-200 font-medium truncate">{item.label}</span>
+                              <CheckCircle2 className="h-4 w-4 text-[#2E936F] dark:text-teal shrink-0" />
+                              <span className="text-slate-800 dark:text-slate-200 font-medium truncate">{item.label}</span>
                             </div>
-                            <span className="px-2 py-0.5 rounded bg-teal/15 text-teal font-mono font-semibold shrink-0 ml-2">
+                            <span className="px-2 py-0.5 rounded bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal font-mono font-semibold shrink-0 ml-2">
                               {item.status}
                             </span>
                           </div>

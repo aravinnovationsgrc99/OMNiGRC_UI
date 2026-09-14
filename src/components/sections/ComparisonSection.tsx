@@ -45,7 +45,7 @@ const comparisonRows = [
 
 export const ComparisonSection: React.FC = () => {
   return (
-    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#0A111F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <motion.p
@@ -66,24 +66,24 @@ export const ComparisonSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg"
+            className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed"
           >
             More connected and structured than manual spreadsheets. Far simpler and more practical than heavyweight enterprise GRC suites.
           </motion.p>
         </div>
 
         {/* Comparison Table */}
-        <div className="max-w-5xl 2xl:max-w-6xl mx-auto overflow-x-auto rounded-3xl border border-slate-200 dark:border-teal/30 bg-white dark:bg-navy-900/90 shadow-2xl backdrop-blur-xl">
+        <div className="max-w-5xl 2xl:max-w-6xl mx-auto overflow-x-auto rounded-3xl border border-slate-200 dark:border-teal/30 bg-white dark:bg-navy-900/90 card-elevated backdrop-blur-xl">
           <div className="min-w-[750px]">
             {/* Header Row */}
             <div className="grid grid-cols-12 bg-slate-100 dark:bg-[#0A111F] border-b border-slate-200 dark:border-navy-700/60 text-xs sm:text-sm font-bold text-navy-900 dark:text-slate-200">
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 font-semibold">
                 CAPABILITY
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60">
+              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 font-semibold">
                 MANUAL SPREADSHEETS
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60">
+              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 font-semibold">
                 ENTERPRISE GRC SUITES
               </div>
               <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-navy-900 dark:text-white bg-[#2E936F]/15 dark:bg-teal/25 border-l border-[#2E936F]/30 dark:border-teal/50">
@@ -102,16 +102,16 @@ export const ComparisonSection: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.25, delay: idx * 0.05 }}
-                  className="grid grid-cols-12 hover:bg-slate-50 dark:hover:bg-navy-800/40 transition-colors text-xs"
+                  className="grid grid-cols-12 hover:bg-slate-50 dark:hover:bg-navy-800/40 transition-colors divider-light dark:divider-dark"
                 >
-                  <div className="col-span-3 p-4 font-bold text-navy-900 dark:text-white flex items-center">
+                  <div className="col-span-3 p-4 font-bold text-[13px] text-[#0F172A] dark:text-white flex items-center">
                     {row.feature}
                   </div>
-                  <div className="col-span-3 p-4 text-slate-600 dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
+                  <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
                     <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
                     <span>{row.manual}</span>
                   </div>
-                  <div className="col-span-3 p-4 text-slate-600 dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
+                  <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
                     <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
                     <span>{row.heavy}</span>
                   </div>

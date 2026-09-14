@@ -25,7 +25,6 @@
    ───────────────────────────────────────────────────────── */
 html:not(.dark) {
   --lm-orange: #F15E1C;
-  /* Use for small-text button labels (WCAG AA safe at small sizes) */
   --lm-orange-sm: #D4521A;
   --lm-green: #2E936F;
   --lm-peach: #F7D7B0;
@@ -57,7 +56,111 @@ header, nav, main, section, footer {
   display: block;
 }
 
-/* Glassmorphism & Card Styles */
+/* ─────────────────────────────────────────────────────────
+   GLOBAL TYPOGRAPHY ENFORCEMENT
+   13px minimum, 1.625 line-height on body, 1.2 on headers
+   ───────────────────────────────────────────────────────── */
+
+/* Body paragraphs: enforce 13px floor + relaxed leading */
+p {
+  font-size: max(0.8125rem, 1em);
+  line-height: 1.625;
+}
+
+/* Section & card headings: tight punchy leading */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+/* ─────────────────────────────────────────────────────────
+   CARD ELEVATION SYSTEM
+   Soft shadow lifts cards over page canvas
+   ───────────────────────────────────────────────────────── */
+.card-elevated {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.card-elevated:hover {
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08), 0 4px 8px -2px rgba(0,0,0,0.04);
+  transform: translateY(-2px);
+}
+
+.dark .card-elevated {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+.dark .card-elevated:hover {
+  box-shadow: 0 12px 24px -8px rgba(0,0,0,0.45), 0 4px 8px -2px rgba(0,0,0,0.25);
+  transform: translateY(-3px);
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION RHYTHM PADDING  clamp(4rem, 8vw, 7rem)
+   ───────────────────────────────────────────────────────── */
+.section-rhythm {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+/* ─────────────────────────────────────────────────────────
+   FINE DIVIDER RULES
+   ───────────────────────────────────────────────────────── */
+.divider-light { border-top: 1px solid rgba(15,23,42,0.06); }
+.divider-dark  { border-top: 1px solid rgba(255,255,255,0.08); }
+
+/* ─────────────────────────────────────────────────────────
+   MOBILE TOUCH TARGET MINIMUM  (44×44 px)
+   ───────────────────────────────────────────────────────── */
+button, a, [role="button"], [role="tab"] {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Pill/badge overrides — inline badges don't need full 44px height */
+span[class*="rounded-full"], .badge-pill {
+  min-height: unset;
+  display: inline-flex;
+}
+
+/* ─────────────────────────────────────────────────────────
+   FOOTER CONTRAST FIX
+   Always dark charcoal (#0F172A) for both themes
+   ───────────────────────────────────────────────────────── */
+footer {
+  background-color: #0F172A !important;
+  color: #94A3B8;
+}
+
+footer h4 {
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+footer a {
+  color: #94A3B8;
+  transition: color 0.15s ease;
+  min-height: unset;   /* inline links — no 44px override */
+  display: inline;
+}
+
+footer a:hover { color: #E2E8F0; }
+
+/* Light mode: footer stays dark charcoal — footer is always dark */
+html:not(.dark) footer {
+  background-color: #0F172A !important;
+  color: #94A3B8;
+  border-top-color: rgba(255,255,255,0.1) !important;
+}
+
+html:not(.dark) footer h4 { color: #FFFFFF !important; }
+html:not(.dark) footer a  { color: #94A3B8; }
+html:not(.dark) footer a:hover { color: #E2E8F0; }
+
+/* ─────────────────────────────────────────────────────────
+   GLASSMORPHISM & CARD STYLES
+   ───────────────────────────────────────────────────────── */
 .glass-panel {
   background: rgba(22, 35, 63, 0.75);
   backdrop-filter: blur(16px);
@@ -70,125 +173,81 @@ header, nav, main, section, footer {
   box-shadow: 0 0 25px rgba(15, 110, 106, 0.15);
 }
 
-.glow-border {
-  position: relative;
-}
+.glow-border { position: relative; }
 
 .glow-border::before {
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, rgba(15, 110, 106, 0.5), rgba(181, 117, 10, 0.5));
+  background: linear-gradient(135deg, rgba(15,110,106,0.5), rgba(181,117,10,0.5));
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
 
-.glow-border:hover::before {
-  opacity: 1;
-}
+.glow-border:hover::before { opacity: 1; }
 
 /* ─────────────────────────────────────────────────────────
    MICRO-INTERACTION UTILITY CLASSES
-   Dark mode: steady ease. Light mode: subtle spring bounce.
+   Dark mode: steady ease. Light mode: spring bounce.
    ───────────────────────────────────────────────────────── */
 .micro-card {
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 .micro-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(15, 110, 106, 0.4);
-  box-shadow: 0 12px 24px -10px rgba(15, 110, 106, 0.12);
+  border-color: rgba(15,110,106,0.4);
+  box-shadow: 0 12px 24px -10px rgba(15,110,106,0.12);
 }
 
-/* Light-mode spring bounce — slightly more lively than dark mode's steady ease */
 html:not(.dark) .micro-card {
-  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), border-color 0.18s ease-out, box-shadow 0.18s ease-out;
 }
 
 html:not(.dark) .micro-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(46, 147, 111, 0.4);
-  box-shadow: 0 14px 28px -10px rgba(241, 94, 28, 0.10);
+  border-color: rgba(46,147,111,0.4);
+  box-shadow: 0 14px 28px -10px rgba(241,94,28,0.10);
 }
 
-.micro-btn {
-  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.micro-btn { transition: all 0.15s cubic-bezier(0.16,1,0.3,1); }
+.micro-btn:active { transform: scale(0.98); }
+html:not(.dark) .micro-btn { transition: all 0.18s cubic-bezier(0.34,1.56,0.64,1); }
 
-.micro-btn:active {
-  transform: scale(0.98);
-}
-
-/* Light-mode button spring */
-html:not(.dark) .micro-btn {
-  transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.micro-row {
-  transition: background-color 0.15s ease-out;
-}
-
-.micro-row:hover {
-  background-color: rgba(22, 35, 63, 0.6);
-}
-
-html:not(.dark) .micro-row:hover {
-  background-color: rgba(247, 215, 176, 0.5);
-}
+.micro-row { transition: background-color 0.15s ease-out; }
+.micro-row:hover { background-color: rgba(22,35,63,0.6); }
+html:not(.dark) .micro-row:hover { background-color: rgba(247,215,176,0.5); }
 
 /* ─────────────────────────────────────────────────────────
    CUSTOM SCROLLBAR
    ───────────────────────────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0A111F;
-}
-
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0A111F; }
 ::-webkit-scrollbar-thumb {
   background: #16233F;
   border-radius: 4px;
-  border: 1px solid rgba(15, 110, 106, 0.3);
+  border: 1px solid rgba(15,110,106,0.3);
   transition: background-color 0.2s ease;
 }
+::-webkit-scrollbar-thumb:hover { background: #0F6E6A; }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #0F6E6A;
-}
-
-/* Light-mode scrollbar — warm tones */
-html:not(.dark) ::-webkit-scrollbar-track {
-  background: #F7D7B0;
-}
-
+html:not(.dark) ::-webkit-scrollbar-track { background: #F7D7B0; }
 html:not(.dark) ::-webkit-scrollbar-thumb {
   background: #E8C090;
-  border: 1px solid rgba(241, 94, 28, 0.25);
+  border: 1px solid rgba(241,94,28,0.25);
 }
+html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #F15E1C; }
 
-html:not(.dark) ::-webkit-scrollbar-thumb:hover {
-  background: #F15E1C;
-}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Hide scrollbar for clean carousels */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Accessibility: Reduced Motion Override */
+/* ─────────────────────────────────────────────────────────
+   REDUCED MOTION OVERRIDE
+   ───────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

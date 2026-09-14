@@ -115,7 +115,7 @@ export const ArchitectureSection: React.FC = () => {
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#0A111F]/80 border border-teal/30 space-y-2">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#0A111F]/80 border border-teal/30 dark:border-teal/40 backdrop-blur-sm space-y-2">
                 <span className="text-xs font-mono font-bold text-teal uppercase flex items-center gap-1.5">
                   <CheckCircle2 className="h-4 w-4 text-teal" /> What is SENT to LLMs:
                 </span>
@@ -132,7 +132,7 @@ export const ArchitectureSection: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#0A111F]/80 border border-rose/30 space-y-2">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#0A111F]/80 border border-rose-400/30 dark:border-rose/30 backdrop-blur-sm space-y-2">
                 <span className="text-xs font-mono font-bold text-rose-400 uppercase flex items-center gap-1.5">
                   <XCircle className="h-4 w-4 text-rose-400" /> What is NEVER Sent:
                 </span>
@@ -153,15 +153,15 @@ export const ArchitectureSection: React.FC = () => {
         </div>
 
         {/* Real 8-Stage Connected AI Flow Diagram */}
-        <div className="mb-10 rounded-3xl border border-teal/30 bg-white dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        <div className="mb-10 rounded-3xl border border-teal/30 bg-[#0D1626] dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="px-3 py-1 rounded-full bg-teal/15 text-teal text-[10px] font-mono font-bold uppercase tracking-widest border border-teal/30">
               END-TO-END DATA FLOW
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
               8-Stage AI API Execution Pipeline
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 mt-1">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
               From analyst trigger to immutable database record, every step is isolated, sanitized, and human-supervised.
             </p>
           </div>
@@ -231,10 +231,10 @@ export const ArchitectureSection: React.FC = () => {
               return (
                 <div key={nIdx} className="relative group">
                   <div
-                    className={`h-full p-4 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                    className={`h-full p-4 rounded-2xl border backdrop-blur-sm transition-all duration-300 flex flex-col justify-between ${
                       node.highlight
-                        ? "border-amber bg-amber/10 shadow-lg shadow-amber/20"
-                        : "border-navy-700/60 bg-[#0A111F]/90 hover:border-teal/50 hover:bg-navy-900"
+                        ? "border-amber/70 bg-amber/10 shadow-lg shadow-amber/20"
+                        : "border-slate-700/50 bg-[#0A111F]/90 hover:border-teal/50 hover:bg-navy-900"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-3">
@@ -248,7 +248,7 @@ export const ArchitectureSection: React.FC = () => {
 
                     <div>
                       <h4 className="text-sm font-bold text-white mb-1 leading-tight">{node.label}</h4>
-                      <p className="text-[11px] text-slate-300 font-mono leading-snug">{node.sub}</p>
+                      <p className="text-[11px] text-slate-200 font-mono leading-snug">{node.sub}</p>
                     </div>
 
                     {nIdx < 7 && (

@@ -24,17 +24,17 @@ const FrameworkOrrery = dynamic(
 
 export const CoverageSection: React.FC = () => {
   return (
-    <section className="relative bg-slate-100 dark:bg-[#16233F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#16233F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-20">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-semibold inline-block mb-3">
+          <span className="text-[13px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-semibold inline-block mb-3">
             DOCUMENTED FRAMEWORK COVERAGE
           </span>
           <h2 className="text-2xl sm:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Six frameworks supported natively out of the box.
           </h2>
-          <p className="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 text-[#334155] dark:text-slate-300 text-sm sm:text-base leading-relaxed">
             One primary control definition maps seamlessly into {FRAMEWORKS.map((f) => f.code).join(", ")} requirements.
           </p>
         </div>

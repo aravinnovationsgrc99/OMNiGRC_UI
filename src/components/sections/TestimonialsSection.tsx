@@ -42,7 +42,7 @@ export const TestimonialsSection: React.FC = () => {
   const scenario = operationalScenarios[currentIndex];
 
   return (
-    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#0A111F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <p className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold">
@@ -51,7 +51,7 @@ export const TestimonialsSection: React.FC = () => {
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             How lean teams operate in practice.
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg mt-3">
+          <p className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg mt-3 leading-relaxed">
             Real-world workflows demonstrating how OMNiGRC removes friction from everyday compliance, asset, and risk management.
           </p>
         </div>
@@ -67,13 +67,15 @@ export const TestimonialsSection: React.FC = () => {
               transition={{ duration: 0.35, ease: "easeOut" }}
               className="rounded-3xl border border-teal/40 bg-white dark:bg-navy-900/90 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl relative"
             >
-              <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-4 mb-6">
-                <span className="text-xs font-mono text-[#D4521A] dark:text-amber font-bold uppercase">
-                  {scenario.tag}
-                </span>
-                <span className="text-[11px] font-mono text-slate-400">
-                  Scenario 0{currentIndex + 1} of 0{operationalScenarios.length}
-                </span>
+              <div className="flex flex-col gap-1 border-b border-slate-200 dark:border-navy-700/60 pb-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-[13px] font-mono text-[#D4521A] dark:text-amber font-bold uppercase tracking-wider">
+                    {scenario.tag}
+                  </span>
+                  <span className="text-[11px] font-mono text-slate-400">
+                    Scenario 0{currentIndex + 1} of 0{operationalScenarios.length}
+                  </span>
+                </div>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-navy-900 dark:text-white mb-3">
@@ -85,14 +87,14 @@ export const TestimonialsSection: React.FC = () => {
                   <p className="font-mono text-[11px] text-[#D4521A] dark:text-amber font-bold uppercase mb-1">
                     Operational Challenge:
                   </p>
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{scenario.context}</p>
+                  <p className="text-[#334155] dark:text-slate-300 leading-relaxed">{scenario.context}</p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#0A111F]/80 border border-teal/30">
+                <div className="p-3.5 rounded-xl bg-[#F0FDF7] dark:bg-[#0A111F]/80 border border-[#2E936F]/30 dark:border-teal/30">
                   <p className="font-mono text-[11px] text-[#D4521A] dark:text-amber font-bold uppercase mb-1">
                     Connected OMNiGRC Workflow:
                   </p>
-                  <p className="text-navy-900 dark:text-slate-200 leading-relaxed">{scenario.workflow}</p>
+                  <p className="text-[#1A3D2B] dark:text-slate-200 leading-relaxed">{scenario.workflow}</p>
                 </div>
               </div>
 
