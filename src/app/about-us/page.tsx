@@ -20,7 +20,7 @@ export default function AboutUsPage() {
           cta={
             <Link
               href="/get-a-demo"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#D4521A] dark:bg-teal text-white font-bold text-xs hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-lg shadow-[#F15E1C]/20 dark:shadow-teal/20"
             >
               Learn More &amp; Request Demo <ArrowRight className="h-4 w-4" />
             </Link>

@@ -23,11 +23,11 @@ export default function TermsOfServicePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-12">
           {/* Effective Date & Notice */}
           <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-slate-900/80 shadow-md flex items-start gap-4">
-            <div className="p-2.5 rounded-xl bg-teal/15 text-teal shrink-0">
+            <div className="p-2.5 rounded-xl bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal shrink-0">
               <Scale className="h-6 w-6" />
             </div>
             <div>
-              <p className="text-xs font-mono text-amber uppercase font-semibold">LAST UPDATED: SEPTEMBER 2026</p>
+              <p className="text-xs font-mono text-[#D4521A] dark:text-amber uppercase font-semibold">LAST UPDATED: SEPTEMBER 2026</p>
               <h3 className="text-lg font-bold text-navy-900 dark:text-white mt-1">Temporary Operational Master Service Agreement</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
                 These Terms of Service (&quot;Terms&quot;) govern your organization&apos;s evaluation and operational use of OMNiGRC, including our multi-framework mapping, asset inventory correlation, risk registers, and advisory AI components.

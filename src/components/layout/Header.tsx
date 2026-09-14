@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
       {/* Subtle Scroll Progress Indicator Bar */}
       <div
         aria-hidden="true"
-        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-teal via-teal-300 to-amber transition-all duration-150 z-50 opacity-90 shadow-sm"
+        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-[#F15E1C] via-[#FAB60A] to-[#2E936F] dark:from-teal dark:via-teal-300 dark:to-amber transition-all duration-150 z-50 opacity-90 shadow-sm"
         style={{ width: `${scrollProgress}%` }}
       />
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,15 +72,15 @@ export const Header: React.FC = () => {
           <Link href="/" className="group flex items-center gap-2.5 shrink-0">
             <motion.div
               whileHover={{ rotate: 5, scale: 1.05 }}
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal to-amber shadow-md shadow-teal/20"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#F15E1C] to-[#FAB60A] dark:from-teal dark:to-amber shadow-md shadow-[#F15E1C]/20 dark:shadow-teal/20"
             >
               <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
             </motion.div>
             <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-bold tracking-tight text-navy-900 dark:text-white group-hover:text-teal transition-colors">
-                OMNi<span className="text-teal">GRC</span>
+              <span className="text-lg sm:text-xl font-bold tracking-tight text-navy-900 dark:text-white group-hover:text-[#D4521A] dark:group-hover:text-teal transition-colors">
+                OMNi<span className="text-[#D4521A] dark:text-teal">GRC</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-widest text-amber -mt-1 font-mono uppercase">
+              <span className="text-[9px] sm:text-[10px] tracking-widest text-[#D4521A] dark:text-amber -mt-1 font-mono uppercase">
                 Unified GRC Platform
               </span>
             </div>
@@ -94,8 +94,8 @@ export const Header: React.FC = () => {
               onMouseEnter={() => setActiveMenu("product")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
-                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "product" ? "rotate-180 text-teal-600 dark:text-teal" : ""}`} />
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "product" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
                 {activeMenu === "product" && (
@@ -108,7 +108,7 @@ export const Header: React.FC = () => {
                   >
                     {/* Visual Card Grid for 4 Core Workflows */}
                     <div className="md:col-span-5 space-y-3">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4521A] dark:text-amber font-mono">
                         Four Core Workflows
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -138,7 +138,7 @@ export const Header: React.FC = () => {
                                     >
                                       {iconMap[p.code] || <Shield className="h-3.5 w-3.5" />}
                                     </div>
-                                    <span className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
+                                     <span className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal-300 transition-colors">
                                       {p.name}
                                     </span>
                                   </div>
@@ -154,7 +154,7 @@ export const Header: React.FC = () => {
                     </div>
 
                     <div className="md:col-span-3 space-y-3 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber font-mono">Lean GRC Solutions</h4>
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4521A] dark:text-amber font-mono">Lean GRC Solutions</h4>
                       <div className="space-y-2 text-xs">
                         <Link href="/solutions/startups" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
                           <p className="font-bold text-navy-900 dark:text-white">For Lean Security Teams</p>
@@ -172,7 +172,7 @@ export const Header: React.FC = () => {
                     </div>
 
                     <div className="md:col-span-4 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
-                      <div className="h-full rounded-xl bg-gradient-to-b from-teal/10 to-slate-50 dark:from-teal/20 dark:to-navy-900/90 p-5 border border-teal/30 flex flex-col justify-between">
+                       <div className="h-full rounded-xl bg-gradient-to-b from-[#2E936F]/10 to-[#F7D7B0]/30 dark:from-teal/20 dark:to-navy-900/90 p-5 border border-[#2E936F]/30 dark:border-teal/30 flex flex-col justify-between">
                         <div>
                           <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-3">
                             Advisory AI Engine
@@ -200,8 +200,8 @@ export const Header: React.FC = () => {
               onMouseEnter={() => setActiveMenu("frameworks")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
-                Frameworks <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "frameworks" ? "rotate-180 text-teal-600 dark:text-teal" : ""}`} />
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Frameworks <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "frameworks" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
                 {activeMenu === "frameworks" && (
@@ -219,7 +219,7 @@ export const Header: React.FC = () => {
                       </div>
                       <Link
                         href="/frameworks/soc-2"
-                        className="text-xs font-semibold text-teal-700 dark:text-teal hover:underline flex items-center gap-1"
+                        className="text-xs font-semibold text-[#2E936F] dark:text-teal hover:underline flex items-center gap-1"
                       >
                         Explore Coverage <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
@@ -229,7 +229,7 @@ export const Header: React.FC = () => {
                         <Link
                           key={fw.code}
                           href={`/frameworks/${fw.slug}`}
-                          className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-teal/60 hover:bg-slate-100 dark:hover:bg-navy-800 transition-all"
+                          className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 dark:hover:bg-navy-800 transition-all"
                         >
                           <div className="flex items-center justify-between mb-1">
                             <span className="font-bold text-navy-900 dark:text-white text-xs">{fw.name}</span>
@@ -249,7 +249,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/#how-it-works"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               How It Works
             </Link>
@@ -260,8 +260,8 @@ export const Header: React.FC = () => {
               onMouseEnter={() => setActiveMenu("resources")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
-                Resources <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "resources" ? "rotate-180 text-teal-600 dark:text-teal" : ""}`} />
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Resources <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "resources" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
                 {activeMenu === "resources" && (
@@ -272,17 +272,17 @@ export const Header: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-5 shadow-2xl backdrop-blur-xl space-y-3"
                   >
-                    <h4 className="text-xs font-mono uppercase text-amber-600 dark:text-amber font-bold">Knowledge &amp; Insights</h4>
+                    <h4 className="text-xs font-mono uppercase text-[#D4521A] dark:text-amber font-bold">Knowledge &amp; Insights</h4>
                     <div className="space-y-2 text-xs">
                       <Link href="/blog" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200 hover:text-navy-900 dark:hover:text-white">
-                        <BookOpen className="h-4 w-4 text-teal-600 dark:text-teal" />
+                        <BookOpen className="h-4 w-4 text-[#2E936F] dark:text-teal" />
                         <div>
                           <p className="font-bold">Ctrl + GRC Blog</p>
                           <p className="text-[10px] text-slate-500 dark:text-slate-400">Practical guides for lean GRC teams</p>
                         </div>
                       </Link>
                       <Link href="/trust-vault" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200 hover:text-navy-900 dark:hover:text-white">
-                        <Award className="h-4 w-4 text-teal-600 dark:text-teal-300" />
+                        <Award className="h-4 w-4 text-[#2E936F] dark:text-teal-300" />
                         <div>
                           <p className="font-bold">Resource Center</p>
                           <p className="text-[10px] text-slate-500 dark:text-slate-400">Framework checklists &amp; templates</p>
@@ -296,14 +296,14 @@ export const Header: React.FC = () => {
 
             <Link
               href="/pricing"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               Pricing
             </Link>
 
             <Link
               href="/about-us"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               About
             </Link>
@@ -315,14 +315,14 @@ export const Header: React.FC = () => {
             <button
               suppressHydrationWarning
               onClick={toggleTheme}
-              className="p-2 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/80 text-amber hover:text-teal dark:hover:text-white hover:border-teal/40 transition-all focus:outline-none focus:ring-2 focus:ring-teal"
+              className="p-2 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/80 text-[#D4521A] dark:text-amber hover:text-[#2E936F] dark:hover:text-white hover:border-[#2E936F]/40 dark:hover:border-teal/40 transition-all focus:outline-none focus:ring-2 focus:ring-[#2E936F] dark:focus:ring-teal"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
               title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
               {theme === "dark" ? (
                 <Sun className="h-4 w-4 text-amber" />
               ) : (
-                <Moon className="h-4 w-4 text-teal" />
+                <Moon className="h-4 w-4 text-[#2E936F]" />
               )}
             </button>
             <div aria-live="polite" className="sr-only">
@@ -331,7 +331,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/contact-us"
-              className="text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white transition-colors px-3 py-2"
+              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-[#2E936F] dark:hover:text-white transition-colors px-3 py-2"
             >
               Contact
             </Link>
@@ -347,10 +347,10 @@ export const Header: React.FC = () => {
             <button
               suppressHydrationWarning
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-amber hover:text-teal"
+              className="p-2 rounded-lg border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-[#D4521A] dark:text-amber hover:text-[#2E936F] dark:hover:text-teal"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
-              {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-teal" />}
+              {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-[#2E936F]" />}
             </button>
 
             <button
@@ -377,10 +377,10 @@ export const Header: React.FC = () => {
             <div className="space-y-2">
               <button
                 onClick={() => toggleMobileSection("workflows")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal"
               >
                 <span>Workflows</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-teal" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               {mobileExpandedSection === "workflows" && (
                 <div className="space-y-2.5 my-2.5">
@@ -426,19 +426,19 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => toggleMobileSection("frameworks")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal"
+                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal"
               >
                 <span>Frameworks</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "frameworks" ? "rotate-180 text-teal" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "frameworks" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               {mobileExpandedSection === "frameworks" && (
-                <div className="pl-4 space-y-2 text-sm border-l border-teal/30 my-2">
+                <div className="pl-4 space-y-2 text-sm border-l border-[#2E936F]/30 dark:border-teal/30 my-2">
                   {FRAMEWORKS.map((fw) => (
                     <Link
                       key={fw.code}
                       href={`/frameworks/${fw.slug}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block text-navy-900 dark:text-slate-300 hover:text-teal py-2 min-h-[44px] flex items-center"
+                      className="block text-navy-900 dark:text-slate-300 hover:text-[#2E936F] dark:hover:text-teal py-2 min-h-[44px] flex items-center"
                     >
                       {fw.name}
                     </Link>
@@ -449,28 +449,28 @@ export const Header: React.FC = () => {
               <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
               >
                 Pricing
               </Link>
               <Link
                 href="/about-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
               >
                 About Us
               </Link>
               <Link
                 href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
               >
                 Ctrl + GRC Blog
               </Link>
               <Link
                 href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-teal flex items-center"
+                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
               >
                 Contact Us
               </Link>

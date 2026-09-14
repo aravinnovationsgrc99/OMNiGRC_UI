@@ -28,7 +28,7 @@ export const CoverageSection: React.FC = () => {
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-20">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber font-semibold inline-block mb-3">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-semibold inline-block mb-3">
             DOCUMENTED FRAMEWORK COVERAGE
           </span>
           <h2 className="text-2xl sm:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
@@ -70,7 +70,7 @@ export const CoverageSection: React.FC = () => {
         <div className="rounded-3xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/90 p-6 sm:p-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-5 space-y-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-amber font-semibold flex items-center gap-1.5">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-semibold flex items-center gap-1.5">
                 <Globe className="h-4 w-4 text-teal" /> REGIONAL HOSTING AWARENESS
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight">
@@ -99,9 +99,9 @@ export const CoverageSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-navy-900/80 border border-navy-700/60 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono font-bold text-slate-300 flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4 text-amber" /> European Union &amp; Australia
+                    <MapPin className="h-4 w-4 text-[#D4521A] dark:text-amber" /> European Union &amp; Australia
                   </span>
-                  <span className="text-[10px] font-mono text-amber bg-amber/15 px-2 py-0.5 rounded font-medium">
+                  <span className="text-[10px] font-mono text-[#D4521A] dark:text-amber bg-[#FAB60A]/15 dark:bg-amber/15 px-2 py-0.5 rounded font-medium">
                     Roadmap (Post-Launch)
                   </span>
                 </div>

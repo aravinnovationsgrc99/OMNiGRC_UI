@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
               <Lock className="h-6 w-6" />
             </div>
             <div>
-              <p className="text-xs font-mono text-amber uppercase font-semibold">LAST UPDATED: SEPTEMBER 2026</p>
+              <p className="text-xs font-mono text-[#D4521A] dark:text-amber uppercase font-semibold">LAST UPDATED: SEPTEMBER 2026</p>
               <h3 className="text-lg font-bold text-navy-900 dark:text-white mt-1">Privacy Engineering &amp; Data Minimization Commitment</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
                 At OMNiGRC, we design GRC software built on data minimization. This policy explains what metadata we collect, how advisory AI processes queries, and how we protect your security posture data.
@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
                 </div>
 
                 <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/60 space-y-2">
-                  <span className="text-xs font-mono text-amber font-bold flex items-center gap-1.5">
+                  <span className="text-xs font-mono text-[#D4521A] dark:text-amber font-bold flex items-center gap-1.5">
                     <FileCheck className="h-4 w-4" /> GRC Posture Data
                   </span>
                   <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -99,15 +99,15 @@ export default function PrivacyPolicyPage() {
                 We maintain architectural readiness under DPDP Act India 2023, EU GDPR, and ISO 27001 Annex A data handling standards.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
-                <div className="p-3 rounded-xl bg-teal/10 border border-teal/20 text-teal text-center">
+                <div className="p-3 rounded-xl bg-[#2E936F]/10 dark:bg-teal/10 border border-[#2E936F]/20 dark:border-teal/20 text-[#2E936F] dark:text-teal text-center">
                   <p className="font-bold">Right to Portability</p>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Export JSON/CSV posture</p>
                 </div>
-                <div className="p-3 rounded-xl bg-amber/10 border border-amber/20 text-amber text-center">
+                <div className="p-3 rounded-xl bg-[#FAB60A]/20 dark:bg-amber/10 border border-[#FAB60A]/20 dark:border-amber/20 text-navy-900 dark:text-amber text-center">
                   <p className="font-bold">Right to Erasure</p>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Permanent tenant purging</p>
                 </div>
-                <div className="p-3 rounded-xl bg-teal/10 border border-teal/20 text-teal text-center">
+                <div className="p-3 rounded-xl bg-[#2E936F]/10 dark:bg-teal/10 border border-[#2E936F]/20 dark:border-teal/20 text-[#2E936F] dark:text-teal text-center">
                   <p className="font-bold">Auditability</p>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Immutable change log</p>
                 </div>

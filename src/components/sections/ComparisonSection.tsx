@@ -86,11 +86,11 @@ export const ComparisonSection: React.FC = () => {
               <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60">
                 ENTERPRISE GRC SUITES
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-navy-900 dark:text-white bg-teal/15 dark:bg-teal/25 border-l border-teal/30 dark:border-teal/50">
-                <span className="flex items-center gap-1.5 font-bold text-amber-600 dark:text-amber">
-                  <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal-600 dark:text-teal" /> OMNiGRC
+              <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-navy-900 dark:text-white bg-[#2E936F]/15 dark:bg-teal/25 border-l border-[#2E936F]/30 dark:border-teal/50">
+                <span className="flex items-center gap-1.5 font-bold text-[#D4521A] dark:text-amber">
+                  <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2E936F] dark:text-teal" /> OMNiGRC
                 </span>
-                <span className="px-2 py-0.5 rounded bg-teal-600 dark:bg-teal/40 text-white text-[9px] font-bold">UNIFIED</span>
+                <span className="px-2 py-0.5 rounded bg-[#D4521A] dark:bg-teal/40 text-white text-[9px] font-bold">UNIFIED</span>
               </div>
             </div>
 
@@ -115,11 +115,11 @@ export const ComparisonSection: React.FC = () => {
                     <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
                     <span>{row.heavy}</span>
                   </div>
-                  <div className="col-span-3 p-4 font-medium bg-teal/10 dark:bg-teal/10 border-l border-teal/20 dark:border-teal/30 flex items-center gap-2">
-                    <div className="h-4 w-4 rounded-full bg-teal/20 text-teal-700 dark:text-teal-300 flex items-center justify-center shrink-0">
+                  <div className="col-span-3 p-4 font-medium bg-[#2E936F]/10 dark:bg-teal/10 border-l border-[#2E936F]/20 dark:border-teal/30 flex items-center gap-2">
+                    <div className="h-4 w-4 rounded-full bg-[#2E936F]/20 dark:bg-teal/20 text-[#2E936F] dark:text-teal-300 flex items-center justify-center shrink-0">
                       <Check className="h-3 w-3 stroke-[3]" />
                     </div>
-                    <span className="text-teal-700 dark:text-teal-300 font-bold">{row.omni}</span>
+                    <span className="text-[#2E936F] dark:text-teal-300 font-bold">{row.omni}</span>
                   </div>
                 </motion.div>
               ))}

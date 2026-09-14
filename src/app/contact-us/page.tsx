@@ -41,7 +41,7 @@ export default function ContactUsPage() {
             <div className="lg:col-span-5 space-y-6">
               <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-teal/15 text-teal">
+                  <div className="p-2.5 rounded-xl bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
@@ -51,7 +51,7 @@ export default function ContactUsPage() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-amber/15 text-amber">
+                  <div className="p-2.5 rounded-xl bg-[#FAB60A]/20 dark:bg-amber/15 text-navy-900 dark:text-amber">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -61,7 +61,7 @@ export default function ContactUsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl border border-teal/30 bg-teal/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80">
+              <div className="p-6 rounded-2xl border border-[#2E936F]/30 dark:border-teal/30 bg-[#2E936F]/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80">
                 <Lock className="h-6 w-6 text-teal mb-2" />
                 <h4 className="font-bold text-navy-900 dark:text-white text-sm mb-1">Confidential &amp; Tenant-Isolated</h4>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -158,7 +158,7 @@ export default function ContactUsPage() {
                     )}
                     <button
                       type="submit"
-                      className="w-full rounded-xl bg-teal py-3.5 text-xs font-bold text-white hover:bg-teal/90 shadow-md flex items-center justify-center gap-2"
+                      className="w-full rounded-xl bg-[#D4521A] dark:bg-teal py-3.5 text-xs font-bold text-white hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-md flex items-center justify-center gap-2"
                     >
                       Send Message <Send className="h-4 w-4" />
                     </button>

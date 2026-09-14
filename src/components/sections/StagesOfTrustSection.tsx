@@ -90,7 +90,7 @@ export const StagesOfTrustSection: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold"
+            className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold"
           >
             PRACTICAL GRC MATURITY
           </motion.p>
@@ -126,7 +126,7 @@ export const StagesOfTrustSection: React.FC = () => {
                       card.imageLeft ? "lg:order-2" : "lg:order-1"
                     }`}
                   >
-                    <span className="inline-block px-3 py-1 rounded-full border border-amber/40 bg-amber/10 text-amber text-xs font-mono font-semibold">
+                    <span className="inline-block px-3 py-1 rounded-full border border-[#FAB60A]/40 bg-[#FAB60A]/20 text-navy-900 dark:border-amber/40 dark:bg-amber/10 dark:text-amber text-xs font-mono font-semibold">
                       {card.stage}
                     </span>
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 dark:text-white tracking-tight">
@@ -142,7 +142,7 @@ export const StagesOfTrustSection: React.FC = () => {
                         {card.steps.map((step, sIdx) => (
                           <span
                             key={sIdx}
-                            className="px-3 py-1 rounded-xl bg-teal/10 border border-teal/30 text-teal dark:text-teal-300 font-semibold"
+                            className="px-3 py-1 rounded-xl bg-[#2E936F]/10 border border-[#2E936F]/30 text-[#2E936F] dark:bg-teal/10 dark:border-teal/30 dark:text-teal-300 font-semibold"
                           >
                             {step}
                           </span>
@@ -153,7 +153,7 @@ export const StagesOfTrustSection: React.FC = () => {
                     <div>
                       <Link
                         href={card.ctaLink}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-teal hover:text-navy-900 dark:hover:text-white transition-colors group"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-[#2E936F] dark:text-teal hover:text-navy-900 dark:hover:text-white transition-colors group"
                       >
                         <span className="border-b border-teal/50 group-hover:border-teal pb-0.5">
                           {card.ctaText}
@@ -171,14 +171,14 @@ export const StagesOfTrustSection: React.FC = () => {
                     <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-2xl relative overflow-hidden">
                       <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                         <div className="flex items-center gap-2">
-                          <div className="h-2.5 w-2.5 rounded-full bg-teal" />
-                          <div className="h-2.5 w-2.5 rounded-full bg-amber" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-[#2E936F] dark:bg-teal" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-[#FAB60A] dark:bg-amber" />
                           <div className="h-2.5 w-2.5 rounded-full bg-teal-300" />
                           <span className="ml-2 text-xs font-mono text-slate-400">
                             {card.mockupTitle}
                           </span>
                         </div>
-                        <span className="text-[11px] text-teal font-mono">
+                        <span className="text-[11px] text-[#2E936F] dark:text-teal font-mono">
                           Live Posture
                         </span>
                       </div>

@@ -21,24 +21,41 @@ export const Badge: React.FC<BadgeProps> = ({
     "inline-flex items-center gap-1.5 font-mono font-semibold rounded-full border tracking-wide uppercase transition-all duration-150 hover:scale-105 cursor-default";
 
   const variants = {
+    // Light: green fill/text. Dark: teal fill/text (unchanged)
     teal:
-      "bg-teal/15 text-teal-300 border-teal/30 hover:border-teal/60",
+      "bg-[#2E936F]/15 text-[#2E936F] border-[#2E936F]/30 hover:border-[#2E936F]/60 " +
+      "dark:bg-teal/15 dark:text-teal-300 dark:border-teal/30 dark:hover:border-teal/60",
+    // Light: golden yellow fill, dark navy text (fill-only rule). Dark: amber (unchanged)
     amber:
-      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
+      "bg-[#FAB60A]/20 text-navy-900 border-[#FAB60A]/40 hover:border-[#FAB60A]/70 " +
+      "dark:bg-amber/15 dark:text-amber-300 dark:border-amber/30 dark:hover:border-amber/60",
+    // success = green in light (same as teal remapped)
     success:
-      "bg-teal/15 text-teal-300 border-teal/30 hover:border-teal/60",
+      "bg-[#2E936F]/15 text-[#2E936F] border-[#2E936F]/30 hover:border-[#2E936F]/60 " +
+      "dark:bg-teal/15 dark:text-teal-300 dark:border-teal/30 dark:hover:border-teal/60",
+    // warning = golden yellow fill in light, amber in dark (unchanged)
     warning:
-      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
+      "bg-[#FAB60A]/20 text-navy-900 border-[#FAB60A]/40 hover:border-[#FAB60A]/70 " +
+      "dark:bg-amber/15 dark:text-amber-300 dark:border-amber/30 dark:hover:border-amber/60",
+    // ai = golden yellow fill in light
     ai:
-      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
+      "bg-[#FAB60A]/20 text-navy-900 border-[#FAB60A]/40 hover:border-[#FAB60A]/70 " +
+      "dark:bg-amber/15 dark:text-amber-300 dark:border-amber/30 dark:hover:border-amber/60",
+    // peach = light yellow fill in light, amber in dark
     peach:
-      "bg-amber/15 text-amber-300 border-amber/30 hover:border-amber/60",
+      "bg-[#FFEC69]/30 text-navy-900 border-[#FAB60A]/30 hover:border-[#FAB60A]/60 " +
+      "dark:bg-amber/15 dark:text-amber-300 dark:border-amber/30 dark:hover:border-amber/60",
+    // orange = orange tint badge in light, teal in dark
     orange:
-      "bg-teal/15 text-teal-300 border-teal/30 hover:border-teal/60",
+      "bg-[#F15E1C]/12 text-[#D4521A] border-[#F15E1C]/25 hover:border-[#F15E1C]/50 " +
+      "dark:bg-teal/15 dark:text-teal-300 dark:border-teal/30 dark:hover:border-teal/60",
+    // rose: UNCHANGED in both modes
     rose:
       "bg-rose/15 text-rose-300 border-rose/30 hover:border-rose/60",
+    // neutral: dark text on slate in light, slate in dark
     neutral:
-      "bg-navy-800 text-slate-300 border-navy-700 hover:border-navy-600",
+      "bg-slate-100 text-navy-900 border-slate-200 hover:border-slate-300 " +
+      "dark:bg-navy-800 dark:text-slate-300 dark:border-navy-700 dark:hover:border-navy-600",
   };
 
   const sizes = {

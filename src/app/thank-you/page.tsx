@@ -49,8 +49,8 @@ export default function ThankYouPage() {
             transition={{ delay: 0.3 }}
             className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 mb-8 text-left space-y-3 shadow-md"
           >
-            <div className="flex items-center gap-2 text-xs font-mono text-amber uppercase font-bold">
-              <Sparkles className="h-4 w-4 text-amber" /> Next Steps While You Wait
+            <div className="flex items-center gap-2 text-xs font-mono text-[#D4521A] dark:text-amber uppercase font-bold">
+              <Sparkles className="h-4 w-4 text-[#D4521A] dark:text-amber" /> Next Steps While You Wait
             </div>
             <ul className="text-xs text-slate-600 dark:text-slate-300 space-y-2">
               <li className="flex items-center gap-2">
@@ -75,7 +75,7 @@ export default function ThankYouPage() {
               href="/trust-vault"
               className="w-full sm:w-auto rounded-xl border border-cardBorderWarm dark:border-slate-700 bg-cardWarm dark:bg-slate-900 px-8 py-3.5 text-sm font-semibold text-navy-900 dark:text-slate-200 hover:border-teal/40 transition-all flex items-center justify-center gap-2"
             >
-              <BookOpen className="h-4 w-4 text-amber" /> Explore Resources
+              <BookOpen className="h-4 w-4 text-[#D4521A] dark:text-amber" /> Explore Resources
             </Link>
           </div>
         </div>

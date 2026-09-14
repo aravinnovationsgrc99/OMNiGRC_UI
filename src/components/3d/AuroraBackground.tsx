@@ -116,10 +116,17 @@ void main() {
 }
 `;
 
-const DEFAULT_BASE_NAVY: [number, number, number] = [0.039, 0.067, 0.122];
-const DEFAULT_DEEP_NAVY: [number, number, number] = [0.086, 0.137, 0.247];
-const DEFAULT_TEAL_GLOW: [number, number, number] = [0.059, 0.431, 0.416];
-const DEFAULT_AMBER_PEAK: [number, number, number] = [0.710, 0.459, 0.039];
+// ─── Dark-mode defaults (original brand) ───────────────────
+const DEFAULT_BASE_NAVY: [number, number, number]  = [0.039, 0.067, 0.122];  // #0A111F
+const DEFAULT_DEEP_NAVY: [number, number, number]  = [0.086, 0.137, 0.247];  // #16233F
+const DEFAULT_TEAL_GLOW: [number, number, number]  = [0.059, 0.431, 0.416];  // #0F6E6A
+const DEFAULT_AMBER_PEAK: [number, number, number] = [0.710, 0.459, 0.039];  // #B5750A
+
+// ─── Light-mode warm palette ─────────────────────────────────
+const LIGHT_BASE: [number, number, number]  = [1.000, 0.969, 0.937];  // warm white-cream #FFF7EF
+const LIGHT_DEEP: [number, number, number]  = [0.969, 0.843, 0.690];  // peach #F7D7B0
+const LIGHT_GLOW: [number, number, number]  = [0.945, 0.369, 0.110];  // orange #F15E1C
+const LIGHT_PEAK: [number, number, number]  = [0.180, 0.576, 0.435];  // green #2E936F
 
 export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
   palette,
@@ -131,11 +138,27 @@ export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [reducedMotion, setReducedMotion] = useState<boolean>(false);
   const [webglSupported, setWebglSupported] = useState<boolean>(true);
+  // Track theme to swap aurora palette in real-time
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof document === "undefined") return true;
+    return document.documentElement.classList.contains("dark");
+  });
 
-  const baseNavy = palette?.baseNavy ?? DEFAULT_BASE_NAVY;
-  const deepNavy = palette?.deepNavy ?? DEFAULT_DEEP_NAVY;
-  const tealGlow = palette?.tealGlow ?? DEFAULT_TEAL_GLOW;
-  const amberPeak = palette?.amberPeak ?? DEFAULT_AMBER_PEAK;
+  // Watch for theme changes via MutationObserver on html element
+  useEffect(() => {
+    const html = document.documentElement;
+    const observer = new MutationObserver(() => {
+      setIsDark(html.classList.contains("dark"));
+    });
+    observer.observe(html, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Resolve palette: external prop → theme-based defaults
+  const baseNavy = palette?.baseNavy ?? (isDark ? DEFAULT_BASE_NAVY : LIGHT_BASE);
+  const deepNavy = palette?.deepNavy ?? (isDark ? DEFAULT_DEEP_NAVY : LIGHT_DEEP);
+  const tealGlow = palette?.tealGlow ?? (isDark ? DEFAULT_TEAL_GLOW : LIGHT_GLOW);
+  const amberPeak = palette?.amberPeak ?? (isDark ? DEFAULT_AMBER_PEAK : LIGHT_PEAK);
 
   useEffect(() => {
     // Check reduced motion preference

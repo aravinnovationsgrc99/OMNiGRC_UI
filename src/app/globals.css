@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────────────────
+   SHARED DESIGN TOKENS (dark-mode defaults, matches theme)
+   ───────────────────────────────────────────────────────── */
 :root {
   --background: #0A111F;
   --foreground: #F8FAFC;
@@ -10,10 +13,25 @@
   --color-amber: #B5750A;
   --color-rose: #B23A48;
   --color-canvas: #F6F7F6;
-  --color-card-warm: #F8F3EA;
-  --color-card-border-warm: #E8DDD0;
+  --color-card-warm: #F7D7B0;
+  --color-card-border-warm: #E8C090;
   --color-slate-text: #5B6672;
   --color-slate-soft: #8B95A1;
+}
+
+/* ─────────────────────────────────────────────────────────
+   LIGHT-MODE PALETTE TOKENS
+   Only active when .dark is NOT on <html>
+   ───────────────────────────────────────────────────────── */
+html:not(.dark) {
+  --lm-orange: #F15E1C;
+  /* Use for small-text button labels (WCAG AA safe at small sizes) */
+  --lm-orange-sm: #D4521A;
+  --lm-green: #2E936F;
+  --lm-peach: #F7D7B0;
+  --lm-golden: #FAB60A;
+  --lm-yellow: #FFEC69;
+  --lm-canvas: #FFFFFF;
 }
 
 html {
@@ -71,7 +89,10 @@ header, nav, main, section, footer {
   opacity: 1;
 }
 
-/* Micro-Interaction Utility Classes */
+/* ─────────────────────────────────────────────────────────
+   MICRO-INTERACTION UTILITY CLASSES
+   Dark mode: steady ease. Light mode: subtle spring bounce.
+   ───────────────────────────────────────────────────────── */
 .micro-card {
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
@@ -82,12 +103,28 @@ header, nav, main, section, footer {
   box-shadow: 0 12px 24px -10px rgba(15, 110, 106, 0.12);
 }
 
+/* Light-mode spring bounce — slightly more lively than dark mode's steady ease */
+html:not(.dark) .micro-card {
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+html:not(.dark) .micro-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(46, 147, 111, 0.4);
+  box-shadow: 0 14px 28px -10px rgba(241, 94, 28, 0.10);
+}
+
 .micro-btn {
   transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .micro-btn:active {
   transform: scale(0.98);
+}
+
+/* Light-mode button spring */
+html:not(.dark) .micro-btn {
+  transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .micro-row {
@@ -98,7 +135,13 @@ header, nav, main, section, footer {
   background-color: rgba(22, 35, 63, 0.6);
 }
 
-/* Custom scrollbar */
+html:not(.dark) .micro-row:hover {
+  background-color: rgba(247, 215, 176, 0.5);
+}
+
+/* ─────────────────────────────────────────────────────────
+   CUSTOM SCROLLBAR
+   ───────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -116,6 +159,20 @@ header, nav, main, section, footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #0F6E6A;
+}
+
+/* Light-mode scrollbar — warm tones */
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #F7D7B0;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #E8C090;
+  border: 1px solid rgba(241, 94, 28, 0.25);
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #F15E1C;
 }
 
 /* Hide scrollbar for clean carousels */

@@ -85,7 +85,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body suppressHydrationWarning className="antialiased selection:bg-teal/30 selection:text-white bg-[#F6F7F6] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200 overflow-x-hidden w-full max-w-full relative">
+      <body suppressHydrationWarning className="antialiased selection:bg-[#F15E1C]/20 selection:text-navy-900 dark:selection:bg-teal/30 dark:selection:text-white bg-white text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200 overflow-x-hidden w-full max-w-full relative">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

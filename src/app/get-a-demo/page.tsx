@@ -64,7 +64,7 @@ export default function GetADemoPage() {
                 "Review the Compliance Testing Board with rolling 30/60/90-day visibility",
               ].map((benefit, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="p-1 rounded-full bg-teal/20 text-teal mt-1 shrink-0">
+                  <div className="p-1 rounded-full bg-[#2E936F]/20 dark:bg-teal/20 text-[#2E936F] dark:text-teal mt-1 shrink-0">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <span className="text-slate-700 dark:text-slate-200 text-sm font-medium">{benefit}</span>
@@ -73,11 +73,11 @@ export default function GetADemoPage() {
             </div>
 
             <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 backdrop-blur-md flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-teal/20 text-teal flex items-center justify-center font-bold text-lg shrink-0">
+              <div className="h-12 w-12 rounded-xl bg-[#2E936F]/20 dark:bg-teal/20 text-[#2E936F] dark:text-teal flex items-center justify-center font-bold text-lg shrink-0">
                 <Lock className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-xs text-amber font-mono font-semibold">CONFIDENTIAL &amp; TENANT ISOLATED</p>
+                <p className="text-xs text-[#D4521A] dark:text-amber font-mono font-semibold">CONFIDENTIAL &amp; TENANT ISOLATED</p>
                 <p className="text-sm font-bold text-navy-900 dark:text-white">Built for Practical GRC Operations</p>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function GetADemoPage() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-teal py-4 text-base font-bold text-white shadow-xl shadow-teal/30 hover:bg-teal/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
+                  className="w-full rounded-xl bg-[#D4521A] dark:bg-teal py-4 text-base font-bold text-white shadow-xl shadow-[#F15E1C]/30 dark:shadow-teal/30 hover:bg-[#B8451A] dark:hover:bg-teal/90 transition-all duration-300 flex items-center justify-center gap-2 mt-4"
                 >
                   Request Demo <ArrowRight className="h-5 w-5" />
                 </button>

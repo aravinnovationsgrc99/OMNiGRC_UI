@@ -39,7 +39,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
           {/* Left Column: Headline / Eyebrow / Subhead / CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
             {eyebrow && (
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber-600 dark:text-amber font-mono text-xs tracking-widest uppercase font-semibold">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#D4521A] dark:border-teal/40 dark:bg-teal/10 dark:text-amber font-mono text-xs tracking-widest uppercase font-semibold">
                 <span>{eyebrow}</span>
               </div>
             )}

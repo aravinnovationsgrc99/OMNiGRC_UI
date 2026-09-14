@@ -8,24 +8,24 @@ import { PILLARS } from "@/lib/pillars";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-[#0A111F] text-slate-500 dark:text-slate-400 pt-16 pb-12 transition-colors duration-200">
+    <footer className="border-t border-slate-200 dark:border-navy-700/60 bg-[#F7D7B0]/30 dark:bg-[#0A111F] text-slate-600 dark:text-slate-400 pt-16 pb-12 transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 pb-12 border-b border-navy-700/60">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-200 dark:border-navy-700/60">
           {/* Col 1: Platform & Workflows */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold text-amber uppercase tracking-wider font-mono">
+            <h4 className="text-xs font-semibold text-[#D4521A] dark:text-amber uppercase tracking-wider font-mono">
               Core Workflows
             </h4>
             <ul className="space-y-2 text-xs">
               {PILLARS.map((p) => (
                 <li key={p.code}>
-                  <Link href={`/products/${p.slug}`} className="hover:text-teal transition-colors">
+                  <Link href={`/products/${p.slug}`} className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                     {p.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/#core-workflows" className="hover:text-teal transition-colors">
+                <Link href="/#core-workflows" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Platform Architecture
                 </Link>
               </li>
@@ -34,13 +34,13 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Documented Frameworks */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold text-amber uppercase tracking-wider font-mono">
+            <h4 className="text-xs font-semibold text-[#D4521A] dark:text-amber uppercase tracking-wider font-mono">
               Frameworks
             </h4>
             <ul className="space-y-2 text-xs">
               {FRAMEWORKS.map((fw) => (
                 <li key={fw.code}>
-                  <Link href={`/frameworks/${fw.slug}`} className="hover:text-teal transition-colors">
+                  <Link href={`/frameworks/${fw.slug}`} className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                     {fw.name}
                   </Link>
                 </li>
@@ -50,27 +50,27 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Solutions */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold text-amber uppercase tracking-wider font-mono">
+            <h4 className="text-xs font-semibold text-[#D4521A] dark:text-amber uppercase tracking-wider font-mono">
               Solutions
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/solutions/startups" className="hover:text-teal transition-colors">
+                <Link href="/solutions/startups" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   For Lean GRC Teams
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/mid-market" className="hover:text-teal transition-colors">
+                <Link href="/solutions/mid-market" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   For Security Leads &amp; CISOs
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/enterprise" className="hover:text-teal transition-colors">
+                <Link href="/solutions/enterprise" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Continuous Audit Readiness
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-teal transition-colors">
+                <Link href="/pricing" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Transparent Pricing
                 </Link>
               </li>
@@ -79,27 +79,27 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Resources & Knowledge */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold text-amber uppercase tracking-wider font-mono">
+            <h4 className="text-xs font-semibold text-[#D4521A] dark:text-amber uppercase tracking-wider font-mono">
               Resources
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/blog" className="hover:text-teal transition-colors">
+                <Link href="/blog" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Ctrl + GRC Newsletter
                 </Link>
               </li>
               <li>
-                <Link href="/trust-vault" className="hover:text-teal transition-colors">
+                <Link href="/trust-vault" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Resource Hub
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="hover:text-teal transition-colors">
+                <Link href="/about-us" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   About OMNiGRC
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us" className="hover:text-teal transition-colors">
+                <Link href="/contact-us" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -108,15 +108,15 @@ export const Footer: React.FC = () => {
 
           {/* Col 5: Security Statement Card */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 space-y-3">
-            <h4 className="text-xs font-semibold text-amber uppercase tracking-wider font-mono">
+            <h4 className="text-xs font-semibold text-[#D4521A] dark:text-amber uppercase tracking-wider font-mono">
               Trust &amp; Security
             </h4>
-            <div className="rounded-xl bg-navy-900/90 p-3.5 border border-navy-700/60 space-y-2">
+            <div className="rounded-xl bg-white dark:bg-navy-900/90 p-3.5 border border-[#E8C090] dark:border-navy-700/60 space-y-2">
               <div className="flex items-center gap-2">
-                <Lock className="h-4 w-4 text-teal" />
-                <span className="text-xs font-bold text-white">Tenant Isolated</span>
+                <Lock className="h-4 w-4 text-[#2E936F] dark:text-teal" />
+                <span className="text-xs font-bold text-navy-900 dark:text-white">Tenant Isolated</span>
               </div>
-              <p className="text-[11px] text-slate-400 leading-relaxed">
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
                 Advisory AI with data minimization. External calls receive sanitized payloads only.
               </p>
             </div>
@@ -126,22 +126,22 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
           <div className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-teal/20 text-teal">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#F15E1C]/15 dark:bg-teal/20 text-[#D4521A] dark:text-teal">
               <Shield className="h-4 w-4" />
             </div>
-            <span className="font-semibold text-slate-200">
-              OMNi<span className="text-teal">GRC</span>
+            <span className="font-semibold text-navy-900 dark:text-slate-200">
+              OMNi<span className="text-[#D4521A] dark:text-teal">GRC</span>
             </span>
-            <span className="text-slate-600">|</span>
-            <span className="text-slate-400">
+            <span className="text-slate-400">|</span>
+            <span className="text-slate-500 dark:text-slate-400">
               Unified Risk, Asset, and Security-Control Management. © 2026 OMNiGRC. All rights reserved.
             </span>
           </div>
 
-          <div className="flex items-center space-x-6 text-slate-400">
-            <Link href="/privacy-policy" className="hover:text-teal transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-teal transition-colors">Terms of Service</Link>
-            <Link href="/trust-vault" className="hover:text-teal transition-colors">Security Overview</Link>
+          <div className="flex items-center space-x-6 text-slate-500 dark:text-slate-400">
+            <Link href="/privacy-policy" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">Terms of Service</Link>
+            <Link href="/trust-vault" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">Security Overview</Link>
           </div>
         </div>
       </div>

@@ -75,7 +75,7 @@ export const ProblemSection: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold inline-block">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold inline-block">
             THE REALITY OF LEAN GRC
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
@@ -88,13 +88,13 @@ export const ProblemSection: React.FC = () => {
 
           {/* Stat-Free Qualitative Pain Callout Chips */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 font-mono text-xs">
-            <span className="px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-500 font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-500 font-semibold flex items-center gap-1.5">
               <XCircle className="h-3.5 w-3.5" /> Disconnected Spreadsheets
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-amber/10 border border-amber/30 text-amber font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#FAB60A]/20 border border-[#FAB60A]/30 text-navy-900 dark:bg-amber/10 dark:border-amber/30 dark:text-amber font-semibold flex items-center gap-1.5">
               <XCircle className="h-3.5 w-3.5" /> Duplicate Policy Authoring
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-teal/10 border border-teal/30 text-teal font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#2E936F]/10 border border-[#2E936F]/30 text-[#2E936F] dark:bg-teal/10 dark:border-teal/30 dark:text-teal font-semibold flex items-center gap-1.5">
               <XCircle className="h-3.5 w-3.5" /> Pre-Audit Scrambles
             </span>
           </div>

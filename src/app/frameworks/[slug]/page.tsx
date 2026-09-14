@@ -25,7 +25,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
           cta={
             <Link
               href="/get-a-demo"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#D4521A] dark:bg-teal text-white font-bold text-xs hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-lg shadow-[#F15E1C]/20 dark:shadow-teal/20"
             >
               Request Framework Walkthrough <ArrowRight className="h-4 w-4 text-white" />
             </Link>
@@ -37,7 +37,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
             {fw.controls.map((c, idx) => (
               <TiltCard key={idx} className="p-6 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 shadow-lg">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-teal/15 text-teal-700 dark:text-teal-300 shrink-0">
+                  <div className="p-2 rounded-lg bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal-700 shrink-0">
                     <FileCheck2 className="h-5 w-5" />
                   </div>
                   <p className="text-sm font-semibold text-navy-900 dark:text-white mt-0.5">{c}</p>

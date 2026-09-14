@@ -17,7 +17,7 @@ export const FinalCtaSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#F6F7F6] dark:bg-[#0A111F] py-12 sm:py-28 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#0A111F] py-12 sm:py-28 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
       {/* Background Orbs using approved colors */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] sm:h-[600px] w-[90vw] max-w-[800px] rounded-full bg-gradient-to-r from-teal/20 via-amber/15 to-transparent blur-[140px]" />
@@ -31,7 +31,7 @@ export const FinalCtaSection: React.FC = () => {
           viewport={{ once: true }}
           className="space-y-4 sm:space-y-6 mb-10 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal/40 bg-teal/10 text-amber text-xs font-mono tracking-widest uppercase font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#D4521A] dark:border-teal/40 dark:bg-teal/10 dark:text-amber text-xs font-mono tracking-widest uppercase font-semibold">
             <Shield className="h-3.5 w-3.5" /> DEFENDED GRC OPERATIONS
           </div>
 
@@ -45,13 +45,13 @@ export const FinalCtaSection: React.FC = () => {
 
           {/* Verified Workflow Checkmarks */}
           <div className="flex flex-wrap items-center justify-center gap-3 font-mono text-xs max-w-2xl mx-auto pb-2">
-            <span className="px-3.5 py-1.5 rounded-full bg-teal/15 border border-teal/40 text-teal font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#2E936F]/15 border border-[#2E936F]/40 text-[#2E936F] dark:bg-teal/15 dark:border-teal/40 dark:text-teal font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5" /> Map-Once Control Engine
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-amber/15 border border-amber/40 text-amber font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#FAB60A]/20 border border-[#FAB60A]/40 text-navy-900 dark:bg-amber/15 dark:border-amber/40 dark:text-amber font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5" /> Rolling 30/60/90d Cadence
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5" /> Zero LLM Data Retention
             </span>
           </div>
@@ -59,7 +59,7 @@ export const FinalCtaSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 max-w-md sm:max-w-none mx-auto">
             <Link
               href="/get-a-demo"
-              className="w-full sm:w-auto relative group overflow-hidden rounded-xl bg-teal px-8 py-4 text-base font-semibold text-white shadow-xl shadow-teal/30 transition-all duration-300 hover:bg-teal-600 hover:scale-[1.03]"
+              className="w-full sm:w-auto relative group overflow-hidden rounded-xl bg-[#D4521A] dark:bg-teal px-8 py-4 text-base font-semibold text-white shadow-xl shadow-[#F15E1C]/30 dark:shadow-teal/30 transition-all duration-300 hover:bg-[#B8451A] dark:hover:bg-teal-600 hover:scale-[1.03]"
             >
               <span className="relative z-10 flex items-center justify-center gap-3">
                 Request a Demo <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -68,7 +68,7 @@ export const FinalCtaSection: React.FC = () => {
 
             <Link
               href="/pricing"
-              className="w-full sm:w-auto rounded-xl border border-navy-700/60 bg-navy-900/60 px-8 py-4 text-base font-semibold text-slate-200 hover:border-teal/40 hover:bg-navy-800 hover:text-white transition-all duration-300"
+              className="w-full sm:w-auto rounded-xl border border-slate-300 dark:border-navy-700/60 bg-white dark:bg-navy-900/60 px-8 py-4 text-base font-semibold text-navy-900 dark:text-slate-200 hover:border-[#2E936F] dark:hover:border-teal/40 hover:text-[#2E936F] dark:hover:text-white transition-all duration-300"
             >
               Talk to us about GRC
             </Link>
@@ -84,7 +84,7 @@ export const FinalCtaSection: React.FC = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-7 space-y-2">
-              <div className="flex items-center gap-2 text-amber font-mono text-xs uppercase font-bold">
+              <div className="flex items-center gap-2 text-[#D4521A] dark:text-amber font-mono text-xs uppercase font-bold">
                 <Mail className="h-4 w-4 text-teal" /> Newsletter
               </div>
               <h3 className="text-xl font-bold text-white">Subscribe to Ctrl + GRC</h3>

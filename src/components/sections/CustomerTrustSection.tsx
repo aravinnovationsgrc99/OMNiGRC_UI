@@ -64,7 +64,7 @@ export const CustomerTrustSection: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-teal/30 bg-teal/10 text-teal text-[11px] font-mono tracking-widest uppercase mb-3 font-semibold"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#2E936F]/30 bg-[#2E936F]/10 text-[#2E936F] dark:border-teal/30 dark:bg-teal/10 dark:text-teal text-[11px] font-mono tracking-widest uppercase mb-3 font-semibold"
           >
             <Lock className="h-3 w-3" /> DESIGNED FOR PRACTICAL GRC OPERATIONS
           </motion.div>
@@ -89,13 +89,13 @@ export const CustomerTrustSection: React.FC = () => {
 
           {/* Stat-Free Qualitative Capability Badges */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 font-mono text-xs">
-            <span className="px-3.5 py-1.5 rounded-full bg-teal/15 border border-teal/40 text-teal font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#2E936F]/15 border border-[#2E936F]/40 text-[#2E936F] dark:bg-teal/15 dark:border-teal/40 dark:text-teal font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5" /> No Consultant Bloat
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-amber/15 border border-amber/40 text-amber font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#FAB60A]/20 border border-[#FAB60A]/40 text-navy-900 dark:bg-amber/15 dark:border-amber/40 dark:text-amber font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5" /> Mandatory Human Decision
             </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-500/40 text-sky-400 font-semibold flex items-center gap-1.5">
+            <span className="px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-500/40 text-sky-700 dark:text-sky-400 font-semibold flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5" /> Immutable Postgres History
             </span>
           </div>
@@ -118,10 +118,10 @@ export const CustomerTrustSection: React.FC = () => {
                 className="p-3.5 sm:p-6 rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/80 hover:border-teal/40 dark:hover:bg-navy-900/90 hover:bg-slate-50 transition-all group"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-navy-800 text-teal group-hover:bg-teal/10 group-hover:scale-105 transition-all">
+                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-navy-800 text-[#2E936F] dark:text-teal group-hover:bg-[#2E936F]/10 dark:group-hover:bg-teal/10 group-hover:scale-105 transition-all">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[10px] font-mono text-amber font-semibold uppercase bg-slate-100 dark:bg-navy-800 px-2 py-0.5 rounded border border-slate-200 dark:border-navy-700/60">
+                  <span className="text-[10px] font-mono text-[#D4521A] dark:text-amber font-semibold uppercase bg-slate-100 dark:bg-navy-800 px-2 py-0.5 rounded border border-slate-200 dark:border-navy-700/60">
                     {item.tag}
                   </span>
                 </div>

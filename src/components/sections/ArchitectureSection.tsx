@@ -72,7 +72,7 @@ export const ArchitectureSection: React.FC = () => {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold"
+            className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold"
           >
             TRANSPARENT AI ARCHITECTURE
           </motion.p>
@@ -102,7 +102,7 @@ export const ArchitectureSection: React.FC = () => {
         <div className="mb-10 rounded-3xl border border-teal/40 bg-gradient-to-r from-teal/15 via-white dark:via-navy-900/90 to-amber/15 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-3">
-              <span className="px-3 py-1 rounded-full bg-amber/15 border border-amber/30 text-amber text-xs font-mono font-bold uppercase">
+              <span className="px-3 py-1 rounded-full bg-[#FAB60A]/20 dark:bg-amber/15 border border-[#FAB60A]/30 dark:border-amber/30 text-navy-900 dark:text-amber text-xs font-mono font-bold uppercase">
                 Core Operating Principle
               </span>
               <h3 className="text-2xl sm:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight">
@@ -241,7 +241,7 @@ export const ArchitectureSection: React.FC = () => {
                       <span className="text-[10px] font-mono font-bold text-slate-400">
                         STAGE {node.step}
                       </span>
-                      <div className={`p-1.5 rounded-lg ${node.highlight ? "bg-amber/20 text-amber" : "bg-teal/15 text-teal"}`}>
+                      <div className={`p-1.5 rounded-lg ${node.highlight ? "bg-[#FAB60A]/20 dark:bg-amber/20 text-navy-900 dark:text-amber" : "bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal"}`}>
                         <NodeIcon className="h-4 w-4" />
                       </div>
                     </div>

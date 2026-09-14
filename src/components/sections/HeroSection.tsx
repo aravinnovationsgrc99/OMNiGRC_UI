@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
   // Gentle parallax — only Y axis, no scale, to avoid GPU subpixel blur during scroll
   const parallaxY = useTransform(scrollY, [0, 600], [0, -20]);
   return (
-    <section className="relative min-h-[80svh] sm:min-h-[90svh] flex flex-col justify-between overflow-hidden bg-[#0A111F] pt-20 sm:pt-36 pb-8 sm:pb-16">
+    <section className="relative min-h-[80svh] sm:min-h-[90svh] flex flex-col justify-between overflow-hidden bg-[#FFF7EF] dark:bg-[#0A111F] pt-20 sm:pt-36 pb-8 sm:pb-16 transition-colors duration-300">
       {/* WebGL2 Swirling Aurora Background Atmosphere */}
       <AuroraBackground />
 
@@ -37,19 +37,19 @@ export const HeroSection: React.FC = () => {
         {/* Eyebrow badge */}
         <motion.div
           variants={fadeIn}
-          className="inline-flex items-center gap-1.5 self-center px-3 py-1 rounded-full border border-teal/40 bg-teal/10 text-amber text-[10px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase mb-4 sm:mb-8 shadow-inner max-w-[92vw]"
+          className="inline-flex items-center gap-1.5 self-center px-3 py-1 rounded-full border border-[#2E936F]/50 bg-[#2E936F]/15 text-[#D4521A] dark:border-teal/40 dark:bg-teal/10 dark:text-amber text-[10px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase mb-4 sm:mb-8 shadow-inner max-w-[92vw]"
         >
-          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-amber shrink-0" />
+          <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-[#D4521A] dark:text-amber shrink-0" />
           <span className="truncate font-semibold text-[10px] sm:text-xs">THE CONNECTED GRC OPERATING LAYER</span>
         </motion.div>
 
         {/* Main Headline */}
         <motion.h1
           variants={fadeIn}
-          className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.18] mb-4 sm:mb-6 max-w-4xl 2xl:max-w-6xl mx-auto break-words"
+          className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.18] mb-4 sm:mb-6 max-w-4xl 2xl:max-w-6xl mx-auto break-words"
         >
           Unified risk, asset, and control management{" "}
-          <span className="bg-gradient-to-r from-teal via-teal-300 to-amber bg-clip-text text-transparent">
+          <span className="text-[#F15E1C] dark:text-teal">
             for lean GRC teams.
           </span>
         </motion.h1>
@@ -57,7 +57,7 @@ export const HeroSection: React.FC = () => {
         {/* Subheadline */}
         <motion.p
           variants={fadeIn}
-          className="text-xs sm:text-lg md:text-xl text-slate-300 max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-10 font-normal px-1 break-words"
+          className="text-xs sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-10 font-normal px-1 break-words"
         >
           Connect risk registers, asset inventories, control mapping, and compliance testing in one operating workflow. Advisory AI suggests; human oversight approves.
         </motion.p>
@@ -94,11 +94,11 @@ export const HeroSection: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="relative z-10 w-full border-t border-navy-700/60 bg-[#0A111F]/80 py-4 sm:py-5 backdrop-blur-md mt-6"
+        className="relative z-10 w-full border-t border-[#E8C090] dark:border-navy-700/60 bg-[#F7D7B0]/60 dark:bg-[#0A111F]/80 py-4 sm:py-5 backdrop-blur-md mt-6"
       >
         <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2 text-amber font-mono font-semibold uppercase tracking-wider text-[11px] sm:text-xs">
-            <ShieldCheck className="h-4 w-4 text-teal shrink-0" />
+          <div className="flex items-center gap-2 text-[#D4521A] dark:text-amber font-mono font-semibold uppercase tracking-wider text-[11px] sm:text-xs">
+            <ShieldCheck className="h-4 w-4 text-[#2E936F] dark:text-teal shrink-0" />
             <span>Documented Framework Coverage:</span>
           </div>
 
@@ -106,15 +106,15 @@ export const HeroSection: React.FC = () => {
             {FRAMEWORKS.map((fw) => (
               <div
                 key={fw.code}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-navy-700/60 bg-navy-900/80 text-[11px] font-medium text-slate-300"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#E8C090] dark:border-navy-700/60 bg-white/80 dark:bg-navy-900/80 text-[11px] font-medium text-slate-600 dark:text-slate-300"
               >
-                <CheckCircle2 className="h-3 w-3 text-teal" />
-                <span className="font-semibold text-white">{fw.name}</span>
+                <CheckCircle2 className="h-3 w-3 text-[#2E936F] dark:text-teal" />
+                <span className="font-semibold text-navy-900 dark:text-white">{fw.name}</span>
               </div>
             ))}
           </div>
 
-          <Link href="/frameworks/soc-2" className="text-xs text-teal hover:text-white underline font-mono transition-colors">
+          <Link href="/frameworks/soc-2" className="text-xs text-[#2E936F] dark:text-teal hover:text-navy-900 dark:hover:text-white underline font-mono transition-colors">
             View Mapping Workflow →
           </Link>
         </div>

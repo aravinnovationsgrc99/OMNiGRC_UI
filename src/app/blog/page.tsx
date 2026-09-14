@@ -82,11 +82,11 @@ export default function BlogPage() {
               <TiltCard key={post.id} className="p-8 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono mb-4">
-                    <span className="px-2.5 py-1 rounded-full bg-teal/15 text-teal font-semibold">
+                    <span className="px-2.5 py-1 rounded-full bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal font-semibold">
                       {post.category}
                     </span>
                     <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1">
-                      <Calendar className="h-3.5 w-3.5 text-amber" /> {post.date}
+                      <Calendar className="h-3.5 w-3.5 text-[#D4521A] dark:text-amber" /> {post.date}
                     </span>
                   </div>
 

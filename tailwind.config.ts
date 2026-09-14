@@ -69,12 +69,37 @@ const config: Config = {
           800: "#701e26",
           900: "#5e1d23",
         },
+        // ── Light-mode primary action ─────────────────────────────────────
+        // #F15E1C passes WCAG AA for large/bold text (≥ 18pt or ≥ 14pt bold)
+        // Use orange-600 (#D4521A) for small-text labels where contrast is tighter
+        orange: {
+          DEFAULT: "#F15E1C",
+          600: "#D4521A",
+          700: "#B8451A",
+        },
+        // ── Light-mode secondary / positive accent ────────────────────────
+        green: {
+          DEFAULT: "#2E936F",
+          600: "#25785A",
+          700: "#1E6048",
+        },
+        // ── Light-mode card / panel surface ──────────────────────────────
+        peach: {
+          DEFAULT: "#F7D7B0",
+          200: "#F7D7B0",
+          border: "#E8C090",
+        },
+        // ── Light-mode accent fills (FILL USE ONLY — never as text color) ─
+        goldenYellow: "#FAB60A",
+        lightYellow: "#FFEC69",
+        // ── Shared tokens ─────────────────────────────────────────────────
         canvas: {
-          DEFAULT: "#F6F7F6",
+          // Light mode: pure white. Dark mode is controlled via dark:bg-[#0A111F]
+          DEFAULT: "#FFFFFF",
           dark: "#0A111F",
         },
-        cardWarm: "#F8F3EA",
-        cardBorderWarm: "#E8DDD0",
+        cardWarm: "#F7D7B0",
+        cardBorderWarm: "#E8C090",
         slateText: "#5B6672",
         slateSoft: "#8B95A1",
         brand: {
@@ -82,10 +107,12 @@ const config: Config = {
           teal: "#0F6E6A",
           amber: "#B5750A",
           rose: "#B23A48",
-          canvas: "#F6F7F6",
+          canvas: "#FFFFFF",
           slate: "#5B6672",
           slateSoft: "#8B95A1",
           dark: "#0A111F",
+          orange: "#F15E1C",
+          green: "#2E936F",
         },
       },
       keyframes: {
@@ -107,6 +134,8 @@ const config: Config = {
         "card-gradient": "linear-gradient(135deg, rgba(22, 35, 63, 0.9) 0%, rgba(10, 17, 31, 0.95) 100%)",
         "teal-amber-gradient": "linear-gradient(135deg, #0F6E6A 0%, #B5750A 100%)",
         "teal-rose-gradient": "linear-gradient(135deg, #0F6E6A 0%, #B23A48 100%)",
+        "orange-gradient": "linear-gradient(135deg, #F15E1C 0%, #D4521A 100%)",
+        "green-gradient": "linear-gradient(135deg, #2E936F 0%, #25785A 100%)",
       },
     },
   },
