@@ -60,14 +60,6 @@ export const CustomerTrustSection: React.FC = () => {
     <section className="relative border-y border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#131C38] section-rhythm transition-colors duration-200 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2E936F]/30 bg-[#2E936F]/10 text-[#2E936F] dark:border-teal/30 dark:bg-teal/10 dark:text-teal font-mono tracking-widest uppercase mb-3 font-semibold" style={{fontSize: 'max(0.8125rem, 0.6875rem)'}}
-          >
-            <Lock className="h-3 w-3" /> DESIGNED FOR PRACTICAL GRC OPERATIONS
-          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
