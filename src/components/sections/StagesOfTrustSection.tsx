@@ -105,107 +105,127 @@ export const StagesOfTrustSection: React.FC = () => {
           </motion.h2>
         </div>
 
-        <div className="space-y-8 sm:space-y-20">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="space-y-6 sm:space-y-10"
+        >
           {stages.map((card, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7 }}
-            >
-              {/* FloatingDepthCard uses bg-cardWarm in light mode, navy in dark */}
-              <FloatingDepthCard className="p-6 sm:p-10 lg:p-12 border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-navy-900/70 hover:border-teal/60">
-                <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
-                    card.imageLeft ? "lg:flex-row-reverse" : ""
-                  }`}
-                >
-                  <div
-                    className={`lg:col-span-6 space-y-4 sm:space-y-6 ${
-                      card.imageLeft ? "lg:order-2" : "lg:order-1"
-                    }`}
-                  >
-                    <span className="inline-block px-3 py-1 rounded-full border border-[#FAB60A]/40 bg-[#FAB60A]/20 text-navy-900 dark:border-amber/40 dark:bg-amber/10 dark:text-amber text-xs font-mono font-semibold">
-                      {card.stage}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 dark:text-white tracking-tight">
-                      {card.heading}
-                    </h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                      {card.description}
-                    </p>
-
-                    {/* Qualitative Workflow Step Chips */}
-                    {card.steps && (
-                      <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
-                        {card.steps.map((step, sIdx) => (
-                          <span
-                            key={sIdx}
-                            className="px-3 py-1 rounded-xl bg-[#2E936F]/10 border border-[#2E936F]/30 text-[#2E936F] dark:bg-teal/10 dark:border-teal/30 dark:text-teal-300 font-semibold"
-                          >
-                            {step}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
-                    <div>
-                      <Link
-                        href={card.ctaLink}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-[#2E936F] dark:text-teal hover:text-navy-900 dark:hover:text-white transition-colors group"
-                      >
-                        <span className="border-b border-teal/50 group-hover:border-teal pb-0.5">
-                          {card.ctaText}
-                        </span>
-                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`lg:col-span-6 ${
-                      card.imageLeft ? "lg:order-1" : "lg:order-2"
-                    }`}
-                  >
-                    <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl shadow-slate-200/60 dark:shadow-none border border-slate-200/80 dark:border-teal/20 relative overflow-hidden">
-                      <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
-                        <div className="flex items-center gap-2">
-                          <div className="h-2.5 w-2.5 rounded-full bg-[#2E936F] dark:bg-teal" />
-                          <div className="h-2.5 w-2.5 rounded-full bg-[#FAB60A] dark:bg-amber" />
-                          <div className="h-2.5 w-2.5 rounded-full bg-teal-300" />
-                          <span className="ml-2 text-xs font-mono text-slate-500 dark:text-slate-400">
-                            {card.mockupTitle}
-                          </span>
-                        </div>
-                        <span className="text-[11px] text-[#2E936F] dark:text-teal font-mono font-semibold">
-                          Live Posture
-                        </span>
-                      </div>
-
-                      <div className="space-y-2.5">
-                        {card.mockupItems.map((item, itemIdx) => (
-                          <div
-                            key={itemIdx}
-                            className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-navy-900/90 border border-slate-200 dark:border-navy-700/60 text-xs"
-                          >
-                            <div className="flex items-center gap-2.5 truncate">
-                              <CheckCircle2 className="h-4 w-4 text-[#2E936F] dark:text-teal shrink-0" />
-                              <span className="text-slate-800 dark:text-slate-200 font-medium truncate">{item.label}</span>
-                            </div>
-                            <span className="px-2 py-0.5 rounded bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal font-mono font-semibold shrink-0 ml-2">
-                              {item.status}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+            <React.Fragment key={idx}>
+              {idx > 0 && (
+                <div aria-hidden="true" className="flex justify-center items-center py-2 sm:py-4">
+                  <div className="flex flex-col items-center gap-1.5 px-4 py-2 rounded-full border border-slate-200 dark:border-navy-700/60 bg-white/80 dark:bg-navy-900/60 backdrop-blur-md shadow-sm">
+                    <svg
+                      className="h-5 w-5 text-[#2E936F] dark:text-teal animate-bounce"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
                 </div>
-              </FloatingDepthCard>
-            </motion.div>
+              )}
+              <motion.div
+                variants={fadeInUp}
+                className="relative group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl rounded-3xl"
+              >
+                {/* FloatingDepthCard uses bg-cardWarm in light mode, navy in dark */}
+                <FloatingDepthCard className="relative p-6 sm:p-10 lg:p-12 border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-navy-900/70 group-hover:border-teal/60 group-hover:shadow-teal/20 transition-all duration-300">
+                  <div
+                    className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
+                      card.imageLeft ? "lg:flex-row-reverse" : ""
+                    }`}
+                  >
+                    <div
+                      className={`lg:col-span-6 space-y-4 sm:space-y-6 ${
+                        card.imageLeft ? "lg:order-2" : "lg:order-1"
+                      }`}
+                    >
+                      <span className="inline-block px-3 py-1 rounded-full border border-[#FAB60A]/40 bg-[#FAB60A]/20 text-navy-900 dark:border-amber/40 dark:bg-amber/10 dark:text-amber text-xs font-mono font-semibold">
+                        {card.stage}
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 dark:text-white tracking-tight">
+                        {card.heading}
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                        {card.description}
+                      </p>
+
+                      {/* Qualitative Workflow Step Chips */}
+                      {card.steps && (
+                        <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
+                          {card.steps.map((step, sIdx) => (
+                            <span
+                              key={sIdx}
+                              className="px-3 py-1 rounded-xl bg-[#2E936F]/10 border border-[#2E936F]/30 text-[#2E936F] dark:bg-teal/10 dark:border-teal/30 dark:text-teal-300 font-semibold"
+                            >
+                              {step}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      <div>
+                        <Link
+                          href={card.ctaLink}
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-[#2E936F] dark:text-teal hover:text-navy-900 dark:hover:text-white transition-colors group/link"
+                        >
+                          <span className="border-b border-teal/50 group-hover/link:border-teal pb-0.5">
+                            {card.ctaText}
+                          </span>
+                          <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
+                    </div>
+
+                    <div
+                      className={`lg:col-span-6 ${
+                        card.imageLeft ? "lg:order-1" : "lg:order-2"
+                      }`}
+                    >
+                      <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl shadow-slate-200/60 dark:shadow-none border border-slate-200/80 dark:border-teal/20 relative overflow-hidden">
+                        <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
+                          <div className="flex items-center gap-2">
+                            <div className="h-2.5 w-2.5 rounded-full bg-[#2E936F] dark:bg-teal" />
+                            <div className="h-2.5 w-2.5 rounded-full bg-[#FAB60A] dark:bg-amber" />
+                            <div className="h-2.5 w-2.5 rounded-full bg-teal-300" />
+                            <span className="ml-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+                              {card.mockupTitle}
+                            </span>
+                          </div>
+                          <span className="text-[11px] text-[#2E936F] dark:text-teal font-mono font-semibold">
+                            Live Posture
+                          </span>
+                        </div>
+
+                        <div className="space-y-2.5">
+                          {card.mockupItems.map((item, itemIdx) => (
+                            <div
+                              key={itemIdx}
+                              className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-navy-900/90 border border-slate-200 dark:border-navy-700/60 text-xs"
+                            >
+                              <div className="flex items-center gap-2.5 truncate">
+                                <CheckCircle2 className="h-4 w-4 text-[#2E936F] dark:text-teal shrink-0" />
+                                <span className="text-slate-800 dark:text-slate-200 font-medium truncate">{item.label}</span>
+                              </div>
+                              <span className="px-2 py-0.5 rounded bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal font-mono font-semibold shrink-0 ml-2">
+                                {item.status}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </FloatingDepthCard>
+              </motion.div>
+            </React.Fragment>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

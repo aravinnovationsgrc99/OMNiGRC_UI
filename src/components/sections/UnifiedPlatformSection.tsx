@@ -69,16 +69,16 @@ export const UnifiedPlatformSection: React.FC = () => {
               <button
                 key={pillar.id}
                 onClick={() => setActivePillar(idx)}
-                className={`p-3 sm:p-4 rounded-2xl border text-left transition-all duration-200 ${
+                className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col items-start justify-center gap-1 w-full text-left transition-all duration-200 ${
                   isSelected
-                    ? "border-teal bg-white dark:bg-navy-900 shadow-lg shadow-teal/20 scale-[1.02]"
+                    ? "border-[#2E936F] dark:border-teal bg-white dark:bg-navy-900 shadow-lg shadow-teal/20 scale-[1.02] ring-1 ring-[#2E936F]/30 dark:ring-teal/30"
                     : "border-slate-200 dark:border-navy-700/60 bg-white/60 dark:bg-[#0A111F]/60 hover:border-teal/40 dark:hover:bg-navy-900/60"
                 }`}
               >
-                <span className="text-[10px] font-mono uppercase tracking-wider text-amber font-bold block mb-1">
+                <span className="block w-full text-[11px] font-mono font-bold uppercase tracking-widest text-[#D4521A] dark:text-amber mb-0.5">
                   {pillar.tag}
                 </span>
-                <h3 className="text-xs sm:text-sm font-bold text-navy-900 dark:text-white leading-snug truncate">
+                <h3 className="block w-full text-xs sm:text-sm font-extrabold text-navy-900 dark:text-white leading-snug truncate">
                   {pillar.title.split(": ")[1]}
                 </h3>
               </button>

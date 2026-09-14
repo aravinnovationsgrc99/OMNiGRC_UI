@@ -76,10 +76,10 @@ export const IsometricHeroVisual: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as ActiveTab)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all whitespace-nowrap ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all whitespace-nowrap ${
                 activeTab === tab.id
-                  ? "bg-teal text-white shadow-md shadow-teal/30"
-                  : "bg-slate-800/80 dark:bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-700 dark:hover:bg-slate-800 border border-slate-700 dark:border-slate-800"
+                  ? "bg-[#2E936F] dark:bg-teal text-white shadow-lg shadow-[#2E936F]/30 ring-1 ring-white/20"
+                  : "bg-[#1A2333] text-slate-200 hover:text-white hover:bg-slate-800 border border-slate-700/70"
               }`}
             >
               {tab.label}
@@ -99,107 +99,107 @@ export const IsometricHeroVisual: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-12 gap-4"
             >
               {/* Node 1: Risk & Asset Layer */}
-              <div className="md:col-span-4 rounded-2xl border border-slate-700 dark:border-slate-800 bg-slate-900/80 dark:bg-slate-950/80 p-4 space-y-3 flex flex-col justify-between">
+              <div className="md:col-span-4 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 space-y-3 flex flex-col justify-between shadow-lg">
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-amber font-bold flex items-center gap-1">
-                      <AlertTriangle className="h-3 w-3 text-amber" /> Risk & Asset Layer
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAB60A] font-bold flex items-center gap-1">
+                      <AlertTriangle className="h-3.5 w-3.5 text-[#FAB60A]" /> Risk & Asset Layer
                     </span>
-                    <span className="text-[10px] font-mono text-slate-400">Live Posture</span>
+                    <span className="text-[10px] font-mono text-slate-300 font-medium">Live Posture</span>
                   </div>
-                  <h4 className="text-sm font-bold text-white mb-2">Connected Asset Inventory</h4>
+                  <h4 className="text-sm font-bold text-white mb-2 tracking-tight">Connected Asset Inventory</h4>
                   <div className="space-y-2 text-xs">
-                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800 flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Server className="h-3.5 w-3.5 text-teal shrink-0" />
-                        <span className="text-slate-100 dark:text-slate-200 truncate">Production Cloud DB</span>
+                        <Server className="h-3.5 w-3.5 text-[#2E936F] shrink-0" />
+                        <span className="text-slate-100 font-semibold truncate">Production Cloud DB</span>
                       </div>
-                      <span className="text-[10px] font-mono text-slate-400">Asset #41</span>
+                      <span className="text-[10px] font-mono text-slate-300">Asset #41</span>
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800 flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Database className="h-3.5 w-3.5 text-amber shrink-0" />
-                        <span className="text-slate-100 dark:text-slate-200 truncate">Customer PII Store</span>
+                        <Database className="h-3.5 w-3.5 text-[#FAB60A] shrink-0" />
+                        <span className="text-slate-100 font-semibold truncate">Customer PII Store</span>
                       </div>
-                      <span className="text-[10px] font-mono text-amber">High Impact</span>
+                      <span className="text-[10px] font-mono text-[#FAB60A] font-bold">High Impact</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-teal/10 border border-teal/20 text-[11px] text-slate-300">
-                  <p className="font-semibold text-amber">Risk Linkage:</p>
-                  <p className="text-[10px] text-slate-400">Linked to 4 controls & 2 active treatment plans</p>
+                <div className="p-2.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-[11px]">
+                  <p className="font-bold text-[#FAB60A]">Risk Linkage:</p>
+                  <p className="text-[10px] text-slate-300 font-medium">Linked to 4 controls & 2 active treatment plans</p>
                 </div>
               </div>
 
               {/* Node 2: Advisory AI Mapping Engine */}
-              <div className="md:col-span-5 rounded-2xl border border-teal/40 bg-slate-900/90 dark:bg-slate-950/90 p-4 space-y-3 relative overflow-hidden">
-                <div className="flex items-center justify-between border-b border-slate-700 dark:border-slate-800 pb-2">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-teal font-bold flex items-center gap-1.5">
-                    <Sparkles className="h-3.5 w-3.5 text-amber" /> Advisory AI Control Matcher
+              <div className="md:col-span-5 rounded-2xl border border-[#2E936F]/50 bg-[#1A2333] p-4 space-y-3 relative overflow-hidden shadow-lg">
+                <div className="flex items-center justify-between border-b border-slate-700/60 pb-2">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#2E936F] dark:text-teal font-bold flex items-center gap-1.5">
+                    <Sparkles className="h-3.5 w-3.5 text-[#FAB60A]" /> Advisory AI Control Matcher
                   </span>
                   <Badge variant="ai" size="sm">
                     Advisory Only
                   </Badge>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-800 dark:bg-slate-900 border border-teal/30">
+                <div className="p-3 rounded-xl bg-[#0F172A] border border-teal/40">
                   <div className="flex items-center justify-between text-[11px] mb-1">
                     <span className="font-bold text-white">CTRL-084: Mandatory MFA & Passkeys</span>
-                    <span className="font-mono text-teal text-[10px]">94% Match</span>
+                    <span className="font-mono text-[#2E936F] dark:text-teal text-[10px] font-bold">94% Match</span>
                   </div>
-                  <p className="text-[10px] text-slate-400 mb-2">
+                  <p className="text-[10px] text-slate-300 mb-2">
                     Internal control mapped once. AI suggests matching clauses:
                   </p>
                   <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
-                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
+                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
                       ISO 27001: A.9.4.2
                     </span>
-                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
+                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
                       SOC 2: CC6.1
                     </span>
-                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
+                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
                       DPDP: Sec 8(5)
                     </span>
-                    <span className="p-1 rounded bg-slate-900 dark:bg-slate-950 text-slate-300 border border-slate-700 dark:border-slate-800">
+                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
                       ISO 42001: A.7.3
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 dark:bg-slate-900/60 border border-slate-700 dark:border-slate-800 text-[11px]">
-                  <span className="text-slate-400">Analyst Review:</span>
-                  <span className="text-teal font-semibold flex items-center gap-1">
-                    <CheckCircle2 className="h-3 w-3" /> Approved by GRC Lead
+                <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 text-[11px]">
+                  <span className="text-slate-300 font-medium">Analyst Review:</span>
+                  <span className="text-[#2E936F] dark:text-teal font-bold flex items-center gap-1">
+                    <CheckCircle2 className="h-3.5 w-3.5" /> Approved by GRC Lead
                   </span>
                 </div>
               </div>
 
               {/* Node 3: Compliance & Testing Cadence */}
-              <div className="md:col-span-3 rounded-2xl border border-slate-700 dark:border-slate-800 bg-slate-900/80 dark:bg-slate-950/80 p-4 flex flex-col justify-between space-y-3">
+              <div className="md:col-span-3 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between space-y-3 shadow-lg">
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-teal font-bold flex items-center gap-1">
-                      <FileCheck className="h-3 w-3" /> Testing Board
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#2E936F] dark:text-teal font-bold flex items-center gap-1">
+                      <FileCheck className="h-3.5 w-3.5" /> Testing Board
                     </span>
-                    <span className="text-[10px] font-mono text-slate-400">Rolling 30d</span>
+                    <span className="text-[10px] font-mono text-slate-300 font-medium">Rolling 30d</span>
                   </div>
-                  <h4 className="text-sm font-bold text-white mb-2">Evidence Cadence</h4>
-                  <div className="space-y-1.5 text-[11px]">
-                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800">
-                      <p className="font-semibold text-slate-200">Access Review</p>
-                      <p className="text-[10px] text-teal">Passed • Verified 2d ago</p>
+                  <h4 className="text-sm font-bold text-white mb-2 tracking-tight">Evidence Cadence</h4>
+                  <div className="space-y-2 text-[11px]">
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
+                      <p className="font-bold text-slate-100">Access Review</p>
+                      <p className="text-[10px] text-[#2E936F] dark:text-teal font-semibold">Passed • Verified 2d ago</p>
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-800 dark:bg-slate-900 border border-slate-700 dark:border-slate-800">
-                      <p className="font-semibold text-slate-200">Encryption Audit</p>
-                      <p className="text-[10px] text-amber">Due in 14 days</p>
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
+                      <p className="font-bold text-slate-100">Encryption Audit</p>
+                      <p className="text-[10px] text-[#FAB60A] font-semibold">Due in 14 days</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-700 dark:border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                  <span>5 Frameworks</span>
-                  <span className="text-amber">100% Auditable</span>
+                <div className="pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-300">
+                  <span className="font-medium">5 Frameworks</span>
+                  <span className="text-[#FAB60A] font-bold">100% Auditable</span>
                 </div>
               </div>
             </motion.div>
@@ -214,11 +214,11 @@ export const IsometricHeroVisual: React.FC = () => {
               transition={{ duration: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-12 gap-4"
             >
-              <div className="md:col-span-7 rounded-2xl border border-slate-800 bg-slate-950/90 p-4">
+              <div className="md:col-span-7 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 shadow-lg">
                 <h4 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
                   <AlertTriangle className="h-4 w-4 text-rose" /> 5x5 Risk Heatmap & Register
                 </h4>
-                <p className="text-xs text-slate-400 mb-4">
+                <p className="text-xs text-slate-300 mb-4 font-medium">
                   Log, score (Likelihood × Impact), and evaluate residual risk after applying security controls.
                 </p>
                 <div className="grid grid-cols-5 gap-1 sm:gap-2 text-center text-xs font-mono">
@@ -235,33 +235,33 @@ export const IsometricHeroVisual: React.FC = () => {
                         cell.lvl === "Critical"
                           ? "bg-rose/80 text-white border border-rose shadow-md shadow-rose/40"
                           : cell.lvl === "High"
-                          ? "bg-amber/25 text-amber border border-amber/50"
+                          ? "bg-amber/25 text-[#FAB60A] border border-amber/50"
                           : cell.lvl === "Med"
-                          ? "bg-amber/15 text-amber border border-amber/30"
-                          : "bg-teal/15 text-teal border border-teal/30"
+                          ? "bg-amber/15 text-[#FAB60A] border border-amber/30"
+                          : "bg-teal/15 text-[#2E936F] dark:text-teal-300 border border-teal/30"
                       }`}
                     >
                       <span className="text-[10px] sm:text-[11px] leading-none">{cell.score}</span>
-                      <span className="text-[8px] sm:text-[9px] opacity-75 font-sans mt-0.5">{cell.lvl[0]}</span>
+                      <span className="text-[8px] sm:text-[9px] opacity-90 font-sans mt-0.5">{cell.lvl[0]}</span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="md:col-span-5 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col justify-between">
+              <div className="md:col-span-5 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between shadow-lg">
                 <div>
-                  <span className="text-[10px] font-mono text-amber uppercase font-semibold">Active Risk Items</span>
+                  <span className="text-[10px] font-mono text-[#FAB60A] uppercase font-bold">Active Risk Items</span>
                   <div className="space-y-2 mt-2 text-xs">
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
                       <p className="font-bold text-white">RSK-102: Vendor API Downtime</p>
-                      <p className="text-[10px] text-slate-400">Score: 16 (High) → Residual: 6 (Low)</p>
+                      <p className="text-[10px] text-slate-300 font-medium">Score: 16 (High) → Residual: 6 (Low)</p>
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-900 border border-slate-800">
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
                       <p className="font-bold text-white">RSK-088: Cloud Access Drift</p>
-                      <p className="text-[10px] text-slate-400">Score: 20 (Critical) → Mitigated</p>
+                      <p className="text-[10px] text-slate-300 font-medium">Score: 20 (Critical) → Mitigated</p>
                     </div>
                   </div>
                 </div>
-                <div className="p-2 rounded-lg bg-teal/15 border border-teal/30 text-[11px] text-teal font-mono">
+                <div className="p-2.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/30 text-[11px] text-[#2E936F] dark:text-teal-300 font-mono font-bold">
                   All risks map directly to controls & assets
                 </div>
               </div>
@@ -277,33 +277,33 @@ export const IsometricHeroVisual: React.FC = () => {
               transition={{ duration: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-12 gap-4"
             >
-              <div className="md:col-span-6 rounded-2xl border border-teal/40 bg-slate-950/90 p-4">
-                <span className="text-[10px] font-mono uppercase text-amber font-bold">1. Control Definition</span>
-                <div className="mt-2 p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+              <div className="md:col-span-6 rounded-2xl border border-[#2E936F]/40 bg-[#1A2333] p-4 shadow-lg">
+                <span className="text-[10px] font-mono uppercase text-[#FAB60A] font-bold">1. Control Definition</span>
+                <div className="mt-2 p-3 rounded-xl bg-[#0F172A] border border-slate-700/60 space-y-2">
                   <p className="text-xs font-bold text-white">CTRL-019: Automated Patch Management</p>
-                  <p className="text-[11px] text-slate-300">
+                  <p className="text-[11px] text-slate-200 font-medium">
                     &quot;Critical vulnerabilities must be patched within 14 days of public disclosure with rollback tests.&quot;
                   </p>
-                  <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-slateSoft">
-                    <Lock className="h-3 w-3" /> Redacted payload sent to LLM router
+                  <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-slate-300">
+                    <Lock className="h-3 w-3 text-[#2E936F]" /> Redacted payload sent to LLM router
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-6 rounded-2xl border border-slate-800 bg-slate-950/90 p-4 flex flex-col justify-between">
+              <div className="md:col-span-6 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between shadow-lg">
                 <div>
-                  <span className="text-[10px] font-mono uppercase text-teal font-bold">2. AI Suggestion + Human Review</span>
+                  <span className="text-[10px] font-mono uppercase text-[#2E936F] dark:text-teal font-bold">2. AI Suggestion + Human Review</span>
                   <div className="mt-2 space-y-2 text-xs">
-                    <div className="p-2 rounded-lg bg-slate-900 border border-teal/30 flex items-center justify-between">
-                      <span className="text-slate-200">ISO 27001:2022 A.8.8 Management of Tech Vulns</span>
-                      <span className="text-teal font-mono text-[10px]">96% Conf</span>
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-[#2E936F]/40 flex items-center justify-between">
+                      <span className="text-slate-100 font-semibold">ISO 27001:2022 A.8.8 Management of Tech Vulns</span>
+                      <span className="text-[#2E936F] dark:text-teal font-mono text-[10px] font-bold">96% Conf</span>
                     </div>
-                    <div className="p-2 rounded-lg bg-slate-900 border border-teal/30 flex items-center justify-between">
-                      <span className="text-slate-200">SOC 2 CC7.1 Vulnerability Scans</span>
-                      <span className="text-teal font-mono text-[10px]">92% Conf</span>
+                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-[#2E936F]/40 flex items-center justify-between">
+                      <span className="text-slate-100 font-semibold">SOC 2 CC7.1 Vulnerability Scans</span>
+                      <span className="text-[#2E936F] dark:text-teal font-mono text-[10px] font-bold">92% Conf</span>
                     </div>
                   </div>
                 </div>
-                <div className="p-2 rounded-lg bg-teal/15 border border-teal/30 text-[11px] text-amber font-mono text-center">
+                <div className="p-2.5 rounded-xl bg-[#FAB60A]/15 border border-[#FAB60A]/30 text-[11px] text-[#FAB60A] font-mono font-bold text-center">
                   Human analyst approval required before committing to Postgres
                 </div>
               </div>
@@ -316,32 +316,34 @@ export const IsometricHeroVisual: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.1 }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3"
             >
               {FRAMEWORKS.map((fw) => (
                 <div
                   key={fw.code}
-                  className="p-3.5 rounded-xl border border-slate-800 bg-slate-950/80 text-center hover:border-teal/50 transition-all"
+                  className="p-4 rounded-2xl border border-slate-700/70 bg-[#1A2333] text-center hover:border-[#2E936F] dark:hover:border-teal/60 hover:shadow-xl transition-all duration-300 group"
                 >
-                  <Shield className="h-5 w-5 text-teal mx-auto mb-2" />
-                  <p className="font-bold text-xs text-white">{fw.name}</p>
-                  <p className="text-[10px] text-teal font-mono font-semibold mt-1">{fw.badge}</p>
-                  <p className="text-[9px] text-slate-400 mt-0.5">{fw.region}</p>
+                  <div className="p-2 rounded-xl bg-[#2E936F]/15 dark:bg-teal/20 w-fit mx-auto mb-2.5 group-hover:scale-110 transition-transform">
+                    <Shield className="h-6 w-6 text-[#2E936F] dark:text-teal-300" />
+                  </div>
+                  <p className="font-extrabold text-xs text-white tracking-tight">{fw.name}</p>
+                  <p className="text-[11px] text-[#34D399] dark:text-teal-300 font-mono font-bold mt-1.5">{fw.badge}</p>
+                  <p className="text-[10px] text-slate-300 font-medium mt-1 leading-snug">{fw.region}</p>
                 </div>
               ))}
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Bottom Status Row — replaces the old floating badge that clipped outside the container */}
-        <div className="mt-5 pt-3 border-t border-slate-700 dark:border-slate-800 flex items-center justify-between gap-3 text-[11px] font-mono">
-          <div className="flex items-center gap-2 text-teal">
+        {/* Bottom Status Row */}
+        <div className="mt-5 pt-3.5 border-t border-slate-700/60 flex items-center justify-between gap-3 text-[11px] font-mono">
+          <div className="flex items-center gap-2 text-[#2E936F] dark:text-teal">
             <Layers className="h-4 w-4 shrink-0" />
             <span className="font-bold text-white">One Connected Workflow</span>
-            <span className="text-slate-400 hidden sm:inline">Risk ↔ Asset ↔ Control ↔ Framework</span>
+            <span className="text-slate-300 hidden sm:inline font-medium">Risk ↔ Asset ↔ Control ↔ Framework</span>
           </div>
-          <span className="text-slate-500 hidden sm:inline">All changes saved to PostgreSQL</span>
+          <span className="text-slate-300 font-medium hidden sm:inline">All changes saved to PostgreSQL</span>
         </div>
       </motion.div>
     </div>

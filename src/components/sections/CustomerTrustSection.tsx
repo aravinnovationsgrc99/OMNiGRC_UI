@@ -75,7 +75,25 @@ export const CustomerTrustSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight"
           >
-            Built around the workflows lean GRC teams actually manage.
+            Built around the workflows{" "}
+            <span className="relative inline-block text-orange-600 dark:text-teal-400">
+              lean GRC teams
+              <svg
+                className="absolute bottom-[-6px] left-0 w-full h-[4px] overflow-visible pointer-events-none"
+                viewBox="0 0 100 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M1 5.5C25 2 75 7.5 99 2.5"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>{" "}
+            actually manage.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}

@@ -56,6 +56,28 @@ export const TestimonialsSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Scenario Navigation Tabs */}
+        <div className="max-w-4xl 2xl:max-w-5xl mx-auto mb-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {operationalScenarios.map((item, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`text-left p-3.5 sm:p-4 rounded-2xl border transition-all duration-200 ${
+                currentIndex === idx
+                  ? "border-[#2E936F] dark:border-teal bg-white dark:bg-navy-900 shadow-lg ring-1 ring-[#2E936F]/30 dark:ring-teal/30"
+                  : "border-slate-200 dark:border-navy-700/60 bg-slate-50/80 dark:bg-navy-950/60 hover:bg-white dark:hover:bg-navy-900/50"
+              }`}
+            >
+              <span className="block text-[11px] font-bold tracking-widest uppercase mb-1 text-[#D4521A] dark:text-amber">
+                {item.tag}
+              </span>
+              <span className="block text-xs sm:text-sm font-bold text-navy-900 dark:text-white truncate">
+                {item.title.split(":")[1]?.trim() || item.title}
+              </span>
+            </button>
+          ))}
+        </div>
+
         {/* Carousel Container */}
         <div className="max-w-4xl 2xl:max-w-5xl mx-auto relative min-h-[320px] flex flex-col justify-between">
           <AnimatePresence mode="wait">
@@ -67,20 +89,20 @@ export const TestimonialsSection: React.FC = () => {
               transition={{ duration: 0.35, ease: "easeOut" }}
               className="rounded-3xl border border-teal/40 bg-white dark:bg-navy-900/90 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl relative"
             >
-              <div className="flex flex-col gap-1 border-b border-slate-200 dark:border-navy-700/60 pb-4 mb-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-[13px] font-mono text-[#D4521A] dark:text-amber font-bold uppercase tracking-wider">
+              {/* Header Container with Enforced Vertical Stack Structure */}
+              <div className="border-b border-slate-200 dark:border-navy-700/60 pb-4 mb-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="block text-[11px] font-bold tracking-widest uppercase text-[#D4521A] dark:text-amber">
                     {scenario.tag}
                   </span>
                   <span className="text-[11px] font-mono text-slate-400">
                     Scenario 0{currentIndex + 1} of 0{operationalScenarios.length}
                   </span>
                 </div>
+                <h3 className="block text-xl sm:text-2xl font-bold text-navy-900 dark:text-white leading-tight">
+                  {scenario.title}
+                </h3>
               </div>
-
-              <h3 className="text-xl sm:text-2xl font-bold text-navy-900 dark:text-white mb-3">
-                {scenario.title}
-              </h3>
 
               <div className="space-y-4 text-xs sm:text-sm">
                 <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#0A111F]/80 border border-slate-200 dark:border-navy-700/60">

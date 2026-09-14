@@ -49,8 +49,22 @@ export const HeroSection: React.FC = () => {
           className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.18] mb-4 sm:mb-6 max-w-4xl 2xl:max-w-6xl mx-auto break-words"
         >
           Unified risk, asset, and control management{" "}
-          <span className="text-[#F15E1C] dark:text-teal">
+          <span className="relative inline-block text-orange-600 dark:text-teal-400">
             for lean GRC teams.
+            <svg
+              className="absolute bottom-[-6px] left-0 w-full h-[4px] overflow-visible pointer-events-none"
+              viewBox="0 0 100 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M1 5.5C25 2 75 7.5 99 2.5"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
           </span>
         </motion.h1>
 
