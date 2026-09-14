@@ -155,13 +155,13 @@ export const ArchitectureSection: React.FC = () => {
         {/* Real 8-Stage Connected AI Flow Diagram */}
         <div className="mb-10 rounded-3xl border border-teal/30 bg-[#0D1626] dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="px-3 py-1 rounded-full bg-teal/15 text-teal text-[10px] font-mono font-bold uppercase tracking-widest border border-teal/30">
+            <span className="px-3 py-1 rounded-full bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal text-[10px] font-mono font-bold uppercase tracking-widest border border-[#2E936F]/30 dark:border-teal/30">
               END-TO-END DATA FLOW
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
               8-Stage AI API Execution Pipeline
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+            <p className="text-xs sm:text-sm text-slate-300 mt-1">
               From analyst trigger to immutable database record, every step is isolated, sanitized, and human-supervised.
             </p>
           </div>
