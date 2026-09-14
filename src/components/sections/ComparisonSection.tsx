@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { Check, Minus, Shield, Sparkles, X } from "lucide-react";
+import { Check, Minus, MoveHorizontal, Shield, Sparkles, X } from "lucide-react";
 
 const comparisonRows = [
   {
@@ -44,6 +44,33 @@ const comparisonRows = [
 ];
 
 export const ComparisonSection: React.FC = () => {
+  const topScrollRef = useRef<HTMLDivElement>(null);
+  const tableRef = useRef<HTMLDivElement>(null);
+  const isSyncingTop = useRef(false);
+  const isSyncingTable = useRef(false);
+
+  const handleTopScroll = () => {
+    if (isSyncingTop.current) {
+      isSyncingTop.current = false;
+      return;
+    }
+    if (topScrollRef.current && tableRef.current) {
+      isSyncingTable.current = true;
+      tableRef.current.scrollLeft = topScrollRef.current.scrollLeft;
+    }
+  };
+
+  const handleTableScroll = () => {
+    if (isSyncingTable.current) {
+      isSyncingTable.current = false;
+      return;
+    }
+    if (topScrollRef.current && tableRef.current) {
+      isSyncingTop.current = true;
+      topScrollRef.current.scrollLeft = tableRef.current.scrollLeft;
+    }
+  };
+
   return (
     <section className="relative bg-white dark:bg-[#0A111F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,56 +100,86 @@ export const ComparisonSection: React.FC = () => {
         </div>
 
         {/* Comparison Table */}
-        <div className="max-w-5xl 2xl:max-w-6xl mx-auto overflow-x-auto rounded-3xl border border-slate-200 dark:border-teal/30 bg-white dark:bg-navy-900/90 card-elevated backdrop-blur-xl">
-          <div className="min-w-[750px]">
-            {/* Header Row */}
-            <div className="grid grid-cols-12 bg-slate-100 dark:bg-[#0A111F] border-b border-slate-200 dark:border-navy-700/60 text-xs sm:text-sm font-bold text-navy-900 dark:text-slate-200">
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 font-semibold">
-                CAPABILITY
+        <div className="max-w-5xl 2xl:max-w-6xl mx-auto rounded-3xl border border-slate-200 dark:border-teal/30 bg-white dark:bg-navy-900/90 card-elevated backdrop-blur-xl overflow-hidden">
+          
+          {/* Top Horizontal Scrollbar Header & Control Track */}
+          <div className="bg-slate-100/90 dark:bg-[#0A111F]/90 border-b border-slate-200 dark:border-navy-700/60 px-4 pt-3 pb-1">
+            <div className="flex items-center justify-between gap-3 text-xs font-mono mb-1.5 text-slate-700 dark:text-slate-300">
+              <div className="flex items-center gap-2 font-bold text-[#D4521A] dark:text-amber">
+                <MoveHorizontal className="h-4 w-4 animate-pulse shrink-0 text-[#F15E1C] dark:text-amber" />
+                <span className="uppercase tracking-wider text-[11px]">SCROLL TABLE HORIZONTALLY</span>
               </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 font-semibold">
-                MANUAL SPREADSHEETS
-              </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 font-semibold">
-                ENTERPRISE GRC SUITES
-              </div>
-              <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-navy-900 dark:text-white bg-[#2E936F]/15 dark:bg-teal/25 border-l border-[#2E936F]/30 dark:border-teal/50">
-                <span className="flex items-center gap-1.5 font-bold text-[#D4521A] dark:text-amber">
-                  <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2E936F] dark:text-teal" /> OMNiGRC
-                </span>
-                <span className="px-2 py-0.5 rounded bg-[#D4521A] dark:bg-teal/40 text-white text-[9px] font-bold">UNIFIED</span>
-              </div>
+              <span className="text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold hidden sm:inline-block">
+                Drag scrollbar or swipe table to view all columns
+              </span>
             </div>
 
-            {/* Comparison Rows */}
-            <div className="divide-y divide-slate-200 dark:divide-navy-700/60">
-              {comparisonRows.map((row, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.25, delay: idx * 0.05 }}
-                  className="grid grid-cols-12 hover:bg-slate-50 dark:hover:bg-navy-800/40 transition-colors divider-light dark:divider-dark"
-                >
-                  <div className="col-span-3 p-4 font-bold text-[13px] text-[#0F172A] dark:text-white flex items-center">
-                    {row.feature}
-                  </div>
-                  <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
-                    <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
-                    <span>{row.manual}</span>
-                  </div>
-                  <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
-                    <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
-                    <span>{row.heavy}</span>
-                  </div>
-                  <div className="col-span-3 p-4 font-medium bg-[#2E936F]/10 dark:bg-teal/10 border-l border-[#2E936F]/20 dark:border-teal/30 flex items-center gap-2">
-                    <div className="h-4 w-4 rounded-full bg-[#2E936F]/20 dark:bg-teal/20 text-[#2E936F] dark:text-teal-300 flex items-center justify-center shrink-0">
-                      <Check className="h-3 w-3 stroke-[3]" />
+            {/* Synchronized Top Horizontal Scrollbar Track */}
+            <div
+              ref={topScrollRef}
+              onScroll={handleTopScroll}
+              className="overflow-x-auto top-table-scrollbar cursor-grab active:cursor-grabbing"
+            >
+              <div className="min-w-[750px] h-1" />
+            </div>
+          </div>
+
+          {/* Synchronized Table Viewport */}
+          <div
+            ref={tableRef}
+            onScroll={handleTableScroll}
+            className="overflow-x-auto no-scrollbar"
+          >
+            <div className="min-w-[750px]">
+              {/* Header Row */}
+              <div className="grid grid-cols-12 bg-slate-100 dark:bg-[#0A111F] border-b border-slate-200 dark:border-navy-700/60 text-xs sm:text-sm font-bold text-navy-900 dark:text-slate-200">
+                <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 font-semibold">
+                  CAPABILITY
+                </div>
+                <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 font-semibold">
+                  MANUAL SPREADSHEETS
+                </div>
+                <div className="col-span-3 p-4 sm:p-5 flex items-center font-mono text-[13px] uppercase tracking-wider text-[#334155] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 font-semibold">
+                  ENTERPRISE GRC SUITES
+                </div>
+                <div className="col-span-3 p-4 sm:p-5 flex items-center justify-between font-mono text-[10px] sm:text-xs uppercase tracking-wider text-navy-900 dark:text-white bg-[#2E936F]/15 dark:bg-teal/25 border-l border-[#2E936F]/30 dark:border-teal/50">
+                  <span className="flex items-center gap-1.5 font-bold text-[#D4521A] dark:text-amber">
+                    <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2E936F] dark:text-teal" /> OMNiGRC
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-[#D4521A] dark:bg-teal/40 text-white text-[9px] font-bold">UNIFIED</span>
+                </div>
+              </div>
+
+              {/* Comparison Rows */}
+              <div className="divide-y divide-slate-200 dark:divide-navy-700/60">
+                {comparisonRows.map((row, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25, delay: idx * 0.05 }}
+                    className="grid grid-cols-12 hover:bg-slate-50 dark:hover:bg-navy-800/40 transition-colors divider-light dark:divider-dark"
+                  >
+                    <div className="col-span-3 p-4 font-bold text-[13px] text-[#0F172A] dark:text-white flex items-center">
+                      {row.feature}
                     </div>
-                    <span className="text-[#2E936F] dark:text-teal-300 font-bold">{row.omni}</span>
-                  </div>
-                </motion.div>
-              ))}
+                    <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
+                      <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
+                      <span>{row.manual}</span>
+                    </div>
+                    <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
+                      <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
+                      <span>{row.heavy}</span>
+                    </div>
+                    <div className="col-span-3 p-4 font-medium bg-[#2E936F]/10 dark:bg-teal/10 border-l border-[#2E936F]/20 dark:border-teal/30 flex items-center gap-2">
+                      <div className="h-4 w-4 rounded-full bg-[#2E936F]/20 dark:bg-teal/20 text-[#2E936F] dark:text-teal-300 flex items-center justify-center shrink-0">
+                        <Check className="h-3 w-3 stroke-[3]" />
+                      </div>
+                      <span className="text-[#2E936F] dark:text-teal-300 font-bold">{row.omni}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -130,3 +187,4 @@ export const ComparisonSection: React.FC = () => {
     </section>
   );
 };
+

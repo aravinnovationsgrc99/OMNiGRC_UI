@@ -223,7 +223,7 @@ html:not(.dark) .micro-row:hover { background-color: rgba(247,215,176,0.5); }
 /* ─────────────────────────────────────────────────────────
    CUSTOM SCROLLBAR
    ───────────────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: #0A111F; }
 ::-webkit-scrollbar-thumb {
   background: #16233F;
@@ -239,6 +239,44 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
   border: 1px solid rgba(241,94,28,0.25);
 }
 html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #F15E1C; }
+
+/* Dedicated Top Table Scrollbar Styling */
+.top-table-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: #2E936F rgba(10, 17, 31, 0.8);
+}
+.top-table-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+.top-table-scrollbar::-webkit-scrollbar-track {
+  background: rgba(10, 17, 31, 0.8);
+  border-radius: 9999px;
+  margin: 0 6px;
+}
+.top-table-scrollbar::-webkit-scrollbar-thumb {
+  background: #2E936F;
+  border-radius: 9999px;
+  border: 2px solid #0A111F;
+}
+.top-table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #34A853;
+}
+
+html:not(.dark) .top-table-scrollbar {
+  scrollbar-color: #F15E1C rgba(247, 215, 176, 0.6);
+}
+html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-track {
+  background: rgba(247, 215, 176, 0.6);
+  border-radius: 9999px;
+}
+html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb {
+  background: #F15E1C;
+  border-radius: 9999px;
+  border: 2px solid #FFFFFF;
+}
+html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #D4521A;
+}
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

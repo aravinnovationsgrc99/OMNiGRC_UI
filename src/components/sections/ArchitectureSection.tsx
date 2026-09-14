@@ -26,6 +26,11 @@ const ControlMapping3DGraph = dynamic(
   { ssr: false }
 );
 
+const ArchitectureFlowVisualizer = dynamic(
+  () => import("@/components/ui/ArchitectureFlowVisualizer").then((m) => m.ArchitectureFlowVisualizer),
+  { ssr: false }
+);
+
 export const ArchitectureSection: React.FC = () => {
   const [activeTier, setActiveTier] = useState<number | null>(null);
 
@@ -263,46 +268,9 @@ export const ArchitectureSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 3-Tier Layered Architecture Graphic */}
-        <div className="max-w-4xl 2xl:max-w-5xl mx-auto space-y-4 sm:space-y-6">
-          {architectureLayers.map((tier, idx) => {
-            const Icon = tier.icon;
-            const isHovered = activeTier === tier.id;
-
-            return (
-              <motion.div
-                key={tier.id}
-                onMouseEnter={() => setActiveTier(tier.id)}
-                onMouseLeave={() => setActiveTier(null)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className={`relative rounded-2xl border ${tier.borderColor}/40 bg-navy-900/80 p-6 sm:p-8 shadow-xl backdrop-blur-md transition-all duration-300 ${
-                  isHovered ? "scale-[1.01] border-teal shadow-2xl shadow-teal/20" : ""
-                }`}
-              >
-                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl bg-navy-800 text-teal shrink-0 mt-1">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <span className={`text-[10px] font-mono font-bold tracking-widest uppercase px-2 py-0.5 rounded ${tier.badgeColor}`}>
-                          {tier.name}
-                        </span>
-                        <span className="text-[10px] font-mono text-slate-400 border border-navy-700/60 px-2 py-0.5 rounded">
-                          {tier.boundary}
-                        </span>
-                      </div>
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{tier.title}</h3>
-                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{tier.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+        {/* Interactive SVG Architecture Flow Visualizer (Replacing 3 stacked cards with compact animated visual) */}
+        <div className="mt-8">
+          <ArchitectureFlowVisualizer />
         </div>
       </div>
     </section>
