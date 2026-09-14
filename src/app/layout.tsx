@@ -66,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`dark ${ibmSans.variable} ${ibmMono.variable} overflow-x-hidden w-full max-w-full`}>
+    <html lang="en" suppressHydrationWarning className={`${ibmSans.variable} ${ibmMono.variable} overflow-x-hidden w-full max-w-full`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -74,7 +74,7 @@ export default function RootLayout({
               (function() {
                 try {
                   var saved = localStorage.getItem('omnigrc-theme');
-                  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  if (saved === 'dark') {
                     document.documentElement.classList.add('dark');
                   } else {
                     document.documentElement.classList.remove('dark');

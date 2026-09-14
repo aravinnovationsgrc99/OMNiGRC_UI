@@ -13,20 +13,17 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>("dark");
+  const [theme, setThemeState] = useState<Theme>("light");
 
   useEffect(() => {
-    // Check localStorage first
+    // Check localStorage first — default to light mode unless explicitly set to dark
     const savedTheme = localStorage.getItem("omnigrc-theme") as Theme | null;
-    if (savedTheme === "dark" || savedTheme === "light") {
-      setThemeState(savedTheme);
-      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    if (savedTheme === "dark") {
+      setThemeState("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      // Fallback to system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initialTheme = prefersDark ? "dark" : "light";
-      setThemeState(initialTheme);
-      document.documentElement.classList.toggle("dark", initialTheme === "dark");
+      setThemeState("light");
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
