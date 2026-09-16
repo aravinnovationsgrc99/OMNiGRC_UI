@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { getFrameworkBySlug, FRAMEWORKS } from "@/lib/frameworks";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowDown, Check } from "lucide-react";
 
 interface HeroImageWithFallbackProps {
   src: string;
@@ -441,33 +441,194 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
 
 export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
   return (
-    <div aria-hidden="true" className="relative w-full flex items-center justify-center min-h-[300px] sm:min-h-[360px] overflow-visible">
-      <div className="absolute w-72 h-72 rounded-full bg-teal/20 blur-3xl pointer-events-none" />
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 420 300"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto max-w-[420px] filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.6)] z-10"
-      >
-        <text x="210" y="32" textAnchor="middle" fill="#F59E0B" fontSize="13" fontFamily="monospace" fontWeight="bold">
-          TAILORED WORKFLOW MATURITY PIPELINE
-        </text>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.96 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      aria-label="Visual GRC Maturity Pipeline Diagram"
+      className="relative w-full max-w-[600px] mx-auto p-4 sm:p-6 rounded-3xl border border-teal-500/30 bg-gradient-to-b from-[#FFFFFF] via-[#F8FAFC] to-[#F1F5F9] shadow-xl shadow-teal-900/5 text-slate-800 overflow-hidden"
+    >
+      {/* Background Subtle Ambient Glowing Orbs */}
+      <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-teal-400/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-16 -left-16 w-72 h-72 rounded-full bg-blue-400/10 blur-3xl pointer-events-none" />
 
-        {/* Tier Cards Floating */}
-        <rect x="50" y="65" width="320" height="54" rx="12" fill="#16233F" stroke="#14B8A6" strokeWidth="2" />
-        <text x="75" y="92" fill="#FFFFFF" fontSize="11" fontWeight="bold">Stage 1: Single Risk &amp; Control Register</text>
-        <text x="75" y="108" fill="#14B8A6" fontSize="9" fontFamily="monospace">Centralized baseline logging &amp; scoring</text>
+      {/* Header Badge */}
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-200">
+        <div className="flex items-center gap-2">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-600"></span>
+          </span>
+          <h3 className="text-xs sm:text-sm font-mono font-bold tracking-wider uppercase text-teal-900 dark:text-teal-400">
+            WORKFLOW MATURITY PIPELINE
+          </h3>
+        </div>
+        <span className="px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-mono font-bold">
+          100% AUTOMATED
+        </span>
+      </div>
 
-        <rect x="50" y="135" width="320" height="54" rx="12" fill="#16233F" stroke="#3B82F6" strokeWidth="2" />
-        <text x="75" y="162" fill="#FFFFFF" fontSize="11" fontWeight="bold">Stage 2: Multi-Standard Cross-Mapping</text>
-        <text x="75" y="178" fill="#60A5FA" fontSize="9" fontFamily="monospace">ISO 27001, SOC 2, GDPR, DPDP alignment</text>
+      {/* 3 Graphical Visual Nodes */}
+      <div className="relative z-10 space-y-3.5">
+        {/* Stage 1: 5x5 Matrix Graphic Node */}
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          className="p-4 rounded-2xl bg-white border border-teal-200 shadow-sm hover:border-teal-400 hover:shadow-md transition-all group relative overflow-hidden"
+        >
+          <div className="flex items-center justify-between gap-3 mb-3">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded bg-teal-100 text-teal-900 text-xs font-mono font-bold">
+                01
+              </span>
+              <h4 className="text-sm font-bold text-slate-900">Central Risk Register</h4>
+            </div>
+            <span className="text-xs font-mono text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded border border-teal-200 font-semibold">
+              5x5 Matrix Scoring
+            </span>
+          </div>
 
-        <rect x="50" y="205" width="320" height="54" rx="12" fill="#16233F" stroke="#10B981" strokeWidth="2" />
-        <text x="75" y="232" fill="#FFFFFF" fontSize="11" fontWeight="bold">Stage 3: Continuous Rolling Audit Testing</text>
-        <text x="75" y="248" fill="#34D399" fontSize="9" fontFamily="monospace">30/60/90-Day automated proof verification</text>
-      </svg>
-    </div>
+          {/* Mini 5x5 Heatmap Matrix Graphic */}
+          <div className="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+            <div className="grid grid-cols-5 gap-1.5">
+              {[
+                "#0F6E6A", "#0F6E6A", "#B5750A", "#EF4444", "#DC2626",
+                "#0F6E6A", "#0F6E6A", "#B5750A", "#EF4444", "#EF4444",
+                "#0F6E6A", "#0F6E6A", "#B5750A", "#F59E0B", "#F59E0B",
+                "#0F6E6A", "#0F6E6A", "#B5750A", "#B5750A", "#B5750A",
+                "#0F6E6A", "#0F6E6A", "#0F6E6A", "#0F6E6A", "#0F6E6A"
+              ].map((c, i) => (
+                <div
+                  key={i}
+                  className={`w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-[4px] transition-transform ${
+                    i === 8 ? "ring-2 ring-slate-900 scale-110 animate-pulse" : ""
+                  }`}
+                  style={{ backgroundColor: c }}
+                />
+              ))}
+            </div>
+
+            <div className="text-right pl-3">
+              <div className="text-xs font-mono text-slate-500 uppercase font-semibold">Sample Score</div>
+              <div className="text-lg sm:text-xl font-mono font-extrabold text-amber-600">16 / 25</div>
+              <div className="text-xs font-mono text-emerald-700 font-bold">✓ Risk Scored</div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Animated Connecting Beam 1 -> 2 */}
+        <div className="relative flex justify-center">
+          <div className="w-0.5 h-4 bg-slate-200 relative overflow-hidden">
+            <motion.div
+              animate={{ y: ["-100%", "200%"] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+              className="w-full h-3 bg-gradient-to-b from-transparent via-blue-500 to-transparent"
+            />
+          </div>
+        </div>
+
+        {/* Stage 2: AI Multi-Standard Hub Node (EXPLICIT EXAMPLE CASE LABEL) */}
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          className="p-4 rounded-2xl bg-white border border-blue-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all group relative overflow-hidden"
+        >
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded bg-blue-100 text-blue-900 text-xs font-mono font-bold">
+                02
+              </span>
+              <h4 className="text-sm font-bold text-slate-900">Multi-Standard AI Engine</h4>
+            </div>
+            <span className="text-xs font-mono text-blue-800 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200 font-semibold">
+              Example Case: AI Match Confidence %
+            </span>
+          </div>
+
+          {/* AI Cross-Mapping Graphical Nodes - 6 FRAMEWORKS */}
+          <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-mono text-xs font-extrabold shadow-md shadow-blue-500/20">
+                AI
+              </div>
+              <div className="hidden sm:block w-3 h-0.5 bg-gradient-to-r from-blue-500 to-blue-300 animate-pulse" />
+            </div>
+
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 w-full">
+              {[
+                { name: "ISO 27001", match: "98%" },
+                { name: "ISO 42001", match: "94%" },
+                { name: "SOC 2", match: "95%" },
+                { name: "GDPR", match: "99%" },
+                { name: "DPDP", match: "100%" },
+                { name: "HIPAA", match: "96%" }
+              ].map((f, i) => (
+                <div key={i} className="p-2 rounded-xl bg-white border border-blue-200 text-center shadow-2xs">
+                  <div className="text-xs font-mono text-slate-800 font-bold truncate">{f.name}</div>
+                  <div className="text-xs font-mono text-blue-600 font-extrabold">{f.match}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Animated Connecting Beam 2 -> 3 */}
+        <div className="relative flex justify-center">
+          <div className="w-0.5 h-4 bg-slate-200 relative overflow-hidden">
+            <motion.div
+              animate={{ y: ["-100%", "200%"] }}
+              transition={{ repeat: Infinity, duration: 1.5, delay: 0.75, ease: "linear" }}
+              className="w-full h-3 bg-gradient-to-b from-transparent via-emerald-500 to-transparent"
+            />
+          </div>
+        </div>
+
+        {/* Stage 3: Rolling Audit Cadence Board Node (CLEAN LEGIBLE TEXT, NO AKWARD WRAPS) */}
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          className="p-4 rounded-2xl bg-white border border-emerald-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group relative overflow-hidden"
+        >
+          <div className="flex items-center justify-between gap-3 mb-3">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-900 text-xs font-mono font-bold">
+                03
+              </span>
+              <h4 className="text-sm font-bold text-slate-900">Continuous Rolling Audits</h4>
+            </div>
+            <span className="text-xs font-mono text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200 font-semibold">
+              Auto Proof Verification
+            </span>
+          </div>
+
+          {/* 30 / 60 / 90 Day Graphical Cards with Clean 12px Text */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-200">
+            <div className="p-2.5 rounded-xl bg-emerald-50/80 border border-emerald-200 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-emerald-900 font-bold mb-0.5">30 DAYS DUE</div>
+              <div className="text-sm font-mono font-extrabold text-slate-900 my-0.5">VERIFIED</div>
+              <div className="text-xs text-emerald-700 font-semibold mt-0.5">✓ Proof Attached</div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-amber-900 font-bold mb-0.5">60 DAYS DUE</div>
+              <div className="text-sm font-mono font-extrabold text-slate-900 my-0.5">IN REVIEW</div>
+              <div className="text-xs text-amber-700 font-semibold mt-0.5">⚡ Automated Test</div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-blue-50/80 border border-blue-200 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-blue-900 font-bold mb-0.5">90 DAYS DUE</div>
+              <div className="text-sm font-mono font-extrabold text-slate-900 my-0.5">SCHEDULED</div>
+              <div className="text-xs text-blue-700 font-semibold mt-0.5">Immutable Log</div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Footer Minimal Status */}
+      <div className="relative z-10 mt-3.5 pt-2.5 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600">
+        <span className="text-teal-800 font-bold flex items-center gap-1.5">
+          <CheckCircle2 className="w-4 h-4 text-teal-600" /> Defensible Audit Trail Active
+        </span>
+        <span className="text-slate-500 font-semibold">PostgreSQL Logged</span>
+      </div>
+    </motion.div>
   );
 };
 
