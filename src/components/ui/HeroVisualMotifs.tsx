@@ -53,16 +53,16 @@ export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColo
   const citations = fw?.citations || ['A.5', 'A.7', 'A.8'];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      aria-hidden="true" 
+      aria-hidden="true"
       className="relative w-full flex flex-col items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-visible"
     >
       {/* Soft Ambient Radial Glow Behind Diagram */}
-      <div 
+      <div
         className="absolute w-80 h-80 rounded-full opacity-30 dark:opacity-40 blur-3xl pointer-events-none"
         style={{ backgroundColor: color }}
       />
@@ -88,12 +88,12 @@ export const FrameworkMotif: React.FC<FrameworkMotifProps> = ({ slug, accentColo
           </defs>
 
           {/* Ambient Glow Disk Behind Shield */}
-          <motion.circle 
-            cx="230" 
-            cy="150" 
-            r="110" 
-            fill={color} 
-            opacity="0.18" 
+          <motion.circle
+            cx="230"
+            cy="150"
+            r="110"
+            fill={color}
+            opacity="0.18"
             animate={{ scale: [0.95, 1.08, 0.95], opacity: [0.15, 0.25, 0.15] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
           />
@@ -499,9 +499,8 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
               ].map((c, i) => (
                 <div
                   key={i}
-                  className={`w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-[4px] transition-transform ${
-                    i === 8 ? "ring-2 ring-slate-900 scale-110 animate-pulse" : ""
-                  }`}
+                  className={`w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-[4px] transition-transform ${i === 8 ? "ring-2 ring-slate-900 scale-110 animate-pulse" : ""
+                    }`}
                   style={{ backgroundColor: c }}
                 />
               ))}
@@ -656,12 +655,12 @@ export const PricingMotif: React.FC = () => {
           <rect x="40" y="60" width="100" height="190" rx="14" fill="#16233F" stroke="#3B82F6" strokeWidth="2" />
           <text x="90" y="92" textAnchor="middle" fill="#60A5FA" fontSize="12" fontWeight="bold">Starter</text>
           <text x="90" y="112" textAnchor="middle" fill="#94A3B8" fontSize="9" fontFamily="monospace">1 Framework</text>
-          
+
           <line x1="55" y1="130" x2="125" y2="130" stroke="#3B82F6" strokeWidth="1" strokeDasharray="3 3" />
           <text x="90" y="152" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Risk Register</text>
           <text x="90" y="172" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">5x5 Matrix</text>
           <text x="90" y="192" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">PostgreSQL Log</text>
-          
+
           <rect x="55" y="212" width="70" height="22" rx="11" fill="#3B82F6" opacity="0.2" />
           <text x="90" y="226" textAnchor="middle" fill="#93C5FD" fontSize="8" fontFamily="monospace" fontWeight="bold">LEAN TEAMS</text>
         </g>
@@ -671,10 +670,10 @@ export const PricingMotif: React.FC = () => {
           <rect x="160" y="45" width="100" height="215" rx="14" fill="#16233F" stroke="#14B8A6" strokeWidth="2.5" />
           <rect x="175" y="55" width="70" height="18" rx="9" fill="#14B8A6" />
           <text x="210" y="68" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontFamily="monospace" fontWeight="bold">MOST POPULAR</text>
-          
+
           <text x="210" y="98" textAnchor="middle" fill="#FFFFFF" fontSize="13" fontWeight="bold">Growth</text>
           <text x="210" y="118" textAnchor="middle" fill="#2DD4BF" fontSize="9" fontFamily="monospace">Multi-Standard</text>
-          
+
           <line x1="175" y1="135" x2="245" y2="135" stroke="#14B8A6" strokeWidth="1" strokeDasharray="3 3" />
           <text x="210" y="155" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Map-Once Engine</text>
           <text x="210" y="175" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">PII Data Tracing</text>
@@ -687,12 +686,12 @@ export const PricingMotif: React.FC = () => {
           <rect x="280" y="60" width="100" height="190" rx="14" fill="#16233F" stroke="#8B5CF6" strokeWidth="2" />
           <text x="330" y="92" textAnchor="middle" fill="#C084FC" fontSize="12" fontWeight="bold">Scale</text>
           <text x="330" y="112" textAnchor="middle" fill="#94A3B8" fontSize="9" fontFamily="monospace">All 6 Standards</text>
-          
+
           <line x1="295" y1="130" x2="365" y2="130" stroke="#8B5CF6" strokeWidth="1" strokeDasharray="3 3" />
           <text x="330" y="152" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Data Residency</text>
           <text x="330" y="172" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Tenant Isolation</text>
           <text x="330" y="192" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Full Audit Export</text>
-          
+
           <rect x="295" y="212" width="70" height="22" rx="11" fill="#8B5CF6" opacity="0.2" />
           <text x="330" y="226" textAnchor="middle" fill="#DDD6FE" fontSize="8" fontFamily="monospace" fontWeight="bold">MULTI-REGION</text>
         </g>
@@ -761,7 +760,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
           /* Minimalist Contact Architect Desk UI Widget */
           <g>
             <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#14B8A6" strokeWidth="1.5" />
-            
+
             {/* Header bar */}
             <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
             <circle cx="52" cy="48" r="4" fill="#EF4444" />
@@ -804,7 +803,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
           /* Minimalist Privacy Data Minimization Engine UI Widget */
           <g>
             <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#10B981" strokeWidth="1.5" />
-            
+
             {/* Header bar */}
             <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
             <circle cx="52" cy="48" r="4" fill="#10B981" />
@@ -859,7 +858,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
           /* Minimalist Terms Master Service Agreement UI Widget */
           <g>
             <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#F59E0B" strokeWidth="1.5" />
-            
+
             {/* Header bar */}
             <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
             <circle cx="52" cy="48" r="4" fill="#F59E0B" />
@@ -924,7 +923,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
           /* Minimalist Trust & Resource Vault UI Widget */
           <g>
             <rect x="30" y="30" width="380" height="240" rx="16" fill="#16233F" stroke="#10B981" strokeWidth="1.5" />
-            
+
             {/* Header bar */}
             <rect x="30" y="30" width="380" height="36" rx="16" fill="#0A111F" opacity="0.9" />
             <circle cx="52" cy="48" r="4" fill="#10B981" />
