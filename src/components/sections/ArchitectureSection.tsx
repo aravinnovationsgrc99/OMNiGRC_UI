@@ -227,7 +227,7 @@ export const ArchitectureSection: React.FC = () => {
               {
                 step: "08",
                 label: "Primary DB",
-                sub: "PostgreSQL Record",
+                sub: "Structured Application Audit Log",
                 icon: Database,
                 color: "teal",
               },

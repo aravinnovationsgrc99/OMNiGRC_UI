@@ -106,7 +106,7 @@ export const CustomerTrustSection: React.FC = () => {
               <CheckCircle2 className="h-3.5 w-3.5" /> Mandatory Human Decision
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-500/40 text-sky-700 dark:text-sky-400 font-semibold flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5" /> Immutable Postgres History
+              <CheckCircle2 className="h-3.5 w-3.5" /> Structured Application Event Logs
             </span>
           </div>
         </div>

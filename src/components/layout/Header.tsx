@@ -91,14 +91,14 @@ export const Header: React.FC = () => {
             {/* Mega Menu: Workflows */}
             <div
               className="relative"
-              onMouseEnter={() => setActiveMenu("product")}
+              onMouseEnter={() => setActiveMenu("workflows")}
               onMouseLeave={() => setActiveMenu(null)}
             >
               <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
-                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "product" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
+                Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "workflows" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
-                {activeMenu === "product" && (
+                {activeMenu === "workflows" && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -106,73 +106,56 @@ export const Header: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[94vw] max-w-5xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
                   >
-                    {/* Visual Card Grid for 4 Core Workflows */}
-                    <div className="md:col-span-5 space-y-3">
+                    <div className="md:col-span-8 space-y-3">
                       <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4521A] dark:text-amber font-mono">
-                        Four Core Workflows
+                        Ten Connected GRC Workflows
                       </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        {PILLARS.map((p) => {
-                          const iconMap: Record<string, React.ReactNode> = {
-                            RISK: <ShieldAlert className="h-3.5 w-3.5" />,
-                            ASSET: <Server className="h-3.5 w-3.5" />,
-                            CONTROL: <Sparkles className="h-3.5 w-3.5" />,
-                            BOARD: <CalendarCheck className="h-3.5 w-3.5" />,
-                          };
-                          return (
-                            <Link key={p.code} href={`/products/${p.slug}`}>
-                              <motion.div
-                                whileHover={{ y: -3, scale: 1.01 }}
-                                transition={{ duration: 0.2 }}
-                                className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all flex flex-col justify-between group h-full relative overflow-hidden"
-                              >
-                                <div
-                                  className="absolute top-0 left-0 bottom-0 w-1 rounded-l-xl"
-                                  style={{ backgroundColor: p.accentColor }}
-                                />
-                                <div className="pl-1.5">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <div
-                                      className="p-1 rounded-lg text-white shrink-0"
-                                      style={{ backgroundColor: p.accentColor }}
-                                    >
-                                      {iconMap[p.code] || <Shield className="h-3.5 w-3.5" />}
-                                    </div>
-                                     <span className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal-300 transition-colors">
-                                      {p.name}
-                                    </span>
-                                  </div>
-                                  <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight line-clamp-2">
-                                    {p.oneLiner}
-                                  </p>
-                                </div>
-                              </motion.div>
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    <div className="md:col-span-3 space-y-3 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
-                      <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4521A] dark:text-amber font-mono">Lean GRC Solutions</h4>
-                      <div className="space-y-2 text-xs">
-                        <Link href="/solutions/startups" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
-                          <p className="font-bold text-navy-900 dark:text-white">For Lean Security Teams</p>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400">Replace manual spreadsheets with unified operations</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                        <Link href="/products/risk-register" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Risk Register</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">5x5 Scoring &amp; residual tracking</p>
                         </Link>
-                        <Link href="/solutions/mid-market" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
-                          <p className="font-bold text-navy-900 dark:text-white">For GRC Leads &amp; CISOs</p>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400">One control mapped across multiple standards</p>
+                        <Link href="/products/asset-inventory" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Server className="h-3.5 w-3.5 text-[#2E936F]" /> Asset &amp; Inventory</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Cloud infra discovery &amp; ownership</p>
                         </Link>
-                        <Link href="/solutions/enterprise" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/80 transition-colors">
-                          <p className="font-bold text-navy-900 dark:text-white">For Audit Readiness</p>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400">Continuous rolling testing &amp; immutable history</p>
+                        <Link href="/products/control-mapping" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Sparkles className="h-3.5 w-3.5 text-[#F15E1C]" /> Control Mapping</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Map once across frameworks</p>
+                        </Link>
+                        <Link href="/products/compliance-board" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><CalendarCheck className="h-3.5 w-3.5 text-[#2E936F]" /> Compliance Board</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">30/60/90-day testing cadence</p>
+                        </Link>
+                        <Link href="/products/vulnerabilities" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Vulnerabilities</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Asset-linked finding governance</p>
+                        </Link>
+                        <Link href="/products/vendors" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Globe className="h-3.5 w-3.5 text-[#2E936F]" /> Vendors</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Third-party supply chain risk</p>
+                        </Link>
+                        <Link href="/products/policies" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#F15E1C]" /> Policies</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Centralized review lifecycle</p>
+                        </Link>
+                        <Link href="/products/audits" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Award className="h-3.5 w-3.5 text-[#2E936F]" /> Audits</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Structured assessments &amp; workpapers</p>
+                        </Link>
+                        <Link href="/products/remediation" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-[#F15E1C]" /> Remediation</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Corrective action SLA tracking</p>
+                        </Link>
+                        <Link href="/products/evidence" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group col-span-1 sm:col-span-2 lg:col-span-3">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#2E936F]" /> Evidence References &amp; Records</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400">External evidence reference/index layer linking controls to defensible audit records</p>
                         </Link>
                       </div>
                     </div>
 
                     <div className="md:col-span-4 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
-                       <div className="h-full rounded-xl bg-gradient-to-b from-[#2E936F]/10 to-[#F7D7B0]/30 dark:from-teal/20 dark:to-navy-900/90 p-5 border border-[#2E936F]/30 dark:border-teal/30 flex flex-col justify-between">
+                      <div className="h-full rounded-xl bg-gradient-to-b from-[#2E936F]/10 to-[#F7D7B0]/30 dark:from-teal/20 dark:to-navy-900/90 p-5 border border-[#2E936F]/30 dark:border-teal/30 flex flex-col justify-between">
                         <div>
                           <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-3">
                             Advisory AI Engine
@@ -182,7 +165,7 @@ export const Header: React.FC = () => {
                             Data-minimized clause correlation with mandatory human review and approval.
                           </p>
                         </div>
-                        <Link href="/get-a-demo">
+                        <Link href="/demo">
                           <Button variant="primary" size="sm" className="w-full" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
                             Book a Walkthrough
                           </Button>
@@ -218,94 +201,113 @@ export const Header: React.FC = () => {
                         <p className="text-[11px] text-slate-500 dark:text-slate-400">Map once and align across core standards</p>
                       </div>
                       <Link
-                        href="/frameworks/soc-2"
+                        href="/frameworks"
                         className="text-xs font-semibold text-[#2E936F] dark:text-teal hover:underline flex items-center gap-1"
                       >
-                        Explore Coverage <ArrowRight className="h-3.5 w-3.5" />
+                        All Frameworks <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {FRAMEWORKS.map((fw) => (
-                        <Link
-                          key={fw.code}
-                          href={`/frameworks/${fw.slug}`}
-                          className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 dark:hover:bg-navy-800 transition-all"
-                        >
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="font-bold text-navy-900 dark:text-white text-xs">{fw.name}</span>
-                            <span
-                              className="h-2 w-2 rounded-full"
-                              style={{ backgroundColor: fw.accentColor }}
-                            />
-                          </div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{fw.oneLiner}</p>
-                        </Link>
-                      ))}
+                      <Link href="/frameworks/iso-27001" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
+                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">ISO 27001:2022</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">ISMS Information Security Governance</p>
+                      </Link>
+                      <Link href="/frameworks/soc-2" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
+                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">SOC 2 Type II</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">AICPA Trust Services Criteria</p>
+                      </Link>
+                      <Link href="/frameworks/iso-42001" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
+                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">ISO 42001:2023</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Artificial Intelligence Management (AIMS)</p>
+                      </Link>
+                      <Link href="/frameworks/gdpr" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
+                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">GDPR &amp; UK GDPR</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">EU &amp; UK Data Protection Governance</p>
+                      </Link>
+                      <Link href="/frameworks/dpdp" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
+                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">DPDP Act 2023</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Digital Personal Data Protection (India)</p>
+                      </Link>
+                      <Link href="/frameworks/hipaa" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
+                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">HIPAA Security Rule</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Healthcare ePHI Protection</p>
+                      </Link>
                     </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Mega Menu: Solutions */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveMenu("solutions")}
+              onMouseLeave={() => setActiveMenu(null)}
+            >
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+                Solutions <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "solutions" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
+              </button>
+              <AnimatePresence>
+                {activeMenu === "solutions" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-5 shadow-2xl backdrop-blur-xl space-y-2"
+                  >
+                    <h4 className="text-xs font-mono uppercase text-[#D4521A] dark:text-amber font-bold mb-2">By Customer Segment</h4>
+                    <Link href="/solutions/lean-security-teams" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
+                      <p className="font-bold text-xs">Lean Security Teams</p>
+                      <p className="text-[11px] text-slate-500">Unify risk, asset, and control tracking without overhead</p>
+                    </Link>
+                    <Link href="/solutions/security-leaders" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
+                      <p className="font-bold text-xs">Security Leaders &amp; CISOs</p>
+                      <p className="text-[11px] text-slate-500">Board-ready reporting &amp; multi-framework crosswalks</p>
+                    </Link>
+                    <Link href="/solutions/compliance-managers" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
+                      <p className="font-bold text-xs">Compliance Managers</p>
+                      <p className="text-[11px] text-slate-500">Automate testing cadences and evidence compilation</p>
+                    </Link>
+                    <Link href="/solutions/saas-growing-organizations" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
+                      <p className="font-bold text-xs">SaaS &amp; Growing Orgs</p>
+                      <p className="text-[11px] text-slate-500">Accelerate SOC 2 &amp; ISO readiness for market expansion</p>
+                    </Link>
+                    <Link href="/solutions/mssp" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
+                      <p className="font-bold text-xs">MSSP Partners</p>
+                      <p className="text-[11px] text-slate-500">Multi-tenant client governance and advisory tools</p>
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
 
             <Link
-              href="/#how-it-works"
+              href="/how-it-works"
               className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               How It Works
             </Link>
 
-            {/* Mega Menu: Resources */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMenu("resources")}
-              onMouseLeave={() => setActiveMenu(null)}
+            <Link
+              href="/trust"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
-                Resources <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "resources" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {activeMenu === "resources" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-md max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-5 shadow-2xl backdrop-blur-xl space-y-3"
-                  >
-                    <h4 className="text-xs font-mono uppercase text-[#D4521A] dark:text-amber font-bold">Knowledge &amp; Insights</h4>
-                    <div className="space-y-2 text-xs">
-                      <Link href="/blog" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200 hover:text-navy-900 dark:hover:text-white">
-                        <BookOpen className="h-4 w-4 text-[#2E936F] dark:text-teal" />
-                        <div>
-                          <p className="font-bold">Ctrl + GRC Blog</p>
-                          <p className="text-[10px] text-slate-500 dark:text-slate-400">Practical guides for lean GRC teams</p>
-                        </div>
-                      </Link>
-                      <Link href="/trust-vault" className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200 hover:text-navy-900 dark:hover:text-white">
-                        <Award className="h-4 w-4 text-[#2E936F] dark:text-teal-300" />
-                        <div>
-                          <p className="font-bold">Resource Center</p>
-                          <p className="text-[10px] text-slate-500 dark:text-slate-400">Framework checklists &amp; templates</p>
-                        </div>
-                      </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+              Trust
+            </Link>
+
+            <Link
+              href="/resources"
+              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+            >
+              Resources
+            </Link>
 
             <Link
               href="/pricing"
               className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
             >
               Pricing
-            </Link>
-
-            <Link
-              href="/about-us"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
-            >
-              About
             </Link>
           </nav>
 
@@ -329,15 +331,9 @@ export const Header: React.FC = () => {
               Current theme is {theme}
             </div>
 
-            <Link
-              href="/contact-us"
-              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-[#2E936F] dark:hover:text-white transition-colors px-3 py-2"
-            >
-              Contact
-            </Link>
-            <Link href="/get-a-demo">
+            <Link href="/demo">
               <Button variant="primary" size="sm" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
-                Request a Demo
+                Request Demo
               </Button>
             </Link>
           </div>

@@ -282,6 +282,29 @@ html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb:hover {
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* ─────────────────────────────────────────────────────────
+   STITCH AMBIENT MOTION & GRID MESH UTILITIES
+   ───────────────────────────────────────────────────────── */
+@keyframes ambientSubtleA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(35px, 25px) scale(1.04); }
+}
+@keyframes ambientSubtleB {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, -20px) scale(1.03); }
+}
+.ambient-motion-1 {
+  animation: ambientSubtleA 20s ease-in-out infinite;
+}
+.ambient-motion-2 {
+  animation: ambientSubtleB 24s ease-in-out infinite;
+}
+.bg-grid-mesh {
+  background-size: 36px 36px;
+  background-image: linear-gradient(to right, rgba(13, 27, 54, 0.035) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(13, 27, 54, 0.035) 1px, transparent 1px);
+}
+
+/* ─────────────────────────────────────────────────────────
    REDUCED MOTION OVERRIDE
    ───────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
@@ -291,5 +314,8 @@ html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb:hover {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transform: none !important;
+  }
+  .ambient-motion-1, .ambient-motion-2 {
+    animation: none !important;
   }
 }

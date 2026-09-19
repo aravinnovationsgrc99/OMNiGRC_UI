@@ -55,23 +55,33 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/solutions/startups" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
-                  For Lean GRC Teams
+                <Link href="/solutions/lean-security-teams" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  Lean Security Teams
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/mid-market" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
-                  For Security Leads &amp; CISOs
+                <Link href="/solutions/security-leaders" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  Security Leaders &amp; CISOs
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/enterprise" className="hover:text-white transition-colors">
-                  Continuous Audit Readiness
+                <Link href="/solutions/compliance-managers" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  Compliance Managers
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-white transition-colors">
-                  Transparent Pricing
+                <Link href="/solutions/saas-growing-organizations" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  SaaS Orgs
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/mssp" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  MSSP Partners
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  Pricing &amp; Scoping
                 </Link>
               </li>
             </ul>
@@ -84,23 +94,23 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/blog" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
-                  Ctrl + GRC Newsletter
+                <Link href="/how-it-works" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  How It Works
                 </Link>
               </li>
               <li>
-                <Link href="/trust-vault" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                <Link href="/resources" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                   Resource Hub
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
-                  About OMNiGRC
+                <Link href="/trust" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  Trust Vault
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
-                  Contact Us
+                <Link href="/demo" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
+                  Request Demo
                 </Link>
               </li>
             </ul>
@@ -117,7 +127,7 @@ export const Footer: React.FC = () => {
                 <span className="text-[13px] font-bold text-white">Tenant Isolated</span>
               </div>
               <p className="text-[13px] text-slate-300 leading-relaxed">
-                Advisory AI with data minimization. External calls receive sanitized payloads only.
+                Advisory AI with data minimization. AI assists; human oversight approves.
               </p>
             </div>
           </div>
@@ -140,7 +150,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center space-x-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="/trust-vault" className="hover:text-white transition-colors">Security Overview</Link>
+            <Link href="/trust" className="hover:text-white transition-colors">Security Overview</Link>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ const comparisonRows = [
     feature: "Auditability & Oversight",
     manual: "Scattered emails with zero unified change history",
     heavy: "Complex audit logs buried in enterprise menus",
-    omni: "Immutable PostgreSQL change logs & defensible audit history",
+    omni: "Structured Application Audit Log & defensible audit history",
   },
 ];
 
