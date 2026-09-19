@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/layout/PageHero";
-import { GenericHeroMotif } from "@/components/ui/HeroVisualMotifs";
 import { Search, ArrowRight, Calendar, User, BookOpen } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
 
@@ -61,7 +60,6 @@ export default function BlogPage() {
           eyebrow="PRACTICAL GRC INSIGHTS"
           title="Articles, guides, and engineering notes."
           subtitle="Explore practical guides on multi-framework control mapping, asset inventory risk scoring, and zero-retention AI architecture."
-          visual={<GenericHeroMotif type="blog" />}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">

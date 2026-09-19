@@ -83,25 +83,29 @@ export async function getAllPosts(includeUnpublished = false): Promise<BlogPost[
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!url || !anonKey) {
-    throw new Error("SUPABASE_CONFIG_ERROR: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables must be configured.");
+    return getSeedPosts();
   }
 
-  const client = getSupabasePublicClient();
-  let query = client.from("blog_posts").select("*");
+  try {
+    const client = getSupabasePublicClient();
+    let query = client.from("blog_posts").select("*");
 
-  if (!includeUnpublished) {
-    query = query.eq("status", "PUBLISHED").order("published_at", { ascending: false });
-  } else {
-    query = query.order("created_at", { ascending: false });
+    if (!includeUnpublished) {
+      query = query.eq("status", "PUBLISHED").order("published_at", { ascending: false });
+    } else {
+      query = query.order("created_at", { ascending: false });
+    }
+
+    const { data, error } = await query;
+
+    if (error || !data || data.length === 0) {
+      return getSeedPosts();
+    }
+
+    return data.map(mapDbRowToBlogPost);
+  } catch {
+    return getSeedPosts();
   }
-
-  const { data, error } = await query;
-
-  if (error) {
-    throw new Error(`SUPABASE_QUERY_ERROR: Failed to retrieve blog posts from database — ${error.message}`);
-  }
-
-  return (data || []).map(mapDbRowToBlogPost);
 }
 
 /**
