@@ -366,115 +366,186 @@ export const Header: React.FC = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-b border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#16233F] px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto shadow-2xl"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden absolute top-full left-0 right-0 w-full border-b border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#0A111F] px-5 pt-4 pb-8 space-y-4 max-h-[85vh] overflow-y-auto shadow-2xl z-50 text-slate-900 dark:text-slate-100"
           >
-            <div className="space-y-2">
+            <div className="space-y-1">
+              {/* Workflows Accordion */}
               <button
                 onClick={() => toggleMobileSection("workflows")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal"
+                className="flex items-center justify-between w-full py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors"
               >
                 <span>Workflows</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "workflows" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               {mobileExpandedSection === "workflows" && (
-                <div className="space-y-2.5 my-2.5">
-                  {PILLARS.map((p) => {
-                    const iconMap: Record<string, React.ReactNode> = {
-                      RISK: <ShieldAlert className="h-4 w-4" />,
-                      ASSET: <Server className="h-4 w-4" />,
-                      CONTROL: <Sparkles className="h-4 w-4" />,
-                      BOARD: <CalendarCheck className="h-4 w-4" />,
-                    };
-                    return (
-                      <Link
-                        key={p.code}
-                        href={`/products/${p.slug}`}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 flex items-start gap-3 relative overflow-hidden min-h-[44px] block active:bg-slate-100 dark:active:bg-navy-800 transition-colors"
-                      >
-                        <div
-                          className="absolute top-0 left-0 bottom-0 w-1 rounded-l-xl"
-                          style={{ backgroundColor: p.accentColor }}
-                        />
-                        <div className="pl-1 flex-1">
-                          <div className="flex items-center gap-2 mb-0.5">
-                            <div
-                              className="p-1 rounded-md text-white shrink-0"
-                              style={{ backgroundColor: p.accentColor }}
-                            >
-                              {iconMap[p.code] || <Shield className="h-3.5 w-3.5" />}
-                            </div>
-                            <span className="font-bold text-xs text-navy-900 dark:text-white">
-                              {p.name}
-                            </span>
-                          </div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
-                            {p.oneLiner}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                <div className="space-y-2 my-2 pl-2">
+                  <div className="grid grid-cols-1 gap-2">
+                    <Link href="/products/risk-register" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><ShieldAlert className="h-4 w-4 text-[#F15E1C]" /> Risk Register</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">5x5 Scoring &amp; residual tracking</p>
+                    </Link>
+                    <Link href="/products/asset-inventory" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Server className="h-4 w-4 text-[#2E936F]" /> Asset &amp; Inventory</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Cloud infra discovery &amp; ownership</p>
+                    </Link>
+                    <Link href="/products/control-mapping" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Sparkles className="h-4 w-4 text-[#F15E1C]" /> Control Mapping</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Map once across frameworks</p>
+                    </Link>
+                    <Link href="/products/compliance-board" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><CalendarCheck className="h-4 w-4 text-[#2E936F]" /> Compliance Board</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">30/60/90-day testing cadence</p>
+                    </Link>
+                    <Link href="/products/vulnerabilities" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><ShieldAlert className="h-4 w-4 text-[#F15E1C]" /> Vulnerabilities</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Asset-linked finding governance</p>
+                    </Link>
+                    <Link href="/products/vendors" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Globe className="h-4 w-4 text-[#2E936F]" /> Vendors</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Third-party supply chain risk</p>
+                    </Link>
+                    <Link href="/products/policies" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><FileCheck2 className="h-4 w-4 text-[#F15E1C]" /> Policies</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Centralized review lifecycle</p>
+                    </Link>
+                    <Link href="/products/audits" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Award className="h-4 w-4 text-[#2E936F]" /> Audits</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Structured assessments &amp; workpapers</p>
+                    </Link>
+                    <Link href="/products/remediation" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Shield className="h-4 w-4 text-[#F15E1C]" /> Remediation</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Corrective action SLA tracking</p>
+                    </Link>
+                    <Link href="/products/evidence" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><FileCheck2 className="h-4 w-4 text-[#2E936F]" /> Evidence References</div>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">External evidence reference layer</p>
+                    </Link>
+                  </div>
                 </div>
               )}
 
+              {/* Frameworks Accordion */}
               <button
                 onClick={() => toggleMobileSection("frameworks")}
-                className="flex items-center justify-between w-full py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal"
+                className="flex items-center justify-between w-full py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors"
               >
                 <span>Frameworks</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "frameworks" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               {mobileExpandedSection === "frameworks" && (
-                <div className="pl-4 space-y-2 text-sm border-l border-[#2E936F]/30 dark:border-teal/30 my-2">
-                  {FRAMEWORKS.map((fw) => (
-                    <Link
-                      key={fw.code}
-                      href={`/frameworks/${fw.slug}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block text-navy-900 dark:text-slate-300 hover:text-[#2E936F] dark:hover:text-teal py-2 min-h-[44px] flex items-center"
-                    >
-                      {fw.name}
-                    </Link>
-                  ))}
+                <div className="space-y-2 my-2 pl-2">
+                  <div className="grid grid-cols-1 gap-2">
+                    {FRAMEWORKS.map((fw) => (
+                      <Link
+                        key={fw.code}
+                        href={`/frameworks/${fw.slug}`}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block"
+                      >
+                        <span className="font-bold text-xs text-navy-900 dark:text-white block">{fw.name}</span>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">{fw.oneLiner}</p>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
 
+              {/* Solutions Accordion */}
+              <button
+                onClick={() => toggleMobileSection("solutions")}
+                className="flex items-center justify-between w-full py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors"
+              >
+                <span>Solutions</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileExpandedSection === "solutions" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
+              </button>
+              {mobileExpandedSection === "solutions" && (
+                <div className="space-y-2 my-2 pl-2">
+                  <div className="grid grid-cols-1 gap-2">
+                    <Link href="/solutions/lean-security-teams" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <span className="font-bold text-xs text-navy-900 dark:text-white block">Lean Security Teams</span>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Unify risk, asset, and control tracking without overhead</p>
+                    </Link>
+                    <Link href="/solutions/security-leaders" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <span className="font-bold text-xs text-navy-900 dark:text-white block">Security Leaders &amp; CISOs</span>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Board-ready reporting &amp; multi-framework crosswalks</p>
+                    </Link>
+                    <Link href="/solutions/compliance-managers" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <span className="font-bold text-xs text-navy-900 dark:text-white block">Compliance Managers</span>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Automate testing cadences and evidence compilation</p>
+                    </Link>
+                    <Link href="/solutions/saas-growing-organizations" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <span className="font-bold text-xs text-navy-900 dark:text-white block">SaaS &amp; Growing Orgs</span>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Accelerate SOC 2 &amp; ISO readiness for market expansion</p>
+                    </Link>
+                    <Link href="/solutions/mssp" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
+                      <span className="font-bold text-xs text-navy-900 dark:text-white block">MSSP Partners</span>
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Multi-tenant client governance and advisory tools</p>
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* Direct Navigation Links */}
+              <Link
+                href="/how-it-works"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
+              >
+                How It Works
+              </Link>
+              <Link
+                href="/trust"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
+              >
+                Trust
+              </Link>
+              <Link
+                href="/resources"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
+              >
+                Resources
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
+              >
+                Ctrl + GRC Blog
+              </Link>
               <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
               >
                 Pricing
               </Link>
               <Link
                 href="/about-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
               >
                 About Us
               </Link>
               <Link
-                href="/blog"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
-              >
-                Ctrl + GRC Blog
-              </Link>
-              <Link
                 href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 min-h-[44px] text-base font-semibold text-navy-900 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal flex items-center"
+                className="block py-3 px-3 rounded-xl min-h-[48px] text-base font-bold text-navy-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800/60 transition-colors flex items-center"
               >
                 Contact Us
               </Link>
             </div>
+
             <div className="pt-4 border-t border-slate-200 dark:border-navy-700/60">
-              <Link href="/get-a-demo" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="primary" className="w-full min-h-[44px]">Request a Demo</Button>
+              <Link href="/demo" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="primary" className="w-full min-h-[48px] text-sm font-bold shadow-lg" rightIcon={<ArrowRight className="h-4 w-4" />}>
+                  Request Demo
+                </Button>
               </Link>
             </div>
           </motion.div>
