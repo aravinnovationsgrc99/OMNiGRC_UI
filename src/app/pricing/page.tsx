@@ -96,27 +96,27 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] text-[#0d1b36] selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] antialiased flex flex-col justify-between">
+    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
       <main className="flex-1 w-full pt-24 sm:pt-28">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-16 overflow-hidden border-b border-slate-200">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] text-[#380d00] mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
               <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                 COMMERCIAL SCOPING & DEPLOYMENT MODELS
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Practical commercial scoping for practical GRC operations.
             </h1>
 
-            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] font-medium mx-auto mb-8 leading-relaxed">
+            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
               Transparent deployment models tailored to your team infrastructure: Shared multi-tenant SaaS, dedicated Private MSSP instances, or customer-controlled container runtimes.
             </p>
 
@@ -133,16 +133,16 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 1: DEPLOYMENT TIERS GRID */}
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200">
+        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 DEPLOYMENT MODELS
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] font-bold mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
                 Select Your Operational Architecture
               </h2>
-              <p className="text-sm text-[#5a4138] mt-2">
+              <p className="text-sm text-[#5a4138] dark:text-slate-300 mt-2">
                 All models include core 5x5 risk matrix scoring, map-once control crosswalks, and human oversight controls.
               </p>
             </div>
@@ -153,13 +153,13 @@ export default function PricingPage() {
                   key={plan.code}
                   className={`rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
                     plan.popular
-                      ? "bg-white border-2 border-[#F15E1C] shadow-xl scale-[1.02]"
-                      : "bg-[#f1f3ff] border border-slate-200 shadow-sm hover:shadow-md"
+                      ? "bg-white dark:bg-navy-900 border-2 border-[#F15E1C] shadow-xl scale-[1.02]"
+                      : "bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 shadow-sm hover:shadow-md"
                   }`}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 rounded-full bg-[#ffdbcf] text-[#380d00] font-mono text-[10px] font-bold uppercase">
+                      <span className="px-3 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold uppercase">
                         {plan.code}
                       </span>
                       {plan.popular && (
@@ -169,18 +169,18 @@ export default function PricingPage() {
                       )}
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#0d1b36] mb-2">{plan.name}</h3>
-                    <p className="text-xs text-[#5a4138] mb-6 leading-relaxed">{plan.desc}</p>
+                    <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white mb-2">{plan.name}</h3>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 leading-relaxed">{plan.desc}</p>
 
-                    <div className="border-t border-b border-slate-200 py-4 mb-6">
-                      <p className="text-base font-bold text-[#D4521A]">{plan.scope}</p>
-                      <p className="text-[11px] text-[#5a4138] font-mono mt-0.5">Custom proposal based on team goals</p>
+                    <div className="border-t border-b border-slate-200 dark:border-navy-700/60 py-4 mb-6">
+                      <p className="text-base font-bold text-[#D4521A] dark:text-orange-400">{plan.scope}</p>
+                      <p className="text-[11px] text-[#5a4138] dark:text-slate-400 font-mono mt-0.5">Custom proposal based on team goals</p>
                     </div>
 
-                    <ul className="space-y-3 mb-8 text-xs text-[#0d1b36]">
+                    <ul className="space-y-3 mb-8 text-xs text-[#0d1b36] dark:text-slate-200">
                       {plan.features.map((feat, fIdx) => (
                         <li key={fIdx} className="flex items-start gap-2.5">
-                          <Check className="h-4 w-4 text-[#006c4d] shrink-0 mt-0.5" />
+                          <Check className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -192,7 +192,7 @@ export default function PricingPage() {
                     className={`w-full py-3.5 rounded-xl font-bold text-xs text-center transition-all flex items-center justify-center gap-2 ${
                       plan.popular
                         ? "bg-gradient-to-r from-[#F15E1C] to-[#D4521A] text-white hover:shadow-lg shadow-md"
-                        : "bg-white text-[#0d1b36] border border-slate-200 hover:bg-slate-50"
+                        : "bg-white dark:bg-navy-950 text-[#0d1b36] dark:text-slate-200 border border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-900"
                     }`}
                   >
                     <span>Request Proposal for {plan.name}</span>
@@ -203,10 +203,10 @@ export default function PricingPage() {
             </div>
 
             {/* Self-Hosted Truth Note */}
-            <div className="p-5 rounded-2xl bg-[#faf8ff] border border-slate-200 text-xs text-[#5a4138] leading-relaxed max-w-4xl mx-auto flex items-start gap-3">
+            <div className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900/40 border border-slate-200 dark:border-navy-700/60 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed max-w-4xl mx-auto flex items-start gap-3">
               <Info className="h-5 w-5 text-[#F15E1C] shrink-0 mt-0.5" />
               <div>
-                <strong className="text-[#0d1b36] font-semibold block mb-0.5">Self-Hosted Deployment Truth:</strong>
+                <strong className="text-[#0d1b36] dark:text-slate-200 font-semibold block mb-0.5">Self-Hosted Deployment Truth:</strong>
                 "Customer controls infrastructure and runtime operations, but receives only Arav-distributed executable container artifacts, not the source repository or build/signing infrastructure."
               </div>
             </div>
@@ -214,23 +214,23 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 2: FAQS ACCORDION */}
-        <section className="w-full bg-[#f1f3ff] px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200">
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-3xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#0d1b36] font-mono text-xs font-bold uppercase mb-2 border border-slate-200">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-white font-mono text-xs font-bold uppercase mb-2 border border-slate-200 dark:border-navy-700/60">
                 <HelpCircle className="h-3.5 w-3.5 text-[#F15E1C]" /> COMMERCIAL FAQ
               </div>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] font-bold">
+              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold">
                 Frequently Asked Commercial Questions
               </h2>
             </div>
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+                <div key={idx} className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-navy-900 overflow-hidden shadow-sm">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-[#0d1b36] hover:text-[#F15E1C] transition-colors"
+                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-[#0d1b36] dark:text-slate-200 hover:text-[#F15E1C] dark:hover:text-orange-400 transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
@@ -240,7 +240,7 @@ export default function PricingPage() {
                     />
                   </button>
                   {openFaq === idx && (
-                    <div className="p-5 pt-0 text-xs text-[#5a4138] leading-relaxed border-t border-slate-100">
+                    <div className="p-5 pt-0 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-navy-800">
                       {faq.a}
                     </div>
                   )}
@@ -251,12 +251,12 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 3: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] font-extrabold tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Ready for a transparent proposal?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Schedule a technical demonstration to discuss framework scoping, deployment models, and custom onboarding.
             </p>
             <Link

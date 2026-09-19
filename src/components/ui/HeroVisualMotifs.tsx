@@ -473,7 +473,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
         {/* Stage 1: 5x5 Matrix Graphic Node */}
         <motion.div
           whileHover={{ scale: 1.01 }}
-          className="p-4 rounded-2xl bg-white border border-teal-200 shadow-sm hover:border-teal-400 hover:shadow-md transition-all group relative overflow-hidden"
+          className="p-4 rounded-2xl bg-white dark:bg-navy-900 border border-teal-200 dark:border-teal/30 shadow-sm hover:border-teal-400 dark:hover:border-teal/60 hover:shadow-md transition-all group relative overflow-hidden"
         >
           <div className="flex items-center justify-between gap-3 mb-3">
             <div className="flex items-center gap-2">
@@ -488,7 +488,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </div>
 
           {/* Mini 5x5 Heatmap Matrix Graphic */}
-          <div className="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-200">
+          <div className="flex items-center justify-between bg-slate-50 dark:bg-navy-950 p-3 rounded-xl border border-slate-200 dark:border-navy-700/60">
             <div className="grid grid-cols-5 gap-1.5">
               {[
                 "#0F6E6A", "#0F6E6A", "#B5750A", "#EF4444", "#DC2626",
@@ -528,7 +528,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
         {/* Stage 2: AI Multi-Standard Hub Node (EXPLICIT EXAMPLE CASE LABEL) */}
         <motion.div
           whileHover={{ scale: 1.01 }}
-          className="p-4 rounded-2xl bg-white border border-blue-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all group relative overflow-hidden"
+          className="p-4 rounded-2xl bg-white dark:bg-navy-900 border border-blue-200 dark:border-blue-900/40 shadow-sm hover:border-blue-400 dark:hover:border-blue-700/60 hover:shadow-md transition-all group relative overflow-hidden"
         >
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
             <div className="flex items-center gap-2">
@@ -543,7 +543,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </div>
 
           {/* AI Cross-Mapping Graphical Nodes - 6 FRAMEWORKS */}
-          <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="bg-slate-50 dark:bg-navy-950 p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2 shrink-0">
               <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-mono text-xs font-extrabold shadow-md shadow-blue-500/20">
                 AI
@@ -560,9 +560,9 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
                 { name: "DPDP", match: "100%" },
                 { name: "HIPAA", match: "96%" }
               ].map((f, i) => (
-                <div key={i} className="p-2 rounded-xl bg-white border border-blue-200 text-center shadow-2xs">
-                  <div className="text-xs font-mono text-slate-800 font-bold truncate">{f.name}</div>
-                  <div className="text-xs font-mono text-blue-600 font-extrabold">{f.match}</div>
+                <div key={i} className="p-2 rounded-xl bg-white dark:bg-navy-900 border border-blue-200 dark:border-blue-900/40 text-center shadow-2xs">
+                  <div className="text-xs font-mono text-slate-800 dark:text-slate-200 font-bold truncate">{f.name}</div>
+                  <div className="text-xs font-mono text-blue-600 dark:text-blue-400 font-extrabold">{f.match}</div>
                 </div>
               ))}
             </div>
@@ -583,7 +583,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
         {/* Stage 3: Rolling Audit Cadence Board Node (CLEAN LEGIBLE TEXT, NO AKWARD WRAPS) */}
         <motion.div
           whileHover={{ scale: 1.01 }}
-          className="p-4 rounded-2xl bg-white border border-emerald-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group relative overflow-hidden"
+          className="p-4 rounded-2xl bg-white dark:bg-navy-900 border border-emerald-200 dark:border-teal/30 shadow-sm hover:border-emerald-400 dark:hover:border-teal/60 hover:shadow-md transition-all group relative overflow-hidden"
         >
           <div className="flex items-center justify-between gap-3 mb-3">
             <div className="flex items-center gap-2">
@@ -598,23 +598,23 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </div>
 
           {/* 30 / 60 / 90 Day Graphical Cards with Clean 12px Text */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 bg-slate-50 p-3 rounded-xl border border-slate-200">
-            <div className="p-2.5 rounded-xl bg-emerald-50/80 border border-emerald-200 text-center flex flex-col justify-between">
-              <div className="text-xs font-mono text-emerald-900 font-bold mb-0.5">30 DAYS DUE</div>
-              <div className="text-sm font-mono font-extrabold text-slate-900 my-0.5">VERIFIED</div>
-              <div className="text-xs text-emerald-700 font-semibold mt-0.5">✓ Proof Attached</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 bg-slate-50 dark:bg-navy-950 p-3 rounded-xl border border-slate-200 dark:border-navy-700/60">
+            <div className="p-2.5 rounded-xl bg-emerald-50/80 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/40 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-emerald-900 dark:text-emerald-400 font-bold mb-0.5">30 DAYS DUE</div>
+              <div className="text-sm font-mono font-extrabold text-slate-900 dark:text-slate-100 my-0.5">VERIFIED</div>
+              <div className="text-xs text-emerald-700 dark:text-emerald-500 font-semibold mt-0.5">✓ Proof Attached</div>
             </div>
 
-            <div className="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200 text-center flex flex-col justify-between">
-              <div className="text-xs font-mono text-amber-900 font-bold mb-0.5">60 DAYS DUE</div>
-              <div className="text-sm font-mono font-extrabold text-slate-900 my-0.5">IN REVIEW</div>
-              <div className="text-xs text-amber-700 font-semibold mt-0.5">⚡ Automated Test</div>
+            <div className="p-2.5 rounded-xl bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/40 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-amber-900 dark:text-amber-400 font-bold mb-0.5">60 DAYS DUE</div>
+              <div className="text-sm font-mono font-extrabold text-slate-900 dark:text-slate-100 my-0.5">IN REVIEW</div>
+              <div className="text-xs text-amber-700 dark:text-amber-500 font-semibold mt-0.5">⚡ Automated Test</div>
             </div>
 
-            <div className="p-2.5 rounded-xl bg-blue-50/80 border border-blue-200 text-center flex flex-col justify-between">
-              <div className="text-xs font-mono text-blue-900 font-bold mb-0.5">90 DAYS DUE</div>
-              <div className="text-sm font-mono font-extrabold text-slate-900 my-0.5">SCHEDULED</div>
-              <div className="text-xs text-blue-700 font-semibold mt-0.5">Immutable Log</div>
+            <div className="p-2.5 rounded-xl bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/40 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-blue-900 dark:text-blue-400 font-bold mb-0.5">90 DAYS DUE</div>
+              <div className="text-sm font-mono font-extrabold text-slate-900 dark:text-slate-100 my-0.5">SCHEDULED</div>
+              <div className="text-xs text-blue-700 dark:text-blue-500 font-semibold mt-0.5">Immutable Log</div>
             </div>
           </div>
         </motion.div>

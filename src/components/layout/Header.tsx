@@ -104,13 +104,13 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[94vw] max-w-5xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl grid grid-cols-1 md:grid-cols-12 gap-6"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[94vw] max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl flex flex-col gap-6"
                   >
-                    <div className="md:col-span-8 space-y-3">
+                    <div className="space-y-3">
                       <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4521A] dark:text-amber font-mono">
                         Ten Connected GRC Workflows
                       </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2.5">
                         <Link href="/products/risk-register" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Risk Register</div>
                           <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">5x5 Scoring &amp; residual tracking</p>
@@ -147,29 +147,33 @@ export const Header: React.FC = () => {
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-[#F15E1C]" /> Remediation</div>
                           <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Corrective action SLA tracking</p>
                         </Link>
-                        <Link href="/products/evidence" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group col-span-1 sm:col-span-2 lg:col-span-3">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#2E936F]" /> Evidence References &amp; Records</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400">External evidence reference/index layer linking controls to defensible audit records</p>
+                        <Link href="/products/evidence" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
+                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#2E936F]" /> Evidence References</div>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">External evidence reference/index layer</p>
                         </Link>
                       </div>
                     </div>
 
-                    <div className="md:col-span-4 md:border-l border-slate-200 dark:border-navy-700/60 md:pl-6">
-                      <div className="h-full rounded-xl bg-gradient-to-b from-[#2E936F]/10 to-[#F7D7B0]/30 dark:from-teal/20 dark:to-navy-900/90 p-5 border border-[#2E936F]/30 dark:border-teal/30 flex flex-col justify-between">
-                        <div>
-                          <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-3">
-                            Advisory AI Engine
-                          </Badge>
-                          <h4 className="text-sm font-bold text-navy-900 dark:text-white mb-1">AI Assists. Humans Decide.</h4>
-                          <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    <div className="w-full border-t border-slate-200 dark:border-navy-700/60 pt-5">
+                      <div className="w-full rounded-xl bg-gradient-to-r from-[#2E936F]/10 via-[#F7D7B0]/20 to-[#2E936F]/10 dark:from-teal/20 dark:via-navy-800/80 dark:to-teal/20 p-5 border border-[#2E936F]/30 dark:border-teal/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />}>
+                              Advisory AI Engine
+                            </Badge>
+                            <h4 className="text-sm font-bold text-navy-900 dark:text-white">AI Assists. Humans Decide.</h4>
+                          </div>
+                          <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
                             Data-minimized clause correlation with mandatory human review and approval.
                           </p>
                         </div>
-                        <Link href="/demo">
-                          <Button variant="primary" size="sm" className="w-full" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
-                            Book a Walkthrough
-                          </Button>
-                        </Link>
+                        <div className="shrink-0 w-full md:w-auto">
+                          <Link href="/demo">
+                            <Button variant="primary" size="sm" className="w-full md:w-auto" rightIcon={<ArrowRight className="h-3.5 w-3.5" />}>
+                              Book a Walkthrough
+                            </Button>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </motion.div>

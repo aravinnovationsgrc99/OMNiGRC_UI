@@ -89,7 +89,7 @@ const solutionsMap: Record<string, SolutionData> = {
     telemetryTitle: "LEAN OPS TELEMETRY",
     telemetryTrace: "✓ CTRL-012: Quarterly DB Snapshot verification recorded by security-lead@internal",
     telemetryStats: [
-      { label: "Active Safeguards", value: "48 / 48", sub: "100% human-verified" },
+      { label: "Active Safeguards", value: "48 / 48", sub: "Human-verified" },
       { label: "Next Audit Cadence", value: "14 Days", sub: "SOC 2 Type II Window" }
     ]
   },
@@ -123,10 +123,10 @@ const solutionsMap: Record<string, SolutionData> = {
       { icon: FileCheck2, title: "Audit Workpapers", desc: "Structured auditor workpapers mapped cleanly by framework clause ID for fast external review.", tag: "Audit Ready" }
     ],
     telemetryTitle: "EXECUTIVE POSTURE TELEMETRY",
-    telemetryTrace: "✓ POSTURE_SCORE: 94.2% • 0 Critical Unmitigated Risks • All SLAs in Compliance",
+    telemetryTrace: "✓ ATTEST-99: Lead sign-off logged in application audit log",
     telemetryStats: [
-      { label: "Overall Posture Score", value: "94.2%", sub: "Continuous Audit Ready" },
-      { label: "Open CAPA Items", value: "0 Overdue", sub: "100% SLA Compliance" }
+      { label: "Residual Risk Threshold", value: "Low", sub: "Tier-1 Attested" },
+      { label: "Open CAPA Items", value: "0 Overdue", sub: "SLA Compliant" }
     ]
   },
   "compliance-managers": {
@@ -195,10 +195,10 @@ const solutionsMap: Record<string, SolutionData> = {
       { icon: Lock, title: "Tenant Isolation", desc: "Application-level tenant isolation ensuring data privacy and payload minimization.", tag: "Tenant Isolated" }
     ],
     telemetryTitle: "SAAS GOVERNANCE TELEMETRY",
-    telemetryTrace: "✓ READINESS_STAGE: SOC 2 Type II Window Active • 100% Control Baseline Established",
+    telemetryTrace: "✓ READINESS_STAGE: SOC 2 Type II Window Active • Complete Control Baseline Established",
     telemetryStats: [
       { label: "Target Frameworks", value: "SOC 2 + ISO", sub: "Pre-mapped Baselines" },
-      { label: "Vendor Risk Inventory", value: "100% Tracked", sub: "DPDP Sub-processor Aware" }
+      { label: "Vendor Risk Inventory", value: "Tracked", sub: "DPDP Sub-processor Aware" }
     ]
   },
   mssp: {
@@ -249,29 +249,29 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
   const sol = solutionsMap[slug] || solutionsMap["lean-security-teams"];
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] text-[#0d1b36] selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] antialiased">
+    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased">
       <Header />
 
       <main className="w-full pt-24 sm:pt-28">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden border-b border-slate-200">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             {/* Left Content */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] text-[#380d00] mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
                 <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                   {sol.eyebrow}
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-[48px] lg:leading-[56px] text-[#0d1b36] font-extrabold tracking-tight mb-6">
+              <h1 className="text-3xl sm:text-5xl lg:text-[48px] lg:leading-[56px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-6">
                 {sol.title}
               </h1>
 
-              <p className="text-base sm:text-lg text-[#5a4138] font-medium mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mb-8 leading-relaxed">
                 {sol.desc}
               </p>
 
@@ -286,7 +286,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                 </Link>
                 <a
                   href="#solution-details"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0d1b36] bg-white hover:bg-slate-50 transition-all border border-slate-200"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all border border-slate-200 dark:border-navy-700/60"
                 >
                   <span>Explore Capabilities</span>
                   <ArrowRight className="h-4 w-4" />
@@ -296,8 +296,8 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               {/* Pillars */}
               <div className="flex flex-wrap gap-3">
                 {sol.heroPillars.map((p, pIdx) => (
-                  <div key={pIdx} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-mono font-semibold text-[#0d1b36]">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-[#006c4d]" />
+                  <div key={pIdx} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm text-xs font-mono font-semibold text-[#0d1b36] dark:text-slate-200">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-[#006c4d] dark:text-teal-400" />
                     <span>{p}</span>
                   </div>
                 ))}
@@ -306,13 +306,13 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
 
             {/* Right Telemetry Visual Card */}
             <div className="lg:col-span-5 relative">
-              <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xl flex flex-col gap-6">
+              <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#006c4d]" />
-                    <span className="font-mono text-xs font-bold text-[#0d1b36]">{sol.telemetryTitle}</span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#006c4d] dark:bg-teal-500" />
+                    <span className="font-mono text-xs font-bold text-[#0d1b36] dark:text-white">{sol.telemetryTitle}</span>
                   </div>
-                  <span className="font-mono text-[11px] px-2.5 py-1 rounded bg-[#f1f3ff] text-[#0d1b36] font-semibold">
+                  <span className="font-mono text-[11px] px-2.5 py-1 rounded bg-[#f1f3ff] dark:bg-navy-950/50 text-[#0d1b36] dark:text-slate-300 font-semibold">
                     STATUS: ACTIVE
                   </span>
                 </div>
@@ -320,10 +320,10 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-3">
                   {sol.telemetryStats.map((st, sIdx) => (
-                    <div key={sIdx} className="p-3.5 rounded-xl bg-[#f1f3ff] border border-slate-200 flex flex-col">
-                      <span className="font-mono text-[11px] text-[#5a4138]">{st.label}</span>
-                      <span className="text-xl font-extrabold text-[#0d1b36] mt-1">{st.value}</span>
-                      <span className="text-[11px] text-[#006c4d] font-semibold mt-0.5">{st.sub}</span>
+                    <div key={sIdx} className="p-3.5 rounded-xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 flex flex-col">
+                      <span className="font-mono text-[11px] text-[#5a4138] dark:text-slate-400">{st.label}</span>
+                      <span className="text-xl font-extrabold text-[#0d1b36] dark:text-white mt-1">{st.value}</span>
+                      <span className="text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold mt-0.5">{st.sub}</span>
                     </div>
                   ))}
                 </div>
@@ -340,13 +340,13 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                 </div>
 
                 {/* Workflow Rail Badges */}
-                <div className="pt-2 border-t border-slate-200">
-                  <span className="font-mono text-[10px] text-[#5a4138] uppercase tracking-wider block font-semibold mb-2">
+                <div className="pt-2 border-t border-slate-200 dark:border-navy-700/60">
+                  <span className="font-mono text-[10px] text-[#5a4138] dark:text-slate-400 uppercase tracking-wider block font-semibold mb-2">
                     Solution Workflow Rail
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {sol.workflowRail.map((rf, rIdx) => (
-                      <span key={rIdx} className="px-2 py-0.5 rounded bg-[#ffdbcf] text-[#380d00] font-mono text-[10px] font-semibold">
+                      <span key={rIdx} className="px-2 py-0.5 rounded bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-semibold">
                         {rf}
                       </span>
                     ))}
@@ -359,36 +359,36 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 2: THE PROBLEM VS SOLUTION */}
-        <section className="w-full bg-[#f1f3ff] px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200" id="solution-details">
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/40 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 OPERATIONAL TRANSFORM
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] font-bold mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
                 From Friction &amp; Drift to Connected Governance
               </h2>
-              <p className="text-sm sm:text-base text-[#5a4138] mt-2">
+              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
                 See how OMNiGRC addresses core team friction with structured, automated workflows.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Challenges Card */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 text-red-700 font-mono text-xs font-bold mb-6">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 font-mono text-xs font-bold mb-6">
                     <AlertTriangle className="h-3.5 w-3.5" /> Traditional Operational Friction
                   </span>
                   <div className="space-y-4">
                     {sol.challenges.map((c, cIdx) => (
                       <div key={cIdx} className="flex items-start gap-3">
-                        <div className="p-1 rounded-full bg-red-100 text-red-600 mt-0.5 shrink-0">
+                        <div className="p-1 rounded-full bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 mt-0.5 shrink-0">
                           <AlertTriangle className="h-4 w-4" />
                         </div>
                         <div>
-                          <h4 className="text-sm font-bold text-[#0d1b36]">{c.title}</h4>
-                          <p className="text-xs text-[#5a4138] leading-relaxed">{c.desc}</p>
+                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">{c.title}</h4>
+                          <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed">{c.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -397,20 +397,20 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               </div>
 
               {/* Solutions Card */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#ffdbcf] shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 sm:p-8 border border-[#ffdbcf] dark:border-orange-500/20 shadow-sm flex flex-col justify-between">
                 <div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#95f6cb] text-[#00513a] font-mono text-xs font-bold mb-6">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#95f6cb] dark:bg-teal-950/40 text-[#00513a] dark:text-teal-400 font-mono text-xs font-bold mb-6">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Connected OMNiGRC Solution
                   </span>
                   <div className="space-y-4">
                     {sol.solutions.map((s, sIdx) => (
                       <div key={sIdx} className="flex items-start gap-3">
-                        <div className="p-1 rounded-full bg-[#95f6cb] text-[#00513a] mt-0.5 shrink-0">
+                        <div className="p-1 rounded-full bg-[#95f6cb] dark:bg-teal-950/50 text-[#00513a] dark:text-teal-400 mt-0.5 shrink-0">
                           <CheckCircle2 className="h-4 w-4" />
                         </div>
                         <div>
-                          <h4 className="text-sm font-bold text-[#0d1b36]">{s.title}</h4>
-                          <p className="text-xs text-[#5a4138] leading-relaxed">{s.desc}</p>
+                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">{s.title}</h4>
+                          <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed">{s.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -422,13 +422,13 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 3: CAPABILITY MODULES */}
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200">
+        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 CORE CAPABILITY MODULES
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] font-bold mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
                 Everything Connected to Your Lifecycle
               </h2>
             </div>
@@ -437,18 +437,18 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               {sol.capabilities.map((cap, capIdx) => {
                 const IconComponent = cap.icon;
                 return (
-                  <div key={capIdx} className="bg-[#f1f3ff] rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div key={capIdx} className="bg-[#f1f3ff] dark:bg-navy-950/50 rounded-2xl p-6 border border-slate-200 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <div className="p-2.5 rounded-xl bg-white text-[#F15E1C] shadow-sm border border-slate-200">
+                        <div className="p-2.5 rounded-xl bg-white dark:bg-navy-900 text-[#F15E1C] dark:text-orange-400 shadow-sm border border-slate-200 dark:border-navy-700/60">
                           <IconComponent className="h-5 w-5" />
                         </div>
-                        <span className="px-2.5 py-0.5 rounded bg-[#ffdbcf] text-[#380d00] font-mono text-[10px] font-bold uppercase">
+                        <span className="px-2.5 py-0.5 rounded bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold uppercase">
                           {cap.tag}
                         </span>
                       </div>
-                      <h3 className="text-base font-bold text-[#0d1b36] mb-2">{cap.title}</h3>
-                      <p className="text-xs text-[#5a4138] leading-relaxed">{cap.desc}</p>
+                      <h3 className="text-base font-bold text-[#0d1b36] dark:text-white mb-2">{cap.title}</h3>
+                      <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed">{cap.desc}</p>
                     </div>
                   </div>
                 );
@@ -458,12 +458,12 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] font-extrabold tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Ready to see {sol.title}?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Schedule a focused demonstration with a GRC specialist tailored to your team&apos;s operational scope.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">

@@ -79,47 +79,47 @@ const plannedResources = [
 
 export default function ResourcesHubPage() {
   return (
-    <div className="min-h-screen bg-[#faf8ff] text-[#0d1b36] selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] antialiased flex flex-col justify-between">
+    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
       <main className="flex-1 w-full pt-24 sm:pt-28">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] text-[#380d00] mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
               <BookOpen className="h-4 w-4 text-[#F15E1C]" />
               <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                 GRC RESOURCE & KNOWLEDGE HUB
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Practical guides & operational frameworks for lean GRC teams.
             </h1>
 
-            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] font-medium mx-auto mb-8 leading-relaxed">
+            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
               Explore canonical framework guides, product workflow walkthroughs, and practical GRC implementation methodologies.
             </p>
           </div>
         </section>
 
         {/* SECTION 1: CANONICAL FRAMEWORK GUIDES INDEX */}
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200">
+        <section className="w-full bg-white dark:bg-navy-900 px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
               <div>
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block">
                   CANONICAL FRAMEWORK GUIDES
                 </span>
-                <h2 className="text-2xl sm:text-3xl text-[#0d1b36] font-bold mt-1 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                   Educational Framework Taxonomies
                 </h2>
               </div>
               <Link
                 href="/frameworks"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] hover:text-[#ce4700] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
               >
                 <span>View Frameworks Hub</span>
                 <ChevronRight className="h-4 w-4" />
@@ -131,26 +131,26 @@ export default function ResourcesHubPage() {
                 <Link
                   key={fw.code}
                   href={`/frameworks/${fw.slug}`}
-                  className="p-6 rounded-2xl bg-[#f1f3ff] border border-slate-200 hover:border-[#F15E1C]/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="px-2.5 py-0.5 rounded-full bg-white text-[#0d1b36] font-mono text-[10px] font-bold uppercase border border-slate-200">
+                      <span className="px-2.5 py-0.5 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-[10px] font-bold uppercase border border-slate-200 dark:border-navy-700/60">
                         {fw.region}
                       </span>
-                      <span className="font-mono text-[10px] text-[#006c4d] font-semibold flex items-center gap-1">
+                      <span className="font-mono text-[10px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                         <CheckCircle2 className="h-3 w-3" /> Guide Available
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#0d1b36] group-hover:text-[#F15E1C] transition-colors mb-1">
+                    <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-1">
                       {fw.name}
                     </h3>
-                    <p className="font-mono text-xs text-[#F15E1C] font-semibold mb-2">{fw.headerDesc}</p>
-                    <p className="text-xs text-[#5a4138] leading-relaxed mb-4">{fw.oneLiner}</p>
+                    <p className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-semibold mb-2">{fw.headerDesc}</p>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">{fw.oneLiner}</p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-bold text-[#F15E1C]">
+                  <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-xs font-bold text-[#F15E1C] dark:text-orange-400">
                     <span>Read {fw.name} Guide</span>
                     <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -161,16 +161,16 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 2: CANONICAL WORKFLOW MODULES INDEX */}
-        <section className="w-full bg-[#f1f3ff] px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200">
+        <section className="w-full bg-[#f1f3ff] dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
                 WORKFLOW & PRODUCT MODULES
               </span>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] font-bold mt-1 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                 10 Connected GRC Operating Modules
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] mt-2">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2">
                 Detailed product documentation for OMNiGRC's core workflow modules.
               </p>
             </div>
@@ -180,20 +180,20 @@ export default function ResourcesHubPage() {
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#F15E1C]/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <span className="font-mono text-[10px] text-[#F15E1C] font-bold uppercase tracking-wider block mb-1">
                       MODULE {p.badge}
                     </span>
-                    <h3 className="text-base font-bold text-[#0d1b36] group-hover:text-[#F15E1C] transition-colors mb-2">
+                    <h3 className="text-base font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
                       {p.name}
                     </h3>
-                    <p className="text-[11px] text-[#5a4138] leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-[11px] text-[#5a4138] dark:text-slate-400 leading-relaxed line-clamp-3 mb-4">
                       {p.oneLiner}
                     </p>
                   </div>
-                  <div className="text-[11px] font-bold text-[#F15E1C] flex items-center justify-between pt-2 border-t border-slate-100">
+                  <div className="text-[11px] font-bold text-[#F15E1C] flex items-center justify-between pt-2 border-t border-slate-100 dark:border-navy-700/60">
                     <span>Explore Module</span>
                     <ChevronRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
@@ -204,37 +204,37 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 3: OPERATIONAL METHODOLOGY GUIDES */}
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200">
+        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
                 OPERATIONAL WHITEPAPERS
               </span>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] font-bold mt-1 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                 Practical Implementation Guidance
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {whitepapers.map((wp, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-[#faf8ff] border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div key={idx} className="p-6 rounded-2xl bg-[#faf8ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="px-2.5 py-0.5 rounded bg-[#ffdbcf] text-[#380d00] font-mono text-[10px] font-bold">
+                      <span className="px-2.5 py-0.5 rounded bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold">
                         {wp.category}
                       </span>
-                      <span className="font-mono text-[10px] text-[#006c4d] font-semibold flex items-center gap-1">
+                      <span className="font-mono text-[10px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                         <CheckCircle2 className="h-3 w-3" /> Published
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-[#0d1b36] mb-2">{wp.title}</h3>
-                    <p className="text-xs text-[#5a4138] leading-relaxed mb-6">{wp.desc}</p>
+                    <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white mb-2">{wp.title}</h3>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-6">{wp.desc}</p>
                   </div>
 
                   <Link
                     href={wp.link}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] hover:text-[#ce4700] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
                   >
                     <span>Read Workflow Guide</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -244,22 +244,22 @@ export default function ResourcesHubPage() {
             </div>
 
             {/* Planned Resources (Clearly tagged) */}
-            <div className="p-6 rounded-2xl bg-[#f1f3ff] border border-slate-200">
+            <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-200 dark:border-navy-700/60">
               <div className="flex items-center gap-2 mb-4">
                 <Clock className="h-4 w-4 text-[#F15E1C]" />
-                <h3 className="font-mono text-xs font-bold text-[#0d1b36] uppercase tracking-wider">
+                <h3 className="font-mono text-xs font-bold text-[#0d1b36] dark:text-slate-200 uppercase tracking-wider">
                   Upcoming & Planned Resources (In Development)
                 </h3>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {plannedResources.map((pr, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-white border border-slate-200">
-                    <span className="px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-mono text-[9px] font-bold uppercase mb-2 inline-block">
+                  <div key={idx} className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60">
+                    <span className="px-2 py-0.5 rounded bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-mono text-[9px] font-bold uppercase mb-2 inline-block">
                       {pr.status}
                     </span>
-                    <h4 className="text-sm font-bold text-[#0d1b36] mb-1">{pr.title}</h4>
-                    <p className="text-[11px] text-[#5a4138] leading-relaxed">{pr.desc}</p>
+                    <h4 className="text-sm font-bold text-[#0d1b36] dark:text-slate-200 mb-1">{pr.title}</h4>
+                    <p className="text-[11px] text-[#5a4138] dark:text-slate-400 leading-relaxed">{pr.desc}</p>
                   </div>
                 ))}
               </div>
@@ -268,12 +268,12 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] font-extrabold tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Need custom framework mapping assistance?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Our team can walk you through crosswalking your existing policies and asset registers across target frameworks.
             </p>
             <Link
