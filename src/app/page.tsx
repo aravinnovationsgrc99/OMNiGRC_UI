@@ -303,38 +303,38 @@ export default function Home() {
 </div>
 {/*  4 Pillars Navigation Grid  */}
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-<div className="bg-teal-100/20 dark:bg-teal-900/20 p-6 rounded-xl shadow-sm cursor-pointer hover:shadow-md transition-all">
+<Link href="/products/risk-register" className="bg-teal-100/20 dark:bg-teal-900/20 p-6 rounded-xl shadow-sm cursor-pointer hover:shadow-md transition-all block group">
 <div className="w-10 h-10 rounded-lg bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center mb-4">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold uppercase">Pillar 01</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5">Risk Register</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Risk Register</h3>
 <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">Standardized 5×5 Likelihood × Impact scoring linked directly to technical assets.</p>
-</div>
-<div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all">
+</Link>
+<Link href="/products/asset-inventory" className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all block group">
 <div className="w-10 h-10 rounded-lg bg-slate-900 dark:bg-black text-white flex items-center justify-center mb-4">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
 <span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-semibold uppercase">Pillar 02</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5">Asset &amp; Inventory</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Asset &amp; Inventory</h3>
 <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">Cloud infra, SaaS vendors, databases, and DPDP data flow context.</p>
-</div>
-<div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all">
+</Link>
+<Link href="/products/control-mapping" className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all block group">
 <div className="w-10 h-10 rounded-lg bg-amber-600 dark:bg-amber-500 text-white flex items-center justify-center mb-4">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
 <span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-semibold uppercase">Pillar 03</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5">Map-Once Controls</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Map-Once Controls</h3>
 <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">One security safeguard cross-correlated to 6 standards simultaneously.</p>
-</div>
-<div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all">
+</Link>
+<Link href="/products/compliance-board" className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all block group">
 <div className="w-10 h-10 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center mb-4">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
 <span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-semibold uppercase">Pillar 04</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5">Compliance Board</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Compliance Board</h3>
 <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">Rolling 30/60/90-day task cadence, SLA tracking, and audit export.</p>
-</div>
+</Link>
 </div>
 {/*  Live Interactive Visual Showcase (5x5 Matrix + Linked Control Panel)  */}
 <div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-6 md:p-8 shadow-md">
@@ -399,69 +399,69 @@ export default function Home() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 {/*  Feature 1  */}
-<div className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between"><div><div className="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold">Vulnerability Management</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Ingest CVE findings from security scanners. Map vulnerabilities directly to affected technical assets and evaluate associated risk exposure.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold">Vulnerability-to-Asset Mapping →</div></div>
+<Link href="/products/vulnerabilities" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block"><div><div className="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Vulnerability Management</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Ingest CVE findings from security scanners. Map vulnerabilities directly to affected technical assets and evaluate associated risk exposure.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Vulnerability-to-Asset Mapping</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
 {/*  Feature 2  */}
-<div className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<Link href="/products/policies" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-slate-200 dark:bg-navy-700 text-slate-900 dark:text-white flex items-center justify-center mb-6">
 <FileText className="h-5 w-5 shrink-0" />
 </div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">Policy &amp; Document Governance</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Policy &amp; Document Governance</h3>
 <p className="text-base text-slate-600 dark:text-slate-300 mt-2">
               Version-controlled policy authoring with automated annual review triggers, markdown revisions, and recorded executive sign-offs.
             </p>
 </div>
-<div className="mt-6 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold">
-            Git-Style Versioning &amp; Approvals →
+<div className="mt-6 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+            <span>Git-Style Versioning &amp; Approvals</span><ArrowRight className="h-3.5 w-3.5" />
           </div>
-</div>
+</Link>
 {/*  Feature 3  */}
-<div className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<Link href="/products/vendors" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-amber-500/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-500 flex items-center justify-center mb-6">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">Vendor &amp; Third-Party Risk</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Vendor &amp; Third-Party Risk</h3>
 <p className="text-base text-slate-600 dark:text-slate-300 mt-2">
               Automated vendor onboarding questionnaires (SIG Lite, CAIQ), SOC 2 report ingestion, SLA monitoring, and DPDP sub-processor tracking.
             </p>
 </div>
-<div className="mt-6 pt-space-sm font-mono text-xs text-amber-600 dark:text-amber-500 font-semibold">
-            DPDP / GDPR Data Flow Aware →
+<div className="mt-6 pt-space-sm font-mono text-xs text-amber-600 dark:text-amber-500 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+            <span>DPDP / GDPR Data Flow Aware</span><ArrowRight className="h-3.5 w-3.5" />
           </div>
-</div>
+</Link>
 {/*  Feature 4  */}
-<div className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between"><div><div className="w-12 h-12 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold">Evidence Vault &amp; Reference Records</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Structured evidence tracking and external document/reference links. Organize proof links, collector logs, and compliance records cleanly for audit review.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-tertiary font-semibold">Evidence Records &amp; Reference Links →</div></div>
+<Link href="/products/evidence" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-teal/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block"><div><div className="w-12 h-12 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Evidence Vault &amp; Reference Records</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Structured evidence tracking and external document/reference links. Organize proof links, collector logs, and compliance records cleanly for audit review.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-tertiary font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Evidence Records &amp; Reference Links</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
 {/*  Feature 5  */}
-<div className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<Link href="/products/remediation" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-red-500/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 flex items-center justify-center mb-6">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">Incident &amp; Breach Response</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Incident &amp; Breach Response</h3>
 <p className="text-base text-slate-600 dark:text-slate-300 mt-2">
               Structured triage workflows linked to GDPR 72-hour notifications and DPDP Data Protection Board of India reporting clocks.
             </p>
 </div>
-<div className="mt-6 pt-space-sm font-mono text-xs text-red-600 dark:text-red-400 font-semibold">
-            Regulatory Clocks &amp; Playbooks →
+<div className="mt-6 pt-space-sm font-mono text-xs text-red-600 dark:text-red-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+            <span>Regulatory Clocks &amp; Playbooks</span><ArrowRight className="h-3.5 w-3.5" />
           </div>
-</div>
+</Link>
 {/*  Feature 6  */}
-<div className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<Link href="/solutions/mssp" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-slate-900 dark:bg-black text-white flex items-center justify-center mb-6">
 <Circle className="h-5 w-5 shrink-0" />
 </div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">MSSP Partner &amp; Multi-Tenancy</h3>
+<h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">MSSP Partner &amp; Multi-Tenancy</h3>
 <p className="text-base text-slate-600 dark:text-slate-300 mt-2">
               Purpose-built administration console for security advisory firms and MSSPs to oversee dozens of client compliance posture environments centrally.
             </p>
 </div>
-<div className="mt-6 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold">
-            Multi-Tenant Portfolio View →
+<div className="mt-6 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1">
+            <span>Multi-Tenant Portfolio View</span><ArrowRight className="h-3.5 w-3.5" />
           </div>
-</div>
+</Link>
 </div>
 </div>
 </section>
