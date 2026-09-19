@@ -9,11 +9,39 @@ import { Button } from "@/components/ui/Button";
 export const FinalCtaSection: React.FC = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMsg("");
     if (!email || !email.includes("@")) return;
-    setSubscribed(true);
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/demo-requests", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Newsletter Subscriber",
+          email,
+          company: "N/A",
+          message: "Subscribed to Ctrl + GRC newsletter",
+          request_type: "NEWSLETTER",
+          source_page: typeof window !== "undefined" ? window.location.pathname || "/" : "/"
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to subscribe");
+      }
+      setSubscribed(true);
+    } catch (err: any) {
+      setErrorMsg(err.message || "Failed to subscribe. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -111,11 +139,13 @@ export const FinalCtaSection: React.FC = () => {
                       className="w-full rounded-xl border border-navy-700/60 bg-[#0A111F] px-4 py-3 text-xs text-white placeholder-slate-500 focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal transition-colors"
                     />
                   </div>
+                  {errorMsg && <p className="text-[11px] text-red-400 font-mono">{errorMsg}</p>}
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-teal px-4 py-3 text-xs font-bold text-white hover:bg-teal-600 shadow-md transition-all duration-200"
+                    disabled={submitting}
+                    className="w-full rounded-xl bg-teal px-4 py-3 text-xs font-bold text-white hover:bg-teal-600 shadow-md transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Subscribe Now
+                    {submitting ? "Subscribing..." : "Subscribe Now"}
                   </button>
                 </form>
               )}

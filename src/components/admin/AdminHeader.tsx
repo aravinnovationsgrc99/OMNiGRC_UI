@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, FileText, PlusCircle, ExternalLink, LogOut, Shield } from "lucide-react";
+import { LayoutDashboard, FileText, PlusCircle, ExternalLink, LogOut, Shield, Inbox } from "lucide-react";
 
 export function AdminHeader() {
   const pathname = usePathname();
@@ -22,6 +22,7 @@ export function AdminHeader() {
 
   const navItems = [
     { label: "Dashboard", href: "/admin", icon: LayoutDashboard },
+    { label: "Requests", href: "/admin/requests", icon: Inbox },
     { label: "Posts", href: "/admin/posts", icon: FileText },
     { label: "New Post", href: "/admin/posts/new", icon: PlusCircle },
   ];

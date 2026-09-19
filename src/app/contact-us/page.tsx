@@ -13,14 +13,46 @@ export default function ContactUsPage() {
   const [submitted, setSubmitted] = useState(false);
   const [agree, setAgree] = useState(false);
   const [agreeError, setAgreeError] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [messageText, setMessageText] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
     if (!agree) {
       setAgreeError(true);
       return;
     }
-    setSubmitted(true);
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/demo-requests", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          company: "N/A",
+          message: `Subject: ${subject}\n\n${messageText}`,
+          request_type: "CONTACT",
+          source_page: "/contact-us"
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to send message");
+      }
+      setSubmitted(true);
+    } catch (err: any) {
+      setSubmitError(err.message || "Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -90,6 +122,8 @@ export default function ContactUsPage() {
                         <input
                           required
                           type="text"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           placeholder="Alex Morgan"
                           className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                         />
@@ -99,6 +133,8 @@ export default function ContactUsPage() {
                         <input
                           required
                           type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           placeholder="alex@company.com"
                           className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                         />
@@ -109,6 +145,8 @@ export default function ContactUsPage() {
                       <input
                         required
                         type="text"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                         placeholder="Inquiry about ISO 27001 & SOC 2 Mapping"
                         className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                       />
@@ -118,6 +156,8 @@ export default function ContactUsPage() {
                       <textarea
                         required
                         rows={4}
+                        value={messageText}
+                        onChange={(e) => setMessageText(e.target.value)}
                         placeholder="Tell us about your team's GRC operations..."
                         className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-xs text-navy-900 dark:text-white placeholder:text-slate-400 focus:border-teal focus:outline-none"
                       />
@@ -156,11 +196,15 @@ export default function ContactUsPage() {
                     {agreeError && (
                       <p className="text-[11px] text-red-500">You must agree to the Terms of Service & Privacy Policy before sending.</p>
                     )}
+                    {submitError && (
+                      <p className="text-[11px] text-red-500">{submitError}</p>
+                    )}
                     <button
                       type="submit"
-                      className="w-full rounded-xl bg-[#D4521A] dark:bg-teal py-3.5 text-xs font-bold text-white hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-md flex items-center justify-center gap-2"
+                      disabled={isSubmitting}
+                      className="w-full rounded-xl bg-[#D4521A] dark:bg-teal py-3.5 text-xs font-bold text-white hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-md flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send Message <Send className="h-4 w-4" />
+                      {isSubmitting ? "Sending Message..." : "Send Message"} <Send className="h-4 w-4" />
                     </button>
                   </form>
                 )}

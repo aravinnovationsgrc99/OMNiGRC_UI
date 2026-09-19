@@ -30,9 +30,12 @@ export default function DemoPage() {
     agree: false,
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
     const newErrors: { [key: string]: string } = {};
 
     if (!formData.name.trim()) newErrors.name = "Full name is required";
@@ -46,7 +49,34 @@ export default function DemoPage() {
       return;
     }
 
-    router.push("/thank-you");
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/demo-requests", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          message: `Role: ${formData.role}, Size: ${formData.size}${formData.message ? `. Priorities: ${formData.message}` : ""}`,
+          request_type: "DEMO",
+          source_page: "/demo"
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to submit request");
+      }
+
+      router.push("/thank-you");
+    } catch (err: any) {
+      setSubmitError(err.message || "Failed to submit request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -263,12 +293,14 @@ export default function DemoPage() {
                     </label>
                   </div>
                   {errors.agree && <p className="text-[11px] text-red-600 font-mono">{errors.agree}</p>}
+                  {submitError && <p className="text-xs text-red-600 font-mono mt-1">{submitError}</p>}
 
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-gradient-to-r from-[#F15E1C] to-[#D4521A] py-4 text-base font-bold text-white shadow-lg shadow-[#F15E1C]/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 mt-4"
+                    disabled={isSubmitting}
+                    className="w-full rounded-xl bg-gradient-to-r from-[#F15E1C] to-[#D4521A] py-4 text-base font-bold text-white shadow-lg shadow-[#F15E1C]/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 mt-4 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <span>Request Demo Walkthrough</span>
+                    <span>{isSubmitting ? "Submitting Request..." : "Request Demo Walkthrough"}</span>
                     <ArrowRight className="h-5 w-5" />
                   </button>
                 </form>
