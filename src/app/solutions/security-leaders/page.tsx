@@ -26,7 +26,7 @@ export default function SecurityLeadersPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden">
+        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden bg-grid-mesh-adaptive">
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
 
@@ -250,6 +250,34 @@ export default function SecurityLeadersPage() {
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0A111F] flex items-center justify-between font-mono text-xs border border-slate-200/60 dark:border-navy-800">
                 <span className="text-slate-600 dark:text-slate-400">Human Sign-off Gate</span>
                 <span className="text-emerald-600 dark:text-emerald-400 font-bold">Mandatory Verification</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3.5: EXECUTIVE COLLABORATION VISUAL BANNER */}
+        <section className="w-full max-w-7xl mx-auto px-6 py-8">
+          <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-navy-700 shadow-xl bg-slate-900">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+              <div className="lg:col-span-7 relative h-[260px] sm:h-[340px] w-full">
+                <img
+                  src="/hero-collab.png"
+                  alt="Executive governance collaboration team reviewing security posture"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/40 to-slate-900 hidden lg:block" />
+              </div>
+              <div className="lg:col-span-5 p-6 sm:p-10 bg-slate-900 text-white space-y-4">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+                  LEADERSHIP COLLABORATION
+                </span>
+                <h3 className="text-2xl font-bold tracking-tight text-white">
+                  Align Board Reporting with Operational Security Reality
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Provide executive stakeholders and board members with clear, verifiable security posture metrics derived directly from human-reviewed control tests and continuous asset telemetry.
+                </p>
               </div>
             </div>
           </div>

@@ -76,7 +76,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </div>
 
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-4 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-4 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

@@ -420,7 +420,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
     return (
       <HeroImageWithFallback
         src="/hero-audit-trail.png"
-        alt="An auditor verifying defensible testing history and immutable PostgreSQL change logs on a rolling 30/60/90-day compliance board."
+        alt="An auditor verifying defensible testing history and structured PostgreSQL change logs on a rolling 30/60/90-day compliance board."
         fallbackMotif={<ProductMotifSvg slug={slug} />}
       />
     );
@@ -430,7 +430,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
     return (
       <HeroImageWithFallback
         src="/hero-redaction.png"
-        alt="A security engineer inspecting automated PII redaction and data minimization logs before external LLM transmission."
+        alt="A security engineer inspecting data minimization and sanitized payload logs before external LLM transmission."
         fallbackMotif={<ProductMotifSvg slug={slug} />}
       />
     );
@@ -464,7 +464,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </h3>
         </div>
         <span className="px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-mono font-bold">
-          100% AUTOMATED
+          CONTINUOUS MONITORING
         </span>
       </div>
 
@@ -614,7 +614,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
             <div className="p-2.5 rounded-xl bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/40 text-center flex flex-col justify-between">
               <div className="text-xs font-mono text-blue-900 dark:text-blue-400 font-bold mb-0.5">90 DAYS DUE</div>
               <div className="text-sm font-mono font-extrabold text-slate-900 dark:text-slate-100 my-0.5">SCHEDULED</div>
-              <div className="text-xs text-blue-700 dark:text-blue-500 font-semibold mt-0.5">Immutable Log</div>
+              <div className="text-xs text-blue-700 dark:text-blue-500 font-semibold mt-0.5">Event Log</div>
             </div>
           </div>
         </motion.div>
@@ -824,7 +824,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
               {/* Step 2 (Engine) */}
               <rect x="125" y="0" width="100" height="60" rx="8" fill="#0A111F" stroke="#14B8A6" strokeWidth="1.5" />
               <text x="175" y="24" textAnchor="middle" fill="#14B8A6" fontSize="8" fontFamily="monospace" fontWeight="bold">2. SANITIZER</text>
-              <text x="175" y="42" textAnchor="middle" fill="#34D399" fontSize="8">PII Redacted</text>
+              <text x="175" y="42" textAnchor="middle" fill="#34D399" fontSize="8">Sanitized Payload</text>
 
               {/* Arrow 2 */}
               <line x1="227" y1="30" x2="253" y2="30" stroke="#14B8A6" strokeWidth="2" strokeDasharray="3 3" />
@@ -954,7 +954,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
               <rect x="0" y="0" width="340" height="34" rx="10" fill="#0A111F" stroke="#38BDF8" strokeWidth="1.2" />
               <circle cx="20" cy="17" r="4" fill="#38BDF8" />
               <text x="32" y="21" fill="#60A5FA" fontSize="9" fontFamily="monospace" fontWeight="bold">
-                ✓ Verified SHA-256 Audit Trail Integrity
+                ✓ Verified Audit Trail Integrity
               </text>
             </g>
           </g>

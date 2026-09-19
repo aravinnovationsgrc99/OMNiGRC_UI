@@ -37,12 +37,12 @@ export const ArchitectureSection: React.FC = () => {
   const architectureLayers = [
     {
       id: 1,
-      name: "STEP 1 - 2: TENANT INGESTION & REDACTION",
+      name: "STEP 1 - 2: TENANT INGESTION & DATA MINIMIZATION",
       title: "1. Authenticated Ingestion & Data Minimization",
-      desc: "Analyst initiates control mapping. The redaction layer sanitizes the payload, stripping organization names, employee identifiers, and unrelated asset/risk information.",
+      desc: "Analyst initiates control mapping. The data minimization layer sanitizes the payload, stripping organization names, employee identifiers, and unrelated asset/risk information.",
       icon: Lock,
       boundary: "OMNiGRC Controlled VPC",
-      items: ["Tenant-Scoped API", "Automated Redaction Engine", "Zero PII Transmitted", "Strict Schema Formatting"],
+      items: ["Tenant-Scoped API", "Sanitized Payload Pipeline", "Data Minimization", "Strict Schema Formatting"],
       borderColor: "border-teal",
       badgeColor: "text-teal bg-teal/10",
     },
@@ -167,7 +167,7 @@ export const ArchitectureSection: React.FC = () => {
               8-Stage AI API Execution Pipeline
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mt-1">
-              From analyst trigger to immutable database record, every step is isolated, sanitized, and human-supervised.
+              From analyst trigger to structured database record, every step is isolated, sanitized, and human-supervised.
             </p>
           </div>
 
@@ -190,8 +190,8 @@ export const ArchitectureSection: React.FC = () => {
               },
               {
                 step: "03",
-                label: "Redaction Engine",
-                sub: "Zero PII Payload",
+                label: "Minimization Layer",
+                sub: "Sanitized Advisory Payload",
                 icon: Lock,
                 color: "amber",
               },

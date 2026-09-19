@@ -48,7 +48,7 @@ const credibilityPillars = [
     tag: "Human Decides",
   },
   {
-    title: "Audit-Ready Immutable History",
+    title: "Audit-Ready Structured History",
     desc: "Complete change logs, versioning, and defensible audit records.",
     icon: History,
     tag: "Audit Defensible",

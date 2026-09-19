@@ -95,7 +95,7 @@ export default function MSSPSolutionPage() {
           <div className="absolute top-48 right-[-10%] w-[420px] h-[420px] bg-emerald-500/10 dark:bg-amber/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
           {/* Section 1: Hero */}
-          <section className="w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-20">
+          <section className="w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-20 bg-grid-mesh-adaptive">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Eyebrow Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-slate-900 dark:text-white shadow-sm mb-6 border border-slate-300 dark:border-navy-700">
@@ -308,6 +308,34 @@ export default function MSSPSolutionPage() {
                 <div><span className="text-slate-500 dark:text-slate-400">Inherent Risk: </span><span className="font-bold text-primary">{selectedClient.activeRisk}</span></div>
                 <div><span className="text-slate-500 dark:text-slate-400">Framework Mapping: </span><span className="font-bold text-emerald-600 dark:text-emerald-400">{selectedClient.controlScore}</span></div>
                 <div className="px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-semibold">Application-Level Isolated Scope</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 1.5: SECURITY OPERATIONS VISUAL BANNER */}
+        <section className="w-full max-w-7xl mx-auto px-6 py-6">
+          <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-navy-700 shadow-xl bg-slate-900">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+              <div className="lg:col-span-7 relative h-[260px] sm:h-[340px] w-full">
+                <img
+                  src="/hero-signoff.jpg"
+                  alt="Multi-client security operations center and infrastructure sign-off"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/40 to-slate-900 hidden lg:block" />
+              </div>
+              <div className="lg:col-span-5 p-6 sm:p-10 bg-slate-900 text-white space-y-4">
+                <span className="px-3 py-1 rounded-full bg-teal-500/20 text-teal-400 font-mono text-xs font-bold uppercase tracking-wider">
+                  SECURITY OPERATIONS & CONTROL
+                </span>
+                <h3 className="text-2xl font-bold tracking-tight text-white">
+                  Multi-Client Operations with Isolated Tenant Boundaries
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Manage multiple client environments simultaneously while ensuring strict application-level tenant isolation, auditable sign-offs, and client-specific evidence indexing.
+                </p>
               </div>
             </div>
           </div>

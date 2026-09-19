@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
                 </div>
                 <div className="p-3 rounded-xl bg-[#2E936F]/10 dark:bg-teal/10 border border-[#2E936F]/20 dark:border-teal/20 text-[#2E936F] dark:text-teal text-center">
                   <p className="font-bold">Auditability</p>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Immutable change log</p>
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Structured change log</p>
                 </div>
               </div>
             </div>

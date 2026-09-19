@@ -79,7 +79,7 @@ export default function VulnerabilitiesPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & EXTERNALLY SOURCED INGESTION HEADER  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden">
+        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & CTAs  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">

@@ -17,9 +17,9 @@ import {
 const phases = [
   {
     id: 0,
-    tabTitle: "1. Ingestion & Redaction",
+    tabTitle: "1. Ingestion & Minimization",
     title: "1. Authenticated Ingestion & Data Minimization",
-    userAction: "Analyst initiates control mapping. Redaction engine automatically strips org names, employee IDs, and PII.",
+    userAction: "Analyst initiates control mapping. Data minimization pipeline strips organization names, employee IDs, and PII.",
     nextProcess: "Next Step: Tiered Model Router & Clause Analysis",
     accentColor: "#2E936F",
   },
@@ -36,7 +36,7 @@ const phases = [
     tabTitle: "3. Approval & Storage",
     title: "3. Schema Validation & Mandatory Human Decision",
     userAction: "GRC Analyst inspects AI confidence (96%), approves mapping, and commits record to PostgreSQL.",
-    nextProcess: "Final State: Immutable Audit Record Committed to PostgreSQL",
+    nextProcess: "Final State: Structured Audit Record Committed to PostgreSQL",
     accentColor: "#F15E1C",
   },
 ];
@@ -180,7 +180,7 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                       />
                     </div>
                     <span className="text-[11px] font-mono font-bold text-[#2E936F] mt-1.5">
-                      Redaction Engine
+                      Minimization Layer
                     </span>
                   </div>
 
@@ -191,7 +191,7 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                     </div>
                     <p className="text-xs font-extrabold text-[#16233F] dark:text-white">Clean Payload</p>
                     <span className="inline-block text-[10px] font-mono font-bold bg-[#2E936F]/10 text-[#2E936F] dark:text-emerald-400 px-2.5 py-0.5 rounded">
-                      Zero PII Stripped
+                      Sanitized Payload
                     </span>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                     </div>
                     <p className="text-xs font-extrabold text-[#16233F] dark:text-white">PostgreSQL DB</p>
                     <span className="inline-block text-[10px] font-mono font-bold bg-[#2E936F]/10 text-[#2E936F] dark:text-emerald-400 px-2.5 py-0.5 rounded">
-                      Immutable Log
+                      Audit Log
                     </span>
                   </div>
                 </div>

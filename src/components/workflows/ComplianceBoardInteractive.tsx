@@ -58,7 +58,7 @@ export function ComplianceBoardInteractive() {
       ],
       checklist: [
         "Verify user notice delivery logs across multi-lingual user portals.",
-        "Audit cryptographic consent receipt database retention times.",
+        "Audit consent receipt database retention times.",
         "Test automated Right to Erasure cascade job in staging queues."
       ],
       evidenceId: "ev-dpdp-consent-sampling-q3.json (e8871ab9...021ac)"
@@ -306,11 +306,11 @@ export function ComplianceBoardInteractive() {
 
           {/* Col 3: Evidence Hash & Posture Telemetry Inset */}
           <div className="flex flex-col gap-4">
-            <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Immutable Evidence Vault Record</div>
+            <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Recorded Evidence Vault Entry</div>
             <div className="bg-slate-900 p-4 rounded-xl font-mono text-xs flex flex-col gap-3 shadow-inner border border-slate-800">
               <div className="flex items-center justify-between text-teal-400 font-bold">
                 <span className="flex items-center gap-1.5"><Lock className="h-3.5 w-3.5" /> EVIDENCE REFERENCED</span>
-                <span>SHA-256</span>
+                <span>RECORD</span>
               </div>
               <div className="text-slate-200 break-all font-mono text-[11px] font-semibold tracking-wide border-b border-slate-700/50 pb-3">
                 {activeData.evidenceId}

@@ -32,7 +32,7 @@ export default function LeanSecurityTeamsPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden">
+        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden bg-grid-mesh-adaptive">
           {/* Decorative Glow Accents */}
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>

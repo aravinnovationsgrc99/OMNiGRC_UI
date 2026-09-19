@@ -354,6 +354,32 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         continue;
       }
 
+      // 8.5 Markdown Image Parsing
+      const imgMatch = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      if (imgMatch) {
+        const altText = imgMatch[1];
+        const imgSrc = imgMatch[2];
+        blocks.push(
+          <figure key={`img-${i}`} className="my-8 space-y-2">
+            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-navy-700/60 shadow-md bg-slate-100 dark:bg-navy-950">
+              <img
+                src={imgSrc}
+                alt={altText || "Blog article visual illustration"}
+                loading="lazy"
+                className="w-full h-auto max-h-[480px] object-contain mx-auto"
+              />
+            </div>
+            {altText && (
+              <figcaption className="text-center font-mono text-xs text-slate-500 dark:text-slate-400">
+                {altText}
+              </figcaption>
+            )}
+          </figure>
+        );
+        i++;
+        continue;
+      }
+
       // 9. Paragraph
       if (line.trim().length > 0) {
         blocks.push(

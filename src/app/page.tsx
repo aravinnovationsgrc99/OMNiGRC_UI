@@ -53,7 +53,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  1. HERO SECTION (Clear, High-Converting, Light Canvas + Pipeline Demo)    */}
 {/*  =========================================================================  */}
-<section className="relative w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 pt-6 pb-16 md:pb-24">
+<section className="relative w-full bg-white dark:bg-[#0A111F] bg-grid-mesh-adaptive px-4 md:px-8 pt-6 pb-16 md:pb-24">
 {/*  Ambient Warm Peach Glow behind Hero  */}
 <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
 <div className="absolute top-1/3 left-10 w-80 h-80 bg-surface-variant/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
@@ -138,7 +138,7 @@ export default function Home() {
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">07 VAULT</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Defensible Evidence</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">SHA-256 Verified</span>
+<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">Evidence Verified</span>
 </div>
 </div>
 {/*  Telemetry High-Contrast Inspection Inset  */}
@@ -408,7 +408,7 @@ export default function Home() {
 </div>
 <h3 className="text-xl text-slate-900 dark:text-white font-bold">Policy &amp; Document Governance</h3>
 <p className="text-base text-slate-600 dark:text-slate-300 mt-2">
-              Version-controlled policy authoring with automated annual review triggers, markdown revisions, and cryptographic executive sign-offs.
+              Version-controlled policy authoring with automated annual review triggers, markdown revisions, and recorded executive sign-offs.
             </p>
 </div>
 <div className="mt-6 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold">
@@ -490,8 +490,8 @@ export default function Home() {
 </div>
 <div className="bg-[#1E293B] p-6 rounded-lg shadow-sm border-l-2 border-[#2E936F]">
 <span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">STAGE 03</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">PII Redaction Engine</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Strips names, internal IPs, secrets, and customer tenant IDs.</p>
+<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Payload Minimization Engine</h4>
+<p className="text-sm text-[#94A3B8] mt-1">Minimizes and sanitizes advisory payloads before external AI routing.</p>
 </div>
 <div className="bg-[#1E293B] p-6 rounded-lg shadow-sm">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400-fixed font-bold">STAGE 04</span>

@@ -24,7 +24,7 @@ export default function ComplianceManagersPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden">
+        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden bg-grid-mesh-adaptive">
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
 
@@ -357,7 +357,7 @@ export default function ComplianceManagersPage() {
                     <span className="font-mono text-xs font-bold text-primary">STEP 03: EVIDENCE REFERENCE INDEX</span>
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white">External Log Export Pointer Indexed</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                      Index customer Okta S3 export log reference with verification SHA-256 hash. Zero raw file re-hosting required.
+                      Index customer Okta S3 export log reference with verification timestamp and pointer. Zero raw file re-hosting required.
                     </p>
                   </div>
                   <button onClick={() => setActiveStep(4)} className="py-2.5 px-5 rounded-lg bg-primary text-white font-medium text-xs flex items-center gap-1.5 shadow-sm hover:bg-primary/90 transition-all">

@@ -28,7 +28,7 @@ export function EvidenceTable() {
     {
       id: "EVD-109", title: "Okta Global MFA Policy Enforcement Log Export",
       hash: "sha256:7b21e8d4...330a", hashColor: "text-orange-500",
-      targetIcon: <UserCheck className="h-4 w-4 text-orange-500" />, targetUri: "s3://customer-sec-audit-bucket/okta/...", targetType: "Customer S3 Bucket • Immutable URI",
+      targetIcon: <UserCheck className="h-4 w-4 text-orange-500" />, targetUri: "s3://customer-sec-audit-bucket/okta/...", targetType: "Customer S3 Bucket • Reference URI",
       controls: ["SOC2 CC6.2", "ISO A.5.15", "DPDP Sec. 8"],
       cadence: "Quarterly (90d)", dueText: "Due in 18 days", dueColor: "text-orange-500",
       owner: "R. Chen", role: "Identity Lead",

@@ -97,7 +97,7 @@ export default function HowItWorksPage() {
       desc: "Define protective safeguards once. Advisory AI suggests correlations across ISO 27001, SOC 2, HIPAA, GDPR, and DPDP, requiring mandatory human officer approval.",
       points: [
         "Map safeguards once across multiple global standards",
-        "Advisory AI clause cross-mapping with zero PII transmission",
+        "Advisory AI clause cross-mapping with data minimization",
         "Mandatory human practitioner review and confirmation"
       ],
       schemaTitle: "RECORD_SCHEMA_03.JSON",
@@ -267,7 +267,7 @@ export default function HowItWorksPage() {
 
       <main className="w-full pt-16">
         {/* Section 1: Hero Zone */}
-        <section className="relative w-full pt-6 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <section className="relative w-full pt-6 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center bg-grid-mesh-adaptive">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
             <span className="font-mono text-xs font-semibold tracking-wider uppercase">
@@ -511,6 +511,25 @@ export default function HowItWorksPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Related Article Banner */}
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/60 px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-200 dark:border-navy-700/60">
+          <div className="max-w-5xl mx-auto p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="px-2.5 py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-xs font-bold uppercase">EXECUTIVE STRATEGY</span>
+              <div>
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Why GRC Matters for Modern Businesses</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400">Discover how GRC creates clear accountability, improves risk visibility, and builds long-term resilience.</p>
+              </div>
+            </div>
+            <Link
+              href="/resources/blog/why-grc-matters-for-modern-businesses"
+              className="px-4 py-2 rounded-xl bg-[#F15E1C] text-white text-xs font-bold hover:bg-[#ce4700] transition-colors shrink-0"
+            >
+              Read Article &rarr;
+            </Link>
           </div>
         </section>
 

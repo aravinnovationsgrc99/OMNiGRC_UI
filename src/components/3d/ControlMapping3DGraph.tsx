@@ -26,11 +26,11 @@ const workflowSteps = [
   },
   {
     step: "02",
-    title: "Redaction & Minimization",
+    title: "Payload Minimization",
     scope: "OMNiGRC Boundary",
-    desc: "Org names, employee identities, and unrelated tenant data are stripped.",
+    desc: "Org names, employee identities, and unrelated tenant data are stripped before LLM routing.",
     icon: Lock,
-    badge: "Zero Sensitive Data",
+    badge: "Sanitized Advisory Payload",
   },
   {
     step: "03",

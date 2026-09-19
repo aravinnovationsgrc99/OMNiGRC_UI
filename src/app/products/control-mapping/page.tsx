@@ -81,7 +81,7 @@ export default function ControlMappingPage() {
         )}
 
         {/*  SECTION 1: HERO & MAP-ONCE VALUE PROPOSITION  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden">
+        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Headline & Action Buttons  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">

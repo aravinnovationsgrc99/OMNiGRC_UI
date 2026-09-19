@@ -39,7 +39,7 @@ export default function TrustPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
@@ -352,7 +352,7 @@ export default function TrustPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#D4521A] dark:text-rose-400 font-bold">•</span>
-                    <span>No cryptographic sign-off or immutable audit chains</span>
+                    <span>No unsupported external certification sign-off or overclaimed audit chains</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#D4521A] dark:text-rose-400 font-bold">•</span>

@@ -76,9 +76,16 @@ export function mapBlogPostToDbRow(post: Partial<BlogPost> & { title: string; co
 }
 
 /**
- * Retrieves all posts from Supabase database
+ * Retrieves all posts strictly from Supabase database
  */
 export async function getAllPosts(includeUnpublished = false): Promise<BlogPost[]> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!url || !anonKey) {
+    throw new Error("SUPABASE_CONFIG_ERROR: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables must be configured.");
+  }
+
   const client = getSupabasePublicClient();
   let query = client.from("blog_posts").select("*");
 
@@ -91,19 +98,17 @@ export async function getAllPosts(includeUnpublished = false): Promise<BlogPost[
   const { data, error } = await query;
 
   if (error) {
-    if (process.env.NODE_ENV === "production" && (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)) {
-      throw new Error("MISSING_SUPABASE_CONFIG: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY environment variables must be configured.");
-    }
-    console.warn("Supabase getAllPosts Notice:", error.message || error);
-    return (seedPosts as any[]).map(mapDbRowToBlogPost);
-  }
-
-  if ((!data || data.length === 0) && !includeUnpublished) {
-    // If Supabase table has zero rows, fallback to structured seed posts for test rendering
-    return (seedPosts as any[]).map(mapDbRowToBlogPost);
+    throw new Error(`SUPABASE_QUERY_ERROR: Failed to retrieve blog posts from database — ${error.message}`);
   }
 
   return (data || []).map(mapDbRowToBlogPost);
+}
+
+/**
+ * Returns explicit static seed dataset (used ONLY for database seeding/initialization)
+ */
+export function getSeedPosts(): BlogPost[] {
+  return (seedPosts as any[]).map(mapDbRowToBlogPost);
 }
 
 /**

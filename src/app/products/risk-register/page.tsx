@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {
@@ -58,7 +59,7 @@ export default function RiskRegisterPage() {
 </div>
 </section>
 {/*  Hero Section (Clean Analytical Typography Focus)  */}
-<section className="w-full px-8 pt-space-xl pb-space-lg">
+<section className="w-full px-8 pt-space-xl pb-space-lg bg-grid-mesh-adaptive">
 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div className="lg:col-span-7 flex flex-col items-start space-y-space-md">
 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white">
@@ -219,7 +220,7 @@ export default function RiskRegisterPage() {
 </div>
 </div>
 </section>
-{/*  Continuous vs Point-in-Time Comparison & PostgreSQL Immutable Audit Log  */}
+{/*  Continuous vs Point-in-Time Comparison & PostgreSQL Audit Log  */}
 <section className="w-full px-8 py-16 md:py-24 bg-slate-50 dark:bg-[#16233F]" id="audit-log">
 <div className="max-w-7xl mx-auto space-y-space-xl">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -249,7 +250,7 @@ export default function RiskRegisterPage() {
 </div>
 </div>
 </div>
-{/*  Immutable Audit Log Terminal (Telemetry surface)  */}
+{/*  Structured Audit Log Terminal (Telemetry surface)  */}
 <div className="lg:col-span-7 rounded-xl bg-slate-900 dark:bg-black text-white p-8 shadow-xl space-y-space-md flex flex-col justify-between">
 <div className="space-y-space-xs"><div className="flex items-center justify-between pb-2 border-b border-surface-container-lowest/10"><div className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full bg-amber-600 dark:bg-amber-500 animate-pulse"></span><span className="font-mono text-xs font-bold text-surface-container-lowest">Append-Only Audit Logging</span></div><span className="font-mono text-xs text-slate-500">audit_log_stream = active</span></div><p className="font-mono text-xs text-slate-500">SELECT timestamp, risk_id, new_score, trigger_event, user_id FROM omni_risk_audit_stream LIMIT 4;</p></div>
 {/*  Log entries table  */}
@@ -388,7 +389,7 @@ export default function RiskRegisterPage() {
 <Circle className="h-5 w-5 shrink-0" />
 </div>
 <h4 className="text-xl text-slate-900 dark:text-white font-semibold">Auditor Evidence</h4>
-<p className="text-sm text-slate-600 dark:text-slate-300">Immutable hash stored in Evidence Vault.</p>
+<p className="text-sm text-slate-600 dark:text-slate-300">Recorded evidence status stored in Evidence Vault.</p>
 </div>
 <span className="font-mono text-xs text-slate-900 dark:text-white font-mono">ev-drill-2026</span>
 </div>
@@ -440,7 +441,26 @@ export default function RiskRegisterPage() {
 </div>
 </div>
 </section>
-</div>
+
+        {/* Related Article Banner */}
+        <section className="w-full px-8 pb-16">
+          <div className="max-w-7xl mx-auto p-6 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="px-2.5 py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-xs font-bold uppercase">EDITORIAL GUIDE</span>
+              <div>
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white">How to Build an Effective Cybersecurity Risk Register</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400">Step-by-step methodology for identifying, assessing, and managing digital risks.</p>
+              </div>
+            </div>
+            <Link
+              href="/resources/blog/how-to-build-effective-cybersecurity-risk-register"
+              className="px-4 py-2 rounded-lg bg-[#F15E1C] text-white text-xs font-bold hover:bg-[#ce4700] transition-colors shrink-0"
+            >
+              Read Guide &rarr;
+            </Link>
+          </div>
+        </section>
+      </div>
 
 </main>
       <Footer />

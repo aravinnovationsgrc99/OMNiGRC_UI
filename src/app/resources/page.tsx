@@ -84,7 +84,7 @@ export default function ResourcesHubPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
@@ -110,7 +110,7 @@ export default function ResourcesHubPage() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">OMNiGRC Editorial Blog</h4>
-                  <p className="text-xs text-[#5a4138] dark:text-slate-400">Read in-depth articles on risk scoring, control crosswalks & AI governance.</p>
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400">Read in-depth articles on risk registers, audit readiness &amp; GRC strategy.</p>
                 </div>
               </div>
               <Link
@@ -119,6 +119,94 @@ export default function ResourcesHubPage() {
               >
                 <span>Visit Blog</span>
                 <ChevronRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FEATURED EDITORIAL ARTICLES */}
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/60 px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+              <div>
+                <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block">
+                  FEATURED EDITORIAL ARTICLES
+                </span>
+                <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
+                  In-Depth Strategy &amp; GRC Best Practices
+                </h2>
+              </div>
+              <Link
+                href="/resources/blog"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
+              >
+                <span>Browse All Articles</span>
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link
+                href="/resources/blog/how-to-build-effective-cybersecurity-risk-register"
+                className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/40 text-amber-800 dark:text-amber-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
+                    RISK MANAGEMENT
+                  </span>
+                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                    How to Build an Effective Cybersecurity Risk Register
+                  </h3>
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">
+                    A step-by-step guide to identifying, assessing, prioritizing, and managing digital risks with a structured risk register.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between text-xs font-bold text-[#F15E1C]">
+                  <span>Read Article</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              <Link
+                href="/resources/blog/compliance-vs-pre-audit-preparation-what-businesses-need-to-know"
+                className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <span className="px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-950/40 text-teal-800 dark:text-teal-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
+                    COMPLIANCE
+                  </span>
+                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                    Compliance vs. Pre-Audit Preparation: What Businesses Need to Know
+                  </h3>
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">
+                    Why businesses should move from frantic pre-audit scrambles to continuous compliance management using GRC software.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between text-xs font-bold text-[#F15E1C]">
+                  <span>Read Article</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              <Link
+                href="/resources/blog/why-grc-matters-for-modern-businesses"
+                className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <span className="px-2.5 py-0.5 rounded-full bg-orange-100 dark:bg-orange-950/40 text-orange-800 dark:text-orange-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
+                    GOVERNANCE
+                  </span>
+                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                    Why GRC Matters for Modern Businesses
+                  </h3>
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">
+                    How Governance, Risk, and Compliance creates clear accountability, improves risk visibility, and builds long-term resilience.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between text-xs font-bold text-[#F15E1C]">
+                  <span>Read Article</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Link>
             </div>
           </div>
