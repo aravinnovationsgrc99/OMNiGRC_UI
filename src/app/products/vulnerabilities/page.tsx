@@ -77,7 +77,7 @@ export default function VulnerabilitiesPage() {
   return (
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & EXTERNALLY SOURCED INGESTION HEADER  */}
         <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">

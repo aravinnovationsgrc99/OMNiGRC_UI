@@ -75,7 +75,7 @@ export default function AssetInventoryPage() {
   return (
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full pt-16">
         {/*  Interactive Toast / Alert Simulator  */}
         <div className={`fixed bottom-6 right-6 z-50 transform transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm ${toastMessage ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`} id="telemetry-toast">
           <Circle className="h-5 w-5 shrink-0 text-secondary" />

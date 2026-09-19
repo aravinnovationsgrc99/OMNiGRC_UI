@@ -2,42 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════════
+   OMNIGRC GLOBAL VISUAL SYSTEM — v2.0
+   Phase 1: Visual Foundation Restoration
+   ═══════════════════════════════════════════════════════════ */
+
 /* ─────────────────────────────────────────────────────────
-   SHARED DESIGN TOKENS (dark-mode defaults, matches theme)
+   SHARED DESIGN TOKENS (shared across both modes)
    ───────────────────────────────────────────────────────── */
 :root {
-  --background: #0A111F;
-  --foreground: #F8FAFC;
-  --color-navy: #16233F;
-  --color-teal: #0F6E6A;
-  --color-amber: #B5750A;
-  --color-rose: #B23A48;
-  --color-canvas: #F6F7F6;
-  --color-card-warm: #F7D7B0;
+  /* Brand primitives */
+  --color-navy:        #16233F;
+  --color-teal:        #0F6E6A;
+  --color-amber:       #B5750A;
+  --color-rose:        #B23A48;
+  --color-canvas:      #F6F7F6;
+  --color-card-warm:   #F7D7B0;
   --color-card-border-warm: #E8C090;
-  --color-slate-text: #5B6672;
-  --color-slate-soft: #8B95A1;
+  --color-slate-text:  #5B6672;
+  --color-slate-soft:  #8B95A1;
+
+  /* Navbar height token — used for page-content clearance */
+  --navbar-h:          64px;
+  --navbar-h-sm:       72px;
+
+  /* ── LIGHT MODE semantic tokens (default) ───────────────
+     These are the active values when .dark is NOT on <html>
+  ──────────────────────────────────────────────────────── */
+  --background:        #FFFFFF;
+  --foreground:        #0d1b36;
+
+  /* Stitch Material tokens — light mode */
+  --surface:            #faf8ff;
+  --surface-bright:     #faf8ff;
+  --surface-dim:        #cdd9fe;
+  --surface-container:  #e9edff;
+  --surface-container-low:     #f1f3ff;
+  --surface-container-high:    #e1e8ff;
+  --surface-container-highest: #d9e2ff;
+  --surface-container-lowest:  #ffffff;
+  --on-surface:         #0d1b36;
+  --on-surface-variant: #5a4138;
+  --on-background:      #0d1b36;
+  --outline:            #8e7166;
+  --outline-variant:    #e2bfb3;
+  --primary:            #F15E1C;
+  --on-primary:         #ffffff;
+  --primary-container:  #ce4700;
+  --on-primary-container: #fffbff;
+  --secondary:          #006c4d;
+  --on-secondary:       #ffffff;
+  --secondary-container: #95f6cb;
+  --on-secondary-container: #007353;
+  --tertiary:           #795600;
+  --on-tertiary:        #ffffff;
+  --tertiary-container: #986d00;
+  --inverse-surface:    #23304c;
+  --inverse-on-surface: #edf0ff;
+  --error:              #ba1a1a;
+  --error-container:    #ffdad6;
+  --on-error:           #ffffff;
+  --on-error-container: #93000a;
+
+  /* Light-mode palette extras */
+  --lm-orange:    #F15E1C;
+  --lm-orange-sm: #D4521A;
+  --lm-green:     #2E936F;
+  --lm-peach:     #F7D7B0;
+  --lm-golden:    #FAB60A;
+  --lm-yellow:    #FFEC69;
+  --lm-canvas:    #FFFFFF;
+
+  /* Text muted shorthand */
+  --text-muted: #5B6672;
 }
 
 /* ─────────────────────────────────────────────────────────
-   LIGHT-MODE PALETTE TOKENS
-   Only active when .dark is NOT on <html>
+   DARK MODE TOKEN OVERRIDES
+   Applied when .dark class is present on <html>
+   ALL Stitch Material tokens are remapped here so that
+   pages using token classes (e.g. bg-surface, text-on-surface)
+   automatically get correct dark values.
    ───────────────────────────────────────────────────────── */
-html:not(.dark) {
-  --lm-orange: #F15E1C;
-  --lm-orange-sm: #D4521A;
-  --lm-green: #2E936F;
-  --lm-peach: #F7D7B0;
-  --lm-golden: #FAB60A;
-  --lm-yellow: #FFEC69;
-  --lm-canvas: #FFFFFF;
+html.dark {
+  --background:        #0A111F;
+  --foreground:        #E2E8F0;
+
+  /* Dark surface system — elevated, visible layers */
+  --surface:            #0d1420;
+  --surface-bright:     #141e30;
+  --surface-dim:        #080e1a;
+  --surface-container:  #141e30;
+  --surface-container-low:     #111929;
+  --surface-container-high:    #1a2540;
+  --surface-container-highest: #202d4a;
+  --surface-container-lowest:  #090f1c;
+
+  /* Text — WCAG AA (≥4.5:1 on dark surfaces) */
+  --on-surface:         #E2E8F0;  /* 14.7:1 on #0A111F */
+  --on-surface-variant: #94A3B8;  /* 5.9:1 on #141e30 */
+  --on-background:      #E2E8F0;
+  --outline:            #475569;
+  --outline-variant:    #1E3A5F;
+
+  /* Brand primaries in dark */
+  --primary:            #F15E1C;           /* brand orange CTA */
+  --on-primary:         #ffffff;
+  --primary-container:  #ce4700;
+  --on-primary-container: #fffbff;
+  --secondary:          #40C89A;
+  --on-secondary:       #002115;
+  --secondary-container: #00513a;
+  --on-secondary-container: #79d9b0;
+  --tertiary:           #FFB84D;
+  --on-tertiary:        #271900;
+  --tertiary-container: #986d00;
+  --inverse-surface:    #e2e8f0;
+  --inverse-on-surface: #0d1b36;
+  --error:              #FF6B6B;
+  --error-container:    #93000a;
+  --on-error:           #ffffff;
+  --on-error-container: #ffdad6;
+
+  --text-muted: #94A3B8;
 }
 
+/* ─────────────────────────────────────────────────────────
+   HTML ROOT — color-scheme for native controls
+   ───────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  /* Allow both light and dark native controls */
+  color-scheme: light dark;
+}
+html.dark {
   color-scheme: dark;
 }
+html:not(.dark) {
+  color-scheme: light;
+}
 
+/* ─────────────────────────────────────────────────────────
+   BODY BASE
+   ───────────────────────────────────────────────────────── */
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -47,7 +154,6 @@ body {
   padding: 0;
 }
 
-/* Dev Mode FOUC & Layout Shift Fallbacks */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -60,21 +166,79 @@ header, nav, main, section, footer {
    GLOBAL TYPOGRAPHY ENFORCEMENT
    13px minimum, 1.625 line-height on body, 1.2 on headers
    ───────────────────────────────────────────────────────── */
-
-/* Body paragraphs: enforce 13px floor + relaxed leading */
 p {
   font-size: max(0.8125rem, 1em);
   line-height: 1.625;
 }
 
-/* Section & card headings: tight punchy leading */
 h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
 /* ─────────────────────────────────────────────────────────
+   PAGE CONTENT CLEARANCE
+   Eliminates per-page pt-N guesswork — use .page-content
+   on all <main> wrappers instead of pt-20/pt-24/pt-28
+   ───────────────────────────────────────────────────────── */
+.page-content {
+  padding-top: var(--navbar-h, 64px);
+}
+
+@media (min-width: 640px) {
+  .page-content {
+    padding-top: var(--navbar-h-sm, 72px);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION BACKGROUND UTILITIES
+   Use these instead of raw bg-[#...] hex values.
+   They correctly swap between light/dark mode.
+   ───────────────────────────────────────────────────────── */
+
+/* Light canvas: white / dark: deep navy */
+.section-adaptive {
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+/* Always white in light, navy-950 in dark */
+.section-base {
+  background-color: #FFFFFF;
+  color: #0d1b36;
+}
+html.dark .section-base {
+  background-color: #0A111F;
+  color: #E2E8F0;
+}
+
+/* Slightly elevated — slate-50 / navy-900 */
+.section-raised {
+  background-color: #F8FAFC;
+  color: #0d1b36;
+}
+html.dark .section-raised {
+  background-color: #16233F;
+  color: #E2E8F0;
+}
+
+/* Always dark — for intentional dark sections in light mode */
+.section-dark {
+  background-color: #0A111F;
+  color: #E2E8F0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   NAVBAR HEIGHT VARIABLE on :root
+   (also declared in <Header> via inline style to stay DRY)
+   ───────────────────────────────────────────────────────── */
+:root {
+  --navbar-h: 64px;
+  --navbar-h-sm: 72px;
+}
+
+/* ─────────────────────────────────────────────────────────
    CARD ELEVATION SYSTEM
-   Soft shadow lifts cards over page canvas
    ───────────────────────────────────────────────────────── */
 .card-elevated {
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
@@ -86,17 +250,39 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
-.dark .card-elevated {
+html.dark .card-elevated {
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
 }
 
-.dark .card-elevated:hover {
+html.dark .card-elevated:hover {
   box-shadow: 0 12px 24px -8px rgba(0,0,0,0.45), 0 4px 8px -2px rgba(0,0,0,0.25);
   transform: translateY(-3px);
 }
 
 /* ─────────────────────────────────────────────────────────
-   SECTION RHYTHM PADDING  clamp(4rem, 8vw, 7rem)
+   WORKFLOW CARD BODY — title-to-description spacing
+   Apply .workflow-card-body to the inner div of feature cards
+   ───────────────────────────────────────────────────────── */
+.workflow-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem; /* 10px — comfortable title-to-description gap */
+}
+
+.workflow-card-body h3,
+.workflow-card-body h4 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.workflow-card-body p {
+  line-height: 1.625;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION RHYTHM PADDING
    ───────────────────────────────────────────────────────── */
 .section-rhythm {
   padding-top: clamp(4rem, 8vw, 7rem);
@@ -110,7 +296,7 @@ h1, h2, h3, h4 {
 .divider-dark  { border-top: 1px solid rgba(255,255,255,0.08); }
 
 /* ─────────────────────────────────────────────────────────
-   MOBILE TOUCH TARGET MINIMUM  (44×44 px)
+   MOBILE TOUCH TARGET MINIMUM (44×44 px)
    ───────────────────────────────────────────────────────── */
 button, a, [role="button"], [role="tab"] {
   min-height: 44px;
@@ -118,15 +304,14 @@ button, a, [role="button"], [role="tab"] {
   align-items: center;
 }
 
-/* Pill/badge overrides — inline badges don't need full 44px height */
+/* Pill/badge overrides */
 span[class*="rounded-full"], .badge-pill {
   min-height: unset;
   display: inline-flex;
 }
 
 /* ─────────────────────────────────────────────────────────
-   FOOTER CONTRAST FIX
-   Always dark charcoal (#0F172A) for both themes
+   FOOTER — always dark charcoal in both modes
    ───────────────────────────────────────────────────────── */
 footer {
   background-color: #0F172A !important;
@@ -141,13 +326,12 @@ footer h4 {
 footer a {
   color: #94A3B8;
   transition: color 0.15s ease;
-  min-height: unset;   /* inline links — no 44px override */
+  min-height: unset;
   display: inline;
 }
 
 footer a:hover { color: #E2E8F0; }
 
-/* Light mode: footer stays dark charcoal — footer is always dark */
 html:not(.dark) footer {
   background-color: #0F172A !important;
   color: #94A3B8;
@@ -166,6 +350,11 @@ html:not(.dark) footer a:hover { color: #E2E8F0; }
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(15, 110, 106, 0.25);
+}
+
+html:not(.dark) .glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(15, 110, 106, 0.2);
 }
 
 .glass-panel:hover {
@@ -190,7 +379,6 @@ html:not(.dark) footer a:hover { color: #E2E8F0; }
 
 /* ─────────────────────────────────────────────────────────
    MICRO-INTERACTION UTILITY CLASSES
-   Dark mode: steady ease. Light mode: spring bounce.
    ───────────────────────────────────────────────────────── */
 .micro-card {
   transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s ease-out, box-shadow 0.2s ease-out;
@@ -221,6 +409,20 @@ html:not(.dark) .micro-btn { transition: all 0.18s cubic-bezier(0.34,1.56,0.64,1
 html:not(.dark) .micro-row:hover { background-color: rgba(247,215,176,0.5); }
 
 /* ─────────────────────────────────────────────────────────
+   MOBILE TABLE OVERFLOW GUARD
+   ───────────────────────────────────────────────────────── */
+.table-scroll-guard {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.table-scroll-guard > table,
+.table-scroll-guard > div[class*="grid"] {
+  min-width: 600px;
+}
+
+/* ─────────────────────────────────────────────────────────
    CUSTOM SCROLLBAR
    ───────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -233,10 +435,10 @@ html:not(.dark) .micro-row:hover { background-color: rgba(247,215,176,0.5); }
 }
 ::-webkit-scrollbar-thumb:hover { background: #0F6E6A; }
 
-html:not(.dark) ::-webkit-scrollbar-track { background: #F7D7B0; }
+html:not(.dark) ::-webkit-scrollbar-track { background: #F8FAFC; }
 html:not(.dark) ::-webkit-scrollbar-thumb {
-  background: #E8C090;
-  border: 1px solid rgba(241,94,28,0.25);
+  background: #CBD5E1;
+  border: 1px solid rgba(241,94,28,0.15);
 }
 html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #F15E1C; }
 
@@ -245,9 +447,7 @@ html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #F15E1C; }
   scrollbar-width: auto;
   scrollbar-color: #2E936F rgba(10, 17, 31, 0.8);
 }
-.top-table-scrollbar::-webkit-scrollbar {
-  height: 10px;
-}
+.top-table-scrollbar::-webkit-scrollbar { height: 10px; }
 .top-table-scrollbar::-webkit-scrollbar-track {
   background: rgba(10, 17, 31, 0.8);
   border-radius: 9999px;
@@ -258,9 +458,7 @@ html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #F15E1C; }
   border-radius: 9999px;
   border: 2px solid #0A111F;
 }
-.top-table-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #34A853;
-}
+.top-table-scrollbar::-webkit-scrollbar-thumb:hover { background: #34A853; }
 
 html:not(.dark) .top-table-scrollbar {
   scrollbar-color: #F15E1C rgba(247, 215, 176, 0.6);
@@ -274,9 +472,7 @@ html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 9999px;
   border: 2px solid #FFFFFF;
 }
-html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #D4521A;
-}
+html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb:hover { background: #D4521A; }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -292,16 +488,36 @@ html:not(.dark) .top-table-scrollbar::-webkit-scrollbar-thumb:hover {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(-30px, -20px) scale(1.03); }
 }
-.ambient-motion-1 {
-  animation: ambientSubtleA 20s ease-in-out infinite;
-}
-.ambient-motion-2 {
-  animation: ambientSubtleB 24s ease-in-out infinite;
-}
+.ambient-motion-1 { animation: ambientSubtleA 20s ease-in-out infinite; }
+.ambient-motion-2 { animation: ambientSubtleB 24s ease-in-out infinite; }
+
+/* Dark mode grid mesh (subtle navy lines on deep background) */
 .bg-grid-mesh {
   background-size: 36px 36px;
-  background-image: linear-gradient(to right, rgba(13, 27, 54, 0.035) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(13, 27, 54, 0.035) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, rgba(15, 110, 106, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 110, 106, 0.05) 1px, transparent 1px);
+}
+
+/* Light mode grid mesh (subtle warm lines on white) */
+.bg-grid-mesh-light {
+  background-size: 36px 36px;
+  background-image:
+    linear-gradient(to right, rgba(13, 27, 54, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 27, 54, 0.04) 1px, transparent 1px);
+}
+
+/* Adaptive mesh: light in light mode, teal in dark mode */
+.bg-grid-mesh-adaptive {
+  background-size: 36px 36px;
+  background-image:
+    linear-gradient(to right, rgba(13, 27, 54, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 27, 54, 0.035) 1px, transparent 1px);
+}
+html.dark .bg-grid-mesh-adaptive {
+  background-image:
+    linear-gradient(to right, rgba(15, 110, 106, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 110, 106, 0.07) 1px, transparent 1px);
 }
 
 /* ─────────────────────────────────────────────────────────

@@ -245,14 +245,14 @@ export const UnifiedPlatformSection: React.FC = () => {
                       ].map((cell, cIdx) => (
                         <div
                           key={cIdx}
-                          className={`p-2 rounded font-bold transition-all ${
+                          className={`p-2 rounded font-extrabold text-xs transition-all ${
                             cell.color === "orange"
-                              ? "bg-rose text-white shadow-sm"
+                              ? "bg-rose-600 text-white shadow-sm"
                               : cell.color === "gold"
-                              ? "bg-amber/30 text-amber border border-amber/40"
+                              ? "bg-orange-100 dark:bg-orange-950/80 text-orange-950 dark:text-orange-200 border border-orange-300 dark:border-orange-700"
                               : cell.color === "yellow"
-                              ? "bg-amber/20 text-amber border border-amber/30"
-                              : "bg-teal/15 text-teal-300 font-bold border border-teal/20"
+                              ? "bg-amber-100 dark:bg-amber-950/80 text-amber-950 dark:text-amber-200 border border-amber-300 dark:border-amber-700"
+                              : "bg-emerald-100 dark:bg-emerald-950/80 text-emerald-950 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700"
                           }`}
                         >
                           {cell.label.split(" ")[1]}

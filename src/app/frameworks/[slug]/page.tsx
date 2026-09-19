@@ -63,7 +63,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
-      <main className="flex-1 w-full pt-24 sm:pt-28">
+      <main className="flex-1 w-full pt-16">
         {/* BREADCRUMB */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <nav className="flex items-center gap-2 text-xs font-mono text-[#5a4138] dark:text-slate-400">

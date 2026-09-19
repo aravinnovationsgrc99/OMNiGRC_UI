@@ -265,7 +265,7 @@ export default function HowItWorksPage() {
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased">
       <Header />
 
-      <main className="w-full pt-24 sm:pt-28">
+      <main className="w-full pt-16">
         {/* Section 1: Hero Zone */}
         <section className="relative w-full pt-6 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">

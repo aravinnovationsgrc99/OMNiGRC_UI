@@ -82,7 +82,7 @@ export default function ResourcesHubPage() {
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
-      <main className="flex-1 w-full pt-24 sm:pt-28">
+      <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
         <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
@@ -102,6 +102,25 @@ export default function ResourcesHubPage() {
             <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
               Explore canonical framework guides, product workflow walkthroughs, and practical GRC implementation methodologies.
             </p>
+
+            <div className="max-w-xl mx-auto p-4 rounded-2xl bg-white dark:bg-navy-900 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-md flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3 text-left">
+                <div className="p-2.5 rounded-xl bg-[#ffdbcf] dark:bg-orange-950/40 text-[#F15E1C]">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">OMNiGRC Editorial Blog</h4>
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400">Read in-depth articles on risk scoring, control crosswalks & AI governance.</p>
+                </div>
+              </div>
+              <Link
+                href="/resources/blog"
+                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors flex items-center gap-1 shrink-0"
+              >
+                <span>Visit Blog</span>
+                <ChevronRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
         </section>
 

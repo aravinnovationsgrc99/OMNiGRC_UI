@@ -19,7 +19,7 @@ export default function ControlMappingPage() {
   return (
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full pt-16">
         {/*  Interactive Human Ratification Modal  */}
         {isModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-gutter bg-slate-900/60 backdrop-blur-sm">

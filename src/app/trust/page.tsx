@@ -37,7 +37,7 @@ export default function TrustPage() {
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
-      <main className="flex-1 w-full pt-24 sm:pt-28">
+      <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
         <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />

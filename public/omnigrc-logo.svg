@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none" role="img" aria-label="OMNiGRC logo">
+  <defs>
+    <!-- Gold gradient for the ring and wordmark OMNI -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D060"/>
+      <stop offset="40%" stop-color="#E8A820"/>
+      <stop offset="70%" stop-color="#C88A10"/>
+      <stop offset="100%" stop-color="#F5D060"/>
+    </linearGradient>
+    <!-- Teal gradient for bars and GRC wordmark -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#40E0C0"/>
+      <stop offset="100%" stop-color="#0F8E7A"/>
+    </linearGradient>
+    <!-- Arrow teal gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F8E7A"/>
+      <stop offset="100%" stop-color="#40E0C0"/>
+    </linearGradient>
+    <!-- Ring shadow filter -->
+    <filter id="ringGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#C88A10" flood-opacity="0.4"/>
+    </filter>
+    <!-- Teal glow -->
+    <filter id="tealGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#0F8E7A" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- ── ORBIT RING (gold) ── -->
+  <!-- Main ring arc — open at bottom right where arrow exits -->
+  <path
+    d="M 160 30
+       A 90 90 0 1 1 232 255"
+    stroke="url(#goldGrad)"
+    stroke-width="18"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#ringGlow)"
+  />
+
+  <!-- ── TEAL ORBIT SWOOSH / ARROW PATH ── -->
+  <!-- Elliptical swoosh that orbits the ring diagonally and ends in arrow -->
+  <path
+    d="M 78 198 Q 140 148 210 98 Q 240 78 268 60"
+    stroke="url(#arrowGrad)"
+    stroke-width="7"
+    stroke-linecap="round"
+    fill="none"
+    filter="url(#tealGlow)"
+  />
+  <!-- Arrow head at top right -->
+  <polygon
+    points="268,60 250,58 260,74"
+    fill="#40E0C0"
+    filter="url(#tealGlow)"
+  />
+
+  <!-- ── BAR CHART (teal, inside the ring) ── -->
+  <!-- 4 ascending bars centered in the ring -->
+  <g fill="url(#tealGrad)" filter="url(#tealGlow)">
+    <!-- Bar 1 (shortest) -->
+    <rect x="122" y="158" width="14" height="48" rx="3"/>
+    <!-- Bar 2 -->
+    <rect x="140" y="138" width="14" height="68" rx="3"/>
+    <!-- Bar 3 -->
+    <rect x="158" y="118" width="14" height="88" rx="3"/>
+    <!-- Bar 4 (tallest) -->
+    <rect x="176" y="100" width="14" height="106" rx="3"/>
+  </g>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "OMNi" in gold -->
+  <text
+    x="42"
+    y="274"
+    font-family="'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="46"
+    font-weight="800"
+    letter-spacing="-1"
+    fill="url(#goldGrad)"
+  >OMNi</text>
+  <!-- "GRC" in teal -->
+  <text
+    x="176"
+    y="274"
+    font-family="'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-size="46"
+    font-weight="800"
+    letter-spacing="-1"
+    fill="url(#tealGrad)"
+  >GRC</text>
+</svg>

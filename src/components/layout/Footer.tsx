@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Shield, Lock, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Lock, ArrowRight } from "lucide-react";
 import { FRAMEWORKS } from "@/lib/frameworks";
 import { PILLARS } from "@/lib/pillars";
 
@@ -135,13 +136,14 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-3">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-teal/20 text-teal">
-              <Shield className="h-4 w-4" />
-            </div>
-            <span className="font-semibold text-white">
-              OMNi<span className="text-[#F15E1C]">GRC</span>
-            </span>
+          <div className="flex items-center gap-3 flex-wrap">
+            <Image
+              src="/omnigrc-logo.png"
+              alt="OMNiGRC — Connected GRC Platform"
+              width={220}
+              height={75}
+              className="h-12 sm:h-14 w-auto object-contain"
+            />
             <span className="text-slate-400">
               Unified Risk, Asset, and Security-Control Management. © 2026 OMNiGRC. All rights reserved.
             </span>

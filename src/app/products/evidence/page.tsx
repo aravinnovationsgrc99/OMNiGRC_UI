@@ -40,7 +40,7 @@ export default function EvidencePage() {
   return (
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
-      <main className="flex-1 w-full pt-20 sm:pt-24 bg-transparent min-h-screen">
+      <main className="flex-1 w-full pt-16 bg-transparent min-h-screen">
 <div className="flex flex-col w-full">
 {/*  Subtle decorative ambient backdrop elements  */}
 <div className="relative w-full overflow-hidden">

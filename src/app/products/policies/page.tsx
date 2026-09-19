@@ -62,9 +62,14 @@ export default function PoliciesPage() {
   return (
     <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
+      <main className="flex-1 w-full pt-16">
       <div className="flex flex-col w-full">
         {/*  SECTION 1: HERO & POLICY GOVERNANCE OVERVIEW  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden">
+        <section className="relative w-full bg-[#faf8ff] dark:bg-[#0A111F] bg-grid-mesh-adaptive overflow-hidden">
+          {/* Ambient glow accents */}
+          <div aria-hidden="true" className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#F15E1C]/5 dark:bg-teal/8 blur-3xl pointer-events-none" />
+          <div aria-hidden="true" className="absolute top-1/2 -left-16 w-80 h-80 rounded-full bg-[#2E936F]/6 dark:bg-teal/5 blur-2xl pointer-events-none" />
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & CTAs  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -153,6 +158,7 @@ export default function PoliciesPage() {
               </div>
             </div>
           </div>
+          </div>{/* closes max-w-7xl */}
         </section>
 
         {/*  SECTION 2: STRUCTURED POLICY LIFECYCLE  */}
@@ -201,7 +207,7 @@ export default function PoliciesPage() {
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Trigger automated annual review reminders and version revision logs before audit windows open.</p>
               </div>
             </div>
-          </div>
+          </div>{/* end max-w-7xl */}
         </section>
 
         {/*  SECTION 3: INTERACTIVE ACTIVE POLICY EXPLORER  */}
@@ -357,6 +363,7 @@ export default function PoliciesPage() {
           </div>
         </section>
       </div>
+      </main>
       <Footer />
     </div>
   );

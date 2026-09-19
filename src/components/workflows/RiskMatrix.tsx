@@ -38,10 +38,10 @@ export function RiskMatrix() {
   ];
 
   const getScoreColor = (score: number) => {
-    if (score >= 16) return "bg-red-500/20 text-red-700 dark:text-red-400 border-red-200 dark:border-red-500/30";
-    if (score >= 10) return "bg-orange-500/20 text-orange-700 dark:text-orange-400 border-orange-200 dark:border-orange-500/30";
-    if (score >= 5) return "bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 border-yellow-200 dark:border-yellow-500/30";
-    return "bg-green-500/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-500/30";
+    if (score >= 16) return "bg-rose-100 text-rose-950 dark:bg-rose-950/90 dark:text-rose-200 border-rose-300 dark:border-rose-700/80 font-bold";
+    if (score >= 10) return "bg-orange-100 text-orange-950 dark:bg-orange-950/90 dark:text-orange-200 border-orange-300 dark:border-orange-700/80 font-bold";
+    if (score >= 5) return "bg-amber-100 text-amber-950 dark:bg-amber-950/90 dark:text-amber-200 border-amber-300 dark:border-amber-700/80 font-bold";
+    return "bg-emerald-100 text-emerald-950 dark:bg-emerald-950/90 dark:text-emerald-200 border-emerald-300 dark:border-emerald-700/80 font-bold";
   };
 
   const getScoreBgClass = (score: number) => {

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
@@ -15,7 +16,6 @@ import {
   CalendarCheck,
   ShieldAlert,
   Globe,
-  BookOpen,
   Award,
 } from "lucide-react";
 import { Sun, Moon } from "lucide-react";
@@ -54,11 +54,7 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 dark:bg-[#0A111F]/95 backdrop-blur-md border-b border-slate-200 dark:border-teal/20 py-3 shadow-xl"
-          : "bg-transparent py-4 sm:py-5"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center transition-all duration-300 bg-white/95 dark:bg-[#0A111F]/95 backdrop-blur-md border-b border-slate-200/80 dark:border-navy-700/80 shadow-md"
     >
       {/* Subtle Scroll Progress Indicator Bar */}
       <div
@@ -68,22 +64,23 @@ export const Header: React.FC = () => {
       />
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2.5 shrink-0">
+          {/* ── Brand Logo ── */}
+          <Link href="/" className="group flex items-center shrink-0" aria-label="OMNiGRC home">
             <motion.div
-              whileHover={{ rotate: 5, scale: 1.05 }}
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#F15E1C] to-[#FAB60A] dark:from-teal dark:to-amber shadow-md shadow-[#F15E1C]/20 dark:shadow-teal/20"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              className="flex items-center px-2 py-1 rounded-lg dark:bg-white/5"
             >
-              <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+              <Image
+                src="/omnigrc-logo.png"
+                alt="OMNiGRC — Connected GRC Platform"
+                width={200}
+                height={68}
+                className="h-11 sm:h-12 w-auto object-contain"
+                priority
+              />
             </motion.div>
-            <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-bold tracking-tight text-navy-900 dark:text-white group-hover:text-[#D4521A] dark:group-hover:text-teal transition-colors">
-                OMNi<span className="text-[#D4521A] dark:text-teal">GRC</span>
-              </span>
-              <span className="text-[9px] sm:text-[10px] tracking-widest text-[#D4521A] dark:text-amber -mt-1 font-mono uppercase">
-                Unified GRC Platform
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav Items */}
@@ -94,7 +91,7 @@ export const Header: React.FC = () => {
               onMouseEnter={() => setActiveMenu("workflows")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60">
                 Workflows <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "workflows" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
@@ -187,7 +184,7 @@ export const Header: React.FC = () => {
               onMouseEnter={() => setActiveMenu("frameworks")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60">
                 Frameworks <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "frameworks" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
@@ -248,7 +245,7 @@ export const Header: React.FC = () => {
               onMouseEnter={() => setActiveMenu("solutions")}
               onMouseLeave={() => setActiveMenu(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40">
+              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60">
                 Solutions <ChevronDown className={`h-4 w-4 transition-transform ${activeMenu === "solutions" ? "rotate-180 text-[#2E936F] dark:text-teal" : ""}`} />
               </button>
               <AnimatePresence>
@@ -288,28 +285,28 @@ export const Header: React.FC = () => {
 
             <Link
               href="/how-it-works"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60"
             >
               How It Works
             </Link>
 
             <Link
               href="/trust"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60"
             >
               Trust
             </Link>
 
             <Link
               href="/resources"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60"
             >
               Resources
             </Link>
 
             <Link
               href="/pricing"
-              className="px-3 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/40"
+              className="px-3 py-2 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2E936F] dark:hover:text-teal transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800/60"
             >
               Pricing
             </Link>
