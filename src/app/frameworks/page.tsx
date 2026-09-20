@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Documented Framework Support — OMNiGRC",
     description: "Unified governance architecture across global cybersecurity, data protection, and AI regulations.",
-    url: "https://omnigrc.com/frameworks",
+    url: "https://omnigrc.co/frameworks",
     siteName: "OMNiGRC",
     type: "website",
   },

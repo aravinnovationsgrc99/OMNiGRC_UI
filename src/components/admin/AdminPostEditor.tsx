@@ -1276,7 +1276,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
 
                   <button
                     type="button"
-                    onClick={() => insertFormatting("[", "](https://omnigrc.com)", "Link text")}
+                    onClick={() => insertFormatting("[", "](https://omnigrc.co)", "Link text")}
                     title="Insert Link"
                     className="p-1.5 rounded-md hover:bg-navy-950 text-slate-300 hover:text-white border border-transparent hover:border-navy-700"
                   >

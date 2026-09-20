@@ -77,8 +77,8 @@ export default function ContactUsPage() {
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">EMAIL DIRECT</p>
-                    <p className="text-sm font-bold text-navy-900 dark:text-white">contact@omnigrc.com</p>
+                    <p className="text-[#5a4138] dark:text-slate-400 font-mono text-[11px] uppercase font-bold tracking-wider mb-0.5">EMAIL DIRECT</p>
+                    <p className="text-sm font-bold text-navy-900 dark:text-white">contact@omnigrc.co</p>
                   </div>
                 </div>
 

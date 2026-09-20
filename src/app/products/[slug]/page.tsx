@@ -52,7 +52,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     openGraph: {
       title: `${pillar.name} — OMNiGRC Connected Workflows`,
       description: pillar.desc,
-      url: `https://omnigrc.com/products/${pillar.slug}`,
+      url: `https://omnigrc.co/products/${pillar.slug}`,
       siteName: "OMNiGRC",
       type: "website",
     },

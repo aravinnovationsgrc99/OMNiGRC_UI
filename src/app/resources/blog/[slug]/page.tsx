@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://omnigrc.com/resources/blog/${post.slug}`,
+      url: `https://omnigrc.co/resources/blog/${post.slug}`,
       siteName: "OMNiGRC",
       type: "article",
       publishedTime: post.publishedAt,

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OMNiGRC Blog — GRC Operations & Governance Insights",
     description: "In-depth technical guides on SOC 2, ISO 27001, risk matrix scoring, and human-governed AI workflows.",
-    url: "https://omnigrc.com/resources/blog",
+    url: "https://omnigrc.co/resources/blog",
     siteName: "OMNiGRC",
     type: "website",
   },

@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       userEmail = user.email || username;
     } catch (authErr: any) {
       // Fallback dev admin check
-      if (username === "admin" || username === "admin@omnigrc.com") {
+      if (username === "admin" || username === "admin@omnigrc.co") {
         token = `session-${Date.now()}`;
       } else {
         return NextResponse.json(

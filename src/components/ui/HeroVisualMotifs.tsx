@@ -774,7 +774,7 @@ export const GenericHeroMotifSvg: React.FC<{ type: "about" | "demo" | "contact" 
             <g transform="translate(50, 82)">
               <rect x="0" y="0" width="340" height="42" rx="10" fill="#0A111F" stroke="#38BDF8" strokeWidth="1" />
               <text x="16" y="18" fill="#38BDF8" fontSize="8.5" fontFamily="monospace" fontWeight="bold">EMAIL DIRECT</text>
-              <text x="16" y="32" fill="#FFFFFF" fontSize="10" fontWeight="bold">contact@omnigrc.com</text>
+              <text x="16" y="32" fill="#FFFFFF" fontSize="10" fontWeight="bold">contact@omnigrc.co</text>
               <rect x="250" y="10" width="76" height="22" rx="11" fill="#38BDF8" opacity="0.15" />
               <text x="288" y="24" textAnchor="middle" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">&lt; 2h SLA</text>
             </g>

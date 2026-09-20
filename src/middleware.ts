@@ -10,7 +10,7 @@ export function middleware(request: NextRequest) {
     process.env.NEXT_PUBLIC_SITE_MODE === "admin" ||
     host.startsWith("admin.") ||
     host.includes("admin.omnigrc.co") ||
-    host.includes("admin.omnigrc.com");
+    host.includes("admin.omnigrc.co");
 
   // =========================================================================
   // 1. PUBLIC MARKETING DOMAIN (omnigrc.co)

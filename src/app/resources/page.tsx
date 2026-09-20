@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Resources & GRC Knowledge Hub — OMNiGRC",
     description: "Substantive educational guides for security, data privacy, and AI compliance frameworks.",
-    url: "https://omnigrc.com/resources",
+    url: "https://omnigrc.co/resources",
     siteName: "OMNiGRC",
     type: "website",
   },

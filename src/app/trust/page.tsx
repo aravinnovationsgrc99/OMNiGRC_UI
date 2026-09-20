@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trust & Security Architecture — OMNiGRC",
     description: "Verified tenant isolation, human-governed AI workflows, and deployment model specifications.",
-    url: "https://omnigrc.com/trust",
+    url: "https://omnigrc.co/trust",
     siteName: "OMNiGRC",
     type: "website",
   },

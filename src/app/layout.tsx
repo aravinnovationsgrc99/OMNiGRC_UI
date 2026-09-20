@@ -28,15 +28,18 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://omnigrc.com"),
-  title: "OMNiGRC — Unified Risk, Asset, and Control Management",
+  metadataBase: new URL("https://omnigrc.co"),
+  title: {
+    default: "OMNiGRC — Unified Risk, Asset, and Security-Control Management Platform",
+    template: "%s | OMNiGRC",
+  },
   description:
-    `The connected GRC operating layer for lean security and compliance teams. Unify risk registers, asset inventories, control mapping, and compliance testing across ${frameworkNamesStr}.`,
+    "Bridge disconnected spreadsheets and enterprise GRC overhead. OMNiGRC unifies risk registers, asset inventories, control mapping, compliance testing, and defensible audit evidence into one operating layer.",
   openGraph: {
-    title: "OMNiGRC — Unified Risk, Asset, and Control Management",
+    title: "OMNiGRC — Unified Risk, Asset, and Security-Control Management Platform",
     description:
-      `Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ${frameworkCodesStr}.`,
-    url: "https://omnigrc.com",
+      "Unified risk, asset, and control management for lean GRC teams. Advisory AI suggests; human oversight approves.",
+    url: "https://omnigrc.co",
     siteName: "OMNiGRC",
     images: [
       {

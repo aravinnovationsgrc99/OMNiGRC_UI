@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: `${fw.name} Framework Guide — OMNiGRC`,
       description: fw.desc,
-      url: `https://omnigrc.com/frameworks/${fw.slug}`,
+      url: `https://omnigrc.co/frameworks/${fw.slug}`,
       siteName: "OMNiGRC",
       type: "article",
     },
