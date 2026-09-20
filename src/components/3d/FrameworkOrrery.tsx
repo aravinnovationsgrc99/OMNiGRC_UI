@@ -8,11 +8,13 @@ import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck } from "lucide-react";
 export interface FrameworkOrreryProps {
   title?: string;
   className?: string;
+  compact?: boolean;
 }
 
 export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
   title = "Framework Orrery",
   className = "",
+  compact = false,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const planeRef = useRef<HTMLDivElement | null>(null);
@@ -325,7 +327,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onMouseEnter={() => { isHoveredRef.current = true; }}
-        className={`relative w-full h-[460px] sm:h-[560px] rounded-3xl border border-teal/30 bg-gradient-to-b from-[#0A111F] via-[#16233F] to-[#0A111F] overflow-hidden select-none cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-teal touch-pan-y ${className}`}
+        className={`relative w-full ${compact ? "h-[340px] sm:h-[420px]" : "h-[460px] sm:h-[560px]"} rounded-3xl border border-teal/30 bg-gradient-to-b from-[#0A111F] via-[#16233F] to-[#0A111F] overflow-hidden select-none cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-teal touch-pan-y ${className}`}
       >
         {/* Injected style block for 3D perspective and iris reveal animation */}
         <style jsx>{`
@@ -396,7 +398,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
             </svg>
 
             {/* Central Glassmorphic Iconic Lens (Minimal & Elegant) */}
-            <div className="relative z-20 w-[190px] sm:w-[240px] h-[190px] sm:h-[240px] rounded-full border-2 border-teal/40 bg-navy-900/90 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-4 text-center overflow-hidden">
+            <div className={`relative z-20 ${compact ? "w-[155px] sm:w-[195px] h-[155px] sm:h-[195px]" : "w-[190px] sm:w-[240px] h-[190px] sm:h-[240px]"} rounded-full border-2 border-teal/40 bg-navy-900/90 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-3 sm:p-4 text-center overflow-hidden`}>
               {/* Soft Ambient Radial Glow behind Lens */}
               <div
                 aria-hidden="true"

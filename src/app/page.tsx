@@ -2,6 +2,12 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const FrameworkOrrery = dynamic(
+  () => import("@/components/3d/FrameworkOrrery"),
+  { ssr: false }
+);
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {
@@ -152,9 +158,47 @@ export default function Home() {
 </div>
 </div>
 </section>
-{/*  =========================================================================  */}
-{/*  2. THE FRAGMENTATION PROBLEM: Spreadsheets vs Unified Operations          */}
-{/*  =========================================================================  */}
+
+        {/*  =========================================================================  */}
+        {/*  1.5 TRUSTED FRAMEWORK ECOSYSTEM (Solar System / Orbital Visualization)     */}
+        {/*  =========================================================================  */}
+        <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+          <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 text-center">
+            <div className="max-w-3xl mx-auto space-y-3">
+              <span className="text-[12px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-bold inline-block">
+                TRUSTED FRAMEWORK ECOSYSTEM
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight">
+                Built for global compliance frameworks
+              </h2>
+              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed">
+                Map controls, assess risks, and maintain continuous compliance across the frameworks that matter to your business.
+              </p>
+            </div>
+
+            <div className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-navy-700/60 bg-white/40 dark:bg-navy-950/40 backdrop-blur-sm p-2 sm:p-4">
+              <FrameworkOrrery title="Framework Solar System" compact={true} />
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto pt-2 text-xs font-mono text-[#5a4138] dark:text-slate-400">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#006c4d] dark:bg-teal-400 animate-pulse" />
+                <span>One platform. Multiple frameworks. Continuous compliance.</span>
+              </div>
+              <Link
+                href="/frameworks"
+                className="inline-flex items-center gap-1.5 font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
+              >
+                <span>Explore Frameworks</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/*  =========================================================================  */}
+        {/*  2. THE FRAGMENTATION PROBLEM: Spreadsheets vs Unified Operations          */}
+        {/*  =========================================================================  */}
 <section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
