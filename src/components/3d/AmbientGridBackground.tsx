@@ -65,6 +65,7 @@ const PROCESSED_CIRCLES = RAW_CIRCLES.map((c, index) => {
 });
 
 export const AmbientGridBackground: React.FC<AmbientGridBackgroundProps> = ({ fullPage = false }) => {
+  if (fullPage) return null;
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {

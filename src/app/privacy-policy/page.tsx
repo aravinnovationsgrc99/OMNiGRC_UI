@@ -10,7 +10,7 @@ import { ShieldCheck, Lock, Eye, CheckCircle2, ArrowRight, Database, FileCheck }
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-canvas dark:bg-[#0A111F] text-navy-900 dark:text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-transparent text-navy-900 dark:text-slate-100 flex flex-col justify-between">
       <Header />
       <main className="flex-1">
         <PageHero

@@ -45,7 +45,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:bg-teal/30 dark:selection:text-white antialiased">
+    <div className="min-h-screen bg-transparent text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:bg-teal/30 dark:selection:text-white antialiased">
       <Header />
 
       <main className="w-full pt-16">
@@ -53,7 +53,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  1. HERO SECTION (Clear, High-Converting, Light Canvas + Pipeline Demo)    */}
 {/*  =========================================================================  */}
-<section className="relative w-full bg-white dark:bg-[#0A111F] bg-grid-mesh-adaptive px-4 md:px-8 pt-6 pb-16 md:pb-24">
+<section className="relative w-full bg-transparent bg-grid-mesh-adaptive px-4 md:px-8 pt-6 pb-16 md:pb-24">
 {/*  Ambient Warm Peach Glow behind Hero  */}
 <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
 <div className="absolute top-1/3 left-10 w-80 h-80 bg-surface-variant/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
@@ -155,7 +155,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  2. THE FRAGMENTATION PROBLEM: Spreadsheets vs Unified Operations          */}
 {/*  =========================================================================  */}
-<section className="w-full bg-slate-50 dark:bg-[#16233F] px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">THE REALITY OF LEAN GRC</span>
@@ -166,13 +166,104 @@ export default function Home() {
           Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise GRC suites. OMNiGRC bridges that gap with a unified operating layer.
         </p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8"><div className="bg-white dark:bg-[#0A111F] rounded-xl p-8 shadow-md flex flex-col justify-between"><div><div className="flex items-center justify-between mb-6"><span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 text-xs font-semibold"><AlertTriangle className="h-5 w-5 shrink-0" /> Fragmented GRC Reality (Manual)</span><span className="font-mono text-xs text-red-600 dark:text-red-400 font-semibold">High Friction</span></div><div className="space-y-space-md text-slate-900 dark:text-white"><div className="flex items-start gap-4"><XCircle className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Isolated Spreadsheets</h4><p className="text-sm text-slate-600 dark:text-slate-300">Risk logs and asset inventories stored in disparate sheets that drift immediately after sign-off (Jira &amp; Google Workspace sync on Planned Roadmap).</p></div></div><div className="flex items-start gap-4"><XCircle className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Scattered Manual Tickets</h4><p className="text-sm text-slate-600 dark:text-slate-300">Ad-hoc tasks and spreadsheets completely detached from regulatory control requirements and clause IDs.</p></div></div><div className="flex items-start gap-4"><XCircle className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Email Evidence Chasing</h4><p className="text-sm text-slate-600 dark:text-slate-300">Endless message threads asking engineering leads for screenshots and evidence links 48 hours prior to audits.</p></div></div><div className="flex items-start gap-4"><XCircle className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Missed Testing Cadences</h4><p className="text-sm text-slate-600 dark:text-slate-300">Zero rolling visibility into recurring access reviews, backup drill validation, or third-party vendor check-ins.</p></div></div></div></div><div className="mt-8 p-4 rounded-lg bg-slate-100 dark:bg-navy-800 font-mono text-xs text-slate-600 dark:text-slate-300">Resulting Impact: Duplicate mapping work, frantic pre-audit sprints, and zero posture confidence.</div></div><div className="bg-teal-100/20 dark:bg-teal-900/20 rounded-xl p-8 shadow-md flex flex-col justify-between"><div><div className="flex items-center justify-between mb-6"><span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-semibold"><CheckCircle2 className="h-5 w-5 shrink-0" /> Connected OMNiGRC Operations</span><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-semibold">Continuous Posture</span></div><div className="space-y-space-md text-slate-900 dark:text-white"><div className="flex items-start gap-4"><CheckCircle2 className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">5×5 Likelihood × Impact Risk Scoring</h4><p className="text-sm text-slate-600 dark:text-slate-300">Risks are mapped directly to technical assets, with single standardized 5×5 risk matrix evaluation.</p></div></div><div className="flex items-start gap-4"><CheckCircle2 className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Map-Once Control Logic</h4><p className="text-sm text-slate-600 dark:text-slate-300">Define a policy once; Advisory AI assists with cross-mapping across ISO 27001, SOC 2, HIPAA, and DPDP.</p></div></div><div className="flex items-start gap-4"><CheckCircle2 className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Continuous 30/60/90-Day Cadence</h4><p className="text-sm text-slate-600 dark:text-slate-300">Automated task triggers with assigned engineering leads, rolling SLA reminders, and document reference links.</p></div></div><div className="flex items-start gap-4"><CheckCircle2 className="h-5 w-5 shrink-0" /><div><h4 className="text-sm text-slate-900 dark:text-white font-bold">Structured Application Audit Trail</h4><p className="text-sm text-slate-600 dark:text-slate-300">Detailed change tracking, user timestamps, and exportable audit packs with structured reference records.</p></div></div></div></div><div className="mt-8 p-4 rounded-lg bg-white dark:bg-[#0A111F] font-mono text-xs text-slate-900 dark:text-white font-medium shadow-sm flex items-center justify-between"><span className="">Audit Posture: Continuous &amp; Tracked</span><span className="text-amber-600 dark:text-amber-500 font-bold">Audit-Ready Workflow</span></div></div></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Card: Fragmented GRC Reality (Manual) - TRANSPARENT BACKGROUND */}
+          <div className="bg-transparent border-2 border-slate-300 dark:border-navy-600/80 rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300 text-xs font-semibold">
+                  <AlertTriangle className="h-5 w-5 shrink-0" /> Fragmented GRC Reality (Manual)
+                </span>
+                <span className="font-mono text-xs text-red-600 dark:text-red-400 font-semibold">High Friction</span>
+              </div>
+              <div className="space-y-space-md text-slate-900 dark:text-white">
+                <div className="flex items-start gap-4">
+                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Isolated Spreadsheets</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Risk logs and asset inventories stored in disparate sheets that drift immediately after sign-off (Jira &amp; Google Workspace sync on Planned Roadmap).</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Scattered Manual Tickets</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Ad-hoc tasks and spreadsheets completely detached from regulatory control requirements and clause IDs.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Email Evidence Chasing</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Endless message threads asking engineering leads for screenshots and evidence links 48 hours prior to audits.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Missed Testing Cadences</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Zero rolling visibility into recurring access reviews, backup drill validation, or third-party vendor check-ins.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 p-4 rounded-xl bg-white/40 dark:bg-navy-950/40 border border-slate-200/80 dark:border-navy-700/60 font-mono text-xs text-slate-700 dark:text-slate-300">
+              Resulting Impact: Duplicate mapping work, frantic pre-audit sprints, and zero posture confidence.
+            </div>
+          </div>
+
+          {/* Right Card: Connected OMNiGRC Operations - PLAIN WHITE BACKGROUND */}
+          <div className="bg-white dark:bg-navy-900 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-navy-700/60 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-teal-950/50 text-[#00513a] dark:text-teal-300 text-xs font-semibold">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d]" /> Connected OMNiGRC Operations
+                </span>
+                <span className="font-mono text-xs text-[#006c4d] dark:text-teal-400 font-bold">Continuous Posture</span>
+              </div>
+              <div className="space-y-space-md text-slate-900 dark:text-white">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">5×5 Likelihood × Impact Risk Scoring</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Risks are mapped directly to technical assets, with single standardized 5×5 risk matrix evaluation.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Map-Once Control Logic</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Define a policy once; Advisory AI assists with cross-mapping across ISO 27001, SOC 2, HIPAA, and DPDP.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Continuous 30/60/90-Day Cadence</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Automated task triggers with assigned engineering leads, rolling SLA reminders, and document reference links.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Structured Application Audit Trail</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Detailed change tracking, user timestamps, and exportable audit packs with structured reference records.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 p-4 rounded-xl bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-navy-700/60 font-mono text-xs text-slate-900 dark:text-white font-medium shadow-sm flex items-center justify-between">
+              <span>Audit Posture: Continuous &amp; Tracked</span>
+              <span className="text-[#006c4d] dark:text-teal-400 font-bold">Audit-Ready Workflow</span>
+            </div>
+          </div>
+        </div>
 </div>
 </section>
 {/*  =========================================================================  */}
 {/*  2.5. WHO IS OMNIGRC FOR? (Audience-Entry Workflows Section)               */}
 {/*  =========================================================================  */}
-<section className="w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 py-16 md:py-24 border-b border-surface-container-high/60">
+<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24 border-b border-surface-container-high/60">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs font-bold tracking-wider uppercase mb-4 shadow-sm">
@@ -288,7 +379,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  3. ONE CONNECTED GRC WORKFLOW (Central Operating Layer & Tabs)             */}
 {/*  =========================================================================  */}
-<section className="w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 py-16 md:py-24" id="workflows-preview">
+<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24" id="workflows-preview">
 <div className="max-w-7xl mx-auto">
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
 <div>
@@ -388,7 +479,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  4. EXPANDED PLATFORM CAPABILITIES (Phase-17 Feature Ecosystem)            */}
 {/*  =========================================================================  */}
-<section className="w-full bg-slate-50 dark:bg-[#16233F] px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">COMPLETE GRC SUITE</span>

@@ -73,7 +73,7 @@ export default function AssetInventoryPage() {
   const currentData = nodeData[selectedNode];
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
+    <div className="min-h-screen bg-transparent text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  Interactive Toast / Alert Simulator  */}

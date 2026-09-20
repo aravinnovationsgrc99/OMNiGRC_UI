@@ -79,7 +79,7 @@ const plannedResources = [
 
 export default function ResourcesHubPage() {
   return (
-    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
+    <div className="min-h-screen bg-transparent text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
       <main className="flex-1 w-full pt-16">
@@ -125,7 +125,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* FEATURED EDITORIAL ARTICLES */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/60 px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
               <div>
@@ -213,7 +213,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 1: CANONICAL FRAMEWORK GUIDES INDEX */}
-        <section className="w-full bg-white dark:bg-navy-900 px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
               <div>
@@ -268,7 +268,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 2: CANONICAL WORKFLOW MODULES INDEX */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -311,7 +311,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 3: OPERATIONAL METHODOLOGY GUIDES */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -375,7 +375,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Need custom framework mapping assistance?

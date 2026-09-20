@@ -24,9 +24,8 @@ export const HeroSection: React.FC = () => {
   // Gentle parallax — only Y axis, no scale, to avoid GPU subpixel blur during scroll
   const parallaxY = useTransform(scrollY, [0, 600], [0, -20]);
   return (
-    <section className="relative min-h-[80svh] sm:min-h-[90svh] flex flex-col justify-between overflow-hidden bg-[#FFF7EF] dark:bg-[#0A111F] pt-20 sm:pt-36 pb-8 sm:pb-16 transition-colors duration-300">
-      {/* WebGL2 Swirling Aurora Background Atmosphere */}
-      <AuroraBackground />
+    <section className="relative min-h-[80svh] sm:min-h-[90svh] flex flex-col justify-between overflow-hidden bg-transparent pt-20 sm:pt-36 pb-8 sm:pb-16 transition-colors duration-300">
+      {/* Global SVG Aurora Background handles full-bleed atmosphere */}
 
       <motion.div
         initial="hidden"

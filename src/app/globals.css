@@ -196,29 +196,29 @@ h1, h2, h3, h4 {
    They correctly swap between light/dark mode.
    ───────────────────────────────────────────────────────── */
 
-/* Light canvas: white / dark: deep navy */
+/* Light canvas: transparent / dark: transparent */
 .section-adaptive {
-  background-color: var(--surface);
+  background-color: transparent;
   color: var(--on-surface);
 }
 
-/* Always white in light, navy-950 in dark */
+/* Always transparent to show global Aurora background */
 .section-base {
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: #0d1b36;
 }
 html.dark .section-base {
-  background-color: #0A111F;
+  background-color: transparent;
   color: #E2E8F0;
 }
 
-/* Slightly elevated — slate-50 / navy-900 */
+/* Slightly elevated wrapper — transparent */
 .section-raised {
-  background-color: #F8FAFC;
+  background-color: transparent;
   color: #0d1b36;
 }
 html.dark .section-raised {
-  background-color: #16233F;
+  background-color: transparent;
   color: #E2E8F0;
 }
 

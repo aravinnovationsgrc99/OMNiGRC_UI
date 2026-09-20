@@ -262,7 +262,7 @@ export default function HowItWorksPage() {
   const activeData = stages.find(s => s.id === activeStage) || stages[0];
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased">
+    <div className="min-h-screen bg-transparent text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased">
       <Header />
 
       <main className="w-full pt-16">
@@ -444,7 +444,7 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Section 3: AI Assists. Humans Decide Architectural Panel */}
-        <section className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-[#f1f3ff] dark:bg-[#0A111F] border-y border-slate-200 dark:border-navy-700/60">
+        <section className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-transparent border-y border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="bg-white dark:bg-navy-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-navy-700/60 shadow-sm">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8">
@@ -515,7 +515,7 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Related Article Banner */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/60 px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <span className="px-2.5 py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-xs font-bold uppercase">EXECUTIVE STRATEGY</span>
@@ -534,7 +534,7 @@ export default function HowItWorksPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full bg-[#faf8ff] dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-16 text-center border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center border-t border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Ready to experience the 9-stage operating lifecycle?

@@ -60,7 +60,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
   }
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] dark:bg-[#0A111F] text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
+    <div className="min-h-screen bg-transparent text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
 
       <main className="flex-1 w-full pt-16">
@@ -147,7 +147,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 1: WHAT THE FRAMEWORK IS */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f1f3ff] dark:bg-navy-950/50 text-[#0d1b36] dark:text-slate-300 font-mono text-xs font-bold uppercase mb-4">
               <BookOpen className="h-3.5 w-3.5 text-[#F15E1C]" /> Framework Overview
@@ -169,7 +169,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 2: APPLICABILITY */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -194,7 +194,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 3: KEY REQUIREMENTS & CONTROL DOMAINS */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -245,7 +245,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 4: PRACTICAL IMPLEMENTATION PATH */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -279,7 +279,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 5: COMMON MISTAKES */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -347,7 +347,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 7: FRAMEWORK REFERENCES */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto text-center">
             <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
               FRAMEWORK REFERENCES
@@ -374,7 +374,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 8: FAQS */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-xs font-bold uppercase mb-2 border border-slate-200 dark:border-navy-700/60">
@@ -402,7 +402,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 9: RELATED WORKFLOWS */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -434,7 +434,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 10: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Operationalize {fw.name} with OMNiGRC.
