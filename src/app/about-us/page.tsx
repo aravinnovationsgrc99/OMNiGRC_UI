@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/layout/PageHero";
@@ -71,7 +72,16 @@ export default function AboutUsPage() {
             </TiltCard>
           </div>
 
-          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto">
+          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto flex flex-col items-center">
+            <div className="mb-6 inline-flex items-center p-1.5 rounded-2xl bg-black dark:bg-black/80 border border-slate-800 dark:border-navy-700/80 shadow-md">
+              <Image
+                src="/images/powered-by-arav-innovations.png"
+                alt="Powered by Arav Innovations"
+                width={300}
+                height={90}
+                className="h-9 sm:h-11 w-auto object-contain rounded-xl"
+              />
+            </div>
             <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">Ready to experience OMNiGRC?</h2>
             <p className="text-slate-600 dark:text-slate-300 text-sm mb-6 max-w-xl mx-auto">
               Schedule a personalized demonstration tailored to your target frameworks and team structure.
