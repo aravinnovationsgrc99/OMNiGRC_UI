@@ -7,11 +7,9 @@ import {
   Lock,
   Cpu,
   UserCheck,
-  Database,
   ArrowRight,
   Sparkles,
   CheckCircle2,
-  AlertCircle,
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
@@ -20,7 +18,7 @@ const workflowSteps = [
     step: "01",
     title: "Analyst UI & Input",
     scope: "OMNiGRC Boundary",
-    desc: "Analyst creates or imports an internal security control description.",
+    desc: "Analyst inputs internal security control description.",
     icon: Shield,
     badge: "Tenant Scoped",
   },
@@ -28,30 +26,30 @@ const workflowSteps = [
     step: "02",
     title: "Payload Minimization",
     scope: "OMNiGRC Boundary",
-    desc: "Org names, employee identities, and unrelated tenant data are stripped before LLM routing.",
+    desc: "Strips org names, PII, and tenant context.",
     icon: Lock,
-    badge: "Sanitized Advisory Payload",
+    badge: "Sanitized Payload",
   },
   {
     step: "03",
     title: "Tiered Model Router",
     scope: "External LLM API",
-    desc: "Tier 1: Gemini Top Tier Model • Tier 2: Claude Haiku Top Tier Model.",
+    desc: "Routes sanitized text to Gemini or Claude Haiku.",
     icon: Cpu,
-    badge: "Minimized Payload",
+    badge: "Stateless Routing",
   },
   {
     step: "04",
-    title: "Validation & Human Decision",
+    title: "Validation & Sign-off",
     scope: "OMNiGRC Boundary",
-    desc: "Schema checked, confidence calculated, human analyst approves before saving.",
+    desc: "Schema validated; human approves clause match.",
     icon: UserCheck,
     badge: "Human Decides",
   },
 ];
 
 export const ControlMapping3DGraph: React.FC = () => {
-  const [activeStep, setActiveStep] = useState<number>(1);
+  const [activeStep, setActiveStep] = useState<number>(0);
 
   return (
     <div className="relative w-full rounded-3xl border border-teal/30 bg-[#0A111F]/95 p-6 sm:p-10 shadow-2xl overflow-hidden">
@@ -59,7 +57,7 @@ export const ControlMapping3DGraph: React.FC = () => {
         <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />} className="mb-2">
           DATA MINIMIZATION ARCHITECTURE
         </Badge>
-        <h3 className="text-xl sm:text-3xl font-extrabold text-white">
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
           The Auditable AI Control Mapping Pipeline
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 mt-2">
@@ -67,44 +65,50 @@ export const ControlMapping3DGraph: React.FC = () => {
         </p>
       </div>
 
-      {/* 4 Steps Interactive Pipeline */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10 mb-8">
+      {/* 4 Steps Interactive Pipeline with Visual Flow Indicators */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 relative z-10 mb-8">
         {workflowSteps.map((s, idx) => {
           const isCurrent = activeStep === idx;
           const Icon = s.icon;
           return (
-            <motion.div
-              key={idx}
-              whileHover={{ scale: 1.02 }}
-              onClick={() => setActiveStep(idx)}
-              className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
-                isCurrent
-                  ? "border-teal bg-navy-900 shadow-xl shadow-teal/20"
-                  : "border-navy-700/60 bg-navy-900/50 hover:border-navy-600"
-              }`}
-            >
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div
-                    className={`p-2 rounded-xl ${
-                      isCurrent ? "bg-teal text-white" : "bg-navy-800 text-teal"
-                    }`}
-                  >
-                    <Icon className="h-5 w-5" />
+            <div key={idx} className="relative flex flex-col">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                onClick={() => setActiveStep(idx)}
+                className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between h-full ${
+                  isCurrent
+                    ? "border-teal bg-navy-900 shadow-xl shadow-teal/20 ring-1 ring-teal/50"
+                    : "border-navy-700/60 bg-navy-900/50 hover:border-teal/40"
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div
+                      className={`p-2.5 rounded-xl ${
+                        isCurrent ? "bg-teal text-white" : "bg-navy-800 text-teal"
+                      }`}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-mono font-bold text-amber">STAGE {s.step}</span>
+                      {idx < 3 && (
+                        <ArrowRight className="hidden md:block h-4 w-4 text-teal/60 ml-1" />
+                      )}
+                    </div>
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-amber">STAGE {s.step}</span>
+                  <h4 className="font-bold text-base text-white mb-2">{s.title}</h4>
+                  <p className="text-xs text-slate-200 leading-relaxed mb-4">{s.desc}</p>
                 </div>
-                <h4 className="font-bold text-sm text-white mb-1">{s.title}</h4>
-                <p className="text-[11px] text-slate-400 leading-relaxed mb-3">{s.desc}</p>
-              </div>
 
-              <div className="pt-2 border-t border-navy-700/60 flex items-center justify-between">
-                <span className="text-[9px] font-mono text-slate-400">{s.scope}</span>
-                <span className="text-[10px] font-mono font-semibold text-teal bg-teal/10 px-2 py-0.5 rounded">
-                  {s.badge}
-                </span>
-              </div>
-            </motion.div>
+                <div className="pt-3 border-t border-navy-700/60 flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-slate-300">{s.scope}</span>
+                  <span className="text-[10px] font-mono font-semibold text-teal bg-teal/10 px-2 py-0.5 rounded">
+                    {s.badge}
+                  </span>
+                </div>
+              </motion.div>
+            </div>
           );
         })}
       </div>
@@ -118,7 +122,7 @@ export const ControlMapping3DGraph: React.FC = () => {
               OMNiGRC Controlled VPC & Database
             </span>
           </div>
-          <p className="text-xs text-slate-300">
+          <p className="text-xs text-slate-300 leading-relaxed">
             Tenant isolation, PostgreSQL persistence, risk histories, and human approval states reside securely within OMNiGRC infrastructure.
           </p>
         </div>
@@ -130,7 +134,7 @@ export const ControlMapping3DGraph: React.FC = () => {
               External Stateless AI Boundary
             </span>
           </div>
-          <p className="text-xs text-slate-300">
+          <p className="text-xs text-slate-300 leading-relaxed">
             External models receive only sanitized text strings for clause correlation. Zero training on customer data. Zero retention.
           </p>
         </div>

@@ -69,35 +69,37 @@ export default function Home() {
 <span className="w-2 h-2 rounded-full bg-teal-600 dark:bg-teal-500 animate-pulse"></span>
 <span className="font-mono text-xs font-semibold tracking-wider uppercase">THE CONNECTED GRC OPERATING LAYER • EXPANDED V2.4</span>
 </div>
-{/*  Main Headline  */}
-<h1 className="max-w-4xl text-4xl md:text-[56px] md:leading-[64px] text-slate-900 dark:text-white font-bold tracking-tight mb-6">
-        Unified risk, asset, and control management for lean GRC teams.
-      </h1>
-{/*  Subheadline  */}
-<p className="max-w-3xl text-lg text-slate-600 dark:text-slate-300 font-medium mb-8">
-        Connect risk registers, asset inventories, control mapping, compliance testing, and defensible audit evidence into one operating workflow. Advisory AI suggests; human oversight approves.
-      </p>
-{/*  Primary & Secondary CTAs  */}
-<div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-<a className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg text-sm font-semibold text-white bg-teal-600 dark:bg-teal-500 hover:bg-teal-600 dark:bg-teal-500-container shadow-md hover:shadow-lg transition-all active:scale-[0.98]" data-path="request-demo" href="#">
-<span className="">Request a Walkthrough</span>
-<CalendarCheck className="h-5 w-5 shrink-0" />
-</a>
-<a className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-semibold text-slate-900 dark:text-white bg-white dark:bg-[#0A111F] hover:bg-slate-50 dark:bg-[#16233F] shadow-sm transition-all" href="#workflows-preview">
-<span className="">Explore Live Workflows</span>
-<ArrowRight className="h-5 w-5 shrink-0" />
-</a>
-</div>
-{/*  Quick Trust Badges  */}
-<div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-sm text-slate-600 dark:text-slate-300 mb-12">
-<span className="font-semibold text-slate-900 dark:text-white">Documented Framework Coverage:</span>
-<span className="inline-flex items-center gap-1"><CheckCircle2 className="h-5 w-5 shrink-0" /> ISO 27001</span>
-<span className="inline-flex items-center gap-1"><CheckCircle2 className="h-5 w-5 shrink-0" /> ISO 42001</span>
-<span className="inline-flex items-center gap-1"><CheckCircle2 className="h-5 w-5 shrink-0" /> SOC 2 Type II</span>
-<span className="inline-flex items-center gap-1"><CheckCircle2 className="h-5 w-5 shrink-0" /> GDPR / UK GDPR</span>
-<span className="inline-flex items-center gap-1"><CheckCircle2 className="h-5 w-5 shrink-0" /> DPDP Act 2023</span>
-<span className="inline-flex items-center gap-1"><CheckCircle2 className="h-5 w-5 shrink-0" /> HIPAA</span>
-</div>
+        {/*  Main Headline  */}
+        <h1 className="max-w-4xl text-4xl md:text-[56px] md:leading-[64px] text-slate-900 dark:text-white font-bold tracking-tight mb-6">
+          Unified risk, asset, and control management for lean GRC teams.
+        </h1>
+        {/*  Subheadline  */}
+        <p className="max-w-3xl text-lg text-slate-600 dark:text-slate-300 font-medium mb-8">
+          Unify risk, assets, control mapping, and evidence into one operating workflow. Advisory AI suggests; human oversight approves.
+        </p>
+        {/*  Primary & Secondary CTAs  */}
+        <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+          <a className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white bg-teal-600 dark:bg-teal-500 hover:bg-teal-700 dark:hover:bg-teal-400 shadow-lg shadow-teal-600/25 hover:shadow-teal-600/35 transition-all active:scale-[0.98] ring-2 ring-teal-500/30" data-path="request-demo" href="#">
+            <span className="">Request a Walkthrough</span>
+            <CalendarCheck className="h-5 w-5 shrink-0" />
+          </a>
+          <a className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-navy-900/60 border border-slate-300 dark:border-navy-700 hover:bg-slate-100 dark:hover:bg-navy-800 transition-all shadow-sm" href="#workflows-preview">
+            <span className="">Explore Live Workflows</span>
+            <ArrowRight className="h-5 w-5 shrink-0" />
+          </a>
+        </div>
+        {/*  Quick Trust Badges  */}
+        <div className="flex flex-col items-center gap-3 mb-12">
+          <span className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">Supported out of the box — map a single control across 6 global standards:</span>
+          <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-sm text-slate-600 dark:text-slate-300">
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> ISO 27001</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> ISO 42001</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> SOC 2 Type II</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> GDPR / UK GDPR</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> DPDP Act 2023</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> HIPAA Security</span>
+          </div>
+        </div>
 {/*  Interactive Risk to Evidence Pipeline Component  */}
 <div className="w-full bg-slate-50 dark:bg-[#16233F] rounded-xl shadow-lg p-6 md:p-8 text-left">
 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
@@ -605,52 +607,84 @@ export default function Home() {
 {/*  =========================================================================  */}
 <section className="w-full bg-[#0F172A] text-white px-4 md:px-8 py-16 md:py-24">
 <div className="max-w-7xl mx-auto">
-<div className="text-center max-w-3xl mx-auto mb-12"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold uppercase tracking-widest">TRANSPARENT AI ARCHITECTURE</span><h2 className="text-3xl md:text-4xl text-[#F8FAFC] font-bold mt-1 tracking-tight">AI assists. Humans decide. Payload minimization.</h2><p className="text-base text-[#94A3B8] mt-2">Advisory AI with payload minimization &amp; human approval. OMNiGRC provides advisory clause correlations with confidence suggestions; human sign-off is mandatory before any persistence.</p></div>
-{/*  8-Stage Execution Pipeline Visualization  */}
-<div className="mb-12">
-<div className="flex items-center justify-between mb-6">
-<span className="text-sm text-[#F8FAFC] font-semibold">End-to-End Advisory AI Pipeline Execution:</span>
-<span className="font-mono text-xs text-[#38BDF8]">Stateless • Ephemeral Execution</span>
-</div>
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400-fixed font-bold">STAGE 01</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Analyst UI Trigger</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Practitioner initiates control crosswalk suggestion in workspace.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400-fixed font-bold">STAGE 02</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">API &amp; Rate Limiting</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Tenant verification, token metering, and strict quota safeguards.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm border-l-2 border-[#2E936F]">
-<span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">STAGE 03</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Payload Minimization Engine</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Minimizes and sanitizes advisory payloads before external AI routing.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400-fixed font-bold">STAGE 04</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Tiered Model Router</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Routes to low-latency or reasoning model based on query complexity.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400-fixed font-bold">STAGE 05</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Sanitized LLM Call</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Clause cross-reference evaluation using zero-data-retention APIs.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400-fixed font-bold">STAGE 06</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Schema Validator</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Pydantic validation: ensures strictly typed ISO / SOC clauses.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm border-l-2 border-primary">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 07</span>
-<h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Human Review &amp; Sign-off</h4>
-<p className="text-sm text-[#94A3B8] mt-1">Mandatory CISO / GRC lead confirmation before persistence.</p>
-</div>
-<div className="bg-[#1E293B] p-6 rounded-lg shadow-sm border-l-2 border-[#2E936F]"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">STAGE 08</span><h4 className="text-sm text-[#F8FAFC] font-bold mt-1">Application Audit Log</h4><p className="text-sm text-[#94A3B8] mt-1">Approved suggestion records and practitioner audit trail logged with tenant isolation.</p></div>
-</div>
-</div>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="font-mono text-xs text-amber-500 font-bold uppercase tracking-widest">TRANSPARENT AI ARCHITECTURE</span>
+          <h2 className="text-3xl md:text-4xl text-[#F8FAFC] font-bold mt-1 tracking-tight">AI assists. Humans decide.</h2>
+          <p className="text-base text-[#94A3B8] mt-2">Advisory AI suggests clause correlations; mandatory human approval keeps your team in full control.</p>
+        </div>
+        {/*  8-Stage Execution Pipeline Visualization  */}
+        <div className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <span className="text-sm text-[#F8FAFC] font-semibold">End-to-End Advisory AI Pipeline Execution Sequence:</span>
+            <span className="font-mono text-xs text-[#38BDF8]">Stateless • Ephemeral Execution</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-teal-400 font-bold">STAGE 01</span>
+                <span className="text-xs text-slate-500 font-mono">01 → 02</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Initiate crosswalk request</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Practitioner triggers control crosswalk suggestion in workspace.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-teal-400 font-bold">STAGE 02</span>
+                <span className="text-xs text-slate-500 font-mono">02 → 03</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Enforce security & quota limits</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Tenant verification, token metering, and strict quota safeguards.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border-l-4 border-amber-500 border-t border-r border-b border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-amber-400 font-bold">STAGE 03</span>
+                <span className="text-xs text-slate-500 font-mono">03 → 04</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Sanitize data payload</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Strips org names, PII, and sensitive context before external routing.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-teal-400 font-bold">STAGE 04</span>
+                <span className="text-xs text-slate-500 font-mono">04 → 05</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Route query to ideal model</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Directs query to low-latency or reasoning model based on complexity.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-teal-400 font-bold">STAGE 05</span>
+                <span className="text-xs text-slate-500 font-mono">05 → 06</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Evaluate control correlations</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Clause cross-referencing via zero-retention model APIs.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-teal-400 font-bold">STAGE 06</span>
+                <span className="text-xs text-slate-500 font-mono">06 → 07</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Validate response schema</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Pydantic check ensuring strictly typed ISO/SOC clause output.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border-l-4 border-teal-500 border-t border-r border-b border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-teal-400 font-bold">STAGE 07</span>
+                <span className="text-xs text-slate-500 font-mono">07 → 08</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Human review & sign-off</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Mandatory CISO / GRC lead confirmation before persistence.</p>
+            </div>
+            <div className="bg-[#1E293B] p-5 rounded-xl border-l-4 border-amber-500 border-t border-r border-b border-slate-700/50 relative group">
+              <div className="flex items-center justify-between mb-2">
+                <span className="font-mono text-xs text-amber-400 font-bold">STAGE 08</span>
+                <span className="text-xs text-emerald-400 font-mono font-bold">Complete ✓</span>
+              </div>
+              <h4 className="text-sm text-white font-bold">Log audit-ready record</h4>
+              <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Approved suggestions logged in tenant-isolated audit trail.</p>
+            </div>
+          </div>
+        </div>
 {/*  Data Privacy Guarantee Split Box  */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#1E293B] p-8 rounded-xl">
 <div className="p-6 rounded-lg bg-[#0F172A]">

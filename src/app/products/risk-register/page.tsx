@@ -69,7 +69,7 @@ export default function RiskRegisterPage() {
 <h1 className="text-4xl tracking-tight text-slate-900 dark:text-white font-bold">Calibrated 5x5 Risk Registers Directly Connected to Assets</h1>
 <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">Maintain continuous risk registers with calibrated 5x5 Likelihood × Impact scoring mapped directly to tracked infrastructure assets.</p>
 <div className="flex flex-wrap items-center gap-6 pt-space-xs">
-<a className="inline-flex items-center gap-2 px-space-lg py-3 rounded-lg bg-teal-600 dark:bg-teal-500-container text-white text-sm font-semibold hover:bg-teal-600 dark:bg-teal-500 transition-all duration-150 shadow-md hover:shadow-lg" href="#matrix-view">
+<a className="inline-flex items-center gap-2 px-space-lg py-3 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-sm font-semibold hover:bg-teal-600 dark:bg-teal-500 transition-all duration-150 shadow-md hover:shadow-lg" href="#matrix-view">
 <Circle className="h-5 w-5 shrink-0" />
 <span className="">Explore Risk Register Demo</span>
 </a>
@@ -144,7 +144,7 @@ export default function RiskRegisterPage() {
 {/*  Card 1: Mitigate  */}
 <div className="p-8 rounded-xl bg-white dark:bg-[#0A111F] shadow-md flex flex-col justify-between space-y-space-md hover:-translate-y-1 transition-transform">
 <div className="space-y-space-sm">
-<div className="w-12 h-12 rounded-xl bg-amber-600 dark:bg-amber-500-fixed flex items-center justify-center text-white-fixed">
+<div className="w-12 h-12 rounded-xl bg-amber-600 dark:bg-amber-500 flex items-center justify-center text-white">
 <CheckCircle2 className="h-5 w-5 shrink-0" />
 </div>
 <div className="inline-block px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-amber-600 dark:bg-amber-500 text-white">
@@ -286,7 +286,7 @@ export default function RiskRegisterPage() {
 <span className="px-1.5 py-0.5 rounded bg-white dark:bg-[#0A111F]/10 text-surface-container-lowest">RSK-009</span>
 </div>
 <div className="flex items-center gap-2 text-slate-500">
-<span className="">8 → <strong className="text-red-600 dark:text-red-400-container font-bold">20</strong></span>
+<span className="">8 → <strong className="text-red-600 dark:text-red-400 font-bold">20</strong></span>
 <span className="">[VPC DRIFT DETECTED]</span>
 <span className="text-surface-container-lowest text-[11px]">sig: daemon_alert</span>
 </div>
@@ -395,24 +395,25 @@ export default function RiskRegisterPage() {
 </div>
 </div>
 {/*  Additional visual element to satisfy photo-rich guidance  */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
-<div className="rounded-xl overflow-hidden shadow-md relative h-64">
-<img className="w-full h-full object-cover" data-alt="Technical audit team conducting a live SOC 2 and ISO 27001 readiness review in a modern glass-walled conference room with high-resolution monitors displaying risk scores and compliance telemetry in soft ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwmADheLRX4BL2XPXGlJ8sHuYk2_DKGEKp2BFHM2PfacagOqMse21f3YebRlL1O3rqGF4fcS00rOcgxPoIV8oigZBIzD3BEBr5QYkQXb0quOIugNtmQ7jnHb-MSDSXHF5EtxLn7H9kLAWWsK3F2iFXTfte7OlGSL1eN9aoyLsJ_uGzs7CGlAXaMH1Wm_RFH1GaB2XLVv8UIXieM-DcJ8cxXRZexdbwXi_xNpBtp0M5xgHXha8jMo0hYQ" />
-<div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/30 to-transparent p-6 flex flex-col justify-end text-white">
-<span className="text-xs uppercase tracking-wider text-amber-600 dark:text-amber-500-container">Auditor Portal Integration</span>
-<p className="text-xl font-bold">Zero Friction External Audits</p>
-<p className="text-sm text-slate-500">Provide read-only auditor scopes directly tied to evidence hashes instead of emailing unencrypted spreadsheets.</p>
-</div>
-</div>
-<div className="rounded-xl overflow-hidden shadow-md relative h-64">
-<img className="w-full h-full object-cover" data-alt="Cloud architect and chief information security officer validating an automated infrastructure risk matrix on modern portable workstations inside a sleek technical operations hub with vibrant warm orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXlxKTHJAqB34WBIPqOY_Cg9vqIvdeZTQRWcvE-Cxd4JHYLiL9AOdybhX7zo9S_fi86B7iq4SITwupCvn1-O9XUVliAkDLjDbohnOXsOjHsrZOslvLU9vkorKP_zfPSkZqOXO7A6My7UtgQziNqBwRdyd1EvMNIouMrVQHpg51E9gwWZvTAmusNWs5gooCstDzfwv0-JR-H43VYuHcnT1k_W1IoZWDkdWTZ2JAkWMKL5yDUELOtG1Nmg" />
-<div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/30 to-transparent p-6 flex flex-col justify-end text-white">
-<span className="text-xs uppercase tracking-wider text-teal-600 dark:text-teal-400-fixed">Automated CAPA Remediation</span>
-<p className="text-xl font-bold">Closed-Loop Incident Resolution</p>
-<p className="text-sm text-slate-500">When tests detect policy drift, corrective and preventive action tickets auto-dispatch to Jira, GitHub, or ServiceNow.</p>
-</div>
-</div>
-</div>
+        {/*  Additional visual element with high-contrast scrim overlay  */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+          <div className="rounded-xl overflow-hidden shadow-md relative h-72 group">
+            <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Technical audit team conducting a live SOC 2 and ISO 27001 readiness review" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwmADheLRX4BL2XPXGlJ8sHuYk2_DKGEKp2BFHM2PfacagOqMse21f3YebRlL1O3rqGF4fcS00rOcgxPoIV8oigZBIzD3BEBr5QYkQXb0quOIugNtmQ7jnHb-MSDSXHF5EtxLn7H9kLAWWsK3F2iFXTfte7OlGSL1eN9aoyLsJ_uGzs7CGlAXaMH1Wm_RFH1GaB2XLVv8UIXieM-DcJ8cxXRZexdbwXi_xNpBtp0M5xgHXha8jMo0hYQ" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/65 to-transparent p-6 flex flex-col justify-end text-white">
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-amber-400 mb-1">Auditor Portal Integration</span>
+              <h3 className="text-xl font-extrabold text-white mb-2 drop-shadow-sm">Zero Friction External Audits</h3>
+              <p className="text-sm text-slate-100 font-medium leading-relaxed drop-shadow">Provide read-only auditor scopes directly tied to cryptographic evidence hashes — eliminating spreadsheet emails.</p>
+            </div>
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-md relative h-72 group">
+            <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Cloud architect and CISO validating automated infrastructure risk matrix" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXlxKTHJAqB34WBIPqOY_Cg9vqIvdeZTQRWcvE-Cxd4JHYLiL9AOdybhX7zo9S_fi86B7iq4SITwupCvn1-O9XUVliAkDLjDbohnOXsOjHsrZOslvLU9vkorKP_zfPSkZqOXO7A6My7UtgQziNqBwRdyd1EvMNIouMrVQHpg51E9gwWZvTAmusNWs5gooCstDzfwv0-JR-H43VYuHcnT1k_W1IoZWDkdWTZ2JAkWMKL5yDUELOtG1Nmg" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/65 to-transparent p-6 flex flex-col justify-end text-white">
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-400 mb-1">Automated CAPA Remediation</span>
+              <h3 className="text-xl font-extrabold text-white mb-2 drop-shadow-sm">Closed-Loop Incident Resolution</h3>
+              <p className="text-sm text-slate-100 font-medium leading-relaxed drop-shadow">When automated tests detect policy drift, CAPA tickets auto-dispatch directly to Jira, GitHub, or ServiceNow.</p>
+            </div>
+          </div>
+        </div>
 </div>
 </section>
 {/*  Bottom Conversion CTA Banner  */}
@@ -431,7 +432,7 @@ export default function RiskRegisterPage() {
         </p>
 </div>
 <div className="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0 w-full lg:w-auto">
-<a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-lg bg-teal-600 dark:bg-teal-500-container text-white text-sm font-semibold hover:bg-teal-600 dark:bg-teal-500 transition-all shadow-md" data-path="request-a-demo" href="#">
+<a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-sm font-semibold hover:bg-teal-600 dark:bg-teal-500 transition-all shadow-md" data-path="request-a-demo" href="#">
 <Circle className="h-5 w-5 shrink-0" />
 <span className="">Request a Tailored Walkthrough</span>
 </a>

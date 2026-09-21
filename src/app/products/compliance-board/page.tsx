@@ -59,7 +59,7 @@ export default function ComplianceBoardPage() {
           </h1>
 <p className="text-lg text-slate-600 dark:text-slate-300 max-w-xl mb-8 leading-relaxed">Eliminate pre-audit panic. OMNiGRC turns control tests, evidence collection, and vendor sign-offs into a predictable 30/60/90-day operational cadence.</p>
 <div className="flex flex-wrap items-center gap-4 mb-12">
-<a className="inline-flex items-center justify-center gap-2 px-space-lg py-4 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-sm hover:bg-teal-600 dark:bg-teal-500-container transition-all shadow-md" data-path="request-demo" href="#">
+<a className="inline-flex items-center justify-center gap-2 px-space-lg py-4 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-sm hover:bg-teal-600 dark:hover:bg-teal-400 transition-all shadow-md" data-path="request-demo" href="#">
 <Circle className="h-5 w-5 shrink-0" />
               Explore Compliance Board Demo
             </a>

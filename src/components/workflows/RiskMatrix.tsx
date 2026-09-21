@@ -1,9 +1,19 @@
 "use client";
 import React, { useState } from "react";
-import { ShieldAlert, Activity, CheckCircle, Target, ArrowRight } from "lucide-react";
+import { ShieldAlert, Activity, CheckCircle, Target, ArrowRight, RefreshCw, CheckCircle2 } from "lucide-react";
 
 export function RiskMatrix() {
   const [selectedRisk, setSelectedRisk] = useState("RSK-042");
+  const [isRecalibrating, setIsRecalibrating] = useState(false);
+  const [recalibratedAt, setRecalibratedAt] = useState<string | null>(null);
+
+  const handleRecalibrate = () => {
+    setIsRecalibrating(true);
+    setTimeout(() => {
+      setIsRecalibrating(false);
+      setRecalibratedAt(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    }, 1000);
+  };
 
   const risks = [
     { id: "RSK-088", l: 5, i: 1, title: "Third-party API rate throttle cascade", asset: "AST-112", owner: "M. Vance", ctrl: "CTRL-098", strategy: "MITIGATE", evidence: "ev-api-resilience-032.json" },
@@ -165,10 +175,34 @@ export function RiskMatrix() {
           </div>
         </div>
 
-        <div className="pt-2">
-          <button className="w-full py-2.5 rounded-xl bg-slate-900 dark:bg-teal-600 text-white text-sm font-semibold hover:bg-slate-800 dark:hover:bg-teal-500 transition-colors shadow-sm">
-            Trigger Automated Recalibration
+        <div className="pt-2 space-y-2">
+          <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+            <span className="font-medium">Workflow Automation:</span>
+            <span className="font-mono text-[10px] text-teal-600 dark:text-teal-400">Simulates telemetry recalculation</span>
+          </div>
+          <button
+            onClick={handleRecalibrate}
+            disabled={isRecalibrating}
+            className="w-full py-3 rounded-xl bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-400 text-white text-sm font-semibold transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer"
+          >
+            {isRecalibrating ? (
+              <>
+                <RefreshCw className="h-4 w-4 animate-spin" />
+                <span>Recalibrating Risk Score...</span>
+              </>
+            ) : (
+              <>
+                <RefreshCw className="h-4 w-4" />
+                <span>Trigger Automated Recalibration</span>
+              </>
+            )}
           </button>
+          {recalibratedAt && (
+            <div className="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs text-center flex items-center justify-center gap-1.5 font-medium animate-fadeIn">
+              <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+              <span>Demo Mode: Recalibration simulated against telemetry stream ({recalibratedAt})</span>
+            </div>
+          )}
         </div>
       </div>
     </div>
