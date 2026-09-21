@@ -144,14 +144,14 @@ export const Footer: React.FC = () => {
               height={75}
               className="h-10 sm:h-12 w-auto object-contain"
             />
-            <div className="hidden sm:block h-7 w-px bg-slate-200/30 dark:bg-navy-700/60" />
-            <div className="inline-flex items-center p-1 rounded-2xl bg-black dark:bg-black/60 border border-slate-800 dark:border-navy-700/60 shadow-sm transition-transform hover:scale-[1.02]">
+            <div className="hidden sm:block h-10 w-px bg-slate-200/30 dark:bg-navy-700/60" />
+            <div className="inline-flex items-center p-1.5 rounded-2xl bg-black dark:bg-black/60 border border-slate-800 dark:border-navy-700/60 shadow-sm transition-transform hover:scale-[1.02]">
               <Image
                 src="/images/powered-by-arav-innovations.png"
                 alt="Powered by Arav Innovations"
-                width={240}
-                height={80}
-                className="h-7 sm:h-8 w-auto object-contain rounded-xl"
+                width={480}
+                height={160}
+                className="h-14 sm:h-16 w-auto object-contain rounded-xl"
               />
             </div>
           </div>
