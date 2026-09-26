@@ -25,7 +25,7 @@ export default function SaaSGrowingOrganizationsPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-6 py-space-section overflow-hidden bg-grid-mesh-adaptive">
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
 
@@ -36,7 +36,7 @@ export default function SaaSGrowingOrganizationsPage() {
                 <span>SOLUTIONS FOR GROWING SAAS ORGANIZATIONS</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-[50px] lg:leading-[58px] text-slate-900 dark:text-white font-bold tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight">
                 Scale Governance alongside your <span className="text-primary">Company Growth</span>
               </h1>
 
@@ -64,7 +64,7 @@ export default function SaaSGrowingOrganizationsPage() {
 
             {/* Hero Visual */}
             <div className="lg:col-span-5 relative">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800">
                   <span className="font-mono text-xs font-bold text-slate-900 dark:text-white">SAAS GOVERNANCE ENGINE</span>
                   <span className="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-mono text-[11px] font-semibold">
@@ -91,7 +91,7 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 2: PAIN POINTS */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-20 border-y border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-12">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
@@ -106,7 +106,7 @@ export default function SaaSGrowingOrganizationsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Building2 className="w-5 h-5" />
@@ -122,7 +122,7 @@ export default function SaaSGrowingOrganizationsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Network className="w-5 h-5" />
@@ -138,7 +138,7 @@ export default function SaaSGrowingOrganizationsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Scale className="w-5 h-5" />
@@ -158,7 +158,7 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 3: SOLUTION CAPABILITIES */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-24">
+        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
           <div className="max-w-3xl mb-12">
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               GROWTH GOVERNANCE CAPABILITIES
@@ -172,7 +172,7 @@ export default function SaaSGrowingOrganizationsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -191,7 +191,7 @@ export default function SaaSGrowingOrganizationsPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -213,7 +213,7 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 4: INTERACTIVE SCALING PIPELINE */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-24 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
@@ -281,7 +281,7 @@ export default function SaaSGrowingOrganizationsPage() {
               </button>
             </div>
 
-            <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-300 dark:border-navy-700">
               {activeStep === 1 && (
                 <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
@@ -350,7 +350,7 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 5: RELEVANT MODULES */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-24">
+        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
           <div className="max-w-3xl mb-12">
             <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
               ORCHESTRATED MODULES
@@ -366,7 +366,7 @@ export default function SaaSGrowingOrganizationsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               href="/products/control-mapping"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Network className="w-8 h-8 text-primary mb-3" />
@@ -382,7 +382,7 @@ export default function SaaSGrowingOrganizationsPage() {
 
             <Link
               href="/products/vendors"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Building2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
@@ -398,7 +398,7 @@ export default function SaaSGrowingOrganizationsPage() {
 
             <Link
               href="/products/evidence"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Link2 className="w-8 h-8 text-primary mb-3" />
@@ -414,7 +414,7 @@ export default function SaaSGrowingOrganizationsPage() {
 
             <Link
               href="/products/audits"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <FileCheck className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
@@ -431,9 +431,9 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 6: BOTTOM CTA */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-24 border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-t border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-lg border border-slate-200 dark:border-navy-700">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
                   Scale your SaaS security governance with confidence.

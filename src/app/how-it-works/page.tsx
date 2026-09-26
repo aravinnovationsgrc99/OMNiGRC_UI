@@ -275,7 +275,7 @@ export default function HowItWorksPage() {
             </span>
           </div>
 
-          <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+          <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
             The Connected GRC <span className="text-[#F15E1C]">Operating Lifecycle</span>
           </h1>
 
@@ -332,7 +332,7 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Section 2: The 9-Stage Operating Lifecycle */}
-        <section className="w-full py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="lifecycle-stages">
+        <section className="w-full py-space-section px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="lifecycle-stages">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-3 border-b border-slate-200 dark:border-navy-700/60">
             <div>
               <span className="px-3 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-semibold uppercase">
@@ -352,7 +352,7 @@ export default function HowItWorksPage() {
           </div>
 
           {/* 9-Stage Stepper Buttons */}
-          <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-2 mb-6 bg-[#f1f3ff] dark:bg-navy-950/50 p-2.5 rounded-2xl border border-slate-200 dark:border-navy-700/60">
+          <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-2 mb-6 bg-[#f1f3ff] dark:bg-navy-950/50 p-2.5 rounded-2xl border border-slate-300 dark:border-navy-700/60">
             {stages.map((s) => (
               <button
                 key={s.id}
@@ -360,11 +360,11 @@ export default function HowItWorksPage() {
                 className={`py-2.5 px-2 rounded-xl text-center transition-all font-mono flex flex-col items-center gap-0.5 ${
                   activeStage === s.id
                     ? "bg-[#F15E1C] text-white shadow-md font-bold"
-                    : "bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-navy-800 border border-slate-200 dark:border-navy-700/60"
+                    : "bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-navy-800 border border-slate-300 dark:border-navy-700/60"
                 }`}
               >
-                <span className="text-[10px] opacity-80">{s.num}</span>
-                <span className="truncate w-full text-[11px]">{s.navLabel}</span>
+                <span className="text-2xs opacity-80">{s.num}</span>
+                <span className="truncate w-full text-2xs">{s.navLabel}</span>
               </button>
             ))}
           </div>
@@ -372,7 +372,7 @@ export default function HowItWorksPage() {
           {/* Stage Detail Display Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Stage Narrative (7 Cols) */}
-            <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+            <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-space-card rounded-2xl border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs font-bold text-[#F15E1C] dark:text-orange-400 uppercase tracking-wider bg-[#ffdbcf] dark:bg-orange-950/40 px-3 py-1 rounded-full">

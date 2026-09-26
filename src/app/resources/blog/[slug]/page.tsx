@@ -67,7 +67,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
 
       <main className="flex-1 w-full pt-16">
         {/* ARTICLE HEADER / HERO WITH MESH GRID */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-8 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-space-section overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb Navigation */}
             <div className="flex items-center justify-between gap-4 mb-6">
@@ -132,11 +132,11 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
         </section>
 
         {/* COVER IMAGE & ARTICLE BODY */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12">
+        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-space-section">
           <div className="max-w-4xl mx-auto">
             {/* Cover Image */}
             {post.coverImage && (
-              <div className="relative w-full h-[280px] sm:h-[420px] rounded-3xl overflow-hidden shadow-xl mb-12 border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full h-[280px] sm:h-[420px] rounded-3xl overflow-hidden shadow-xl mb-12 border border-slate-300 dark:border-navy-700">
                 <img
                   src={post.coverImage}
                   alt={post.coverImageAlt || post.title}
@@ -159,7 +159,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 rounded-full text-xs font-semibold bg-[#faf8ff] dark:bg-navy-950 text-[#0d1b36] dark:text-slate-300 border border-slate-200 dark:border-navy-700"
+                    className="px-3 py-1 rounded-full text-xs font-semibold bg-[#faf8ff] dark:bg-navy-950 text-[#0d1b36] dark:text-slate-300 border border-slate-300 dark:border-navy-700"
                   >
                     #{tag}
                   </span>
@@ -168,7 +168,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             )}
 
             {/* Product Narrative Callout */}
-            <div className="my-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#ffdbcf]/40 to-[#f1f3ff] dark:from-navy-900 dark:to-navy-950 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-lg">
+            <div className="my-12 p-space-card rounded-3xl bg-gradient-to-br from-[#ffdbcf]/40 to-[#f1f3ff] dark:from-navy-900 dark:to-navy-950 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-lg">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-2xl bg-[#F15E1C] text-white shrink-0 hidden sm:block">
                   <Sparkles className="w-6 h-6" />
@@ -219,10 +219,10 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                   {relatedPosts.map((rel) => (
                     <div
                       key={rel.id}
-                      className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-950/60 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 transition-all flex flex-col justify-between"
+                      className="p-space-card rounded-2xl bg-[#faf8ff] dark:bg-navy-950/60 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 transition-all flex flex-col justify-between"
                     >
                       <div>
-                        <span className="px-2.5 py-0.5 rounded bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-[10px] font-bold uppercase border border-slate-200 dark:border-navy-700 inline-block mb-3">
+                        <span className="px-2.5 py-0.5 rounded bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-[10px] font-bold uppercase border border-slate-300 dark:border-navy-700 inline-block mb-3">
                           {rel.category}
                         </span>
                         <h4 className="text-base font-bold text-[#0d1b36] dark:text-white hover:text-[#F15E1C] transition-colors mb-2">

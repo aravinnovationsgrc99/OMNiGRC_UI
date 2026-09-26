@@ -50,7 +50,7 @@ export default function TrustPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Transparent security boundaries. Human-governed AI.
             </h1>
 
@@ -71,7 +71,7 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 1: CORE ARCHITECTURE PILLARS */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -87,9 +87,9 @@ export default function TrustPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Pillar 1 */}
-              <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-200 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
+                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-300 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
                     <Lock className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0d1b36] dark:text-slate-200 mb-2">Application-Level Tenant Isolation</h3>
@@ -97,7 +97,7 @@ export default function TrustPage() {
                     Logical data boundaries enforced at the application tier ensure strict authorization controls and data segregation between organization workspaces.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60">
+                <div className="pt-3 border-t border-slate-300 dark:border-navy-700/60">
                   <span className="font-mono text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Workspace Scoped Boundaries
                   </span>
@@ -105,9 +105,9 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 2 */}
-              <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-200 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
+                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-300 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
                     <Cpu className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0d1b36] dark:text-slate-200 mb-2">Advisory AI Data Minimization</h3>
@@ -115,7 +115,7 @@ export default function TrustPage() {
                     Tenant-sensitive payloads and PII are stripped prior to AI clause correlation requests. AI outputs remain strictly advisory until explicitly approved by human analysts.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60">
+                <div className="pt-3 border-t border-slate-300 dark:border-navy-700/60">
                   <span className="font-mono text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> AI Assists, Humans Decide
                   </span>
@@ -123,9 +123,9 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 3 */}
-              <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-200 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
+                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-300 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
                     <UserCheck className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0d1b36] dark:text-slate-200 mb-2">Human-in-the-Loop Governance</h3>
@@ -133,7 +133,7 @@ export default function TrustPage() {
                     Automated workflows generate recommendations, but all risk acceptances, control mappings, policy sign-offs, and evidence reviews require human confirmation.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60">
+                <div className="pt-3 border-t border-slate-300 dark:border-navy-700/60">
                   <span className="font-mono text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Mandatory Human Sign-Off
                   </span>
@@ -141,9 +141,9 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 4 */}
-              <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-200 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
+                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-300 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
                     <FileCheck2 className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0d1b36] dark:text-slate-200 mb-2">External Evidence Index Model</h3>
@@ -151,7 +151,7 @@ export default function TrustPage() {
                     Instead of copying sensitive customer files into platform storage, OMNiGRC indexes external reference links and metadata for auditor verification.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60">
+                <div className="pt-3 border-t border-slate-300 dark:border-navy-700/60">
                   <span className="font-mono text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Reference Pointer Indexing
                   </span>
@@ -159,9 +159,9 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 5 */}
-              <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-200 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
+                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-300 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
                     <Eye className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0d1b36] dark:text-slate-200 mb-2">Event & Audit Traceability</h3>
@@ -169,7 +169,7 @@ export default function TrustPage() {
                     Structured operational event logs record control changes, risk evaluation updates, and user actions for audit workpaper generation.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60">
+                <div className="pt-3 border-t border-slate-300 dark:border-navy-700/60">
                   <span className="font-mono text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Auditing Workpaper Ready
                   </span>
@@ -177,9 +177,9 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 6 */}
-              <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-200 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
+                  <div className="p-3 rounded-xl bg-white dark:bg-navy-950 w-fit border border-slate-300 dark:border-navy-700 text-[#F15E1C] dark:text-orange-400 mb-4">
                     <Server className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0d1b36] dark:text-slate-200 mb-2">Containerized Deployment Options</h3>
@@ -187,7 +187,7 @@ export default function TrustPage() {
                     Flexible options for shared SaaS, private single-tenant MSSP instances, or customer-controlled container runtime environments.
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60">
+                <div className="pt-3 border-t border-slate-300 dark:border-navy-700/60">
                   <span className="font-mono text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Docker Container Support
                   </span>
@@ -198,7 +198,7 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 2: DEPLOYMENT MODEL ARCHITECTURE */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -214,7 +214,7 @@ export default function TrustPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
               {/* Model 1: MSSP_SHARED */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="px-2.5 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold">
@@ -238,7 +238,7 @@ export default function TrustPage() {
               </div>
 
               {/* Model 2: PRIVATE_MSSP */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="px-2.5 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold">
@@ -262,7 +262,7 @@ export default function TrustPage() {
               </div>
 
               {/* Model 3: SELF_HOSTED */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="px-2.5 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold">
@@ -287,7 +287,7 @@ export default function TrustPage() {
             </div>
 
             {/* Self-Hosted Clarification Box */}
-            <div className="p-5 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed max-w-4xl mx-auto">
+            <div className="p-5 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed max-w-4xl mx-auto">
               <strong className="text-[#0d1b36] dark:text-slate-200 font-semibold block mb-1">Self-Hosted Deployment Specification:</strong>
               "Under the Self-Hosted model, the customer controls infrastructure and runtime operations, but receives only Arav-distributed executable container artifacts, not the source repository or build/signing infrastructure."
             </div>
@@ -295,7 +295,7 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 3: PRODUCT TRUTH BOUNDARIES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -308,7 +308,7 @@ export default function TrustPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* What We Support */}
-              <div className="p-6 rounded-2xl bg-[#faf8ff] dark:bg-navy-900/60 border border-slate-200 dark:border-navy-700/60">
+              <div className="p-space-card rounded-2xl bg-[#faf8ff] dark:bg-navy-900/60 border border-slate-300 dark:border-navy-700/60">
                 <h3 className="text-base font-bold text-[#006c4d] dark:text-teal-400 mb-4 flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5" /> What OMNiGRC Delivers
                 </h3>
@@ -337,7 +337,7 @@ export default function TrustPage() {
               </div>
 
               {/* What We Explicitly Exclude */}
-              <div className="p-6 rounded-2xl bg-[#fff5f2] dark:bg-rose-950/20 border border-[#ffdbcf] dark:border-rose-900/40">
+              <div className="p-space-card rounded-2xl bg-[#fff5f2] dark:bg-rose-950/20 border border-[#ffdbcf] dark:border-rose-900/40">
                 <h3 className="text-base font-bold text-[#D4521A] dark:text-rose-400 mb-4 flex items-center gap-2">
                   <AlertCircle className="h-5 w-5" /> Non-Supported Marketing Overstatements
                 </h3>
@@ -369,7 +369,7 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Discuss your security & architecture requirements.

@@ -13,7 +13,7 @@ const config: Config = {
         xs: "480px",
       },
       fontFamily: {
-        sans: ["var(--font-ibm-sans)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-ibm-mono)", "monospace"],
       },
       colors: {
@@ -153,6 +153,8 @@ const config: Config = {
         "primary": "var(--primary)",
       },
       spacing: {
+        "space-card": "var(--space-card)",
+        "space-section": "var(--space-section)",
         "space-xl": "2.5rem",
         "space-lg": "1.5rem",
         "space-md": "1rem",
@@ -164,6 +166,15 @@ const config: Config = {
         "gutter-sm": "1rem",
       },
       fontSize: {
+        "2xs": ["11px", { lineHeight: "1.3" }],
+        xs: ["13px", { lineHeight: "1.4" }],
+        sm: ["15px", { lineHeight: "1.5" }],
+        base: ["16px", { lineHeight: "1.6" }],
+        lg: ["19px", { lineHeight: "1.5" }],
+        xl: ["25px", { lineHeight: "1.3" }],
+        "2xl": ["32px", { lineHeight: "1.25" }],
+        "3xl": ["40px", { lineHeight: "1.2" }],
+        "4xl": ["52px", { lineHeight: "60px" }],
         "headline-xl": ["40px", { lineHeight: "48px", fontWeight: "700" }],
         "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
         "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],

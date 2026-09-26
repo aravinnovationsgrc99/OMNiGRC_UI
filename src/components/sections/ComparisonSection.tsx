@@ -107,9 +107,9 @@ export const ComparisonSection: React.FC = () => {
             <div className="flex items-center justify-between gap-3 text-xs font-mono mb-1.5 text-slate-700 dark:text-slate-300">
               <div className="flex items-center gap-2 font-bold text-[#D4521A] dark:text-amber">
                 <MoveHorizontal className="h-4 w-4 animate-pulse shrink-0 text-[#F15E1C] dark:text-amber" />
-                <span className="uppercase tracking-wider text-[11px]">SCROLL TABLE HORIZONTALLY</span>
+                <span className="uppercase tracking-wider text-2xs">SCROLL TABLE HORIZONTALLY</span>
               </div>
-              <span className="text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold hidden sm:inline-block">
+              <span className="text-2xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold hidden sm:inline-block">
                 Drag scrollbar or swipe table to view all columns
               </span>
             </div>
@@ -146,7 +146,7 @@ export const ComparisonSection: React.FC = () => {
                   <span className="flex items-center gap-1.5 font-bold text-[#D4521A] dark:text-amber">
                     <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#2E936F] dark:text-teal" /> OMNiGRC
                   </span>
-                  <span className="px-2 py-0.5 rounded bg-[#D4521A] dark:bg-teal/40 text-white text-[9px] font-bold">UNIFIED</span>
+                  <span className="px-2 py-0.5 rounded bg-[#D4521A] dark:bg-teal/40 text-white text-2xs font-bold">UNIFIED</span>
                 </div>
               </div>
 
@@ -160,14 +160,14 @@ export const ComparisonSection: React.FC = () => {
                     transition={{ duration: 0.25, delay: idx * 0.05 }}
                     className="grid grid-cols-12 hover:bg-slate-50 dark:hover:bg-navy-800/40 transition-colors divider-light dark:divider-dark"
                   >
-                    <div className="col-span-3 p-4 font-bold text-[13px] text-[#0F172A] dark:text-white flex items-center">
+                    <div className="col-span-3 p-4 font-bold text-xs text-[#0F172A] dark:text-white flex items-center">
                       {row.feature}
                     </div>
-                    <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
+                    <div className="col-span-3 p-4 text-xs text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
                       <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
                       <span>{row.manual}</span>
                     </div>
-                    <div className="col-span-3 p-4 text-[13px] text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
+                    <div className="col-span-3 p-4 text-xs text-[#475569] dark:text-slate-400 border-l border-slate-200 dark:border-navy-700/60 flex items-center gap-2">
                       <Minus className="h-3.5 w-3.5 text-slate-400 dark:text-slate-600 shrink-0" />
                       <span>{row.heavy}</span>
                     </div>

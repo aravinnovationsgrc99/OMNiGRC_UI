@@ -49,7 +49,7 @@ export default function FrameworksHubPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Documented framework coverage. Map once across global standards.
             </h1>
 
@@ -70,7 +70,7 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* INTERACTIVE 3D ORRERY SECTION */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-6">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -85,7 +85,7 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* 6 FRAMEWORK GUIDES GRID */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -101,7 +101,7 @@ export default function FrameworksHubPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {FRAMEWORKS.map((fw) => (
-                <div key={fw.code} className="bg-[#f1f3ff] dark:bg-[#0A111F] rounded-2xl p-6 border border-slate-200 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div key={fw.code} className="bg-[#f1f3ff] dark:bg-[#0A111F] rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-2.5 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-[10px] font-bold uppercase border border-slate-200 dark:border-navy-700/60">

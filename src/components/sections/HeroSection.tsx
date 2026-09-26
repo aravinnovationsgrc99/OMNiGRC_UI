@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
           className="inline-flex items-center gap-1.5 self-center px-3 py-1 rounded-full border border-[#2E936F]/50 bg-[#2E936F]/15 text-[#D4521A] dark:border-teal/40 dark:bg-teal/10 dark:text-amber text-[10px] sm:text-xs font-mono tracking-wider sm:tracking-widest uppercase mb-4 sm:mb-8 shadow-inner max-w-[92vw]"
         >
           <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-[#D4521A] dark:text-amber shrink-0" />
-          <span className="truncate font-semibold text-[10px] sm:text-xs">THE CONNECTED GRC OPERATING LAYER</span>
+          <span className="truncate font-semibold text-2xs sm:text-xs">THE CONNECTED GRC OPERATING LAYER</span>
         </motion.div>
 
         {/* Main Headline */}
@@ -119,7 +119,7 @@ export const HeroSection: React.FC = () => {
             {FRAMEWORKS.map((fw) => (
               <div
                 key={fw.code}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#E8C090] dark:border-navy-700/60 bg-white/80 dark:bg-navy-900/80 text-[11px] font-medium text-slate-600 dark:text-slate-300"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#E8C090] dark:border-navy-700/60 bg-white/80 dark:bg-navy-900/80 text-2xs font-medium text-slate-600 dark:text-slate-300"
               >
                 <CheckCircle2 className="h-3 w-3 text-[#2E936F] dark:text-teal" />
                 <span className="font-semibold text-navy-900 dark:text-white">{fw.name}</span>

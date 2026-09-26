@@ -972,7 +972,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                       {block.type === "heading" && (
                         <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
                           <div>
-                            <label className="block text-[10px] font-semibold text-slate-400 mb-1">Level</label>
+                            <label className="block text-2xs font-semibold text-slate-400 mb-1">Level</label>
                             <select
                               value={block.level || 2}
                               onChange={(e) => updateBlockField(idx, "level", parseInt(e.target.value))}
@@ -983,7 +983,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                             </select>
                           </div>
                           <div className="sm:col-span-3">
-                            <label className="block text-[10px] font-semibold text-slate-400 mb-1">Heading Title</label>
+                            <label className="block text-2xs font-semibold text-slate-400 mb-1">Heading Title</label>
                             <input
                               type="text"
                               value={block.title || ""}
@@ -998,7 +998,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                       {/* Paragraph Form Input */}
                       {block.type === "paragraph" && (
                         <div>
-                          <label className="block text-[10px] font-semibold text-slate-400 mb-1">Paragraph Text</label>
+                          <label className="block text-2xs font-semibold text-slate-400 mb-1">Paragraph Text</label>
                           <textarea
                             rows={4}
                             value={block.text || ""}
@@ -1014,7 +1014,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                         <div className="space-y-3">
                           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                             <div>
-                              <label className="block text-[10px] font-semibold text-slate-400 mb-1">Callout Style</label>
+                              <label className="block text-2xs font-semibold text-slate-400 mb-1">Callout Style</label>
                               <select
                                 value={block.calloutType || "ai"}
                                 onChange={(e) => updateBlockField(idx, "calloutType", e.target.value)}
@@ -1026,7 +1026,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                               </select>
                             </div>
                             <div className="sm:col-span-2">
-                              <label className="block text-[10px] font-semibold text-slate-400 mb-1">Callout Headline</label>
+                              <label className="block text-2xs font-semibold text-slate-400 mb-1">Callout Headline</label>
                               <input
                                 type="text"
                                 value={block.title || ""}
@@ -1037,7 +1037,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                             </div>
                           </div>
                           <div>
-                            <label className="block text-[10px] font-semibold text-slate-400 mb-1">Callout Body Message</label>
+                            <label className="block text-2xs font-semibold text-slate-400 mb-1">Callout Body Message</label>
                             <textarea
                               rows={2}
                               value={block.text || ""}
@@ -1056,7 +1056,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                             <span>Unified Control Crosswalk Table Template</span>
                             <span className="text-[10px] text-emerald-400 font-mono">SOC 2 / ISO 27001 / NIST</span>
                           </div>
-                          <p className="text-[11px] text-slate-400">
+                          <p className="text-2xs text-slate-400">
                             Renders a responsive control crosswalk matrix connecting Operational Controls with SOC 2, ISO 27001:2022, and NIST CSF 2.0 clauses.
                           </p>
                         </div>
@@ -1069,7 +1069,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                             <span>5x5 Likelihood x Impact Risk Matrix</span>
                             <span className="text-[10px] text-amber-400 font-mono">Auto Risk Badges</span>
                           </div>
-                          <p className="text-[11px] text-slate-400">
+                          <p className="text-2xs text-slate-400">
                             Renders a color-coded 5x5 Likelihood vs Impact risk evaluation table with Low (Emerald), Medium (Amber), High (Orange), and Critical (Red) badges.
                           </p>
                         </div>
@@ -1080,7 +1080,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                         <div className="space-y-3">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                              <label className="text-[10px] font-semibold text-slate-400">List Style:</label>
+                              <label className="text-2xs font-semibold text-slate-400">List Style:</label>
                               <select
                                 value={block.listType || "bullet"}
                                 onChange={(e) => updateBlockField(idx, "listType", e.target.value)}
@@ -1136,7 +1136,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                       {block.type === "code" && (
                         <div className="space-y-3">
                           <div className="flex items-center gap-3">
-                            <label className="text-[10px] font-semibold text-slate-400">Language:</label>
+                            <label className="text-2xs font-semibold text-slate-400">Language:</label>
                             <select
                               value={block.language || "typescript"}
                               onChange={(e) => updateBlockField(idx, "language", e.target.value)}
@@ -1164,7 +1164,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                       {block.type === "image" && (
                         <div className="space-y-3">
                           <div>
-                            <label className="block text-[10px] font-semibold text-slate-400 mb-1">Image URL</label>
+                            <label className="block text-2xs font-semibold text-slate-400 mb-1">Image URL</label>
                             <input
                               type="text"
                               value={block.imageUrl || ""}
@@ -1174,7 +1174,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                             />
                           </div>
                           <div>
-                            <label className="block text-[10px] font-semibold text-slate-400 mb-1">Caption / Alt Text</label>
+                            <label className="block text-2xs font-semibold text-slate-400 mb-1">Caption / Alt Text</label>
                             <input
                               type="text"
                               value={block.caption || ""}
@@ -1203,7 +1203,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                     className="p-1.5 rounded-md hover:bg-navy-950 text-slate-300 hover:text-white border border-transparent hover:border-navy-700 flex items-center gap-1"
                   >
                     <Heading2 className="w-4 h-4 text-[#F15E1C]" />
-                    <span className="text-[11px] font-bold">H2</span>
+                    <span className="text-2xs font-bold">H2</span>
                   </button>
 
                   <button
@@ -1213,7 +1213,7 @@ export function AdminPostEditor({ initialPost, isNew = false }: AdminPostEditorP
                     className="p-1.5 rounded-md hover:bg-navy-950 text-slate-300 hover:text-white border border-transparent hover:border-navy-700 flex items-center gap-1"
                   >
                     <Heading3 className="w-4 h-4 text-[#F15E1C]" />
-                    <span className="text-[11px] font-bold">H3</span>
+                    <span className="text-2xs font-bold">H3</span>
                   </button>
 
                   <div className="h-4 w-[1px] bg-navy-800 mx-1" />

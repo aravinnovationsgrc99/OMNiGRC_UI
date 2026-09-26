@@ -95,7 +95,7 @@ export default function ResourcesHubPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Practical guides & operational frameworks for lean GRC teams.
             </h1>
 
@@ -125,7 +125,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* FEATURED EDITORIAL ARTICLES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
               <div>
@@ -148,7 +148,7 @@ export default function ResourcesHubPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link
                 href="/resources/blog/how-to-build-effective-cybersecurity-risk-register"
-                className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/40 text-amber-800 dark:text-amber-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
@@ -213,7 +213,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 1: CANONICAL FRAMEWORK GUIDES INDEX */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
               <div>
@@ -238,7 +238,7 @@ export default function ResourcesHubPage() {
                 <Link
                   key={fw.code}
                   href={`/frameworks/${fw.slug}`}
-                  className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
@@ -268,7 +268,7 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 2: CANONICAL WORKFLOW MODULES INDEX */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -296,11 +296,11 @@ export default function ResourcesHubPage() {
                     <h3 className="text-base font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
                       {p.name}
                     </h3>
-                    <p className="text-[11px] text-[#5a4138] dark:text-slate-400 leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-2xs text-[#5a4138] dark:text-slate-400 leading-relaxed line-clamp-3 mb-4">
                       {p.oneLiner}
                     </p>
                   </div>
-                  <div className="text-[11px] font-bold text-[#F15E1C] flex items-center justify-between pt-2 border-t border-slate-100 dark:border-navy-700/60">
+                  <div className="text-2xs font-bold text-[#F15E1C] flex items-center justify-between pt-2 border-t border-slate-100 dark:border-navy-700/60">
                     <span>Explore Module</span>
                     <ChevronRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
@@ -366,7 +366,7 @@ export default function ResourcesHubPage() {
                       {pr.status}
                     </span>
                     <h4 className="text-sm font-bold text-[#0d1b36] dark:text-slate-200 mb-1">{pr.title}</h4>
-                    <p className="text-[11px] text-[#5a4138] dark:text-slate-400 leading-relaxed">{pr.desc}</p>
+                    <p className="text-2xs text-[#5a4138] dark:text-slate-400 leading-relaxed">{pr.desc}</p>
                   </div>
                 ))}
               </div>

@@ -128,7 +128,7 @@ export default function AdminLoginPage() {
           </form>
 
           <div className="mt-6 pt-4 border-t border-navy-800 text-center">
-            <p className="text-[11px] text-slate-500 flex items-center justify-center gap-1">
+            <p className="text-2xs text-slate-500 flex items-center justify-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
               <span>Server-side HTTP-Only token session protection</span>
             </p>

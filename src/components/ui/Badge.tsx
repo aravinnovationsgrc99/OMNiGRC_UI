@@ -59,7 +59,7 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   const sizes = {
-    sm: "text-[10px] px-2.5 py-0.5",
+    sm: "text-2xs px-2.5 py-0.5",
     md: "text-xs px-3 py-1",
   };
 

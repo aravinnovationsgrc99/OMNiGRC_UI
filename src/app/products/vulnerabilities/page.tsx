@@ -79,7 +79,7 @@ export default function VulnerabilitiesPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & EXTERNALLY SOURCED INGESTION HEADER  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-section overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & CTAs  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -135,7 +135,7 @@ export default function VulnerabilitiesPage() {
             </div>
             {/*  Right Column: Ingestion Pipeline Visual Card  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-md shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -176,7 +176,7 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 2: INTERACTIVE TOPOLOGY & SCENARIO EXPLORER  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl" id="vulnerability-topology">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="vulnerability-topology">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
             <div>
               <div className="font-code-sm text-code-sm text-primary font-bold uppercase tracking-wider mb-space-xs">Defensible Linkage Pipeline</div>
@@ -187,7 +187,7 @@ export default function VulnerabilitiesPage() {
             </div>
             <div className="flex items-center gap-space-sm">
               <span className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Select scenario to inspect:</span>
-              <div className="inline-flex rounded-lg bg-white dark:bg-[#0A111F] p-1 shadow-sm border border-slate-200 dark:border-navy-700">
+              <div className="inline-flex rounded-lg bg-white dark:bg-[#0A111F] p-1 shadow-sm border border-slate-300 dark:border-navy-700">
                 <button 
                   onClick={() => {
                     setScenarioId(1);
@@ -214,27 +214,27 @@ export default function VulnerabilitiesPage() {
 
           {/*  Topological Visual Flow Banner  */}
           <div className="hidden lg:grid grid-cols-5 gap-space-sm mb-space-lg text-center">
-            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center">
+            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center">
               <Bug className="h-5 w-5 shrink-0 text-primary mb-1" />
               <span className="font-code-sm text-code-sm font-semibold text-slate-900 dark:text-white uppercase">01. Scanner Ingestion</span>
               <span className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Normalized Finding Payload</span>
             </div>
-            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center">
+            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center">
               <Database className="h-5 w-5 shrink-0 text-primary mb-1" />
               <span className="font-code-sm text-code-sm font-semibold text-slate-900 dark:text-white uppercase">02. Asset Registry</span>
               <span className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Business Scope &amp; Exposure Tier</span>
             </div>
-            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center">
+            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center">
               <AlertOctagon className="h-5 w-5 shrink-0 text-error mb-1" />
               <span className="font-code-sm text-code-sm font-semibold text-slate-900 dark:text-white uppercase">03. Calibrated Risk</span>
               <span className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Inherent Risk Scoring Model</span>
             </div>
-            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center">
+            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center">
               <CalendarClock className="h-5 w-5 shrink-0 text-primary mb-1" />
               <span className="font-code-sm text-code-sm font-semibold text-slate-900 dark:text-white uppercase">04. Remediation SLA</span>
               <span className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Enforced Governance Clock</span>
             </div>
-            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center">
+            <div className="p-space-sm rounded-lg bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center">
               <ListChecks className="h-5 w-5 shrink-0 text-secondary mb-1" />
               <span className="font-code-sm text-code-sm font-semibold text-slate-900 dark:text-white uppercase">05. Audit Vault</span>
               <span className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Structured Audit Verification</span>
@@ -244,7 +244,7 @@ export default function VulnerabilitiesPage() {
           {/*  Main Topology Explorer Card  */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
             {/*  Interactive Findings Table & Detail Matrix (Col 8)  */}
-            <div className="lg:col-span-8 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-md p-space-lg">
+            <div className="lg:col-span-8 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-300 dark:border-navy-700 shadow-md p-space-card">
               <div className="flex items-center justify-between pb-space-sm mb-space-md border-b border-slate-100 dark:border-navy-800">
                 <div>
                   <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm font-semibold ${current.tagStyle}`} id="scenario-tag">
@@ -260,21 +260,21 @@ export default function VulnerabilitiesPage() {
               </div>
               {/*  Structured Traceability Grid  */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-lg">
-                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700">
+                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700">
                   <div className="font-label-sm text-label-sm text-slate-900 dark:text-white font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
                     <Server className="h-4 w-4 text-primary shrink-0" /> Affected Asset Target
                   </div>
                   <div className="font-code-md text-code-md text-slate-900 dark:text-white font-bold tracking-tight" id="scenario-asset">{current.asset}</div>
                   <div className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 font-medium mt-1">Tier-1 Critical: PCI-DSS &amp; Data Scope</div>
                 </div>
-                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700">
+                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700">
                   <div className="font-label-sm text-label-sm text-slate-900 dark:text-white font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
                     <LineChart className="h-4 w-4 text-primary shrink-0" /> Linked Risk Item
                   </div>
                   <div className="font-code-md text-code-md text-primary font-bold tracking-tight" id="scenario-risk">{current.risk}</div>
                   <div className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 font-medium mt-1">Exposure: Critical • Breach Impact: High</div>
                 </div>
-                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700">
+                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700">
                   <div className="font-label-sm text-label-sm text-slate-900 dark:text-white font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
                     <UserCircle className="h-4 w-4 text-primary shrink-0" /> Assigned Remediation Lead
                   </div>
@@ -284,7 +284,7 @@ export default function VulnerabilitiesPage() {
                   </div>
                   <div className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 font-medium mt-1">Escalation: VP Eng &amp; CISO Office</div>
                 </div>
-                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700">
+                <div className="p-space-md rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700">
                   <div className="font-label-sm text-label-sm text-slate-900 dark:text-white font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
                     <Shield className="h-4 w-4 text-primary shrink-0" /> Mapped Safeguard Control
                   </div>
@@ -301,10 +301,10 @@ export default function VulnerabilitiesPage() {
                   </div>
                   <span className="font-code-sm text-code-sm text-primary font-bold px-2 py-0.5 rounded bg-white dark:bg-[#0A111F] shadow-sm" id="scenario-sla-text">{current.slaText}</span>
                 </div>
-                <div className="w-full bg-white dark:bg-[#0A111F] h-3 rounded-full overflow-hidden p-0.5 border border-slate-200 dark:border-navy-700">
+                <div className="w-full bg-white dark:bg-[#0A111F] h-3 rounded-full overflow-hidden p-0.5 border border-slate-300 dark:border-navy-700">
                   <div className={`${current.slaColor} h-full rounded-full transition-all duration-500`} id="scenario-sla-bar" style={{ width: current.slaWidth }}></div>
                 </div>
-                <div className="flex justify-between text-[11px] text-slate-600 dark:text-slate-300 font-semibold mt-1.5 font-code-sm">
+                <div className="flex justify-between text-2xs text-slate-600 dark:text-slate-300 font-semibold mt-1.5 font-code-sm">
                   <span>Injected Finding</span>
                   <span>Active Remediation Status</span>
                   <span>Policy Cutoff</span>
@@ -330,7 +330,7 @@ export default function VulnerabilitiesPage() {
             </div>
 
             {/*  Slide-Over Drawer Simulation (Col 4)  */}
-            <div className="lg:col-span-4 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-lg p-space-lg flex flex-col justify-between h-full">
+            <div className="lg:col-span-4 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-300 dark:border-navy-700 shadow-lg p-space-card flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center justify-between pb-space-sm mb-space-md border-b border-slate-100 dark:border-navy-800">
                   <span className="font-label-md text-label-md text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5 font-bold">
@@ -353,7 +353,7 @@ export default function VulnerabilitiesPage() {
                   </div>
                   <div>
                     <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-bold uppercase tracking-wider">Auditor Verification Status</span>
-                    <div className="p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700 mt-1 text-slate-900 dark:text-white font-body-sm text-body-sm flex items-start gap-2 font-medium" id="drawer-audit-status">
+                    <div className="p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700 mt-1 text-slate-900 dark:text-white font-body-sm text-body-sm flex items-start gap-2 font-medium" id="drawer-audit-status">
                       <Clock className="h-5 w-5 shrink-0 text-secondary" />
                       <span>{isVerified ? "Audit verification recorded and logged into the GRC workpaper vault." : current.drawerAudit}</span>
                     </div>
@@ -384,7 +384,7 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 3: THREE FUNCTIONAL PILLARS SECTION  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="text-center max-w-3xl mx-auto mb-space-xl">
             <span className="font-code-sm text-code-sm text-primary font-bold uppercase tracking-widest">Architectural Pillars</span>
             <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold mt-space-xs">
@@ -395,7 +395,7 @@ export default function VulnerabilitiesPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-            <div className="flex flex-col p-space-lg rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
+            <div className="flex flex-col p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-space-md">
                 <Network className="h-6 w-6 shrink-0" />
               </div>
@@ -406,7 +406,7 @@ export default function VulnerabilitiesPage() {
                 <span className="font-code-sm text-code-sm text-secondary font-bold">Configurable Scope Tiers</span>
               </div>
             </div>
-            <div className="flex flex-col p-space-lg rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
+            <div className="flex flex-col p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-space-md">
                 <Zap className="h-6 w-6 shrink-0" />
               </div>
@@ -417,7 +417,7 @@ export default function VulnerabilitiesPage() {
                 <span className="font-code-sm text-code-sm text-primary font-bold">Policy Escalations</span>
               </div>
             </div>
-            <div className="flex flex-col p-space-lg rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
+            <div className="flex flex-col p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-space-md">
                 <Lock className="h-6 w-6 shrink-0" />
               </div>
@@ -432,7 +432,7 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 4: COMPARISON SECTION  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-xl">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-section">
           <div className="max-w-7xl mx-auto px-gutter">
             <div className="text-center max-w-2xl mx-auto mb-space-lg">
               <span className="font-code-sm text-code-sm text-primary font-bold uppercase tracking-wider">Methodology Contrast</span>
@@ -441,7 +441,7 @@ export default function VulnerabilitiesPage() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
-              <div className="p-space-lg rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+              <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm">
                 <div className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-sm flex items-center gap-2">
                   <XCircle className="h-5 w-5 text-error shrink-0" /> Uncontextualized Scanner Approach
                 </div>
@@ -460,7 +460,7 @@ export default function VulnerabilitiesPage() {
                   </li>
                 </ul>
               </div>
-              <div className="p-space-lg rounded-xl bg-white dark:bg-[#0A111F] border border-secondary/40 shadow-md">
+              <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-secondary/40 shadow-md">
                 <div className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-sm flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-secondary shrink-0" /> Connected OMNiGRC Workflow
                 </div>
@@ -484,7 +484,7 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 5: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-xl">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
             <h2 className="font-headline-lg text-headline-lg font-bold">Connect technical findings to compliance truth.</h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>

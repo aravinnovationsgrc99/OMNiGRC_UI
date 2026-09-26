@@ -32,7 +32,7 @@ export default function LeanSecurityTeamsPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-6 py-space-section overflow-hidden bg-grid-mesh-adaptive">
           {/* Decorative Glow Accents */}
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
@@ -92,7 +92,7 @@ export default function LeanSecurityTeamsPage() {
 
             {/* Hero Visual: Real-time Snapshot Card */}
             <div className="lg:col-span-5 relative">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -119,14 +119,14 @@ export default function LeanSecurityTeamsPage() {
 
                 {/* Real-time Event Strip */}
                 <div className="p-3.5 rounded-xl bg-slate-100 dark:bg-[#0A111F] text-slate-900 dark:text-slate-100 flex flex-col gap-1 border border-slate-200/60 dark:border-navy-800 font-mono text-xs">
-                  <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-[11px]">
+                  <div className="flex items-center justify-between text-slate-500 dark:text-slate-400 text-2xs">
                     <span>SYSTEM TRACE</span>
                     <span>LOG RECORD #08821</span>
                   </div>
                   <div className="text-emerald-600 dark:text-emerald-400 font-semibold truncate">
                     ✓ CTRL-012: DB Snapshot verification recorded
                   </div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                  <div className="text-2xs text-slate-500 dark:text-slate-400">
                     Sign-off: security-lead@internal • Verified
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function LeanSecurityTeamsPage() {
         </section>
 
         {/* SECTION 2: THE CAPACITY REALITY (PAIN POINTS) */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-20 border-y border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-12">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
@@ -162,7 +162,7 @@ export default function LeanSecurityTeamsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                     <Grid className="w-5 h-5" />
@@ -178,7 +178,7 @@ export default function LeanSecurityTeamsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                     <Clock className="w-5 h-5" />
@@ -194,7 +194,7 @@ export default function LeanSecurityTeamsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <AlertTriangle className="w-5 h-5" />
@@ -214,7 +214,7 @@ export default function LeanSecurityTeamsPage() {
         </section>
 
         {/* SECTION 3: HOW OMNiGRC ADDRESSES LEAN CONSTRAINTS */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-24">
+        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
           <div className="max-w-3xl mb-12">
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               ENGINEERED FOR LEAN TEAMS
@@ -228,7 +228,7 @@ export default function LeanSecurityTeamsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -249,7 +249,7 @@ export default function LeanSecurityTeamsPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -270,7 +270,7 @@ export default function LeanSecurityTeamsPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -291,7 +291,7 @@ export default function LeanSecurityTeamsPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -315,7 +315,7 @@ export default function LeanSecurityTeamsPage() {
         </section>
 
         {/* SECTION 4: INTERACTIVE WORKFLOW VISUALIZATION */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-24 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
               <div>
@@ -410,7 +410,7 @@ export default function LeanSecurityTeamsPage() {
             </div>
 
             {/* Step Content Display Box */}
-            <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-300 dark:border-navy-700">
               {activeStep === 1 && (
                 <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
@@ -545,7 +545,7 @@ export default function LeanSecurityTeamsPage() {
                     <div className="p-3.5 rounded-xl bg-slate-100 dark:bg-[#16233F] text-slate-900 dark:text-white flex flex-col gap-1 font-mono text-xs border border-slate-200/60 dark:border-navy-800">
                       <span className="text-slate-500 dark:text-slate-400">URI: s3://telemetry-evidence-vault/restorations/2025-q1-pg.log</span>
                       <span className="text-emerald-600 dark:text-emerald-400 font-semibold">HASH: c837f482a...9811b7a6 (WAL Verified)</span>
-                      <span className="text-slate-500 dark:text-slate-400 text-[11px]">Attested by: SecOps Lead on 2026-03-12 14:32 UTC</span>
+                      <span className="text-slate-500 dark:text-slate-400 text-2xs">Attested by: SecOps Lead on 2026-03-12 14:32 UTC</span>
                     </div>
                   </div>
 
@@ -570,7 +570,7 @@ export default function LeanSecurityTeamsPage() {
         </section>
 
         {/* SECTION 5: RELEVANT MODULES TO EXPLORE NEXT */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-24">
+        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
           <div className="max-w-3xl mb-12">
             <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
               MODULAR ARCHITECTURE
@@ -586,7 +586,7 @@ export default function LeanSecurityTeamsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               href="/products/risk-register"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <ShieldAlert className="w-8 h-8 text-primary mb-3" />
@@ -602,7 +602,7 @@ export default function LeanSecurityTeamsPage() {
 
             <Link
               href="/products/compliance-board"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Kanban className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
@@ -618,7 +618,7 @@ export default function LeanSecurityTeamsPage() {
 
             <Link
               href="/products/control-mapping"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Network className="w-8 h-8 text-primary mb-3" />
@@ -634,7 +634,7 @@ export default function LeanSecurityTeamsPage() {
 
             <Link
               href="/products/evidence"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <FileCheck className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
@@ -651,9 +651,9 @@ export default function LeanSecurityTeamsPage() {
         </section>
 
         {/* SECTION 6: BOTTOM CTA */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-24 border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-t border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-lg border border-slate-200 dark:border-navy-700">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
                   Ready to bring order to your security operations?

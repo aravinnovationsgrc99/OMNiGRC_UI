@@ -68,7 +68,7 @@ export const TestimonialsSection: React.FC = () => {
                   : "border-slate-200 dark:border-navy-700/60 bg-slate-50/80 dark:bg-navy-950/60 hover:bg-white dark:hover:bg-navy-900/50"
               }`}
             >
-              <span className="block text-[11px] font-bold tracking-widest uppercase mb-1 text-[#D4521A] dark:text-amber">
+              <span className="block text-2xs font-bold tracking-widest uppercase mb-1 text-[#D4521A] dark:text-amber">
                 {item.tag}
               </span>
               <span className="block text-xs sm:text-sm font-bold text-navy-900 dark:text-white truncate">
@@ -92,7 +92,7 @@ export const TestimonialsSection: React.FC = () => {
               {/* Header Container with Enforced Vertical Stack Structure */}
               <div className="border-b border-slate-200 dark:border-navy-700/60 pb-4 mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="block text-[11px] font-bold tracking-widest uppercase text-[#D4521A] dark:text-amber">
+                  <span className="block text-2xs font-bold tracking-widest uppercase text-[#D4521A] dark:text-amber">
                     {scenario.tag}
                   </span>
                   <span className="text-[11px] font-mono text-slate-400">

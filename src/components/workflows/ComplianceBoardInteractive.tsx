@@ -315,12 +315,12 @@ export function ComplianceBoardInteractive() {
               <div className="text-slate-200 break-all font-mono text-[11px] font-semibold tracking-wide border-b border-slate-700/50 pb-3">
                 {activeData.evidenceId}
               </div>
-              <div className="text-[10px] flex flex-col gap-1.5 text-slate-400 pt-1">
+              <div className="text-2xs flex flex-col gap-1.5 text-slate-400 pt-1">
                 <span className="flex justify-between">Ingested: <strong className="text-white">2025-05-12T14:32:01Z</strong></span>
                 <span className="flex justify-between">Source: <strong className="text-white">CloudWatch /omni/kms</strong></span>
                 <span className="flex justify-between">Partition: <strong className="text-white">US-EAST-VAULT-04</strong></span>
               </div>
-              <button className="mt-2 w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded text-[11px] font-bold transition-colors flex items-center justify-center gap-1.5 border border-slate-700">
+              <button className="mt-2 w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded text-2xs font-bold transition-colors flex items-center justify-center gap-1.5 border border-slate-700">
                 <Download className="h-3.5 w-3.5" /> Download Signed Manifest
               </button>
             </div>

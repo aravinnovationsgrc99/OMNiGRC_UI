@@ -45,7 +45,7 @@ export const FinalCtaSection: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-white dark:bg-[#0A111F] py-12 sm:py-28 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#0A111F] py-space-section overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
       {/* Background Orbs using approved colors */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] sm:h-[600px] w-[90vw] max-w-[800px] rounded-full bg-gradient-to-r from-teal/20 via-amber/15 to-transparent blur-[140px]" />
@@ -108,7 +108,7 @@ export const FinalCtaSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-3xl 2xl:max-w-4xl mx-auto rounded-3xl border border-teal/30 bg-navy-900/80 p-6 sm:p-10 shadow-2xl backdrop-blur-xl text-left"
+          className="max-w-3xl 2xl:max-w-4xl mx-auto rounded-3xl border border-teal/30 bg-navy-900/80 p-space-card shadow-2xl backdrop-blur-xl text-left"
         >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-7 space-y-2">

@@ -54,20 +54,20 @@ export const CoverageSection: React.FC = () => {
               <Link
                 key={fw.code}
                 href={`/frameworks/${fw.slug}`}
-                className="p-3 rounded-xl bg-white dark:bg-navy-900/60 border border-slate-200 dark:border-navy-700/40 hover:border-teal/40 transition-all space-y-1 block text-left"
+                className="p-space-card rounded-xl bg-white dark:bg-navy-900/60 border border-slate-300 dark:border-navy-700/40 hover:border-teal/40 transition-all space-y-1 block text-left"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-navy-900 dark:text-white text-xs">{fw.code}</span>
                   <span className="text-[9px] font-mono text-teal">{fw.badge.split(" ")[0]}</span>
                 </div>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">{fw.name}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 truncate">{fw.name}</p>
               </Link>
             ))}
           </div>
         </div>
 
         {/* Regional Awareness & Hosting Section */}
-        <div className="rounded-3xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/90 p-6 sm:p-10">
+        <div className="rounded-3xl border border-slate-300 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/90 p-space-card">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-5 space-y-3">
               <span className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-semibold flex items-center gap-1.5">

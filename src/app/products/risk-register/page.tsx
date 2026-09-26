@@ -77,13 +77,13 @@ export default function RiskRegisterPage() {
 </div>
 {/*  Metric strip  */}
 <div className="grid grid-cols-3 gap-6 w-full pt-6">
-<div className="p-6 rounded-xl bg-slate-50 dark:bg-[#16233F]">
+<div className="p-space-card rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700">
 <span className="block font-mono text-xs text-slate-600 dark:text-slate-300 uppercase">Tracked Risks</span>
 <span className="block font-headline-md text-headline-md font-bold text-slate-900 dark:text-white mt-1">142</span>
 <span className="block text-sm text-amber-600 dark:text-amber-500 font-medium mt-0.5">100% telemetry bound</span>
 </div>
-<div className="p-6 rounded-xl bg-slate-50 dark:bg-[#16233F]"><span className="block font-mono text-xs text-slate-600 dark:text-slate-300 uppercase">Asset Coverage</span><span className="block font-headline-md text-headline-md font-bold text-slate-900 dark:text-white mt-1">94.2%</span><span className="block text-sm text-slate-600 dark:text-slate-300 mt-0.5">Direct Asset-to-Risk linkage</span></div>
-<div className="p-6 rounded-xl bg-slate-50 dark:bg-[#16233F]">
+<div className="p-space-card rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700"><span className="block font-mono text-xs text-slate-600 dark:text-slate-300 uppercase">Asset Coverage</span><span className="block font-headline-md text-headline-md font-bold text-slate-900 dark:text-white mt-1">94.2%</span><span className="block text-sm text-slate-600 dark:text-slate-300 mt-0.5">Direct Asset-to-Risk linkage</span></div>
+<div className="p-space-card rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700">
 <span className="block font-mono text-xs text-slate-600 dark:text-slate-300 uppercase">Recalc Latency</span>
 <span className="block font-headline-md text-headline-md font-bold text-teal-600 dark:text-teal-400 mt-1">&lt; 1.2s</span>
 <span className="block text-sm text-slate-600 dark:text-slate-300 mt-0.5">Post control failure</span>
@@ -264,7 +264,7 @@ export default function RiskRegisterPage() {
 <div className="flex items-center gap-2 text-slate-500">
 <span className="">16 → <strong className="text-amber-700 dark:text-amber-400">4</strong></span>
 <span className="">[CTRL-012 PASS]</span>
-<span className="text-surface-container-lowest text-[11px]">sig: p_dev_lead</span>
+<span className="text-surface-container-lowest text-2xs">sig: p_dev_lead</span>
 </div>
 </div>
 {/*  Entry 2  */}
@@ -276,7 +276,7 @@ export default function RiskRegisterPage() {
 <div className="flex items-center gap-2 text-slate-500">
 <span className="">12 → <strong className="text-amber-700 dark:text-amber-400">3</strong></span>
 <span className="">[CTRL-015 REMEDIATED]</span>
-<span className="text-surface-container-lowest text-[11px]">sig: auto_bot</span>
+<span className="text-surface-container-lowest text-2xs">sig: auto_bot</span>
 </div>
 </div>
 {/*  Entry 3  */}
@@ -288,7 +288,7 @@ export default function RiskRegisterPage() {
 <div className="flex items-center gap-2 text-slate-500">
 <span className="">8 → <strong className="text-red-600 dark:text-red-400 font-bold">20</strong></span>
 <span className="">[VPC DRIFT DETECTED]</span>
-<span className="text-surface-container-lowest text-[11px]">sig: daemon_alert</span>
+<span className="text-surface-container-lowest text-2xs">sig: daemon_alert</span>
 </div>
 </div>
 {/*  Entry 4  */}
@@ -300,7 +300,7 @@ export default function RiskRegisterPage() {
 <div className="flex items-center gap-2 text-slate-500">
 <span className="">6 → <strong className="text-amber-700 dark:text-amber-400">2</strong></span>
 <span className="">[SCIM SYNC SUCCESS]</span>
-<span className="text-surface-container-lowest text-[11px]">sig: d_chen_eng</span>
+<span className="text-surface-container-lowest text-2xs">sig: d_chen_eng</span>
 </div>
 </div>
 </div>

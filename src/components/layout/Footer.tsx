@@ -125,9 +125,9 @@ export const Footer: React.FC = () => {
             <div className="rounded-xl bg-white/10 p-3.5 border border-white/15 space-y-2">
               <div className="flex items-center gap-2">
                 <Lock className="h-4 w-4 text-[#2E936F] dark:text-teal" />
-                <span className="text-[13px] font-bold text-white">Tenant Isolated</span>
+                <span className="text-xs font-bold text-white">Tenant Isolated</span>
               </div>
-              <p className="text-[13px] text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed">
                 Advisory AI with data minimization. AI assists; human oversight approves.
               </p>
             </div>

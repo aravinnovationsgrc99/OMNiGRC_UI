@@ -38,7 +38,7 @@ export default async function AdminRequestsPage() {
     <div className="min-h-screen bg-[#0A111F] text-slate-100 flex flex-col justify-between selection:bg-[#F15E1C]/30 antialiased">
       <div>
         <AdminHeader />
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
           <AdminRequestsTableClient initialRequests={requests} />
         </main>
       </div>

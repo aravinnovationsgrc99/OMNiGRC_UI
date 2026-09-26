@@ -267,7 +267,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-[48px] lg:leading-[56px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-6">
+              <h1 className="text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-6">
                 {sol.title}
               </h1>
 
@@ -323,18 +323,18 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                     <div key={sIdx} className="p-3.5 rounded-xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 flex flex-col">
                       <span className="font-mono text-[11px] text-[#5a4138] dark:text-slate-400">{st.label}</span>
                       <span className="text-xl font-extrabold text-[#0d1b36] dark:text-white mt-1">{st.value}</span>
-                      <span className="text-[11px] text-[#006c4d] dark:text-teal-400 font-semibold mt-0.5">{st.sub}</span>
+                      <span className="text-2xs text-[#006c4d] dark:text-teal-400 font-semibold mt-0.5">{st.sub}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Trace Strip */}
                 <div className="p-4 rounded-xl bg-[#23304c] text-white font-mono text-xs shadow-inner space-y-1.5">
-                  <div className="flex items-center justify-between text-slate-400 text-[11px]">
+                  <div className="flex items-center justify-between text-slate-400 text-2xs">
                     <span>SYSTEM TRACE</span>
                     <span>LOG_STATUS: VALIDATED</span>
                   </div>
-                  <div className="text-[#95f6cb] font-semibold text-[11px] leading-relaxed">
+                  <div className="text-[#95f6cb] font-semibold text-2xs leading-relaxed">
                     {sol.telemetryTrace}
                   </div>
                 </div>
@@ -359,7 +359,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 2: THE PROBLEM VS SOLUTION */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -375,7 +375,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Challenges Card */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 font-mono text-xs font-bold mb-6">
                     <AlertTriangle className="h-3.5 w-3.5" /> Traditional Operational Friction
@@ -397,7 +397,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               </div>
 
               {/* Solutions Card */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 sm:p-8 border border-[#ffdbcf] dark:border-orange-500/20 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-[#ffdbcf] dark:border-orange-500/20 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#95f6cb] dark:bg-teal-950/40 text-[#00513a] dark:text-teal-400 font-mono text-xs font-bold mb-6">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Connected OMNiGRC Solution
@@ -422,7 +422,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 3: CAPABILITY MODULES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -437,7 +437,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               {sol.capabilities.map((cap, capIdx) => {
                 const IconComponent = cap.icon;
                 return (
-                  <div key={capIdx} className="bg-[#f1f3ff] dark:bg-navy-950/50 rounded-2xl p-6 border border-slate-200 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div key={capIdx} className="bg-[#f1f3ff] dark:bg-navy-950/50 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <div className="p-2.5 rounded-xl bg-white dark:bg-navy-900 text-[#F15E1C] dark:text-orange-400 shadow-sm border border-slate-200 dark:border-navy-700/60">
@@ -458,7 +458,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Ready to see {sol.title}?

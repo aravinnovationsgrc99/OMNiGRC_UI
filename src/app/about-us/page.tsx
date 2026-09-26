@@ -28,7 +28,7 @@ export default function AboutUsPage() {
           }
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
 
           {/* Pillars of Purpose Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
@@ -38,7 +38,7 @@ export default function AboutUsPage() {
               { label: "Human Oversight", val: "Mandatory" },
               { label: "External Data Transmission", val: "Minimized" },
             ].map((stat, idx) => (
-              <div key={idx} className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 text-center">
+              <div key={idx} className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 text-center">
                 <p className="text-2xl sm:text-3xl font-extrabold text-teal mb-1">{stat.val}</p>
                 <p className="text-xs font-mono text-slate-500 dark:text-slate-400">{stat.label}</p>
               </div>
@@ -47,7 +47,7 @@ export default function AboutUsPage() {
 
           {/* Values Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <TiltCard className="p-8 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
+            <TiltCard className="p-space-card border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
               <Zap className="h-8 w-8 text-teal mb-4" />
               <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Connected Workflows</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -55,7 +55,7 @@ export default function AboutUsPage() {
               </p>
             </TiltCard>
 
-            <TiltCard className="p-8 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
+            <TiltCard className="p-space-card border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
               <Lock className="h-8 w-8 text-amber mb-4" />
               <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Data Minimization</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -63,7 +63,7 @@ export default function AboutUsPage() {
               </p>
             </TiltCard>
 
-            <TiltCard className="p-8 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
+            <TiltCard className="p-space-card border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
               <Shield className="h-8 w-8 text-teal mb-4" />
               <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Defensible Auditability</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">

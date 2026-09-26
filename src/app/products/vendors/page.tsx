@@ -61,7 +61,7 @@ export default function VendorsPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & SUPPLY CHAIN GOVERNANCE OVERVIEW  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-section overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & Actions  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -112,7 +112,7 @@ export default function VendorsPage() {
 
             {/*  Right Column: Visual Subprocessor Perimeter Map  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-md shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -155,7 +155,7 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 2: INTERACTIVE DIRECTORY & RELATIONSHIP DRAWER  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl" id="directory">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="directory">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
             <div>
               <div className="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-primary-fixed text-on-primary-fixed font-code-sm text-code-sm rounded-full mb-space-xs font-bold">
@@ -194,7 +194,7 @@ export default function VendorsPage() {
                     <div>
                       <div className="flex items-center gap-space-xs">
                         <span className="font-headline-sm text-body-lg text-slate-900 dark:text-white font-semibold">Amazon Web Services (AWS)</span>
-                        <span className="px-space-xs py-0.5 rounded text-[10px] font-code-sm uppercase bg-error-container text-on-error-container font-semibold">Critical Tier</span>
+                        <span className="px-space-xs py-0.5 rounded text-2xs font-code-sm uppercase bg-error-container text-on-error-container font-semibold">Critical Tier</span>
                       </div>
                       <div className="font-body-md text-body-md text-slate-600 dark:text-slate-300 font-medium mt-0.5">Primary DB &amp; Production Workload Hosting</div>
                       <div className="flex items-center gap-space-sm mt-space-xs">
@@ -222,7 +222,7 @@ export default function VendorsPage() {
                     <div>
                       <div className="flex items-center gap-space-xs">
                         <span className="font-headline-sm text-body-lg text-slate-900 dark:text-white font-semibold">Datadog Inc.</span>
-                        <span className="px-space-xs py-0.5 rounded text-[10px] font-code-sm uppercase bg-primary-fixed text-on-primary-fixed font-semibold">High Tier</span>
+                        <span className="px-space-xs py-0.5 rounded text-2xs font-code-sm uppercase bg-primary-fixed text-on-primary-fixed font-semibold">High Tier</span>
                       </div>
                       <div className="font-body-md text-body-md text-slate-600 dark:text-slate-300 font-medium mt-0.5">Application Monitoring &amp; Synthetics Telemetry</div>
                       <div className="flex items-center gap-space-sm mt-space-xs">
@@ -250,7 +250,7 @@ export default function VendorsPage() {
                     <div>
                       <div className="flex items-center gap-space-xs">
                         <span className="font-headline-sm text-body-lg text-slate-900 dark:text-white font-semibold">SendGrid / Twilio</span>
-                        <span className="px-space-xs py-0.5 rounded text-[10px] font-code-sm uppercase bg-slate-200 dark:bg-navy-700 text-slate-900 dark:text-white font-semibold">Medium Tier</span>
+                        <span className="px-space-xs py-0.5 rounded text-2xs font-code-sm uppercase bg-slate-200 dark:bg-navy-700 text-slate-900 dark:text-white font-semibold">Medium Tier</span>
                       </div>
                       <div className="font-body-md text-body-md text-slate-600 dark:text-slate-300 font-medium mt-0.5">Transactional Customer Notification Gateway</div>
                       <div className="flex items-center gap-space-sm mt-space-xs">
@@ -313,7 +313,7 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 3: 6-STAGE VENDOR LIFECYCLE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <History className="h-5 w-5 shrink-0" />
@@ -369,7 +369,7 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 4: MULTI-FRAMEWORK REGULATORY DEFENSIBILITY  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-xl">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-section">
           <div className="max-w-7xl mx-auto px-gutter">
             <div className="flex flex-col gap-space-xs mb-space-lg">
               <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
@@ -397,7 +397,7 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 5: DETERMINISTIC VENDOR EVIDENCE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="p-space-xl rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-xl">
             <div className="space-y-space-xs max-w-2xl">
               <h2 className="font-headline-lg text-headline-lg font-bold">Structured vendor evidence, gathered without spreadsheet fatigue.</h2>
@@ -410,7 +410,7 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 6: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-xl">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
             <h2 className="font-headline-lg text-headline-lg font-bold">Streamline third-party compliance without spreadsheet chaos.</h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Centralize your vendor security reviews, DPAs, and SOC 2 reports into OMNiGRC's connected GRC workspace.</p>

@@ -463,13 +463,13 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
         {/* Bottom Readout Chrome */}
         <div className="absolute bottom-3 sm:bottom-5 left-0 right-0 z-30 pointer-events-none flex items-center justify-between px-4 sm:px-6 text-xs font-mono">
-          <span className="text-slate-400 flex items-center gap-1.5 text-[11px]">
+          <span className="text-slate-400 flex items-center gap-1.5 text-2xs">
             <ShieldCheck className="h-4 w-4 text-teal" />
             <span>{FRAMEWORKS.length} Documented Taxonomies</span>
           </span>
           <span
             ref={readoutRef}
-            className="text-amber font-bold bg-navy-900/90 px-3 py-1 rounded-full border border-teal/40 shadow-md text-[11px]"
+            className="text-amber font-bold bg-navy-900/90 px-3 py-1 rounded-full border border-teal/40 shadow-md text-2xs"
           >
             01 / {String(N).padStart(2, "0")} · 90°
           </span>

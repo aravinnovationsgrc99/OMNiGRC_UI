@@ -66,12 +66,12 @@ export default function ContactUsPage() {
           visual={<GenericHeroMotif type="contact" />}
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
             {/* Contact Details */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4 shadow-sm">
+              <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-xl bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal">
                     <Mail className="h-5 w-5" />
@@ -93,7 +93,7 @@ export default function ContactUsPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl border border-[#2E936F]/30 dark:border-teal/30 bg-[#2E936F]/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80">
+              <div className="p-space-card rounded-2xl border border-[#2E936F]/30 dark:border-teal/30 bg-[#2E936F]/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80">
                 <Lock className="h-6 w-6 text-teal mb-2" />
                 <h4 className="font-bold text-navy-900 dark:text-white text-sm mb-1">Confidential &amp; Tenant-Isolated</h4>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -104,7 +104,7 @@ export default function ContactUsPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-7">
-              <div className="rounded-3xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 p-8 shadow-xl">
+              <div className="rounded-3xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 p-space-card shadow-xl">
                 {submitted ? (
                   <div className="p-8 text-center space-y-4">
                     <CheckCircle2 className="h-12 w-12 text-teal mx-auto" />
@@ -194,10 +194,10 @@ export default function ContactUsPage() {
                       </label>
                     </div>
                     {agreeError && (
-                      <p className="text-[11px] text-red-500">You must agree to the Terms of Service & Privacy Policy before sending.</p>
+                      <p className="text-2xs text-red-500">You must agree to the Terms of Service & Privacy Policy before sending.</p>
                     )}
                     {submitError && (
-                      <p className="text-[11px] text-red-500">{submitError}</p>
+                      <p className="text-2xs text-red-500">{submitError}</p>
                     )}
                     <button
                       type="submit"

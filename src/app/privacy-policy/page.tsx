@@ -20,9 +20,9 @@ export default function PrivacyPolicyPage() {
           visual={<GenericHeroMotif type="privacy" />}
         />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section space-y-12">
           {/* Effective Date & Notice */}
-          <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-slate-900/80 shadow-md flex items-start gap-4">
+          <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-slate-900/80 shadow-md flex items-start gap-4">
             <div className="p-2.5 rounded-xl bg-teal/15 text-teal shrink-0">
               <Lock className="h-6 w-6" />
             </div>
@@ -40,9 +40,9 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">01.</span> Categories of Data We Collect
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/60 space-y-2">
+                <div className="p-4 rounded-xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-950/60 space-y-2">
                   <span className="text-xs font-mono text-teal font-bold flex items-center gap-1.5">
                     <Database className="h-4 w-4" /> Account &amp; Tenant Metadata
                   </span>
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/60 space-y-2">
+                <div className="p-4 rounded-xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-950/60 space-y-2">
                   <span className="text-xs font-mono text-[#D4521A] dark:text-amber font-bold flex items-center gap-1.5">
                     <FileCheck className="h-4 w-4" /> GRC Posture Data
                   </span>
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">02.</span> AI Data Minimization &amp; Zero-Retention Policy
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4">
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 When our Advisory AI engine evaluates framework clause alignment:
               </p>
@@ -94,22 +94,22 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">03.</span> Regulatory Safeguards &amp; User Rights
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 We maintain architectural readiness under DPDP Act India 2023, EU GDPR, and ISO 27001 Annex A data handling standards.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
                 <div className="p-3 rounded-xl bg-[#2E936F]/10 dark:bg-teal/10 border border-[#2E936F]/20 dark:border-teal/20 text-[#2E936F] dark:text-teal text-center">
                   <p className="font-bold">Right to Portability</p>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Export JSON/CSV posture</p>
+                  <p className="text-2xs text-slate-500 dark:text-slate-400 mt-1">Export JSON/CSV posture</p>
                 </div>
                 <div className="p-3 rounded-xl bg-[#FAB60A]/20 dark:bg-amber/10 border border-[#FAB60A]/20 dark:border-amber/20 text-navy-900 dark:text-amber text-center">
                   <p className="font-bold">Right to Erasure</p>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Permanent tenant purging</p>
+                  <p className="text-2xs text-slate-500 dark:text-slate-400 mt-1">Permanent tenant purging</p>
                 </div>
                 <div className="p-3 rounded-xl bg-[#2E936F]/10 dark:bg-teal/10 border border-[#2E936F]/20 dark:border-teal/20 text-[#2E936F] dark:text-teal text-center">
                   <p className="font-bold">Auditability</p>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Structured change log</p>
+                  <p className="text-2xs text-slate-500 dark:text-slate-400 mt-1">Structured change log</p>
                 </div>
               </div>
             </div>

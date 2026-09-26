@@ -20,9 +20,9 @@ export default function TermsOfServicePage() {
           visual={<GenericHeroMotif type="terms" />}
         />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section space-y-12">
           {/* Effective Date & Notice */}
-          <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-slate-900/80 shadow-md flex items-start gap-4">
+          <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-slate-900/80 shadow-md flex items-start gap-4">
             <div className="p-2.5 rounded-xl bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal shrink-0">
               <Scale className="h-6 w-6" />
             </div>
@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">01.</span> Platform Access &amp; Tenant Isolation
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 OMNiGRC provides a multi-tenant cloud GRC environment with strict logical tenant isolation. Each account operates inside isolated database schemas, preventing cross-customer data leakage.
               </p>
@@ -62,7 +62,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">02.</span> Advisory AI &amp; Human-in-the-Loop Policy
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 OMNiGRC incorporates advisory artificial intelligence (&quot;Advisory AI Engine&quot;) to recommend framework clause correlations and evidence checks.
               </p>
@@ -82,7 +82,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">03.</span> Security, Encryption &amp; Availability
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 We enforce AES-256 encryption at rest and TLS 1.3 encryption in transit for all platform data. All AI queries undergo automated payload sanitization to ensure sensitive PII and secret tokens are redacted prior to external API processing.
               </p>
@@ -94,7 +94,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white flex items-center gap-2">
               <span className="text-teal font-mono">04.</span> Limitation of Liability
             </h2>
-            <div className="p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
+            <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-3">
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 OMNiGRC provides audit readiness and framework alignment tools. While our software helps streamline compliance workflows across SOC 2, ISO 27001, and DPDP, final regulatory responsibility and formal audit certification remain with accredited third-party auditing bodies and the customer&apos;s compliance officers.
               </p>

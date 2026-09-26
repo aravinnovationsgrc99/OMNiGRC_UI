@@ -153,7 +153,7 @@ export const ProblemSection: React.FC = () => {
                         </div>
                         <div>
                           <h3 className="text-sm font-bold text-[#0F172A] dark:text-slate-200">{item.title}</h3>
-                          <p className="text-[13px] text-[#475569] dark:text-slate-400 mt-0.5 leading-relaxed">{item.detail}</p>
+                          <p className="text-xs text-[#475569] dark:text-slate-400 mt-0.5 leading-relaxed">{item.detail}</p>
                         </div>
                       </div>
                     );
@@ -194,7 +194,7 @@ export const ProblemSection: React.FC = () => {
                         </div>
                         <div>
                           <h3 className="text-sm font-bold text-[#0F172A] dark:text-white">{item.title}</h3>
-                          <p className="text-[13px] text-[#334155] dark:text-slate-300 mt-0.5 leading-relaxed">{item.detail}</p>
+                          <p className="text-xs text-[#334155] dark:text-slate-300 mt-0.5 leading-relaxed">{item.detail}</p>
                         </div>
                       </div>
                     );

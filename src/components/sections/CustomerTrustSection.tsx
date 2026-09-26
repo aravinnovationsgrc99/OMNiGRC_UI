@@ -138,7 +138,7 @@ export const CustomerTrustSection: React.FC = () => {
                 <h3 className="font-bold text-sm sm:text-base text-[#0F172A] dark:text-white mb-1.5">
                   {item.title}
                 </h3>
-                <p className="text-[13px] text-[#334155] dark:text-slate-300 leading-relaxed">{item.desc}</p>
+                <p className="text-xs text-[#334155] dark:text-slate-300 leading-relaxed">{item.desc}</p>
                 <div className="mt-4 pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center gap-1.5 text-[13px] text-[#2E936F] dark:text-teal font-mono font-semibold">
                   <CheckCircle2 className="h-3.5 w-3.5" />
                   <span>Documented Architecture</span>

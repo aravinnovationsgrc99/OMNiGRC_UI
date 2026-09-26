@@ -59,7 +59,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  1. HERO SECTION (Clear, High-Converting, Light Canvas + Pipeline Demo)    */}
 {/*  =========================================================================  */}
-<section className="relative w-full bg-transparent bg-grid-mesh-adaptive px-4 md:px-8 pt-6 pb-16 md:pb-24">
+<section className="relative w-full bg-transparent bg-grid-mesh-adaptive px-4 md:px-8 py-space-section">
 {/*  Ambient Warm Peach Glow behind Hero  */}
 <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
 <div className="absolute top-1/3 left-10 w-80 h-80 bg-surface-variant/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </div>
 {/*  Interactive Risk to Evidence Pipeline Component  */}
-<div className="w-full bg-slate-50 dark:bg-[#16233F] rounded-xl shadow-lg p-6 md:p-8 text-left">
+<div className="w-full bg-slate-50 dark:bg-[#16233F] rounded-xl shadow-lg p-space-card text-left">
 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
 <div className="flex items-center gap-2">
 <span className="inline-flex w-3 h-3 rounded-full bg-amber-600 dark:bg-amber-500"></span>
@@ -116,44 +116,44 @@ export default function Home() {
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">01 RISK</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">5×5 Matrix</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">RSK-042 Likelihood 3</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">RSK-042 Likelihood 3</span>
 </div>
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">02 ASSETS</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Cloud / Infra</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">RDS Postgres Prod</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">RDS Postgres Prod</span>
 </div>
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">03 CONTROLS</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Map-Once</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">CTRL-012 Automated</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">CTRL-012 Automated</span>
 </div>
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">04 TESTING</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">30-Day Cadence</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">Automated Drill Pass</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Automated Drill Pass</span>
 </div>
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">05 AUDIT</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Cross-Framework</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">ISO 27001 + SOC 2</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">ISO 27001 + SOC 2</span>
 </div>
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">06 ACTIONS</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Remediation</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">SLA Verified (0 Open)</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">SLA Verified (0 Open)</span>
 </div>
 <div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">07 VAULT</span>
 <span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Defensible Evidence</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-0.5">Evidence Verified</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Evidence Verified</span>
 </div>
 </div>
 {/*  Telemetry High-Contrast Inspection Inset  */}
 <div className="bg-slate-900 dark:bg-black text-white rounded-lg p-6 font-mono text-xs shadow-inner flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
 <div className="flex items-center gap-4 flex-wrap"><span className="inline-flex items-center px-2 py-0.5 rounded bg-amber-600 dark:bg-amber-500 text-white text-label-sm font-label-sm uppercase font-bold tracking-wide">DEMO STREAM</span><span className="text-[#A5B4FC] font-semibold">Live Trace (Illustrative Demo Data):</span><span className="text-white">Active Risk: <strong className="text-teal-700 dark:text-teal-400">RSK-042 (Backup Failure)</strong></span><span className="text-slate-400">→ Linked Control <strong className="text-amber-700 dark:text-amber-400">CTRL-012</strong></span><span className="text-slate-400">→ Evidence Reference Linked</span><span className="text-slate-400">→ Audit Logged</span></div>
 <div className="flex items-center gap-2">
-<span className="text-slate-500 text-[11px]">Sync: 4.2ms</span>
+<span className="text-slate-500 text-2xs">Sync: 4.2ms</span>
 <CheckCircle2 className="h-5 w-5 shrink-0" />
 </div>
 </div>
@@ -164,7 +164,7 @@ export default function Home() {
         {/*  =========================================================================  */}
         {/*  1.5 TRUSTED FRAMEWORK ECOSYSTEM (Solar System / Orbital Visualization)     */}
         {/*  =========================================================================  */}
-        <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+        <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
           <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 text-center">
             <div className="max-w-3xl mx-auto space-y-3">
               <span className="text-[12px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-bold inline-block">
@@ -178,7 +178,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-navy-700/60 bg-white/40 dark:bg-navy-950/40 backdrop-blur-sm p-2 sm:p-4">
+            <div className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-navy-700/60 bg-white/40 dark:bg-navy-950/40 backdrop-blur-sm p-4 sm:p-space-card">
               <FrameworkOrrery title="Framework Solar System" compact={true} />
             </div>
 
@@ -201,7 +201,7 @@ export default function Home() {
         {/*  =========================================================================  */}
         {/*  2. THE FRAGMENTATION PROBLEM: Spreadsheets vs Unified Operations          */}
         {/*  =========================================================================  */}
-<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-transparent px-4 md:px-8 py-space-section">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">THE REALITY OF LEAN GRC</span>
@@ -214,7 +214,7 @@ export default function Home() {
 </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Card: Fragmented GRC Reality (Manual) - TRANSPARENT BACKGROUND */}
-          <div className="bg-transparent border-2 border-slate-300 dark:border-navy-600/80 rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+          <div className="bg-transparent border-2 border-slate-300 dark:border-navy-600/80 rounded-2xl p-space-card shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300 text-xs font-semibold">
@@ -259,7 +259,7 @@ export default function Home() {
           </div>
 
           {/* Right Card: Connected OMNiGRC Operations - PLAIN WHITE BACKGROUND */}
-          <div className="bg-white dark:bg-navy-900 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-navy-700/60 flex flex-col justify-between">
+          <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card shadow-xl border border-slate-300 dark:border-navy-700 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-teal-950/50 text-[#00513a] dark:text-teal-300 text-xs font-semibold">
@@ -309,7 +309,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  2.5. WHO IS OMNIGRC FOR? (Audience-Entry Workflows Section)               */}
 {/*  =========================================================================  */}
-<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24 border-b border-surface-container-high/60">
+<section className="w-full bg-transparent px-4 md:px-8 py-space-section border-b border-surface-container-high/60">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs font-bold tracking-wider uppercase mb-4 shadow-sm">
@@ -324,10 +324,10 @@ export default function Home() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 {/*  Audience Card 1  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/70 group">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
 <div>
 <div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-teal-100/40 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 font-code-sm text-[10px] font-bold tracking-wider uppercase">
+<span className="inline-flex items-center px-2 py-0.5 rounded bg-teal-100/40 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 font-code-sm text-2xs font-bold tracking-wider uppercase">
               CAPACITY CONSTRAINED
             </span>
 <Zap className="h-5 w-5 shrink-0" />
@@ -337,7 +337,7 @@ export default function Home() {
             Replace spreadsheet sprawl and frantic evidence chasing with connected risk and rolling 30/60/90-day testing.
           </p>
 <div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-[10px] text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
+<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
 <span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">Risk → Controls → Testing → Evidence</span>
 </div>
 </div>
@@ -348,10 +348,10 @@ export default function Home() {
 </div>
 </div>
 {/*  Audience Card 2  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/70 group">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
 <div>
 <div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-500 font-code-sm text-[10px] font-bold tracking-wider uppercase">
+<span className="inline-flex items-center px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-500 font-code-sm text-2xs font-bold tracking-wider uppercase">
               EXECUTIVE VISIBILITY
             </span>
 <Shield className="h-5 w-5 shrink-0" />
@@ -361,7 +361,7 @@ export default function Home() {
             Gain real-time posture oversight across unmitigated risks, asset exposures, remediation SLAs, and incident history.
           </p>
 <div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-[10px] text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
+<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
 <span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">Risk → Exposure → Action → Verification</span>
 </div>
 </div>
@@ -372,10 +372,10 @@ export default function Home() {
 </div>
 </div>
 {/*  Audience Card 3  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/70 group">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
 <div>
 <div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed text-tertiary font-code-sm text-[10px] font-bold tracking-wider uppercase">
+<span className="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed text-tertiary font-code-sm text-2xs font-bold tracking-wider uppercase">
               MULTI-FRAMEWORK CADENCE
             </span>
 <Circle className="h-5 w-5 shrink-0" />
@@ -385,7 +385,7 @@ export default function Home() {
             Map controls once across ISO, SOC 2, and DPDP, assign clear ownership, and maintain continuous audit workpapers.
           </p>
 <div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-[10px] text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
+<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
 <span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">Requirement → Control → Owner → Evidence</span>
 </div>
 </div>
@@ -396,10 +396,10 @@ export default function Home() {
 </div>
 </div>
 {/*  Audience Card 4  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/70 group">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
 <div>
 <div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-surface-variant text-slate-900 dark:text-white font-code-sm text-[10px] font-bold tracking-wider uppercase">
+<span className="inline-flex items-center px-2 py-0.5 rounded bg-surface-variant text-slate-900 dark:text-white font-code-sm text-2xs font-bold tracking-wider uppercase">
               SCALING GOVERNANCE
             </span>
 <TrendingUp className="h-5 w-5 shrink-0" />
@@ -409,7 +409,7 @@ export default function Home() {
             Unify expanding enterprise customer security reviews and compliance audits without multiplying operational overhead.
           </p>
 <div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-[10px] text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
+<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
 <span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">One Workflow → Multi-Standard Coverage</span>
 </div>
 </div>
@@ -482,34 +482,34 @@ export default function Home() {
 <p className="text-sm text-slate-600 dark:text-slate-300 mb-6">Real-time risk distribution across technical assets &amp; business operations.</p>
 {/*  5x5 CSS Grid  */}
 <div className="grid grid-cols-5 gap-1.5 aspect-square max-w-sm mx-auto mb-4">
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-[10px] text-on-tertiary-fixed">M3</div>
-<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-[10px] text-teal-800 dark:text-teal-300">H4</div>
-<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-[10px] text-red-800 dark:text-red-300 font-bold">C5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-[10px] text-on-tertiary-fixed">M3</div>
-<div className="bg-teal-100 dark:bg-teal-900/40-dim rounded flex items-center justify-center font-code-sm text-[10px] text-teal-800 dark:text-teal-300 relative shadow">
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
+<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M3</div>
+<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300">H4</div>
+<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-2xs text-red-800 dark:text-red-300 font-bold">C5</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
+<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M3</div>
+<div className="bg-teal-100 dark:bg-teal-900/40-dim rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300 relative shadow">
 <span className="w-2 h-2 rounded-full bg-teal-600 dark:bg-teal-500 absolute -top-1 -right-1 animate-ping"></span>
 <span className="font-bold">RSK-042</span>
 </div>
-<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-[10px] text-red-800 dark:text-red-300 font-bold">C5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-[10px] text-on-tertiary-fixed">M3</div>
-<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-[10px] text-teal-800 dark:text-teal-300">H4</div>
-<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-[10px] text-red-800 dark:text-red-300">C5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L3</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-[10px] text-on-tertiary-fixed">M4</div>
-<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-[10px] text-teal-800 dark:text-teal-300">H5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L3</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-[10px] text-amber-800 dark:text-amber-300">L4</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-[10px] text-on-tertiary-fixed">M5</div>
+<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-2xs text-red-800 dark:text-red-300 font-bold">C5</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
+<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M3</div>
+<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300">H4</div>
+<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-2xs text-red-800 dark:text-red-300">C5</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L3</div>
+<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M4</div>
+<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300">H5</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L3</div>
+<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L4</div>
+<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M5</div>
 </div>
 <div className="flex items-center justify-between font-mono text-xs text-slate-600 dark:text-slate-300">
 <span className="">Likelihood →</span>
@@ -525,7 +525,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  4. EXPANDED PLATFORM CAPABILITIES (Phase-17 Feature Ecosystem)            */}
 {/*  =========================================================================  */}
-<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-transparent px-4 md:px-8 py-space-section">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">COMPLETE GRC SUITE</span>
@@ -536,9 +536,9 @@ export default function Home() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 {/*  Feature 1  */}
-<Link href="/products/vulnerabilities" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block"><div><div className="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Vulnerability Management</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Ingest CVE findings from security scanners. Map vulnerabilities directly to affected technical assets and evaluate associated risk exposure.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Vulnerability-to-Asset Mapping</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
+<Link href="/products/vulnerabilities" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block"><div><div className="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Vulnerability Management</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Ingest CVE findings from security scanners. Map vulnerabilities directly to affected technical assets and evaluate associated risk exposure.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Vulnerability-to-Asset Mapping</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
 {/*  Feature 2  */}
-<Link href="/products/policies" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
+<Link href="/products/policies" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-slate-200 dark:bg-navy-700 text-slate-900 dark:text-white flex items-center justify-center mb-6">
 <FileText className="h-5 w-5 shrink-0" />
@@ -553,7 +553,7 @@ export default function Home() {
           </div>
 </Link>
 {/*  Feature 3  */}
-<Link href="/products/vendors" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-amber-500/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
+<Link href="/products/vendors" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-amber-500/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-500 flex items-center justify-center mb-6">
 <Circle className="h-5 w-5 shrink-0" />
@@ -568,9 +568,9 @@ export default function Home() {
           </div>
 </Link>
 {/*  Feature 4  */}
-<Link href="/products/evidence" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-teal/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block"><div><div className="w-12 h-12 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Evidence Vault &amp; Reference Records</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Structured evidence tracking and external document/reference links. Organize proof links, collector logs, and compliance records cleanly for audit review.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-tertiary font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Evidence Records &amp; Reference Links</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
+<Link href="/products/evidence" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-teal/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block"><div><div className="w-12 h-12 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Evidence Vault &amp; Reference Records</h3><p className="text-base text-slate-600 dark:text-slate-300 mt-2">Structured evidence tracking and external document/reference links. Organize proof links, collector logs, and compliance records cleanly for audit review.</p></div><div className="mt-6 pt-space-sm font-mono text-xs text-tertiary font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Evidence Records &amp; Reference Links</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
 {/*  Feature 5  */}
-<Link href="/products/remediation" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-red-500/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
+<Link href="/products/remediation" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-red-500/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 flex items-center justify-center mb-6">
 <Circle className="h-5 w-5 shrink-0" />
@@ -585,7 +585,7 @@ export default function Home() {
           </div>
 </Link>
 {/*  Feature 6  */}
-<Link href="/solutions/mssp" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block">
+<Link href="/solutions/mssp" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block">
 <div>
 <div className="w-12 h-12 rounded-lg bg-slate-900 dark:bg-black text-white flex items-center justify-center mb-6">
 <Circle className="h-5 w-5 shrink-0" />
@@ -605,7 +605,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  5. TRANSPARENT ADVISORY AI PIPELINE (Technical Panel, Dark High-Contrast)   */}
 {/*  =========================================================================  */}
-<section className="w-full bg-[#0F172A] text-white px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-[#0F172A] text-white px-4 md:px-8 py-space-section">
 <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="font-mono text-xs text-amber-500 font-bold uppercase tracking-widest">TRANSPARENT AI ARCHITECTURE</span>
@@ -619,7 +619,7 @@ export default function Home() {
             <span className="font-mono text-xs text-[#38BDF8]">Stateless • Ephemeral Execution</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-teal-400 font-bold">STAGE 01</span>
                 <span className="text-xs text-slate-500 font-mono">01 → 02</span>
@@ -627,7 +627,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Initiate crosswalk request</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Practitioner triggers control crosswalk suggestion in workspace.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-teal-400 font-bold">STAGE 02</span>
                 <span className="text-xs text-slate-500 font-mono">02 → 03</span>
@@ -635,7 +635,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Enforce security & quota limits</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Tenant verification, token metering, and strict quota safeguards.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border-l-4 border-amber-500 border-t border-r border-b border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border-l-4 border-amber-500 border-t border-r border-b border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-amber-400 font-bold">STAGE 03</span>
                 <span className="text-xs text-slate-500 font-mono">03 → 04</span>
@@ -643,7 +643,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Sanitize data payload</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Strips org names, PII, and sensitive context before external routing.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-teal-400 font-bold">STAGE 04</span>
                 <span className="text-xs text-slate-500 font-mono">04 → 05</span>
@@ -651,7 +651,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Route query to ideal model</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Directs query to low-latency or reasoning model based on complexity.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-teal-400 font-bold">STAGE 05</span>
                 <span className="text-xs text-slate-500 font-mono">05 → 06</span>
@@ -659,7 +659,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Evaluate control correlations</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Clause cross-referencing via zero-retention model APIs.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-teal-400 font-bold">STAGE 06</span>
                 <span className="text-xs text-slate-500 font-mono">06 → 07</span>
@@ -667,7 +667,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Validate response schema</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Pydantic check ensuring strictly typed ISO/SOC clause output.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border-l-4 border-teal-500 border-t border-r border-b border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border-l-4 border-teal-500 border-t border-r border-b border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-teal-400 font-bold">STAGE 07</span>
                 <span className="text-xs text-slate-500 font-mono">07 → 08</span>
@@ -675,7 +675,7 @@ export default function Home() {
               <h4 className="text-sm text-white font-bold">Human review & sign-off</h4>
               <p className="text-xs text-[#94A3B8] mt-1.5 leading-relaxed">Mandatory CISO / GRC lead confirmation before persistence.</p>
             </div>
-            <div className="bg-[#1E293B] p-5 rounded-xl border-l-4 border-amber-500 border-t border-r border-b border-slate-700/50 relative group">
+            <div className="bg-[#1E293B] p-space-card rounded-xl border-l-4 border-amber-500 border-t border-r border-b border-slate-700/50 relative group">
               <div className="flex items-center justify-between mb-2">
                 <span className="font-mono text-xs text-amber-400 font-bold">STAGE 08</span>
                 <span className="text-xs text-emerald-400 font-mono font-bold">Complete ✓</span>
@@ -686,8 +686,8 @@ export default function Home() {
           </div>
         </div>
 {/*  Data Privacy Guarantee Split Box  */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#1E293B] p-8 rounded-xl">
-<div className="p-6 rounded-lg bg-[#0F172A]">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#1E293B] p-space-card rounded-xl border border-slate-700/50">
+<div className="p-space-card rounded-lg bg-[#0F172A] border border-slate-700/50">
 <div className="flex items-center gap-2 text-amber-600 dark:text-amber-500 mb-4 text-sm font-bold">
 <CheckCircle2 className="h-5 w-5 shrink-0" />
             WHAT IS SENT TO EXTERNAL LLMS
@@ -698,7 +698,7 @@ export default function Home() {
 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-amber-600 dark:bg-amber-500"></span> Technical criteria requirements (e.g. MFA, Encryption)</li>
 </ul>
 </div>
-<div className="p-6 rounded-lg bg-[#0F172A]">
+<div className="p-space-card rounded-lg bg-[#0F172A] border border-slate-700/50">
 <div className="flex items-center gap-2 text-red-600 dark:text-red-400 mb-4 text-sm font-bold">
 <Circle className="h-5 w-5 shrink-0" />
             WHAT IS NEVER TRANSMITTED
@@ -715,7 +715,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  6. INTERACTIVE FRAMEWORK CROSSWALK & MATRIX                                 */}
 {/*  =========================================================================  */}
-<section className="w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 py-space-section">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">DOCUMENTED FRAMEWORK COVERAGE</span>
@@ -726,39 +726,39 @@ export default function Home() {
 </div>
 {/*  Framework Badges Grid  */}
 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-<div className="p-6 rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer">
+<div className="p-space-card rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer border border-slate-300 dark:border-navy-700">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold block">ISMS</span>
 <span className="text-sm text-slate-900 dark:text-white font-bold mt-1 block">ISO 27001:2022</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-1 block">93 Controls</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-1 block">93 Controls</span>
 </div>
-<div className="p-6 rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer">
+<div className="p-space-card rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer border border-slate-300 dark:border-navy-700">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold block">AIMS</span>
 <span className="text-sm text-slate-900 dark:text-white font-bold mt-1 block">ISO 42001:2023</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-1 block">AI Governance</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-1 block">AI Governance</span>
 </div>
-<div className="p-6 rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer">
+<div className="p-space-card rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer border border-slate-300 dark:border-navy-700">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold block">TRUST</span>
 <span className="text-sm text-slate-900 dark:text-white font-bold mt-1 block">SOC 2 Type II</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-1 block">TSC Criteria</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-1 block">TSC Criteria</span>
 </div>
-<div className="p-6 rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer">
+<div className="p-space-card rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer border border-slate-300 dark:border-navy-700">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold block">PRIVACY</span>
 <span className="text-sm text-slate-900 dark:text-white font-bold mt-1 block">GDPR / UK</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-1 block">Articles 28–35</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-1 block">Articles 28–35</span>
 </div>
-<div className="p-6 rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer">
+<div className="p-space-card rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer border border-slate-300 dark:border-navy-700">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold block">INDIA LAW</span>
 <span className="text-sm text-slate-900 dark:text-white font-bold mt-1 block">DPDP Act 2023</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-1 block">Fiduciary Rules</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-1 block">Fiduciary Rules</span>
 </div>
-<div className="p-6 rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer">
+<div className="p-space-card rounded-lg bg-slate-50 dark:bg-[#16233F] text-center shadow-sm hover:bg-teal-100/20 dark:bg-teal-900/20 transition-all cursor-pointer border border-slate-300 dark:border-navy-700">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold block">HEALTHCARE</span>
 <span className="text-sm text-slate-900 dark:text-white font-bold mt-1 block">HIPAA Security</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 text-[11px] mt-1 block">ePHI Safeguards</span>
+<span className="text-2xs text-slate-600 dark:text-slate-300 mt-1 block">ePHI Safeguards</span>
 </div>
 </div>
 {/*  Realistic Crosswalk Matrix Table  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-6 md:p-8 shadow-sm overflow-hidden">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm border border-slate-300 dark:border-navy-700 overflow-hidden">
 <div className="flex items-center justify-between mb-6"><div><div className="flex items-center gap-2"><h3 className="text-xl text-slate-900 dark:text-white font-bold">Practical Crosswalk Example: Map-Once in Action</h3><span className="inline-flex items-center px-2 py-0.5 rounded bg-slate-200 dark:bg-navy-700est text-slate-900 dark:text-white font-code-sm text-[10px] font-medium">(Illustrative Demo Data)</span></div><p className="text-sm text-slate-600 dark:text-slate-300">See how a single organizational control connects to multiple framework requirements.</p></div><span className="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 font-mono text-xs font-semibold">1 Control = Multi-Standard Mapping</span></div>
 <div className="overflow-x-auto">
 <table className="w-full text-left bg-white dark:bg-[#0A111F] rounded-lg shadow-sm">
@@ -821,7 +821,7 @@ export default function Home() {
 {/*  =========================================================================  */}
 {/*  7. DEPLOYMENT ARCHITECTURE (Shared SaaS, Private MSSP, Self-Hosted)        */}
 {/*  =========================================================================  */}
-<section className="w-full bg-slate-50 dark:bg-[#16233F] px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-slate-50 dark:bg-[#16233F] px-4 md:px-8 py-space-section border-t border-slate-300 dark:border-navy-700">
 <div className="max-w-7xl mx-auto">
 <div className="text-center max-w-3xl mx-auto mb-8">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">DEPLOYMENT FLEXIBILITY</span>
@@ -832,21 +832,21 @@ export default function Home() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
 {/*  MODEL 01  */}
-<Link href="/demo" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold uppercase">MODEL 01</span><span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-semibold">Fastest Onboarding</span></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Shared Multi-Tenant SaaS</h3><p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Fully managed cloud service with application-level tenant isolation, automated daily backups, and instant onboarding for growing teams.</p><ul className="mt-6 space-y-2 text-sm text-slate-900 dark:text-white"><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Application-level tenant isolation</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Zero Infrastructure Burden</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Continuous Automated Upgrades</li></ul></div><div className="mt-8 pt-space-sm font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Deploy in &lt; 5 minutes</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
+<Link href="/demo" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold uppercase">MODEL 01</span><span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-semibold">Fastest Onboarding</span></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Shared Multi-Tenant SaaS</h3><p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Fully managed cloud service with application-level tenant isolation, automated daily backups, and instant onboarding for growing teams.</p><ul className="mt-6 space-y-2 text-sm text-slate-900 dark:text-white"><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Application-level tenant isolation</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Zero Infrastructure Burden</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Continuous Automated Upgrades</li></ul></div><div className="mt-8 pt-space-sm font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Deploy in &lt; 5 minutes</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
 {/*  MODEL 02  */}
-<Link href="/solutions/mssp" className="bg-emerald-50 dark:bg-[#06241C] border border-emerald-200 dark:border-emerald-700/60 p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group block"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-emerald-800 dark:text-emerald-300 font-bold uppercase">MODEL 02</span><span className="px-2.5 py-0.5 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white text-xs font-semibold">Dedicated Cloud</span></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">Dedicated Private MSSP</h3><p className="text-sm text-slate-700 dark:text-emerald-100/90 mt-2 leading-relaxed">Dedicated isolated tenant VPC with customer-managed encryption keys, dedicated storage, and partner administration consoles.</p><ul className="mt-6 space-y-2 text-sm text-slate-900 dark:text-slate-100"><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" /> Dedicated VPC &amp; Compute</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" /> Customer-Managed Encryption Keys</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" /> Multi-Client Partner Support</li></ul></div><div className="mt-8 pt-space-sm font-mono text-xs text-emerald-700 dark:text-emerald-300 font-bold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Configured in 24 hours</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
+<Link href="/solutions/mssp" className="bg-emerald-50 dark:bg-[#06241C] border border-emerald-300 dark:border-emerald-700/60 p-space-card rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group block"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-emerald-800 dark:text-emerald-300 font-bold uppercase">MODEL 02</span><span className="px-2.5 py-0.5 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white text-xs font-semibold">Dedicated Cloud</span></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">Dedicated Private MSSP</h3><p className="text-sm text-slate-700 dark:text-emerald-100/90 mt-2 leading-relaxed">Dedicated isolated tenant VPC with customer-managed encryption keys, dedicated storage, and partner administration consoles.</p><ul className="mt-6 space-y-2 text-sm text-slate-900 dark:text-slate-100"><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" /> Dedicated VPC &amp; Compute</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" /> Customer-Managed Encryption Keys</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" /> Multi-Client Partner Support</li></ul></div><div className="mt-8 pt-space-sm font-mono text-xs text-emerald-700 dark:text-emerald-300 font-bold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Configured in 24 hours</span><ArrowRight className="h-3.5 w-3.5" /></div></Link>
 {/*  MODEL 03  */}
-<Link href="/how-it-works" className="bg-white dark:bg-[#0A111F] p-8 rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-200/60 dark:border-navy-700/60 group block"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-bold uppercase">MODEL 03</span><span className="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs font-semibold">Customer Infrastructure</span></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Containerized Docker Deployment</h3><p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Containerized Docker deployment run directly inside your AWS, Azure, GCP, or on-premises environment with full infrastructure custody.</p><ul className="mt-6 space-y-2 text-sm text-slate-900 dark:text-white"><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Customer-Controlled Infrastructure</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Air-Gapped Capable Deployment</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Containerized Docker Architecture</li></ul></div><div className="mt-8 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Docker Architecture Specs</span><ArrowRight className="h-3.5 w-3.5" /></div></Link></div>
+<Link href="/how-it-works" className="bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-sm hover:shadow-md hover:border-[#2E936F]/40 transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700/60 group block"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-bold uppercase">MODEL 03</span><span className="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs font-semibold">Customer Infrastructure</span></div><h3 className="text-xl text-slate-900 dark:text-white font-bold group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Containerized Docker Deployment</h3><p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">Containerized Docker deployment run directly inside your AWS, Azure, GCP, or on-premises environment with full infrastructure custody.</p><ul className="mt-6 space-y-2 text-sm text-slate-900 dark:text-white"><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Customer-Controlled Infrastructure</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Air-Gapped Capable Deployment</li><li className="flex items-center gap-2"><Circle className="h-5 w-5 shrink-0" /> Containerized Docker Architecture</li></ul></div><div className="mt-8 pt-space-sm font-mono text-xs text-slate-900 dark:text-white font-semibold group-hover:translate-x-1 transition-transform flex items-center gap-1"><span>Docker Architecture Specs</span><ArrowRight className="h-3.5 w-3.5" /></div></Link></div>
 {/*  Regional Residency Badge Banner  */}
-<div className="bg-white dark:bg-[#0A111F] rounded-xl p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6"><div className="flex items-center gap-4"><Circle className="h-5 w-5 shrink-0" /><div><div className="text-sm text-slate-900 dark:text-white font-bold">Data Residency &amp; Regional Deployment Options:</div><div className="text-sm text-slate-600 dark:text-slate-300">Single-region dedicated instance hosting available upon request (India / UK / EU). Global routing is configured per contract tenant requirements.</div></div></div><div className="flex items-center gap-2 flex-shrink-0"><span className="inline-flex items-center px-2 py-1 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 font-mono text-xs font-semibold">Tenant Configured</span></div></div>
+<div className="bg-white dark:bg-[#0A111F] rounded-xl p-space-card shadow-sm border border-slate-300 dark:border-navy-700 flex flex-col sm:flex-row items-center justify-between gap-6"><div className="flex items-center gap-4"><Circle className="h-5 w-5 shrink-0" /><div><div className="text-sm text-slate-900 dark:text-white font-bold">Data Residency &amp; Regional Deployment Options:</div><div className="text-sm text-slate-600 dark:text-slate-300">Single-region dedicated instance hosting available upon request (India / UK / EU). Global routing is configured per contract tenant requirements.</div></div></div><div className="flex items-center gap-2 flex-shrink-0"><span className="inline-flex items-center px-2 py-1 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 font-mono text-xs font-semibold">Tenant Configured</span></div></div>
 </div>
 </section>
 {/*  =========================================================================  */}
 {/*  8. FINAL CONVERSION SECTION (Warm Peach Card + Live Trust Badges)         */}
 {/*  =========================================================================  */}
-<section className="w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 py-16 md:py-24">
+<section className="w-full bg-white dark:bg-[#0A111F] px-4 md:px-8 py-space-section">
 <div className="max-w-7xl mx-auto">
-<div className="relative bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 dark:from-[#062019] dark:via-[#0B2C23] dark:to-[#051A14] border border-emerald-200 dark:border-emerald-700/60 rounded-2xl p-8 md:p-12 shadow-xl overflow-hidden">
+<div className="relative bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 dark:from-[#062019] dark:via-[#0B2C23] dark:to-[#051A14] border border-emerald-300 dark:border-emerald-700/60 rounded-2xl p-space-card md:p-12 shadow-xl overflow-hidden">
 {/*  Subtle background glow  */}
 <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-600/20 dark:bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 <div className="max-w-3xl">

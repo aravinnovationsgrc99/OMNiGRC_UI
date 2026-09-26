@@ -74,23 +74,23 @@ export function RiskMatrix() {
             <span className="text-xs text-slate-500 dark:text-slate-400">(1 = Minor, 5 = Catastrophic)</span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+            <span className="inline-flex items-center gap-1.5 text-2xs font-medium text-slate-600 dark:text-slate-300">
               <span className="w-2.5 h-2.5 rounded bg-green-500"></span> Low
             </span>
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+            <span className="inline-flex items-center gap-1.5 text-2xs font-medium text-slate-600 dark:text-slate-300">
               <span className="w-2.5 h-2.5 rounded bg-yellow-500"></span> Med
             </span>
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+            <span className="inline-flex items-center gap-1.5 text-2xs font-medium text-slate-600 dark:text-slate-300">
               <span className="w-2.5 h-2.5 rounded bg-orange-500"></span> High
             </span>
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300">
+            <span className="inline-flex items-center gap-1.5 text-2xs font-medium text-slate-600 dark:text-slate-300">
               <span className="w-2.5 h-2.5 rounded bg-red-500"></span> Crit
             </span>
           </div>
         </div>
 
         <div className="relative pt-4 pl-8 pb-4">
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-[10px] uppercase tracking-widest text-slate-400 font-bold w-32 text-center -ml-12">
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-2xs uppercase tracking-widest text-slate-400 font-bold w-32 text-center -ml-12">
             Likelihood
           </div>
           
@@ -120,7 +120,7 @@ export function RiskMatrix() {
             ))}
           </div>
 
-          <div className="mt-4 text-center text-[10px] uppercase tracking-widest text-slate-400 font-bold">
+          <div className="mt-4 text-center text-2xs uppercase tracking-widest text-slate-400 font-bold">
             Impact <span className="font-normal">(1 = Minor • 5 = Catastrophic)</span>
           </div>
         </div>
@@ -135,7 +135,7 @@ export function RiskMatrix() {
             </span>
             <span className="text-xs uppercase text-slate-500 font-semibold tracking-wider">Detail Drawer</span>
           </div>
-          <span className="px-2 py-1 rounded text-[10px] font-bold bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 border border-teal-200 dark:border-teal-800">
+          <span className="px-2 py-1 rounded text-2xs font-bold bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 border border-teal-200 dark:border-teal-800">
             {activeRisk.strategy}
           </span>
         </div>
@@ -150,7 +150,7 @@ export function RiskMatrix() {
         </div>
 
         <div className="p-4 rounded-xl bg-[#f8f9fc] dark:bg-navy-950/50 space-y-3">
-          <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Calibrated Risk Score</span>
+          <span className="text-2xs font-semibold text-slate-500 uppercase tracking-wider">Calibrated Risk Score</span>
           <div className="flex items-baseline gap-3">
             <span className="text-3xl font-extrabold text-[#0d1b36] dark:text-white">{activeScore}</span>
             <span className="text-sm text-slate-500">[{activeRisk.l} Likelihood × {activeRisk.i} Impact]</span>

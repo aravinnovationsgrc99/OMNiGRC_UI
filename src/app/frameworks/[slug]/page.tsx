@@ -147,7 +147,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 1: WHAT THE FRAMEWORK IS */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f1f3ff] dark:bg-navy-950/50 text-[#0d1b36] dark:text-slate-300 font-mono text-xs font-bold uppercase mb-4">
               <BookOpen className="h-3.5 w-3.5 text-[#F15E1C]" /> Framework Overview
@@ -169,7 +169,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 2: APPLICABILITY */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -182,7 +182,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {fw.applicability.map((item, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex items-start gap-3">
+                <div key={idx} className="p-space-card rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex items-start gap-3">
                   <div className="p-1.5 rounded-lg bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 shrink-0 mt-0.5">
                     <CheckCircle2 className="h-4 w-4 text-[#F15E1C]" />
                   </div>
@@ -194,7 +194,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 3: KEY REQUIREMENTS & CONTROL DOMAINS */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -215,7 +215,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {fw.controlDomains.map((domain, idx) => (
-                  <div key={idx} className="p-5 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-200 dark:border-navy-700/60 shadow-sm">
+                  <div key={idx} className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-300 dark:border-navy-700/60 shadow-sm">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="w-6 h-6 rounded-full bg-[#F15E1C] text-white font-mono text-xs font-bold flex items-center justify-center">
                         {idx + 1}
@@ -234,7 +234,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {fw.controls.map((ctrl, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-[#faf8ff] dark:bg-navy-950/30 border border-slate-200 dark:border-navy-700/60 flex items-start gap-3">
+                  <div key={idx} className="p-4 rounded-xl bg-[#faf8ff] dark:bg-navy-950/30 border border-slate-300 dark:border-navy-700/60 flex items-start gap-3">
                     <FileCheck2 className="h-5 w-5 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
                     <p className="text-xs font-semibold text-[#0d1b36] dark:text-slate-200 leading-relaxed">{ctrl}</p>
                   </div>
@@ -245,7 +245,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 4: PRACTICAL IMPLEMENTATION PATH */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -261,7 +261,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {fw.implementationPath.map((step) => (
-                <div key={step.step} className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm relative">
+                <div key={step.step} className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm relative">
                   <span className="font-mono text-2xl font-extrabold text-[#F15E1C]/30 absolute top-4 right-4">
                     {step.step}
                   </span>
@@ -279,7 +279,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 5: COMMON MISTAKES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -347,7 +347,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 7: FRAMEWORK REFERENCES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto text-center">
             <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
               FRAMEWORK REFERENCES
@@ -361,11 +361,11 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
             <div className="flex flex-wrap justify-center gap-4">
               {fw.citations.map((c, idx) => (
-                <div key={idx} className="px-6 py-4 rounded-xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-200 dark:border-navy-700/60 flex items-center gap-3">
+                <div key={idx} className="px-6 py-4 rounded-xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-300 dark:border-navy-700/60 flex items-center gap-3">
                   <BookOpen className="h-5 w-5 text-[#F15E1C]" />
                   <div className="text-left">
                     <span className="font-mono text-xs font-bold text-[#0d1b36] dark:text-slate-200 block">Clause {c}</span>
-                    <span className="text-[10px] text-[#5a4138] dark:text-slate-400">Standard Reference</span>
+                    <span className="text-2xs text-[#5a4138] dark:text-slate-400">Standard Reference</span>
                   </div>
                 </div>
               ))}
@@ -374,10 +374,10 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 8: FAQS */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-xs font-bold uppercase mb-2 border border-slate-200 dark:border-navy-700/60">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-xs font-bold uppercase mb-2 border border-slate-300 dark:border-navy-700/60">
                 <HelpCircle className="h-3.5 w-3.5 text-[#F15E1C]" /> FAQ
               </div>
               <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold">
@@ -387,7 +387,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
             <div className="space-y-4">
               {fw.faqs.map((faq, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm">
+                <div key={idx} className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm">
                   <h3 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white mb-2 flex items-start gap-2">
                     <span className="text-[#F15E1C] font-mono">Q.</span>
                     <span>{faq.question}</span>
@@ -402,7 +402,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 9: RELATED WORKFLOWS */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
@@ -418,7 +418,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
                 <Link
                   key={idx}
                   href={rel.href}
-                  className="p-5 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <h3 className="text-base font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] transition-colors flex items-center justify-between mb-2">
@@ -434,7 +434,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         </section>
 
         {/* SECTION 10: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Operationalize {fw.name} with OMNiGRC.

@@ -69,7 +69,7 @@ export default function PoliciesPage() {
           {/* Ambient glow accents */}
           <div aria-hidden="true" className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#F15E1C]/5 dark:bg-teal/8 blur-3xl pointer-events-none" />
           <div aria-hidden="true" className="absolute top-1/2 -left-16 w-80 h-80 rounded-full bg-[#2E936F]/6 dark:bg-teal/5 blur-2xl pointer-events-none" />
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & CTAs  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -120,7 +120,7 @@ export default function PoliciesPage() {
 
             {/*  Right Column: Visual Policy Preview Card  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-md shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -162,7 +162,7 @@ export default function PoliciesPage() {
         </section>
 
         {/*  SECTION 2: STRUCTURED POLICY LIFECYCLE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <History className="h-5 w-5 shrink-0" />
@@ -211,7 +211,7 @@ export default function PoliciesPage() {
         </section>
 
         {/*  SECTION 3: INTERACTIVE ACTIVE POLICY EXPLORER  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl" id="policy-explorer">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="policy-explorer">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <BookOpen className="h-5 w-5 shrink-0" />
@@ -322,7 +322,7 @@ export default function PoliciesPage() {
         </section>
 
         {/*  SECTION 4: CORE CAPABILITIES BUILT FOR RIGOR  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <ShieldCheck className="h-5 w-5 shrink-0" />
@@ -348,7 +348,7 @@ export default function PoliciesPage() {
         </section>
 
         {/*  SECTION 5: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-xl">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
             <h2 className="font-headline-lg text-headline-lg font-bold">Bring Structure to Organizational Policies</h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Connect policies directly to your active controls and framework requirements in OMNiGRC.</p>

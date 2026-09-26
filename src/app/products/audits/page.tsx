@@ -25,7 +25,7 @@ export default function AuditsPage() {
           {/* Ambient glow accents */}
           <div aria-hidden="true" className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#2E936F]/5 dark:bg-teal/8 blur-3xl pointer-events-none" />
           <div aria-hidden="true" className="absolute bottom-0 right-8 w-72 h-72 rounded-full bg-[#F15E1C]/5 dark:bg-amber/5 blur-2xl pointer-events-none" />
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & Actions  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -76,7 +76,7 @@ export default function AuditsPage() {
 
             {/*  Right Column: Audit Progress Card  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-md shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -118,7 +118,7 @@ export default function AuditsPage() {
         </section>
 
         {/*  SECTION 2: OPERATIONAL AUDIT LIFECYCLE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <History className="h-5 w-5 shrink-0" />
@@ -174,7 +174,7 @@ export default function AuditsPage() {
         </section>
 
         {/*  SECTION 3: INTERACTIVE WORKPAPER DEMONSTRATION  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl" id="workpaper-preview">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="workpaper-preview">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
             <div>
               <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
@@ -242,7 +242,7 @@ export default function AuditsPage() {
         </section>
 
         {/*  SECTION 4: CORE FUNCTIONAL CAPABILITIES  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Zap className="h-5 w-5 shrink-0" />
@@ -284,7 +284,7 @@ export default function AuditsPage() {
         </section>
 
         {/*  SECTION 5: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-xl">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
             <h2 className="font-headline-lg text-headline-lg font-bold">Organize Audits with Operational Precision</h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Eliminate pre-audit panic by connecting framework controls directly to audit workpapers and evidence in OMNiGRC.</p>

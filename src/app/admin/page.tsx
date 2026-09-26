@@ -25,9 +25,9 @@ export default async function AdminDashboardPage() {
       <div>
         <AdminHeader />
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
           {/* Welcome Banner */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 p-6 rounded-3xl bg-navy-900 border border-navy-800 shadow-xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 p-space-card rounded-3xl bg-navy-900 border border-navy-800 shadow-xl">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F15E1C]/20 text-[#F15E1C] font-mono text-xs font-bold uppercase mb-2">
                 <Sparkles className="w-3.5 h-3.5" /> EDITORIAL OVERVIEW
@@ -51,7 +51,7 @@ export default async function AdminDashboardPage() {
 
           {/* Metric Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-            <div className="p-6 rounded-2xl bg-navy-900 border border-navy-800 shadow-md flex items-center justify-between">
+            <div className="p-space-card rounded-2xl bg-navy-900 border border-navy-800 shadow-md flex items-center justify-between">
               <div>
                 <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-1">Total Posts</p>
                 <h3 className="text-3xl font-extrabold text-white">{totalPosts}</h3>
@@ -61,7 +61,7 @@ export default async function AdminDashboardPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-navy-900 border border-navy-800 shadow-md flex items-center justify-between">
+            <div className="p-space-card rounded-2xl bg-navy-900 border border-navy-800 shadow-md flex items-center justify-between">
               <div>
                 <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-1">Published</p>
                 <h3 className="text-3xl font-extrabold text-emerald-400">{publishedPosts}</h3>
@@ -71,7 +71,7 @@ export default async function AdminDashboardPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-navy-900 border border-navy-800 shadow-md flex items-center justify-between">
+            <div className="p-space-card rounded-2xl bg-navy-900 border border-navy-800 shadow-md flex items-center justify-between">
               <div>
                 <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-1">Drafts</p>
                 <h3 className="text-3xl font-extrabold text-amber-400">{draftPosts}</h3>
@@ -84,7 +84,7 @@ export default async function AdminDashboardPage() {
 
           {/* Recent Articles Table */}
           <div className="rounded-3xl bg-navy-900 border border-navy-800 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-navy-800 flex items-center justify-between">
+            <div className="p-space-card border-b border-navy-800 flex items-center justify-between">
               <div>
                 <h2 className="text-lg font-bold text-white">Recently Modified Articles</h2>
                 <p className="text-xs text-slate-400">Overview of recent editorial activity</p>

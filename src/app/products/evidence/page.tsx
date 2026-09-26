@@ -47,7 +47,7 @@ export default function EvidencePage() {
                   <span className="text-slate-400">/</span>
                   <span className="font-bold text-slate-800 dark:text-slate-200">EVIDENCE GOVERNANCE</span>
                   <span className="text-slate-400">/</span>
-                  <span className="font-medium bg-slate-200/80 dark:bg-navy-800 px-2 py-0.5 rounded text-[11px] text-slate-700 dark:text-slate-300">
+                  <span className="font-medium bg-slate-200/80 dark:bg-navy-800 px-2 py-0.5 rounded text-2xs text-slate-700 dark:text-slate-300">
                     /products/evidence
                   </span>
                 </div>
@@ -140,22 +140,22 @@ export default function EvidencePage() {
                     <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
                       <div className="text-2xl font-black text-[#2E936F] dark:text-teal mb-0.5">100%</div>
                       <div className="text-xs text-slate-900 dark:text-white font-bold">External Pointers</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400">Zero binary lock-in</div>
+                      <div className="text-2xs text-slate-500 dark:text-slate-400">Zero binary lock-in</div>
                     </div>
                     <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
                       <div className="text-2xl font-black text-[#D4521A] dark:text-amber mb-0.5">AUDIT</div>
                       <div className="text-xs text-slate-900 dark:text-white font-bold">Event History</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400">Structured log trail</div>
+                      <div className="text-2xs text-slate-500 dark:text-slate-400">Structured log trail</div>
                     </div>
                     <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
                       <div className="text-2xl font-black text-slate-900 dark:text-white mb-0.5">1 : N</div>
                       <div className="text-xs text-slate-900 dark:text-white font-bold">Control Reuse</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400">SOC 2, ISO, HIPAA</div>
+                      <div className="text-2xs text-slate-500 dark:text-slate-400">SOC 2, ISO, HIPAA</div>
                     </div>
                     <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
                       <div className="text-2xl font-black text-indigo-600 dark:text-indigo-400 mb-0.5">Scoped</div>
                       <div className="text-xs text-slate-900 dark:text-white font-bold">Auditor Workpapers</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400">Read-only access</div>
+                      <div className="text-2xs text-slate-500 dark:text-slate-400">Read-only access</div>
                     </div>
                   </div>
                 </div>

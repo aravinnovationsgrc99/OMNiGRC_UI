@@ -56,7 +56,7 @@ const stages = [
 
 export const StagesOfTrustSection: React.FC = () => {
   return (
-    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
+    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-space-section overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
       {/* Ambient circle-scatter background — z-0, pointer-events-none */}
       <AmbientGridBackground />
 
@@ -134,7 +134,7 @@ export const StagesOfTrustSection: React.FC = () => {
                 className="relative group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl rounded-3xl"
               >
                 {/* FloatingDepthCard uses bg-cardWarm in light mode, navy in dark */}
-                <FloatingDepthCard className="relative p-6 sm:p-10 lg:p-12 border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-navy-900/70 group-hover:border-teal/60 group-hover:shadow-teal/20 transition-all duration-300">
+                <FloatingDepthCard className="relative p-space-card border-cardBorderWarm dark:border-teal/30 bg-cardWarm dark:bg-navy-900/70 group-hover:border-teal/60 group-hover:shadow-teal/20 transition-all duration-300">
                   <div
                     className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center ${
                       card.imageLeft ? "lg:flex-row-reverse" : ""

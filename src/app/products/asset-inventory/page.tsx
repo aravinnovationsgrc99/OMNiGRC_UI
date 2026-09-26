@@ -83,7 +83,7 @@ export default function AssetInventoryPage() {
         </div>
 
         {/*  SECTION 1: HERO & CORE VALUE STATEMENTS  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-section overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & Actions  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -138,7 +138,7 @@ export default function AssetInventoryPage() {
             </div>
             {/*  Right Column: Visual Demonstration Card  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-md shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -196,7 +196,7 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 2: INTERACTIVE TOPOLOGY DIAGRAM & INSPECTION DRAWER  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl" id="topology-diagram">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="topology-diagram">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Circle className="h-5 w-5 shrink-0" />
@@ -212,7 +212,7 @@ export default function AssetInventoryPage() {
               {/*  Step 1: Production Asset Node  */}
               <div 
                 onClick={() => setSelectedNode('db')}
-                className={`cursor-pointer transition-all p-space-md rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'db' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-200 dark:border-navy-700 shadow-md hover:shadow-lg'}`} 
+                className={`cursor-pointer transition-all p-space-card rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'db' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg'}`} 
                 id="node-asset"
               >
                 <div className="flex items-start gap-space-sm">
@@ -236,7 +236,7 @@ export default function AssetInventoryPage() {
 
               {/*  Connector Indicator  */}
               <div className="flex justify-center -my-2 relative z-10">
-                <div className="flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-code-sm text-code-sm shadow-sm border border-slate-200 dark:border-navy-700">
+                <div className="flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-code-sm text-code-sm shadow-sm border border-slate-300 dark:border-navy-700">
                   <ArrowDown className="h-4 w-4 shrink-0 text-primary" />
                   <span>Data Classification &amp; Discovery Match</span>
                 </div>
@@ -245,7 +245,7 @@ export default function AssetInventoryPage() {
               {/*  Step 2: Data Classification Node  */}
               <div 
                 onClick={() => setSelectedNode('cloud')}
-                className={`cursor-pointer transition-all p-space-md rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'cloud' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-lg'}`} 
+                className={`cursor-pointer transition-all p-space-card rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'cloud' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-300 dark:border-navy-700 shadow-sm hover:shadow-lg'}`} 
                 id="node-classification"
               >
                 <div className="flex items-start gap-space-sm">
@@ -269,7 +269,7 @@ export default function AssetInventoryPage() {
 
               {/*  Connector Indicator  */}
               <div className="flex justify-center -my-2 relative z-10">
-                <div className="flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-code-sm text-code-sm shadow-sm border border-slate-200 dark:border-navy-700">
+                <div className="flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-code-sm text-code-sm shadow-sm border border-slate-300 dark:border-navy-700">
                   <ArrowDown className="h-4 w-4 shrink-0 text-primary" />
                   <span>Risk Matrix Linkage</span>
                 </div>
@@ -278,7 +278,7 @@ export default function AssetInventoryPage() {
               {/*  Step 3: Linked Risk Register Node  */}
               <div 
                 onClick={() => setSelectedNode('saas')}
-                className={`cursor-pointer transition-all p-space-md rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'saas' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-lg'}`} 
+                className={`cursor-pointer transition-all p-space-card rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'saas' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-300 dark:border-navy-700 shadow-sm hover:shadow-lg'}`} 
                 id="node-risk"
               >
                 <div className="flex items-start gap-space-sm">
@@ -302,7 +302,7 @@ export default function AssetInventoryPage() {
 
               {/*  Connector Indicator  */}
               <div className="flex justify-center -my-2 relative z-10">
-                <div className="flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-code-sm text-code-sm shadow-sm border border-slate-200 dark:border-navy-700">
+                <div className="flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-code-sm text-code-sm shadow-sm border border-slate-300 dark:border-navy-700">
                   <ArrowDown className="h-4 w-4 shrink-0 text-primary" />
                   <span>Enforcement Safeguards</span>
                 </div>
@@ -311,7 +311,7 @@ export default function AssetInventoryPage() {
               {/*  Step 4: Mitigating Controls & Audit Verification  */}
               <div 
                 onClick={() => setSelectedNode('controls')}
-                className={`cursor-pointer transition-all p-space-md rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'controls' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-lg'}`} 
+                className={`cursor-pointer transition-all p-space-card rounded-xl bg-white dark:bg-[#0A111F] border relative flex flex-col md:flex-row md:items-center justify-between gap-space-md ${selectedNode === 'controls' ? 'border-primary ring-2 ring-primary/20 shadow-lg' : 'border-slate-300 dark:border-navy-700 shadow-sm hover:shadow-lg'}`} 
                 id="node-controls"
               >
                 <div className="flex items-start gap-space-sm">
@@ -335,7 +335,7 @@ export default function AssetInventoryPage() {
             </div>
 
             {/*  Right Column: Interactive Inspectable Asset Drawer (4 Cols)  */}
-            <div className="xl:col-span-4 sticky top-28 bg-white dark:bg-[#0A111F] p-space-md rounded-xl shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+            <div className="xl:col-span-4 sticky top-28 bg-white dark:bg-[#0A111F] p-space-card rounded-xl shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
               <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                 <div className="flex items-center gap-space-xs">
                   <Search className="h-4 w-4 text-primary shrink-0" />
@@ -388,7 +388,7 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 3: FOUR CORE ASSET DIMENSIONS  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Layers className="h-5 w-5 shrink-0" />
@@ -403,7 +403,7 @@ export default function AssetInventoryPage() {
           </div>
           {/*  4 Cards Grid  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-space-sm">
                   <Cloud className="h-5 w-5 shrink-0" />
@@ -413,7 +413,7 @@ export default function AssetInventoryPage() {
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Configuration Hook Sync</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-space-sm">
                   <Key className="h-5 w-5 shrink-0" />
@@ -423,17 +423,17 @@ export default function AssetInventoryPage() {
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Identity Graph Bound</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-space-sm">
                   <Building2 className="h-5 w-5 shrink-0" />
                 </div>
                 <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold">SaaS &amp; Subprocessors</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-space-xs">Track vendor tools (Datadog, Twilio, Snowflake), executed DPAs, SOC 2 reports, and data residency boundaries.</p>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-space-xs font-body-sm">Track vendor tools (Datadog, Twilio, Snowflake), executed DPAs, SOC 2 reports, and data residency boundaries.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">DPA Alignment Verified</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-space-sm">
                   <Cpu className="h-5 w-5 shrink-0" />
@@ -447,7 +447,7 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 4: DATA SENSITIVITY & LINEAGE MATRIX  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-xl">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-section">
           <div className="max-w-7xl mx-auto px-gutter">
             <div className="flex flex-col gap-space-xs mb-space-lg">
               <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
@@ -457,10 +457,10 @@ export default function AssetInventoryPage() {
               <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">Data Sensitivity &amp; Regulatory Mapping</h2>
               <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">Every asset entry maintains a structured data classification tag that directly maps to legal obligations across major global frameworks.</p>
             </div>
-            <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-[#0A111F] shadow-sm">
+            <div className="overflow-x-auto rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-[#0A111F] shadow-sm">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-slate-100 dark:bg-navy-800 font-label-sm text-label-sm text-slate-900 dark:text-white border-b border-slate-200 dark:border-navy-700">
+                  <tr className="bg-slate-100 dark:bg-navy-800 font-label-sm text-label-sm text-slate-900 dark:text-white border-b border-slate-300 dark:border-navy-700">
                     <th className="p-space-sm">Asset Target</th>
                     <th className="p-space-sm">Resource Type</th>
                     <th className="p-space-sm">Data Sensitivity</th>
@@ -471,30 +471,30 @@ export default function AssetInventoryPage() {
                 <tbody className="divide-y divide-slate-100 dark:divide-navy-800 font-body-sm text-body-sm text-slate-600 dark:text-slate-300">
                   <tr className="hover:bg-slate-50 dark:hover:bg-navy-800/50">
                     <td className="p-space-sm font-code-sm text-slate-900 dark:text-white font-semibold">rds://prod-aurora-postgres</td>
-                    <td className="p-space-sm">Managed Database</td>
+                    <td className="p-space-sm font-body-sm">Managed Database</td>
                     <td className="p-space-sm"><span className="px-2 py-0.5 rounded bg-error-container text-on-error-container font-code-sm text-code-sm font-bold">ePHI / Financial PII</span></td>
-                    <td className="p-space-sm">HIPAA 164.312(a)(2)(iv) • GDPR Art. 32</td>
+                    <td className="p-space-sm font-body-sm">HIPAA 164.312(a)(2)(iv) • GDPR Art. 32</td>
                     <td className="p-space-sm text-secondary font-semibold">CTRL-014 (KMS Encryption at Rest)</td>
                   </tr>
                   <tr className="hover:bg-slate-50 dark:hover:bg-navy-800/50">
                     <td className="p-space-sm font-code-sm text-slate-900 dark:text-white font-semibold">s3://customer-vault-eu-west-1</td>
-                    <td className="p-space-sm">Cloud Storage Bucket</td>
+                    <td className="p-space-sm font-body-sm">Cloud Storage Bucket</td>
                     <td className="p-space-sm"><span className="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-sm text-code-sm font-bold">Confidential PII</span></td>
-                    <td className="p-space-sm">India DPDP Act §8(5) • SOC 2 CC6.1</td>
+                    <td className="p-space-sm font-body-sm">India DPDP Act §8(5) • SOC 2 CC6.1</td>
                     <td className="p-space-sm text-secondary font-semibold">CTRL-022 (Public Access Block)</td>
                   </tr>
                   <tr className="hover:bg-slate-50 dark:hover:bg-navy-800/50">
                     <td className="p-space-sm font-code-sm text-slate-900 dark:text-white font-semibold">eks://fintech-ingestion-worker</td>
-                    <td className="p-space-sm">K8s Compute Worker</td>
+                    <td className="p-space-sm font-body-sm">K8s Compute Worker</td>
                     <td className="p-space-sm"><span className="px-2 py-0.5 rounded bg-slate-200 dark:bg-navy-700 text-slate-900 dark:text-white font-code-sm text-code-sm font-medium">Internal Telemetry</span></td>
-                    <td className="p-space-sm">ISO 27001:2022 A.8.28</td>
+                    <td className="p-space-sm font-body-sm">ISO 27001:2022 A.8.28</td>
                     <td className="p-space-sm text-secondary font-semibold">CTRL-041 (Image Hash Scanning)</td>
                   </tr>
                   <tr className="hover:bg-slate-50 dark:hover:bg-navy-800/50">
                     <td className="p-space-sm font-code-sm text-slate-900 dark:text-white font-semibold">saas://datadog-apm-telemetry</td>
-                    <td className="p-space-sm">Vendor APM Service</td>
+                    <td className="p-space-sm font-body-sm">Vendor APM Service</td>
                     <td className="p-space-sm"><span className="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm font-bold">Restricted Logs</span></td>
-                    <td className="p-space-sm">GDPR Article 28 (Processor DPA)</td>
+                    <td className="p-space-sm font-body-sm">GDPR Article 28 (Processor DPA)</td>
                     <td className="p-space-sm text-secondary font-semibold">CTRL-089 (Telemetry PII Masking)</td>
                   </tr>
                 </tbody>
@@ -504,7 +504,7 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 5: INTEGRATION ECOSYSTEM  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col items-center text-center gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Zap className="h-5 w-5 shrink-0" />
@@ -514,27 +514,27 @@ export default function AssetInventoryPage() {
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">Ingest metadata from supported external cloud providers, identity platforms, and infrastructure sources.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-md text-center">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
               <Cloud className="h-8 w-8 text-primary" />
               <span className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold">AWS CloudWatch</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
               <Server className="h-8 w-8 text-primary" />
               <span className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold">Google Cloud</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
               <Shield className="h-8 w-8 text-primary" />
               <span className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold">Microsoft Azure</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
               <Key className="h-8 w-8 text-primary" />
               <span className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold">Okta Identity</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
               <Cpu className="h-8 w-8 text-primary" />
               <span className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold">Kubernetes</span>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
+            <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-2">
               <Database className="h-8 w-8 text-primary" />
               <span className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold">Snowflake</span>
             </div>
@@ -542,7 +542,7 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 6: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-xl">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
             <h2 className="font-headline-lg text-headline-lg font-bold">Tired of stale CMDB spreadsheets and audit scrambles?</h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Connect your AWS, Azure, GCP, and Kubernetes clusters in minutes. Experience automated cloud asset discovery mapped straight to active controls.</p>

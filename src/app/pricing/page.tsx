@@ -112,7 +112,7 @@ export default function PricingPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Practical commercial scoping for practical GRC operations.
             </h1>
 
@@ -133,7 +133,7 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 1: DEPLOYMENT TIERS GRID */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -151,10 +151,10 @@ export default function PricingPage() {
               {deploymentTiers.map((plan) => (
                 <div
                   key={plan.code}
-                  className={`rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
+                  className={`rounded-2xl p-space-card flex flex-col justify-between transition-all duration-300 relative ${
                     plan.popular
                       ? "bg-white dark:bg-navy-900 border-2 border-[#F15E1C] shadow-xl scale-[1.02]"
-                      : "bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 shadow-sm hover:shadow-md"
+                      : "bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md"
                   }`}
                 >
                   <div>
@@ -214,7 +214,7 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 2: FAQS ACCORDION */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-3xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-white font-mono text-xs font-bold uppercase mb-2 border border-slate-200 dark:border-navy-700/60">
@@ -227,7 +227,7 @@ export default function PricingPage() {
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-navy-900 overflow-hidden shadow-sm">
+                <div key={idx} className="rounded-2xl border border-slate-300 dark:border-navy-700/60 bg-white dark:bg-navy-900 overflow-hidden shadow-sm">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                     className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-[#0d1b36] dark:text-slate-200 hover:text-[#F15E1C] dark:hover:text-orange-400 transition-colors"
@@ -251,7 +251,7 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 3: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Ready for a transparent proposal?

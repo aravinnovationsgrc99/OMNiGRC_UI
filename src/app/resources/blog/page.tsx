@@ -29,7 +29,7 @@ export default async function BlogListingPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION WITH ADAPTIVE STITCH MESH */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-10 pb-14 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-space-section overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="max-w-7xl mx-auto">
             {/* Breadcrumbs */}
             <nav className="flex items-center gap-2 text-xs font-medium text-[#5a4138] dark:text-slate-400 mb-6">
@@ -48,7 +48,7 @@ export default async function BlogListingPage() {
                     OMNIGRC EDITORIAL & INSIGHTS
                   </span>
                 </div>
-                <h1 className="text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight">
+                <h1 className="text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight">
                   GRC Operations & Governance Journal
                 </h1>
                 <p className="mt-4 text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
@@ -70,14 +70,14 @@ export default async function BlogListingPage() {
         </section>
 
         {/* CLIENT INTERACTIVE LISTING (FILTER, SEARCH, FEATURED POST, GRID) */}
-        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12">
+        <section className="w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-space-section">
           <div className="max-w-7xl mx-auto">
             <BlogListingClient initialPosts={posts} />
           </div>
         </section>
 
         {/* CONNECTED PRODUCT NARRATIVE CTA */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/40 px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200 dark:border-navy-700/60 text-center">
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/40 px-4 sm:px-6 lg:px-8 py-space-section border-t border-slate-200 dark:border-navy-700/60 text-center">
           <div className="max-w-4xl mx-auto">
             <span className="font-mono text-xs font-bold text-[#F15E1C] dark:text-orange-400 uppercase tracking-widest block mb-2">
               CONNECTED GOVERNANCE INTELLIGENCE

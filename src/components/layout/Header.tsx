@@ -110,43 +110,43 @@ export const Header: React.FC = () => {
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2.5">
                         <Link href="/products/risk-register" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Risk Register</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">5x5 Scoring &amp; residual tracking</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">5x5 Scoring &amp; residual tracking</p>
                         </Link>
                         <Link href="/products/asset-inventory" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Server className="h-3.5 w-3.5 text-[#2E936F]" /> Asset &amp; Inventory</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Cloud infra discovery &amp; ownership</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Cloud infra discovery &amp; ownership</p>
                         </Link>
                         <Link href="/products/control-mapping" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Sparkles className="h-3.5 w-3.5 text-[#F15E1C]" /> Control Mapping</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Map once across frameworks</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Map once across frameworks</p>
                         </Link>
                         <Link href="/products/compliance-board" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><CalendarCheck className="h-3.5 w-3.5 text-[#2E936F]" /> Compliance Board</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">30/60/90-day testing cadence</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">30/60/90-day testing cadence</p>
                         </Link>
                         <Link href="/products/vulnerabilities" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Vulnerabilities</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Asset-linked finding governance</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Asset-linked finding governance</p>
                         </Link>
                         <Link href="/products/vendors" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Globe className="h-3.5 w-3.5 text-[#2E936F]" /> Vendors</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Third-party supply chain risk</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Third-party supply chain risk</p>
                         </Link>
                         <Link href="/products/policies" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#F15E1C]" /> Policies</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Centralized review lifecycle</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Centralized review lifecycle</p>
                         </Link>
                         <Link href="/products/audits" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Award className="h-3.5 w-3.5 text-[#2E936F]" /> Audits</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Structured assessments &amp; workpapers</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Structured assessments &amp; workpapers</p>
                         </Link>
                         <Link href="/products/remediation" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-[#F15E1C]" /> Remediation</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">Corrective action SLA tracking</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Corrective action SLA tracking</p>
                         </Link>
                         <Link href="/products/evidence" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
                           <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#2E936F]" /> Evidence References</div>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">External evidence reference/index layer</p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">External evidence reference/index layer</p>
                         </Link>
                       </div>
                     </div>
@@ -160,7 +160,7 @@ export const Header: React.FC = () => {
                             </Badge>
                             <h4 className="text-sm font-bold text-navy-900 dark:text-white">AI Assists. Humans Decide.</h4>
                           </div>
-                          <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+                          <p className="text-2xs sm:text-xs text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
                             Data-minimized clause correlation with mandatory human review and approval.
                           </p>
                         </div>
@@ -199,7 +199,7 @@ export const Header: React.FC = () => {
                     <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                       <div>
                         <h4 className="font-bold text-navy-900 dark:text-white text-sm">Documented Framework Support</h4>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Map once and align across core standards</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Map once and align across core standards</p>
                       </div>
                       <Link
                         href="/frameworks"
@@ -211,27 +211,27 @@ export const Header: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       <Link href="/frameworks/iso-27001" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
                         <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">ISO 27001:2022</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">ISMS Information Security Governance</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">ISMS Information Security Governance</p>
                       </Link>
                       <Link href="/frameworks/soc-2" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
                         <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">SOC 2 Type II</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">AICPA Trust Services Criteria</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">AICPA Trust Services Criteria</p>
                       </Link>
                       <Link href="/frameworks/iso-42001" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
                         <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">ISO 42001:2023</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Artificial Intelligence Management (AIMS)</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Artificial Intelligence Management (AIMS)</p>
                       </Link>
                       <Link href="/frameworks/gdpr" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
                         <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">GDPR &amp; UK GDPR</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">EU &amp; UK Data Protection Governance</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">EU &amp; UK Data Protection Governance</p>
                       </Link>
                       <Link href="/frameworks/dpdp" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
                         <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">DPDP Act 2023</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Digital Personal Data Protection (India)</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Digital Personal Data Protection (India)</p>
                       </Link>
                       <Link href="/frameworks/hipaa" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
                         <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">HIPAA Security Rule</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Healthcare ePHI Protection</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Healthcare ePHI Protection</p>
                       </Link>
                     </div>
                   </motion.div>
@@ -260,23 +260,23 @@ export const Header: React.FC = () => {
                     <h4 className="text-xs font-mono uppercase text-[#D4521A] dark:text-amber font-bold mb-2">By Customer Segment</h4>
                     <Link href="/solutions/lean-security-teams" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
                       <p className="font-bold text-xs">Lean Security Teams</p>
-                      <p className="text-[11px] text-slate-500">Unify risk, asset, and control tracking without overhead</p>
+                      <p className="text-2xs text-slate-500">Unify risk, asset, and control tracking without overhead</p>
                     </Link>
                     <Link href="/solutions/security-leaders" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
                       <p className="font-bold text-xs">Security Leaders &amp; CISOs</p>
-                      <p className="text-[11px] text-slate-500">Board-ready reporting &amp; multi-framework crosswalks</p>
+                      <p className="text-2xs text-slate-500">Board-ready reporting &amp; multi-framework crosswalks</p>
                     </Link>
                     <Link href="/solutions/compliance-managers" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
                       <p className="font-bold text-xs">Compliance Managers</p>
-                      <p className="text-[11px] text-slate-500">Automate testing cadences and evidence compilation</p>
+                      <p className="text-2xs text-slate-500">Automate testing cadences and evidence compilation</p>
                     </Link>
                     <Link href="/solutions/saas-growing-organizations" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
                       <p className="font-bold text-xs">SaaS &amp; Growing Orgs</p>
-                      <p className="text-[11px] text-slate-500">Accelerate SOC 2 &amp; ISO readiness for market expansion</p>
+                      <p className="text-2xs text-slate-500">Accelerate SOC 2 &amp; ISO readiness for market expansion</p>
                     </Link>
                     <Link href="/solutions/mssp" className="block p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-700 dark:text-slate-200">
                       <p className="font-bold text-xs">MSSP Partners</p>
-                      <p className="text-[11px] text-slate-500">Multi-tenant client governance and advisory tools</p>
+                      <p className="text-2xs text-slate-500">Multi-tenant client governance and advisory tools</p>
                     </Link>
                   </motion.div>
                 )}
@@ -386,43 +386,43 @@ export const Header: React.FC = () => {
                   <div className="grid grid-cols-1 gap-2">
                     <Link href="/products/risk-register" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><ShieldAlert className="h-4 w-4 text-[#F15E1C]" /> Risk Register</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">5x5 Scoring &amp; residual tracking</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">5x5 Scoring &amp; residual tracking</p>
                     </Link>
                     <Link href="/products/asset-inventory" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Server className="h-4 w-4 text-[#2E936F]" /> Asset &amp; Inventory</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Cloud infra discovery &amp; ownership</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Cloud infra discovery &amp; ownership</p>
                     </Link>
                     <Link href="/products/control-mapping" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Sparkles className="h-4 w-4 text-[#F15E1C]" /> Control Mapping</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Map once across frameworks</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Map once across frameworks</p>
                     </Link>
                     <Link href="/products/compliance-board" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><CalendarCheck className="h-4 w-4 text-[#2E936F]" /> Compliance Board</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">30/60/90-day testing cadence</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">30/60/90-day testing cadence</p>
                     </Link>
                     <Link href="/products/vulnerabilities" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><ShieldAlert className="h-4 w-4 text-[#F15E1C]" /> Vulnerabilities</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Asset-linked finding governance</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Asset-linked finding governance</p>
                     </Link>
                     <Link href="/products/vendors" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Globe className="h-4 w-4 text-[#2E936F]" /> Vendors</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Third-party supply chain risk</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Third-party supply chain risk</p>
                     </Link>
                     <Link href="/products/policies" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><FileCheck2 className="h-4 w-4 text-[#F15E1C]" /> Policies</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Centralized review lifecycle</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Centralized review lifecycle</p>
                     </Link>
                     <Link href="/products/audits" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Award className="h-4 w-4 text-[#2E936F]" /> Audits</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Structured assessments &amp; workpapers</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Structured assessments &amp; workpapers</p>
                     </Link>
                     <Link href="/products/remediation" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Shield className="h-4 w-4 text-[#F15E1C]" /> Remediation</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Corrective action SLA tracking</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Corrective action SLA tracking</p>
                     </Link>
                     <Link href="/products/evidence" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><FileCheck2 className="h-4 w-4 text-[#2E936F]" /> Evidence References</div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">External evidence reference layer</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">External evidence reference layer</p>
                     </Link>
                   </div>
                 </div>
@@ -447,7 +447,7 @@ export const Header: React.FC = () => {
                         className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block"
                       >
                         <span className="font-bold text-xs text-navy-900 dark:text-white block">{fw.name}</span>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">{fw.oneLiner}</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{fw.oneLiner}</p>
                       </Link>
                     ))}
                   </div>
@@ -467,23 +467,23 @@ export const Header: React.FC = () => {
                   <div className="grid grid-cols-1 gap-2">
                     <Link href="/solutions/lean-security-teams" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <span className="font-bold text-xs text-navy-900 dark:text-white block">Lean Security Teams</span>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Unify risk, asset, and control tracking without overhead</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Unify risk, asset, and control tracking without overhead</p>
                     </Link>
                     <Link href="/solutions/security-leaders" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <span className="font-bold text-xs text-navy-900 dark:text-white block">Security Leaders &amp; CISOs</span>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Board-ready reporting &amp; multi-framework crosswalks</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Board-ready reporting &amp; multi-framework crosswalks</p>
                     </Link>
                     <Link href="/solutions/compliance-managers" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <span className="font-bold text-xs text-navy-900 dark:text-white block">Compliance Managers</span>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Automate testing cadences and evidence compilation</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Automate testing cadences and evidence compilation</p>
                     </Link>
                     <Link href="/solutions/saas-growing-organizations" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <span className="font-bold text-xs text-navy-900 dark:text-white block">SaaS &amp; Growing Orgs</span>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Accelerate SOC 2 &amp; ISO readiness for market expansion</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Accelerate SOC 2 &amp; ISO readiness for market expansion</p>
                     </Link>
                     <Link href="/solutions/mssp" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
                       <span className="font-bold text-xs text-navy-900 dark:text-white block">MSSP Partners</span>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Multi-tenant client governance and advisory tools</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Multi-tenant client governance and advisory tools</p>
                     </Link>
                   </div>
                 </div>

@@ -26,7 +26,7 @@ export default function SecurityLeadersPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-6 pt-10 md:pt-14 pb-16 overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-6 py-space-section overflow-hidden bg-grid-mesh-adaptive">
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
 
@@ -39,7 +39,7 @@ export default function SecurityLeadersPage() {
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-[50px] lg:leading-[58px] text-slate-900 dark:text-white font-bold tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight">
                 Executive Risk Visibility Without <span className="text-primary">Operational Blind Spots</span>
               </h1>
 
@@ -69,7 +69,7 @@ export default function SecurityLeadersPage() {
 
             {/* Hero Visual: CISO Governance Portal */}
             <div className="lg:col-span-5 relative">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800">
                   <span className="font-mono text-xs font-bold text-slate-900 dark:text-white">CISO GOVERNANCE PORTAL</span>
                   <span className="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-mono text-[11px] font-semibold">
@@ -96,7 +96,7 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 2: EXECUTIVE PAIN POINTS */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-20 border-y border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mb-12">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
@@ -111,7 +111,7 @@ export default function SecurityLeadersPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <AlertTriangle className="w-5 h-5" />
@@ -127,7 +127,7 @@ export default function SecurityLeadersPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Clock className="w-5 h-5" />
@@ -143,7 +143,7 @@ export default function SecurityLeadersPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-200 dark:border-navy-700">
+              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <FileCheck className="w-5 h-5" />
@@ -163,7 +163,7 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 3: STRATEGIC CAPABILITIES */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-24">
+        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
           <div className="max-w-3xl mb-12">
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               EXECUTIVE GOVERNANCE ENGINES
@@ -177,7 +177,7 @@ export default function SecurityLeadersPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -196,7 +196,7 @@ export default function SecurityLeadersPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -215,7 +215,7 @@ export default function SecurityLeadersPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -234,7 +234,7 @@ export default function SecurityLeadersPage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -257,7 +257,7 @@ export default function SecurityLeadersPage() {
 
         {/* SECTION 3.5: EXECUTIVE COLLABORATION VISUAL BANNER */}
         <section className="w-full max-w-7xl mx-auto px-6 py-8">
-          <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-navy-700 shadow-xl bg-slate-900">
+          <div className="relative rounded-3xl overflow-hidden border border-slate-300 dark:border-navy-700 shadow-xl bg-slate-900">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
               <div className="lg:col-span-7 relative h-[260px] sm:h-[340px] w-full">
                 <img
@@ -284,7 +284,7 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 4: INTERACTIVE EXECUTIVE FLOW */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-24 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
           <div className="w-full max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
@@ -302,10 +302,10 @@ export default function SecurityLeadersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
               <button
                 onClick={() => setActiveStage(1)}
-                className={`text-left p-5 rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
+                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
                   activeStage === 1
                     ? "bg-white dark:bg-[#0A111F] border-primary ring-2 ring-primary/20 text-slate-900 dark:text-white"
-                    : "bg-white dark:bg-[#0A111F] border-slate-200 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
+                    : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -319,10 +319,10 @@ export default function SecurityLeadersPage() {
 
               <button
                 onClick={() => setActiveStage(2)}
-                className={`text-left p-5 rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
+                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
                   activeStage === 2
                     ? "bg-white dark:bg-[#0A111F] border-emerald-500 ring-2 ring-emerald-500/20 text-slate-900 dark:text-white"
-                    : "bg-white dark:bg-[#0A111F] border-slate-200 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
+                    : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -336,10 +336,10 @@ export default function SecurityLeadersPage() {
 
               <button
                 onClick={() => setActiveStage(3)}
-                className={`text-left p-5 rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
+                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
                   activeStage === 3
                     ? "bg-white dark:bg-[#0A111F] border-primary ring-2 ring-primary/20 text-slate-900 dark:text-white"
-                    : "bg-white dark:bg-[#0A111F] border-slate-200 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
+                    : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -353,10 +353,10 @@ export default function SecurityLeadersPage() {
 
               <button
                 onClick={() => setActiveStage(4)}
-                className={`text-left p-5 rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
+                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col justify-between border ${
                   activeStage === 4
                     ? "bg-white dark:bg-[#0A111F] border-emerald-500 ring-2 ring-emerald-500/20 text-slate-900 dark:text-white"
-                    : "bg-white dark:bg-[#0A111F] border-slate-200 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
+                    : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -370,7 +370,7 @@ export default function SecurityLeadersPage() {
             </div>
 
             {/* Stage Detail Display Box */}
-            <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-200 dark:border-navy-700">
+            <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-300 dark:border-navy-700">
               {activeStage === 1 && (
                 <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
@@ -471,7 +471,7 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 5: RELEVANT EXECUTIVE MODULES */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-24">
+        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
           <div className="max-w-3xl mb-12">
             <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
               ORCHESTRATED MODULES
@@ -487,7 +487,7 @@ export default function SecurityLeadersPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               href="/products/risk-register"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <ShieldAlert className="w-8 h-8 text-primary mb-3" />
@@ -503,7 +503,7 @@ export default function SecurityLeadersPage() {
 
             <Link
               href="/products/remediation"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Clock className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
@@ -519,7 +519,7 @@ export default function SecurityLeadersPage() {
 
             <Link
               href="/products/audits"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <FileCheck className="w-8 h-8 text-primary mb-3" />
@@ -535,7 +535,7 @@ export default function SecurityLeadersPage() {
 
             <Link
               href="/products/control-mapping"
-              className="group p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-200 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Layers className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
@@ -552,9 +552,9 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 6: BOTTOM CTA */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-24 border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-t border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-lg border border-slate-200 dark:border-navy-700">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
                   Bring defensible oversight to your security program.

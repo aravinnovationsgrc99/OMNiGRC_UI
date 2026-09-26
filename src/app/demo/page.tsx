@@ -96,7 +96,7 @@ export default function DemoPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-[52px] lg:leading-[60px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
               Request a walkthrough of the OMNiGRC platform.
             </h1>
 
@@ -107,7 +107,7 @@ export default function DemoPage() {
         </section>
 
         {/* SECTION: INTAKE FORM & WALKTHROUGH SCOPE */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Column: Expectations & Benefits */}
             <div className="lg:col-span-6 space-y-8">
@@ -131,7 +131,7 @@ export default function DemoPage() {
                   "Review the Compliance Testing Board with rolling 30/60/90-day visibility",
                   "Discuss deployment model options (Shared SaaS, Private MSSP, or Customer-Controlled Docker)",
                 ].map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-200 dark:border-navy-700/60">
+                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-300 dark:border-navy-700/60">
                     <div className="p-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 shrink-0 mt-0.5">
                       <CheckCircle2 className="h-4 w-4 text-[#F15E1C]" />
                     </div>
@@ -141,7 +141,7 @@ export default function DemoPage() {
               </div>
 
               {/* Product Truth Boundary Notice */}
-              <div className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 flex items-start gap-3">
+              <div className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 flex items-start gap-3">
                 <Lock className="h-5 w-5 text-[#F15E1C] shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-mono font-bold text-[#F15E1C] uppercase mb-0.5">CONFIDENTIAL & TENANT ISOLATED</p>
@@ -154,7 +154,7 @@ export default function DemoPage() {
 
             {/* Right Column: Intake Form Card */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl border border-slate-200 dark:border-navy-700/60 bg-[#f1f3ff] dark:bg-navy-950/30 p-8 sm:p-10 shadow-xl">
+              <div className="rounded-3xl border border-slate-300 dark:border-navy-700/60 bg-[#f1f3ff] dark:bg-navy-950/30 p-space-card shadow-xl">
                 <h3 className="text-2xl font-bold text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
                 <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
 

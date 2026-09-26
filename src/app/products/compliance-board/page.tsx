@@ -45,7 +45,7 @@ export default function ComplianceBoardPage() {
       <main className="flex-1 w-full pt-16 bg-transparent min-h-screen">
 <div className="flex flex-col w-full">
 {/*  Top Hero Header Section with Asymmetric Balance  */}
-<section className="relative w-full overflow-hidden bg-white dark:bg-[#0A111F] bg-grid-mesh-adaptive py-16 md:py-24">
+<section className="relative w-full overflow-hidden bg-white dark:bg-[#0A111F] bg-grid-mesh-adaptive py-space-section">
 <div className="max-w-[1440px] mx-auto px-8">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 {/*  Text Column (7 Cols)  */}
@@ -257,8 +257,8 @@ export default function ComplianceBoardPage() {
 </section>
 
         {/* Related Article Banner */}
-        <section className="w-full max-w-[1440px] mx-auto px-8 pb-16">
-          <div className="p-6 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <section className="w-full max-w-[1440px] mx-auto px-8 py-space-section">
+          <div className="p-space-card rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <span className="px-2.5 py-1 rounded bg-[#2E936F]/10 text-[#2E936F] dark:text-teal font-mono text-xs font-bold uppercase">COMPLIANCE ESSENTIALS</span>
               <div>

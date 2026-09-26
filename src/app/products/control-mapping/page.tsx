@@ -81,7 +81,7 @@ export default function ControlMappingPage() {
         )}
 
         {/*  SECTION 1: HERO & MAP-ONCE VALUE PROPOSITION  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-xl overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-section overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Headline & Action Buttons  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -139,7 +139,7 @@ export default function ControlMappingPage() {
             </div>
             {/*  Right Column: Visual Crosswalk Interactive Card  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-md shadow-xl flex flex-col gap-space-md border border-slate-200 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -186,7 +186,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 2: MAP-ONCE CAPABILITY OVERVIEW  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Layers className="h-5 w-5 shrink-0" />
@@ -235,7 +235,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 3: INTERACTIVE CLAUSE CORRELATION EXPLORER  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-xl" id="clause-correlation">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-section" id="clause-correlation">
           <div className="max-w-7xl mx-auto px-gutter">
             <div className="flex flex-col gap-space-xs mb-space-lg">
               <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
@@ -389,7 +389,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 4: DATA PAYLOAD MINIMIZATION PIPELINE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Lock className="h-5 w-5 shrink-0" />
@@ -464,7 +464,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 5: ADVISORY AI PRINCIPLES & GOVERNANCE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="p-space-xl rounded-2xl bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-xl">
             <div className="flex flex-col items-start gap-space-md max-w-2xl">
               <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-slate-800 text-primary font-label-sm text-label-sm uppercase tracking-wider">
@@ -506,7 +506,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 6: FRAMEWORK CROSSWALK MATRIX TABLE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <Scale className="h-5 w-5 shrink-0" />
@@ -561,7 +561,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 7: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-xl">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
             <h2 className="font-headline-lg text-headline-lg font-bold">Ready to eliminate duplicate compliance controls?</h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Upload your current framework policies into OMNiGRC and experience human-governed advisory AI control mapping in real time.</p>

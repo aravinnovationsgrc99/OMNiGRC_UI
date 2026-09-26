@@ -71,7 +71,7 @@ export const ArchitectureSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-slate-50 dark:bg-[#0A111F] py-space-section border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <motion.p
@@ -104,7 +104,7 @@ export const ArchitectureSection: React.FC = () => {
         </div>
 
         {/* AI Trust Model: "AI ASSISTS. HUMANS DECIDE." Dedicated Callout */}
-        <div className="mb-10 rounded-3xl border border-teal/40 bg-gradient-to-r from-teal/15 via-white dark:via-navy-900/90 to-amber/15 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        <div className="mb-10 rounded-3xl border border-teal/40 bg-gradient-to-r from-teal/15 via-white dark:via-navy-900/90 to-amber/15 p-space-card shadow-2xl backdrop-blur-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-3">
               <span className="px-3 py-1 rounded-full bg-[#FAB60A]/20 dark:bg-amber/15 border border-[#FAB60A]/30 dark:border-amber/30 text-navy-900 dark:text-amber text-xs font-mono font-bold uppercase">

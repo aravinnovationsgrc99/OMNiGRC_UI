@@ -126,9 +126,9 @@ export const IsometricHeroVisual: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-[11px]">
+                <div className="p-2.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-2xs">
                   <p className="font-bold text-[#FAB60A]">Risk Linkage:</p>
-                  <p className="text-[10px] text-slate-300 font-medium">Linked to 4 controls & 2 active treatment plans</p>
+                  <p className="text-2xs text-slate-300 font-medium">Linked to 4 controls & 2 active treatment plans</p>
                 </div>
               </div>
 
@@ -144,11 +144,11 @@ export const IsometricHeroVisual: React.FC = () => {
                 </div>
 
                 <div className="p-3 rounded-xl bg-[#0F172A] border border-teal/40">
-                  <div className="flex items-center justify-between text-[11px] mb-1">
+                  <div className="flex items-center justify-between text-2xs mb-1">
                     <span className="font-bold text-white">CTRL-084: Mandatory MFA & Passkeys</span>
                     <span className="font-mono text-[#2E936F] dark:text-teal text-[10px] font-bold">94% Match</span>
                   </div>
-                  <p className="text-[10px] text-slate-300 mb-2">
+                  <p className="text-2xs text-slate-300 mb-2">
                     Internal control mapped once. AI suggests matching clauses:
                   </p>
                   <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
@@ -167,7 +167,7 @@ export const IsometricHeroVisual: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 text-[11px]">
+                <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 text-2xs">
                   <span className="text-slate-300 font-medium">Analyst Review:</span>
                   <span className="text-[#2E936F] dark:text-teal font-bold flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Approved by GRC Lead
@@ -185,14 +185,14 @@ export const IsometricHeroVisual: React.FC = () => {
                     <span className="text-[10px] font-mono text-slate-300 font-medium">Rolling 30d</span>
                   </div>
                   <h4 className="text-sm font-bold text-white mb-2 tracking-tight">Evidence Cadence</h4>
-                  <div className="space-y-2 text-[11px]">
+                  <div className="space-y-2 text-2xs">
                     <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
                       <p className="font-bold text-slate-100">Access Review</p>
-                      <p className="text-[10px] text-[#2E936F] dark:text-teal font-semibold">Passed • Verified 2d ago</p>
+                      <p className="text-2xs text-[#2E936F] dark:text-teal font-semibold">Passed • Verified 2d ago</p>
                     </div>
                     <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
                       <p className="font-bold text-slate-100">Encryption Audit</p>
-                      <p className="text-[10px] text-[#FAB60A] font-semibold">Due in 14 days</p>
+                      <p className="text-2xs text-[#FAB60A] font-semibold">Due in 14 days</p>
                     </div>
                   </div>
                 </div>
@@ -241,8 +241,8 @@ export const IsometricHeroVisual: React.FC = () => {
                           : "bg-teal/15 text-[#2E936F] dark:text-teal-300 border border-teal/30"
                       }`}
                     >
-                      <span className="text-[10px] sm:text-[11px] leading-none">{cell.score}</span>
-                      <span className="text-[8px] sm:text-[9px] opacity-90 font-sans mt-0.5">{cell.lvl[0]}</span>
+                      <span className="text-2xs leading-none">{cell.score}</span>
+                      <span className="text-2xs opacity-90 font-sans mt-0.5">{cell.lvl[0]}</span>
                     </div>
                   ))}
                 </div>
@@ -250,14 +250,14 @@ export const IsometricHeroVisual: React.FC = () => {
               <div className="md:col-span-5 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between shadow-lg">
                 <div>
                   <span className="text-[10px] font-mono text-[#FAB60A] uppercase font-bold">Active Risk Items</span>
-                  <div className="space-y-2 mt-2 text-xs">
+                  <div className="space-y-2 text-xs">
                     <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
                       <p className="font-bold text-white">RSK-102: Vendor API Downtime</p>
-                      <p className="text-[10px] text-slate-300 font-medium">Score: 16 (High) → Residual: 6 (Low)</p>
+                      <p className="text-2xs text-slate-300 font-medium">Score: 16 (High) → Residual: 6 (Low)</p>
                     </div>
                     <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
                       <p className="font-bold text-white">RSK-088: Cloud Access Drift</p>
-                      <p className="text-[10px] text-slate-300 font-medium">Score: 20 (Critical) → Mitigated</p>
+                      <p className="text-2xs text-slate-300 font-medium">Score: 20 (Critical) → Mitigated</p>
                     </div>
                   </div>
                 </div>
@@ -281,7 +281,7 @@ export const IsometricHeroVisual: React.FC = () => {
                 <span className="text-[10px] font-mono uppercase text-[#FAB60A] font-bold">1. Control Definition</span>
                 <div className="mt-2 p-3 rounded-xl bg-[#0F172A] border border-slate-700/60 space-y-2">
                   <p className="text-xs font-bold text-white">CTRL-019: Automated Patch Management</p>
-                  <p className="text-[11px] text-slate-200 font-medium">
+                  <p className="text-2xs text-slate-200 font-medium">
                     &quot;Critical vulnerabilities must be patched within 14 days of public disclosure with rollback tests.&quot;
                   </p>
                   <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-slate-300">
@@ -329,7 +329,7 @@ export const IsometricHeroVisual: React.FC = () => {
                   </div>
                   <p className="font-extrabold text-xs text-white tracking-tight">{fw.name}</p>
                   <p className="text-[11px] text-[#34D399] dark:text-teal-300 font-mono font-bold mt-1.5">{fw.badge}</p>
-                  <p className="text-[10px] text-slate-300 font-medium mt-1 leading-snug">{fw.region}</p>
+                  <p className="text-2xs text-slate-300 font-medium mt-1 leading-snug">{fw.region}</p>
                 </div>
               ))}
             </motion.div>

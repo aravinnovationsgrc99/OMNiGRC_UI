@@ -69,7 +69,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-space-section overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -118,7 +118,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   <div className="text-[11px] font-mono text-slate-400 mt-2">Map Once → Crosswalk across 6 Global Standards</div>
                 </div>
               ) : (
-                <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
+                <div className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-[#006c4d] dark:bg-teal-500" />
@@ -130,11 +130,11 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   </div>
 
                   <div className="p-4 rounded-xl bg-[#23304c] text-white font-mono text-xs shadow-inner space-y-2">
-                    <div className="flex items-center justify-between text-slate-400 text-[11px]">
+                    <div className="flex items-center justify-between text-slate-400 text-2xs">
                       <span>WORKFLOW MODULE</span>
                       <span>{pillar.code}</span>
                     </div>
-                    <div className="text-[#95f6cb] font-semibold text-[11px]">
+                    <div className="text-[#95f6cb] font-semibold text-2xs">
                       {pillar.oneLiner}
                     </div>
                   </div>
@@ -159,7 +159,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         </section>
 
         {/* WORKFLOW CAPABILITIES & FEATURES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60" id="workflow-capabilities">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60" id="workflow-capabilities">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
@@ -175,7 +175,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
               {pillar.features.map((feat, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex items-start gap-4">
+                <div key={idx} className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-sm flex items-start gap-4">
                   <div className="p-2.5 rounded-xl bg-[#ffdbcf] dark:bg-orange-950/30 text-[#F15E1C] dark:text-orange-400 shrink-0 font-mono text-xs font-bold">
                     0{idx + 1}
                   </div>
@@ -188,7 +188,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </div>
 
             {/* Product Truth Boundary Reminder Card */}
-            <div className="max-w-3xl mx-auto p-5 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 shadow-sm flex items-center gap-4">
+            <div className="max-w-3xl mx-auto p-5 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700/60 shadow-sm flex items-center gap-4">
               <div className="p-2 rounded-lg bg-[#95f6cb] dark:bg-teal-950/50 text-[#00513a] dark:text-teal-400 shrink-0">
                 <UserCheck className="h-5 w-5" />
               </div>
@@ -201,7 +201,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         </section>
 
         {/* CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Experience {pillar.name} in Action

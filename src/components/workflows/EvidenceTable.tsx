@@ -157,7 +157,7 @@ export function EvidenceTable() {
                   <div className="text-xs text-slate-500 mt-1">{row.role}</div>
                 </td>
                 <td className="p-4 align-top">
-                  <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${row.stateColor}`}>
+                  <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-2xs font-bold uppercase tracking-wider ${row.stateColor}`}>
                     {row.stateIcon} {row.state}
                   </span>
                   <div className="font-mono text-[10px] font-semibold text-slate-500 mt-2 ml-1">

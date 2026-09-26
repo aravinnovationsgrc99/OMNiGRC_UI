@@ -44,7 +44,7 @@ export const UnifiedPlatformSection: React.FC = () => {
   }));
 
   return (
-    <section id="core-workflows" className="relative bg-slate-100 dark:bg-[#16233F] py-10 sm:py-24 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section id="core-workflows" className="relative bg-slate-100 dark:bg-[#16233F] py-space-section border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       {/* Background radial glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] sm:h-[700px] w-[90vw] max-w-[900px] rounded-full bg-teal/10 blur-[140px]" />
 
@@ -69,10 +69,10 @@ export const UnifiedPlatformSection: React.FC = () => {
               <button
                 key={pillar.id}
                 onClick={() => setActivePillar(idx)}
-                className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col items-start justify-center gap-1 w-full text-left transition-all duration-200 ${
+                className={`p-space-card rounded-2xl border flex flex-col items-start justify-center gap-1 w-full text-left transition-all duration-200 ${
                   isSelected
                     ? "border-[#2E936F] dark:border-teal bg-white dark:bg-navy-900 shadow-lg shadow-teal/20 scale-[1.02] ring-1 ring-[#2E936F]/30 dark:ring-teal/30"
-                    : "border-slate-200 dark:border-navy-700/60 bg-white/60 dark:bg-[#0A111F]/60 hover:border-teal/40 dark:hover:bg-navy-900/60"
+                    : "border-slate-300 dark:border-navy-700/60 bg-white/60 dark:bg-[#0A111F]/60 hover:border-teal/40 dark:hover:bg-navy-900/60"
                 }`}
               >
                 <span className="block w-full text-[11px] font-mono font-bold uppercase tracking-widest text-[#D4521A] dark:text-amber mb-0.5">
@@ -94,7 +94,7 @@ export const UnifiedPlatformSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.3 }}
-            className="rounded-3xl border border-teal/30 bg-white dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl"
+            className="rounded-3xl border border-teal/30 bg-white dark:bg-navy-900/90 p-space-card shadow-2xl backdrop-blur-xl"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column: Pillar Details & Points */}
@@ -114,11 +114,11 @@ export const UnifiedPlatformSection: React.FC = () => {
                   <div aria-hidden="true" className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#0A111F]/80 border border-teal/30 font-mono text-xs">
                     {activePillar === 0 && (
                       <div className="space-y-2">
-                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                        <div className="flex items-center justify-between text-2xs text-amber font-bold uppercase">
                           <span>5x5 Likelihood × Impact Matrix Flow</span>
                           <span className="text-teal">Quantified</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
+                        <div className="flex items-center gap-1.5 text-2xs text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">Inherent Risk</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">5x5 Score</span>
@@ -130,11 +130,11 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                     {activePillar === 1 && (
                       <div className="space-y-2">
-                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                        <div className="flex items-center justify-between text-2xs text-amber font-bold uppercase">
                           <span>Dependency Node Flow</span>
                           <span className="text-teal">Traced</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
+                        <div className="flex items-center gap-1.5 text-2xs text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-sky-500/20 text-sky-600 dark:text-sky-300 font-bold">Asset</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">PII Stream</span>
@@ -148,11 +148,11 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                     {activePillar === 2 && (
                       <div className="space-y-2">
-                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                        <div className="flex items-center justify-between text-2xs text-amber font-bold uppercase">
                           <span>Map-Once Crosswalk Alignment</span>
                           <span className="text-teal">AI + Human</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
+                        <div className="flex items-center gap-1.5 text-2xs text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">1 Control</span>
                           <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-300 font-bold">AI Matcher</span>
@@ -164,11 +164,11 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                     {activePillar === 3 && (
                       <div className="space-y-2">
-                        <div className="flex items-center justify-between text-[10px] text-amber font-bold uppercase">
+                        <div className="flex items-center justify-between text-2xs text-amber font-bold uppercase">
                           <span>Rolling Kanban Testing Cadence</span>
                           <span className="text-teal">Audit-Ready</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-navy-900 dark:text-slate-200">
+                        <div className="flex items-center gap-1.5 text-2xs text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-rose-500/20 text-rose-500 dark:text-rose-300 font-bold">30d Due</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">60d Due</span>
@@ -263,7 +263,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                     <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 flex items-center justify-between text-xs">
                       <div>
                         <p className="font-bold text-white">RSK-042: Database Backup Restoration Failure</p>
-                        <p className="text-[11px] text-slate-300 mt-0.5">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
+                        <p className="text-2xs text-slate-300 mt-0.5">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
                       </div>
                       <span className="px-2.5 py-1 rounded bg-teal/20 text-teal-300 font-mono font-bold text-xs">
                         Residual: Low
@@ -331,7 +331,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                       <div className="p-3 rounded-lg bg-[#0A111F] border border-teal/30">
                         <p className="text-[10px] font-mono text-amber font-bold uppercase">Source Internal Control:</p>
                         <p className="text-xs font-bold text-white mt-1">CTRL-005: Quarterly User Access & Privilege Reviews</p>
-                        <p className="text-[11px] text-slate-300 mt-1">
+                        <p className="text-2xs text-slate-300 mt-1">
                           &quot;Privileged access rights to production databases are reviewed and recertified every 90 days by team leads.&quot;
                         </p>
                       </div>
@@ -343,7 +343,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                           return (
                             <div
                               key={mIdx}
-                              className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-[11px]"
+                              className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-2xs"
                             >
                               <span className="font-bold text-amber">{fwObj?.name || m.code}:</span>
                               <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
@@ -383,9 +383,9 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>Next 30 Days</span>
                           <span className="bg-teal/20 px-1.5 py-0.5 rounded text-teal-300">2 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
+                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-2xs">
                           <p className="font-bold text-white">MFA Configuration Test</p>
-                          <p className="text-[10px] text-slate-300 mt-0.5">Owner: SecOps Lead</p>
+                          <p className="text-2xs text-slate-300 mt-0.5">Owner: SecOps Lead</p>
                           <p className="text-[9px] font-mono text-amber mt-1">Due in 6 days</p>
                         </div>
                       </div>
@@ -396,9 +396,9 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>30 - 60 Days</span>
                           <span className="bg-amber/20 px-1.5 py-0.5 rounded text-amber">3 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
+                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-2xs">
                           <p className="font-bold text-white">Vendor SOC 2 Check</p>
-                          <p className="text-[10px] text-slate-300 mt-0.5">Owner: Procurement</p>
+                          <p className="text-2xs text-slate-300 mt-0.5">Owner: Procurement</p>
                           <p className="text-[9px] font-mono text-amber mt-1">Due in 38 days</p>
                         </div>
                       </div>
@@ -409,15 +409,15 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <span>60 - 90 Days</span>
                           <span className="bg-teal/20 px-1.5 py-0.5 rounded text-teal-300">1 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-[11px]">
+                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-2xs">
                           <p className="font-bold text-white">Annual DRP Simulation</p>
-                          <p className="text-[10px] text-slate-300 mt-0.5">Owner: CTO</p>
+                          <p className="text-2xs text-slate-300 mt-0.5">Owner: CTO</p>
                           <p className="text-xs font-mono font-bold text-teal-300 mt-1">Due in 74 days</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-2.5 rounded-lg bg-navy-900 border border-navy-700/60 flex items-center justify-between text-[11px]">
+                    <div className="p-2.5 rounded-lg bg-navy-900 border border-navy-700/60 flex items-center justify-between text-2xs">
                       <span className="text-slate-300">Auditor Export Readiness:</span>
                       <span className="text-teal-300 font-mono font-bold text-xs">100% On Schedule</span>
                     </div>
