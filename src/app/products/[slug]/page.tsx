@@ -74,7 +74,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <div className={`${slug === "control-mapping" ? "lg:col-span-5" : "lg:col-span-7"} flex flex-col items-start text-left`}>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
                 <span className="font-mono text-xs font-semibold tracking-wider uppercase">
@@ -110,13 +110,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </div>
 
             {/* Right Visual Container */}
-            <div className="lg:col-span-5 relative">
+            <div className={`${slug === "control-mapping" ? "lg:col-span-7" : "lg:col-span-5"} relative w-full`}>
               {slug === "control-mapping" ? (
-                <div className="p-4 rounded-2xl bg-[#0F172A] border border-slate-800 shadow-xl overflow-hidden min-h-[320px] flex flex-col justify-between">
-                  <div className="text-xs font-mono text-[#95f6cb] mb-2">3D CONTROL CROSSWALK GRAPH</div>
-                  <ControlMapping3DGraph />
-                  <div className="text-[11px] font-mono text-slate-400 mt-2">Map Once → Crosswalk across 6 Global Standards</div>
-                </div>
+                <ControlMapping3DGraph />
               ) : (
                 <div className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
                   <div className="flex items-center justify-between">

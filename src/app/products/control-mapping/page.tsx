@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ControlMapping3DGraph } from "@/components/3d/ControlMapping3DGraph";
 import {
   FolderLock, Database, Verified, Calendar, BookOpen, Lock, Info,
   AlertOctagon, CheckCircle, Link as LinkIcon, Bot, CalendarDays, Badge,
@@ -389,78 +390,8 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 4: DATA PAYLOAD MINIMIZATION PIPELINE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-              <Lock className="h-5 w-5 shrink-0" />
-              <span>Privacy by Design Architecture</span>
-            </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">
-              The 8-Stage Data Payload Minimization Pipeline
-            </h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl">
-              Why compliance teams trust OMNiGRC Advisory AI: structured event logging, sensitive-data payload minimization, and strict human review boundaries.
-            </p>
-          </div>
-          {/*  8-Stage Pipeline Grid  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 01</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Payload Minimization</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Advisory payloads are minimized and sanitized before being sent to external AI providers.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 02</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">API Key Authorization Check</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Validates tenant authorization parameters before sending anonymized metadata into the Advisory AI engine.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 03</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Semantic Embedding Match</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Calculates similarity scores against pre-indexed regulatory framework definitions.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 04</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Candidate Recommendation</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Generates candidate crosswalk mappings for compliance review.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 05</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Human Governance Queue</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Routes crosswalk recommendations to designated GRC leads for evaluation.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 06</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Human Ratification Lock</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">User explicitly verifies and approves the crosswalk mapping.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 07</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Canonical Evidence Binding</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Binds evidence artifact to ratified framework clause references.</p>
-              </div>
-            </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 08</span>
-                <h4 className="font-label-md text-label-md text-slate-900 dark:text-white font-semibold mt-1">Structured Evidence Verification</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Records verified audit assertion into GRC workpaper vault.</p>
-              </div>
-            </div>
-          </div>
+        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="pipeline-architecture">
+          <ControlMapping3DGraph />
         </section>
 
         {/*  SECTION 5: ADVISORY AI PRINCIPLES & GOVERNANCE  */}

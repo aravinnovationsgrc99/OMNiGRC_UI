@@ -35,6 +35,14 @@ export const metadata: Metadata = {
   },
   description:
     "Bridge disconnected spreadsheets and enterprise GRC overhead. OMNiGRC unifies risk registers, asset inventories, control mapping, compliance testing, and defensible audit evidence into one operating layer.",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "OMNiGRC — Unified Risk, Asset, and Security-Control Management Platform",
     description:
