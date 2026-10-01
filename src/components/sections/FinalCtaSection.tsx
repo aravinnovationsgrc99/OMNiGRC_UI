@@ -65,14 +65,14 @@ export const FinalCtaSection: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-20 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
+    <section className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
       {/* Soft Ambient Background Glow using OMNiGRC Palette (#2E936F / #F15E1C) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[36rem] h-[36rem] rounded-full bg-[#2E936F]/10 dark:bg-[#2E936F]/15 blur-3xl"
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto space-y-10 sm:space-y-14">
+      <div className="relative z-10 max-w-5xl mx-auto space-y-6 sm:space-y-8">
         {/* Main Conversion Card */}
         <motion.div
           variants={containerVariants}
@@ -92,7 +92,7 @@ export const FinalCtaSection: React.FC = () => {
           {/* Primary Headline */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug sm:leading-tight max-w-3xl mx-auto mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug sm:leading-tight max-w-3xl mx-auto mb-4 sm:mb-6"
           >
             Your next audit shouldn&apos;t start <br className="hidden sm:inline" />
             with a spreadsheet.
@@ -101,7 +101,7 @@ export const FinalCtaSection: React.FC = () => {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
+            className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
           >
             Bring risk, assets, and controls into one workflow — built for lean security teams, backed by SOC 2 Type II, tenant isolation, and AI that drafts while your team approves.
           </motion.p>
@@ -114,7 +114,7 @@ export const FinalCtaSection: React.FC = () => {
             {/* Primary CTA */}
             <Link
               href="/demo"
-              className="w-full sm:w-auto max-w-[360px] h-[52px] sm:h-[56px] px-8 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-bold text-base flex items-center justify-center gap-2.5 shadow-lg shadow-[#2E936F]/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group"
+              className="w-full sm:w-auto max-w-[360px] h-[54px] sm:h-[58px] px-8 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 shadow-lg shadow-[#2E936F]/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group"
             >
               <span>Request a Demo</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -123,7 +123,7 @@ export const FinalCtaSection: React.FC = () => {
             {/* Secondary CTA */}
             <Link
               href="/pricing"
-              className="w-full sm:w-auto max-w-[360px] h-[52px] sm:h-[56px] px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-base flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200"
+              className="w-full sm:w-auto max-w-[360px] h-[54px] sm:h-[58px] px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-base sm:text-lg flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200"
             >
               <span>Explore Pricing &amp; Calculator</span>
             </Link>
@@ -135,20 +135,20 @@ export const FinalCtaSection: React.FC = () => {
           {/* Trust Signals List */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium"
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-6 text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium"
           >
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#2E936F] dark:bg-teal-400 shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F] dark:bg-teal-400 shrink-0" />
               <span>SOC 2 Type II — In Progress</span>
             </span>
             <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#FAB60A] dark:bg-amber-400 shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FAB60A] dark:bg-amber-400 shrink-0" />
               <span>Application-level tenant isolation</span>
             </span>
             <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#F15E1C] shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#F15E1C] shrink-0" />
               <span>Advisory AI with payload minimization &amp; human approval</span>
             </span>
           </motion.div>
@@ -164,10 +164,10 @@ export const FinalCtaSection: React.FC = () => {
         >
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <span className="font-mono text-[11px] text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider flex items-center gap-1.5">
                 <Mail className="h-3.5 w-3.5 text-[#2E936F]" /> Ctrl + GRC Newsletter
               </span>
-              <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">
+              <p className="text-sm text-slate-600 dark:text-slate-300 font-medium">
                 Bi-monthly GRC insights on frameworks, clauses, and practical security operations.
               </p>
             </div>

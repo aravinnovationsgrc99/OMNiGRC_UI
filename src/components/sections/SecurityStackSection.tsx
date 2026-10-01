@@ -92,14 +92,14 @@ export const SecurityStackSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-20 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
       {/* Background Glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] rounded-full bg-[#2E936F]/10 blur-3xl"
       />
 
-      <div className="max-w-5xl mx-auto space-y-8 sm:space-y-12">
+      <div className="max-w-5xl mx-auto space-y-5 sm:space-y-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#F15E1C] dark:text-amber text-xs font-mono tracking-wider uppercase font-semibold shadow-sm">
@@ -107,12 +107,12 @@ export const SecurityStackSection: React.FC = () => {
             <span>COMPLETE GRC SUITE</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Not just risk and controls. <br />
             <span className="text-[#2E936F] dark:text-teal-400">The full security stack.</span>
           </h2>
 
-          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
             Modular capabilities that scale with your team — vulnerability management, asset inventory, evidence, and audit-readiness, without enterprise lock-in or endless professional services hours.
           </p>
         </div>
@@ -131,29 +131,29 @@ export const SecurityStackSection: React.FC = () => {
                 >
                   <Link
                     href={layer.href}
-                    className="group relative flex flex-row items-center justify-between gap-4 sm:gap-6 p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/95 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-md"
+                    className="group relative flex flex-row items-center justify-between gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/95 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-md"
                   >
                     {/* Left Icon Badge */}
                     <div
-                      className={`w-14 h-14 sm:w-20 sm:h-20 shrink-0 rounded-2xl border ${layer.borderColor} ${layer.bgColor} flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm`}
+                      className={`w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl border ${layer.borderColor} ${layer.bgColor} flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm`}
                     >
-                      <Icon className={`h-7 w-7 sm:h-10 sm:w-10 ${layer.textColor}`} />
+                      <Icon className={`h-8 w-8 sm:h-10 sm:w-10 ${layer.textColor}`} />
                     </div>
 
                     {/* Middle Details */}
-                    <div className="flex-1 min-w-0 text-left space-y-0.5 sm:space-y-1">
+                    <div className="flex-1 min-w-0 text-left space-y-1 sm:space-y-1.5">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className={`font-mono text-xs font-extrabold uppercase ${layer.textColor}`}>
+                        <span className={`font-mono text-xs sm:text-sm font-extrabold uppercase ${layer.textColor}`}>
                           LAYER {layer.num}
                         </span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-semibold">
+                        <span className="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-bold">
                           {layer.badge}
                         </span>
                       </div>
-                      <h3 className="text-base sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
                         {layer.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                      <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                         {layer.desc}
                       </p>
                     </div>

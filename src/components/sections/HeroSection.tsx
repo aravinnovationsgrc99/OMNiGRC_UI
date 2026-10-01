@@ -122,7 +122,7 @@ export const HeroSection: React.FC = () => {
         {/* 4. Hero CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-[340px] sm:max-w-none mx-auto"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6 w-full max-w-[340px] sm:max-w-none mx-auto"
         >
           <Link href="/get-a-demo" className="w-full sm:w-auto">
             <Button
@@ -161,7 +161,7 @@ export const HeroSection: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.35 }}
-        className="relative z-10 w-full border-t border-[#E8C090]/80 dark:border-navy-700/60 bg-[#F7D7B0]/50 dark:bg-[#0A111F]/80 py-3.5 sm:py-5 backdrop-blur-md mt-6 sm:mt-10"
+        className="relative z-10 w-full border-t border-[#E8C090]/80 dark:border-navy-700/60 bg-[#F7D7B0]/50 dark:bg-[#0A111F]/80 py-3 sm:py-4 backdrop-blur-md mt-4 sm:mt-6"
       >
         <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-center sm:text-left">
           <div className="flex items-center justify-center sm:justify-start gap-2 text-[#F15E1C] dark:text-amber font-mono font-semibold uppercase tracking-wider text-[10px] sm:text-xs">

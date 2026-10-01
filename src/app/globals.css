@@ -24,7 +24,7 @@
 
   /* Spacing tokens */
   --space-card:        24px;
-  --space-section:     32px;
+  --space-section:     24px;
 
   /* Navbar height token — used for page-content clearance */
   --navbar-h:          64px;
@@ -33,7 +33,7 @@
 
 @media (min-width: 768px) {
   :root {
-    --space-section: 48px;
+    --space-section: 36px;
   }
 }
 

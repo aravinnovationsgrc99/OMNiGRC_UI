@@ -50,14 +50,14 @@ export const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-20 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
       {/* Background Glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#F15E1C]/10 blur-3xl"
       />
 
-      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+      <div className="max-w-6xl mx-auto space-y-5 sm:space-y-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#F15E1C]/40 bg-[#F15E1C]/10 text-[#F15E1C] dark:text-amber text-[10px] sm:text-xs font-mono tracking-wider uppercase font-semibold shadow-sm">

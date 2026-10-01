@@ -71,20 +71,20 @@ export const DeploymentSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-slate-50/50 dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-12 sm:py-20 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
-      <div className="max-w-6xl mx-auto space-y-10 sm:space-y-14">
+    <section className="relative w-full bg-slate-50/50 dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
+      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber font-bold inline-block">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber font-bold inline-block">
             DEPLOYMENT FLEXIBILITY
           </span>
 
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Deploy your way — <br className="hidden sm:inline" />
             <span className="text-[#2E936F] dark:text-teal-400">cloud speed or air-gapped sovereignty.</span>
           </h2>
 
-          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
             From fast multi-tenant SaaS onboarding to fully isolated, regulator-grade infrastructure — pick the model that matches your compliance posture, not the other way around.
           </p>
         </div>
@@ -111,10 +111,10 @@ export const DeploymentSection: React.FC = () => {
                   <div className="space-y-5">
                     {/* Header Badges */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[10px] font-mono font-extrabold text-slate-400 uppercase tracking-wider">
+                      <span className="text-xs font-mono font-extrabold text-slate-400 uppercase tracking-wider">
                         {model.step}
                       </span>
-                      <span className={`text-[10px] font-mono px-2.5 py-1 rounded-full font-bold ${model.badgeBg}`}>
+                      <span className={`text-xs font-mono px-2.5 py-1 rounded-full font-bold ${model.badgeBg}`}>
                         {model.badge}
                       </span>
                     </div>
@@ -125,29 +125,29 @@ export const DeploymentSection: React.FC = () => {
                         <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
                           {model.title}
                         </h3>
-                        <p className="text-xs font-mono text-slate-400 mt-0.5">{model.speed}</p>
+                        <p className="text-xs font-mono text-slate-400 mt-0.5 font-bold">{model.speed}</p>
                       </div>
                       <div className={`p-3 rounded-2xl bg-slate-100 dark:bg-navy-800 ${model.accent} shrink-0`}>
                         <Icon className="h-6 w-6" />
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                       {model.desc}
                     </p>
 
                     {/* Characteristics */}
-                    <ul className="space-y-2.5 pt-2 border-t border-slate-100 dark:border-navy-800">
+                    <ul className="space-y-3 pt-2 border-t border-slate-100 dark:border-navy-800">
                       {model.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-200">
-                          <CheckCircle2 className={`h-4 w-4 shrink-0 mt-0.5 ${model.accent}`} />
+                        <li key={fIdx} className="flex items-start gap-2.5 text-sm sm:text-base text-slate-700 dark:text-slate-200 font-medium">
+                          <CheckCircle2 className={`h-4.5 w-4.5 shrink-0 mt-0.5 ${model.accent}`} />
                           <span>{feat}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mt-8 pt-4 flex items-center justify-between text-xs font-mono font-bold text-[#2E936F] dark:text-teal-400 group-hover:translate-x-1 transition-transform">
+                  <div className="mt-8 pt-4 flex items-center justify-between text-xs sm:text-sm font-mono font-bold text-[#2E936F] dark:text-teal-400 group-hover:translate-x-1 transition-transform">
                     <span>Learn More</span>
                     <ArrowRight className="h-4 w-4" />
                   </div>

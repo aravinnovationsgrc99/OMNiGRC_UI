@@ -1,351 +1,237 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import {
-  Shield,
-  Layers,
-  Database,
+  CheckCircle,
   CheckCircle2,
-  Sparkles,
-  ArrowRight,
-  Eye,
-  Server,
-  FileCheck,
-  AlertTriangle,
-  Lock,
+  Activity,
 } from "lucide-react";
-import { Badge } from "@/components/ui/Badge";
-
-type ActiveTab = "overview" | "risk" | "control" | "framework";
-
-import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const IsometricHeroVisual: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<ActiveTab>("overview");
+  const [activeStageIndex, setActiveStageIndex] = useState<number>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
+
+  const pipelineStages = [
+    {
+      step: "01",
+      label: "01 RISK",
+      title: "5×5 Matrix",
+      sub: "RSK-042 Likelihood 3",
+      traceRisk: "RSK-042 (Backup Failure)",
+      traceControl: "CTRL-012",
+      traceStatus: "Active Risk Scored in Matrix",
+    },
+    {
+      step: "02",
+      label: "02 ASSETS",
+      title: "Cloud / Infra",
+      sub: "RDS Postgres Prod",
+      traceRisk: "RSK-042",
+      traceControl: "Bound to RDS Postgres Prod",
+      traceStatus: "Asset Inventory Verified",
+    },
+    {
+      step: "03",
+      label: "03 CONTROLS",
+      title: "Map-Once",
+      sub: "CTRL-012 Automated",
+      traceRisk: "RSK-042 (Backup Failure)",
+      traceControl: "CTRL-012 (Snapshot Test)",
+      traceStatus: "Map-Once Safeguard Active",
+    },
+    {
+      step: "04",
+      label: "04 TESTING",
+      title: "30-Day Cadence",
+      sub: "Automated Drill Pass",
+      traceRisk: "RSK-042",
+      traceControl: "CTRL-012",
+      traceStatus: "Automated Restoration Drill Passed",
+    },
+    {
+      step: "05",
+      label: "05 AUDIT",
+      title: "Cross-Framework",
+      sub: "ISO 27001 + SOC 2",
+      traceRisk: "RSK-042",
+      traceControl: "CTRL-012 (ISO 27001 A.8.13)",
+      traceStatus: "Cross-Mapped to 6 Standards",
+    },
+    {
+      step: "06",
+      label: "06 ACTIONS",
+      title: "Remediation",
+      sub: "SLA Verified (0 Open)",
+      traceRisk: "RSK-042",
+      traceControl: "SLA Compliant",
+      traceStatus: "Remediation SLA Verified (0 Open)",
+    },
+    {
+      step: "07",
+      label: "07 VAULT",
+      title: "Defensible Evidence",
+      sub: "Evidence Verified",
+      traceRisk: "RSK-042",
+      traceControl: "CTRL-012 Evidence Vault",
+      traceStatus: "Evidence Reference Linked & SHA-256 Signed",
+    },
+  ];
+
+  const frameworkBadges = [
+    { name: "ISO 27001", href: "/frameworks/iso-27001" },
+    { name: "ISO 42001", href: "/frameworks/iso-42001" },
+    { name: "SOC 2 Type II", href: "/frameworks/soc-2" },
+    { name: "GDPR / UK GDPR", href: "/frameworks/gdpr" },
+    { name: "DPDP Act 2023", href: "/frameworks/dpdp" },
+    { name: "HIPAA Security", href: "/frameworks/hipaa" },
+  ];
+
+  // Auto-advance active stage highlight
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const timer = setInterval(() => {
+      setActiveStageIndex((prev) => (prev + 1) % pipelineStages.length);
+    }, 3200);
+    return () => clearInterval(timer);
+  }, [isAutoPlaying, pipelineStages.length]);
+
+  const activeStage = pipelineStages[activeStageIndex];
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto my-6 sm:my-12 px-1 sm:px-4 overflow-hidden">
-      {/* Background Glow */}
-      <div className="pointer-events-none absolute -inset-6 bg-gradient-to-r from-teal/20 via-amber/15 to-teal/20 blur-3xl opacity-70 rounded-3xl" />
+    <div className="relative w-full max-w-5xl 2xl:max-w-6xl mx-auto my-2 sm:my-4 px-2 sm:px-4 space-y-4 sm:space-y-5">
+      {/* Background Soft Glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -inset-4 bg-gradient-to-r from-[#2E936F]/20 via-[#FAB60A]/15 to-[#F15E1C]/20 blur-3xl opacity-60 rounded-3xl"
+      />
 
-      {/* Main Dashboard Card — no 3D rotateX/Y to prevent subpixel blur during scroll */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-        className="relative rounded-2xl sm:rounded-3xl border border-teal/30 bg-navy-900/95 dark:bg-navy/95 p-3.5 sm:p-7 shadow-2xl backdrop-blur-2xl w-full max-w-full overflow-hidden"
-        style={{
-          willChange: "transform",
-          transform: "translateZ(0)",
-          boxShadow:
-            "0 25px 50px -12px rgba(15, 110, 106, 0.2), 0 0 40px rgba(22, 35, 63, 0.95)",
-        }}
-      >
-        {/* Top Operational Status Bar */}
-        <div className="flex flex-wrap items-center justify-between border-b border-slate-700 dark:border-slate-800 pb-3.5 mb-5 gap-3">
-          <div className="flex items-center gap-2.5">
-            <div className="flex gap-1.5">
-              <div className="h-2.5 w-2.5 rounded-full bg-teal" />
-              <div className="h-2.5 w-2.5 rounded-full bg-amber" />
-              <div className="h-2.5 w-2.5 rounded-full bg-teal" />
-            </div>
-            <span className="text-xs font-mono text-slate-300 font-semibold pl-1">
-              OMNiGRC Connected Operating System
-            </span>
-          </div>
+      {/* SECTION HEADER & TITLE */}
+      <div className="text-center space-y-3 relative z-10 max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+          Everything connects. Nothing lives in isolation.
+        </h2>
 
-          <div className="flex items-center gap-2">
-            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-teal/15 border border-teal/30 text-[11px] font-mono text-teal font-medium">
-              <Eye className="h-3 w-3" /> Human-in-the-Loop Active
-            </span>
-            <Badge variant="teal" size="sm">
-              Tenant Isolated
-            </Badge>
-          </div>
+        <div className="pt-1">
+          <span className="inline-block px-4 py-1.5 rounded-xl bg-[#0a1528] text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40 tracking-wider">
+            RISK, ASSETS, CONTROLS, EVIDENCE — ONE THREAD, NOT FOUR SILOS.
+          </span>
         </div>
 
-        {/* Tab Switcher for Operational Perspective */}
-        <div className="flex items-center gap-2 mb-5 overflow-x-auto no-scrollbar pb-1">
-          {[
-            { id: "overview", label: "Connected GRC Flow" },
-            { id: "risk", label: "Risk Register & Heatmap" },
-            { id: "control", label: "Control Mapping & AI Suggest" },
-            { id: "framework", label: "5 Supported Frameworks" },
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as ActiveTab)}
-              className={`px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all whitespace-nowrap ${
-                activeTab === tab.id
-                  ? "bg-[#2E936F] dark:bg-teal text-white shadow-lg shadow-[#2E936F]/30 ring-1 ring-white/20"
-                  : "bg-[#1A2333] text-slate-200 hover:text-white hover:bg-slate-800 border border-slate-700/70"
-              }`}
+        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium max-w-2xl mx-auto leading-relaxed">
+          A single operating layer connecting every phase of the security, risk, and audit lifecycle.
+        </p>
+      </div>
+
+      {/* FRAMEWORK BADGES ROW */}
+      <div className="text-center space-y-3 relative z-10">
+        <p className="text-xs sm:text-sm font-mono font-semibold text-slate-600 dark:text-slate-300">
+          Supported out of the box — map a single control across 6 global standards:
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          {frameworkBadges.map((fw, idx) => (
+            <Link
+              key={idx}
+              href={fw.href}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50/90 dark:bg-emerald-950/60 border border-[#2E936F]/40 text-[#00513A] dark:text-teal-300 text-xs sm:text-sm font-mono font-extrabold shadow-sm hover:border-[#2E936F] hover:scale-105 transition-all"
             >
-              {tab.label}
-            </button>
+              <CheckCircle className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal-400 shrink-0" />
+              <span>{fw.name}</span>
+            </Link>
           ))}
         </div>
+      </div>
 
-        {/* Content based on Active Tab */}
-        <AnimatePresence mode="wait">
-          {activeTab === "overview" && (
-            <motion.div
-              key="overview"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-4"
-            >
-              {/* Node 1: Risk & Asset Layer */}
-              <div className="md:col-span-4 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 space-y-3 flex flex-col justify-between shadow-lg">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAB60A] font-bold flex items-center gap-1">
-                      <AlertTriangle className="h-3.5 w-3.5 text-[#FAB60A]" /> Risk & Asset Layer
-                    </span>
-                    <span className="text-[10px] font-mono text-slate-300 font-medium">Live Posture</span>
-                  </div>
-                  <h4 className="text-sm font-bold text-white mb-2 tracking-tight">Connected Asset Inventory</h4>
-                  <div className="space-y-2 text-xs">
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Server className="h-3.5 w-3.5 text-[#2E936F] shrink-0" />
-                        <span className="text-slate-100 font-semibold truncate">Production Cloud DB</span>
-                      </div>
-                      <span className="text-[10px] font-mono text-slate-300">Asset #41</span>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Database className="h-3.5 w-3.5 text-[#FAB60A] shrink-0" />
-                        <span className="text-slate-100 font-semibold truncate">Customer PII Store</span>
-                      </div>
-                      <span className="text-[10px] font-mono text-[#FAB60A] font-bold">High Impact</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-2.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-2xs">
-                  <p className="font-bold text-[#FAB60A]">Risk Linkage:</p>
-                  <p className="text-2xs text-slate-300 font-medium">Linked to 4 controls & 2 active treatment plans</p>
-                </div>
-              </div>
-
-              {/* Node 2: Advisory AI Mapping Engine */}
-              <div className="md:col-span-5 rounded-2xl border border-[#2E936F]/50 bg-[#1A2333] p-4 space-y-3 relative overflow-hidden shadow-lg">
-                <div className="flex items-center justify-between border-b border-slate-700/60 pb-2">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#2E936F] dark:text-teal font-bold flex items-center gap-1.5">
-                    <Sparkles className="h-3.5 w-3.5 text-[#FAB60A]" /> Advisory AI Control Matcher
-                  </span>
-                  <Badge variant="ai" size="sm">
-                    Advisory Only
-                  </Badge>
-                </div>
-
-                <div className="p-3 rounded-xl bg-[#0F172A] border border-teal/40">
-                  <div className="flex items-center justify-between text-2xs mb-1">
-                    <span className="font-bold text-white">CTRL-084: Mandatory MFA & Passkeys</span>
-                    <span className="font-mono text-[#2E936F] dark:text-teal text-[10px] font-bold">94% Match</span>
-                  </div>
-                  <p className="text-2xs text-slate-300 mb-2">
-                    Internal control mapped once. AI suggests matching clauses:
-                  </p>
-                  <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono">
-                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
-                      ISO 27001: A.9.4.2
-                    </span>
-                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
-                      SOC 2: CC6.1
-                    </span>
-                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
-                      DPDP: Sec 8(5)
-                    </span>
-                    <span className="p-1.5 rounded-lg bg-[#1E293B] text-slate-200 font-semibold border border-slate-700/60">
-                      ISO 42001: A.7.3
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60 text-2xs">
-                  <span className="text-slate-300 font-medium">Analyst Review:</span>
-                  <span className="text-[#2E936F] dark:text-teal font-bold flex items-center gap-1">
-                    <CheckCircle2 className="h-3.5 w-3.5" /> Approved by GRC Lead
-                  </span>
-                </div>
-              </div>
-
-              {/* Node 3: Compliance & Testing Cadence */}
-              <div className="md:col-span-3 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between space-y-3 shadow-lg">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#2E936F] dark:text-teal font-bold flex items-center gap-1">
-                      <FileCheck className="h-3.5 w-3.5" /> Testing Board
-                    </span>
-                    <span className="text-[10px] font-mono text-slate-300 font-medium">Rolling 30d</span>
-                  </div>
-                  <h4 className="text-sm font-bold text-white mb-2 tracking-tight">Evidence Cadence</h4>
-                  <div className="space-y-2 text-2xs">
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
-                      <p className="font-bold text-slate-100">Access Review</p>
-                      <p className="text-2xs text-[#2E936F] dark:text-teal font-semibold">Passed • Verified 2d ago</p>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
-                      <p className="font-bold text-slate-100">Encryption Audit</p>
-                      <p className="text-2xs text-[#FAB60A] font-semibold">Due in 14 days</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-2 border-t border-slate-700/60 flex items-center justify-between text-[10px] font-mono text-slate-300">
-                  <span className="font-medium">5 Frameworks</span>
-                  <span className="text-[#FAB60A] font-bold">100% Auditable</span>
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {activeTab === "risk" && (
-            <motion.div
-              key="risk"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-4"
-            >
-              <div className="md:col-span-7 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 shadow-lg">
-                <h4 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
-                  <AlertTriangle className="h-4 w-4 text-rose" /> 5x5 Risk Heatmap & Register
-                </h4>
-                <p className="text-xs text-slate-300 mb-4 font-medium">
-                  Log, score (Likelihood × Impact), and evaluate residual risk after applying security controls.
-                </p>
-                <div className="grid grid-cols-5 gap-1 sm:gap-2 text-center text-xs font-mono">
-                  {[
-                    { lvl: "Critical", score: 25 }, { lvl: "Critical", score: 20 }, { lvl: "High", score: 15 }, { lvl: "High", score: 12 }, { lvl: "Med", score: 10 },
-                    { lvl: "Critical", score: 20 }, { lvl: "High", score: 16 }, { lvl: "High", score: 12 }, { lvl: "Med", score: 8 }, { lvl: "Med", score: 6 },
-                    { lvl: "High", score: 15 }, { lvl: "High", score: 12 }, { lvl: "Med", score: 9 }, { lvl: "Med", score: 6 }, { lvl: "Low", score: 4 },
-                    { lvl: "Med", score: 10 }, { lvl: "Med", score: 8 }, { lvl: "Med", score: 6 }, { lvl: "Low", score: 4 }, { lvl: "Low", score: 2 },
-                    { lvl: "Low", score: 5 }, { lvl: "Low", score: 4 }, { lvl: "Low", score: 3 }, { lvl: "Low", score: 2 }, { lvl: "Low", score: 1 }
-                  ].map((cell, idx) => (
-                    <div
-                      key={idx}
-                      className={`py-2 sm:py-3.5 px-0.5 sm:px-1 rounded-lg font-bold transition-all flex flex-col items-center justify-center ${
-                        cell.lvl === "Critical"
-                          ? "bg-rose/80 text-white border border-rose shadow-md shadow-rose/40"
-                          : cell.lvl === "High"
-                          ? "bg-amber/25 text-[#FAB60A] border border-amber/50"
-                          : cell.lvl === "Med"
-                          ? "bg-amber/15 text-[#FAB60A] border border-amber/30"
-                          : "bg-teal/15 text-[#2E936F] dark:text-teal-300 border border-teal/30"
-                      }`}
-                    >
-                      <span className="text-2xs leading-none">{cell.score}</span>
-                      <span className="text-2xs opacity-90 font-sans mt-0.5">{cell.lvl[0]}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="md:col-span-5 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between shadow-lg">
-                <div>
-                  <span className="text-[10px] font-mono text-[#FAB60A] uppercase font-bold">Active Risk Items</span>
-                  <div className="space-y-2 text-xs">
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
-                      <p className="font-bold text-white">RSK-102: Vendor API Downtime</p>
-                      <p className="text-2xs text-slate-300 font-medium">Score: 16 (High) → Residual: 6 (Low)</p>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-slate-700/60">
-                      <p className="font-bold text-white">RSK-088: Cloud Access Drift</p>
-                      <p className="text-2xs text-slate-300 font-medium">Score: 20 (Critical) → Mitigated</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/30 text-[11px] text-[#2E936F] dark:text-teal-300 font-mono font-bold">
-                  All risks map directly to controls & assets
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {activeTab === "control" && (
-            <motion.div
-              key="control"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-4"
-            >
-              <div className="md:col-span-6 rounded-2xl border border-[#2E936F]/40 bg-[#1A2333] p-4 shadow-lg">
-                <span className="text-[10px] font-mono uppercase text-[#FAB60A] font-bold">1. Control Definition</span>
-                <div className="mt-2 p-3 rounded-xl bg-[#0F172A] border border-slate-700/60 space-y-2">
-                  <p className="text-xs font-bold text-white">CTRL-019: Automated Patch Management</p>
-                  <p className="text-2xs text-slate-200 font-medium">
-                    &quot;Critical vulnerabilities must be patched within 14 days of public disclosure with rollback tests.&quot;
-                  </p>
-                  <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-slate-300">
-                    <Lock className="h-3 w-3 text-[#2E936F]" /> Redacted payload sent to LLM router
-                  </div>
-                </div>
-              </div>
-              <div className="md:col-span-6 rounded-2xl border border-slate-700/60 bg-[#1A2333] p-4 flex flex-col justify-between shadow-lg">
-                <div>
-                  <span className="text-[10px] font-mono uppercase text-[#2E936F] dark:text-teal font-bold">2. AI Suggestion + Human Review</span>
-                  <div className="mt-2 space-y-2 text-xs">
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-[#2E936F]/40 flex items-center justify-between">
-                      <span className="text-slate-100 font-semibold">ISO 27001:2022 A.8.8 Management of Tech Vulns</span>
-                      <span className="text-[#2E936F] dark:text-teal font-mono text-[10px] font-bold">96% Conf</span>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-[#0F172A] border border-[#2E936F]/40 flex items-center justify-between">
-                      <span className="text-slate-100 font-semibold">SOC 2 CC7.1 Vulnerability Scans</span>
-                      <span className="text-[#2E936F] dark:text-teal font-mono text-[10px] font-bold">92% Conf</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2.5 rounded-xl bg-[#FAB60A]/15 border border-[#FAB60A]/30 text-[11px] text-[#FAB60A] font-mono font-bold text-center">
-                  Human analyst approval required before committing to Postgres
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {activeTab === "framework" && (
-            <motion.div
-              key="framework"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 0.1 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3"
-            >
-              {FRAMEWORKS.map((fw) => (
-                <div
-                  key={fw.code}
-                  className="p-4 rounded-2xl border border-slate-700/70 bg-[#1A2333] text-center hover:border-[#2E936F] dark:hover:border-teal/60 hover:shadow-xl transition-all duration-300 group"
-                >
-                  <div className="p-2 rounded-xl bg-[#2E936F]/15 dark:bg-teal/20 w-fit mx-auto mb-2.5 group-hover:scale-110 transition-transform">
-                    <Shield className="h-6 w-6 text-[#2E936F] dark:text-teal-300" />
-                  </div>
-                  <p className="font-extrabold text-xs text-white tracking-tight">{fw.name}</p>
-                  <p className="text-[11px] text-[#34D399] dark:text-teal-300 font-mono font-bold mt-1.5">{fw.badge}</p>
-                  <p className="text-2xs text-slate-300 font-medium mt-1 leading-snug">{fw.region}</p>
-                </div>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Bottom Status Row */}
-        <div className="mt-5 pt-3.5 border-t border-slate-700/60 flex items-center justify-between gap-3 text-[11px] font-mono">
-          <div className="flex items-center gap-2 text-[#2E936F] dark:text-teal">
-            <Layers className="h-4 w-4 shrink-0" />
-            <span className="font-bold text-white">One Connected Workflow</span>
-            <span className="text-slate-300 hidden sm:inline font-medium">Risk ↔ Asset ↔ Control ↔ Framework</span>
+      {/* MAIN OPERATING RAIL CARD */}
+      <div className="relative z-10 rounded-3xl border border-slate-300 dark:border-navy-700/80 bg-[#0c1628] dark:bg-[#070e1c] p-4 sm:p-6 lg:p-7 shadow-2xl text-white overflow-hidden space-y-5">
+        {/* Card Header Row */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+          <div className="flex items-center gap-2.5">
+            <span className="w-3 h-3 rounded-full bg-[#F15E1C] dark:bg-[#FAB60A] shadow-md shadow-amber-500/50 shrink-0 animate-pulse" />
+            <h3 className="font-mono text-xs sm:text-sm md:text-base font-extrabold tracking-wider uppercase text-white">
+              INTERACTIVE OPERATING RAIL: RISK TO EVIDENCE PIPELINE
+            </h3>
           </div>
-          <span className="text-slate-300 font-medium hidden sm:inline">All changes saved to PostgreSQL</span>
+
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-950 border border-[#2E936F]/40 text-[#00d2b4] text-xs font-mono font-extrabold shadow-sm">
+            <Activity className="h-3.5 w-3.5 text-[#00d2b4] animate-pulse" />
+            <span>Live PostgreSQL Crosswalk Stream</span>
+          </div>
         </div>
-      </motion.div>
+
+        {/* 7 Pipeline Stages - Constrained with strict min-w-0 and overflow-hidden */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3 w-full min-w-0">
+          {pipelineStages.map((stg, idx) => {
+            const isActive = activeStageIndex === idx;
+            return (
+              <button
+                key={stg.step}
+                onClick={() => {
+                  setActiveStageIndex(idx);
+                  setIsAutoPlaying(false);
+                }}
+                className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between min-h-[96px] min-w-0 w-full overflow-hidden ${
+                  isActive
+                    ? "border-[#00d2b4] bg-[#0f243a] shadow-lg ring-1 ring-[#00d2b4]/50 scale-[1.02]"
+                    : "border-slate-800/90 bg-[#060c18]/90 hover:border-slate-700 hover:bg-[#091324]"
+                }`}
+              >
+                <span
+                  className={`text-[10px] xl:text-xs font-mono font-extrabold uppercase tracking-wider block truncate min-w-0 ${
+                    isActive ? "text-[#00d2b4]" : "text-[#00d2b4]/80"
+                  }`}
+                >
+                  {stg.label}
+                </span>
+                <div className="min-w-0 w-full overflow-hidden space-y-0.5">
+                  <h4 className="text-xs xl:text-sm font-extrabold text-white tracking-tight leading-tight truncate min-w-0" title={stg.title}>
+                    {stg.title}
+                  </h4>
+                  <p className="text-[10px] xl:text-[11px] font-mono text-slate-400 font-medium truncate min-w-0 block" title={stg.sub}>
+                    {stg.sub}
+                  </p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Bottom Console Terminal Log Bar */}
+        <div className="p-4 sm:p-4 rounded-2xl bg-[#040810] border border-slate-800/90 flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs sm:text-sm shadow-inner min-w-0 overflow-hidden">
+          <div className="flex flex-wrap md:flex-nowrap items-center gap-2.5 min-w-0 overflow-hidden">
+            <span className="px-2.5 py-1 rounded bg-[#FAB60A] text-navy-950 font-black text-[11px] sm:text-xs uppercase tracking-wider shrink-0 shadow">
+              DEMO STREAM
+            </span>
+            <p className="text-slate-300 font-medium leading-relaxed min-w-0 truncate sm:whitespace-normal">
+              <strong className="text-white font-extrabold">
+                Live Trace (Illustrative Demo Data):
+              </strong>{" "}
+              Active Risk:{" "}
+              <span className="text-[#00d2b4] font-bold">
+                {activeStage.traceRisk}
+              </span>{" "}
+              <span className="text-[#FAB60A] font-bold">→</span> Linked Control{" "}
+              <span className="text-[#FAB60A] font-bold">
+                {activeStage.traceControl}
+              </span>{" "}
+              <span className="text-[#2E936F] font-bold">→</span>{" "}
+              <span className="text-[#2E936F] font-bold">
+                {activeStage.traceStatus}
+              </span>{" "}
+              <span className="text-[#2E936F] font-bold">→</span> Audit Logged
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0 text-slate-400 text-xs font-mono justify-end border-t md:border-t-0 border-slate-800/60 pt-2 md:pt-0">
+            <span>
+              Sync: <strong className="text-slate-200">4.2ms</strong>
+            </span>
+            <CheckCircle2 className="h-4 w-4 text-[#2E936F]" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+
+export default IsometricHeroVisual;
