@@ -262,13 +262,13 @@ export const WorkflowSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
               <div className="flex items-center gap-2.5">
                 <span className="w-3 h-3 rounded-full bg-[#F15E1C] dark:bg-[#FAB60A] shadow-md shadow-amber-500/50 shrink-0" />
-                <h3 className="font-mono text-xs sm:text-sm md:text-base font-extrabold tracking-wider uppercase text-white">
-                  INTERACTIVE OPERATING RAIL: RISK TO EVIDENCE PIPELINE
+                <h3 className="text-xs sm:text-sm md:text-base font-bold tracking-wide uppercase text-white">
+                  Operating Rail: Risk to Evidence Pipeline
                 </h3>
               </div>
 
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-950 border border-[#2E936F]/40 text-[#00d2b4] text-xs font-mono font-extrabold shadow-sm">
-                <Activity className="h-3.5 w-3.5 text-[#00d2b4] animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0b1b2d] border border-[#2E936F]/30 text-slate-300 text-xs font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2E936F]" />
                 <span>Live PostgreSQL Crosswalk Stream</span>
               </div>
             </div>

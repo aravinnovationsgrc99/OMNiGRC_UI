@@ -9,6 +9,7 @@ import {
   UserCheck,
   Database,
   ArrowRight,
+  ArrowDown,
   ShieldCheck,
   Sparkles,
   CheckCircle2,
@@ -158,72 +159,108 @@ export const ArchitectureSection: React.FC = () => {
         </div>
 
         {/* Real 8-Stage Connected AI Flow Diagram */}
-        <div className="mb-10 rounded-3xl border border-teal/30 bg-[#0D1626] dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="px-3.5 py-1.5 rounded-full bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal text-xs font-mono font-bold uppercase tracking-widest border border-[#2E936F]/30 dark:border-teal/30">
-              ADVISORY AI PIPELINE
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+        <div className="mb-10 rounded-3xl border border-slate-700/60 bg-[#091222] dark:bg-navy-900/95 p-6 sm:p-8 md:p-10 shadow-2xl backdrop-blur-xl space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0b1b2d] border border-[#2E936F]/30 text-slate-300 text-xs font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2E936F]" />
+              <span>Advisory AI Pipeline</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               8-Stage AI API Execution Pipeline
             </h3>
-            <p className="text-sm sm:text-base text-slate-300 mt-1 font-medium">
+            <p className="text-sm sm:text-base text-slate-300 font-medium leading-relaxed">
               From analyst trigger to structured database record, every step is isolated, sanitized, and human-supervised.
             </p>
           </div>
 
-          {/* 8 Connected Nodes Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
-            {(
-              [
+          {/* PIPELINE STAGES - ROW 1 (STAGES 01-04) & ROW 2 (STAGES 05-08) */}
+          <div className="space-y-6">
+            {/* ROW 1: STAGES 01 TO 04 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch relative">
+              {[
                 {
                   step: "01",
                   label: "Analyst UI",
                   sub: "Initiates Request",
                   icon: UserCheck,
-                  color: "teal",
                 },
                 {
                   step: "02",
                   label: "API Layer",
                   sub: "Auth & Rate Limit",
                   icon: Server,
-                  color: "teal",
                 },
                 {
                   step: "03",
                   label: "Minimization Layer",
                   sub: "Sanitized Advisory Payload",
                   icon: Lock,
-                  color: "amber",
                 },
                 {
                   step: "04",
                   label: "Tiered Router",
                   sub: "Cost & Speed Router",
                   icon: GitMerge,
-                  color: "amber",
                 },
+              ].map((node, idx) => {
+                const NodeIcon = node.icon;
+                return (
+                  <div key={idx} className="relative flex flex-col min-w-0">
+                    <div className="flex-1 p-5 sm:p-6 rounded-2xl border border-slate-700/70 bg-[#060e1a] hover:border-slate-600 transition-all flex flex-col justify-between space-y-4 min-h-[145px]">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono font-extrabold text-[#00d2b4] uppercase tracking-wider">
+                          STAGE {node.step}
+                        </span>
+                        <div className="w-8 h-8 rounded-xl bg-navy-950 border border-slate-700/80 flex items-center justify-center text-[#00d2b4]">
+                          <NodeIcon className="h-4 w-4" />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-base font-extrabold text-white leading-snug">{node.label}</h4>
+                        <p className="text-xs text-slate-300 font-mono mt-1.5 leading-relaxed">{node.sub}</p>
+                      </div>
+                    </div>
+
+                    {/* Desktop Horizontal Connector Arrow (Between columns) */}
+                    {idx < 3 && (
+                      <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#0b1b2d] border border-[#2E936F]/40 items-center justify-center text-[#00d2b4] shadow-md">
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* DESKTOP INTER-ROW CONNECTOR (ROW 1 TO ROW 2 TRANSITION) */}
+            <div className="hidden lg:flex justify-end pr-8 -my-2 z-10">
+              <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0b1b2d] border border-[#2E936F]/40 text-[#00d2b4] text-xs font-mono font-bold shadow-md">
+                <span>Execution Flow</span>
+                <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
+              </div>
+            </div>
+
+            {/* ROW 2: STAGES 05 TO 08 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch relative">
+              {[
                 {
                   step: "05",
                   label: "External LLM API",
-                  sub: "Gemini 2.5 Flash-Lite / Claude Haiku 4.5",
+                  sub: "Gemini 2.5 Flash / Claude Haiku",
                   icon: Cpu,
-                  color: "amber",
                   highlight: true,
                 },
                 {
                   step: "06",
                   label: "Response Validator",
-                  sub: "Schema & Confidence",
+                  sub: "Schema & Confidence Check",
                   icon: FileCode,
-                  color: "teal",
                 },
                 {
                   step: "07",
                   label: "Human Review & Sign-Off",
                   sub: "Explicit Approval Gate",
                   icon: ShieldCheck,
-                  color: "teal",
                   critical: true,
                 },
                 {
@@ -231,53 +268,53 @@ export const ArchitectureSection: React.FC = () => {
                   label: "Primary DB",
                   sub: "Structured Audit Record",
                   icon: Database,
-                  color: "teal",
                 },
-              ] as Array<{
-                step: string;
-                label: string;
-                sub: string;
-                icon: React.ElementType;
-                color: string;
-                highlight?: boolean;
-                critical?: boolean;
-              }>
-            ).map((node, nIdx) => {
-              const NodeIcon = node.icon;
-              return (
-                <div key={nIdx} className="relative group">
-                  <div
-                    className={`h-full p-4.5 rounded-2xl border backdrop-blur-sm transition-all duration-300 flex flex-col justify-between ${
-                      node.critical
-                        ? "border-[#2E936F] bg-[#2E936F]/20 shadow-xl shadow-[#2E936F]/20 ring-2 ring-[#2E936F]/40"
-                        : node.highlight
-                        ? "border-amber/70 bg-amber/10 shadow-lg shadow-amber/20"
-                        : "border-slate-700/50 bg-[#0A111F]/90 hover:border-teal/50 hover:bg-navy-900"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className={`text-xs font-mono font-bold ${node.critical ? "text-[#2E936F] dark:text-teal-300" : "text-slate-400"}`}>
-                        STAGE {node.step} {node.critical && "• HUMAN GATE"}
-                      </span>
-                      <div className={`p-1.5 rounded-lg ${node.critical ? "bg-[#2E936F] text-white" : node.highlight ? "bg-[#FAB60A]/20 dark:bg-amber/20 text-navy-900 dark:text-amber" : "bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal"}`}>
-                        <NodeIcon className="h-4 w-4" />
+              ].map((node, idx) => {
+                const NodeIcon = node.icon;
+                return (
+                  <div key={idx} className="relative flex flex-col min-w-0">
+                    <div
+                      className={`flex-1 p-5 sm:p-6 rounded-2xl border transition-all flex flex-col justify-between space-y-4 min-h-[145px] ${
+                        node.critical
+                          ? "border-[#2E936F] bg-[#2E936F]/15 shadow-lg shadow-[#2E936F]/10 ring-1 ring-[#2E936F]/40"
+                          : node.highlight
+                          ? "border-[#FAB60A]/60 bg-[#FAB60A]/10"
+                          : "border-slate-700/70 bg-[#060e1a] hover:border-slate-600"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-2">
+                        <span className={`text-xs font-mono font-extrabold uppercase tracking-wider ${node.critical ? "text-[#00d2b4]" : node.highlight ? "text-[#FAB60A]" : "text-[#00d2b4]"}`}>
+                          STAGE {node.step} {node.critical && "• HUMAN GATE"}
+                        </span>
+                        <div
+                          className={`w-8 h-8 rounded-xl border flex items-center justify-center shrink-0 ${
+                            node.critical
+                              ? "bg-[#2E936F] text-white border-[#2E936F]"
+                              : node.highlight
+                              ? "bg-[#FAB60A]/20 text-[#FAB60A] border-[#FAB60A]/40"
+                              : "bg-navy-950 text-[#00d2b4] border-slate-700/80"
+                          }`}
+                        >
+                          <NodeIcon className="h-4 w-4" />
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="text-base font-extrabold text-white leading-snug">{node.label}</h4>
+                        <p className="text-xs text-slate-300 font-mono mt-1.5 leading-relaxed">{node.sub}</p>
                       </div>
                     </div>
 
-                    <div>
-                      <h4 className="text-base font-bold text-white mb-1 leading-tight">{node.label}</h4>
-                      <p className="text-xs text-slate-200 font-mono leading-snug">{node.sub}</p>
-                    </div>
-
-                    {nIdx < 7 && (
-                      <div aria-hidden="true" className="hidden md:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10 text-slate-500">
-                        <ArrowRight className="h-4 w-4 text-teal/60" />
+                    {/* Desktop Horizontal Connector Arrow (Between columns in Row 2) */}
+                    {idx < 3 && (
+                      <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#0b1b2d] border border-[#2E936F]/40 items-center justify-center text-[#00d2b4] shadow-md">
+                        <ArrowRight className="h-3.5 w-3.5" />
                       </div>
                     )}
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 

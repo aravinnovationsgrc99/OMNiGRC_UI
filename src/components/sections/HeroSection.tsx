@@ -13,8 +13,8 @@ const AuroraBackground = dynamic(
   { ssr: false }
 );
 
-const HeroCommandCenter = dynamic(
-  () => import("@/components/sections/HeroCommandCenter").then((m) => m.HeroCommandCenter),
+const HeroWorkflowVisual = dynamic(
+  () => import("@/components/sections/HeroWorkflowVisual").then((m) => m.HeroWorkflowVisual),
   { ssr: false }
 );
 
@@ -152,7 +152,7 @@ export const HeroSection: React.FC = () => {
           variants={itemVariants}
           className="w-full max-w-full overflow-hidden"
         >
-          <HeroCommandCenter />
+          <HeroWorkflowVisual />
         </motion.div>
       </motion.div>
 
