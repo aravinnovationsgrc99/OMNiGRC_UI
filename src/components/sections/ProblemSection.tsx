@@ -6,209 +6,221 @@ import {
   FileSpreadsheet,
   Mail,
   Ticket,
-  CalendarX,
-  ShieldCheck,
-  Zap,
+  Clock,
+  AlertTriangle,
   CheckCircle2,
   XCircle,
-  Database,
-  GitMerge,
+  Layers,
+  ArrowDown,
+  Sparkles,
+  Zap,
 } from "lucide-react";
 
 export const ProblemSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"fragmented" | "connected">("fragmented");
+  const [viewState, setViewState] = useState<"fragmented" | "connected">("fragmented");
 
-  const fragmentedIssues = [
+  const fragmentedItems = [
     {
+      label: "SPREADSHEETS",
+      detail: "Risk & asset inventories in separate sheets that drift immediately.",
       icon: FileSpreadsheet,
-      title: "Isolated Spreadsheets",
-      detail: "Risk logs and asset inventories stored in disparate Excel/Google sheets that drift instantly.",
     },
     {
+      label: "TICKETS",
+      detail: "Ad-hoc tasks completely detached from control & clause IDs.",
       icon: Ticket,
-      title: "Scattered Tickets",
-      detail: "Ad-hoc task tickets in Jira/Trello disconnected from compliance control requirements.",
     },
     {
+      label: "EMAIL CHASING",
+      detail: "Scattered message threads requesting screenshots 48h before audits.",
       icon: Mail,
-      title: "Email Evidence Chasing",
-      detail: "Endless email threads asking engineering leads for screenshots before audits.",
     },
     {
-      icon: CalendarX,
-      title: "Missed Testing Cadences",
-      detail: "No rolling visibility into recurring access reviews, backup tests, or vendor check-ins.",
+      label: "CADENCE GAPS",
+      detail: "Zero rolling visibility into access reviews or vendor check-ins.",
+      icon: Clock,
     },
   ];
 
-  const connectedSolutions = [
-    {
-      icon: Database,
-      title: "Unified Risk & Asset Layer",
-      detail: "Every asset and vendor is mapped directly to its associated risks and protective controls.",
-    },
-    {
-      icon: GitMerge,
-      title: "Map-Once Control Engine",
-      detail: "Define a security control once. AI suggests matching clauses across 5 frameworks for human approval.",
-    },
-    {
-      icon: Zap,
-      title: "Continuous Testing Board",
-      detail: "Kanban workflow with owner assignments, rolling 30/60/90-day visibility, and evidence history.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Defensible Audit Trails",
-      detail: "Every change, human review, and compliance verification is immutably logged in PostgreSQL.",
-    },
+  const connectedPillars = [
+    { name: "RISK", desc: "5x5 Scoring linked to assets", icon: AlertTriangle },
+    { name: "ASSETS", desc: "Cloud & PII data flows", icon: Layers },
+    { name: "CONTROLS", desc: "Map-once safeguards", icon: Zap },
+    { name: "EVIDENCE", desc: "Defensible reference vault", icon: CheckCircle2 },
   ];
 
   return (
-    <section className="relative bg-white dark:bg-[#0A111F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200 overflow-hidden">
-      {/* Background soft glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[85vw] max-w-[800px] rounded-full bg-teal/10 blur-[130px]" />
+    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-12 sm:py-20 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+      {/* Background Glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#F15E1C]/10 blur-3xl"
+      />
 
-      <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
-          <span className="text-[13px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold inline-block">
-            THE REALITY OF LEAN GRC
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
-            Compliance isn&apos;t hard because of frameworks. <br className="hidden sm:inline" />
-            <span className="text-teal">It&apos;s hard because work is fragmented.</span>
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#F15E1C]/40 bg-[#F15E1C]/10 text-[#F15E1C] dark:text-amber text-[10px] sm:text-xs font-mono tracking-wider uppercase font-semibold shadow-sm">
+            <AlertTriangle className="h-3.5 w-3.5" />
+            <span>THE FRAGMENTATION PROBLEM</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+            Compliance doesn&apos;t fail on frameworks. <br className="hidden xs:inline" />
+            <span className="text-[#F15E1C] dark:text-teal-400">It fails on fragmentation.</span>
           </h2>
-          <p className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
-            Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise GRC suites. OMNiGRC bridges that gap with a unified operating layer.
+
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
+            Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise suites. OMNiGRC is the operating layer in between.
           </p>
-
-          {/* Pain Callout Chips */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 font-mono text-xs">
-            <span className="px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-500 font-semibold flex items-center gap-1.5">
-              <XCircle className="h-3.5 w-3.5" /> Disconnected Spreadsheets
-            </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-[#FAB60A]/20 border border-[#FAB60A]/30 text-navy-900 dark:bg-amber/10 dark:border-amber/30 dark:text-amber font-semibold flex items-center gap-1.5">
-              <XCircle className="h-3.5 w-3.5" /> Duplicate Policy Authoring
-            </span>
-            <span className="px-3.5 py-1.5 rounded-full bg-[#2E936F]/10 border border-[#2E936F]/30 text-[#2E936F] dark:bg-teal/10 dark:border-teal/30 dark:text-teal font-semibold flex items-center gap-1.5">
-              <XCircle className="h-3.5 w-3.5" /> Pre-Audit Scrambles
-            </span>
-          </div>
         </div>
 
-        {/* Tab Switcher */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1 rounded-xl bg-slate-200 dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60">
+        {/* State Toggle Switcher */}
+        <div className="flex justify-center">
+          <div className="inline-flex p-1 rounded-2xl bg-slate-100 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/80 shadow-inner">
             <button
-              onClick={() => setActiveTab("fragmented")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === "fragmented"
-                  ? "bg-white dark:bg-navy-800 text-rose-600 dark:text-teal shadow-md"
+              onClick={() => setViewState("fragmented")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                viewState === "fragmented"
+                  ? "bg-white dark:bg-navy-800 text-[#F15E1C] shadow-md border border-[#F15E1C]/30"
                   : "text-slate-500 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
               }`}
             >
-              <XCircle className="h-4 w-4" /> Fragmented GRC Reality
+              <XCircle className="h-4 w-4 text-[#F15E1C]" /> Fragmented Workstreams
             </button>
             <button
-              onClick={() => setActiveTab("connected")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === "connected"
-                  ? "bg-teal text-white shadow-md shadow-teal/30"
+              onClick={() => setViewState("connected")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                viewState === "connected"
+                  ? "bg-[#2E936F] text-white shadow-md shadow-[#2E936F]/30"
                   : "text-slate-500 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
               }`}
             >
-              <CheckCircle2 className="h-4 w-4" /> Connected OMNiGRC Operations
+              <CheckCircle2 className="h-4 w-4" /> OMNiGRC Operating Layer
             </button>
           </div>
         </div>
 
-        {/* Animated Single-Panel Display */}
-        <div className="max-w-3xl mx-auto">
+        {/* Visual Story Display */}
+        <div className="w-full max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
-            {activeTab === "fragmented" && (
+            {viewState === "fragmented" ? (
               <motion.div
-                key="fragmented"
-                initial={{ opacity: 0, y: 14 }}
+                key="fragmented-view"
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -14 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="rounded-3xl border border-rose-400/30 bg-white dark:bg-navy-900/80 p-6 sm:p-8 flex flex-col gap-6 shadow-xl shadow-rose-500/5"
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35 }}
+                className="rounded-3xl border border-[#F15E1C]/30 bg-white/80 dark:bg-navy-900/90 p-5 sm:p-8 shadow-xl backdrop-blur-md relative overflow-hidden"
               >
-                <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-navy-700/60">
-                  <span className="text-[13px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
-                    <XCircle className="h-4 w-4 text-rose-500" /> Fragmented Operations
+                <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-200 dark:border-slate-800">
+                  <span className="text-xs font-mono font-bold uppercase text-[#F15E1C] flex items-center gap-1.5">
+                    <XCircle className="h-4 w-4" /> Disconnected Systems & Friction
                   </span>
-                  <span className="text-[11px] font-mono text-slate-500">Without OMNiGRC</span>
+                  <span className="text-[10px] font-mono text-slate-400">
+                    High Friction · Manual Work
+                  </span>
                 </div>
-                <div className="space-y-3">
-                  {fragmentedIssues.map((item, idx) => {
+
+                {/* 4 Disconnected Nodes Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+                  {fragmentedItems.map((item, idx) => {
                     const Icon = item.icon;
                     return (
                       <div
                         key={idx}
-                        className="p-3.5 rounded-xl bg-rose-500/5 dark:bg-[#0A111F]/70 border border-rose-400/20 dark:border-navy-700/60 flex items-start gap-3"
+                        className="p-4 rounded-2xl border border-dashed border-[#F15E1C]/40 bg-[#F15E1C]/5 dark:bg-navy-950/70 space-y-1.5 transition-transform hover:-translate-y-0.5"
                       >
-                        <div className="p-2 rounded-lg bg-rose-500/10 text-rose-500 shrink-0 mt-0.5">
-                          <Icon className="h-4 w-4" />
+                        <div className="flex items-center justify-between">
+                          <span className="font-mono text-xs font-extrabold text-[#F15E1C] flex items-center gap-1.5">
+                            <Icon className="h-4 w-4 shrink-0" />
+                            {item.label}
+                          </span>
+                          <span className="text-[9px] font-mono text-red-500 font-bold px-1.5 py-0.5 rounded bg-red-500/10">
+                            Isolated
+                          </span>
                         </div>
-                        <div>
-                          <h3 className="text-sm font-bold text-[#0F172A] dark:text-slate-200">{item.title}</h3>
-                          <p className="text-xs text-[#475569] dark:text-slate-400 mt-0.5 leading-relaxed">{item.detail}</p>
-                        </div>
+                        <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                          {item.detail}
+                        </p>
                       </div>
                     );
                   })}
                 </div>
-                <div className="p-4 rounded-xl bg-rose-500/8 border border-rose-500/20 text-xs text-rose-600 dark:text-rose-400">
-                  <strong className="block mb-1">Resulting Impact:</strong>
-                  Duplicate mapping work, audit preparation scramble, and zero confidence in posture between audits.
+
+                <div className="p-3.5 rounded-xl bg-[#F15E1C]/10 border border-[#F15E1C]/30 text-xs font-mono text-[#F15E1C] dark:text-amber font-semibold flex items-center justify-between">
+                  <span>Resulting Impact: Duplicate work, audit scrambles & low posture confidence.</span>
                 </div>
               </motion.div>
-            )}
-
-            {activeTab === "connected" && (
+            ) : (
               <motion.div
-                key="connected"
-                initial={{ opacity: 0, y: 14 }}
+                key="connected-view"
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -14 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="rounded-3xl border border-[#2E936F]/40 dark:border-teal/40 bg-white dark:bg-navy-900/90 p-6 sm:p-8 flex flex-col gap-6 shadow-xl shadow-teal/10"
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35 }}
+                className="rounded-3xl border border-[#2E936F]/50 bg-white/90 dark:bg-navy-900/95 p-5 sm:p-8 shadow-2xl backdrop-blur-md relative overflow-hidden"
               >
-                <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-navy-700/60">
-                  <span className="text-[13px] font-mono font-bold uppercase tracking-wider text-[#2E936F] dark:text-teal flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4" /> Connected OMNiGRC Workflow
+                <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-200 dark:border-slate-800">
+                  <span className="text-xs font-mono font-bold uppercase text-[#2E936F] dark:text-teal flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4" /> OMNiGRC Connected Operating Layer
                   </span>
-                  <span className="text-[11px] font-mono text-[#FAB60A] dark:text-amber">Unified Operating Layer</span>
+                  <span className="text-[10px] font-mono text-amber font-bold">
+                    Continuous Posture
+                  </span>
                 </div>
-                <div className="space-y-3">
-                  {connectedSolutions.map((item, idx) => {
-                    const Icon = item.icon;
+
+                {/* Central Connecting Layer Visualization */}
+                <div className="p-5 rounded-2xl border-2 border-[#2E936F] bg-[#2E936F]/10 dark:bg-navy-950 text-center mb-6 shadow-lg relative">
+                  <div className="flex items-center justify-center gap-1.5 text-xs font-mono text-[#F15E1C] dark:text-amber font-bold mb-1">
+                    <Sparkles className="h-4 w-4" />
+                    <span>SINGLE UNIFIED LAYER</span>
+                  </div>
+                  <h3 className="text-lg font-extrabold text-navy-900 dark:text-white">
+                    OMNiGRC OPERATING LAYER
+                  </h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">
+                    Unifies Risk, Assets, Controls, and Evidence into one live operational thread.
+                  </p>
+                </div>
+
+                {/* 4 Connected Workstream Nodes */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                  {connectedPillars.map((p, idx) => {
+                    const Icon = p.icon;
                     return (
                       <div
                         key={idx}
-                        className="p-3.5 rounded-xl bg-[#2E936F]/5 dark:bg-[#0A111F]/80 border border-[#2E936F]/20 dark:border-navy-700/60 flex items-start gap-3 hover:border-[#2E936F]/40 dark:hover:border-teal/30 transition-all"
+                        className="p-3.5 rounded-xl border border-[#2E936F]/40 bg-[#2E936F]/5 dark:bg-navy-950/80 text-center space-y-1"
                       >
-                        <div className="p-2 rounded-lg bg-[#2E936F]/15 text-[#2E936F] dark:text-teal shrink-0 mt-0.5">
+                        <div className="p-1.5 rounded-lg bg-[#2E936F]/20 text-[#2E936F] dark:text-teal w-fit mx-auto">
                           <Icon className="h-4 w-4" />
                         </div>
-                        <div>
-                          <h3 className="text-sm font-bold text-[#0F172A] dark:text-white">{item.title}</h3>
-                          <p className="text-xs text-[#334155] dark:text-slate-300 mt-0.5 leading-relaxed">{item.detail}</p>
-                        </div>
+                        <h4 className="font-mono text-xs font-bold text-navy-900 dark:text-white">
+                          {p.name}
+                        </h4>
+                        <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">
+                          {p.desc}
+                        </p>
                       </div>
                     );
                   })}
-                </div>
-                <div className="p-4 rounded-xl bg-[#2E936F]/10 border border-[#2E936F]/30 text-xs text-[#1A5C45] dark:text-teal-300 font-medium">
-                  <strong className="block mb-1 text-[#2E936F] dark:text-white">OMNiGRC Advantage:</strong>
-                  Single source of truth where risk, asset, control, and testing workflows inform each other seamlessly.
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
+
+        {/* Story Continuation Conduit (Visual Bridge to Next Section) */}
+        <div className="flex flex-col items-center justify-center text-center pt-2">
+          <div className="w-0.5 h-8 bg-gradient-to-b from-[#2E936F] to-transparent animate-pulse" />
+          <span className="text-[10px] font-mono text-[#2E936F] dark:text-teal font-bold tracking-widest uppercase mt-1">
+            ONE WORKFLOW CONTINUES ↓
+          </span>
+        </div>
       </div>
     </section>
   );
 };
+
+export default ProblemSection;

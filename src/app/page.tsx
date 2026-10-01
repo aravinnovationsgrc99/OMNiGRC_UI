@@ -5,11 +5,15 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const FrameworkOrrery = dynamic(
-  () => import("@/components/3d/FrameworkOrrery"),
+  () => import("@/components/3d/FrameworkOrrery").then((m) => m.FrameworkOrrery),
   { ssr: false }
 );
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ProblemSection } from "@/components/sections/ProblemSection";
+import { AudienceSection } from "@/components/sections/AudienceSection";
+import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import {
   Shield,
   ShieldAlert,
@@ -55,473 +59,52 @@ export default function Home() {
       <Header />
 
       <main className="w-full pt-16">
-<div className="flex flex-col w-full">
-{/*  =========================================================================  */}
-{/*  1. HERO SECTION (Clear, High-Converting, Light Canvas + Pipeline Demo)    */}
-{/*  =========================================================================  */}
-<section className="relative w-full bg-transparent bg-grid-mesh-adaptive px-4 md:px-8 py-space-section">
-{/*  Ambient Warm Peach Glow behind Hero  */}
-<div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
-<div className="absolute top-1/3 left-10 w-80 h-80 bg-surface-variant/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
-<div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-{/*  Eyebrow Pill  */}
-<div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 mb-6 shadow-sm">
-<span className="w-2 h-2 rounded-full bg-teal-600 dark:bg-teal-500 animate-pulse"></span>
-<span className="font-mono text-xs font-semibold tracking-wider uppercase">THE CONNECTED GRC OPERATING LAYER • EXPANDED V2.4</span>
-</div>
-        {/*  Main Headline  */}
-        <h1 className="max-w-4xl text-4xl md:text-[56px] md:leading-[64px] text-slate-900 dark:text-white font-bold tracking-tight mb-6">
-          Unified risk, asset, and control management for lean GRC teams.
-        </h1>
-        {/*  Subheadline  */}
-        <p className="max-w-3xl text-lg text-slate-600 dark:text-slate-300 font-medium mb-8">
-          Unify risk, assets, control mapping, and evidence into one operating workflow. Advisory AI suggests; human oversight approves.
-        </p>
-        {/*  Primary & Secondary CTAs  */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-          <a className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white bg-teal-600 dark:bg-teal-500 hover:bg-teal-700 dark:hover:bg-teal-400 shadow-lg shadow-teal-600/25 hover:shadow-teal-600/35 transition-all active:scale-[0.98] ring-2 ring-teal-500/30" data-path="request-demo" href="#">
-            <span className="">Request a Walkthrough</span>
-            <CalendarCheck className="h-5 w-5 shrink-0" />
-          </a>
-          <a className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-navy-900/60 border border-slate-300 dark:border-navy-700 hover:bg-slate-100 dark:hover:bg-navy-800 transition-all shadow-sm" href="#workflows-preview">
-            <span className="">Explore Live Workflows</span>
-            <ArrowRight className="h-5 w-5 shrink-0" />
-          </a>
-        </div>
-        {/*  Quick Trust Badges  */}
-        <div className="flex flex-col items-center gap-3 mb-12">
-          <span className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">Supported out of the box — map a single control across 6 global standards:</span>
-          <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-sm text-slate-600 dark:text-slate-300">
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> ISO 27001</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> ISO 42001</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> SOC 2 Type II</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> GDPR / UK GDPR</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> DPDP Act 2023</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" /> HIPAA Security</span>
-          </div>
-        </div>
-{/*  Interactive Risk to Evidence Pipeline Component  */}
-<div className="w-full bg-slate-50 dark:bg-[#16233F] rounded-xl shadow-lg p-space-card text-left">
-<div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-<div className="flex items-center gap-2">
-<span className="inline-flex w-3 h-3 rounded-full bg-amber-600 dark:bg-amber-500"></span>
-<span className="text-sm text-slate-900 dark:text-white font-bold uppercase tracking-wider">Interactive Operating Rail: Risk to Evidence Pipeline</span>
-</div>
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold bg-white dark:bg-[#0A111F] px-2.5 py-1 rounded-full shadow-sm">
-            Live PostgreSQL Crosswalk Stream
-          </span>
-</div>
-{/*  Horizontal Pipeline Step Nodes  */}
-<div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 md:gap-4 mb-6">
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">01 RISK</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">5×5 Matrix</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">RSK-042 Likelihood 3</span>
-</div>
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">02 ASSETS</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Cloud / Infra</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">RDS Postgres Prod</span>
-</div>
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">03 CONTROLS</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Map-Once</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">CTRL-012 Automated</span>
-</div>
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">04 TESTING</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">30-Day Cadence</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Automated Drill Pass</span>
-</div>
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">05 AUDIT</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Cross-Framework</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">ISO 27001 + SOC 2</span>
-</div>
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">06 ACTIONS</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Remediation</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">SLA Verified (0 Open)</span>
-</div>
-<div className="bg-white dark:bg-[#0A111F] p-4 rounded-lg shadow-sm flex flex-col justify-between group hover:bg-teal-100/30 dark:bg-teal-900/30 transition-colors cursor-pointer">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">07 VAULT</span>
-<span className="text-xs text-slate-900 dark:text-white font-semibold mt-1">Defensible Evidence</span>
-<span className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Evidence Verified</span>
-</div>
-</div>
-{/*  Telemetry High-Contrast Inspection Inset  */}
-<div className="bg-slate-900 dark:bg-black text-white rounded-lg p-6 font-mono text-xs shadow-inner flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-<div className="flex items-center gap-4 flex-wrap"><span className="inline-flex items-center px-2 py-0.5 rounded bg-amber-600 dark:bg-amber-500 text-white text-label-sm font-label-sm uppercase font-bold tracking-wide">DEMO STREAM</span><span className="text-[#A5B4FC] font-semibold">Live Trace (Illustrative Demo Data):</span><span className="text-white">Active Risk: <strong className="text-teal-700 dark:text-teal-400">RSK-042 (Backup Failure)</strong></span><span className="text-slate-400">→ Linked Control <strong className="text-amber-700 dark:text-amber-400">CTRL-012</strong></span><span className="text-slate-400">→ Evidence Reference Linked</span><span className="text-slate-400">→ Audit Logged</span></div>
-<div className="flex items-center gap-2">
-<span className="text-slate-500 text-2xs">Sync: 4.2ms</span>
-<CheckCircle2 className="h-5 w-5 shrink-0" />
-</div>
-</div>
-</div>
-</div>
-</section>
+        <div className="flex flex-col w-full">
+          {/* 1. HERO SECTION */}
+          <HeroSection />
+          {/* 2. PROBLEM SECTION: Fragmentation vs Operating Layer */}
+          <ProblemSection />
 
-        {/*  =========================================================================  */}
-        {/*  1.5 TRUSTED FRAMEWORK ECOSYSTEM (Solar System / Orbital Visualization)     */}
-        {/*  =========================================================================  */}
-        <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
-          <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 text-center">
-            <div className="max-w-3xl mx-auto space-y-3">
-              <span className="text-[12px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber font-bold inline-block">
-                TRUSTED FRAMEWORK ECOSYSTEM
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight">
-                Built for global compliance frameworks
-              </h2>
-              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed">
-                Map controls, assess risks, and maintain continuous compliance across the frameworks that matter to your business.
-              </p>
-            </div>
+          {/* 3. AUDIENCE SECTION: One Workflow. Every Team Size */}
+          <AudienceSection />
 
-            <div className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-navy-700/60 bg-white/40 dark:bg-navy-950/40 backdrop-blur-sm p-4 sm:p-space-card">
-              <FrameworkOrrery title="Framework Solar System" compact={true} />
-            </div>
+          {/* 4. WORKFLOW SECTION: One Thread, Not Four Silos */}
+          <WorkflowSection />
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto pt-2 text-xs font-mono text-[#5a4138] dark:text-slate-400">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#006c4d] dark:bg-teal-400 animate-pulse" />
-                <span>One platform. Multiple frameworks. Continuous compliance.</span>
-              </div>
-              <Link
-                href="/frameworks"
-                className="inline-flex items-center gap-1.5 font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
-              >
-                <span>Explore Frameworks</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/*  =========================================================================  */}
-        {/*  2. THE FRAGMENTATION PROBLEM: Spreadsheets vs Unified Operations          */}
-        {/*  =========================================================================  */}
-<section className="w-full bg-transparent px-4 md:px-8 py-space-section">
-<div className="max-w-7xl mx-auto">
-<div className="text-center max-w-3xl mx-auto mb-8">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">THE REALITY OF LEAN GRC</span>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight">
-          Compliance isn't hard because of frameworks.<br/>It's hard because work is fragmented.
-        </h2>
-<p className="text-base text-slate-600 dark:text-slate-300 mt-2">
-          Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise GRC suites. OMNiGRC bridges that gap with a unified operating layer.
-        </p>
-</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left Card: Fragmented GRC Reality (Manual) - TRANSPARENT BACKGROUND */}
-          <div className="bg-transparent border-2 border-slate-300 dark:border-navy-600/80 rounded-2xl p-space-card shadow-sm flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300 text-xs font-semibold">
-                  <AlertTriangle className="h-5 w-5 shrink-0" /> Fragmented GRC Reality (Manual)
+          {/* 5. ONE FRAMEWORK ENGINE SECTION */}
+          <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+            <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8 text-center">
+              <div className="max-w-3xl mx-auto space-y-3">
+                <span className="text-[12px] font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber font-bold inline-block">
+                  ONE FRAMEWORK ENGINE
                 </span>
-                <span className="font-mono text-xs text-red-600 dark:text-red-400 font-semibold">High Friction</span>
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight">
+                  Every standard that matters.
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
+                  Map controls once, stay compliant everywhere — SOC 2, ISO 27001, GDPR, DPDP, ISO 42001, HIPAA, and more, all mapped to the same evidence base.
+                </p>
               </div>
-              <div className="space-y-space-md text-slate-900 dark:text-white">
-                <div className="flex items-start gap-4">
-                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Isolated Spreadsheets</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Risk logs and asset inventories stored in disparate sheets that drift immediately after sign-off (Jira &amp; Google Workspace sync on Planned Roadmap).</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Scattered Manual Tickets</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Ad-hoc tasks and spreadsheets completely detached from regulatory control requirements and clause IDs.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Email Evidence Chasing</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Endless message threads asking engineering leads for screenshots and evidence links 48 hours prior to audits.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <XCircle className="h-5 w-5 shrink-0 text-red-500 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Missed Testing Cadences</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Zero rolling visibility into recurring access reviews, backup drill validation, or third-party vendor check-ins.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 p-4 rounded-xl bg-white/40 dark:bg-navy-950/40 border border-slate-200/80 dark:border-navy-700/60 font-mono text-xs text-slate-700 dark:text-slate-300">
-              Resulting Impact: Duplicate mapping work, frantic pre-audit sprints, and zero posture confidence.
-            </div>
-          </div>
 
-          {/* Right Card: Connected OMNiGRC Operations - PLAIN WHITE BACKGROUND */}
-          <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card shadow-xl border border-slate-300 dark:border-navy-700 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-teal-950/50 text-[#00513a] dark:text-teal-300 text-xs font-semibold">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d]" /> Connected OMNiGRC Operations
-                </span>
-                <span className="font-mono text-xs text-[#006c4d] dark:text-teal-400 font-bold">Continuous Posture</span>
+              <div className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-navy-700/60 bg-white/40 dark:bg-navy-950/40 backdrop-blur-sm p-4 sm:p-space-card">
+                <FrameworkOrrery title="ONE FRAMEWORK ENGINE" compact={true} />
               </div>
-              <div className="space-y-space-md text-slate-900 dark:text-white">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">5×5 Likelihood × Impact Risk Scoring</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Risks are mapped directly to technical assets, with single standardized 5×5 risk matrix evaluation.</p>
-                  </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto pt-2 text-xs font-mono text-[#5a4138] dark:text-slate-400">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F] dark:bg-teal-400 animate-pulse" />
+                  <span>Map Once · Reuse Across Frameworks · One Evidence Base</span>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Map-Once Control Logic</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Define a policy once; Advisory AI assists with cross-mapping across ISO 27001, SOC 2, HIPAA, and DPDP.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Continuous 30/60/90-Day Cadence</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Automated task triggers with assigned engineering leads, rolling SLA reminders, and document reference links.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#006c4d] dark:text-teal-400 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm text-slate-900 dark:text-white font-bold">Structured Application Audit Trail</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">Detailed change tracking, user timestamps, and exportable audit packs with structured reference records.</p>
-                  </div>
-                </div>
+                <Link
+                  href="/frameworks"
+                  className="inline-flex items-center gap-1.5 font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
+                >
+                  <span>Explore Framework Mappings</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
-            <div className="mt-8 p-4 rounded-xl bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-navy-700/60 font-mono text-xs text-slate-900 dark:text-white font-medium shadow-sm flex items-center justify-between">
-              <span>Audit Posture: Continuous &amp; Tracked</span>
-              <span className="text-[#006c4d] dark:text-teal-400 font-bold">Audit-Ready Workflow</span>
-            </div>
-          </div>
-        </div>
-</div>
-</section>
-{/*  =========================================================================  */}
-{/*  2.5. WHO IS OMNIGRC FOR? (Audience-Entry Workflows Section)               */}
-{/*  =========================================================================  */}
-<section className="w-full bg-transparent px-4 md:px-8 py-space-section border-b border-surface-container-high/60">
-<div className="max-w-7xl mx-auto">
-<div className="text-center max-w-3xl mx-auto mb-8">
-<div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs font-bold tracking-wider uppercase mb-4 shadow-sm">
-        TAILORED OPERATING WORKFLOWS
-      </div>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight">
-        Built for the teams carrying governance in the real world.
-      </h2>
-<p className="text-base text-slate-600 dark:text-slate-300 mt-2">
-        Whether you are a solo practitioner or leading security strategy, OMNiGRC organizes risk, controls, and evidence around how you actually work.
-      </p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-{/*  Audience Card 1  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
-<div>
-<div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-teal-100/40 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 font-code-sm text-2xs font-bold tracking-wider uppercase">
-              CAPACITY CONSTRAINED
-            </span>
-<Zap className="h-5 w-5 shrink-0" />
-</div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">Lean Security Teams</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-            Replace spreadsheet sprawl and frantic evidence chasing with connected risk and rolling 30/60/90-day testing.
-          </p>
-<div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
-<span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">Risk → Controls → Testing → Evidence</span>
-</div>
-</div>
-<div className="mt-8 pt-space-sm border-t border-surface-container-high">
-<a className="text-sm text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-600 dark:text-teal-400-container inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform" data-path="solutions-lean-security-teams" href="/solutions/lean-security-teams">
-<span>Explore for Lean Teams →</span>
-</a>
-</div>
-</div>
-{/*  Audience Card 2  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
-<div>
-<div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-500 font-code-sm text-2xs font-bold tracking-wider uppercase">
-              EXECUTIVE VISIBILITY
-            </span>
-<Shield className="h-5 w-5 shrink-0" />
-</div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">Security Leaders &amp; CISOs</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-            Gain real-time posture oversight across unmitigated risks, asset exposures, remediation SLAs, and incident history.
-          </p>
-<div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
-<span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">Risk → Exposure → Action → Verification</span>
-</div>
-</div>
-<div className="mt-8 pt-space-sm border-t border-surface-container-high">
-<a className="text-sm text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-600 dark:text-teal-400-container inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform" data-path="solutions-security-leaders" href="/solutions/security-leaders">
-<span>Explore for Security Leaders →</span>
-</a>
-</div>
-</div>
-{/*  Audience Card 3  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
-<div>
-<div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed text-tertiary font-code-sm text-2xs font-bold tracking-wider uppercase">
-              MULTI-FRAMEWORK CADENCE
-            </span>
-<Circle className="h-5 w-5 shrink-0" />
-</div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">Compliance Managers</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-            Map controls once across ISO, SOC 2, and DPDP, assign clear ownership, and maintain continuous audit workpapers.
-          </p>
-<div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
-<span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">Requirement → Control → Owner → Evidence</span>
-</div>
-</div>
-<div className="mt-8 pt-space-sm border-t border-surface-container-high">
-<a className="text-sm text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-600 dark:text-teal-400-container inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform" data-path="solutions-compliance-managers" href="/solutions/compliance-managers">
-<span>Explore for Compliance Managers →</span>
-</a>
-</div>
-</div>
-{/*  Audience Card 4  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-space-card shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-300 dark:border-navy-700 group">
-<div>
-<div className="flex items-center justify-between gap-2 mb-4">
-<span className="inline-flex items-center px-2 py-0.5 rounded bg-surface-variant text-slate-900 dark:text-white font-code-sm text-2xs font-bold tracking-wider uppercase">
-              SCALING GOVERNANCE
-            </span>
-<TrendingUp className="h-5 w-5 shrink-0" />
-</div>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold">SaaS &amp; Growing Organizations</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-            Unify expanding enterprise customer security reviews and compliance audits without multiplying operational overhead.
-          </p>
-<div className="mt-6 p-4 rounded-lg bg-white dark:bg-[#0A111F] border border-surface-container-high">
-<span className="font-code-sm text-2xs text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-semibold mb-1">Workflow Rail</span>
-<span className="font-mono text-xs text-slate-900 dark:text-white font-medium block">One Workflow → Multi-Standard Coverage</span>
-</div>
-</div>
-<div className="mt-8 pt-space-sm border-t border-surface-container-high">
-<a className="text-sm text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-600 dark:text-teal-400-container inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform" data-path="solutions-saas-growing-organizations" href="/solutions/saas-growing-organizations">
-<span>Explore for SaaS Teams →</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/*  =========================================================================  */}
-{/*  3. ONE CONNECTED GRC WORKFLOW (Central Operating Layer & Tabs)             */}
-{/*  =========================================================================  */}
-<section className="w-full bg-transparent px-4 md:px-8 py-16 md:py-24" id="workflows-preview">
-<div className="max-w-7xl mx-auto">
-<div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-<div>
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">THE FOUR CORE WORKFLOWS</span>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight">Everything connects. Nothing lives in isolation.</h2>
-<p className="text-base text-slate-600 dark:text-slate-300 mt-1">A single operating layer connecting every phase of the security and audit lifecycle.</p>
-</div>
-<div className="flex items-center gap-2">
-<span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-medium">Auto-crosswalk enabled</span>
-<Circle className="h-5 w-5 shrink-0" />
-</div>
-</div>
-{/*  4 Pillars Navigation Grid  */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-<Link href="/products/risk-register" className="bg-teal-100/20 dark:bg-teal-900/20 p-6 rounded-xl shadow-sm cursor-pointer hover:shadow-md transition-all block group">
-<div className="w-10 h-10 rounded-lg bg-teal-600 dark:bg-teal-500 text-white flex items-center justify-center mb-4">
-<Circle className="h-5 w-5 shrink-0" />
-</div>
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold uppercase">Pillar 01</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Risk Register</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-1">Standardized 5×5 Likelihood × Impact scoring linked directly to technical assets.</p>
-</Link>
-<Link href="/products/asset-inventory" className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all block group">
-<div className="w-10 h-10 rounded-lg bg-slate-900 dark:bg-black text-white flex items-center justify-center mb-4">
-<Circle className="h-5 w-5 shrink-0" />
-</div>
-<span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-semibold uppercase">Pillar 02</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Asset &amp; Inventory</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-1">Cloud infra, SaaS vendors, databases, and DPDP data flow context.</p>
-</Link>
-<Link href="/products/control-mapping" className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all block group">
-<div className="w-10 h-10 rounded-lg bg-amber-600 dark:bg-amber-500 text-white flex items-center justify-center mb-4">
-<Circle className="h-5 w-5 shrink-0" />
-</div>
-<span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-semibold uppercase">Pillar 03</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Map-Once Controls</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-1">One security safeguard cross-correlated to 6 standards simultaneously.</p>
-</Link>
-<Link href="/products/compliance-board" className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm cursor-pointer hover:bg-teal-100 dark:bg-teal-900/40/10 transition-all block group">
-<div className="w-10 h-10 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center mb-4">
-<Circle className="h-5 w-5 shrink-0" />
-</div>
-<span className="font-mono text-xs text-slate-600 dark:text-slate-300 font-semibold uppercase">Pillar 04</span>
-<h3 className="text-xl text-slate-900 dark:text-white font-bold mt-0.5 group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors">Compliance Board</h3>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-1">Rolling 30/60/90-day task cadence, SLA tracking, and audit export.</p>
-</Link>
-</div>
-{/*  Live Interactive Visual Showcase (5x5 Matrix + Linked Control Panel)  */}
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-6 md:p-8 shadow-md">
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-{/*  Left: 5x5 Heatmap Matrix  */}
-<div className="lg:col-span-5 bg-white dark:bg-[#0A111F] p-6 rounded-lg shadow-sm">
-<div className="flex items-center justify-between mb-4"><span className="text-sm text-slate-900 dark:text-white font-bold">5×5 Likelihood × Impact Matrix</span><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-semibold">14 Active Risks (Illustrative Demo Data)</span></div>
-<p className="text-sm text-slate-600 dark:text-slate-300 mb-6">Real-time risk distribution across technical assets &amp; business operations.</p>
-{/*  5x5 CSS Grid  */}
-<div className="grid grid-cols-5 gap-1.5 aspect-square max-w-sm mx-auto mb-4">
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M3</div>
-<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300">H4</div>
-<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-2xs text-red-800 dark:text-red-300 font-bold">C5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M3</div>
-<div className="bg-teal-100 dark:bg-teal-900/40-dim rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300 relative shadow">
-<span className="w-2 h-2 rounded-full bg-teal-600 dark:bg-teal-500 absolute -top-1 -right-1 animate-ping"></span>
-<span className="font-bold">RSK-042</span>
-</div>
-<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-2xs text-red-800 dark:text-red-300 font-bold">C5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M3</div>
-<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300">H4</div>
-<div className="bg-red-100 dark:bg-red-900/30 rounded flex items-center justify-center font-code-sm text-2xs text-red-800 dark:text-red-300">C5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L3</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M4</div>
-<div className="bg-teal-100 dark:bg-teal-900/40 rounded flex items-center justify-center font-code-sm text-2xs text-teal-800 dark:text-teal-300">H5</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L1</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L2</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L3</div>
-<div className="bg-amber-100 dark:bg-amber-900/40/50 rounded flex items-center justify-center font-code-sm text-2xs text-amber-800 dark:text-amber-300">L4</div>
-<div className="bg-tertiary-fixed rounded flex items-center justify-center font-code-sm text-2xs text-on-tertiary-fixed">M5</div>
-</div>
-<div className="flex items-center justify-between font-mono text-xs text-slate-600 dark:text-slate-300">
-<span className="">Likelihood →</span>
-<span className="">Impact ↑</span>
-</div>
-</div>
-{/*  Right: Live Inspection Detail Card  */}
-<div className="lg:col-span-7 bg-white dark:bg-[#0A111F] p-6 rounded-lg shadow-sm flex flex-col justify-between"><div><div className="flex flex-wrap items-center justify-between gap-2 mb-4"><div className="flex items-center gap-2"><span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs font-semibold">SELECTED: RSK-042</span><span className="inline-flex items-center px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-[10px] font-medium">(Illustrative Demo Data)</span></div><span className="inline-flex items-center gap-1 text-amber-600 dark:text-amber-500 text-xs font-bold"><CheckCircle2 className="h-5 w-5 shrink-0" /> ACTIVE CONTROL LINKED</span></div><h4 className="text-xl text-slate-900 dark:text-white font-bold">Database Backup Restoration Failure</h4><p className="text-base text-slate-600 dark:text-slate-300 mt-1">Risk of automated snapshot restoration failure on production database assets in disaster recovery scenarios.</p><div className="grid grid-cols-2 sm:grid-cols-3 gap-4 my-space-md p-4 rounded-lg bg-slate-50 dark:bg-[#16233F]"><div><span className="font-mono text-xs text-slate-600 dark:text-slate-300 block">Risk Scoring</span><span className="text-sm text-red-600 dark:text-red-400 font-bold">5×5 Score: 16 (High)</span></div><div><span className="font-mono text-xs text-slate-600 dark:text-slate-300 block">Target Asset (Asset-to-Risk)</span><span className="text-sm text-slate-900 dark:text-white font-bold">AST-019 (Prod DB)</span></div><div><span className="font-mono text-xs text-slate-600 dark:text-slate-300 block">Owner</span><span className="text-sm text-slate-900 dark:text-white font-bold">P. Dev (SecOps)</span></div></div><div className="p-4 rounded-lg bg-teal-100/20 dark:bg-teal-900/20 mb-4"><div className="flex items-center justify-between mb-1"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">LINKED CONTROL: CTRL-012</span><span className="font-mono text-xs text-slate-900 dark:text-white font-medium">Advisory AI Suggested (Reviewed)</span></div><div className="text-sm text-slate-900 dark:text-white font-bold">Automated Daily Snapshot &amp; 30-Day Air-Gapped Test Restoration</div><div className="flex flex-wrap gap-1.5 mt-2"><span className="px-2 py-0.5 rounded bg-white dark:bg-[#0A111F] font-mono text-xs text-slate-900 dark:text-white shadow-sm">ISO 27001: A.8.13</span><span className="px-2 py-0.5 rounded bg-white dark:bg-[#0A111F] font-mono text-xs text-slate-900 dark:text-white shadow-sm">SOC 2: CC9.1, A1.2</span><span className="px-2 py-0.5 rounded bg-white dark:bg-[#0A111F] font-mono text-xs text-slate-900 dark:text-white shadow-sm">HIPAA: § 164.308(a)(7)</span><span className="px-2 py-0.5 rounded bg-white dark:bg-[#0A111F] font-mono text-xs text-slate-900 dark:text-white shadow-sm">DPDP: Sec 8(5)</span></div></div></div><div className="flex items-center justify-between pt-space-sm text-sm text-slate-600 dark:text-slate-300"><span className="">Evidence Record: <strong className="font-code-sm text-slate-900 dark:text-white">ev-drill-2026-03 (External Document Link)</strong></span><a className="text-teal-600 dark:text-teal-400 font-semibold hover:underline inline-flex items-center gap-1" data-path="request-demo" href="#"><span className="">View Full Control Map</span><ArrowRight className="h-5 w-5 shrink-0" /></a></div></div>
-</div>
-</div>
-</div>
-</section>
+          </section>
 {/*  =========================================================================  */}
 {/*  4. EXPANDED PLATFORM CAPABILITIES (Phase-17 Feature Ecosystem)            */}
 {/*  =========================================================================  */}

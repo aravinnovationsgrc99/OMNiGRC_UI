@@ -340,11 +340,11 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Theme Toggle & Hamburger Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
             <button
               suppressHydrationWarning
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-[#D4521A] dark:text-amber hover:text-[#2E936F] dark:hover:text-teal"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-[#F15E1C] dark:text-amber hover:text-[#2E936F] dark:hover:text-teal focus:outline-none focus:ring-2 focus:ring-[#2E936F]"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
               {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-[#2E936F]" />}
@@ -353,7 +353,7 @@ export const Header: React.FC = () => {
             <button
               suppressHydrationWarning
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-navy-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-navy-800 hover:text-teal"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-xl border border-slate-200/60 dark:border-navy-700/40 text-navy-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-navy-800 hover:text-teal focus:outline-none focus:ring-2 focus:ring-[#2E936F]"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
