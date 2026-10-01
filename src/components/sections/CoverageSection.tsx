@@ -29,19 +29,20 @@ export const CoverageSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-[12px] font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber font-bold inline-block">
-            ONE FRAMEWORK ENGINE
+            CONTROL MAPPING ENGINE
           </span>
           <h2 className="text-2xl sm:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            Every standard that matters.
+            Not a checklist. <br />
+            <span className="text-[#2E936F] dark:text-teal">A control mapping engine.</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium max-w-3xl mx-auto">
-            Map controls once, stay compliant everywhere — SOC 2, ISO 27001, GDPR, DPDP, ISO 42001, HIPAA, and more, all mapped to the same evidence base.
+            93 ISO 27001 controls. GDPR Articles 28–35. DPDP fiduciary rules. Every clause traced to the primary control that satisfies it — across all six frameworks, out of the box.
           </p>
         </div>
 
         {/* 3D Framework Engine Visualization */}
         <div className="w-full">
-          <FrameworkOrrery title="ONE FRAMEWORK ENGINE" />
+          <FrameworkOrrery title="CONTROL MAPPING ENGINE" />
         </div>
 
         {/* Accessible De-emphasized Plain-Text Fallback List for SEO Crawlers & Screen Readers */}

@@ -77,7 +77,7 @@ export const ArchitectureSection: React.FC = () => {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold"
+            className="text-xs font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber mb-3 font-bold"
           >
             TRANSPARENT AI ARCHITECTURE
           </motion.p>
@@ -86,15 +86,15 @@ export const ArchitectureSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4"
           >
-            How AI control mapping actually works.
+            AI assists. Humans decide.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg"
+            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg font-medium leading-relaxed max-w-2xl mx-auto"
           >
-            No black boxes. No autonomous hallucinated approvals. Complete data minimization and mandatory human decision-making.
+            Every AI suggestion is logged, reversible, and gated behind explicit approval — nothing writes to your compliance record without a human signing off.
           </motion.p>
         </div>
 
@@ -161,7 +161,7 @@ export const ArchitectureSection: React.FC = () => {
         <div className="mb-10 rounded-3xl border border-teal/30 bg-[#0D1626] dark:bg-navy-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="px-3 py-1 rounded-full bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal text-[10px] font-mono font-bold uppercase tracking-widest border border-[#2E936F]/30 dark:border-teal/30">
-              END-TO-END DATA FLOW
+              ADVISORY AI PIPELINE
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
               8-Stage AI API Execution Pipeline
@@ -173,80 +173,93 @@ export const ArchitectureSection: React.FC = () => {
 
           {/* 8 Connected Nodes Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
-            {[
-              {
-                step: "01",
-                label: "Analyst UI",
-                sub: "Initiates Request",
-                icon: UserCheck,
-                color: "teal",
-              },
-              {
-                step: "02",
-                label: "API Layer",
-                sub: "Auth & Rate Limit",
-                icon: Server,
-                color: "teal",
-              },
-              {
-                step: "03",
-                label: "Minimization Layer",
-                sub: "Sanitized Advisory Payload",
-                icon: Lock,
-                color: "amber",
-              },
-              {
-                step: "04",
-                label: "Tiered Router",
-                sub: "Cost & Speed Router",
-                icon: GitMerge,
-                color: "amber",
-              },
-              {
-                step: "05",
-                label: "External LLM API",
-                sub: "Gemini 2.5 Flash-Lite / Claude Haiku 4.5",
-                icon: Cpu,
-                color: "amber",
-                highlight: true,
-              },
-              {
-                step: "06",
-                label: "Response Validator",
-                sub: "Schema & Confidence",
-                icon: FileCode,
-                color: "teal",
-              },
-              {
-                step: "07",
-                label: "Human Review",
-                sub: "Mandatory Decision",
-                icon: ShieldCheck,
-                color: "teal",
-              },
-              {
-                step: "08",
-                label: "Primary DB",
-                sub: "Structured Application Audit Log",
-                icon: Database,
-                color: "teal",
-              },
-            ].map((node, nIdx) => {
+            {(
+              [
+                {
+                  step: "01",
+                  label: "Analyst UI",
+                  sub: "Initiates Request",
+                  icon: UserCheck,
+                  color: "teal",
+                },
+                {
+                  step: "02",
+                  label: "API Layer",
+                  sub: "Auth & Rate Limit",
+                  icon: Server,
+                  color: "teal",
+                },
+                {
+                  step: "03",
+                  label: "Minimization Layer",
+                  sub: "Sanitized Advisory Payload",
+                  icon: Lock,
+                  color: "amber",
+                },
+                {
+                  step: "04",
+                  label: "Tiered Router",
+                  sub: "Cost & Speed Router",
+                  icon: GitMerge,
+                  color: "amber",
+                },
+                {
+                  step: "05",
+                  label: "External LLM API",
+                  sub: "Gemini 2.5 Flash-Lite / Claude Haiku 4.5",
+                  icon: Cpu,
+                  color: "amber",
+                  highlight: true,
+                },
+                {
+                  step: "06",
+                  label: "Response Validator",
+                  sub: "Schema & Confidence",
+                  icon: FileCode,
+                  color: "teal",
+                },
+                {
+                  step: "07",
+                  label: "Human Review & Sign-Off",
+                  sub: "Explicit Approval Gate",
+                  icon: ShieldCheck,
+                  color: "teal",
+                  critical: true,
+                },
+                {
+                  step: "08",
+                  label: "Primary DB",
+                  sub: "Structured Audit Record",
+                  icon: Database,
+                  color: "teal",
+                },
+              ] as Array<{
+                step: string;
+                label: string;
+                sub: string;
+                icon: React.ElementType;
+                color: string;
+                highlight?: boolean;
+                critical?: boolean;
+              }>
+            ).map((node, nIdx) => {
               const NodeIcon = node.icon;
               return (
                 <div key={nIdx} className="relative group">
                   <div
                     className={`h-full p-4 rounded-2xl border backdrop-blur-sm transition-all duration-300 flex flex-col justify-between ${
-                      node.highlight
+                      node.critical
+                        ? "border-[#2E936F] bg-[#2E936F]/20 shadow-xl shadow-[#2E936F]/20 ring-2 ring-[#2E936F]/40"
+                        : node.highlight
                         ? "border-amber/70 bg-amber/10 shadow-lg shadow-amber/20"
                         : "border-slate-700/50 bg-[#0A111F]/90 hover:border-teal/50 hover:bg-navy-900"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-mono font-bold text-slate-400">
-                        STAGE {node.step}
+                      <span className={`text-[10px] font-mono font-bold ${node.critical ? "text-[#2E936F] dark:text-teal-300" : "text-slate-400"}`}>
+                        STAGE {node.step} {node.critical && "• HUMAN GATE"}
                       </span>
-                      <div className={`p-1.5 rounded-lg ${node.highlight ? "bg-[#FAB60A]/20 dark:bg-amber/20 text-navy-900 dark:text-amber" : "bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal"}`}>
+                      <div className={`p-1.5 rounded-lg ${node.critical ? "bg-[#2E936F] text-white" : node.highlight ? "bg-[#FAB60A]/20 dark:bg-amber/20 text-navy-900 dark:text-amber" : "bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal"}`}>
                         <NodeIcon className="h-4 w-4" />
                       </div>
                     </div>
