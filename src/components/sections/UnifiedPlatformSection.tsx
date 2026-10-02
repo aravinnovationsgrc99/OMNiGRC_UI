@@ -204,15 +204,15 @@ export const UnifiedPlatformSection: React.FC = () => {
               <div className="lg:col-span-7">
                 {activePillar === 0 && (
                   /* Pillar 1: Risk Matrix Interactive View */
-                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
+                  <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <ShieldAlert className="h-4 w-4 text-teal" />
-                        <span className="text-xs font-mono font-bold text-white">
+                        <ShieldAlert className="h-4 w-4 text-[#2E936F] dark:text-teal" />
+                        <span className="text-xs font-mono font-bold text-navy-900 dark:text-white">
                           Risk Quantification Engine (5x5 Matrix)
                         </span>
                       </div>
-                      <span className="text-xs font-mono font-bold text-teal-300">14 Active Risks</span>
+                      <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300">14 Active Risks</span>
                     </div>
 
                     <div className="grid grid-cols-5 gap-1.5 text-center text-[10px] font-mono">
@@ -260,12 +260,12 @@ export const UnifiedPlatformSection: React.FC = () => {
                       ))}
                     </div>
 
-                    <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 flex items-center justify-between text-xs">
+                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-xs">
                       <div>
-                        <p className="font-bold text-white">RSK-042: Database Backup Restoration Failure</p>
-                        <p className="text-2xs text-slate-300 mt-0.5">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
+                        <p className="font-bold text-navy-900 dark:text-white">RSK-042: Database Backup Restoration Failure</p>
+                        <p className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Likelihood: 3 • Impact: 4 • Treatment: Mitigate via CTRL-012</p>
                       </div>
-                      <span className="px-2.5 py-1 rounded bg-teal/20 text-teal-300 font-mono font-bold text-xs">
+                      <span className="px-2.5 py-1 rounded bg-[#2E936F]/15 dark:bg-teal/20 text-[#2E936F] dark:text-teal-300 font-mono font-bold text-xs">
                         Residual: Low
                       </span>
                     </div>
@@ -274,40 +274,40 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                 {activePillar === 1 && (
                   /* Pillar 2: Asset & Relationship Graph View */
-                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
+                  <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <Server className="h-4 w-4 text-amber" />
-                        <span className="text-xs font-mono font-bold text-white">
+                        <Server className="h-4 w-4 text-[#FAB60A] dark:text-amber" />
+                        <span className="text-xs font-mono font-bold text-navy-900 dark:text-white">
                           Asset ↔ Vendor ↔ Risk ↔ Control Relationship Flow
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-amber">Interactive Graph</span>
+                      <span className="text-[10px] font-mono text-[#F15E1C] dark:text-amber font-bold">Interactive Graph</span>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
-                      <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-[#0A111F] border border-navy-700/60 text-xs">
+                    <div className="p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 space-y-3">
+                      <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 text-xs">
                         <div className="flex items-center gap-2">
-                          <Database className="h-4 w-4 text-teal" />
-                          <span className="font-bold text-white">Asset: AWS RDS PostgreSQL (Cluster-Prod)</span>
+                          <Database className="h-4 w-4 text-[#2E936F] dark:text-teal" />
+                          <span className="font-bold text-navy-900 dark:text-white">Asset: AWS RDS PostgreSQL (Cluster-Prod)</span>
                         </div>
-                        <span className="text-[10px] font-mono text-amber bg-amber/10 px-2 py-0.5 rounded">
+                        <span className="text-[10px] font-mono text-[#F15E1C] bg-[#FFEC69]/50 dark:bg-amber/10 px-2 py-0.5 rounded font-bold">
                           PII Data Flow
                         </span>
                       </div>
 
-                      <div className="pl-6 border-l-2 border-teal/40 space-y-2 text-xs">
-                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
-                          <span className="text-slate-300">Vendor: Amazon Web Services Inc.</span>
-                          <span className="text-xs font-mono font-bold text-teal-300">SOC 2 Verified</span>
+                      <div className="pl-6 border-l-2 border-[#2E936F]/40 dark:border-teal/40 space-y-2 text-xs">
+                        <div className="p-2 rounded-lg bg-white dark:bg-[#0A111F]/70 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between">
+                          <span className="text-slate-700 dark:text-slate-300">Vendor: Amazon Web Services Inc.</span>
+                          <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300">SOC 2 Verified</span>
                         </div>
-                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-navy-700/60 flex items-center justify-between">
-                          <span className="text-slate-300">Linked Risk: RSK-019 (Unauthorized Data Access)</span>
-                          <span className="text-[10px] font-mono text-amber">High Impact</span>
+                        <div className="p-2 rounded-lg bg-white dark:bg-[#0A111F]/70 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between">
+                          <span className="text-slate-700 dark:text-slate-300">Linked Risk: RSK-019 (Unauthorized Data Access)</span>
+                          <span className="text-[10px] font-mono text-[#F15E1C] font-bold">High Impact</span>
                         </div>
-                        <div className="p-2 rounded-lg bg-[#0A111F]/70 border border-teal/30 flex items-center justify-between">
-                          <span className="text-slate-200 font-semibold">Associated Control: CTRL-088 (KMS AES-256 Encryption)</span>
-                          <span className="text-xs font-mono font-bold text-teal-300">Enforced</span>
+                        <div className="p-2 rounded-lg bg-white dark:bg-[#0A111F]/70 border border-[#2E936F]/40 dark:border-teal/30 flex items-center justify-between">
+                          <span className="text-slate-900 dark:text-slate-200 font-semibold">Associated Control: CTRL-088 (KMS AES-256 Encryption)</span>
+                          <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300">Enforced</span>
                         </div>
                       </div>
                     </div>
@@ -316,48 +316,48 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                 {activePillar === 2 && (
                   /* Pillar 3: Control Mapping & AI Suggestion View */
-                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
+                  <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <Sparkles className="h-4 w-4 text-amber" />
-                        <span className="text-xs font-mono font-bold text-white">
+                        <Sparkles className="h-4 w-4 text-[#FAB60A] dark:text-amber" />
+                        <span className="text-xs font-mono font-bold text-navy-900 dark:text-white">
                           Map-Once Clause Alignment (AI Advisory + Human Review)
                         </span>
                       </div>
-                      <span className="text-xs font-mono font-bold text-teal-300">Human Verified</span>
+                      <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300">Human Verified</span>
                     </div>
 
-                    <div className="p-4 rounded-xl bg-navy-900 border border-navy-700/60 space-y-3">
-                      <div className="p-3 rounded-lg bg-[#0A111F] border border-teal/30">
-                        <p className="text-[10px] font-mono text-amber font-bold uppercase">Source Internal Control:</p>
-                        <p className="text-xs font-bold text-white mt-1">CTRL-005: Quarterly User Access & Privilege Reviews</p>
-                        <p className="text-2xs text-slate-300 mt-1">
+                    <div className="p-4 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 space-y-3">
+                      <div className="p-3 rounded-lg bg-white dark:bg-[#0A111F] border border-[#2E936F]/40 dark:border-teal/30">
+                        <p className="text-[10px] font-mono text-[#F15E1C] font-bold uppercase">Source Internal Control:</p>
+                        <p className="text-xs font-bold text-navy-900 dark:text-white mt-1">CTRL-005: Quarterly User Access & Privilege Reviews</p>
+                        <p className="text-2xs text-slate-600 dark:text-slate-300 mt-1">
                           &quot;Privileged access rights to production databases are reviewed and recertified every 90 days by team leads.&quot;
                         </p>
                       </div>
 
                       <div className="space-y-1.5 text-xs">
-                        <p className="text-[10px] font-mono text-slate-300 uppercase">AI Suggested Framework Alignments:</p>
+                        <p className="text-[10px] font-mono text-slate-600 dark:text-slate-300 uppercase">AI Suggested Framework Alignments:</p>
                         {pillar3FrameworkAlignments.map((m, mIdx) => {
                           const fwObj = FRAMEWORKS.find((f) => f.code === m.code);
                           return (
                             <div
                               key={mIdx}
-                              className="p-2 rounded-lg bg-[#0A111F]/80 border border-navy-700/60 flex items-center justify-between text-2xs"
+                              className="p-2 rounded-lg bg-white dark:bg-[#0A111F]/80 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-2xs"
                             >
-                              <span className="font-bold text-amber">{fwObj?.name || m.code}:</span>
-                              <span className="text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
-                              <span className="font-mono font-bold text-teal-300 text-xs">{m.conf} match</span>
+                              <span className="font-bold text-[#F15E1C] dark:text-amber">{fwObj?.name || m.code}:</span>
+                              <span className="text-slate-700 dark:text-slate-300 truncate max-w-[200px] sm:max-w-none">{m.clause}</span>
+                              <span className="font-mono font-bold text-[#2E936F] dark:text-teal-300 text-xs">{m.conf} match</span>
                             </div>
                           );
                         })}
                       </div>
 
-                      <div className="p-2 rounded-lg bg-teal/15 border border-teal/30 flex items-center justify-between text-xs">
-                        <span className="text-teal-300 font-bold flex items-center gap-1.5">
+                      <div className="p-2 rounded-lg bg-[#2E936F]/10 border border-[#2E936F]/30 flex items-center justify-between text-xs">
+                        <span className="text-[#2E936F] font-bold flex items-center gap-1.5">
                           <UserCheck className="h-3.5 w-3.5" /> Approved by GRC Analyst
                         </span>
-                        <span className="text-[10px] font-mono text-slate-300">Saved to Postgres</span>
+                        <span className="text-[10px] font-mono text-slate-600 dark:text-slate-300">Saved to Postgres</span>
                       </div>
                     </div>
                   </div>
@@ -365,61 +365,61 @@ export const UnifiedPlatformSection: React.FC = () => {
 
                 {activePillar === 3 && (
                   /* Pillar 4: Compliance Testing Board View */
-                  <div className="rounded-2xl border border-navy-700/60 bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
-                    <div className="flex items-center justify-between border-b border-navy-700/60 pb-3">
+                  <div className="rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F] p-5 sm:p-6 shadow-xl space-y-4">
+                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3">
                       <div className="flex items-center gap-2">
-                        <CalendarCheck className="h-4 w-4 text-teal" />
-                        <span className="text-xs font-mono font-bold text-white">
+                        <CalendarCheck className="h-4 w-4 text-[#2E936F] dark:text-teal" />
+                        <span className="text-xs font-mono font-bold text-navy-900 dark:text-white">
                           Testing Cadence & Owner Kanban Board
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-amber">Rolling 30/60/90d</span>
+                      <span className="text-[10px] font-mono text-[#F15E1C] font-bold">Rolling 30/60/90d</span>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2.5 text-xs">
                       {/* Column 1: Next 30 Days */}
-                      <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
-                        <div className="flex items-center justify-between text-xs font-mono font-bold text-teal-300 uppercase">
+                      <div className="p-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 space-y-2">
+                        <div className="flex items-center justify-between text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300 uppercase">
                           <span>Next 30 Days</span>
-                          <span className="bg-teal/20 px-1.5 py-0.5 rounded text-teal-300">2 Due</span>
+                          <span className="bg-[#2E936F]/20 px-1.5 py-0.5 rounded text-[#2E936F] dark:text-teal-300">2 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-2xs">
-                          <p className="font-bold text-white">MFA Configuration Test</p>
-                          <p className="text-2xs text-slate-300 mt-0.5">Owner: SecOps Lead</p>
-                          <p className="text-[9px] font-mono text-amber mt-1">Due in 6 days</p>
+                        <div className="p-2 rounded bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 text-2xs">
+                          <p className="font-bold text-navy-900 dark:text-white">MFA Configuration Test</p>
+                          <p className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Owner: SecOps Lead</p>
+                          <p className="text-[9px] font-mono text-[#F15E1C] mt-1 font-bold">Due in 6 days</p>
                         </div>
                       </div>
 
                       {/* Column 2: 30-60 Days */}
-                      <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
-                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-amber uppercase">
+                      <div className="p-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 space-y-2">
+                        <div className="flex items-center justify-between text-[10px] font-mono font-bold text-[#FAB60A] dark:text-amber uppercase">
                           <span>30 - 60 Days</span>
-                          <span className="bg-amber/20 px-1.5 py-0.5 rounded text-amber">3 Due</span>
+                          <span className="bg-[#FAB60A]/20 px-1.5 py-0.5 rounded text-[#FAB60A] dark:text-amber">3 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-2xs">
-                          <p className="font-bold text-white">Vendor SOC 2 Check</p>
-                          <p className="text-2xs text-slate-300 mt-0.5">Owner: Procurement</p>
-                          <p className="text-[9px] font-mono text-amber mt-1">Due in 38 days</p>
+                        <div className="p-2 rounded bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 text-2xs">
+                          <p className="font-bold text-navy-900 dark:text-white">Vendor SOC 2 Check</p>
+                          <p className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Owner: Procurement</p>
+                          <p className="text-[9px] font-mono text-[#FAB60A] dark:text-amber mt-1 font-bold">Due in 38 days</p>
                         </div>
                       </div>
 
                       {/* Column 3: 60-90 Days */}
-                      <div className="p-3 rounded-xl bg-navy-900 border border-navy-700/60 space-y-2">
-                        <div className="flex items-center justify-between text-xs font-mono font-bold text-teal-300 uppercase">
+                      <div className="p-3 rounded-xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 space-y-2">
+                        <div className="flex items-center justify-between text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300 uppercase">
                           <span>60 - 90 Days</span>
-                          <span className="bg-teal/20 px-1.5 py-0.5 rounded text-teal-300">1 Due</span>
+                          <span className="bg-[#2E936F]/20 px-1.5 py-0.5 rounded text-[#2E936F] dark:text-teal-300">1 Due</span>
                         </div>
-                        <div className="p-2 rounded bg-[#0A111F] border border-navy-700/60 text-2xs">
-                          <p className="font-bold text-white">Annual DRP Simulation</p>
-                          <p className="text-2xs text-slate-300 mt-0.5">Owner: CTO</p>
-                          <p className="text-xs font-mono font-bold text-teal-300 mt-1">Due in 74 days</p>
+                        <div className="p-2 rounded bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 text-2xs">
+                          <p className="font-bold text-navy-900 dark:text-white">Annual DRP Simulation</p>
+                          <p className="text-2xs text-slate-600 dark:text-slate-300 mt-0.5">Owner: CTO</p>
+                          <p className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal-300 mt-1">Due in 74 days</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="p-2.5 rounded-lg bg-navy-900 border border-navy-700/60 flex items-center justify-between text-2xs">
-                      <span className="text-slate-300">Auditor Export Readiness:</span>
-                      <span className="text-teal-300 font-mono font-bold text-xs">100% On Schedule</span>
+                    <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-2xs">
+                      <span className="text-slate-700 dark:text-slate-300">Auditor Export Readiness:</span>
+                      <span className="text-[#2E936F] dark:text-teal-300 font-mono font-bold text-xs">100% On Schedule</span>
                     </div>
                   </div>
                 )}

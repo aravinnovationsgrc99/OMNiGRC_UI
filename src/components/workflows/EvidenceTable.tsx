@@ -61,7 +61,7 @@ export function EvidenceTable() {
         <div>
           <div className="flex items-center gap-3">
             <h3 className="text-2xl text-[#0d1b36] dark:text-white font-bold">Live Evidence Index</h3>
-            <span className="px-2.5 py-1 rounded bg-[#0d1b36] dark:bg-teal-900/40 text-white dark:text-teal-400 font-mono text-[10px] font-bold">142 RECORDS</span>
+            <span className="px-2.5 py-1 rounded bg-[#2E936F] dark:bg-teal-900/40 text-white dark:text-teal-400 font-mono text-[10px] font-bold">142 RECORDS</span>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
             Deterministic PostgreSQL catalog of external pointers, signed attestations, and cross-framework control links.
@@ -82,7 +82,7 @@ export function EvidenceTable() {
             <Filter className="h-4 w-4" />
             <span>Filter</span>
           </button>
-          <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0d1b36] dark:bg-teal-600 hover:bg-slate-800 dark:hover:bg-teal-500 text-white text-sm font-semibold transition-colors shadow-sm" type="button">
+          <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#2E936F] dark:bg-teal-600 hover:bg-slate-800 dark:hover:bg-teal-500 text-white text-sm font-semibold transition-colors shadow-sm" type="button">
             <LinkIcon className="h-4 w-4" />
             <span>Index New Reference</span>
           </button>
@@ -97,7 +97,7 @@ export function EvidenceTable() {
             onClick={() => setActiveFilter(f.name)}
             className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors border ${
               activeFilter === f.name 
-                ? 'bg-[#0d1b36] dark:bg-teal-600 text-white border-transparent' 
+                ? 'bg-[#2E936F] dark:bg-teal-600 text-white border-transparent' 
                 : 'bg-white dark:bg-navy-950 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-800'
             }`}
           >
@@ -185,7 +185,7 @@ export function EvidenceTable() {
           <span>Showing 1-4 of 142 items</span>
           <div className="flex gap-1">
             <button className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-800 disabled:opacity-50">Prev</button>
-            <button className="px-3 py-1.5 rounded-lg border border-[#0d1b36] dark:border-teal-600 bg-[#0d1b36] dark:bg-teal-600 text-white font-bold">1</button>
+            <button className="px-3 py-1.5 rounded-lg border border-[#0d1b36] dark:border-teal-600 bg-[#2E936F] dark:bg-teal-600 text-white font-bold">1</button>
             <button className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-800">2</button>
             <button className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-800">3</button>
             <button className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-800">Next</button>

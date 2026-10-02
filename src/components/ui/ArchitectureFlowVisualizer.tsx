@@ -72,7 +72,7 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
               onClick={() => setActivePhase(idx)}
               className={`relative flex items-center justify-center text-center px-4 py-3 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-300 ${
                 isActive
-                  ? "bg-[#16233F] dark:bg-teal text-white shadow-lg ring-2 ring-[#2E936F] dark:ring-teal-400"
+                  ? "bg-[#2E936F] dark:bg-teal text-white shadow-lg ring-2 ring-[#2E936F] dark:ring-teal-400"
                   : "bg-slate-100/90 dark:bg-navy-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-200/80 dark:hover:bg-navy-700/80 border border-slate-200 dark:border-navy-700"
               }`}
             >

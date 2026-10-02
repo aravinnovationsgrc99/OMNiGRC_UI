@@ -113,7 +113,7 @@ export const IsometricHeroVisual: React.FC = () => {
         </h2>
 
         <div className="pt-1">
-          <span className="inline-block px-4 py-1.5 rounded-xl bg-[#0a1528] text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40 tracking-wider">
+          <span className="inline-block px-4 py-1.5 rounded-xl bg-white dark:bg-[#0a1528] text-navy-900 dark:text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40 tracking-wider">
             RISK, ASSETS, CONTROLS, EVIDENCE — ONE THREAD, NOT FOUR SILOS.
           </span>
         </div>
@@ -142,24 +142,24 @@ export const IsometricHeroVisual: React.FC = () => {
         </div>
       </div>
 
-      {/* MAIN OPERATING RAIL CARD */}
-      <div className="relative z-10 rounded-3xl border border-slate-300 dark:border-navy-700/80 bg-[#0c1628] dark:bg-[#070e1c] p-4 sm:p-6 lg:p-7 shadow-2xl text-white overflow-hidden space-y-5">
+      {/* MAIN OPERATING RAIL CARD (CLEAN LIGHT THEME DEFAULT) */}
+      <div className="relative z-10 rounded-3xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#070e1c] p-4 sm:p-6 lg:p-7 shadow-xl text-navy-900 dark:text-white overflow-hidden space-y-5">
         {/* Card Header Row */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800/80">
           <div className="flex items-center gap-2.5">
             <span className="w-3 h-3 rounded-full bg-[#F15E1C] dark:bg-[#FAB60A] shadow-md shadow-amber-500/50 shrink-0 animate-pulse" />
-            <h3 className="font-mono text-xs sm:text-sm md:text-base font-extrabold tracking-wider uppercase text-white">
+            <h3 className="font-mono text-xs sm:text-sm md:text-base font-extrabold tracking-wider uppercase text-navy-900 dark:text-white">
               INTERACTIVE OPERATING RAIL: RISK TO EVIDENCE PIPELINE
             </h3>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-950 border border-[#2E936F]/40 text-[#00d2b4] text-xs font-mono font-extrabold shadow-sm">
-            <Activity className="h-3.5 w-3.5 text-[#00d2b4] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F0FDF4] dark:bg-navy-950 border border-[#2E936F]/40 text-[#2E936F] dark:text-teal-300 text-xs font-mono font-extrabold shadow-sm">
+            <Activity className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal-400 animate-pulse" />
             <span>Live PostgreSQL Crosswalk Stream</span>
           </div>
         </div>
 
-        {/* 7 Pipeline Stages - Constrained with strict min-w-0 and overflow-hidden */}
+        {/* 7 Pipeline Stages */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3 w-full min-w-0">
           {pipelineStages.map((stg, idx) => {
             const isActive = activeStageIndex === idx;
@@ -172,22 +172,22 @@ export const IsometricHeroVisual: React.FC = () => {
                 }}
                 className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between min-h-[96px] min-w-0 w-full overflow-hidden ${
                   isActive
-                    ? "border-[#00d2b4] bg-[#0f243a] shadow-lg ring-1 ring-[#00d2b4]/50 scale-[1.02]"
-                    : "border-slate-800/90 bg-[#060c18]/90 hover:border-slate-700 hover:bg-[#091324]"
+                    ? "border-[#2E936F] bg-[#F0FDF4] dark:bg-[#0f243a] shadow-md ring-1 ring-[#2E936F]/40 scale-[1.02]"
+                    : "border-slate-200 dark:border-slate-800/90 bg-slate-50/80 dark:bg-[#060c18]/90 hover:border-[#2E936F]/40 hover:bg-white dark:hover:bg-[#091324]"
                 }`}
               >
                 <span
                   className={`text-[10px] xl:text-xs font-mono font-extrabold uppercase tracking-wider block truncate min-w-0 ${
-                    isActive ? "text-[#00d2b4]" : "text-[#00d2b4]/80"
+                    isActive ? "text-[#2E936F] dark:text-teal-300" : "text-[#2E936F]/80 dark:text-teal-400/80"
                   }`}
                 >
                   {stg.label}
                 </span>
                 <div className="min-w-0 w-full overflow-hidden space-y-0.5">
-                  <h4 className="text-xs xl:text-sm font-extrabold text-white tracking-tight leading-tight truncate min-w-0" title={stg.title}>
+                  <h4 className="text-xs xl:text-sm font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight truncate min-w-0" title={stg.title}>
                     {stg.title}
                   </h4>
-                  <p className="text-[10px] xl:text-[11px] font-mono text-slate-400 font-medium truncate min-w-0 block" title={stg.sub}>
+                  <p className="text-[10px] xl:text-[11px] font-mono text-slate-600 dark:text-slate-400 font-medium truncate min-w-0 block" title={stg.sub}>
                     {stg.sub}
                   </p>
                 </div>
@@ -196,22 +196,22 @@ export const IsometricHeroVisual: React.FC = () => {
           })}
         </div>
 
-        {/* Bottom Console Terminal Log Bar */}
-        <div className="p-4 sm:p-4 rounded-2xl bg-[#040810] border border-slate-800/90 flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs sm:text-sm shadow-inner min-w-0 overflow-hidden">
+        {/* Bottom Console Log Bar */}
+        <div className="p-4 sm:p-4 rounded-2xl bg-slate-50 dark:bg-[#040810] border border-slate-200 dark:border-slate-800/90 flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs sm:text-sm shadow-sm min-w-0 overflow-hidden">
           <div className="flex flex-wrap md:flex-nowrap items-center gap-2.5 min-w-0 overflow-hidden">
             <span className="px-2.5 py-1 rounded bg-[#FAB60A] text-navy-950 font-black text-[11px] sm:text-xs uppercase tracking-wider shrink-0 shadow">
               DEMO STREAM
             </span>
-            <p className="text-slate-300 font-medium leading-relaxed min-w-0 truncate sm:whitespace-normal">
-              <strong className="text-white font-extrabold">
+            <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed min-w-0 truncate sm:whitespace-normal">
+              <strong className="text-navy-900 dark:text-white font-extrabold">
                 Live Trace (Illustrative Demo Data):
               </strong>{" "}
               Active Risk:{" "}
-              <span className="text-[#00d2b4] font-bold">
+              <span className="text-[#2E936F] font-bold">
                 {activeStage.traceRisk}
               </span>{" "}
               <span className="text-[#FAB60A] font-bold">→</span> Linked Control{" "}
-              <span className="text-[#FAB60A] font-bold">
+              <span className="text-[#F15E1C] dark:text-[#FAB60A] font-bold">
                 {activeStage.traceControl}
               </span>{" "}
               <span className="text-[#2E936F] font-bold">→</span>{" "}
@@ -222,9 +222,9 @@ export const IsometricHeroVisual: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 shrink-0 text-slate-400 text-xs font-mono justify-end border-t md:border-t-0 border-slate-800/60 pt-2 md:pt-0">
+          <div className="flex items-center gap-2 shrink-0 text-slate-600 dark:text-slate-400 text-xs font-mono justify-end border-t md:border-t-0 border-slate-200 dark:border-slate-800/60 pt-2 md:pt-0">
             <span>
-              Sync: <strong className="text-slate-200">4.2ms</strong>
+              Sync: <strong className="text-navy-900 dark:text-slate-200">4.2ms</strong>
             </span>
             <CheckCircle2 className="h-4 w-4 text-[#2E936F]" />
           </div>

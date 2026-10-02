@@ -215,7 +215,7 @@ export const WorkflowSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#F15E1C] dark:text-amber text-xs font-mono tracking-wider uppercase font-extrabold shadow-sm">
             <Layers className="h-4 w-4 text-[#2E936F]" />
-            <span>FOUR CORE PILLARS & OPERATING RAIL</span>
+            <span>FOUR CORE PILLARS &amp; OPERATING RAIL</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
@@ -223,7 +223,7 @@ export const WorkflowSection: React.FC = () => {
           </h2>
 
           <div className="pt-1">
-            <span className="inline-block px-4 py-1.5 rounded-xl bg-navy-900 text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40">
+            <span className="inline-block px-4 py-1.5 rounded-xl bg-white dark:bg-[#0a1528] text-navy-900 dark:text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40">
               RISK, ASSETS, CONTROLS, EVIDENCE — ONE THREAD, NOT FOUR SILOS.
             </span>
           </div>
@@ -234,7 +234,7 @@ export const WorkflowSection: React.FC = () => {
         </div>
 
         {/* --------------------------------------------------------------- */}
-        {/* RESTORED SECTION: INTERACTIVE OPERATING RAIL & 6 FRAMEWORKS     */}
+        {/* INTERACTIVE OPERATING RAIL & 6 FRAMEWORKS (LIGHT THEME DEFAULT) */}
         {/* --------------------------------------------------------------- */}
         <div className="space-y-4">
           {/* Top Framework Mapping Header Line */}
@@ -257,23 +257,23 @@ export const WorkflowSection: React.FC = () => {
           </div>
 
           {/* MAIN OPERATING RAIL CARD */}
-          <div className="rounded-3xl border border-slate-300 dark:border-navy-700/80 bg-[#0c1628] dark:bg-[#070e1c] p-4 sm:p-6 lg:p-7 shadow-2xl text-white overflow-hidden relative space-y-5">
+          <div className="rounded-3xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#070e1c] p-4 sm:p-6 lg:p-7 shadow-xl text-navy-900 dark:text-white overflow-hidden relative space-y-5">
             {/* Header Row */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800/80">
               <div className="flex items-center gap-2.5">
                 <span className="w-3 h-3 rounded-full bg-[#F15E1C] dark:bg-[#FAB60A] shadow-md shadow-amber-500/50 shrink-0" />
-                <h3 className="font-mono text-xs sm:text-sm md:text-base font-extrabold tracking-wider uppercase text-white">
+                <h3 className="font-mono text-xs sm:text-sm md:text-base font-extrabold tracking-wider uppercase text-navy-900 dark:text-white">
                   INTERACTIVE OPERATING RAIL: RISK TO EVIDENCE PIPELINE
                 </h3>
               </div>
 
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-950 border border-[#2E936F]/40 text-[#00d2b4] text-xs font-mono font-extrabold shadow-sm">
-                <Activity className="h-3.5 w-3.5 text-[#00d2b4] animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F0FDF4] dark:bg-navy-950 border border-[#2E936F]/40 text-[#2E936F] dark:text-teal-300 text-xs font-mono font-extrabold shadow-sm">
+                <Activity className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal-400 animate-pulse" />
                 <span>Live PostgreSQL Crosswalk Stream</span>
               </div>
             </div>
 
-            {/* 7 Pipeline Stages - Constrained with strict min-w-0 and overflow-hidden */}
+            {/* 7 Pipeline Stages */}
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3 w-full min-w-0">
               {pipelineStages.map((stg, idx) => {
                 const isActive = activeStageIndex === idx;
@@ -286,22 +286,22 @@ export const WorkflowSection: React.FC = () => {
                     }}
                     className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between min-h-[96px] min-w-0 w-full overflow-hidden ${
                       isActive
-                        ? "border-[#00d2b4] bg-[#0f243a] shadow-lg ring-1 ring-[#00d2b4]/50 scale-[1.02]"
-                        : "border-slate-800/90 bg-[#060c18]/90 hover:border-slate-700 hover:bg-[#091324]"
+                        ? "border-[#2E936F] bg-[#F0FDF4] dark:bg-[#0f243a] shadow-md ring-1 ring-[#2E936F]/40 scale-[1.02]"
+                        : "border-slate-200 dark:border-slate-800/90 bg-slate-50/80 dark:bg-[#060c18]/90 hover:border-[#2E936F]/40 hover:bg-white dark:hover:bg-[#091324]"
                     }`}
                   >
                     <span
                       className={`text-[10px] xl:text-xs font-mono font-extrabold uppercase tracking-wider block truncate min-w-0 ${
-                        isActive ? "text-[#00d2b4]" : "text-[#00d2b4]/80"
+                        isActive ? "text-[#2E936F] dark:text-teal-300" : "text-[#2E936F]/80 dark:text-teal-400/80"
                       }`}
                     >
                       {stg.label}
                     </span>
                     <div className="min-w-0 w-full overflow-hidden space-y-0.5">
-                      <h4 className="text-xs xl:text-sm font-extrabold text-white tracking-tight leading-tight truncate min-w-0" title={stg.title}>
+                      <h4 className="text-xs xl:text-sm font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight truncate min-w-0" title={stg.title}>
                         {stg.title}
                       </h4>
-                      <p className="text-[10px] xl:text-[11px] font-mono text-slate-400 font-medium truncate min-w-0 block" title={stg.sub}>
+                      <p className="text-[10px] xl:text-[11px] font-mono text-slate-600 dark:text-slate-400 font-medium truncate min-w-0 block" title={stg.sub}>
                         {stg.sub}
                       </p>
                     </div>
@@ -311,21 +311,21 @@ export const WorkflowSection: React.FC = () => {
             </div>
 
             {/* Bottom Terminal Demo Stream Bar */}
-            <div className="p-4 sm:p-4 rounded-2xl bg-[#040810] border border-slate-800/90 flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs sm:text-sm shadow-inner">
-              <div className="flex flex-wrap md:flex-nowrap items-center gap-2.5">
+            <div className="p-4 sm:p-4 rounded-2xl bg-slate-50 dark:bg-[#040810] border border-slate-200 dark:border-slate-800/90 flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs sm:text-sm shadow-sm min-w-0 overflow-hidden">
+              <div className="flex flex-wrap md:flex-nowrap items-center gap-2.5 min-w-0 overflow-hidden">
                 <span className="px-2.5 py-1 rounded bg-[#FAB60A] text-navy-950 font-black text-[11px] sm:text-xs uppercase tracking-wider shrink-0 shadow">
                   DEMO STREAM
                 </span>
-                <p className="text-slate-300 font-medium leading-relaxed">
-                  <strong className="text-white font-extrabold">
+                <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed min-w-0 truncate sm:whitespace-normal">
+                  <strong className="text-navy-900 dark:text-white font-extrabold">
                     Live Trace (Illustrative Demo Data):
                   </strong>{" "}
                   Active Risk:{" "}
-                  <span className="text-[#00d2b4] font-bold">
+                  <span className="text-[#2E936F] font-bold">
                     {activeStage.traceRisk}
                   </span>{" "}
                   <span className="text-[#FAB60A] font-bold">→</span> Linked Control{" "}
-                  <span className="text-[#FAB60A] font-bold">
+                  <span className="text-[#F15E1C] dark:text-[#FAB60A] font-bold">
                     {activeStage.traceControl}
                   </span>{" "}
                   <span className="text-[#2E936F] font-bold">→</span>{" "}
@@ -336,9 +336,9 @@ export const WorkflowSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 shrink-0 text-slate-400 text-xs font-mono justify-end border-t md:border-t-0 border-slate-800/60 pt-2 md:pt-0">
+              <div className="flex items-center gap-2 shrink-0 text-slate-600 dark:text-slate-400 text-xs font-mono justify-end border-t md:border-t-0 border-slate-200 dark:border-slate-800/60 pt-2 md:pt-0">
                 <span>
-                  Sync: <strong className="text-slate-200">4.2ms</strong>
+                  Sync: <strong className="text-navy-900 dark:text-slate-200">4.2ms</strong>
                 </span>
                 <CheckCircle2 className="h-4 w-4 text-[#2E936F]" />
               </div>
@@ -448,15 +448,15 @@ export const WorkflowSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="p-6 sm:p-8 md:p-10 rounded-3xl border-2 border-[#2E936F]/60 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 text-white shadow-2xl backdrop-blur-xl space-y-6 sm:space-y-8"
+                className="p-6 sm:p-8 md:p-10 rounded-3xl border-2 border-[#2E936F]/60 bg-white dark:bg-navy-950 text-navy-900 dark:text-white shadow-xl backdrop-blur-xl space-y-6 sm:space-y-8"
               >
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
                   <div className="space-y-1">
                     <span className="text-xs sm:text-sm font-mono text-[#F15E1C] dark:text-amber font-extrabold uppercase tracking-widest flex items-center gap-2">
                       <Zap className="h-4 w-4 text-[#F15E1C] animate-pulse" />
                       ⚡ AUTO-CROSSWALK DEMONSTRATION
                     </span>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                       1 Security Control → 6 Standard Mappings
                     </h3>
                   </div>
@@ -470,7 +470,7 @@ export const WorkflowSection: React.FC = () => {
                         className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all ${
                           selectedControl === c.id
                             ? "bg-[#2E936F] text-white shadow-lg shadow-[#2E936F]/30 scale-105"
-                            : "bg-navy-950 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500"
+                            : "bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 hover:text-navy-900 border border-slate-300 dark:border-slate-700"
                         }`}
                       >
                         {c.id}
@@ -480,11 +480,11 @@ export const WorkflowSection: React.FC = () => {
                 </div>
 
                 {/* Selected Control Details Box */}
-                <div className="p-5 sm:p-6 rounded-2xl bg-navy-950/90 border border-slate-700/80 shadow-inner space-y-2">
-                  <span className="text-sm sm:text-base md:text-lg font-mono font-extrabold text-[#FAB60A] block">
+                <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-navy-950/90 border border-slate-200 dark:border-slate-700/80 shadow-inner space-y-2">
+                  <span className="text-sm sm:text-base md:text-lg font-mono font-extrabold text-[#b07d00] dark:text-[#FAB60A] block">
                     {currentControl.id}: {currentControl.name}
                   </span>
-                  <p className="text-xs sm:text-sm md:text-base text-slate-100 font-medium leading-relaxed">
+                  <p className="text-xs sm:text-sm md:text-base text-slate-700 dark:text-slate-100 font-medium leading-relaxed">
                     {currentControl.desc}
                   </p>
                 </div>
@@ -497,9 +497,9 @@ export const WorkflowSection: React.FC = () => {
                       initial={{ scale: 0.9, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ delay: idx * 0.05 }}
-                      className="p-4 sm:p-5 rounded-2xl border-2 border-[#2E936F]/50 bg-navy-900/90 hover:bg-navy-850 hover:border-[#2E936F] text-center space-y-1.5 shadow-md transition-all"
+                      className="p-4 sm:p-5 rounded-2xl border border-[#2E936F]/40 bg-[#F0FDF4] dark:bg-navy-900/90 hover:border-[#2E936F] text-center space-y-1.5 shadow-sm transition-all"
                     >
-                      <span className="text-xs sm:text-sm font-mono text-slate-300 font-extrabold uppercase tracking-wider block">
+                      <span className="text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-300 font-extrabold uppercase tracking-wider block">
                         {m.code}
                       </span>
                       <span className="text-sm sm:text-base md:text-lg font-mono font-extrabold text-[#2E936F] dark:text-teal-300 block">
@@ -518,7 +518,7 @@ export const WorkflowSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="p-6 sm:p-8 rounded-3xl border border-slate-300 dark:border-navy-700/80 bg-white dark:bg-navy-900 shadow-xl space-y-6"
+                className="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-navy-900 shadow-xl space-y-6"
               >
                 <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
                   <span className="text-xs font-mono font-extrabold text-navy-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
@@ -565,7 +565,7 @@ export const WorkflowSection: React.FC = () => {
                   ].map((cell, idx) => (
                     <div
                       key={idx}
-                      className={`p-2.5 rounded-lg border border-slate-700/30 ${cell.color}`}
+                      className={`p-2.5 rounded-lg border border-slate-300 dark:border-slate-700/30 ${cell.color}`}
                     >
                       {cell.score}
                     </div>
