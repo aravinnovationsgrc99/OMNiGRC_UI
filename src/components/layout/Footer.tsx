@@ -136,15 +136,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs border-t border-slate-200/20 dark:border-navy-700/60 mt-8">
-          <div className="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left">
-            <Image
-              src="/omnigrc-logo.png"
-              alt="OMNiGRC - Connected GRC Platform"
-              width={220}
-              height={75}
-              className="h-10 sm:h-12 w-auto object-contain"
-            />
-            <div className="hidden sm:block h-10 w-px bg-slate-200/30 dark:bg-navy-700/60" />
+          <div className="flex items-center text-center md:text-left">
             <div className="inline-flex items-center transition-transform hover:scale-[1.02]">
               <Image
                 src="/images/Powered-By-AravInnovation.png"

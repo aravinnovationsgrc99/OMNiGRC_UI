@@ -92,7 +92,7 @@ const config: Config = {
           200: "#F7D7B0",
           border: "#E8C090",
         },
-        // ── Light-mode accent fills (FILL USE ONLY — never as text color) ─
+        // ── Light-mode accent fills (FILL USE ONLY: never as text color) ─
         goldenYellow: "#FAB60A",
         lightYellow: "#FFEC69",
         // ── Shared tokens ─────────────────────────────────────────────────

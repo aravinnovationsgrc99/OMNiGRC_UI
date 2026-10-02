@@ -57,11 +57,11 @@ const stages = [
 export const StagesOfTrustSection: React.FC = () => {
   return (
     <section className="relative bg-slate-50 dark:bg-[#0A111F] py-space-section overflow-hidden border-t border-slate-200 dark:border-navy-700/60 transition-colors duration-200">
-      {/* Ambient circle-scatter background — z-0, pointer-events-none */}
+      {/* Ambient circle-scatter background: z-0, pointer-events-none */}
       <AmbientGridBackground />
 
       {/*
-        Radial content mask — transparent at page margins so circles show in gutters,
+        Radial content mask: transparent at page margins so circles show in gutters,
         softens to the section bg behind the main content column.
         z-[1] so it sits above the canvas but strictly below all card/text content.
       */}
@@ -83,7 +83,7 @@ export const StagesOfTrustSection: React.FC = () => {
         }}
       />
 
-      {/* Content — z-10, above both canvas and mask */}
+      {/* Content: z-10, above both canvas and mask */}
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-20">
           <motion.p

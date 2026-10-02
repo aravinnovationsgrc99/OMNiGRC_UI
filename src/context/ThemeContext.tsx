@@ -16,7 +16,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [theme, setThemeState] = useState<Theme>("light");
 
   useEffect(() => {
-    // Check localStorage first — default to light mode unless explicitly set to dark
+    // Check localStorage first: default to light mode unless explicitly set to dark
     const savedTheme = localStorage.getItem("omnigrc-theme") as Theme | null;
     if (savedTheme === "dark") {
       setThemeState("dark");

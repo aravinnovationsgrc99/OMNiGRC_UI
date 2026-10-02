@@ -107,7 +107,7 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                 {current.title}
               </h3>
 
-              {/* What User Does in This Phase Card — Standard Tailwind Padding & Crisp Layout */}
+              {/* What User Does in This Phase Card: Standard Tailwind Padding & Crisp Layout */}
               <div className="p-4 sm:p-5 rounded-2xl bg-[#FFF7EF] dark:bg-orange-950/20 border border-[#E8C090] dark:border-orange-900/40 space-y-2 shadow-sm">
                 <div className="flex items-center gap-2">
                   <UserCheck className="h-5 w-5 text-[#F15E1C] shrink-0" />
@@ -120,7 +120,7 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                 </p>
               </div>
 
-              {/* Next Process Connector — Complete text wrap (no truncation) */}
+              {/* Next Process Connector: Complete text wrap (no truncation) */}
               <div className="p-3.5 rounded-xl bg-[#F0FDF7] dark:bg-emerald-950/20 border border-[#2E936F]/30 dark:border-teal/30 flex items-start gap-2.5 text-xs font-mono font-semibold text-[#2E936F] dark:text-teal-300">
                 <ArrowRight className="h-4 w-4 shrink-0 mt-0.5" />
                 <span className="leading-snug break-words whitespace-normal font-bold">

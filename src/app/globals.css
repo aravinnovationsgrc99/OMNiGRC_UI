@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ═══════════════════════════════════════════════════════════
-   OMNIGRC GLOBAL VISUAL SYSTEM — v2.0
+   OMNIGRC GLOBAL VISUAL SYSTEM: v2.0
    Phase 1: Visual Foundation Restoration
    ═══════════════════════════════════════════════════════════ */
 
@@ -26,7 +26,7 @@
   --space-card:        24px;
   --space-section:     24px;
 
-  /* Navbar height token — used for page-content clearance */
+  /* Navbar height token: used for page-content clearance */
   --navbar-h:          64px;
   --navbar-h-sm:       72px;
 }
@@ -39,13 +39,13 @@
 
 :root {
 
-  /* ── LIGHT MODE semantic tokens (default) ───────────────
+  /* -- LIGHT MODE semantic tokens (default) ----------------
      These are the active values when .dark is NOT on <html>
-  ──────────────────────────────────────────────────────── */
+  -------------------------------------------------------- */
   --background:        #FFFFFF;
   --foreground:        #0d1b36;
 
-  /* Stitch Material tokens — light mode */
+  /* Stitch Material tokens: light mode */
   --surface:            #faf8ff;
   --surface-bright:     #faf8ff;
   --surface-dim:        #cdd9fe;
@@ -101,7 +101,7 @@ html.dark {
   --background:        #0A111F;
   --foreground:        #E2E8F0;
 
-  /* Dark surface system — elevated, visible layers */
+  /* Dark surface system: elevated, visible layers */
   --surface:            #0d1420;
   --surface-bright:     #141e30;
   --surface-dim:        #080e1a;
@@ -111,7 +111,7 @@ html.dark {
   --surface-container-highest: #202d4a;
   --surface-container-lowest:  #090f1c;
 
-  /* Text — WCAG AA (≥4.5:1 on dark surfaces) */
+  /* Text: WCAG AA (≥4.5:1 on dark surfaces) */
   --on-surface:         #E2E8F0;  /* 14.7:1 on #0A111F */
   --on-surface-variant: #94A3B8;  /* 5.9:1 on #141e30 */
   --on-background:      #E2E8F0;
@@ -141,7 +141,7 @@ html.dark {
 }
 
 /* ─────────────────────────────────────────────────────────
-   HTML ROOT — color-scheme for native controls
+   HTML ROOT: color-scheme for native controls
    ───────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
@@ -190,7 +190,7 @@ h1, h2, h3, h4 {
 
 /* ─────────────────────────────────────────────────────────
    PAGE CONTENT CLEARANCE
-   Eliminates per-page pt-N guesswork — use .page-content
+   Eliminates per-page pt-N guesswork: use .page-content
    on all <main> wrappers instead of pt-20/pt-24/pt-28
    ───────────────────────────────────────────────────────── */
 .page-content {
@@ -225,7 +225,7 @@ html.dark .section-base {
   color: #E2E8F0;
 }
 
-/* Slightly elevated wrapper — transparent */
+/* Slightly elevated wrapper: transparent */
 .section-raised {
   background-color: transparent;
   color: #0d1b36;
@@ -235,7 +235,7 @@ html.dark .section-raised {
   color: #E2E8F0;
 }
 
-/* Always dark — for intentional dark sections in light mode */
+/* Always dark: for intentional dark sections in light mode */
 .section-dark {
   background-color: #0A111F;
   color: #E2E8F0;
@@ -273,13 +273,13 @@ html.dark .card-elevated:hover {
 }
 
 /* ─────────────────────────────────────────────────────────
-   WORKFLOW CARD BODY — title-to-description spacing
+   WORKFLOW CARD BODY: title-to-description spacing
    Apply .workflow-card-body to the inner div of feature cards
    ───────────────────────────────────────────────────────── */
 .workflow-card-body {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem; /* 10px — comfortable title-to-description gap */
+  gap: 0.625rem; /* 10px: comfortable title-to-description gap */
 }
 
 .workflow-card-body h3,
@@ -324,7 +324,7 @@ span[class*="rounded-full"], .badge-pill {
 }
 
 /* ─────────────────────────────────────────────────────────
-   FOOTER — always dark charcoal in both modes
+   FOOTER: always dark charcoal in both modes
    ───────────────────────────────────────────────────────── */
 footer {
   background-color: #0F172A !important;

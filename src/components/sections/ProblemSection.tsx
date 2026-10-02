@@ -61,7 +61,7 @@ export const ProblemSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-left space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            Compliance doesn&apos;t fail on frameworks — <span className="text-[#F15E1C]">it fails on fragmentation.</span>
+            Compliance doesn&apos;t fail on frameworks, <span className="text-[#F15E1C]">it fails on fragmentation.</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-3xl">

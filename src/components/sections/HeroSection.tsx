@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-transparent pt-6 sm:pt-10 md:pt-14 pb-3 sm:pb-4 transition-colors duration-300">
-      {/* Aurora Ambient Background — tuned opacity for clean readability */}
+      {/* Aurora Ambient Background: tuned opacity for clean readability */}
       <AuroraBackground className="opacity-25 sm:opacity-75 dark:opacity-40 pointer-events-none" />
 
       {/* Subtle Ambient Radial Glows */}

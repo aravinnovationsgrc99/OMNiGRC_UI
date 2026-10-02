@@ -474,7 +474,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         <div className="lg:col-span-5 w-full flex flex-col justify-between">
           <div
             key={`readout-${irisKey}`}
-            className="iris-bloom w-full h-full rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-6 sm:p-7 shadow-xl backdrop-blur-xl flex flex-col justify-between relative overflow-hidden space-y-6"
+            className="iris-bloom w-full h-full rounded-3xl border-2 border-slate-200/90 dark:border-[#2E936F]/50 bg-white dark:bg-[#0F1B34] p-6 sm:p-7 shadow-2xl backdrop-blur-xl flex flex-col justify-between relative overflow-hidden space-y-6"
           >
             {/* Orange/Brand Accent Bar on Left Edge */}
             <div
@@ -484,17 +484,17 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
             {/* Framework Quick Switcher Tabs & Details */}
             <div className="space-y-4 pl-2">
-              <div className="flex flex-wrap gap-1.5 pb-3 border-b border-slate-200 dark:border-navy-800">
+              <div className="flex flex-wrap gap-1.5 pb-3 border-b border-slate-200 dark:border-slate-800">
                 {FRAMEWORKS.map((fw, idx) => {
                   const active = activeIndex === idx;
                   return (
                     <button
                       key={fw.code}
                       onClick={() => seekToFramework(idx)}
-                      className={`px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition-all ${
+                      className={`px-3 py-1.5 rounded-lg text-xs font-mono font-extrabold transition-all ${
                         active
-                          ? "bg-[#2E936F] text-white shadow-sm"
-                          : "bg-slate-100 dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-navy-700"
+                          ? "bg-[#2E936F] dark:bg-[#2E936F] text-white shadow-md scale-105"
+                          : "bg-slate-100 dark:bg-[#1A2846] text-slate-700 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-[#24365c] border border-slate-200 dark:border-slate-700/80"
                       }`}
                     >
                       {fw.code}
@@ -507,38 +507,38 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <span
-                    className="px-2.5 py-0.5 rounded text-xs font-mono font-extrabold uppercase border"
+                    className="px-2.5 py-0.5 rounded text-xs font-mono font-black uppercase border shadow-sm"
                     style={{
-                      borderColor: `${currentFw.accentColor}60`,
+                      borderColor: `${currentFw.accentColor}80`,
                       color: currentFw.accentColor,
-                      backgroundColor: `${currentFw.accentColor}15`,
+                      backgroundColor: `${currentFw.accentColor}20`,
                     }}
                   >
                     {currentFw.badge}
                   </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400 font-semibold">{currentFw.region}</span>
+                  <span className="text-xs font-mono text-slate-600 dark:text-slate-300 font-bold">{currentFw.region}</span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+                <h3 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight leading-snug">
                   {currentFw.name}
                 </h3>
               </div>
 
               {/* One-Liner Description */}
-              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+              <p className="text-sm sm:text-base text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
                 {currentFw.oneLiner || currentFw.desc}
               </p>
 
               {/* Mapped Control Domains */}
               <div className="space-y-2 pt-2">
-                <span className="text-xs font-mono font-extrabold uppercase tracking-wider text-[#F15E1C] block">
+                <span className="text-xs font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
                   Mapped Control Domains:
                 </span>
-                <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-100">
                   {currentFw.controlDomains.slice(0, 3).map((domain, dIdx) => (
                     <li key={dIdx} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 text-[#2E936F] shrink-0 mt-0.5" />
-                      <span className="font-semibold">{domain}</span>
+                      <Check className="h-4 w-4 text-[#2E936F] dark:text-[#36B386] shrink-0 mt-0.5" />
+                      <span className="font-bold">{domain}</span>
                     </li>
                   ))}
                 </ul>
@@ -546,14 +546,14 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
               {/* Citations Badges */}
               <div className="space-y-1.5 pt-2">
-                <span className="text-xs font-mono font-extrabold uppercase tracking-wider text-[#F15E1C] block">
+                <span className="text-xs font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
                   Authentic Clause Citations:
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {currentFw.citations.map((cit, cIdx) => (
                     <span
                       key={cIdx}
-                      className="px-2.5 py-1 rounded bg-[#E6F4EF] dark:bg-navy-950 border border-[#2E936F]/30 text-[#2E936F] font-mono font-bold text-xs"
+                      className="px-2.5 py-1 rounded bg-[#E6F4EF] dark:bg-[#122B22] border border-[#2E936F]/40 text-[#2E936F] dark:text-[#42D49F] font-mono font-extrabold text-xs shadow-sm"
                     >
                       {cit}
                     </span>
@@ -563,10 +563,10 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
             </div>
 
             {/* Action CTA Button */}
-            <div className="pt-4 border-t border-slate-200 dark:border-navy-800 pl-2">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 pl-2">
               <Link
                 href={`/frameworks/${currentFw.slug}`}
-                className="inline-flex items-center justify-center gap-2 w-full px-5 py-3.5 rounded-xl bg-[#2E936F] hover:bg-[#277e5f] text-white font-extrabold text-sm shadow-md transition-all group"
+                className="inline-flex items-center justify-center gap-2 w-full px-5 py-3.5 rounded-xl bg-[#2E936F] hover:bg-[#257759] dark:bg-[#2E936F] dark:hover:bg-[#257759] text-white font-extrabold text-sm shadow-md transition-all group"
               >
                 <span>Explore {currentFw.code} Workflow</span>
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
