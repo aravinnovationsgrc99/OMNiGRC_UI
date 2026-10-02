@@ -50,7 +50,7 @@ export const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
       {/* Background Glow */}
       <div
         aria-hidden="true"
@@ -59,14 +59,13 @@ export const ProblemSection: React.FC = () => {
 
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="text-left max-w-3xl space-y-3">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            Compliance doesn&apos;t fail on frameworks. <br className="hidden xs:inline" />
-            <span className="text-[#F15E1C] dark:text-teal-400">It fails on fragmentation.</span>
+        <div className="text-left space-y-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+            Compliance doesn&apos;t fail on frameworks — <span className="text-[#F15E1C]">it fails on fragmentation.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
-            Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise suites. OMNiGRC is the operating layer in between.
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-3xl">
+            OMNiGRC bridges the gap between disconnected spreadsheets and heavy enterprise suites.
           </p>
         </div>
 
@@ -97,7 +96,7 @@ export const ProblemSection: React.FC = () => {
         </div>
 
         {/* Visual Story Display */}
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full">
           <AnimatePresence mode="wait">
             {viewState === "fragmented" ? (
               <motion.div
@@ -204,14 +203,6 @@ export const ProblemSection: React.FC = () => {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
-
-        {/* Story Continuation Conduit (Visual Bridge to Next Section) */}
-        <div className="flex flex-col items-center justify-center text-center pt-2">
-          <div className="w-0.5 h-8 bg-gradient-to-b from-[#2E936F] to-transparent animate-pulse" />
-          <span className="text-[10px] font-mono text-[#2E936F] dark:text-teal font-bold tracking-widest uppercase mt-1">
-            ONE WORKFLOW CONTINUES ↓
-          </span>
         </div>
       </div>
     </section>

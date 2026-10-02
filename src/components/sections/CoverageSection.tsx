@@ -14,36 +14,24 @@ import {
   Layers,
 } from "lucide-react";
 import { TiltCard } from "@/components/ui/TiltCard";
-import dynamic from "next/dynamic";
 import { FRAMEWORKS } from "@/lib/frameworks";
-
-const FrameworkOrrery = dynamic(
-  () => import("@/components/3d/FrameworkOrrery").then((m) => m.FrameworkOrrery),
-  { ssr: false }
-);
 
 export const CoverageSection: React.FC = () => {
   return (
-    <section className="relative bg-white dark:bg-[#16233F] py-8 sm:py-12 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#16233F] py-4 sm:py-6 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-10">
         {/* Section Header */}
-        <div className="text-left max-w-3xl space-y-3">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            Not a checklist. <br />
-            <span className="text-[#2E936F] dark:text-teal">A control mapping engine.</span>
+        <div className="w-full text-left space-y-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
+            Not a checklist. <span className="text-[#2E936F]">A control mapping engine.</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium max-w-3xl">
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl">
             93 ISO 27001 controls. GDPR Articles 28–35. DPDP fiduciary rules. Every clause traced to the primary control that satisfies it, across all six frameworks, out of the box.
           </p>
         </div>
 
-        {/* 3D Framework Engine Visualization */}
-        <div className="w-full">
-          <FrameworkOrrery title="CONTROL MAPPING ENGINE" />
-        </div>
-
-        {/* Accessible De-emphasized Plain-Text Fallback List for SEO Crawlers & Screen Readers */}
-        <div className="pt-4 border-t border-navy-700/40">
+        {/* Supported Framework Taxonomies Index */}
+        <div className="pt-2">
           <p className="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4 text-center font-bold">
             Supported Framework Taxonomies Index
           </p>
@@ -80,7 +68,7 @@ export const CoverageSection: React.FC = () => {
             </div>
 
             <div className="md:col-span-7 flex flex-col gap-4">
-              {/* Card 1: Live at MVP (India & UK) */}
+              {/* Card 1: Live (India & UK) */}
               <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-[#2E936F]/25 dark:border-[#2E936F]/40 shadow-sm hover:shadow-md transition-all space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-center gap-3.5">
@@ -93,7 +81,7 @@ export const CoverageSection: React.FC = () => {
                   </div>
                   <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] dark:text-[#2E936F] text-xs font-mono font-bold shrink-0 self-start sm:self-auto border border-[#2E936F]/20">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F]" />
-                    Live at MVP
+                    Live
                   </span>
                 </div>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
@@ -101,7 +89,7 @@ export const CoverageSection: React.FC = () => {
                 </p>
               </div>
 
-              {/* Card 2: Roadmap Post-Launch (EU & Australia) */}
+              {/* Card 2: Q1 2027 (EU & Australia) */}
               <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-[#F7D7B0] dark:border-[#F15E1C]/30 shadow-sm hover:shadow-md transition-all space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-center gap-3.5">
@@ -114,7 +102,7 @@ export const CoverageSection: React.FC = () => {
                   </div>
                   <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF3E6] dark:bg-[#F15E1C]/20 text-[#F15E1C] text-xs font-mono font-bold shrink-0 self-start sm:self-auto border border-[#F15E1C]/20">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#F15E1C]" />
-                    Roadmap (Post-Launch)
+                    Q1 2027
                   </span>
                 </div>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">

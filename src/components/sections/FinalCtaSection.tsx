@@ -65,7 +65,7 @@ export const FinalCtaSection: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
+    <section className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-5 sm:py-8 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
       {/* Soft Ambient Background Glow using OMNiGRC Palette (#2E936F / #F15E1C) */}
       <div
         aria-hidden="true"

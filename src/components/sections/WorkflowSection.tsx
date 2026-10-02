@@ -203,7 +203,7 @@ export const WorkflowSection: React.FC = () => {
   const activeStage = pipelineStages[activeStageIndex];
 
   return (
-    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 py-6 sm:py-10 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden" id="workflows-preview">
+    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden" id="workflows-preview">
       {/* Background Ambient Soft Glow */}
       <div
         aria-hidden="true"
@@ -212,20 +212,10 @@ export const WorkflowSection: React.FC = () => {
 
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="text-left max-w-3xl space-y-3">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            Everything connects. Nothing lives in isolation.
+        <div className="text-left space-y-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+            Everything connects. <span className="text-[#2E936F]">Nothing lives in isolation.</span>
           </h2>
-
-          <div className="pt-1">
-            <span className="inline-block px-4 py-1.5 rounded-xl bg-white dark:bg-[#0a1528] text-navy-900 dark:text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40">
-              RISK, ASSETS, CONTROLS, EVIDENCE: ONE THREAD, NOT FOUR SILOS.
-            </span>
-          </div>
-
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium max-w-2xl">
-            A single operating layer connecting every phase of the security, risk, and audit lifecycle.
-          </p>
         </div>
 
         {/* --------------------------------------------------------------- */}
@@ -377,8 +367,8 @@ export const WorkflowSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Dynamic Display Area */}
-        <div className="max-w-3xl lg:max-w-4xl mx-auto">
+        {/* Dynamic Display Area (Full Width Across All Screens) */}
+        <div className="w-full mx-auto">
           <AnimatePresence mode="wait">
             {activeTab === "pillars" && (
               <motion.div
@@ -387,61 +377,75 @@ export const WorkflowSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-4 sm:space-y-4 md:space-y-5"
+                className="w-full space-y-4"
               >
-                {fourPillars.map((pillar, idx) => {
-                  const Icon = pillar.icon;
-                  return (
-                    <motion.div
-                      key={pillar.id}
-                      initial={{ opacity: 0, y: 15 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-40px" }}
-                      transition={{ duration: 0.35, delay: idx * 0.08 }}
-                    >
-                      <Link
-                        href={pillar.href}
-                        className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 min-h-[175px]"
+                {/* Concept / Subheading Header Row (Matching Image 2) */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-2.5 sm:gap-3 pb-3 border-b border-slate-200/80 dark:border-slate-800 w-full">
+                  <span className="text-xs font-mono font-bold uppercase text-[#F15E1C] tracking-wider shrink-0">
+                    CONCEPT 2
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight shrink-0">
+                    Structured <span className="text-[#F15E1C]">four pillars.</span>
+                  </h3>
+                  <span className="text-slate-300 dark:text-slate-700 hidden sm:inline">|</span>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
+                    From risk to evidence, everything connected in one workflow.
+                  </p>
+                </div>
+
+                {/* 4 HORIZONTAL PILLARS GRID (Matching Image 2) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full">
+                  {fourPillars.map((pillar, idx) => {
+                    const Icon = pillar.icon;
+                    return (
+                      <motion.div
+                        key={pillar.id}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.35, delay: idx * 0.08 }}
+                        className="w-full"
                       >
-                        {/* TOP ROW: Icon + Label/Title (Single Line) + Arrow */}
-                        <div className="flex items-center justify-between gap-3 min-w-0 w-full">
-                          <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
-                            {/* Icon Container: 52-64px */}
+                        <Link
+                          href={pillar.href}
+                          className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full h-full min-h-[220px] space-y-4"
+                        >
+                          {/* TOP ROW: Icon Container + Arrow Button */}
+                          <div className="flex items-center justify-between w-full">
                             <div
-                              className={`w-13 h-13 sm:w-14 sm:h-14 shrink-0 rounded-2xl border ${pillar.borderColor} ${pillar.tileBg} flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm`}
+                              className={`w-12 h-12 rounded-xl border ${pillar.borderColor} ${pillar.tileBg} flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm shrink-0`}
                             >
-                              <Icon className={`h-7 w-7 sm:h-8 sm:w-8 ${pillar.textColor}`} />
+                              <Icon className={`h-6 w-6 ${pillar.textColor}`} />
                             </div>
 
-                            {/* Label + Title (Guaranteed Single Line) */}
-                            <div className="min-w-0 flex-1">
-                              <span className={`font-mono text-xs font-extrabold uppercase tracking-wider ${pillar.textColor} block truncate`}>
-                                {pillar.label}
-                              </span>
-                              <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors whitespace-nowrap truncate min-w-0">
-                                {pillar.title}
-                              </h3>
+                            <div
+                              className={`w-9 h-9 rounded-full flex items-center justify-center border ${pillar.borderColor} ${pillar.arrowBg} transition-all duration-300 shadow-sm shrink-0`}
+                            >
+                              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                             </div>
                           </div>
 
-                          {/* Arrow Action Button */}
-                          <div
-                            className={`w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-full flex items-center justify-center border ${pillar.borderColor} ${pillar.arrowBg} transition-all duration-300 shadow-sm`}
-                          >
-                            <ArrowRight className="h-5 w-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                          {/* MIDDLE: Monospaced Label + Bold Title */}
+                          <div className="space-y-1 w-full">
+                            <span className={`font-mono text-xs font-extrabold uppercase tracking-wider ${pillar.textColor} block`}>
+                              {pillar.label}
+                            </span>
+                            <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors">
+                              {pillar.title}
+                            </h4>
                           </div>
-                        </div>
 
-                        {/* BOTTOM ROW: Readable Description */}
-                        <div className="mt-3">
-                          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-                            {pillar.desc}
-                          </p>
-                        </div>
-                      </Link>
-                    </motion.div>
-                  );
-                })}
+                          {/* BOTTOM: Readable Description */}
+                          <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80 w-full">
+                            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                              {pillar.desc}
+                            </p>
+                          </div>
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
+                </div>
               </motion.div>
             )}
 

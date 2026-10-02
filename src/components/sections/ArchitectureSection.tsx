@@ -33,23 +33,23 @@ const ArchitectureFlowVisualizer = dynamic(
 
 export const ArchitectureSection: React.FC = () => {
   return (
-    <section className="relative bg-white dark:bg-[#0A111F] py-8 sm:py-12 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#0A111F] py-4 sm:py-6 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left max-w-3xl mb-6 sm:mb-8 space-y-3">
+        <div className="w-full text-left space-y-2 mb-6 sm:mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full"
           >
-            AI assists. Humans decide.
+            AI assists. <span className="text-[#2E936F]">Humans decide.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-600 dark:text-slate-300 text-base sm:text-lg lg:text-xl font-medium leading-relaxed max-w-2xl"
+            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg font-medium leading-relaxed w-full max-w-4xl"
           >
-            Every AI suggestion is logged, reversible, and gated behind explicit approval, nothing writes to your compliance record without a human signing off.
+            Every AI suggestion is logged, reversible, and gated behind explicit approval — nothing writes to your compliance record without a human signing off.
           </motion.p>
         </div>
 
