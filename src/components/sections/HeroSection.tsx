@@ -13,8 +13,8 @@ const AuroraBackground = dynamic(
   { ssr: false }
 );
 
-const IsometricHeroVisual = dynamic(
-  () => import("@/components/3d/IsometricHeroVisual").then((m) => m.IsometricHeroVisual),
+const HeroWorkflowVisual = dynamic(
+  () => import("@/components/sections/HeroWorkflowVisual").then((m) => m.HeroWorkflowVisual),
   { ssr: false }
 );
 
@@ -152,7 +152,7 @@ export const HeroSection: React.FC = () => {
           variants={itemVariants}
           className="w-full max-w-full overflow-hidden"
         >
-          <IsometricHeroVisual />
+          <HeroWorkflowVisual />
         </motion.div>
       </motion.div>
 
