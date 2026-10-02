@@ -406,33 +406,42 @@ export const WorkflowSection: React.FC = () => {
                     >
                       <Link
                         href={pillar.href}
-                        className="group relative flex flex-row items-center justify-between gap-4 sm:gap-5 md:gap-6 p-5 md:p-5 lg:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/95 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-md"
+                        className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 min-h-[175px]"
                       >
-                        {/* LEFT: Rich Square Icon Container */}
-                        <div
-                          className={`w-20 h-20 md:w-22 md:h-22 lg:w-24 lg:h-24 shrink-0 rounded-2xl md:rounded-3xl border ${pillar.borderColor} ${pillar.tileBg} flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm`}
-                        >
-                          <Icon className={`h-10 w-10 md:h-11 md:w-11 lg:h-12 lg:w-12 ${pillar.textColor}`} />
+                        {/* TOP ROW: Icon + Label/Title (Single Line) + Arrow */}
+                        <div className="flex items-center justify-between gap-3 min-w-0 w-full">
+                          <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                            {/* Icon Container: 52-64px */}
+                            <div
+                              className={`w-13 h-13 sm:w-14 sm:h-14 shrink-0 rounded-2xl border ${pillar.borderColor} ${pillar.tileBg} flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm`}
+                            >
+                              <Icon className={`h-7 w-7 sm:h-8 sm:w-8 ${pillar.textColor}`} />
+                            </div>
+
+                            {/* Label + Title (Guaranteed Single Line) */}
+                            <div className="min-w-0 flex-1">
+                              <span className={`font-mono text-xs font-extrabold uppercase tracking-wider ${pillar.textColor} block truncate`}>
+                                {pillar.label}
+                              </span>
+                              <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors whitespace-nowrap truncate min-w-0">
+                                {pillar.title}
+                              </h3>
+                            </div>
+                          </div>
+
+                          {/* Arrow Action Button */}
+                          <div
+                            className={`w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-full flex items-center justify-center border ${pillar.borderColor} ${pillar.arrowBg} transition-all duration-300 shadow-sm`}
+                          >
+                            <ArrowRight className="h-5 w-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                          </div>
                         </div>
 
-                        {/* MIDDLE: Pillar Label, Heading & Description */}
-                        <div className="flex-1 min-w-0 text-left space-y-1 sm:space-y-1.5">
-                          <span className={`font-mono text-xs sm:text-sm font-extrabold uppercase tracking-wider ${pillar.textColor} block`}>
-                            {pillar.label}
-                          </span>
-                          <h3 className="text-xl sm:text-2xl lg:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors">
-                            {pillar.title}
-                          </h3>
+                        {/* BOTTOM ROW: Readable Description */}
+                        <div className="mt-3">
                           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                             {pillar.desc}
                           </p>
-                        </div>
-
-                        {/* RIGHT: Circular Arrow CTA Button */}
-                        <div
-                          className={`w-11 h-11 md:w-12 md:h-12 lg:w-13 lg:h-13 shrink-0 rounded-full flex items-center justify-center border ${pillar.borderColor} ${pillar.arrowBg} transition-all duration-300 shadow-sm`}
-                        >
-                          <ArrowRight className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1.5 transition-transform duration-300" />
                         </div>
                       </Link>
                     </motion.div>

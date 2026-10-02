@@ -82,31 +82,45 @@ export const CoverageSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-navy-900/80 border border-teal/30 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-mono font-bold text-white flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4 text-teal" /> India &amp; United Kingdom
-                  </span>
-                  <span className="text-xs font-mono text-teal-300 bg-teal/15 px-2 py-0.5 rounded font-bold">
+            <div className="md:col-span-7 flex flex-col gap-4">
+              {/* Card 1: Live at MVP (India & UK) */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-[#2E936F]/25 dark:border-[#2E936F]/40 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-12 h-12 rounded-xl bg-[#E6F4EF] dark:bg-[#2E936F]/20 flex items-center justify-center shrink-0">
+                      <MapPin className="h-6 w-6 text-[#2E936F] dark:text-[#2E936F]" />
+                    </div>
+                    <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+                      India &amp; United Kingdom
+                    </h4>
+                  </div>
+                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] dark:text-[#2E936F] text-xs font-mono font-bold shrink-0 self-start sm:self-auto border border-[#2E936F]/20">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F]" />
                     Live at MVP
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-300 font-medium">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                   Dedicated regional tenant hosting currently live for Indian DPDP compliance and UK GDPR requirements.
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-navy-900/80 border border-navy-700/60 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-mono font-bold text-slate-300 flex items-center gap-1.5">
-                    <MapPin className="h-4 w-4 text-[#D4521A] dark:text-amber" /> European Union &amp; Australia
-                  </span>
-                  <span className="text-xs font-mono text-[#D4521A] dark:text-amber bg-[#FAB60A]/15 dark:bg-amber/15 px-2 py-0.5 rounded font-medium">
+              {/* Card 2: Roadmap Post-Launch (EU & Australia) */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-[#F7D7B0] dark:border-[#F15E1C]/30 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-12 h-12 rounded-xl bg-[#FFF0E5] dark:bg-[#F15E1C]/20 flex items-center justify-center shrink-0">
+                      <MapPin className="h-6 w-6 text-[#F15E1C]" />
+                    </div>
+                    <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+                      European Union &amp; Australia
+                    </h4>
+                  </div>
+                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF3E6] dark:bg-[#F15E1C]/20 text-[#F15E1C] text-xs font-mono font-bold shrink-0 self-start sm:self-auto border border-[#F15E1C]/20">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#F15E1C]" />
                     Roadmap (Post-Launch)
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-400 font-medium">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                   Planned cloud points of presence for EU Data Boundary and Australian data sovereignty roadmap.
                 </p>
               </div>

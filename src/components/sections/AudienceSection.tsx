@@ -90,25 +90,25 @@ export const AudienceSection: React.FC = () => {
         </div>
 
         {/* Core Product Message Callout Banner */}
-        <div className="max-w-4xl mx-auto p-4 sm:p-5 rounded-2xl border border-[#2E936F]/40 bg-navy-900/90 text-center text-xs sm:text-sm font-mono text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-4xl mx-auto p-4 sm:p-5 rounded-2xl border border-[#2E936F]/40 bg-white dark:bg-navy-900/90 text-center text-xs sm:text-sm font-mono text-navy-900 dark:text-white shadow-md flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F] dark:bg-teal-400 animate-pulse" />
-            <span className="font-bold text-[#FAB60A]">SAME OPERATING ENGINE:</span>
+            <span className="font-extrabold text-[#F15E1C] dark:text-[#FAB60A]">SAME OPERATING ENGINE:</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-bold">
-            <span className="px-2.5 py-1 rounded-lg bg-navy-950 border border-slate-700 text-slate-200">
+            <span className="px-2.5 py-1 rounded-lg bg-[#E6F4EF] dark:bg-navy-950 border border-[#2E936F]/30 dark:border-slate-700 text-[#2E936F] dark:text-slate-200 font-mono">
               01. RISK
             </span>
             <span className="text-[#2E936F]">→</span>
-            <span className="px-2.5 py-1 rounded-lg bg-navy-950 border border-slate-700 text-slate-200">
+            <span className="px-2.5 py-1 rounded-lg bg-[#E6F4EF] dark:bg-navy-950 border border-[#2E936F]/30 dark:border-slate-700 text-[#2E936F] dark:text-slate-200 font-mono">
               02. CONTROLS
             </span>
             <span className="text-[#2E936F]">→</span>
-            <span className="px-2.5 py-1 rounded-lg bg-navy-950 border border-slate-700 text-slate-200">
+            <span className="px-2.5 py-1 rounded-lg bg-[#E6F4EF] dark:bg-navy-950 border border-[#2E936F]/30 dark:border-slate-700 text-[#2E936F] dark:text-slate-200 font-mono">
               03. TESTING
             </span>
             <span className="text-[#2E936F]">→</span>
-            <span className="px-2.5 py-1 rounded-lg bg-navy-950 border border-slate-700 text-slate-200">
+            <span className="px-2.5 py-1 rounded-lg bg-[#E6F4EF] dark:bg-navy-950 border border-[#2E936F]/30 dark:border-slate-700 text-[#2E936F] dark:text-slate-200 font-mono">
               04. EVIDENCE
             </span>
           </div>
@@ -180,7 +180,7 @@ export const AudienceSection: React.FC = () => {
                   </h3>
                 </div>
 
-                <div className="px-3 py-1.5 rounded-xl bg-navy-950 border border-slate-700 text-xs font-mono text-[#2E936F] dark:text-teal font-bold shrink-0">
+                <div className="px-3.5 py-1.5 rounded-xl bg-[#E6F4EF] dark:bg-emerald-950/60 border border-[#2E936F]/30 text-xs font-mono text-[#2E936F] dark:text-teal font-extrabold shrink-0">
                   Workflow Rail: {currentRole.workflowRail}
                 </div>
               </div>

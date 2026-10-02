@@ -192,7 +192,7 @@ export const ArchitectureSection: React.FC = () => {
                 {
                   step: "03",
                   label: "Minimization Layer",
-                  sub: "Sanitized Advisory Payload",
+                  sub: "Sanitized Payload",
                   icon: Lock,
                   color: "amber",
                 },
@@ -206,7 +206,7 @@ export const ArchitectureSection: React.FC = () => {
                 {
                   step: "05",
                   label: "External LLM API",
-                  sub: "Gemini 2.5 Flash-Lite / Claude Haiku 4.5",
+                  sub: "Gemini & Claude Router",
                   icon: Cpu,
                   color: "amber",
                   highlight: true,
@@ -247,7 +247,7 @@ export const ArchitectureSection: React.FC = () => {
               return (
                 <div key={nIdx} className="relative group">
                   <div
-                    className={`h-full p-4.5 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                    className={`h-full min-h-[115px] p-4 rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
                       node.critical
                         ? "border-[#2E936F] bg-[#F0FDF4] dark:bg-[#2E936F]/20 shadow-md ring-1 ring-[#2E936F]/40"
                         : node.highlight
@@ -255,11 +255,11 @@ export const ArchitectureSection: React.FC = () => {
                         : "border-slate-200 dark:border-slate-700/50 bg-white dark:bg-[#0A111F]/90 hover:border-[#2E936F]/50 hover:bg-slate-50/80 dark:hover:bg-navy-900 shadow-sm"
                     }`}
                   >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className={`text-xs font-mono font-bold ${node.critical ? "text-[#2E936F] dark:text-teal-300" : "text-[#2E936F] dark:text-teal-400"}`}>
+                    <div className="flex items-center justify-between gap-1 mb-2">
+                      <span className={`text-[11px] font-mono font-bold truncate ${node.critical ? "text-[#2E936F] dark:text-teal-300" : "text-[#2E936F] dark:text-teal-400"}`}>
                         STAGE {node.step} {node.critical && "• HUMAN GATE"}
                       </span>
-                      <div className={`p-1.5 rounded-lg ${
+                      <div className={`p-1.5 rounded-lg shrink-0 ${
                         node.critical
                           ? "bg-[#2E936F] text-white"
                           : node.highlight
@@ -270,12 +270,12 @@ export const ArchitectureSection: React.FC = () => {
                       </div>
                     </div>
 
-                    <div>
-                      <h4 className="text-base font-extrabold text-navy-900 dark:text-white mb-1 leading-tight">{node.label}</h4>
-                      <p className="text-xs text-slate-600 dark:text-slate-300 font-mono leading-snug">{node.sub}</p>
+                    <div className="min-w-0">
+                      <h4 className="text-sm sm:text-base font-extrabold text-navy-900 dark:text-white mb-0.5 leading-tight truncate">{node.label}</h4>
+                      <p className="text-[11px] text-slate-600 dark:text-slate-300 font-mono leading-tight truncate" title={node.sub}>{node.sub}</p>
                     </div>
 
-                    {nIdx < 7 && (
+                    {nIdx < 7 && nIdx !== 3 && (
                       <div aria-hidden="true" className="hidden md:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10 text-[#2E936F]">
                         <ArrowRight className="h-4 w-4 text-[#2E936F]" />
                       </div>
