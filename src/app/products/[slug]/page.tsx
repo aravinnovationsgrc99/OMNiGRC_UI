@@ -47,10 +47,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const pillar = getPillarBySlug(params.slug) || PILLARS[0];
   return {
-    title: `${pillar.name} — OMNiGRC Connected Workflows`,
+    title: `${pillar.name} | OMNiGRC Connected Workflows`,
     description: `${pillar.badge}: ${pillar.desc}`,
     openGraph: {
-      title: `${pillar.name} — OMNiGRC Connected Workflows`,
+      title: `${pillar.name} | OMNiGRC Connected Workflows`,
       description: pillar.desc,
       url: `https://omnigrc.co/products/${pillar.slug}`,
       siteName: "OMNiGRC",

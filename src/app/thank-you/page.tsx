@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CheckCircle2, ArrowRight, Sparkles, BookOpen, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Demo Request Received — OMNiGRC",
+  title: "Demo Request Received | OMNiGRC",
   description: "Thank you for requesting a walkthrough of the OMNiGRC platform.",
 };
 

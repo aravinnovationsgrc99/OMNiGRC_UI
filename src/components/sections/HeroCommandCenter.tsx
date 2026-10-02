@@ -66,7 +66,7 @@ const ASSET_NODES: AssetNode[] = [
   },
   {
     id: "asset-pg",
-    name: "PostgreSQL Prod Cluster",
+    name: "Database Prod Cluster",
     category: "Database",
     detail: "AES-256 Air-gapped Backup",
     icon: Database,

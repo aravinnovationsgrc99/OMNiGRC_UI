@@ -115,7 +115,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Sentence 2: Calmer Description */}
           <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-lg sm:max-w-none mx-auto">
-            Unified risk, asset, and control management — where Advisory AI drafts and recommends, and your team approves every action.
+            Unified risk, asset, and control management, where Advisory AI drafts and recommends, and your team approves every action.
           </p>
         </motion.div>
 

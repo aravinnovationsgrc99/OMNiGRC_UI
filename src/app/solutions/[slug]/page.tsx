@@ -99,7 +99,7 @@ const solutionsMap: Record<string, SolutionData> = {
     badge: "EXECUTIVE VISIBILITY",
     title: "Real-time posture oversight across unmitigated risks & remediation SLAs.",
     subtitle: "Board-ready reporting, risk-to-asset dependencies, and defensible audit packs for security executives.",
-    desc: "Security leaders need continuous posture confidence—not snapshot summaries. OMNiGRC provides real-time visibility into residual risk scores, asset exposures, remediation SLAs, and audit readiness.",
+    desc: "Security leaders need continuous posture confidence, not snapshot summaries. OMNiGRC provides real-time visibility into residual risk scores, asset exposures, remediation SLAs, and audit readiness.",
     heroPillars: [
       "Board-Ready Dashboards",
       "Risk-to-Asset Exposure",

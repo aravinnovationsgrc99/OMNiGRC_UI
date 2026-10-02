@@ -26,9 +26,9 @@ export const IsometricHeroVisual: React.FC = () => {
       step: "02",
       label: "02 ASSETS",
       title: "Cloud / Infra",
-      sub: "RDS Postgres Prod",
+      sub: "RDS Database Prod",
       traceRisk: "RSK-042",
-      traceControl: "Bound to RDS Postgres Prod",
+      traceControl: "Bound to RDS Database Prod",
       traceStatus: "Asset Inventory Verified",
     },
     {
@@ -114,7 +114,7 @@ export const IsometricHeroVisual: React.FC = () => {
 
         <div className="pt-1">
           <span className="inline-block px-4 py-1.5 rounded-xl bg-white dark:bg-[#0a1528] text-navy-900 dark:text-white font-mono text-xs sm:text-sm font-extrabold shadow-md border border-[#2E936F]/40 tracking-wider">
-            RISK, ASSETS, CONTROLS, EVIDENCE — ONE THREAD, NOT FOUR SILOS.
+            RISK, ASSETS, CONTROLS, EVIDENCE: ONE THREAD, NOT FOUR SILOS.
           </span>
         </div>
 
@@ -126,7 +126,7 @@ export const IsometricHeroVisual: React.FC = () => {
       {/* FRAMEWORK BADGES ROW */}
       <div className="text-center space-y-3 relative z-10">
         <p className="text-xs sm:text-sm font-mono font-semibold text-slate-600 dark:text-slate-300">
-          Supported out of the box — map a single control across 6 global standards:
+          Supported out of the box: map a single control across 6 global standards:
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           {frameworkBadges.map((fw, idx) => (
@@ -155,7 +155,7 @@ export const IsometricHeroVisual: React.FC = () => {
 
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F0FDF4] dark:bg-navy-950 border border-[#2E936F]/40 text-[#2E936F] dark:text-teal-300 text-xs font-mono font-extrabold shadow-sm">
             <Activity className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal-400 animate-pulse" />
-            <span>Live PostgreSQL Crosswalk Stream</span>
+            <span>Live Database Crosswalk Stream</span>
           </div>
         </div>
 

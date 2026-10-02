@@ -34,16 +34,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const fw = getFrameworkBySlug(params.slug);
   if (!fw) {
     return {
-      title: "Framework Guide — OMNiGRC",
+      title: "Framework Guide | OMNiGRC",
       description: "Substantive educational and operational governance framework guides.",
     };
   }
 
   return {
-    title: `${fw.name} Framework Guide — OMNiGRC`,
+    title: `${fw.name} Framework Guide | OMNiGRC`,
     description: `${fw.subtitle}. ${fw.desc}`,
     openGraph: {
-      title: `${fw.name} Framework Guide — OMNiGRC`,
+      title: `${fw.name} Framework Guide | OMNiGRC`,
       description: fw.desc,
       url: `https://omnigrc.co/frameworks/${fw.slug}`,
       siteName: "OMNiGRC",

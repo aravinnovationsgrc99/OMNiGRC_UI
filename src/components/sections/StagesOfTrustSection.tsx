@@ -19,7 +19,7 @@ const AmbientGridBackground = dynamic(
 
 const stages = [
   {
-    stage: "STAGE 01 — LEAN GRC TEAMS",
+    stage: "STAGE 01: LEAN GRC TEAMS",
     heading: "From spreadsheet chaos to connected operations.",
     description:
       "When managing risk registers and control testing manually, work easily falls out of sync. OMNiGRC provides a unified operating layer to catalog assets, score risks, and map controls without hiring expensive consultants.",
@@ -36,7 +36,7 @@ const stages = [
     ],
   },
   {
-    stage: "STAGE 02 — EXPANDING OPERATIONS",
+    stage: "STAGE 02: EXPANDING OPERATIONS",
     heading: "Multi-framework compliance without duplicate controls.",
     description:
       "As customer demands expand into ISO 27001, SOC 2, and DPDP, managing separate checklists multiplies overhead. OMNiGRC allows you to map internal controls once and align them across multiple standards simultaneously.",

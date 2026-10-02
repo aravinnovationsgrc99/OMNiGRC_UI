@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://omnigrc.co"),
   title: {
-    default: "OMNiGRC — Unified Risk, Asset, and Security-Control Management Platform",
+    default: "OMNiGRC: Unified Risk, Asset, and Security-Control Management Platform",
     template: "%s | OMNiGRC",
   },
   description:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "OMNiGRC — Unified Risk, Asset, and Security-Control Management Platform",
+    title: "OMNiGRC: Unified Risk, Asset, and Security-Control Management Platform",
     description:
       "Unified risk, asset, and control management for lean GRC teams. Advisory AI suggests; human oversight approves.",
     url: "https://omnigrc.co",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: "/omnigrc-aurora-og.png",
         width: 1200,
         height: 630,
-        alt: "OMNiGRC — Unified Risk, Asset, and Control Management Platform",
+        alt: "OMNiGRC: Unified Risk, Asset, and Control Management Platform",
       },
     ],
     locale: "en_US",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OMNiGRC — Unified Risk, Asset, and Control Management",
+    title: "OMNiGRC: Unified Risk, Asset, and Control Management",
     description:
       "Connect risk, assets, controls, and testing in one operating workflow. Advisory AI suggests; human oversight approves. Built for ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA.",
     images: ["/omnigrc-aurora-og.png"],

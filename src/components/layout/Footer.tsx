@@ -139,7 +139,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left">
             <Image
               src="/omnigrc-logo.png"
-              alt="OMNiGRC — Connected GRC Platform"
+              alt="OMNiGRC - Connected GRC Platform"
               width={220}
               height={75}
               className="h-10 sm:h-12 w-auto object-contain"

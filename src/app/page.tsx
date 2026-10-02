@@ -51,7 +51,7 @@ export default function Home() {
 
   const railSteps = [
     { num: "01", name: "RISK", label: "5×5 Matrix", detail: "RSK-042 Likelihood 3", trace: "Active Risk: RSK-042 (Backup Failure)" },
-    { num: "02", name: "ASSETS", label: "Cloud / Infra", detail: "RDS Postgres Prod", trace: "Linked Asset: AST-019 (Prod DB Cluster)" },
+    { num: "02", name: "ASSETS", label: "Cloud / Infra", detail: "RDS Database Prod", trace: "Linked Asset: AST-019 (Prod DB Cluster)" },
     { num: "03", name: "CONTROLS", label: "Map-Once", detail: "CTRL-012 Automated", trace: "Linked Control: CTRL-012 (Isolated Test Restoration)" },
     { num: "04", name: "TESTING", label: "30-Day Cadence", detail: "Automated Drill Pass", trace: "Testing Cadence: Verified 30-Day Operational Test" },
     { num: "05", name: "AUDIT", label: "Cross-Framework", detail: "ISO 27001 + SOC 2", trace: "Audit Mapping: ISO 27001 A.8.13 + SOC 2 CC9.1" },

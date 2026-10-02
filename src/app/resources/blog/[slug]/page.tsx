@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 
   if (!post) {
     return {
-      title: "Article Not Found — OMNiGRC Blog",
+      title: "Article Not Found | OMNiGRC Blog",
       description: "The requested blog post could not be found."
     };
   }

@@ -7,7 +7,7 @@ import { getAllPosts } from "@/lib/blog-storage";
 import { BlogListingClient } from "@/components/blog/BlogListingClient";
 
 export const metadata: Metadata = {
-  title: "OMNiGRC Blog — Governance, Risk & Compliance Insights",
+  title: "OMNiGRC Blog: Governance, Risk & Compliance Insights",
   description: "Substantive articles, operational crosswalk methodologies, and risk governance strategies for modern security & compliance leaders.",
 };
 

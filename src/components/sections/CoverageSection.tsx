@@ -27,16 +27,13 @@ export const CoverageSection: React.FC = () => {
     <section className="relative bg-white dark:bg-[#16233F] py-8 sm:py-12 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber font-bold inline-block">
-            CONTROL MAPPING ENGINE
-          </span>
+        <div className="text-left max-w-3xl space-y-3">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Not a checklist. <br />
             <span className="text-[#2E936F] dark:text-teal">A control mapping engine.</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium max-w-3xl mx-auto">
-            93 ISO 27001 controls. GDPR Articles 28–35. DPDP fiduciary rules. Every clause traced to the primary control that satisfies it — across all six frameworks, out of the box.
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-medium max-w-3xl">
+            93 ISO 27001 controls. GDPR Articles 28–35. DPDP fiduciary rules. Every clause traced to the primary control that satisfies it, across all six frameworks, out of the box.
           </p>
         </div>
 

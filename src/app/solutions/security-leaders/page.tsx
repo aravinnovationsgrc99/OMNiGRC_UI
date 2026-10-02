@@ -206,7 +206,7 @@ export default function SecurityLeadersPage() {
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Vulnerability Remediation Governance</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Governance layer over scanner findings—tracks remediation owners and target SLAs with executive sign-off before SLA expiration.
+                  Governance layer over scanner findings, tracking remediation owners and target SLAs with executive sign-off before SLA expiration.
                 </p>
               </div>
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0A111F] flex items-center justify-between font-mono text-xs border border-slate-200/60 dark:border-navy-800">

@@ -91,7 +91,7 @@ export default function VulnerabilitiesPage() {
                 Connect External Scanner Findings to <span className="text-primary">Quantified Risk Registers</span>
               </h1>
               <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 max-w-2xl">
-                OMNiGRC ingests findings from external security scanners—Qualys, Snyk, AWS GuardDuty, CrowdStrike, and Datadog—to automatically prioritize CVEs against business asset criticalities and enforce policy SLA clocks.
+                OMNiGRC ingests findings from external security scanners (Qualys, Snyk, AWS GuardDuty, CrowdStrike, and Datadog) to automatically prioritize CVEs against business asset criticalities and enforce policy SLA clocks.
               </p>
               <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
                 <button 
@@ -400,7 +400,7 @@ export default function VulnerabilitiesPage() {
                 <Network className="h-6 w-6 shrink-0" />
               </div>
               <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-xs">Asset-Centric Prioritization</h3>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 mb-space-md flex-1 leading-relaxed">Triage vulnerabilities by business criticality, data classifications, and regulatory scope—not theoretical CVSS scores alone.</p>
+              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 mb-space-md flex-1 leading-relaxed">Triage vulnerabilities by business criticality, data classifications, and regulatory scope, not theoretical CVSS scores alone.</p>
               <div className="p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between">
                 <span className="font-code-sm text-code-sm text-slate-900 dark:text-white font-semibold">Scope Context</span>
                 <span className="font-code-sm text-code-sm text-secondary font-bold">Configurable Scope Tiers</span>

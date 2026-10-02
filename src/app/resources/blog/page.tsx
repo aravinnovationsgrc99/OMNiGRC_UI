@@ -9,10 +9,10 @@ import { BlogListingClient } from "@/components/blog/BlogListingClient";
 import { Sparkles, ArrowRight, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "OMNiGRC Blog — Governance, Risk & Compliance Insights",
+  title: "OMNiGRC Blog: Governance, Risk & Compliance Insights",
   description: "Substantive articles, operational crosswalk methodologies, and risk governance strategies for modern security & compliance leaders.",
   openGraph: {
-    title: "OMNiGRC Blog — GRC Operations & Governance Insights",
+    title: "OMNiGRC Blog: GRC Operations & Governance Insights",
     description: "In-depth technical guides on SOC 2, ISO 27001, risk matrix scoring, and human-governed AI workflows.",
     url: "https://omnigrc.co/resources/blog",
     siteName: "OMNiGRC",

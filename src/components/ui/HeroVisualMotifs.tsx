@@ -315,7 +315,7 @@ export const ProductMotifSvg: React.FC<{ slug: string }> = ({ slug }) => {
 
             <g>
               <rect x="50" y="110" width="110" height="44" rx="10" fill="#16233F" stroke="#0EA5E9" strokeWidth="2" />
-              <text x="105" y="132" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">AWS RDS Postgres</text>
+              <text x="105" y="132" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">AWS RDS Database</text>
               <text x="105" y="146" textAnchor="middle" fill="#38BDF8" fontSize="8" fontFamily="monospace">1.2M PII Records</text>
             </g>
 
@@ -420,7 +420,7 @@ export const ProductMotif: React.FC<{ slug: string }> = ({ slug }) => {
     return (
       <HeroImageWithFallback
         src="/hero-audit-trail.png"
-        alt="An auditor verifying defensible testing history and structured PostgreSQL change logs on a rolling 30/60/90-day compliance board."
+        alt="An auditor verifying defensible testing history and structured database change logs on a rolling 30/60/90-day compliance board."
         fallbackMotif={<ProductMotifSvg slug={slug} />}
       />
     );
@@ -450,7 +450,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
     >
       {/* Background Subtle Ambient Glowing Orbs */}
       <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-teal-400/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-16 -left-16 w-72 h-72 rounded-full bg-blue-400/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-16 -left-16 w-72 h-72 rounded-full bg-[#2E936F]/10 blur-3xl pointer-events-none" />
 
       {/* Header Badge */}
       <div className="relative z-10 flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-200">
@@ -525,19 +525,18 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
           </div>
         </div>
 
-        {/* Stage 2: AI Multi-Standard Hub Node (EXPLICIT EXAMPLE CASE LABEL) */}
         <motion.div
           whileHover={{ scale: 1.01 }}
-          className="p-4 rounded-2xl bg-white dark:bg-navy-900 border border-blue-200 dark:border-blue-900/40 shadow-sm hover:border-blue-400 dark:hover:border-blue-700/60 hover:shadow-md transition-all group relative overflow-hidden"
+          className="p-4 rounded-2xl bg-white dark:bg-navy-900 border border-[#2E936F]/30 dark:border-teal-900/40 shadow-sm hover:border-[#2E936F] dark:hover:border-teal-700/60 hover:shadow-md transition-all group relative overflow-hidden"
         >
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded bg-blue-100 text-blue-900 text-xs font-mono font-bold">
+              <span className="px-2.5 py-0.5 rounded bg-[#2E936F]/15 text-[#2E936F] text-xs font-mono font-bold">
                 02
               </span>
-              <h4 className="text-sm font-bold text-slate-900">Multi-Standard AI Engine</h4>
+              <h4 className="text-sm font-bold text-slate-900 dark:text-white">Multi-Standard AI Engine</h4>
             </div>
-            <span className="text-xs font-mono text-blue-800 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200 font-semibold">
+            <span className="text-xs font-mono text-[#F15E1C] dark:text-amber-400 bg-[#F15E1C]/10 px-2.5 py-0.5 rounded border border-[#F15E1C]/20 font-semibold">
               Example Case: AI Match Confidence %
             </span>
           </div>
@@ -545,10 +544,10 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
           {/* AI Cross-Mapping Graphical Nodes - 6 FRAMEWORKS */}
           <div className="bg-slate-50 dark:bg-navy-950 p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2 shrink-0">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-mono text-xs font-extrabold shadow-md shadow-blue-500/20">
+              <div className="w-9 h-9 rounded-xl bg-[#2E936F] text-white flex items-center justify-center font-mono text-xs font-extrabold shadow-md shadow-[#2E936F]/20">
                 AI
               </div>
-              <div className="hidden sm:block w-3 h-0.5 bg-gradient-to-r from-blue-500 to-blue-300 animate-pulse" />
+              <div className="hidden sm:block w-3 h-0.5 bg-gradient-to-r from-[#2E936F] to-[#FAB60A] animate-pulse" />
             </div>
 
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 w-full">
@@ -560,9 +559,9 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
                 { name: "DPDP", match: "100%" },
                 { name: "HIPAA", match: "96%" }
               ].map((f, i) => (
-                <div key={i} className="p-2 rounded-xl bg-white dark:bg-navy-900 border border-blue-200 dark:border-blue-900/40 text-center shadow-2xs">
+                <div key={i} className="p-2 rounded-xl bg-white dark:bg-navy-900 border border-[#2E936F]/20 dark:border-teal-900/40 text-center shadow-2xs">
                   <div className="text-xs font-mono text-slate-800 dark:text-slate-200 font-bold truncate">{f.name}</div>
-                  <div className="text-xs font-mono text-blue-600 dark:text-blue-400 font-extrabold">{f.match}</div>
+                  <div className="text-xs font-mono text-[#2E936F] dark:text-teal-400 font-extrabold">{f.match}</div>
                 </div>
               ))}
             </div>
@@ -611,10 +610,10 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
               <div className="text-xs text-amber-700 dark:text-amber-500 font-semibold mt-0.5">⚡ Automated Test</div>
             </div>
 
-            <div className="p-2.5 rounded-xl bg-blue-50/80 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/40 text-center flex flex-col justify-between">
-              <div className="text-xs font-mono text-blue-900 dark:text-blue-400 font-bold mb-0.5">90 DAYS DUE</div>
+            <div className="p-2.5 rounded-xl bg-[#2E936F]/10 dark:bg-[#2E936F]/20 border border-[#2E936F]/30 dark:border-teal-800/40 text-center flex flex-col justify-between">
+              <div className="text-xs font-mono text-[#2E936F] dark:text-teal-400 font-bold mb-0.5">90 DAYS DUE</div>
               <div className="text-sm font-mono font-extrabold text-slate-900 dark:text-slate-100 my-0.5">SCHEDULED</div>
-              <div className="text-xs text-blue-700 dark:text-blue-500 font-semibold mt-0.5">Event Log</div>
+              <div className="text-xs text-[#2E936F] dark:text-teal-500 font-semibold mt-0.5">Event Log</div>
             </div>
           </div>
         </motion.div>
@@ -625,7 +624,7 @@ export const SolutionMotif: React.FC<{ slug: string }> = ({ slug }) => {
         <span className="text-teal-800 font-bold flex items-center gap-1.5">
           <CheckCircle2 className="w-4 h-4 text-teal-600" /> Defensible Audit Trail Active
         </span>
-        <span className="text-slate-500 font-semibold">PostgreSQL Logged</span>
+        <span className="text-slate-500 font-semibold">database Logged</span>
       </div>
     </motion.div>
   );
@@ -659,7 +658,7 @@ export const PricingMotif: React.FC = () => {
           <line x1="55" y1="130" x2="125" y2="130" stroke="#3B82F6" strokeWidth="1" strokeDasharray="3 3" />
           <text x="90" y="152" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">Risk Register</text>
           <text x="90" y="172" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">5x5 Matrix</text>
-          <text x="90" y="192" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">PostgreSQL Log</text>
+          <text x="90" y="192" textAnchor="middle" fill="#E2E8F0" fontSize="8.5">database Log</text>
 
           <rect x="55" y="212" width="70" height="22" rx="11" fill="#3B82F6" opacity="0.2" />
           <text x="90" y="226" textAnchor="middle" fill="#93C5FD" fontSize="8" fontFamily="monospace" fontWeight="bold">LEAN TEAMS</text>

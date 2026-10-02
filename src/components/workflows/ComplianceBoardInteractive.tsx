@@ -8,7 +8,7 @@ export function ComplianceBoardInteractive() {
   const cardsData: Record<string, any> = {
     "card-postgres": {
       code: "CTRL-012",
-      title: "PostgreSQL Database Snapshot Recovery Drill",
+      title: "Database Snapshot Recovery Drill",
       owner: "Platform Eng Lead",
       group: "Database Reliability Engineering",
       cadence: "Bi-Monthly Cadence",
@@ -23,7 +23,7 @@ export function ComplianceBoardInteractive() {
         "Execute data consistency checksums on test tables.",
         "Record total recovery elapsed time (RTO < 45 minutes)."
       ],
-      evidenceId: "ev-dr-postgres-wal-test.log (a62bf3489e...1188c)"
+      evidenceId: "ev-dr-database-wal-test.log (a62bf3489e...1188c)"
     },
     "card-okta": {
       code: "CTRL-048",
@@ -129,7 +129,7 @@ export function ComplianceBoardInteractive() {
                 <AlertTriangle className="h-3 w-3" /> 4 Days
               </span>
             </div>
-            <h4 className="text-sm text-[#0d1b36] dark:text-white font-bold group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">PostgreSQL Snapshot Drill</h4>
+            <h4 className="text-sm text-[#0d1b36] dark:text-white font-bold group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Database Snapshot Drill</h4>
             <div className="flex flex-wrap gap-1 mt-1">
               <span className="font-mono text-[9px] px-1.5 py-0.5 bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 rounded text-slate-600 dark:text-slate-300 font-semibold">SOC 2 CC7.3</span>
               <span className="font-mono text-[9px] px-1.5 py-0.5 bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 rounded text-slate-600 dark:text-slate-300 font-semibold">ISO A.8.14</span>

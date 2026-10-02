@@ -72,20 +72,15 @@ export const AudienceSection: React.FC = () => {
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#2E936F]/10 blur-3xl"
       />
 
-      <div className="max-w-6xl mx-auto space-y-5 sm:space-y-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#F15E1C] dark:text-amber text-xs font-mono tracking-wider uppercase font-bold shadow-sm">
-            <Sparkles className="h-3.5 w-3.5" />
-            <span>ONE WORKFLOW. EVERY TEAM SIZE.</span>
-          </div>
-
+        <div className="text-left max-w-3xl space-y-3">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             One workflow. Every team size.
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
-            From solo practitioner to security lead — OMNiGRC organizes risk, controls, and evidence around how you actually work.
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+            From solo practitioner to security lead, OMNiGRC organizes risk, controls, and evidence around how you actually work.
           </p>
         </div>
 

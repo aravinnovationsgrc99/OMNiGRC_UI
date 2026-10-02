@@ -14,7 +14,7 @@ const operationalScenarios = [
   },
   {
     title: "Scenario 02: Linking High-Impact Cloud Assets Directly to Risk",
-    context: "Engineering introduces a new production PostgreSQL database holding customer PII data.",
+    context: "Engineering introduces a new production database holding customer PII data.",
     workflow: "The asset is cataloged in OMNiGRC's inventory. The team tags it as 'PII Data Flow', linking it immediately to RSK-019 (Data Breach Risk) and protective controls CTRL-088 (KMS Encryption) and CTRL-012 (Automated Daily Backups).",
     outcome: "Immediate risk visibility • Traceable control coverage",
     tag: "Asset-Risk Context",

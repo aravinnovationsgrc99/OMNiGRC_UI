@@ -35,8 +35,8 @@ const phases = [
     id: 2,
     tabTitle: "3. Approval & Storage",
     title: "3. Schema Validation & Mandatory Human Decision",
-    userAction: "GRC Analyst inspects AI confidence (96%), approves mapping, and commits record to PostgreSQL.",
-    nextProcess: "Final State: Structured Audit Record Committed to PostgreSQL",
+    userAction: "GRC Analyst inspects AI confidence (96%), approves mapping, and commits record to database.",
+    nextProcess: "Final State: Structured Audit Record Committed to database",
     accentColor: "#F15E1C",
   },
 ];
@@ -285,12 +285,12 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* Node 3: PostgreSQL Database */}
+                  {/* Node 3: Primary Database */}
                   <div className="w-full sm:w-1/3 bg-white dark:bg-navy-900 p-4 rounded-xl border border-slate-200 dark:border-navy-700 shadow-sm text-center space-y-1.5">
                     <div className="inline-flex p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 text-[#2E936F] dark:text-emerald-400 mb-1">
                       <Database className="h-6 w-6" />
                     </div>
-                    <p className="text-xs font-extrabold text-[#16233F] dark:text-white">PostgreSQL DB</p>
+                    <p className="text-xs font-extrabold text-[#16233F] dark:text-white">Database</p>
                     <span className="inline-block text-[10px] font-mono font-bold bg-[#2E936F]/10 text-[#2E936F] dark:text-emerald-400 px-2.5 py-0.5 rounded">
                       Audit Log
                     </span>

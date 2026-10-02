@@ -64,7 +64,7 @@ export function EvidenceTable() {
             <span className="px-2.5 py-1 rounded bg-[#2E936F] dark:bg-teal-900/40 text-white dark:text-teal-400 font-mono text-[10px] font-bold">142 RECORDS</span>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
-            Deterministic PostgreSQL catalog of external pointers, signed attestations, and cross-framework control links.
+            Deterministic database catalog of external pointers, signed attestations, and cross-framework control links.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
@@ -179,7 +179,7 @@ export function EvidenceTable() {
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 border-t border-slate-100 dark:border-navy-800 pt-6">
         <div className="flex items-center gap-2 font-mono text-[10px] text-slate-500">
           <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
-          <span>Index synchronized with Postgres WAL stream: 2026-03-12T19:42:08Z (UTC)</span>
+          <span>Index synchronized with database log stream: 2026-03-12T19:42:08Z (UTC)</span>
         </div>
         <div className="flex items-center gap-4 text-xs text-slate-500 font-medium">
           <span>Showing 1-4 of 142 items</span>

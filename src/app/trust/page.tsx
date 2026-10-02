@@ -21,10 +21,10 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Trust, Security Architecture & Governance Assurance — OMNiGRC",
+  title: "Trust, Security Architecture & Governance Assurance: OMNiGRC",
   description: "Application-level tenant isolation, advisory AI data minimization, and transparent deployment boundaries for security-conscious GRC teams.",
   openGraph: {
-    title: "Trust & Security Architecture — OMNiGRC",
+    title: "Trust & Security Architecture: OMNiGRC",
     description: "Verified tenant isolation, human-governed AI workflows, and deployment model specifications.",
     url: "https://omnigrc.co/trust",
     siteName: "OMNiGRC",

@@ -139,7 +139,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">PII Stream</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
-                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-300 font-bold">Vendor</span>
+                          <span className="px-2 py-0.5 rounded bg-[#F15E1C]/20 text-[#F15E1C] dark:text-amber font-bold">Vendor</span>
                           <ArrowRight className="h-3 w-3 text-amber shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">Control</span>
                         </div>
@@ -154,9 +154,9 @@ export const UnifiedPlatformSection: React.FC = () => {
                         </div>
                         <div className="flex items-center gap-1.5 text-2xs text-navy-900 dark:text-slate-200">
                           <span className="px-2 py-0.5 rounded bg-teal/20 text-teal font-bold">1 Control</span>
-                          <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
-                          <span className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-600 dark:text-purple-300 font-bold">AI Matcher</span>
-                          <ArrowRight className="h-3 w-3 text-purple-400 shrink-0" />
+                          <ArrowRight className="h-3 w-3 text-[#2E936F] shrink-0" />
+                          <span className="px-2 py-0.5 rounded bg-[#2E936F]/20 text-[#2E936F] dark:text-teal-300 font-bold">AI Matcher</span>
+                          <ArrowRight className="h-3 w-3 text-[#2E936F] shrink-0" />
                           <span className="px-2 py-0.5 rounded bg-amber/20 text-amber font-bold">6 Frameworks</span>
                         </div>
                       </div>
@@ -289,7 +289,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                       <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/60 text-xs">
                         <div className="flex items-center gap-2">
                           <Database className="h-4 w-4 text-[#2E936F] dark:text-teal" />
-                          <span className="font-bold text-navy-900 dark:text-white">Asset: AWS RDS PostgreSQL (Cluster-Prod)</span>
+                          <span className="font-bold text-navy-900 dark:text-white">Asset: AWS RDS Database (Cluster-Prod)</span>
                         </div>
                         <span className="text-[10px] font-mono text-[#F15E1C] bg-[#FFEC69]/50 dark:bg-amber/10 px-2 py-0.5 rounded font-bold">
                           PII Data Flow
@@ -357,7 +357,7 @@ export const UnifiedPlatformSection: React.FC = () => {
                         <span className="text-[#2E936F] font-bold flex items-center gap-1.5">
                           <UserCheck className="h-3.5 w-3.5" /> Approved by GRC Analyst
                         </span>
-                        <span className="text-[10px] font-mono text-slate-600 dark:text-slate-300">Saved to Postgres</span>
+                        <span className="text-[10px] font-mono text-slate-600 dark:text-slate-300">Saved to database</span>
                       </div>
                     </div>
                   </div>

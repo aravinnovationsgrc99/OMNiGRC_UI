@@ -20,10 +20,10 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Resources & GRC Knowledge Hub — OMNiGRC",
+  title: "Resources & GRC Knowledge Hub | OMNiGRC",
   description: "Access canonical framework guides, operational workflow walkthroughs, and practical GRC implementation guidance.",
   openGraph: {
-    title: "Resources & GRC Knowledge Hub — OMNiGRC",
+    title: "Resources & GRC Knowledge Hub | OMNiGRC",
     description: "Substantive educational guides for security, data privacy, and AI compliance frameworks.",
     url: "https://omnigrc.co/resources",
     siteName: "OMNiGRC",

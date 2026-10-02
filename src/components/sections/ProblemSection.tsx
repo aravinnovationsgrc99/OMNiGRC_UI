@@ -57,20 +57,15 @@ export const ProblemSection: React.FC = () => {
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#F15E1C]/10 blur-3xl"
       />
 
-      <div className="max-w-6xl mx-auto space-y-5 sm:space-y-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#F15E1C]/40 bg-[#F15E1C]/10 text-[#F15E1C] dark:text-amber text-[10px] sm:text-xs font-mono tracking-wider uppercase font-semibold shadow-sm">
-            <AlertTriangle className="h-3.5 w-3.5" />
-            <span>THE FRAGMENTATION PROBLEM</span>
-          </div>
-
+        <div className="text-left max-w-3xl space-y-3">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Compliance doesn&apos;t fail on frameworks. <br className="hidden xs:inline" />
             <span className="text-[#F15E1C] dark:text-teal-400">It fails on fragmentation.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
             Lean teams get stuck between disconnected spreadsheets and heavyweight enterprise suites. OMNiGRC is the operating layer in between.
           </p>
         </div>

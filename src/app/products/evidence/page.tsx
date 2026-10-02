@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Evidence Governance — OMNiGRC Connected Workflows",
+  title: "Evidence Governance | OMNiGRC Connected Workflows",
   description: "Connect external proof without binary lock-in. Maintain an auditable, structured index of production proof and cloud telemetry.",
 };
 
@@ -76,7 +76,7 @@ export default function EvidencePage() {
                     Evidence References &amp; Records: Connect external proof without binary lock-in.
                   </h1>
                   <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-8">
-                    Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record—AWS, Okta, GitHub, Jira—while preserving complete clear chain of custody for external auditors.
+                    Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record (AWS, Okta, GitHub, Jira) while preserving complete clear chain of custody for external auditors.
                   </p>
                   <div className="flex flex-wrap items-center gap-4">
                     <Link

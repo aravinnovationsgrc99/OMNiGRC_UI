@@ -72,20 +72,16 @@ export const DeploymentSection: React.FC = () => {
 
   return (
     <section className="relative w-full bg-slate-50/50 dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
-      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#F15E1C] dark:text-amber font-bold inline-block">
-            DEPLOYMENT FLEXIBILITY
-          </span>
-
+        <div className="text-left max-w-3xl space-y-3">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            Deploy your way — <br className="hidden sm:inline" />
+            Deploy your way: <br className="hidden sm:inline" />
             <span className="text-[#2E936F] dark:text-teal-400">cloud speed or air-gapped sovereignty.</span>
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
-            From fast multi-tenant SaaS onboarding to fully isolated, regulator-grade infrastructure — pick the model that matches your compliance posture, not the other way around.
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+            From fast multi-tenant SaaS onboarding to fully isolated, regulator-grade infrastructure, pick the model that matches your compliance posture, not the other way around.
           </p>
         </div>
 

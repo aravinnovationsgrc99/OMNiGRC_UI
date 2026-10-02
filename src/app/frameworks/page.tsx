@@ -21,10 +21,10 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Documented Framework Support — OMNiGRC",
+  title: "Documented Framework Support | OMNiGRC",
   description: "Map once and align across ISO 27001, SOC 2, ISO 42001, GDPR, DPDP Act 2023, and HIPAA Security Rule with OMNiGRC connected workflows.",
   openGraph: {
-    title: "Documented Framework Support — OMNiGRC",
+    title: "Documented Framework Support | OMNiGRC",
     description: "Unified governance architecture across global cybersecurity, data protection, and AI regulations.",
     url: "https://omnigrc.co/frameworks",
     siteName: "OMNiGRC",

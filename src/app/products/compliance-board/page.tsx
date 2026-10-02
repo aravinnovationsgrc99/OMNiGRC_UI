@@ -34,7 +34,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Compliance Board — OMNiGRC Connected Workflows",
+  title: "Compliance Board | OMNiGRC Connected Workflows",
   description: "Replace Pre-Audit Panic with a Continuous Compliance Board. Eliminate pre-audit panic with a predictable 30/60/90-day operational cadence.",
 };
 

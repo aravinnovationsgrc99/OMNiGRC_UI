@@ -33,7 +33,7 @@ import {
 import { RiskMatrix } from "@/components/workflows/RiskMatrix";
 
 export const metadata: Metadata = {
-  title: "Risk Register — OMNiGRC Connected Workflows",
+  title: "Risk Register | OMNiGRC Connected Workflows",
   description: "Maintain continuous risk registers with calibrated 5x5 Likelihood × Impact scoring mapped directly to tracked infrastructure assets.",
 };
 
@@ -107,7 +107,7 @@ export default function RiskRegisterPage() {
 <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-6">
 <div className="text-white">
 <p className="font-mono text-xs text-surface-container-highest">EVENT RECORDED #4419</p>
-<p className="text-sm font-semibold text-white">AWS KMS rotation verified — Risk score calibrated for AST-059</p>
+<p className="text-sm font-semibold text-white">AWS KMS rotation verified: Risk score calibrated for AST-059</p>
 </div>
 </div>
 </div>
@@ -402,7 +402,7 @@ export default function RiskRegisterPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/65 to-transparent p-6 flex flex-col justify-end text-white">
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-amber-400 mb-1">Auditor Portal Integration</span>
               <h3 className="text-xl font-extrabold text-white mb-2 drop-shadow-sm">Zero Friction External Audits</h3>
-              <p className="text-sm text-slate-100 font-medium leading-relaxed drop-shadow">Provide read-only auditor scopes directly tied to cryptographic evidence hashes — eliminating spreadsheet emails.</p>
+              <p className="text-sm text-slate-100 font-medium leading-relaxed drop-shadow">Provide read-only auditor scopes directly tied to cryptographic evidence hashes, eliminating spreadsheet emails.</p>
             </div>
           </div>
           <div className="rounded-xl overflow-hidden shadow-md relative h-72 group">

@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
             >
               <Image
                 src="/omnigrc-logo.png"
-                alt="OMNiGRC — Connected GRC Platform"
+                alt="OMNiGRC - Connected GRC Platform"
                 width={200}
                 height={68}
                 className="h-11 sm:h-12 w-auto object-contain"

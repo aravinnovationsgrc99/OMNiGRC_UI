@@ -81,14 +81,6 @@ export const FinalCtaSection: React.FC = () => {
           viewport={{ once: true, margin: "-40px" }}
           className="relative rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-gradient-to-b from-slate-50/90 via-white to-white dark:from-navy-900/90 dark:via-[#0D1626] dark:to-[#0A111F] p-6 sm:p-12 lg:p-14 shadow-xl backdrop-blur-md text-center"
         >
-          {/* Eyebrow */}
-          <motion.div variants={itemVariants} className="mb-4 sm:mb-6">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#F15E1C] dark:text-amber text-xs font-mono tracking-wider uppercase font-semibold shadow-sm">
-              <ShieldCheck className="h-3.5 w-3.5 text-[#2E936F]" />
-              <span>READY FOR AUDIT DAY</span>
-            </span>
-          </motion.div>
-
           {/* Primary Headline */}
           <motion.h2
             variants={itemVariants}
@@ -103,7 +95,7 @@ export const FinalCtaSection: React.FC = () => {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
           >
-            Bring risk, assets, and controls into one workflow — built for lean security teams, backed by SOC 2 Type II, tenant isolation, and AI that drafts while your team approves.
+            Bring risk, assets, and controls into one workflow, built for lean security teams, backed by SOC 2 Type II, tenant isolation, and AI that drafts while your team approves.
           </motion.p>
 
           {/* CTAs Row */}
@@ -139,7 +131,7 @@ export const FinalCtaSection: React.FC = () => {
           >
             <span className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F] dark:bg-teal-400 shrink-0" />
-              <span>SOC 2 Type II — In Progress</span>
+              <span>SOC 2 Type II: In Progress</span>
             </span>
             <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
             <span className="flex items-center gap-2">

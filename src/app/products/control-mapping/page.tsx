@@ -97,7 +97,7 @@ export default function ControlMappingPage() {
               </h1>
               {/*  Sub-headline  */}
               <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 max-w-2xl">
-                Eliminate duplicate control testing. OMNiGRC ingests regulatory frameworks—ISO 27001, SOC 2, HIPAA, DPDP Act 2023, GDPR, and ISO 42001—to recommend unified control crosswalks with mandatory human-in-the-loop ratification.
+                Eliminate duplicate control testing. OMNiGRC ingests regulatory frameworks (ISO 27001, SOC 2, HIPAA, DPDP Act 2023, GDPR, and ISO 42001) to recommend unified control crosswalks with mandatory human-in-the-loop ratification.
               </p>
               {/*  CTA Button Row  */}
               <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">

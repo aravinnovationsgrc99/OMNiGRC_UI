@@ -131,7 +131,7 @@ export const ControlMapping3DGraph: React.FC = () => {
             </span>
           </div>
           <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            Tenant isolation, PostgreSQL persistence, risk histories, and human approval states reside securely within OMNiGRC infrastructure.
+            Tenant isolation, database persistence, risk histories, and human approval states reside securely within OMNiGRC infrastructure.
           </p>
         </div>
 
