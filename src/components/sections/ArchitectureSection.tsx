@@ -20,7 +20,6 @@ import {
   GitMerge,
 } from "lucide-react";
 import dynamic from "next/dynamic";
-import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 const ControlMapping3DGraph = dynamic(
   () => import("@/components/3d/ControlMapping3DGraph").then((m) => m.ControlMapping3DGraph),
@@ -33,44 +32,6 @@ const ArchitectureFlowVisualizer = dynamic(
 );
 
 export const ArchitectureSection: React.FC = () => {
-  const [activeTier, setActiveTier] = useState<number | null>(null);
-
-  const architectureLayers = [
-    {
-      id: 1,
-      name: "STEP 1 - 2: TENANT INGESTION & DATA MINIMIZATION",
-      title: "1. Authenticated Ingestion & Data Minimization",
-      desc: "Analyst initiates control mapping. The data minimization layer sanitizes the payload, stripping organization names, employee identifiers, and unrelated asset/risk information.",
-      icon: Lock,
-      boundary: "OMNiGRC Controlled VPC",
-      items: ["Tenant-Scoped API", "Sanitized Payload Pipeline", "Data Minimization", "Strict Schema Formatting"],
-      borderColor: "border-[#2E936F]",
-      badgeColor: "text-[#2E936F] bg-[#2E936F]/10",
-    },
-    {
-      id: 2,
-      name: "STEP 3 - 5: TIERED MODEL ROUTER & EXTERNAL CALL",
-      title: "2. Tiered Model Router & Clause Analysis",
-      desc: "Sanitized control text and candidate framework clauses are routed to high-speed LLM APIs. Tier 1 (Gemini 2.5 Flash-Lite) and Tier 2 (Claude Haiku 4.5).",
-      icon: Cpu,
-      boundary: "External LLM API (Ephemeral & Stateless)",
-      items: ["Gemini Top Tier Model — Tier 1", "Claude Haiku Top Tier Model — Tier 2", "Tiered Model Routing", "Zero-Retention Call"],
-      borderColor: "border-[#FAB60A]",
-      badgeColor: "text-[#b07d00] bg-[#FAB60A]/10",
-    },
-    {
-      id: 3,
-      name: "STEP 6 - 8: VALIDATION, HUMAN APPROVAL & PERSISTENCE",
-      title: "3. Schema Validation & Mandatory Human Decision",
-      desc: "Model responses are parsed and validated against strict framework taxonomies. Human analyst reviews, adjusts confidence, and approves before committing to PostgreSQL.",
-      icon: UserCheck,
-      boundary: "OMNiGRC Controlled Database",
-      items: ["Clause Validation Engine", "Mandatory Human Approval", "PostgreSQL Persistence", "Full Audit History"],
-      borderColor: "border-[#2E936F]",
-      badgeColor: "text-[#2E936F] bg-[#2E936F]/10",
-    },
-  ];
-
   return (
     <section className="relative bg-white dark:bg-[#0A111F] py-8 sm:py-12 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,11 +133,10 @@ export const ArchitectureSection: React.FC = () => {
             </p>
           </div>
 
-          {/* PIPELINE STAGES - ROW 1 (STAGES 01-04) & ROW 2 (STAGES 05-08) */}
-          <div className="space-y-6">
-            {/* ROW 1: STAGES 01 TO 04 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch relative">
-              {[
+          {/* 8 Connected Nodes Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
+            {(
+              [
                 {
                   step: "01",
                   label: "Analyst UI",
@@ -196,65 +156,27 @@ export const ArchitectureSection: React.FC = () => {
                   label: "Minimization Layer",
                   sub: "Sanitized Payload",
                   icon: Lock,
+                  color: "amber",
                 },
                 {
                   step: "04",
                   label: "Tiered Router",
                   sub: "Cost & Speed Router",
                   icon: GitMerge,
+                  color: "amber",
                 },
-              ].map((node, idx) => {
-                const NodeIcon = node.icon;
-                return (
-                  <div key={idx} className="relative flex flex-col min-w-0">
-                    <div className="flex-1 p-5 sm:p-6 rounded-2xl border border-slate-700/70 bg-[#060e1a] hover:border-slate-600 transition-all flex flex-col justify-between space-y-4 min-h-[145px]">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono font-extrabold text-[#00d2b4] uppercase tracking-wider">
-                          STAGE {node.step}
-                        </span>
-                        <div className="w-8 h-8 rounded-xl bg-navy-950 border border-slate-700/80 flex items-center justify-center text-[#00d2b4]">
-                          <NodeIcon className="h-4 w-4" />
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-base font-extrabold text-white leading-snug">{node.label}</h4>
-                        <p className="text-xs text-slate-300 font-mono mt-1.5 leading-relaxed">{node.sub}</p>
-                      </div>
-                    </div>
-
-                    {/* Desktop Horizontal Connector Arrow (Between columns) */}
-                    {idx < 3 && (
-                      <div className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#0b1b2d] border border-[#2E936F]/40 items-center justify-center text-[#00d2b4] shadow-md">
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* DESKTOP INTER-ROW CONNECTOR (ROW 1 TO ROW 2 TRANSITION) */}
-            <div className="hidden lg:flex justify-end pr-8 -my-2 z-10">
-              <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0b1b2d] border border-[#2E936F]/40 text-[#00d2b4] text-xs font-mono font-bold shadow-md">
-                <span>Execution Flow</span>
-                <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
-              </div>
-            </div>
-
-            {/* ROW 2: STAGES 05 TO 08 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch relative">
-              {[
                 {
                   step: "05",
                   label: "External LLM API",
                   sub: "Gemini & Claude Router",
                   icon: Cpu,
+                  color: "amber",
                   highlight: true,
                 },
                 {
                   step: "06",
                   label: "Response Validator",
-                  sub: "Schema & Confidence Check",
+                  sub: "Schema & Confidence",
                   icon: FileCode,
                   color: "green",
                 },
@@ -321,9 +243,9 @@ export const ArchitectureSection: React.FC = () => {
                       </div>
                     )}
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
