@@ -25,7 +25,7 @@ export const FinalCtaSection: React.FC = () => {
           name: "Newsletter Subscriber",
           email,
           company: "N/A",
-          message: "Subscribed to Ctrl + GRC newsletter",
+          message: "Subscribed to GRC newsletter",
           request_type: "NEWSLETTER",
           source_page: typeof window !== "undefined" ? window.location.pathname || "/" : "/",
         }),
@@ -133,10 +133,10 @@ export const FinalCtaSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider flex items-center gap-1.5">
-                <Mail className="h-3.5 w-3.5 text-[#2E936F]" /> Ctrl + GRC Newsletter
+                <Mail className="h-3.5 w-3.5 text-[#2E936F]" /> GRC Newsletter
               </span>
               <p className="text-sm text-slate-600 dark:text-slate-300 font-medium">
-                Bi-monthly GRC insights on frameworks, clauses, and practical security operations.
+                Monthly GRC insights on frameworks, clauses, and practical security operations.
               </p>
             </div>
 
