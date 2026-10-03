@@ -296,36 +296,48 @@ export const WorkflowSection: React.FC = () => {
             </div>
 
             {/* Bottom Terminal Demo Stream Bar */}
-            <div className="p-4 sm:p-4 rounded-2xl bg-slate-50 dark:bg-[#040810] border border-slate-200 dark:border-slate-800/90 flex flex-col md:flex-row md:items-center justify-between gap-3 font-mono text-xs sm:text-sm shadow-sm min-w-0 overflow-hidden">
-              <div className="flex flex-wrap md:flex-nowrap items-center gap-2.5 min-w-0 overflow-hidden">
-                <span className="px-2.5 py-1 rounded bg-[#FAB60A] text-navy-950 font-black text-[11px] sm:text-xs uppercase tracking-wider shrink-0 shadow">
-                  DEMO STREAM
-                </span>
-                <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed min-w-0 truncate sm:whitespace-normal">
-                  <strong className="text-navy-900 dark:text-white font-extrabold">
-                    Live Trace (Illustrative Demo Data):
-                  </strong>{" "}
-                  Active Risk:{" "}
-                  <span className="text-[#2E936F] font-bold">
-                    {activeStage.traceRisk}
-                  </span>{" "}
-                  <span className="text-[#FAB60A] font-bold">→</span> Linked Control{" "}
-                  <span className="text-[#F15E1C] dark:text-[#FAB60A] font-bold">
-                    {activeStage.traceControl}
-                  </span>{" "}
-                  <span className="text-[#2E936F] font-bold">→</span>{" "}
-                  <span className="text-[#2E936F] font-bold">
-                    {activeStage.traceStatus}
-                  </span>{" "}
-                  <span className="text-[#2E936F] font-bold">→</span> Audit Logged
-                </p>
+            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-[#040810] border border-slate-200 dark:border-slate-800/90 font-mono text-xs sm:text-sm shadow-sm space-y-3 min-w-0">
+              {/* Header row: DEMO STREAM badge on left, Sync indicator on right */}
+              <div className="flex items-center justify-between gap-2 border-b border-slate-200/80 dark:border-slate-800/80 pb-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-1 rounded bg-[#FAB60A] text-navy-950 font-black text-[10px] sm:text-xs uppercase tracking-wider shrink-0 shadow-sm">
+                    DEMO STREAM
+                  </span>
+                  <span className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-bold hidden sm:inline">
+                    Live Trace (Illustrative Demo Data)
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 font-mono shrink-0">
+                  <span>
+                    Sync: <strong className="text-navy-900 dark:text-slate-200">4.2ms</strong>
+                  </span>
+                  <CheckCircle2 className="h-4 w-4 text-[#2E936F]" />
+                </div>
               </div>
 
-              <div className="flex items-center gap-2 shrink-0 text-slate-600 dark:text-slate-400 text-xs font-mono justify-end border-t md:border-t-0 border-slate-200 dark:border-slate-800/60 pt-2 md:pt-0">
-                <span>
-                  Sync: <strong className="text-navy-900 dark:text-slate-200">4.2ms</strong>
-                </span>
-                <CheckCircle2 className="h-4 w-4 text-[#2E936F]" />
+              {/* Main Live Trace Flow */}
+              <div className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed space-y-2">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold sm:hidden">
+                  Live Trace (Illustrative Demo Data):
+                </p>
+                <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+                  <span className="px-2.5 py-1 rounded-lg bg-emerald-100/80 dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-300 font-extrabold border border-[#2E936F]/30">
+                    Risk: {activeStage.traceRisk}
+                  </span>
+                  <span className="text-[#FAB60A] font-extrabold">→</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-amber-100/80 dark:bg-amber-950/60 text-[#F15E1C] dark:text-amber-300 font-extrabold border border-[#FAB60A]/30">
+                    Control: {activeStage.traceControl}
+                  </span>
+                  <span className="text-[#2E936F] font-extrabold">→</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-emerald-100/80 dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-300 font-extrabold border border-[#2E936F]/30">
+                    {activeStage.traceStatus}
+                  </span>
+                  <span className="text-[#2E936F] font-extrabold">→</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-slate-200/80 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-extrabold">
+                    ✓ Audit Logged
+                  </span>
+                </div>
               </div>
             </div>
           </div>
