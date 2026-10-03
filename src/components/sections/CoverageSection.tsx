@@ -18,7 +18,7 @@ import { FRAMEWORKS } from "@/lib/frameworks";
 
 export const CoverageSection: React.FC = () => {
   return (
-    <section className="relative bg-white dark:bg-[#16233F] py-4 sm:py-6 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#16233F] pt-4 sm:pt-6 pb-8 sm:pb-12 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-10">
         {/* Section Header */}
         <div className="w-full text-left space-y-2">

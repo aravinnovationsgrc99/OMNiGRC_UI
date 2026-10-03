@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   Shield,
@@ -50,7 +50,6 @@ const workflowSteps = [
 ];
 
 export const ControlMapping3DGraph: React.FC = () => {
-  const [activeStep, setActiveStep] = useState<number>(0);
 
   return (
     <div className="relative w-full rounded-3xl border border-slate-200 dark:border-teal/30 bg-white dark:bg-[#0A111F]/95 p-5 sm:p-7 lg:p-8 shadow-xl overflow-hidden">
@@ -62,55 +61,67 @@ export const ControlMapping3DGraph: React.FC = () => {
           The Auditable AI Control Mapping Pipeline
         </h3>
         <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
-          Click through each architectural stage to see how sensitive context is isolated before external model evaluation.
+          Explore each architectural stage to see how sensitive context is isolated before external model evaluation.
         </p>
       </div>
 
-      {/* 4 Steps Interactive Pipeline with Visual Flow Indicators */}
+      {/* 4 Steps Architectural Pipeline */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-4 sm:gap-5 relative z-10 mb-6 sm:mb-8">
         {workflowSteps.map((s, idx) => {
-          const isCurrent = activeStep === idx;
           const Icon = s.icon;
           return (
-            <div key={idx} className="relative flex flex-col justify-between">
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                onClick={() => setActiveStep(idx)}
-                className={`p-5 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between h-full min-h-[200px] ${
-                  isCurrent
-                    ? "border-[#2E936F] dark:border-teal bg-[#F0FDF4] dark:bg-navy-900 shadow-lg ring-1 ring-[#2E936F]/40"
-                    : "border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/50 hover:border-[#2E936F]/40"
-                }`}
+            <div key={idx} className="relative flex flex-col justify-between h-full">
+              <div
+                className="p-5 sm:p-6 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full min-h-[220px] space-y-4"
               >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
+                {/* TOP ROW: Icon Box on Left, STAGE + Title in Middle, Arrow Button on Far Right */}
+                <div className="flex items-center justify-between gap-3 w-full">
+                  <div className="flex items-center gap-3.5 min-w-0">
+                    {/* Left Icon Badge Box */}
                     <div
-                      className={`p-2.5 rounded-xl shrink-0 ${
-                        isCurrent ? "bg-[#2E936F] text-white" : "bg-slate-200 dark:bg-navy-800 text-[#2E936F] dark:text-teal"
-                      }`}
+                      className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20"
                     >
-                      <Icon className="h-6 w-6" />
+                      <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
-                    <div className="flex items-center gap-1.5 shrink-0">
-                      <span className="text-xs sm:text-sm font-mono font-extrabold text-[#F15E1C] dark:text-amber">STAGE {s.step}</span>
-                      {idx < 3 && (
-                        <ArrowRight className="hidden 2xl:block h-4 w-4 text-[#2E936F]/60 dark:text-teal/60 ml-1" />
-                      )}
+
+                    {/* Middle Section: STAGE XX + Main Title to the Right of Icon */}
+                    <div className="min-w-0 space-y-0.5">
+                      <span className="text-xs sm:text-sm font-mono font-extrabold text-[#F15E1C] dark:text-amber block truncate">
+                        STAGE {s.step}
+                      </span>
+                      <h4 className="font-extrabold text-lg sm:text-xl text-navy-900 dark:text-white leading-snug truncate">
+                        {s.title}
+                      </h4>
                     </div>
                   </div>
-                  <h4 className="font-extrabold text-lg sm:text-xl text-navy-900 dark:text-white mb-2 leading-snug">{s.title}</h4>
-                  <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{s.desc}</p>
+
+                  {/* Far Right Circular Arrow CTA Button */}
+                  <div
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0 border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-800 text-slate-500 dark:text-slate-400"
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
                 </div>
 
-                <div className="pt-3.5 border-t border-slate-200/80 dark:border-navy-700/60 flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-300 truncate font-medium">{s.scope}</span>
-                  <span className="text-xs sm:text-xs font-mono font-bold text-[#2E936F] dark:text-teal bg-[#2E936F]/10 dark:bg-teal/10 px-2.5 py-1 rounded-md shrink-0">
+                {/* MIDDLE SECTION: Description Text Below Both */}
+                <div className="flex-1">
+                  <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                    {s.desc}
+                  </p>
+                </div>
+
+                {/* BOTTOM SECTION: Divider Line + Scope & Badge Pill */}
+                <div className="pt-3.5 border-t border-slate-200/80 dark:border-navy-700/60 flex items-center justify-between gap-2">
+                  <span className="text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-300 truncate font-medium">
+                    {s.scope}
+                  </span>
+                  <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal bg-[#2E936F]/10 dark:bg-teal/15 px-2.5 py-1 rounded-md shrink-0">
                     {s.badge}
                   </span>
                 </div>
-              </motion.div>
+              </div>
 
-              {/* Mobile / Vertical step connector */}
+              {/* Mobile / Vertical step connector arrow */}
               {idx < 3 && (
                 <div className="flex justify-center my-2 sm:hidden">
                   <ArrowDown className="h-5 w-5 text-[#2E936F] dark:text-teal/60 animate-pulse" />

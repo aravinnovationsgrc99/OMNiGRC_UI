@@ -92,7 +92,7 @@ export const SecurityStackSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
+    <section className="relative w-full bg-transparent px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden">
       {/* Background Glow */}
       <div
         aria-hidden="true"
