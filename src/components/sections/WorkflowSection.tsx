@@ -343,8 +343,11 @@ export const WorkflowSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Horizontal Divider Line above the Toggle Bar */}
+        <div className="w-full border-t border-slate-200/80 dark:border-slate-800/80 pt-2" />
+
         {/* Navigation Tabs for Interactive Explorations */}
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center">
           <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 dark:bg-navy-900 border border-slate-200 dark:border-navy-700/80 shadow-inner">
             <button
               onClick={() => setActiveTab("pillars")}
@@ -389,18 +392,14 @@ export const WorkflowSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3 }}
-                className="w-full space-y-4"
+                className="w-full space-y-4 sm:space-y-6"
               >
-                {/* Concept / Subheading Header Row (Matching Image 2) */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-2.5 sm:gap-3 pb-3 border-b border-slate-200/80 dark:border-slate-800 w-full">
-                  <span className="text-xs font-mono font-bold uppercase text-[#F15E1C] tracking-wider shrink-0">
-                    CONCEPT 2
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight shrink-0">
+                {/* Header Row: Left-Aligned Large Heading matching main section title size */}
+                <div className="text-left space-y-2 w-full">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
                     Structured <span className="text-[#F15E1C]">four pillars.</span>
                   </h3>
-                  <span className="text-slate-300 dark:text-slate-700 hidden sm:inline">|</span>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
+                  <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                     From risk to evidence, everything connected in one workflow.
                   </p>
                 </div>
