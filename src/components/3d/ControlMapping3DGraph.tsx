@@ -66,30 +66,30 @@ export const ControlMapping3DGraph: React.FC = () => {
       </div>
 
       {/* 4 Steps Architectural Pipeline */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative z-10 mb-6 sm:mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 relative z-10 mb-6 sm:mb-8">
         {workflowSteps.map((s, idx) => {
           const Icon = s.icon;
           return (
-            <div key={idx} className="relative flex flex-col justify-between h-full">
+            <div key={idx} className="relative flex flex-col h-full">
               <div
-                className="p-4 sm:p-5 lg:p-6 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full min-h-[210px] space-y-3.5"
+                className="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full space-y-3"
               >
                 {/* TOP ROW: Icon Box on Left, STAGE + Title in Middle, Arrow Button on Far Right */}
                 <div className="flex items-start justify-between gap-2.5 w-full">
                   <div className="flex items-center gap-3 min-w-0 flex-1">
                     {/* Left Icon Badge Box */}
                     <div
-                      className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20"
+                      className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20"
                     >
-                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                      <Icon className="h-5 w-5" />
                     </div>
 
-                    {/* Middle Section: STAGE XX + Main Title to the Right of Icon */}
+                    {/* Middle Section: STAGE XX + Main Title */}
                     <div className="min-w-0 space-y-0.5">
                       <span className="text-xs font-mono font-extrabold text-[#F15E1C] dark:text-amber block uppercase">
                         STAGE {s.step}
                       </span>
-                      <h4 className="font-extrabold text-base sm:text-lg text-navy-900 dark:text-white leading-snug">
+                      <h4 className="font-extrabold text-sm sm:text-base text-navy-900 dark:text-white leading-snug">
                         {s.title}
                       </h4>
                     </div>
@@ -97,25 +97,25 @@ export const ControlMapping3DGraph: React.FC = () => {
 
                   {/* Far Right Circular Arrow CTA Button */}
                   <div
-                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-800 text-slate-500 dark:text-slate-400"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-800 text-slate-500 dark:text-slate-400"
                   >
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </div>
                 </div>
 
                 {/* MIDDLE SECTION: Description Text Below Both */}
-                <div className="flex-1">
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <div className="pt-0.5">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
                     {s.desc}
                   </p>
                 </div>
 
                 {/* BOTTOM SECTION: Divider Line + Scope & Badge Pill */}
-                <div className="pt-3 border-t border-slate-200/80 dark:border-navy-700/60 flex items-center justify-between gap-1.5 flex-wrap sm:flex-nowrap">
-                  <span className="text-[11px] sm:text-xs font-mono text-slate-600 dark:text-slate-300 font-medium whitespace-nowrap">
+                <div className="pt-2 border-t border-slate-200/80 dark:border-navy-700/60 flex items-center justify-between gap-2 flex-wrap">
+                  <span className="text-[11px] sm:text-xs font-mono text-slate-600 dark:text-slate-300 font-medium">
                     {s.scope}
                   </span>
-                  <span className="text-[10px] sm:text-xs font-mono font-bold text-[#2E936F] dark:text-teal bg-[#2E936F]/10 dark:bg-teal/15 px-2 py-0.5 rounded-md shrink-0 whitespace-nowrap">
+                  <span className="text-[10px] sm:text-xs font-mono font-bold text-[#2E936F] dark:text-teal bg-[#2E936F]/10 dark:bg-teal/15 px-2 py-0.5 rounded-md">
                     {s.badge}
                   </span>
                 </div>

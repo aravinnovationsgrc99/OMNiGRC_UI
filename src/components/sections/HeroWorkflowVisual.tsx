@@ -65,7 +65,7 @@ const STEPS: StepData[] = [
     id: 2,
     stepNumber: "03",
     badge: "OUTPUT",
-    title: "Always Audit-Ready",
+    title: "Audit-Ready Posture",
     subtitle: "Automated evidence gathering with zero last-minute audit stress.",
     icon: ShieldCheck,
     accentColor: "#FAB60A",
@@ -123,9 +123,10 @@ export const HeroWorkflowVisual: React.FC = () => {
           </div>
 
           {/* Step Buttons (Desktop & Mobile Tabs) */}
-          <div className="grid grid-cols-3 gap-1 sm:gap-2 bg-slate-100 dark:bg-navy-950 p-1 sm:p-1.5 rounded-xl border border-slate-200 dark:border-navy-800">
+          <div className="grid grid-cols-3 gap-1.5 bg-slate-100 dark:bg-navy-950 p-1.5 rounded-xl border border-slate-200 dark:border-navy-800">
             {STEPS.map((s, idx) => {
               const isActive = activeStep === idx;
+              const buttonText = idx === 0 ? "Connect" : idx === 1 ? "Map" : "Audit";
               return (
                 <button
                   key={s.id}
@@ -133,14 +134,14 @@ export const HeroWorkflowVisual: React.FC = () => {
                     setActiveStep(idx);
                     setIsPlaying(false);
                   }}
-                  className={`flex items-center justify-center gap-1 sm:gap-2 px-1.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-sm font-extrabold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-4 py-2.5 rounded-lg text-xs sm:text-sm font-extrabold transition-all duration-200 ${
                     isActive
                       ? "bg-[#2E936F] text-white shadow-md scale-[1.01]"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60"
                   }`}
                 >
                   <span className="font-mono text-[10px] sm:text-xs opacity-80 shrink-0">{s.stepNumber}.</span>
-                  <span className="whitespace-nowrap">{s.title.split(" ")[0]}</span>
+                  <span className="whitespace-normal text-center leading-snug">{buttonText}</span>
                 </button>
               );
             })}
@@ -199,23 +200,23 @@ export const HeroWorkflowVisual: React.FC = () => {
                     initial={{ opacity: 0, x: 15 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: idx * 0.08 }}
-                    className="p-3.5 sm:p-4 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-all flex items-center justify-between gap-3 text-left shadow-sm"
+                    className="p-3.5 sm:p-4 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-left shadow-sm"
                   >
-                    <div className="flex items-center gap-3 min-w-0">
+                    <div className="flex items-center gap-3 min-w-0 flex-1">
                       <div className="w-10 h-10 rounded-xl bg-[#E6F4EF] dark:bg-navy-900 border border-[#2E936F]/30 flex items-center justify-center shrink-0 text-[#2E936F]">
                         <ItemIcon className="h-5 w-5" />
                       </div>
-                      <div className="min-w-0">
-                        <h4 className="text-sm sm:text-base font-extrabold text-navy-900 dark:text-white truncate">
+                      <div className="min-w-0 flex-1">
+                        <h4 className="text-sm sm:text-base font-extrabold text-navy-900 dark:text-white leading-snug">
                           {item.label}
                         </h4>
-                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium truncate">
+                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium leading-normal">
                           {item.sub}
                         </p>
                       </div>
                     </div>
 
-                    <span className="px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-xs font-mono font-bold shrink-0">
+                    <span className="self-start sm:self-auto px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-xs font-mono font-bold shrink-0">
                       ✓ {item.status}
                     </span>
                   </motion.div>

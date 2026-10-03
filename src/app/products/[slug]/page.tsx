@@ -143,7 +143,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                       {pillar.features.slice(0, 3).map((f, fIdx) => (
                         <li key={fIdx} className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
-                          <span>{f}</span>
+                          <span><strong className="font-semibold">{f.title}:</strong> {f.desc}</span>
                         </li>
                       ))}
                     </ul>
@@ -176,8 +176,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     0{idx + 1}
                   </div>
                   <div>
-                    <h3 className="font-bold text-sm text-[#0d1b36] dark:text-white mb-1">Feature Requirement #{idx + 1}</h3>
-                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed">{feat}</p>
+                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5">{feat.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed font-medium">{feat.desc}</p>
                   </div>
                 </div>
               ))}

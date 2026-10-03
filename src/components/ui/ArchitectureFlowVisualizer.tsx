@@ -225,8 +225,8 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
                   <div className="sm:col-span-8 space-y-2.5">
                     <div className="bg-white dark:bg-navy-900 p-3.5 rounded-xl border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-sm flex items-center justify-between">
                       <div>
-                        <p className="text-xs font-extrabold text-[#16233F] dark:text-white">Tier 1: Gemini 2.5 Flash-Lite</p>
-                        <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">High-speed clause correlation</p>
+                        <p className="text-xs sm:text-sm font-extrabold text-[#16233F] dark:text-white">Tier 1: Gemini API</p>
+                        <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-semibold leading-relaxed">High-speed clause correlation</p>
                       </div>
                       <span className="px-2.5 py-1 rounded bg-[#2E936F]/10 text-[#2E936F] font-mono font-bold text-[10px] shrink-0">
                         96% ISO Match
@@ -235,8 +235,8 @@ export const ArchitectureFlowVisualizer: React.FC = () => {
 
                     <div className="bg-white dark:bg-navy-900 p-3.5 rounded-xl border border-[#2E936F]/30 dark:border-teal/30 shadow-sm flex items-center justify-between">
                       <div>
-                        <p className="text-xs font-extrabold text-[#16233F] dark:text-white">Tier 2: Claude Haiku 4.5</p>
-                        <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">High-precision clause reasoning</p>
+                        <p className="text-xs sm:text-sm font-extrabold text-[#16233F] dark:text-white">Tier 2: Claude API</p>
+                        <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-semibold leading-relaxed">High-precision clause reasoning</p>
                       </div>
                       <span className="px-2.5 py-1 rounded bg-[#2E936F]/10 text-[#2E936F] font-mono font-bold text-[10px] shrink-0">
                         94% SOC 2 Match

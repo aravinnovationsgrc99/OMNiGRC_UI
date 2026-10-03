@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FRAMEWORKS } from "@/lib/frameworks";
-import { Compass, ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
+import { Compass, ArrowRight, ExternalLink, CheckCircle2, Sparkles } from "lucide-react";
 
 export const HomeGuidesSection: React.FC = () => {
   // Pick first 4 frameworks as guide highlights
@@ -37,7 +37,7 @@ export const HomeGuidesSection: React.FC = () => {
 
           <Link
             href="/resources"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-extrabold text-xs text-[#2E936F] dark:text-[#36B386] bg-[#E6F4EF] dark:bg-emerald-950/50 border border-[#2E936F]/40 dark:border-emerald-700/50 hover:bg-[#2E936F] hover:text-white dark:hover:bg-[#2E936F] dark:hover:text-white transition-all shrink-0 self-start sm:self-auto"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-extrabold text-xs text-[#2E936F] dark:text-[#36B386] bg-[#E6F4EF] dark:bg-emerald-950/50 border border-[#2E936F]/40 dark:border-emerald-700/50 hover:bg-[#2E936F] hover:text-white dark:hover:bg-[#2E936F] dark:hover:text-white transition-all shrink-0 self-end sm:self-auto"
           >
             <span>All Framework Guides</span>
             <ArrowRight className="h-4 w-4" />
@@ -83,8 +83,7 @@ export const HomeGuidesSection: React.FC = () => {
               </div>
 
               {/* Footer CTA */}
-              <div className="pt-3 mt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between">
-                <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 font-semibold">{fw.region}</span>
+              <div className="pt-3 mt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-end">
                 <span className="flex items-center gap-1 text-xs font-extrabold text-[#2E936F] dark:text-[#36B386] group-hover:gap-2 transition-all">
                   Read Guide
                   <ExternalLink className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
@@ -92,6 +91,27 @@ export const HomeGuidesSection: React.FC = () => {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Highlighted CTA Banner: Explore All Our Resources */}
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 sm:p-6 rounded-2xl border border-[#2E936F]/30 dark:border-emerald-500/30 bg-gradient-to-r from-[#E6F4EF] via-white to-[#E6F4EF] dark:from-[#0B1A28] dark:via-[#0E2034] dark:to-[#0B1A28] shadow-md">
+          <div className="space-y-1 text-center sm:text-left">
+            <div className="inline-flex items-center gap-2 font-mono text-xs font-extrabold text-[#2E936F] dark:text-emerald-400 uppercase tracking-wider">
+              <Sparkles className="h-4 w-4 text-amber-500 animate-pulse" />
+              <span>Full GRC Library &amp; Documentation</span>
+            </div>
+            <p className="text-sm text-slate-700 dark:text-slate-200 font-semibold">
+              Looking for full frameworks, compliance mappings, architecture whitepapers, and editorial guides?
+            </p>
+          </div>
+          <Link
+            href="/resources"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-extrabold text-sm text-white bg-gradient-to-r from-[#2E936F] via-[#24795b] to-[#1c6048] hover:from-[#24795b] hover:to-[#174d39] transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] shrink-0 border border-emerald-400/30 group"
+          >
+            <Sparkles className="h-4 w-4 text-amber-300" />
+            <span>Explore All Our Resources</span>
+            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

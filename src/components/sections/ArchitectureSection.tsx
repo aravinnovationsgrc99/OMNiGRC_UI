@@ -128,8 +128,8 @@ export const ArchitectureSection: React.FC = () => {
             </p>
           </div>
 
-          {/* 8 Connected Nodes Grid (2 cols on mobile UI, 4 cols on desktop) */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 relative">
+          {/* 8 Connected Nodes Grid (1 col on mobile, 2 cols on sm, 4 cols on lg desktop) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative">
             {(
               [
                 {
@@ -225,31 +225,33 @@ export const ArchitectureSection: React.FC = () => {
               return (
                 <div key={nIdx} className="relative group h-full">
                   <div
-                    className={`h-full p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
+                    className={`h-full p-4 sm:p-5 rounded-2xl sm:rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
                       node.cardBg
                         ? node.cardBg
                         : "bg-white dark:bg-[#0A111F]/90 border-slate-200/90 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-md"
                     }`}
                   >
-                    {/* Top Row: Icon Badge on left, Step Circle on right */}
-                    <div className="flex items-start justify-between gap-2 mb-3 sm:mb-4">
-                      <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 ${node.iconBg}`}>
-                        <NodeIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                    {/* Top Row: Icon on left, Main Heading on right of icon, Step Circle on far right */}
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <div className="flex items-center gap-3 min-w-0 flex-1">
+                        <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 ${node.iconBg}`}>
+                          <NodeIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+                        </div>
+                        <h4 className="text-base sm:text-lg font-extrabold text-navy-900 dark:text-white leading-tight sm:leading-snug min-w-0">
+                          {node.label}
+                        </h4>
                       </div>
-                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full font-mono text-xs font-bold flex items-center justify-center shrink-0 ${node.badgeBg}`}>
+                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm font-black flex items-center justify-center shrink-0 ${node.badgeBg}`}>
                         {node.step}
                       </div>
                     </div>
 
-                    {/* Bottom Content */}
-                    <div className="min-w-0">
-                      <span className={`block text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider mb-0.5 sm:mb-1 ${node.labelColor}`}>
+                    {/* Remaining Texts Below Icon & Heading Header */}
+                    <div className="space-y-1 pt-1 min-w-0">
+                      <span className={`block text-xs sm:text-sm font-mono font-bold uppercase tracking-wider ${node.labelColor}`}>
                         STAGE {node.step}
                       </span>
-                      <h4 className="text-xs sm:text-base font-extrabold text-navy-900 dark:text-white mb-0.5 sm:mb-1 leading-tight sm:leading-snug">
-                        {node.label}
-                      </h4>
-                      <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-normal">
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                         {node.sub}
                       </p>
                     </div>

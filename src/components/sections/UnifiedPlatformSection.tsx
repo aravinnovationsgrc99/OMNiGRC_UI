@@ -184,7 +184,9 @@ export const UnifiedPlatformSection: React.FC = () => {
                   {pillars[activePillar].points.map((pt, pIdx) => (
                     <div key={pIdx} className="flex items-start gap-3">
                       <CheckCircle2 className="h-4 w-4 text-teal shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-200">{pt}</span>
+                      <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium">
+                        <strong className="font-extrabold text-navy-900 dark:text-white">{pt.title}:</strong> {pt.desc}
+                      </span>
                     </div>
                   ))}
                 </div>

@@ -141,7 +141,7 @@ export const AudienceSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 3 ROLE SELECTOR CARDS GRID (Matching Image 2) */}
+        {/* 3 ROLE SELECTOR CARDS GRID (Matching Standard Card Layout) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full">
           {roles.map((r) => {
             const Icon = r.icon;
@@ -150,19 +150,29 @@ export const AudienceSection: React.FC = () => {
               <button
                 key={r.id}
                 onClick={() => setActiveRole(r.id as any)}
-                className={`p-5 sm:p-6 rounded-2xl text-left transition-all duration-200 relative flex flex-col justify-between space-y-4 group w-full ${
+                className={`p-4 sm:p-5 rounded-2xl text-left transition-all duration-200 relative flex flex-col justify-between space-y-3 group w-full ${
                   isSelected
                     ? "border-2 border-[#2E936F] bg-[#E6F4EF]/60 dark:bg-navy-800/90 shadow-lg ring-1 ring-[#2E936F]/20"
                     : "border border-slate-200 dark:border-navy-700 bg-white/90 dark:bg-navy-900 hover:border-slate-300 dark:hover:border-navy-600 hover:shadow-md"
                 }`}
               >
-                <div className="space-y-4 w-full">
-                  <div className="flex items-center justify-between w-full">
-                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center shrink-0 ${r.iconBoxBg}`}>
-                      <Icon className="h-6 w-6" />
+                <div className="space-y-3 w-full">
+                  {/* TOP ROW: Icon Box on Left, Main Heading on Right of Icon, Arrow Button on Far Right */}
+                  <div className="flex items-start justify-between gap-3 w-full">
+                    <div className="flex items-center gap-3.5 min-w-0 flex-1">
+                      {/* Slightly Increased Icon Box */}
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center shrink-0 ${r.iconBoxBg}`}>
+                        <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                      </div>
+
+                      {/* Main Heading to the Right of Icon */}
+                      <h3 className="font-extrabold text-base sm:text-lg lg:text-xl text-navy-900 dark:text-white leading-snug min-w-0">
+                        {r.title}
+                      </h3>
                     </div>
 
-                    <div className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all ${
+                    {/* Far Right Arrow Circle */}
+                    <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full border flex items-center justify-center shrink-0 transition-all ${
                       isSelected
                         ? "bg-[#2E936F] text-white border-[#2E936F] shadow-sm"
                         : `${r.arrowBoxBg} group-hover:scale-105`
@@ -171,17 +181,16 @@ export const AudienceSection: React.FC = () => {
                     </div>
                   </div>
 
+                  {/* Description Text Below Icon & Heading Header */}
                   <div>
-                    <h3 className="font-extrabold text-lg sm:text-xl text-navy-900 dark:text-white">
-                      {r.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed mt-1">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                       {r.subtext}
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-3.5 border-t border-slate-200/80 dark:border-navy-700/80 flex items-center justify-between text-xs font-mono w-full">
+                {/* BOTTOM ROW: Divider Line + Scale Metrics */}
+                <div className="pt-3 border-t border-slate-200/80 dark:border-navy-700/80 flex items-center justify-between text-xs font-mono w-full">
                   <span className="text-slate-500 dark:text-slate-400 font-semibold flex items-center gap-1">
                     <Zap className="h-3.5 w-3.5 text-[#F15E1C]" /> Same workflow
                   </span>

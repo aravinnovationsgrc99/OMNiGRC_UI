@@ -1,3 +1,8 @@
+export interface PillarFeature {
+  title: string;
+  desc: string;
+}
+
 export interface Pillar {
   code: 'RISK' | 'ASSET' | 'CONTROL' | 'BOARD' | 'VULN' | 'VENDOR' | 'POLICY' | 'AUDIT' | 'REMED' | 'EVIDENCE';
   name: string;
@@ -6,7 +11,7 @@ export interface Pillar {
   oneLiner: string;
   badge: string;
   desc: string;
-  features: string[];
+  features: PillarFeature[];
 }
 
 export const PILLARS: Pillar[] = [
@@ -19,10 +24,10 @@ export const PILLARS: Pillar[] = [
     badge: '5x5 Risk Matrix',
     desc: 'Log organizational, cloud, and vendor risks with standardized 5x5 Likelihood × Impact scoring. Link risks directly to mitigating controls and technical inventory assets for full posture visibility.',
     features: [
-      'Standardized 5x5 Likelihood × Impact matrix evaluation',
-      'Direct linkage between identified risks, assets, and mitigating security controls',
-      'Treatment plan choice: Accept, Mitigate, Transfer, or Avoid',
-      'Historical residual risk reduction tracking and audit logging',
+      { title: '5x5 Risk Matrix', desc: 'Rates each risk by how likely it is to happen and how much impact it would have.' },
+      { title: 'Asset & Control Links', desc: 'Connects every risk directly to the matching server, database, or security check.' },
+      { title: 'Clear Action Plans', desc: 'Pick clear treatment decisions: Accept, Fix, Transfer, or Avoid each risk.' },
+      { title: 'Audit-Ready History', desc: 'Keeps an append-only timeline of score changes and risk mitigations.' },
     ],
   },
   {
@@ -34,10 +39,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Asset Governance',
     desc: 'Maintain complete asset inventory visibility with direct context into PII data flows, vendor relationships, infrastructure boundaries, and protective security controls.',
     features: [
-      'Unified view of cloud infrastructure, databases, endpoints, and SaaS vendors',
-      'Data sensitivity classification (PII, Financial, Confidential) linked to safeguards',
-      'Third-party vendor catalog with compliance certification tracking',
-      'Direct risk and control association for every registered asset',
+      { title: 'Single Asset List', desc: 'Lists servers, databases, tools, and vendors together in one clear view.' },
+      { title: 'Data Flow Mapping', desc: 'Tracks where sensitive customer and PII data travels across systems.' },
+      { title: 'Vendor Inventory', desc: 'Keeps an updated catalog of third-party tools and their security status.' },
+      { title: 'Linked Safeguards', desc: 'Shows which active security rules protect each server and database.' },
     ],
   },
   {
@@ -49,10 +54,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Map-Once Engine',
     desc: 'Define protective controls once. OMNiGRC Advisory AI suggests candidate framework clauses across ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA for mandatory human review.',
     features: [
-      'Advisory payloads are minimized and sanitized before being sent to external AI providers.',
-      'Pre-loaded taxonomies for ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, and HIPAA',
-      'Confidence scores accompanying all AI advisory suggestions',
-      'Mandatory human practitioner review and confirmation before database persistence',
+      { title: 'Private AI Data Filter', desc: 'Strips company names and sensitive details before sending text to AI.' },
+      { title: 'Multi-Standard Mapping', desc: 'Maps one control across ISO 27001, SOC 2, GDPR, HIPAA, and DPDP at once.' },
+      { title: 'Smart Matching Suggestions', desc: 'AI recommends matching framework clauses with clear confidence scores.' },
+      { title: 'Human Review & Sign-Off', desc: 'Compliance officers review and approve every AI suggestion before saving.' },
     ],
   },
   {
@@ -64,10 +69,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Testing Cadence',
     desc: 'Assign control owners, configure recurring test schedules, and maintain an audit-ready cadence without pre-audit scrambles.',
     features: [
-      'Rolling 30, 60, and 90-day upcoming evidence and review task cadences',
-      'Assigned engineering leads with automated SLA reminders',
-      'Recurring test frequencies: Monthly, Quarterly, Semi-Annual, and Annual',
-      'Defensible testing history ready for external audit review',
+      { title: '30/60/90 Day Timelines', desc: 'Organizes upcoming compliance tasks by clear 30, 60, and 90-day deadlines.' },
+      { title: 'Owner Assignments', desc: 'Assigns tasks to team leads with automated email and Slack reminders.' },
+      { title: 'Flexible Test Cadence', desc: 'Runs testing schedules on monthly, quarterly, or yearly frequencies.' },
+      { title: 'Audit Proof Log', desc: 'Stores completed test records so you are always ready for auditor review.' },
     ],
   },
   {
@@ -79,10 +84,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Finding Governance',
     desc: 'Ingest CVE findings and scan results from external security tools. Evaluate finding severity in context of affected infrastructure assets and manage corrective action SLAs.',
     features: [
-      'Ingestion & correlation of findings from external vulnerability scanners',
-      'Asset-linked risk exposure evaluation based on 5x5 impact scoring',
-      'SLA-driven remediation assignment to infrastructure asset owners',
-      'Verification workflows prior to closing resolved vulnerability findings',
+      { title: 'Scanner Import', desc: 'Imports vulnerability findings directly from your external scan tools.' },
+      { title: 'Context-Based Risk', desc: 'Evaluates bug severity based on the specific asset it impacts.' },
+      { title: 'Fix SLA Deadlines', desc: 'Assigns remediation tasks to developers with clear due dates.' },
+      { title: 'Re-Test Verification', desc: 'Requires a fresh scan or check before marking findings resolved.' },
     ],
   },
   {
@@ -94,10 +99,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Third-Party Risk',
     desc: 'Govern third-party vendor risks, evaluate vendor SOC 2 reports, administer assessment questionnaires, and track sub-processor obligations under DPDP and GDPR.',
     features: [
-      'Vendor risk catalog with tiering based on data sensitivity and access level',
-      'SOC 2 Type II report ingestion and SIG Lite assessment questionnaire tracking',
-      'DPDP Act 2023 sub-processor inventory and data protection agreement status',
-      'Annual vendor review triggers linked to internal risk registers',
+      { title: 'Vendor Risk Rating', desc: 'Ranks vendor risk based on data access and system permissions.' },
+      { title: 'SOC 2 & SIG Reviews', desc: 'Tracks vendor SOC 2 reports and security questionnaire answers.' },
+      { title: 'Sub-Processor List', desc: 'Keeps legal data agreement records for DPDP Act and GDPR compliance.' },
+      { title: 'Annual Review Alerts', desc: 'Triggers yearly vendor safety reviews automatically.' },
     ],
   },
   {
@@ -109,10 +114,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Policy Lifecycle',
     desc: 'Centralized policy lifecycle management. Author Markdown policies, maintain git-style revision histories, and enforce annual review cadences across all organizational policies.',
     features: [
-      'Version-controlled policy repository with Markdown revision history',
-      'Automated 365-day policy review cadences assigned to policy owners',
-      'Direct mapping between policy clauses and technical control safeguards',
-      'Executive sign-off tracking and policy publication history',
+      { title: 'Version-Controlled Hub', desc: 'Write and update policies with full git-style change history.' },
+      { title: 'Yearly Review Triggers', desc: 'Notifies policy owners automatically when annual review is due.' },
+      { title: 'Control Clause Links', desc: 'Links policy sections directly to technical security controls.' },
+      { title: 'Executive Approvals', desc: 'Records manager sign-offs and keeps a clear publishing history.' },
     ],
   },
   {
@@ -124,10 +129,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Audit Readiness',
     desc: 'Streamline external auditor engagements with structured sample request tracking, workpaper compilation, and clause-mapped evidence index bundles.',
     features: [
-      'Structured audit request tracking and sample fulfillment workflows',
-      'Organized workpaper bundles mapped directly to target framework clauses',
-      'Human-governed audit preparation with structured application event logs',
-      'Clear separation of audit read-only evidence access',
+      { title: 'Auditor Workspace', desc: 'Gives auditors read-only access to requested proof and evidence.' },
+      { title: 'Self-Assessment Checks', desc: 'Run mock audit checks before official external reviews.' },
+      { title: 'Gap & Delta Reports', desc: 'Instantly highlights missing evidence files or uncovered controls.' },
+      { title: 'Audit Package Export', desc: 'Exports clean ZIP bundles of all audited evidence files.' },
     ],
   },
   {
@@ -139,10 +144,10 @@ export const PILLARS: Pillar[] = [
     badge: 'CAPA Engine',
     desc: 'Manage Corrective and Preventive Action (CAPA) plans stemming from internal assessments, external audits, and risk reviews with explicit human ownership.',
     features: [
-      'Unified CAPA tracking across audit findings, risks, and control deficiencies',
-      'SLA target due date enforcement with automated escalation alerts',
-      'Assigned remediation owners with status milestone tracking',
-      'Verification sign-off workflow required before closing remediation items',
+      { title: 'Central Task Inbox', desc: 'Combines audit findings, risks, and scanner bugs in one list.' },
+      { title: 'Clear Task Assignment', desc: 'Assigns ownership and priority to every corrective fix.' },
+      { title: 'SLA Due Date Alerts', desc: 'Tracks remaining days before fix deadlines expire.' },
+      { title: 'Verification Sign-Off', desc: 'Requires lead approval before marking issues resolved.' },
     ],
   },
   {
@@ -154,10 +159,10 @@ export const PILLARS: Pillar[] = [
     badge: 'Evidence Index',
     desc: 'External evidence reference and record indexing layer. Link controls and test tasks to verified external document links, Jira tickets, and collector log records cleanly.',
     features: [
-      'Structured evidence reference indexing linking controls to audit records',
-      'Clean external document URL tracking (Jira, Confluence, AWS, GitHub)',
-      'Custodian & reviewer approval metadata with verification timestamps',
-      'No unverified binary file hosting; maintains defensible index pointers',
+      { title: 'Auto Proof Collection', desc: 'Collects evidence files, screenshots, and logs continuously.' },
+      { title: 'Tamper-Proof Logs', desc: 'Stores evidence records with timestamped hash signatures.' },
+      { title: 'Control Evidence Links', desc: 'Connects each evidence file directly to framework controls.' },
+      { title: 'One-Click Sharing', desc: 'Shares verified evidence bundles with internal and external teams.' },
     ],
   },
 ];

@@ -37,20 +37,9 @@ export default function EvidencePage() {
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/20 rounded-full blur-3xl pointer-events-none -z-10" />
             <div className="absolute top-48 left-10 w-80 h-80 bg-amber-600/10 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
-            {/* Breadcrumb Context Bar */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 w-full">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4">
-                <div className="flex items-center gap-2 flex-wrap font-mono text-xs text-slate-600 dark:text-slate-300">
-                  <span className="inline-flex items-center gap-1 font-bold text-[#2E936F] dark:text-teal">
-                    <Circle className="h-3.5 w-3.5 fill-current" /> WORKFLOWS
-                  </span>
-                  <span className="text-slate-400">/</span>
-                  <span className="font-bold text-slate-800 dark:text-slate-200">EVIDENCE GOVERNANCE</span>
-                  <span className="text-slate-400">/</span>
-                  <span className="font-medium bg-slate-200/80 dark:bg-navy-800 px-2 py-0.5 rounded text-2xs text-slate-700 dark:text-slate-300">
-                    /products/evidence
-                  </span>
-                </div>
+            {/* Context Status Bar */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2 w-full">
+              <div className="flex items-center justify-end gap-2 pb-2">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 font-mono text-xs font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />

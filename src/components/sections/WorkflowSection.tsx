@@ -25,6 +25,15 @@ export const WorkflowSection: React.FC = () => {
   const [selectedControl, setSelectedControl] = useState<string>("CTRL-084");
   const [activeStageIndex, setActiveStageIndex] = useState<number>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
+  const demoStreamRef = React.useRef<HTMLDivElement | null>(null);
+
+  const handleStageClick = (idx: number) => {
+    setActiveStageIndex(idx);
+    setIsAutoPlaying(false);
+    if (demoStreamRef.current) {
+      demoStreamRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  };
 
   const pipelineStages = [
     {
@@ -189,15 +198,6 @@ export const WorkflowSection: React.FC = () => {
     },
   ];
 
-  const frameworkBadges = [
-    { name: "ISO 27001", href: "/frameworks/iso-27001" },
-    { name: "ISO 42001", href: "/frameworks/iso-42001" },
-    { name: "SOC 2 Type II", href: "/frameworks/soc-2" },
-    { name: "GDPR / UK GDPR", href: "/frameworks/gdpr" },
-    { name: "DPDP Act 2023", href: "/frameworks/dpdp" },
-    { name: "HIPAA Security", href: "/frameworks/hipaa" },
-  ];
-
   const currentControl =
     sampleControls.find((c) => c.id === selectedControl) || sampleControls[0];
   const activeStage = pipelineStages[activeStageIndex];
@@ -222,25 +222,6 @@ export const WorkflowSection: React.FC = () => {
         {/* INTERACTIVE OPERATING RAIL & 6 FRAMEWORKS (LIGHT THEME DEFAULT) */}
         {/* --------------------------------------------------------------- */}
         <div className="space-y-4">
-          {/* Top Framework Mapping Header Line */}
-          <div className="text-center space-y-3">
-            <p className="text-sm sm:text-base font-semibold text-slate-600 dark:text-slate-300">
-              Supported out of the box: map a single control across 6 global standards:
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-              {frameworkBadges.map((fw, idx) => (
-                <Link
-                  key={idx}
-                  href={fw.href}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50/90 dark:bg-emerald-950/60 border border-[#2E936F]/40 text-[#00513A] dark:text-teal-300 text-xs sm:text-sm font-mono font-extrabold shadow-sm hover:border-[#2E936F] hover:scale-105 transition-all"
-                >
-                  <CheckCircle className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal-400 shrink-0" />
-                  <span>{fw.name}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
           {/* MAIN OPERATING RAIL CARD */}
           <div className="rounded-3xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#070e1c] p-4 sm:p-6 lg:p-7 shadow-xl text-navy-900 dark:text-white overflow-hidden relative space-y-5">
             {/* Header Row */}
@@ -258,84 +239,104 @@ export const WorkflowSection: React.FC = () => {
               </div>
             </div>
 
-            {/* 7 Pipeline Stages */}
+            {/* 7 Pipeline Stages (Center-Aligned with Increased Headings) */}
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3 w-full min-w-0">
               {pipelineStages.map((stg, idx) => {
                 const isActive = activeStageIndex === idx;
                 return (
                   <button
                     key={stg.step}
-                    onClick={() => {
-                      setActiveStageIndex(idx);
-                      setIsAutoPlaying(false);
-                    }}
-                    className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between min-h-[96px] min-w-0 w-full overflow-hidden ${
+                    onClick={() => handleStageClick(idx)}
+                    className={`p-3 sm:p-4 rounded-2xl border text-center flex flex-col items-center justify-center transition-all duration-200 min-h-[105px] min-w-0 w-full overflow-hidden cursor-pointer ${
                       isActive
-                        ? "border-[#2E936F] bg-[#F0FDF4] dark:bg-[#0f243a] shadow-md ring-1 ring-[#2E936F]/40 scale-[1.02]"
+                        ? "border-[#2E936F] bg-[#F0FDF4] dark:bg-[#0f243a] shadow-md ring-2 ring-[#2E936F]/50 scale-[1.03]"
                         : "border-slate-200 dark:border-slate-800/90 bg-slate-50/80 dark:bg-[#060c18]/90 hover:border-[#2E936F]/40 hover:bg-white dark:hover:bg-[#091324]"
                     }`}
                   >
                     <span
-                      className={`text-[10px] xl:text-xs font-mono font-extrabold uppercase tracking-wider block truncate min-w-0 ${
+                      className={`text-xs font-mono font-extrabold uppercase tracking-wider block mb-1 text-center truncate w-full ${
                         isActive ? "text-[#2E936F] dark:text-teal-300" : "text-[#2E936F]/80 dark:text-teal-400/80"
                       }`}
                     >
                       {stg.label}
                     </span>
-                    <div className="min-w-0 w-full overflow-hidden space-y-0.5">
-                      <h4 className="text-xs xl:text-sm font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight truncate min-w-0" title={stg.title}>
-                        {stg.title}
-                      </h4>
-                      <p className="text-[10px] xl:text-[11px] font-mono text-slate-600 dark:text-slate-400 font-medium truncate min-w-0 block" title={stg.sub}>
-                        {stg.sub}
-                      </p>
-                    </div>
+                    <h4 className="text-sm sm:text-base md:text-lg font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug text-center mb-1 truncate w-full" title={stg.title}>
+                      {stg.title}
+                    </h4>
+                    <p className="text-[11px] sm:text-xs font-mono text-slate-600 dark:text-slate-400 font-semibold text-center truncate w-full block" title={stg.sub}>
+                      {stg.sub}
+                    </p>
                   </button>
                 );
               })}
             </div>
 
-            {/* Bottom Terminal Demo Stream Bar */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-[#040810] border border-slate-200 dark:border-slate-800/90 font-mono text-xs sm:text-sm shadow-sm space-y-3 min-w-0">
-              {/* Header row: DEMO STREAM badge on left, Sync indicator on right */}
-              <div className="flex items-center justify-between gap-2 border-b border-slate-200/80 dark:border-slate-800/80 pb-2.5">
-                <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded bg-[#FAB60A] text-navy-950 font-black text-[10px] sm:text-xs uppercase tracking-wider shrink-0 shadow-sm">
-                    DEMO STREAM
+            {/* Redesigned High-Visibility DEMO STREAM Log Card */}
+            <div
+              ref={demoStreamRef}
+              className="p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-[#FFFDF9] via-white to-[#F0FDF7] dark:from-[#040810] dark:via-[#091324] dark:to-[#040810] border-2 border-[#2E936F]/40 dark:border-[#2E936F]/50 shadow-lg space-y-4 transition-all duration-300 scroll-mt-24"
+            >
+              {/* Header row */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <span className="px-3 py-1 rounded-full bg-[#FAB60A] text-navy-950 font-black text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                    <Activity className="h-3.5 w-3.5 text-navy-950 animate-pulse" />
+                    DEMO STREAM LOG
                   </span>
-                  <span className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-bold hidden sm:inline">
-                    Live Trace (Illustrative Demo Data)
+                  <span className="text-xs sm:text-sm font-mono font-extrabold text-navy-900 dark:text-slate-100">
+                    Stage {activeStage.step}: <span className="text-[#2E936F] dark:text-emerald-400">{activeStage.title}</span>
                   </span>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 font-mono shrink-0">
-                  <span>
-                    Sync: <strong className="text-navy-900 dark:text-slate-200">4.2ms</strong>
+                <div className="flex items-center gap-3 text-xs font-mono shrink-0">
+                  <span className="text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" />
+                    Latency: <strong className="text-navy-900 dark:text-slate-100">4.2ms</strong>
                   </span>
-                  <CheckCircle2 className="h-4 w-4 text-[#2E936F]" />
+                  <span className="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-[#2E936F] dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+                    <CheckCircle2 className="h-3.5 w-3.5" /> Live Sync
+                  </span>
                 </div>
               </div>
 
-              {/* Main Live Trace Flow */}
-              <div className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed space-y-2">
-                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold sm:hidden">
-                  Live Trace (Illustrative Demo Data):
-                </p>
-                <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
-                  <span className="px-2.5 py-1 rounded-lg bg-emerald-100/80 dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-300 font-extrabold border border-[#2E936F]/30">
-                    Risk: {activeStage.traceRisk}
+              {/* Clear 3-Step Flow Pipeline Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                {/* Step 1: Linked Risk Source */}
+                <div className="p-4 rounded-xl bg-white dark:bg-[#0E1A2E] border border-orange-200 dark:border-orange-950/60 shadow-sm space-y-1.5">
+                  <span className="text-xs font-mono font-extrabold text-[#F15E1C] dark:text-orange-400 uppercase tracking-wider block">
+                    1. Linked Risk Source
                   </span>
-                  <span className="text-[#FAB60A] font-extrabold">→</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-amber-100/80 dark:bg-amber-950/60 text-[#F15E1C] dark:text-amber-300 font-extrabold border border-[#FAB60A]/30">
-                    Control: {activeStage.traceControl}
+                  <p className="text-sm font-extrabold text-navy-900 dark:text-white leading-snug">
+                    {activeStage.traceRisk}
+                  </p>
+                  <span className="inline-block text-xs font-mono font-bold bg-[#F15E1C]/10 text-[#D4521A] dark:text-orange-300 px-2.5 py-0.5 rounded">
+                    Risk Scored in Matrix
                   </span>
-                  <span className="text-[#2E936F] font-extrabold">→</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-emerald-100/80 dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-300 font-extrabold border border-[#2E936F]/30">
+                </div>
+
+                {/* Step 2: Safeguard Control */}
+                <div className="p-4 rounded-xl bg-white dark:bg-[#0E1A2E] border border-amber-200 dark:border-amber-950/60 shadow-sm space-y-1.5">
+                  <span className="text-xs font-mono font-extrabold text-[#FAB60A] dark:text-amber-400 uppercase tracking-wider block">
+                    2. Safeguard Control
+                  </span>
+                  <p className="text-sm font-extrabold text-navy-900 dark:text-white leading-snug">
+                    {activeStage.traceControl}
+                  </p>
+                  <span className="inline-block text-xs font-mono font-bold bg-[#FAB60A]/15 text-[#b07d00] dark:text-amber-300 px-2.5 py-0.5 rounded">
+                    Automated Policy Map
+                  </span>
+                </div>
+
+                {/* Step 3: Audit Verification */}
+                <div className="p-4 rounded-xl bg-white dark:bg-[#0E1A2E] border border-emerald-200 dark:border-emerald-950/60 shadow-sm space-y-1.5">
+                  <span className="text-xs font-mono font-extrabold text-[#2E936F] dark:text-emerald-400 uppercase tracking-wider block">
+                    3. Audit Verification
+                  </span>
+                  <p className="text-sm font-extrabold text-[#2E936F] dark:text-emerald-300 leading-snug">
                     {activeStage.traceStatus}
-                  </span>
-                  <span className="text-[#2E936F] font-extrabold">→</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-slate-200/80 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-extrabold">
-                    ✓ Audit Logged
+                  </p>
+                  <span className="inline-block text-xs font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-[#2E936F] dark:text-emerald-300 px-2.5 py-0.5 rounded">
+                    ✓ Committed to Primary DB
                   </span>
                 </div>
               </div>

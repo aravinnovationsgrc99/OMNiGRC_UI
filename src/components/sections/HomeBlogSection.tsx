@@ -66,7 +66,7 @@ export const HomeBlogSection: React.FC = async () => {
 
           <Link
             href="/resources/blog"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-extrabold text-xs text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors shadow-md shrink-0 self-start sm:self-auto"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-extrabold text-xs text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors shadow-md shrink-0 self-end sm:self-auto"
           >
             <span>Read All Blogs</span>
             <ArrowRight className="h-4 w-4" />

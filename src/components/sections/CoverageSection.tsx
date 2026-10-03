@@ -70,42 +70,42 @@ export const CoverageSection: React.FC = () => {
             <div className="md:col-span-7 flex flex-col gap-4">
               {/* Card 1: Live (India & UK) */}
               <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-[#2E936F]/25 dark:border-[#2E936F]/40 shadow-sm hover:shadow-md transition-all space-y-3">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-12 h-12 rounded-xl bg-[#E6F4EF] dark:bg-[#2E936F]/20 flex items-center justify-center shrink-0">
-                      <MapPin className="h-6 w-6 text-[#2E936F] dark:text-[#2E936F]" />
+                <div className="flex items-start justify-between gap-3 w-full">
+                  <div className="flex items-start gap-3.5 min-w-0 flex-1">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#E6F4EF] dark:bg-[#2E936F]/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-[#2E936F]" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+                    <h4 className="text-base sm:text-lg lg:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug min-w-0">
                       India &amp; United Kingdom
                     </h4>
                   </div>
-                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] dark:text-[#2E936F] text-xs font-mono font-bold shrink-0 self-start sm:self-auto border border-[#2E936F]/20">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F]" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] text-xs font-mono font-bold shrink-0 border border-[#2E936F]/30 shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-[#2E936F]" />
                     Live
                   </span>
                 </div>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed pt-1">
                   Dedicated regional tenant hosting currently live for Indian DPDP compliance and UK GDPR requirements.
                 </p>
               </div>
 
               {/* Card 2: Q1 2027 (EU & Australia) */}
               <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-[#F7D7B0] dark:border-[#F15E1C]/30 shadow-sm hover:shadow-md transition-all space-y-3">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-12 h-12 rounded-xl bg-[#FFF0E5] dark:bg-[#F15E1C]/20 flex items-center justify-center shrink-0">
-                      <MapPin className="h-6 w-6 text-[#F15E1C]" />
+                <div className="flex items-start justify-between gap-3 w-full">
+                  <div className="flex items-start gap-3.5 min-w-0 flex-1">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FFF0E5] dark:bg-[#F15E1C]/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-[#F15E1C]" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
-                      European Union &amp; Australia
+                    <h4 className="text-base sm:text-lg lg:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug min-w-0">
+                      European Union <br /> &amp; Australia
                     </h4>
                   </div>
-                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF3E6] dark:bg-[#F15E1C]/20 text-[#F15E1C] text-xs font-mono font-bold shrink-0 self-start sm:self-auto border border-[#F15E1C]/20">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#F15E1C]" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFF3E6] dark:bg-[#F15E1C]/20 text-[#F15E1C] text-xs font-mono font-bold shrink-0 border border-[#F15E1C]/30 shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-[#F15E1C]" />
                     Q1 2027
                   </span>
                 </div>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed pt-1">
                   Planned cloud points of presence for EU Data Boundary and Australian data sovereignty roadmap.
                 </p>
               </div>

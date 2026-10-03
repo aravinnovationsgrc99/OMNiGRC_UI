@@ -100,28 +100,28 @@ export const ProblemSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             {/* Top Segmented Tab Switcher */}
             <div className="flex justify-center lg:justify-start">
-              <div className="w-full max-w-lg p-1.5 rounded-2xl bg-slate-200/80 dark:bg-navy-900 border border-slate-300/80 dark:border-navy-700/80 grid grid-cols-2 gap-1.5 shadow-inner">
+              <div className="w-full max-w-xl p-1.5 rounded-2xl bg-slate-200/80 dark:bg-navy-900 border border-slate-300/80 dark:border-navy-700/80 grid grid-cols-2 gap-1.5 shadow-inner">
                 <button
                   onClick={() => setViewState("fragmented")}
-                  className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                     viewState === "fragmented"
                       ? "bg-white dark:bg-navy-800 text-[#F15E1C] shadow-md border border-[#F15E1C]/30"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
                   }`}
                 >
                   <XCircle className="h-4 w-4 text-[#F15E1C] shrink-0" />
-                  <span className="truncate">Fragmented Workstreams</span>
+                  <span className="whitespace-normal text-center leading-snug">Fragmented Workstreams</span>
                 </button>
                 <button
                   onClick={() => setViewState("connected")}
-                  className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                     viewState === "connected"
                       ? "bg-[#2E936F] text-white shadow-md shadow-[#2E936F]/30"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
                   }`}
                 >
                   <Target className="h-4 w-4 shrink-0" />
-                  <span className="truncate">OMNiGRC Operating Layer</span>
+                  <span className="whitespace-normal text-center leading-snug">OMNiGRC Operating Layer</span>
                 </button>
               </div>
             </div>

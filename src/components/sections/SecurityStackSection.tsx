@@ -141,20 +141,11 @@ export const SecurityStackSection: React.FC = () => {
 
                           {/* Headings to Right of Icon on Mobile */}
                           <div className="min-w-0 space-y-1 sm:hidden">
-                            <div className="flex items-center gap-2 flex-wrap">
-                              <span className={`font-mono text-xs font-extrabold uppercase ${layer.textColor}`}>
-                                LAYER {layer.num}
-                              </span>
-                              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-bold">
-                                {layer.badge}
-                              </span>
-                            </div>
-                            <h3 className="text-lg font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors">
-                              {layer.id === "audit" ? (
-                                <>Continuous Audit <br className="inline" />Readiness</>
-                              ) : (
-                                layer.name
-                              )}
+                            <span className={`font-mono text-xs font-extrabold uppercase ${layer.textColor}`}>
+                              LAYER {layer.num}
+                            </span>
+                            <h3 className="text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors">
+                              {layer.name}
                             </h3>
                           </div>
                         </div>
@@ -166,16 +157,11 @@ export const SecurityStackSection: React.FC = () => {
                       </div>
 
                       {/* DESKTOP MIDDLE DETAILS (Hidden on Mobile) */}
-                      <div className="hidden sm:block flex-1 min-w-0 text-left space-y-1.5">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <span className={`font-mono text-xs sm:text-sm font-extrabold uppercase ${layer.textColor}`}>
-                            LAYER {layer.num}
-                          </span>
-                          <span className="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-bold">
-                            {layer.badge}
-                          </span>
-                        </div>
-                        <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
+                      <div className="hidden sm:block flex-1 min-w-0 text-left space-y-2">
+                        <span className={`font-mono text-xs sm:text-sm font-extrabold uppercase ${layer.textColor}`}>
+                          LAYER {layer.num}
+                        </span>
+                        <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
                           {layer.name}
                         </h3>
                         <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
