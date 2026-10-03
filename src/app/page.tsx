@@ -6,12 +6,9 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { SolarFrameworkSection } from "@/components/sections/SolarFrameworkSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
-import { WorkflowSection } from "@/components/sections/WorkflowSection";
-import { SecurityStackSection } from "@/components/sections/SecurityStackSection";
 import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
 import { CoverageSection } from "@/components/sections/CoverageSection";
 import { HomeBlogSection } from "@/components/sections/HomeBlogSection";
-import { HomeGuidesSection } from "@/components/sections/HomeGuidesSection";
 import { DeploymentSection } from "@/components/sections/DeploymentSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
@@ -25,7 +22,7 @@ export default function Home() {
           {/* 1. HERO SECTION */}
           <HeroSection />
 
-          {/* 2. SOLAR FRAMEWORK SECTION (Immediately following Hero) */}
+          {/* 2. SOLAR FRAMEWORK TAXONOMIES */}
           <SolarFrameworkSection />
 
           {/* 3. PROBLEM SECTION: Fragmentation vs Operating Layer */}
@@ -34,28 +31,19 @@ export default function Home() {
           {/* 4. AUDIENCE SECTION: One Workflow. Every Team Size */}
           <AudienceSection />
 
-          {/* 5. WORKFLOW SECTION: One Thread, Not Four Silos */}
-          <WorkflowSection />
-
-          {/* 6. FULL SECURITY STACK */}
-          <SecurityStackSection />
-
-          {/* 7. AI ARCHITECTURE / HUMAN APPROVAL */}
+          {/* 5. AI ARCHITECTURE & HUMAN APPROVAL */}
           <ArchitectureSection />
 
-          {/* 8. CONTROL MAPPING ENGINE & REGIONAL HOSTING */}
+          {/* 6. REGIONAL HOSTING AWARENESS */}
           <CoverageSection />
 
-          {/* 9. BLOG PREVIEW — Latest posts from the GRC editorial desk */}
+          {/* 7. BLOG PREVIEW — Latest posts from the GRC editorial desk */}
           <HomeBlogSection />
 
-          {/* 10. FRAMEWORK GUIDES PREVIEW — Canonical framework guides */}
-          <HomeGuidesSection />
-
-          {/* 11. DEPLOYMENT FLEXIBILITY */}
+          {/* 8. DEPLOYMENT FLEXIBILITY */}
           <DeploymentSection />
 
-          {/* 12. FINAL CTA / CONVERSION SECTION */}
+          {/* 9. FINAL CTA / CONVERSION SECTION */}
           <FinalCtaSection />
         </div>
       </main>

@@ -26,21 +26,21 @@ export const SolarFrameworkSection: React.FC = () => {
         <div className="w-full text-left space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#F15E1C]/30 bg-[#FFF0E5] dark:bg-[#1A2642] text-[#F15E1C] dark:text-[#FF7A3D] text-xs font-mono font-extrabold uppercase tracking-wider shadow-sm">
             <Compass className="h-4 w-4 text-[#F15E1C] dark:text-[#FF7A3D] shrink-0" />
-            <span>SOLAR FRAMEWORK ORRERY</span>
+            <span>FRAMEWORK TAXONOMIES</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
             Map once. <span className="text-[#2E936F] dark:text-[#36B386]">Satisfy six global standards.</span>
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-100 font-semibold leading-relaxed w-full max-w-4xl">
-            Interactive control crosswalk engine. As the globe rotates from left to right, watch each framework&apos;s mapped clause taxonomies and operational workflow appear.
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl">
+            Interactive control crosswalk engine aligning controls across ISO 27001, SOC 2, GDPR, HIPAA, DPDP, and ISO 42001.
           </p>
         </div>
 
-        {/* Two-Column Orrery & Synced Framework Detail Component */}
+        {/* Two-Column Framework Detail Component */}
         <div className="w-full">
-          <FrameworkOrrery title="FRAMEWORK ORRERY" />
+          <FrameworkOrrery title="FRAMEWORK TAXONOMIES" />
         </div>
       </div>
     </section>

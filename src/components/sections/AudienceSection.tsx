@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   User,
   Users,
   Shield,
   ArrowRight,
-  CheckCircle2,
   Settings,
   Zap,
   FileText,
@@ -202,54 +200,6 @@ export const AudienceSection: React.FC = () => {
             );
           })}
         </div>
-
-        {/* ACTIVE ROLE SPOTLIGHT CONTENT CARD (Full width stretch) */}
-        <div className="w-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentRole.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="w-full rounded-3xl border border-[#2E936F]/40 bg-white/95 dark:bg-navy-900 p-6 sm:p-8 shadow-xl backdrop-blur-md space-y-6"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800 w-full">
-                <div>
-                  <span className="text-xs font-mono font-bold uppercase text-[#F15E1C] tracking-widest block mb-1">
-                    {currentRole.badge}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white">
-                    {currentRole.title} Operational Focus
-                  </h3>
-                </div>
-
-                <div className="px-3.5 py-1.5 rounded-xl bg-[#E6F4EF] dark:bg-emerald-950/60 border border-[#2E936F]/30 text-xs font-mono text-[#2E936F] dark:text-teal font-extrabold shrink-0">
-                  Workflow Rail: {currentRole.workflowRail}
-                </div>
-              </div>
-
-              <p className="text-base sm:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed w-full">
-                {currentRole.focus}
-              </p>
-
-              <div className="space-y-3 pt-2 w-full">
-                {currentRole.details.map((detail, idx) => (
-                  <div
-                    key={idx}
-                    className="p-3.5 sm:p-4 rounded-xl bg-slate-50 dark:bg-navy-950/70 border border-slate-200/80 dark:border-slate-800 flex items-center gap-3 w-full"
-                  >
-                    <CheckCircle2 className="h-5 w-5 text-[#2E936F] shrink-0" />
-                    <span className="text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium">
-                      {detail}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
       </div>
     </section>
   );

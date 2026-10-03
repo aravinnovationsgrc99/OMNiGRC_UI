@@ -95,7 +95,7 @@ export const FinalCtaSection: React.FC = () => {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
           >
-            Bring risk, assets, and controls into one workflow, built for lean security teams, backed by SOC 2 Type II, tenant isolation, and AI that drafts while your team approves.
+            Bring risk, assets, and controls into one workflow, built for lean security teams, built for SOC 2 Type II readiness, tenant isolation, and AI that drafts while your team approves.
           </motion.p>
 
           {/* CTAs Row */}

@@ -125,14 +125,14 @@ export const HeroSection: React.FC = () => {
                 </Button>
               </Link>
 
-              <a href="#solar-framework" className="w-full sm:w-auto">
+              <a href="#how-it-works" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
                   className="w-full sm:w-auto h-[50px] sm:h-13 px-6 text-sm sm:text-base font-semibold border-slate-300 dark:border-navy-700/80 bg-white/80 dark:bg-navy-900/80 hover:bg-slate-100 dark:hover:bg-navy-800 hover:-translate-y-0.5 transition-all duration-200"
                   rightIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
                 >
-                  Explore Framework Orrery
+                  See how it works
                 </Button>
               </a>
             </motion.div>

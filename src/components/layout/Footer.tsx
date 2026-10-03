@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               Core Workflows
             </h4>
             <ul className="space-y-2 text-xs">
-              {PILLARS.map((p) => (
+              {PILLARS.slice(0, 4).map((p) => (
                 <li key={p.code}>
                   <Link href={`/products/${p.slug}`} className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
                     {p.name}
@@ -26,8 +26,8 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
               <li>
-                <Link href="/#core-workflows" className="hover:text-[#2E936F] dark:hover:text-teal transition-colors">
-                  Platform Architecture
+                <Link href="/products/risk-register" className="text-[#D4521A] dark:text-amber font-semibold hover:underline">
+                  All 10 GRC Modules →
                 </Link>
               </li>
             </ul>
