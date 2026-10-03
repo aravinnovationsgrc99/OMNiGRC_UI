@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FRAMEWORKS } from "@/lib/frameworks";
-import { ArrowRight, Sparkles, ShieldCheck, Check } from "lucide-react";
+import { ArrowRight, Sparkles, ShieldCheck, Check, BookOpen } from "lucide-react";
 
 export interface FrameworkOrreryProps {
   title?: string;
@@ -562,8 +562,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               </div>
             </div>
 
-            {/* Action CTA Button */}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 pl-2">
+            {/* Action CTA Buttons */}
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 pl-2 space-y-2.5">
               <Link
                 href={`/frameworks/${currentFw.slug}`}
                 className="inline-flex items-center justify-center gap-2 w-full px-5 py-3.5 rounded-xl bg-[#2E936F] hover:bg-[#257759] dark:bg-[#2E936F] dark:hover:bg-[#257759] text-white font-extrabold text-sm shadow-md transition-all group"
@@ -571,7 +571,15 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
                 <span>Explore {currentFw.code} Workflow</span>
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
+              <Link
+                href={`/frameworks/${currentFw.slug}`}
+                className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-xl border border-[#2E936F]/50 dark:border-[#2E936F]/40 text-[#2E936F] dark:text-[#36B386] hover:bg-[#E6F4EF] dark:hover:bg-[#122B22] font-extrabold text-xs transition-all group"
+              >
+                <BookOpen className="h-3.5 w-3.5" />
+                <span>Read {currentFw.code} Framework Guide</span>
+              </Link>
             </div>
+
 
           </div>
         </div>

@@ -1,8 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
-import Link from "next/link";
-import dynamic from "next/dynamic";
+import React from "react";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -14,6 +10,8 @@ import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { SecurityStackSection } from "@/components/sections/SecurityStackSection";
 import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
 import { CoverageSection } from "@/components/sections/CoverageSection";
+import { HomeBlogSection } from "@/components/sections/HomeBlogSection";
+import { HomeGuidesSection } from "@/components/sections/HomeGuidesSection";
 import { DeploymentSection } from "@/components/sections/DeploymentSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
@@ -48,10 +46,16 @@ export default function Home() {
           {/* 8. CONTROL MAPPING ENGINE & REGIONAL HOSTING */}
           <CoverageSection />
 
-          {/* 9. DEPLOYMENT FLEXIBILITY */}
+          {/* 9. BLOG PREVIEW — Latest posts from the GRC editorial desk */}
+          <HomeBlogSection />
+
+          {/* 10. FRAMEWORK GUIDES PREVIEW — Canonical framework guides */}
+          <HomeGuidesSection />
+
+          {/* 11. DEPLOYMENT FLEXIBILITY */}
           <DeploymentSection />
 
-          {/* 10. FINAL CTA / CONVERSION SECTION */}
+          {/* 12. FINAL CTA / CONVERSION SECTION */}
           <FinalCtaSection />
         </div>
       </main>
