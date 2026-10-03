@@ -51,12 +51,12 @@ export const ControlMapping3DGraph: React.FC = () => {
   const renderCardContent = (s: typeof workflowSteps[0]) => {
     const Icon = s.icon;
     return (
-      <div className="p-5 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full space-y-4">
+      <div className="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full space-y-3.5">
         {/* TOP SECTION: Icon on Left, STAGE + Title + Desc on Right */}
-        <div className="flex items-start gap-4 w-full">
+        <div className="flex items-start gap-3 sm:gap-4 w-full">
           {/* Soft Green Icon Square */}
-          <div className="w-12 h-12 rounded-2xl bg-[#E8F8F0] dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
-            <Icon className="h-6 w-6" />
+          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#E8F8F0] dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
+            <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
           </div>
 
           {/* Text Info */}
@@ -67,18 +67,18 @@ export const ControlMapping3DGraph: React.FC = () => {
             <h4 className="font-extrabold text-base sm:text-lg text-navy-900 dark:text-white leading-snug">
               {s.title}
             </h4>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-300 leading-relaxed font-medium pt-0.5">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium pt-0.5">
               {s.desc}
             </p>
           </div>
         </div>
 
         {/* BOTTOM SECTION: Scope on Left, Pill Badge on Right */}
-        <div className="pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between gap-2">
+        <div className="pt-2.5 sm:pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
           <span className="text-xs font-mono text-slate-500 dark:text-slate-400 font-medium">
             {s.scope}
           </span>
-          <span className="text-xs font-mono font-semibold text-[#2E936F] dark:text-teal bg-[#E8F8F0] dark:bg-teal/15 px-3 py-1 rounded-lg">
+          <span className="text-xs font-mono font-semibold text-[#2E936F] dark:text-teal bg-[#E8F8F0] dark:bg-teal/15 px-2.5 sm:px-3 py-1 rounded-lg shrink-0">
             {s.badge}
           </span>
         </div>
@@ -87,9 +87,9 @@ export const ControlMapping3DGraph: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-6 sm:p-8 lg:p-10 shadow-xl overflow-hidden">
+    <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-5 sm:p-8 lg:p-10 shadow-xl overflow-hidden">
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+      <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-300/60 dark:border-amber-700/50 bg-[#FFFBEB] dark:bg-amber-950/30 text-amber-900 dark:text-amber-300 font-mono text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
           <Sparkles className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
           <span>DATA MINIMIZATION ARCHITECTURE</span>
@@ -97,12 +97,12 @@ export const ControlMapping3DGraph: React.FC = () => {
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
           The Auditable AI Control Mapping Pipeline
         </h3>
-        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-2 leading-relaxed font-medium max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 mt-2 leading-relaxed font-medium max-w-2xl mx-auto">
           Explore each architectural stage to see how sensitive context is isolated before external model evaluation.
         </p>
       </div>
 
-      {/* DESKTOP UI LAYOUT (Matching attached reference image) */}
+      {/* DESKTOP UI LAYOUT (2x2 Grid with Curved Connector & Horizontal Arrows) */}
       <div className="relative z-10 mb-8 hidden md:block">
         {/* SVG Connector Path wrapping around from Stage 02 down to Stage 03 */}
         <svg
@@ -157,22 +157,38 @@ export const ControlMapping3DGraph: React.FC = () => {
         </div>
       </div>
 
-      {/* MOBILE UI FALLBACK LAYOUT (preserved until mobile directions provided) */}
-      <div className="grid grid-cols-1 gap-4 relative z-10 mb-6 md:hidden">
-        {workflowSteps.map((s, idx) => (
-          <div key={idx} className="relative flex flex-col">
-            {renderCardContent(s)}
-            {idx < 3 && (
-              <div className="flex justify-center my-2">
-                <ArrowDown className="h-5 w-5 text-[#2E936F] dark:text-teal/60" />
+      {/* MOBILE UI TIMELINE LAYOUT (Matching attached mobile reference screenshot) */}
+      <div className="space-y-6 relative z-10 mb-6 md:hidden">
+        {workflowSteps.map((s, idx) => {
+          return (
+            <div key={idx} className="flex items-start gap-3 relative">
+              {/* Left Column: Vertical Step Badge + Dashed Connector Line */}
+              <div className="flex flex-col items-center shrink-0 self-stretch">
+                {/* Step Circle Badge (01, 02, 03, 04) */}
+                <div className="w-9 h-9 rounded-full border-2 border-[#2E936F] bg-white dark:bg-navy-900 text-[#2E936F] dark:text-teal font-mono font-extrabold text-sm flex items-center justify-center shrink-0 shadow-xs z-10">
+                  {s.step}
+                </div>
+
+                {/* Dashed Line & Down Arrow connecting to next step */}
+                {idx < 3 && (
+                  <div className="flex-1 flex flex-col items-center py-1 my-0.5">
+                    <div className="w-0.5 flex-1 border-l-2 border-dashed border-[#2E936F]/40 dark:border-teal/40 min-h-[3.5rem]" />
+                    <ArrowDown className="h-4 w-4 text-[#2E936F] dark:text-teal shrink-0 -mt-1" />
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        ))}
+
+              {/* Right Column: Stage Card */}
+              <div className="flex-1 min-w-0">
+                {renderCardContent(s)}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      {/* Bottom Callout Bar (2 Equal Columns) */}
-      <div className="p-4 sm:p-5 rounded-2xl border border-[#D0F2E3] dark:border-navy-700/60 bg-[#F2FBF7] dark:bg-navy-900/90 grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+      {/* Bottom Callout Bar (2 Equal Columns on Desktop, Stacked on Mobile) */}
+      <div className="p-4 sm:p-5 rounded-2xl border border-[#D0F2E3] dark:border-navy-700/60 bg-[#F2FBF7] dark:bg-navy-900/90 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 items-center">
         {/* Left Column: OMNIGRC CONTROLLED VPC & DATABASE */}
         <div className="flex items-center gap-3.5">
           <div className="w-10 h-10 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/60 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
