@@ -173,13 +173,6 @@ export const HeroSection: React.FC = () => {
               </div>
             ))}
           </div>
-
-          <Link
-            href="/frameworks/soc-2"
-            className="text-[11px] sm:text-xs text-[#2E936F] hover:text-navy-900 dark:hover:text-white underline font-mono transition-colors font-semibold"
-          >
-            View Mapping Engine →
-          </Link>
         </div>
       </motion.div>
     </section>
