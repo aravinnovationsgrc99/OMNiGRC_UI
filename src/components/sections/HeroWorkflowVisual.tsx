@@ -123,7 +123,7 @@ export const HeroWorkflowVisual: React.FC = () => {
           </div>
 
           {/* Step Buttons (Desktop & Mobile Tabs) */}
-          <div className="grid grid-cols-3 gap-1.5 sm:gap-2 bg-slate-100 dark:bg-navy-950 p-1.5 rounded-xl border border-slate-200 dark:border-navy-800">
+          <div className="grid grid-cols-3 gap-1 sm:gap-2 bg-slate-100 dark:bg-navy-950 p-1 sm:p-1.5 rounded-xl border border-slate-200 dark:border-navy-800">
             {STEPS.map((s, idx) => {
               const isActive = activeStep === idx;
               return (
@@ -133,14 +133,14 @@ export const HeroWorkflowVisual: React.FC = () => {
                     setActiveStep(idx);
                     setIsPlaying(false);
                   }}
-                  className={`flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-extrabold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-1 sm:gap-2 px-1.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-sm font-extrabold transition-all duration-200 ${
                     isActive
-                      ? "bg-[#2E936F] text-white shadow-md scale-[1.02]"
+                      ? "bg-[#2E936F] text-white shadow-md scale-[1.01]"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60"
                   }`}
                 >
-                  <span className="font-mono text-[10px] sm:text-xs opacity-80">{s.stepNumber}.</span>
-                  <span className="truncate">{s.title.split(" ")[0]}</span>
+                  <span className="font-mono text-[10px] sm:text-xs opacity-80 shrink-0">{s.stepNumber}.</span>
+                  <span className="whitespace-nowrap">{s.title.split(" ")[0]}</span>
                 </button>
               );
             })}
