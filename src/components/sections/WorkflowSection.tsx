@@ -420,35 +420,39 @@ export const WorkflowSection: React.FC = () => {
                       >
                         <Link
                           href={pillar.href}
-                          className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full h-full min-h-[220px] space-y-4"
+                          className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full h-full space-y-4"
                         >
-                          {/* TOP ROW: Icon Container + Arrow Button */}
-                          <div className="flex items-center justify-between w-full">
-                            <div
-                              className={`w-12 h-12 rounded-xl border ${pillar.borderColor} ${pillar.tileBg} flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm shrink-0`}
-                            >
-                              <Icon className={`h-6 w-6 ${pillar.textColor}`} />
+                          {/* TOP ROW: Icon Box on Left, Title + Sublabel in Middle, Arrow Button on Far Right */}
+                          <div className="flex items-center justify-between gap-3 w-full">
+                            <div className="flex items-center gap-3.5 min-w-0">
+                              {/* Icon Box */}
+                              <div
+                                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border ${pillar.borderColor} ${pillar.tileBg} flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm shrink-0`}
+                              >
+                                <Icon className={`h-6 w-6 sm:h-7 sm:w-7 ${pillar.textColor}`} />
+                              </div>
+
+                              {/* Main Heading & Sublabel to the Right of Icon */}
+                              <div className="min-w-0 space-y-0.5">
+                                <span className={`font-mono text-xs font-extrabold uppercase tracking-wider ${pillar.textColor} block truncate`}>
+                                  {pillar.label}
+                                </span>
+                                <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors truncate">
+                                  {pillar.title}
+                                </h4>
+                              </div>
                             </div>
 
+                            {/* Far Right Arrow Circle */}
                             <div
-                              className={`w-9 h-9 rounded-full flex items-center justify-center border ${pillar.borderColor} ${pillar.arrowBg} transition-all duration-300 shadow-sm shrink-0`}
+                              className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border ${pillar.borderColor} ${pillar.arrowBg} transition-all duration-300 shadow-sm shrink-0`}
                             >
                               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                             </div>
                           </div>
 
-                          {/* MIDDLE: Monospaced Label + Bold Title */}
-                          <div className="space-y-1 w-full">
-                            <span className={`font-mono text-xs font-extrabold uppercase tracking-wider ${pillar.textColor} block`}>
-                              {pillar.label}
-                            </span>
-                            <h4 className="text-lg sm:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors">
-                              {pillar.title}
-                            </h4>
-                          </div>
-
-                          {/* BOTTOM: Readable Description */}
-                          <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80 w-full">
+                          {/* BOTTOM ROW: Separator + Remaining Description Text Below Both */}
+                          <div className="pt-3.5 border-t border-slate-100 dark:border-slate-800/80 w-full flex-1 flex items-start">
                             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                               {pillar.desc}
                             </p>
