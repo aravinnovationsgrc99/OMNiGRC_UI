@@ -125,36 +125,75 @@ export const SecurityStackSection: React.FC = () => {
                 >
                   <Link
                     href={layer.href}
-                    className="group relative flex flex-row items-center justify-between gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/95 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-md"
+                    className="group relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white/95 dark:bg-navy-900/95 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-md"
                   >
-                    {/* Left Icon Badge */}
-                    <div
-                      className={`w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl border ${layer.borderColor} ${layer.bgColor} flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm`}
-                    >
-                      <Icon className={`h-8 w-8 sm:h-10 sm:w-10 ${layer.textColor}`} />
+                    {/* MOBILE TOP ROW / DESKTOP LEFT + MIDDLE WRAPPER */}
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 flex-1 min-w-0">
+                      {/* TOP BLOCK ON MOBILE / LEFT ON DESKTOP */}
+                      <div className="flex items-center justify-between sm:justify-start gap-3 sm:gap-6 w-full sm:w-auto">
+                        <div className="flex items-center gap-3.5 sm:gap-6 min-w-0">
+                          {/* Icon Badge */}
+                          <div
+                            className={`w-14 h-14 sm:w-20 sm:h-20 shrink-0 rounded-2xl border ${layer.borderColor} ${layer.bgColor} flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm`}
+                          >
+                            <Icon className={`h-7 w-7 sm:h-10 sm:w-10 ${layer.textColor}`} />
+                          </div>
+
+                          {/* Headings to Right of Icon on Mobile */}
+                          <div className="min-w-0 space-y-1 sm:hidden">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className={`font-mono text-xs font-extrabold uppercase ${layer.textColor}`}>
+                                LAYER {layer.num}
+                              </span>
+                              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-bold">
+                                {layer.badge}
+                              </span>
+                            </div>
+                            <h3 className="text-lg font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug group-hover:text-[#2E936F] transition-colors">
+                              {layer.id === "audit" ? (
+                                <>Continuous Audit <br className="inline" />Readiness</>
+                              ) : (
+                                layer.name
+                              )}
+                            </h3>
+                          </div>
+                        </div>
+
+                        {/* Mobile Far Right Arrow CTA */}
+                        <div className="w-9 h-9 shrink-0 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-700 dark:text-slate-200 group-hover:bg-[#2E936F] group-hover:text-white flex sm:hidden items-center justify-center transition-all duration-300 shadow-sm">
+                          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+
+                      {/* DESKTOP MIDDLE DETAILS (Hidden on Mobile) */}
+                      <div className="hidden sm:block flex-1 min-w-0 text-left space-y-1.5">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className={`font-mono text-xs sm:text-sm font-extrabold uppercase ${layer.textColor}`}>
+                            LAYER {layer.num}
+                          </span>
+                          <span className="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-bold">
+                            {layer.badge}
+                          </span>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
+                          {layer.name}
+                        </h3>
+                        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                          {layer.desc}
+                        </p>
+                      </div>
                     </div>
 
-                    {/* Middle Details */}
-                    <div className="flex-1 min-w-0 text-left space-y-1 sm:space-y-1.5">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className={`font-mono text-xs sm:text-sm font-extrabold uppercase ${layer.textColor}`}>
-                          LAYER {layer.num}
-                        </span>
-                        <span className="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300 font-bold">
-                          {layer.badge}
-                        </span>
-                      </div>
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
-                        {layer.name}
-                      </h3>
-                      <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                    {/* MOBILE BOTTOM DESCRIPTION (Below Divider) */}
+                    <div className="pt-3.5 border-t border-slate-100 dark:border-slate-800/80 w-full sm:hidden">
+                      <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                         {layer.desc}
                       </p>
                     </div>
 
-                    {/* Right Arrow CTA */}
-                    <div className="w-9 h-9 sm:w-12 sm:h-12 shrink-0 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-700 dark:text-slate-200 group-hover:bg-[#2E936F] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm">
-                      <ArrowRight className="h-4 w-4 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
+                    {/* DESKTOP RIGHT ARROW CTA (Hidden on Mobile) */}
+                    <div className="hidden sm:flex w-12 h-12 shrink-0 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-700 dark:text-slate-200 group-hover:bg-[#2E936F] group-hover:text-white items-center justify-center transition-all duration-300 shadow-sm">
+                      <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
                 </motion.div>
