@@ -101,7 +101,7 @@ export const FinalCtaSection: React.FC = () => {
           {/* CTAs Row */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto mb-8 sm:mb-10"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto"
           >
             {/* Primary CTA */}
             <Link
@@ -119,30 +119,6 @@ export const FinalCtaSection: React.FC = () => {
             >
               <span>Explore Pricing &amp; Calculator</span>
             </Link>
-          </motion.div>
-
-          {/* Subtle Separator Line */}
-          <motion.div variants={itemVariants} className="w-full max-w-lg mx-auto border-t border-slate-200/80 dark:border-navy-700/60 mb-6" />
-
-          {/* Trust Signals List */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-6 text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium"
-          >
-            <span className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#2E936F] dark:bg-teal-400 shrink-0" />
-              <span>SOC 2 Type II: In Progress</span>
-            </span>
-            <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
-            <span className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FAB60A] dark:bg-amber-400 shrink-0" />
-              <span>Application-level tenant isolation</span>
-            </span>
-            <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
-            <span className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#F15E1C] shrink-0" />
-              <span>Advisory AI with payload minimization &amp; human approval</span>
-            </span>
           </motion.div>
         </motion.div>
 
