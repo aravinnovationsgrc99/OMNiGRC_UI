@@ -74,12 +74,12 @@ export const DeploymentSection: React.FC = () => {
     <section className="relative w-full bg-slate-50/50 dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-4 sm:pb-6 border-b border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="w-full text-left space-y-2">
+        <div className="w-full text-left md:text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
             Deploy your way: <span className="text-[#2E936F]">cloud speed or air-gapped sovereignty.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl">
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl md:mx-auto">
             From fast multi-tenant SaaS onboarding to fully isolated, regulator-grade infrastructure, pick the model that matches your compliance posture.
           </p>
         </div>

@@ -21,11 +21,11 @@ export const CoverageSection: React.FC = () => {
     <section className="relative bg-white dark:bg-[#16233F] pt-4 sm:pt-6 pb-8 sm:pb-12 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-10">
         {/* Section Header */}
-        <div className="w-full text-left space-y-2">
+        <div className="w-full text-left md:text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
             Not a checklist. <span className="text-[#2E936F]">A control mapping engine.</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl">
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl md:mx-auto">
             93 ISO 27001 controls. GDPR Articles 28–35. DPDP fiduciary rules. Every clause traced to the primary control that satisfies it, across all six frameworks, out of the box.
           </p>
         </div>

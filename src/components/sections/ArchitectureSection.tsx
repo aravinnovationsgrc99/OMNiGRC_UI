@@ -35,7 +35,7 @@ export const ArchitectureSection: React.FC = () => {
   return (
     <section className="relative bg-white dark:bg-[#0A111F] pt-8 sm:pt-12 pb-6 sm:pb-8 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full text-left space-y-2 mb-6 sm:mb-8">
+        <div className="w-full text-left md:text-center space-y-2 mb-6 sm:mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export const ArchitectureSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg font-medium leading-relaxed w-full max-w-4xl"
+            className="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg font-medium leading-relaxed w-full max-w-4xl md:mx-auto"
           >
             Every AI suggestion is logged, reversible, and gated behind explicit approval: nothing writes to your compliance record without a human signing off.
           </motion.p>

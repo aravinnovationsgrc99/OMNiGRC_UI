@@ -212,7 +212,7 @@ export const WorkflowSection: React.FC = () => {
 
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="text-left space-y-2">
+        <div className="text-left md:text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             Everything connects. <span className="text-[#2E936F]">Nothing lives in isolation.</span>
           </h2>

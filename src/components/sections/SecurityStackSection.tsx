@@ -101,12 +101,12 @@ export const SecurityStackSection: React.FC = () => {
 
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
-        <div className="w-full text-left space-y-2">
+        <div className="w-full text-left md:text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
             Not just risk and controls. <span className="text-[#2E936F]">The full security stack.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl">
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl md:mx-auto">
             Modular capabilities that scale with your team, including vulnerability management, asset inventory, evidence, and audit-readiness, without enterprise lock-in or endless professional services hours.
           </p>
         </div>
