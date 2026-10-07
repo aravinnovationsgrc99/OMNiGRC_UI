@@ -69,11 +69,11 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* LEFT CONTENT: Heading, Supporting Copy, CTAs */}
-          <div className="lg:col-span-6 space-y-6 text-left">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6 text-left">
             {/* 1. Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.12] sm:leading-[1.10] text-left"
+              className="text-[27px] xs:text-[30px] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.18] sm:leading-[1.10] text-left max-w-[340px] xs:max-w-[360px] sm:max-w-none"
             >
               Unified Risk, Asset, And Control Management for{" "}
               <span className="inline-block relative text-[#F15E1C] dark:text-[#2E936F] mt-1 sm:mt-0">
@@ -96,15 +96,15 @@ export const HeroSection: React.FC = () => {
             </motion.h1>
 
             {/* 2. Supporting Copy */}
-            <motion.div variants={itemVariants} className="space-y-2 sm:space-y-3">
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-navy-900 dark:text-white tracking-tight leading-snug">
+            <motion.div variants={itemVariants} className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-0">
+              <p className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-navy-900 dark:text-white tracking-tight leading-snug">
                 AI does the heavy lifting.{" "}
-                <span className="text-[#F15E1C] font-extrabold">
+                <span className="text-[#F15E1C] font-extrabold block xs:inline mt-0.5 xs:mt-0">
                   You keep the final say.
                 </span>
               </p>
 
-              <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-xl">
+              <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-xl">
                 Unified risk, asset, and control management, where Advisory AI drafts and recommends, and your team approves every action.
               </p>
             </motion.div>
@@ -112,13 +112,13 @@ export const HeroSection: React.FC = () => {
             {/* 3. Hero CTAs */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1.5 sm:pt-2"
             >
               <Link href="/get-a-demo" className="w-full sm:w-auto">
                 <Button
                   variant="primary"
                   size="lg"
-                  className="w-full sm:w-auto h-[50px] sm:h-13 px-7 text-sm sm:text-base font-bold shadow-lg shadow-[#F15E1C]/20 hover:-translate-y-0.5 transition-all duration-200"
+                  className="w-full sm:w-auto h-[48px] sm:h-13 px-6 sm:px-7 text-sm sm:text-base font-bold shadow-lg shadow-[#F15E1C]/20 hover:-translate-y-0.5 transition-all duration-200"
                   rightIcon={<CalendarCheck className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
                 >
                   Request A Walkthrough
@@ -129,7 +129,7 @@ export const HeroSection: React.FC = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto h-[50px] sm:h-13 px-6 text-sm sm:text-base font-semibold border-slate-300 dark:border-navy-700/80 bg-white/80 dark:bg-navy-900/80 hover:bg-slate-100 dark:hover:bg-navy-800 hover:-translate-y-0.5 transition-all duration-200"
+                  className="w-full sm:w-auto h-[48px] sm:h-13 px-6 text-sm sm:text-base font-semibold border-slate-300 dark:border-navy-700/80 bg-white/80 dark:bg-navy-900/80 hover:bg-slate-100 dark:hover:bg-navy-800 hover:-translate-y-0.5 transition-all duration-200"
                   rightIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
                 >
                   See How It Works
