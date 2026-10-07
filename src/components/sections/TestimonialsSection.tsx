@@ -49,7 +49,7 @@ export const TestimonialsSection: React.FC = () => {
             PRACTICAL GRC OPERATIONS
           </p>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-            How lean teams operate in practice.
+            How Lean Teams Operate in Practice.
           </h2>
           <p className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg mt-3 leading-relaxed">
             Real-world workflows demonstrating how OMNiGRC removes friction from everyday compliance, asset, and risk management.

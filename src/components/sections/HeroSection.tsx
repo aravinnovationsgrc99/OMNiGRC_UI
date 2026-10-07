@@ -75,9 +75,9 @@ export const HeroSection: React.FC = () => {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.12] sm:leading-[1.10] text-left"
             >
-              Unified risk, asset, and control management for{" "}
+              Unified Risk, Asset, And Control Management for{" "}
               <span className="inline-block relative text-[#F15E1C] dark:text-[#2E936F] mt-1 sm:mt-0">
-                lean GRC teams.
+                Lean GRC Teams.
                 <svg
                   className="absolute bottom-[-3px] sm:bottom-[-6px] left-0 w-full h-[4px] sm:h-[6px] overflow-visible pointer-events-none opacity-85"
                   viewBox="0 0 100 8"
@@ -121,7 +121,7 @@ export const HeroSection: React.FC = () => {
                   className="w-full sm:w-auto h-[50px] sm:h-13 px-7 text-sm sm:text-base font-bold shadow-lg shadow-[#F15E1C]/20 hover:-translate-y-0.5 transition-all duration-200"
                   rightIcon={<CalendarCheck className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
                 >
-                  Request a Walkthrough
+                  Request A Walkthrough
                 </Button>
               </Link>
 
@@ -132,7 +132,7 @@ export const HeroSection: React.FC = () => {
                   className="w-full sm:w-auto h-[50px] sm:h-13 px-6 text-sm sm:text-base font-semibold border-slate-300 dark:border-navy-700/80 bg-white/80 dark:bg-navy-900/80 hover:bg-slate-100 dark:hover:bg-navy-800 hover:-translate-y-0.5 transition-all duration-200"
                   rightIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
                 >
-                  See how it works
+                  See How It Works
                 </Button>
               </a>
             </motion.div>

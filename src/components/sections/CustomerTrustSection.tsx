@@ -67,9 +67,9 @@ export const CustomerTrustSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight"
           >
-            Built around the workflows{" "}
+            Built Around the Workflows{" "}
             <span className="relative inline-block text-orange-600 dark:text-teal-400">
-              lean GRC teams
+              Lean GRC Teams
               <svg
                 className="absolute bottom-[-6px] left-0 w-full h-[4px] overflow-visible pointer-events-none"
                 viewBox="0 0 100 8"
@@ -85,7 +85,7 @@ export const CustomerTrustSection: React.FC = () => {
                 />
               </svg>
             </span>{" "}
-            actually manage.
+            Actually Manage.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}

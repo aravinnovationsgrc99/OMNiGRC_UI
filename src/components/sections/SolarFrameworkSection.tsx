@@ -30,7 +30,7 @@ export const SolarFrameworkSection: React.FC = () => {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
-            Map once. <span className="text-[#2E936F] dark:text-[#36B386]">Satisfy six global standards.</span>
+            Map Once. <span className="text-[#2E936F] dark:text-[#36B386]">Satisfy Six Global Standards.</span>
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl">

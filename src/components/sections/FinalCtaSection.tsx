@@ -79,21 +79,20 @@ export const FinalCtaSection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
-          className="relative rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-gradient-to-b from-slate-50/90 via-white to-white dark:from-navy-900/90 dark:via-[#0D1626] dark:to-[#0A111F] p-6 sm:p-12 lg:p-14 shadow-xl backdrop-blur-md text-center"
+          className="relative rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-gradient-to-b from-slate-50/90 via-white to-white dark:from-navy-900/90 dark:via-[#0D1626] dark:to-[#0A111F] p-6 sm:p-12 lg:p-14 shadow-xl backdrop-blur-md text-left"
         >
           {/* Primary Headline */}
           <motion.h2
             variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug sm:leading-tight max-w-3xl mx-auto mb-4 sm:mb-6"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug sm:leading-tight w-full mb-4 sm:mb-6"
           >
-            Your next audit shouldn&apos;t start <br className="hidden sm:inline" />
-            with a spreadsheet.
+            Your Next Audit Shouldn&apos;t Start With a Spreadsheet.
           </motion.h2>
 
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0"
+            className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full mb-8 sm:mb-10"
           >
             Bring risk, assets, and controls into one workflow, built for lean security teams, built for SOC 2 Type II readiness, tenant isolation, and AI that drafts while your team approves.
           </motion.p>
@@ -101,12 +100,12 @@ export const FinalCtaSection: React.FC = () => {
           {/* CTAs Row */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3.5 sm:gap-4 w-full"
           >
             {/* Primary CTA */}
             <Link
               href="/demo"
-              className="w-full sm:w-auto max-w-[360px] h-[54px] sm:h-[58px] px-8 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 shadow-lg shadow-[#2E936F]/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group"
+              className="w-full sm:w-auto h-[50px] sm:h-[58px] px-8 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 shadow-lg shadow-[#2E936F]/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group"
             >
               <span>Request a Demo</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -115,7 +114,7 @@ export const FinalCtaSection: React.FC = () => {
             {/* Secondary CTA */}
             <Link
               href="/pricing"
-              className="w-full sm:w-auto max-w-[360px] h-[54px] sm:h-[58px] px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-base sm:text-lg flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200"
+              className="w-full sm:w-auto h-[50px] sm:h-[58px] px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-base sm:text-lg flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200"
             >
               <span>Explore Pricing &amp; Calculator</span>
             </Link>

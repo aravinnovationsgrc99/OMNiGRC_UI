@@ -136,20 +136,29 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs border-t border-slate-200/20 dark:border-navy-700/60 mt-8">
-          <div className="flex items-center text-center md:text-left">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
             <div className="inline-flex items-center transition-transform hover:scale-[1.02]">
               <Image
                 src="/images/Powered-By-AravInnovation.png"
                 alt="Powered by Arav Innovations"
                 width={480}
                 height={160}
-                className="h-12 sm:h-14 w-auto object-contain"
+                className="h-16 sm:h-14 w-auto object-contain"
+              />
+            </div>
+            <div className="inline-flex items-center transition-transform hover:scale-[1.02]">
+              <Image
+                src="/images/Arav'sLogo.png"
+                alt="Arav Innovations Logo"
+                width={400}
+                height={160}
+                className="h-14 sm:h-13 w-auto object-contain"
               />
             </div>
           </div>
 
           <div className="text-slate-400 text-center md:text-left max-w-xs sm:max-w-md">
-            Unified Risk, Asset, and Security-Control Management. © 2026 OMNiGRC. All rights reserved.
+            Unified Risk, Asset, And Control Management. © 2026 OMNiGRC. All rights reserved.
           </div>
 
           {/* Official Social Media Handles */}

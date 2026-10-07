@@ -57,7 +57,7 @@ export const HomeBlogSection: React.FC = async () => {
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
               From the GRC{" "}
-              <span className="text-[#F15E1C]">operations desk.</span>
+              <span className="text-[#F15E1C]">Operations Desk.</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
               Practical insights on risk management, compliance frameworks, and governance strategy from our editorial team.

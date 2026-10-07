@@ -76,7 +76,7 @@ export const DeploymentSection: React.FC = () => {
         {/* Section Header */}
         <div className="w-full text-left md:text-center space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
-            Deploy your way: <span className="text-[#2E936F]">cloud speed or air-gapped sovereignty.</span>
+            Deploy Your Way: <span className="text-[#2E936F]">Cloud Speed Or Air-Gapped Sovereignty.</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl md:mx-auto">

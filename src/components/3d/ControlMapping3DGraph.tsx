@@ -87,17 +87,17 @@ export const ControlMapping3DGraph: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-5 sm:p-8 lg:p-10 shadow-xl overflow-hidden">
+    <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-4 sm:p-6 lg:p-8 shadow-xl overflow-hidden">
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-300/60 dark:border-amber-700/50 bg-[#FFFBEB] dark:bg-amber-950/30 text-amber-900 dark:text-amber-300 font-mono text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+      <div className="text-left w-full space-y-2 mb-4 sm:mb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-amber-300/60 dark:border-amber-700/50 bg-[#FFFBEB] dark:bg-amber-950/30 text-amber-900 dark:text-amber-300 font-mono text-xs font-bold uppercase tracking-wider shadow-xs">
           <Sparkles className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
           <span>DATA MINIMIZATION ARCHITECTURE</span>
         </div>
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug w-full">
           The Auditable AI Control Mapping Pipeline
         </h3>
-        <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 mt-2 leading-relaxed font-medium max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium w-full">
           Explore each architectural stage to see how sensitive context is isolated before external model evaluation.
         </p>
       </div>
