@@ -23,17 +23,17 @@ export const SolarFrameworkSection: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         {/* Full-Width Aligned Section Header */}
-        <div className="w-full text-left space-y-2.5 sm:space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#F15E1C]/30 bg-[#FFF0E5] dark:bg-[#1A2642] text-[#F15E1C] dark:text-[#FF7A3D] text-xs font-mono font-extrabold uppercase tracking-wider shadow-sm mb-1 sm:mb-0">
+        <div className="w-full text-left space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#F15E1C]/30 bg-[#FFF0E5] dark:bg-[#1A2642] text-[#F15E1C] dark:text-[#FF7A3D] text-xs font-mono font-extrabold uppercase tracking-wider shadow-sm">
             <Compass className="h-4 w-4 text-[#F15E1C] dark:text-[#FF7A3D] shrink-0" />
             <span>FRAMEWORK TAXONOMIES</span>
           </div>
 
-          <h2 className="text-[25px] xs:text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-[1.2] sm:leading-tight w-full max-w-[340px] xs:max-w-[380px] sm:max-w-none">
-            Map Once. <span className="text-[#2E936F] dark:text-[#36B386] block xs:inline mt-0.5 xs:mt-0">Satisfy Six Global Standards.</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
+            Map Once. <span className="text-[#2E936F] dark:text-[#36B386]">Satisfy Six Global Standards.</span>
           </h2>
 
-          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl">
             Interactive control crosswalk engine aligning controls across ISO 27001, SOC 2, GDPR, HIPAA, DPDP, and ISO 42001.
           </p>
         </div>
