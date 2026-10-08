@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
         className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8"
       >
         {/* Balanced Two-Column Composition on Desktop (lg:) / Stacked on Mobile */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-6 lg:gap-12 items-center">
           
           {/* LEFT CONTENT: Heading, Supporting Copy, CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
@@ -141,7 +141,7 @@ export const HeroSection: React.FC = () => {
           {/* RIGHT VISUAL: Compliance Pipeline Product Visual */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-6 w-full overflow-hidden flex items-center justify-center pt-4 lg:pt-0"
+            className="lg:col-span-6 w-full overflow-hidden flex items-center justify-center pt-0"
           >
             <HeroWorkflowVisual />
           </motion.div>
