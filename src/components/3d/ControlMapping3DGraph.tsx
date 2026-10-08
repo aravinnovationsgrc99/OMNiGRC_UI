@@ -157,34 +157,13 @@ export const ControlMapping3DGraph: React.FC = () => {
         </div>
       </div>
 
-      {/* MOBILE UI TIMELINE LAYOUT (Matching attached mobile reference screenshot) */}
-      <div className="space-y-6 relative z-10 mb-6 md:hidden">
-        {workflowSteps.map((s, idx) => {
-          return (
-            <div key={idx} className="flex items-start gap-3 relative">
-              {/* Left Column: Vertical Step Badge + Dashed Connector Line */}
-              <div className="flex flex-col items-center shrink-0 self-stretch">
-                {/* Step Circle Badge (01, 02, 03, 04) */}
-                <div className="w-9 h-9 rounded-full border-2 border-[#2E936F] bg-white dark:bg-navy-900 text-[#2E936F] dark:text-teal font-mono font-extrabold text-sm flex items-center justify-center shrink-0 shadow-xs z-10">
-                  {s.step}
-                </div>
-
-                {/* Dashed Line & Down Arrow connecting to next step */}
-                {idx < 3 && (
-                  <div className="flex-1 flex flex-col items-center py-1 my-0.5">
-                    <div className="w-0.5 flex-1 border-l-2 border-dashed border-[#2E936F]/40 dark:border-teal/40 min-h-[3.5rem]" />
-                    <ArrowDown className="h-4 w-4 text-[#2E936F] dark:text-teal shrink-0 -mt-1" />
-                  </div>
-                )}
-              </div>
-
-              {/* Right Column: Stage Card */}
-              <div className="flex-1 min-w-0">
-                {renderCardContent(s)}
-              </div>
-            </div>
-          );
-        })}
+      {/* MOBILE UI TIMELINE LAYOUT (Cards stacked directly without side timeline) */}
+      <div className="space-y-3.5 sm:space-y-4 relative z-10 mb-6 md:hidden">
+        {workflowSteps.map((s, idx) => (
+          <div key={idx} className="w-full">
+            {renderCardContent(s)}
+          </div>
+        ))}
       </div>
 
       {/* Bottom Callout Bar (2 Equal Columns on Desktop, Stacked on Mobile) */}
