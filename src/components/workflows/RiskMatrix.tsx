@@ -16,7 +16,7 @@ export function RiskMatrix() {
   };
 
   const risks = [
-    { id: "RSK-088", l: 5, i: 1, title: "Third-party API rate throttle cascade", asset: "AST-112", owner: "M. Vance", ctrl: "CTRL-098", strategy: "MITIGATE", evidence: "ev-api-resilience-032.json" },
+    { id: "RSK-088", l: 5, i: 1, title: "Third-party API rate throttle cascade", asset: "AST-112", owner: "O. Thakre", ctrl: "CTRL-098", strategy: "MITIGATE", evidence: "ev-api-resilience-032.json" },
     { id: "RSK-071", l: 5, i: 2, title: "Staging Environment Data Masking Void", asset: "AST-204", owner: "D. Chen", ctrl: "CTRL-034", strategy: "MITIGATE", evidence: "ev-masking.json" },
     { id: "RSK-033", l: 5, i: 3, title: "Kubernetes Ingress Controller Exploit", asset: "AST-008", owner: "K. Thorne", ctrl: "CTRL-077", strategy: "MITIGATE", evidence: "ev-k8s-pen.json" },
     { id: "RSK-009", l: 5, i: 4, title: "Ransomware Lateral Spread", asset: "AST-001", owner: "A. Sharma", ctrl: "CTRL-002", strategy: "MITIGATE", evidence: "ev-zt-drill.json" },

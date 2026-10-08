@@ -139,20 +139,20 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
             <div className="inline-flex items-center transition-transform hover:scale-[1.02]">
               <Image
-                src="/images/Powered-By-AravInnovation.png"
-                alt="Powered by Arav Innovations"
-                width={480}
-                height={160}
-                className="h-16 sm:h-14 w-auto object-contain"
-              />
-            </div>
-            <div className="inline-flex items-center transition-transform hover:scale-[1.02]">
-              <Image
                 src="/images/Arav'sLogo.png"
                 alt="Arav Innovations Logo"
                 width={400}
                 height={160}
                 className="h-14 sm:h-13 w-auto object-contain"
+              />
+            </div>
+            <div className="inline-flex items-center transition-transform hover:scale-[1.02]">
+              <Image
+                src="/images/Powered-By-AravInnovation.png"
+                alt="Powered by Arav Innovations"
+                width={480}
+                height={160}
+                className="h-16 sm:h-14 w-auto object-contain"
               />
             </div>
           </div>

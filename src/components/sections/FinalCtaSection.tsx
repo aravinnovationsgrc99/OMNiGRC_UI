@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Mail, CheckCircle2, Lock, Cpu } from "lucide-react";
+import { ArrowRight, Mail, CheckCircle2 } from "lucide-react";
 
 export const FinalCtaSection: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -43,128 +43,125 @@ export const FinalCtaSection: React.FC = () => {
     }
   };
 
-  // Stagger animation container
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.05,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 18 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] },
-    },
-  };
-
   return (
-    <section className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-5 sm:py-8 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
-      {/* Soft Ambient Background Glow using OMNiGRC Palette (#2E936F / #F15E1C) */}
+    <section className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors">
+      {/* Soft Ambient Background Glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[36rem] h-[36rem] rounded-full bg-[#2E936F]/10 dark:bg-[#2E936F]/15 blur-3xl"
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto space-y-6 sm:space-y-8">
-        {/* Main Conversion Card */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-40px" }}
-          className="relative rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-gradient-to-b from-slate-50/90 via-white to-white dark:from-navy-900/90 dark:via-[#0D1626] dark:to-[#0A111F] p-6 sm:p-12 lg:p-14 shadow-xl backdrop-blur-md text-left"
-        >
-          {/* Primary Headline */}
-          <motion.h2
-            variants={itemVariants}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug sm:leading-tight w-full mb-4 sm:mb-6"
-          >
-            Your Next Audit Shouldn&apos;t Start With a Spreadsheet.
-          </motion.h2>
-
-          {/* Subheading */}
-          <motion.p
-            variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full mb-8 sm:mb-10"
-          >
-            Bring risk, assets, and controls into one workflow, built for lean security teams, built for SOC 2 Type II readiness, tenant isolation, and AI that drafts while your team approves.
-          </motion.p>
-
-          {/* CTAs Row */}
+      <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto">
+        {/* Two-Column Symmetrical Composition */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
+          
+          {/* LEFT CARD (8 COLS): Primary Hero Conversion Card */}
           <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3.5 sm:gap-4 w-full"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="lg:col-span-8 w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-gradient-to-b from-slate-50/90 via-white to-white dark:from-navy-900/90 dark:via-[#0D1626] dark:to-[#0A111F] p-6 sm:p-8 lg:p-10 shadow-xl backdrop-blur-md text-left flex flex-col justify-between"
           >
-            {/* Primary CTA */}
-            <Link
-              href="/demo"
-              className="w-full sm:w-auto h-[50px] sm:h-[58px] px-8 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 shadow-lg shadow-[#2E936F]/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group"
-            >
-              <span>Request a Demo</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
+            <div>
+              {/* Primary Headline */}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full mb-4">
+                Your Next Audit Shouldn&apos;t Start With a Spreadsheet.
+              </h2>
 
-            {/* Secondary CTA */}
-            <Link
-              href="/pricing"
-              className="w-full sm:w-auto h-[50px] sm:h-[58px] px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-base sm:text-lg flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200"
-            >
-              <span>Explore Pricing &amp; Calculator</span>
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* Newsletter Block */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="max-w-3xl mx-auto rounded-2xl border border-slate-200 dark:border-navy-700/60 bg-slate-50/80 dark:bg-navy-900/60 p-5 sm:p-6 text-left"
-        >
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="space-y-1">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider flex items-center gap-1.5">
-                <Mail className="h-3.5 w-3.5 text-[#2E936F]" /> GRC Newsletter
-              </span>
-              <p className="text-sm text-slate-600 dark:text-slate-300 font-medium">
-                Monthly GRC insights on frameworks, clauses, and practical security operations.
+              {/* Subheading */}
+              <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full mb-6">
+                Bring risk, assets, and controls into one workflow, built for lean security teams, built for SOC 2 Type II readiness, tenant isolation, and AI that drafts while your team approves.
               </p>
             </div>
 
-            {subscribed ? (
-              <div className="px-3.5 py-2 rounded-lg bg-[#2E936F]/15 border border-[#2E936F]/40 text-[#2E936F] dark:text-teal-300 text-xs font-bold flex items-center gap-1.5 shrink-0">
-                <CheckCircle2 className="h-4 w-4" /> Subscribed! Welcome.
+            {/* CTAs Row */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4 w-full pt-2">
+              {/* Primary CTA */}
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto h-[48px] sm:h-[54px] px-6 sm:px-7 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-md shadow-[#2E936F]/20 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group shrink-0"
+              >
+                <span>Request a Demo</span>
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
+
+              {/* Secondary CTA */}
+              <Link
+                href="/pricing"
+                className="w-full sm:w-auto h-[48px] sm:h-[54px] px-6 sm:px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-sm sm:text-base flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200 shrink-0"
+              >
+                <span>Explore Pricing &amp; Calculator</span>
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* RIGHT CARD (4 COLS): Dedicated Vertical GRC Newsletter Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="lg:col-span-4 w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900/90 p-6 sm:p-7 shadow-xl backdrop-blur-md text-left flex flex-col justify-between"
+          >
+            <div className="space-y-3">
+              {/* Top Icon Badge */}
+              <div className="w-10 h-10 rounded-xl bg-[#E6F4EF] dark:bg-[#122B22] border border-[#2E936F]/30 flex items-center justify-center text-[#2E936F] dark:text-[#36B386]">
+                <Mail className="h-5 w-5" />
               </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex items-center gap-2 w-full sm:w-auto shrink-0">
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter work email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="rounded-lg border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-950 px-3 py-2 text-xs text-navy-900 dark:text-white placeholder-slate-400 focus:border-[#2E936F] focus:outline-none w-full sm:w-56"
-                />
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="rounded-lg bg-[#2E936F] hover:bg-[#237457] px-3.5 py-2 text-xs font-bold text-white transition-colors shrink-0 disabled:opacity-60"
-                >
-                  {submitting ? "..." : "Subscribe"}
-                </button>
-              </form>
-            )}
-          </div>
-          {errorMsg && <p className="text-[10px] text-red-400 font-mono mt-2">{errorMsg}</p>}
-        </motion.div>
+
+              {/* GRC Newsletter Badge */}
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-amber font-extrabold uppercase tracking-wider block">
+                GRC NEWSLETTER
+              </span>
+
+              {/* Newsletter Title */}
+              <h3 className="text-base sm:text-lg lg:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+                Monthly GRC insights on frameworks, clauses, and practical security operations.
+              </h3>
+
+              {/* Newsletter Subtitle */}
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                Get the latest updates, templates and expert insights delivered to your inbox.
+              </p>
+            </div>
+
+            {/* Newsletter Form */}
+            <div className="pt-4">
+              {subscribed ? (
+                <div className="p-3.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-[#2E936F] dark:text-teal-300 text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 w-full">
+                  <CheckCircle2 className="h-4 w-4" /> Subscribed! Welcome.
+                </div>
+              ) : (
+                <form onSubmit={handleSubscribe} className="space-y-3 w-full">
+                  <div className="relative w-full">
+                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                    <input
+                      type="email"
+                      required
+                      placeholder="Enter your work email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-xs sm:text-sm text-navy-900 dark:text-white placeholder-slate-400 focus:border-[#2E936F] focus:outline-none shadow-sm"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full py-3 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-60 group"
+                  >
+                    <span>{submitting ? "Subscribing..." : "Subscribe"}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
+
+                  {errorMsg && <p className="text-[11px] text-red-500 font-mono mt-1 text-center">{errorMsg}</p>}
+                </form>
+              )}
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );

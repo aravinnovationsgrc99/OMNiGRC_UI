@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FRAMEWORKS } from "@/lib/frameworks";
-import { ArrowRight, Sparkles, ShieldCheck, Check, BookOpen } from "lucide-react";
+import { ArrowRight, Sparkles, ShieldCheck, Check, BookOpen, Compass } from "lucide-react";
 
 export interface FrameworkOrreryProps {
   title?: string;
@@ -12,7 +12,7 @@ export interface FrameworkOrreryProps {
 }
 
 export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
-  title = "FRAMEWORK SOLAR SYSTEM",
+  title = "FRAMEWORK TAXONOMIES",
   className = "",
   compact = false,
 }) => {
@@ -80,7 +80,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     let isVisible = true;
     let lastTime = performance.now();
 
-    // Increased spin speed: negative value rotates discs from LEFT to RIGHT across the front
+    // Continuous spin speed
     const BASE_SPIN_SPEED = -0.0075;
 
     const animate = (now: number) => {
@@ -103,7 +103,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
           rotationRef.current += velocityRef.current * speedScale;
           velocityRef.current *= Math.pow(0.92, speedScale);
         } else {
-          // Continuous rotation: full speed normally, 40% speed on hover so it never freezes or lags
+          // Continuous rotation: full speed normally, 40% speed on hover
           const currentSpeed = isHoveredRef.current ? BASE_SPIN_SPEED * 0.4 : BASE_SPIN_SPEED;
           rotationRef.current += currentSpeed * speedScale;
         }
@@ -120,7 +120,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
       }
 
       const planeW = container.clientWidth || 700;
-      const planeH = container.clientHeight || 480;
+      const planeH = container.clientHeight || 440;
       const Rx = planeW * 0.36;
       const Ry = planeH * 0.28;
 
@@ -305,11 +305,39 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
   return (
     <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto">
+      {/* HEADER BAR: FRAMEWORK TAXONOMIES BADGE + FRAMEWORK SELECTOR TABS */}
+      <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#F15E1C]/30 bg-[#FFF0E5] dark:bg-[#1A2642] text-[#F15E1C] dark:text-[#FF7A3D] text-xs font-mono font-extrabold uppercase tracking-wider shadow-sm shrink-0">
+          <Compass className="h-4 w-4 text-[#F15E1C] dark:text-[#FF7A3D] shrink-0" />
+          <span>{title}</span>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          {FRAMEWORKS.map((fw, idx) => {
+            const active = activeIndex === idx;
+            return (
+              <button
+                key={fw.code}
+                type="button"
+                onClick={() => seekToFramework(idx)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-extrabold transition-all cursor-pointer ${
+                  active
+                    ? "bg-[#2E936F] text-white shadow-md scale-105"
+                    : "bg-slate-100 dark:bg-[#1A2846] text-slate-700 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-[#24365c] border border-slate-200 dark:border-slate-700/80"
+                }`}
+              >
+                {fw.code}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* 2-COLUMN DESKTOP COMPOSITION / VERTICAL MOBILE FLOW */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
         
         {/* LEFT SIDE (7 COLS): 3D Orbital Gallery Stage Container */}
-        <div className="lg:col-span-7 w-full flex flex-col justify-center">
+        <div className="lg:col-span-7 w-full">
           <div
             ref={containerRef}
             tabIndex={0}
@@ -324,7 +352,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
             onMouseEnter={() => { isHoveredRef.current = true; }}
-            className={`relative w-full ${compact ? "h-[320px] sm:h-[380px]" : "h-[380px] sm:h-[460px] lg:h-[480px]"} rounded-3xl border border-slate-200 dark:border-navy-700 bg-gradient-to-b from-white via-[#FFF8F0] to-[#FFFDF9] dark:from-[#0A111F] dark:via-[#16233F] dark:to-[#0A111F] overflow-hidden select-none cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-[#2E936F] shadow-xl touch-pan-y ${className}`}
+            className={`relative w-full ${compact ? "h-[340px] sm:h-[380px]" : "h-[420px] sm:h-[470px] lg:h-[500px]"} rounded-3xl border border-slate-200 dark:border-navy-700 bg-gradient-to-b from-white via-[#FFF8F0] to-[#FFFDF9] dark:from-[#0A111F] dark:via-[#16233F] dark:to-[#0A111F] overflow-hidden select-none cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-[#2E936F] shadow-xl touch-pan-y ${className}`}
           >
             {/* Perspective CSS & Iris reveal */}
             <style jsx>{`
@@ -394,7 +422,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
                 </svg>
 
                 {/* Central Lens */}
-                <div className={`relative z-20 ${compact ? "w-[140px] sm:w-[170px] h-[140px] sm:h-[170px]" : "w-[170px] sm:w-[210px] h-[170px] sm:h-[210px]"} rounded-full border-2 border-[#2E936F] bg-white/95 dark:bg-[#070e1c]/95 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-3 text-center overflow-hidden`}>
+                <div className={`relative z-20 ${compact ? "w-[140px] sm:w-[160px] h-[140px] sm:h-[160px]" : "w-[165px] sm:w-[200px] h-[165px] sm:h-[200px]"} rounded-full border-2 border-[#2E936F] bg-white/95 dark:bg-[#070e1c]/95 shadow-2xl backdrop-blur-xl flex flex-col items-center justify-center p-3 text-center overflow-hidden`}>
                   <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-0 rounded-full blur-2xl opacity-30"
@@ -471,10 +499,10 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         </div>
 
         {/* RIGHT SIDE (5 COLS): Synchronized Highlighted Framework Detail Panel */}
-        <div className="lg:col-span-5 w-full flex flex-col justify-between">
+        <div className="lg:col-span-5 w-full">
           <div
             key={`readout-${irisKey}`}
-            className="iris-bloom w-full h-full rounded-3xl border-2 border-slate-200/90 dark:border-[#2E936F]/50 bg-white dark:bg-[#0F1B34] p-6 sm:p-7 shadow-2xl backdrop-blur-xl flex flex-col justify-between relative overflow-hidden space-y-6"
+            className={`iris-bloom w-full ${compact ? "h-[340px] sm:h-[380px]" : "h-[420px] sm:h-[470px] lg:h-[500px]"} rounded-3xl border-2 border-slate-200/90 dark:border-[#2E936F]/50 bg-white dark:bg-[#0F1B34] p-5 sm:p-6 shadow-2xl backdrop-blur-xl flex flex-col justify-between relative overflow-hidden`}
           >
             {/* Orange/Brand Accent Bar on Left Edge */}
             <div
@@ -482,29 +510,10 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               style={{ backgroundColor: currentFw.accentColor }}
             />
 
-            {/* Framework Quick Switcher Tabs & Details */}
-            <div className="space-y-4 pl-2">
-              <div className="flex flex-wrap gap-1.5 pb-3 border-b border-slate-200 dark:border-slate-800">
-                {FRAMEWORKS.map((fw, idx) => {
-                  const active = activeIndex === idx;
-                  return (
-                    <button
-                      key={fw.code}
-                      onClick={() => seekToFramework(idx)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-mono font-extrabold transition-all ${
-                        active
-                          ? "bg-[#2E936F] dark:bg-[#2E936F] text-white shadow-md scale-105"
-                          : "bg-slate-100 dark:bg-[#1A2846] text-slate-700 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-[#24365c] border border-slate-200 dark:border-slate-700/80"
-                      }`}
-                    >
-                      {fw.code}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Active Framework Header */}
-              <div className="space-y-2">
+            {/* Framework Details Content */}
+            <div className="space-y-3.5 pl-2 overflow-y-auto pr-1">
+              {/* Active Framework Header Badge & Region */}
+              <div className="space-y-1.5">
                 <div className="flex items-center gap-2">
                   <span
                     className="px-2.5 py-0.5 rounded text-xs font-mono font-black uppercase border shadow-sm"
@@ -525,16 +534,16 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               </div>
 
               {/* One-Liner Description */}
-              <p className="text-sm sm:text-base text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
                 {currentFw.oneLiner || currentFw.desc}
               </p>
 
               {/* Mapped Control Domains */}
-              <div className="space-y-2 pt-2">
-                <span className="text-xs font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
+              <div className="space-y-1.5 pt-1">
+                <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
                   Mapped Control Domains:
                 </span>
-                <ul className="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-100">
+                <ul className="space-y-1 text-xs sm:text-sm text-slate-800 dark:text-slate-100">
                   {currentFw.controlDomains.slice(0, 3).map((domain, dIdx) => (
                     <li key={dIdx} className="flex items-start gap-2">
                       <Check className="h-4 w-4 text-[#2E936F] dark:text-[#36B386] shrink-0 mt-0.5" />
@@ -545,15 +554,15 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               </div>
 
               {/* Citations Badges */}
-              <div className="space-y-1.5 pt-2">
-                <span className="text-xs font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
+              <div className="space-y-1.5 pt-1">
+                <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
                   Authentic Clause Citations:
                 </span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {currentFw.citations.map((cit, cIdx) => (
                     <span
                       key={cIdx}
-                      className="px-2.5 py-1 rounded bg-[#E6F4EF] dark:bg-[#122B22] border border-[#2E936F]/40 text-[#2E936F] dark:text-[#42D49F] font-mono font-extrabold text-xs shadow-sm"
+                      className="px-2.5 py-0.5 rounded bg-[#E6F4EF] dark:bg-[#122B22] border border-[#2E936F]/40 text-[#2E936F] dark:text-[#42D49F] font-mono font-extrabold text-xs shadow-sm"
                     >
                       {cit}
                     </span>
@@ -563,24 +572,22 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
             </div>
 
             {/* Action CTA Buttons */}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 pl-2 space-y-2.5">
+            <div className="pt-3 border-t border-slate-200 dark:border-slate-800 pl-2 space-y-2 shrink-0">
               <Link
                 href={`/frameworks/${currentFw.slug}`}
-                className="inline-flex items-center justify-center gap-2 w-full px-5 py-3.5 rounded-xl bg-[#2E936F] hover:bg-[#257759] dark:bg-[#2E936F] dark:hover:bg-[#257759] text-white font-extrabold text-sm shadow-md transition-all group"
+                className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#2E936F] hover:bg-[#257759] dark:bg-[#2E936F] dark:hover:bg-[#257759] text-white font-extrabold text-xs sm:text-sm shadow-md transition-all group"
               >
                 <span>Explore {currentFw.code} Workflow</span>
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href={`/frameworks/${currentFw.slug}`}
-                className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-xl border border-[#2E936F]/50 dark:border-[#2E936F]/40 text-[#2E936F] dark:text-[#36B386] hover:bg-[#E6F4EF] dark:hover:bg-[#122B22] font-extrabold text-xs transition-all group"
+                className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl border border-[#2E936F]/50 dark:border-[#2E936F]/40 text-[#2E936F] dark:text-[#36B386] hover:bg-[#E6F4EF] dark:hover:bg-[#122B22] font-extrabold text-xs transition-all group"
               >
                 <BookOpen className="h-3.5 w-3.5" />
                 <span>Read {currentFw.code} Framework Guide</span>
               </Link>
             </div>
-
-
           </div>
         </div>
 

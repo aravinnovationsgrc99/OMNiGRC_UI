@@ -50,7 +50,7 @@ const CLIENT_ROSTER: ClientTenant[] = [
     frameworks: ["SOC 2 T2", "ISO 27001"],
     readiness: 88,
     targetWindow: "Q3 Recertification",
-    vcisoLead: "E. Vance (Principal Advisory)",
+    vcisoLead: "O. Thakre (Principal Advisory)",
     status: "On Track",
     activeRisk: "High (16)",
     controlScore: "92% mapped"
@@ -74,7 +74,7 @@ const CLIENT_ROSTER: ClientTenant[] = [
     frameworks: ["SOC 2 T2", "PCI-DSS"],
     readiness: 94,
     targetWindow: "Annual Audit Fieldwork",
-    vcisoLead: "E. Vance (Principal Advisory)",
+    vcisoLead: "O. Thakre (Principal Advisory)",
     status: "Audit Ready",
     activeRisk: "Low (6)",
     controlScore: "98% mapped"

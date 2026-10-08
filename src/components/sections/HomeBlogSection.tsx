@@ -39,7 +39,7 @@ export const HomeBlogSection: React.FC = async () => {
   return (
     <section
       id="blog-preview"
-      className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-6 sm:pb-10 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden"
+      className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden"
     >
       {/* Ambient glow */}
       <div

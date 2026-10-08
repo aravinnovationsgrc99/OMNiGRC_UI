@@ -12,7 +12,7 @@ const ControlMapping3DGraph = dynamic(
 
 export const ArchitectureSection: React.FC = () => {
   return (
-    <section className="relative bg-white dark:bg-[#0A111F] pt-8 sm:pt-12 pb-6 sm:pb-8 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
+    <section className="relative bg-white dark:bg-[#0A111F] py-4 sm:py-6 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full text-left space-y-2 mb-4 sm:mb-6">
           <motion.h2
