@@ -388,7 +388,7 @@ export default function EvidencePage() {
                           <div className="text-amber-600 dark:text-amber-400 font-mono text-[11px] font-bold mt-0.5">Due in 34 days</div>
                         </td>
                         <td className="p-4">
-                          <div className="font-bold text-slate-900 dark:text-white text-xs">E. Vance</div>
+                          <div className="font-bold text-slate-900 dark:text-white text-xs">O. Thakre</div>
                           <div className="text-slate-500 text-xs">Principal SecOps</div>
                         </td>
                         <td className="p-4">

@@ -22,7 +22,7 @@ export function EvidenceTable() {
       targetIcon: <Cloud className="h-4 w-4 text-teal-500" />, targetUri: "arn:aws:kms:us-east-1:482...", targetType: "AWS KMS Console • Read-Only External",
       controls: ["SOC2 CC6.1", "ISO A.8.24", "HIPAA §164.312(a)"],
       cadence: "Annual Review", dueText: "Due in 34 days", dueColor: "text-teal-500",
-      owner: "E. Vance", role: "Principal SecOps",
+      owner: "O. Thakre", role: "Principal SecOps",
       state: "Verified Valid", stateIcon: <CheckCircle className="h-4 w-4" />, stateColor: "bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-400", stateSub: "Signed 2026-03-12"
     },
     {

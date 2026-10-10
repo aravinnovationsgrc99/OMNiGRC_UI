@@ -87,7 +87,7 @@ export const ComparisonSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4"
           >
-            The sweet spot for lean GRC teams.
+            The Sweet Spot for Lean GRC Teams.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -39,7 +39,7 @@ export const HomeBlogSection: React.FC = async () => {
   return (
     <section
       id="blog-preview"
-      className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-6 sm:pb-10 border-t border-slate-200 dark:border-navy-700/60 overflow-hidden"
+      className="relative w-full bg-white dark:bg-[#0A111F] px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden"
     >
       {/* Ambient glow */}
       <div
@@ -57,7 +57,7 @@ export const HomeBlogSection: React.FC = async () => {
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
               From the GRC{" "}
-              <span className="text-[#F15E1C]">operations desk.</span>
+              <span className="text-[#F15E1C]">Operations Desk.</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
               Practical insights on risk management, compliance frameworks, and governance strategy from our editorial team.

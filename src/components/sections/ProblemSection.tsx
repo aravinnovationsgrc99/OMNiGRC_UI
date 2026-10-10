@@ -87,8 +87,8 @@ export const ProblemSection: React.FC = () => {
           {/* Left Column: Heading & Subtitle (Vertically Centered on Desktop) */}
           <div className="lg:col-span-5 text-left space-y-3 sm:space-y-4 my-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-              Compliance doesn&apos;t fail on frameworks,<br className="hidden lg:block" />{" "}
-              <span className="text-[#F15E1C]">it fails on fragmentation.</span>
+              Compliance Doesn&apos;t Fail on Frameworks,<br className="hidden lg:block" />{" "}
+              <span className="text-[#F15E1C]">It Fails on Fragmentation.</span>
             </h2>
 
             <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">

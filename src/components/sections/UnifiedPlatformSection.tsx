@@ -54,7 +54,7 @@ export const UnifiedPlatformSection: React.FC = () => {
             THE FOUR CORE WORKFLOWS
           </p>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
-            Everything connects. Nothing lives in isolation.
+            Everything Connects. Nothing Lives in Isolation.
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg">
             Explore how OMNiGRC brings risk, assets, control mapping, and compliance testing into one unified workflow.
