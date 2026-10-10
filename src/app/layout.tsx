@@ -71,6 +71,7 @@ export const metadata: Metadata = {
 
 import { ThemeProvider } from "@/context/ThemeContext";
 import { AuroraSVGBackground } from "@/components/ui/AuroraSVGBackground";
+import { GoogleTag } from "@/components/analytics/GoogleTag";
 
 export default function RootLayout({
   children,
@@ -98,6 +99,7 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="antialiased selection:bg-[#F15E1C]/20 selection:text-navy-900 dark:selection:bg-teal/30 dark:selection:text-white bg-[#FFF7EF] text-navy-900 dark:bg-[#0A111F] dark:text-slate-100 min-h-screen font-sans transition-colors duration-200 overflow-x-hidden w-full max-w-full relative">
+        <GoogleTag />
         <ThemeProvider>
           <AuroraSVGBackground />
           <div className="relative z-10">
