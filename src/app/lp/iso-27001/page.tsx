@@ -21,6 +21,7 @@ import {
 import { IsoLandingHeader } from "@/components/lp/iso27001/IsoLandingHeader";
 import { IsoLeadForm } from "@/components/lp/iso27001/IsoLeadForm";
 import { IsoProductVisuals } from "@/components/lp/iso27001/IsoProductVisuals";
+import { IsoFaq } from "@/components/lp/iso27001/IsoFaq";
 
 export const metadata: Metadata = {
   title: "Run ISO 27001 Without Spreadsheets | OMNiGRC",
@@ -94,7 +95,7 @@ export default function IsoLandingPage() {
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-stone-700">
                     <CheckCircle2 className="w-4 h-4 text-[#2e936f] shrink-0" />
-                    <span>Live 93-Control SoA</span>
+                    <span>Structured 93-Control SoA</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-stone-700">
                     <CheckCircle2 className="w-4 h-4 text-[#2e936f] shrink-0" />
@@ -179,7 +180,7 @@ export default function IsoLandingPage() {
                     </h3>
                   </div>
                   <p className="text-sm text-stone-600 leading-relaxed">
-                    Determine and document Annex A control applicability with clear rationales for inclusions and exclusions. When policies or safeguards evolve, your Statement of Applicability reflects those updates automatically.
+                    Determine and document Annex A control applicability with clear rationales for inclusions and exclusions. Keep your Statement of Applicability organized and aligned as policies and operational safeguards evolve.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-[#f7d7b0]/60 text-xs text-stone-500 flex items-center gap-1.5">
@@ -370,21 +371,28 @@ export default function IsoLandingPage() {
           </div>
         </section>
 
-        {/* 8. Secondary Commercial Scoping Banner */}
-        <section className="py-10 bg-[#f7d7b0]/25 border-y border-[#f7d7b0]">
+        {/* 8. Prioritized ISO 27001 FAQ Section */}
+        <IsoFaq />
+
+        {/* 9. Commercial Proposal & Final Action Banner */}
+        <section className="py-12 bg-[#f7d7b0]/25 border-y border-[#f7d7b0]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="space-y-1 text-center md:text-left">
+              <div className="space-y-1.5 text-center md:text-left">
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f15e1c] uppercase tracking-wider">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  Transparent Commercial Proposal
+                </div>
                 <h3 className="text-base sm:text-lg font-bold text-stone-900">
-                  Preparing for your Stage 1 or Surveillance Audit?
+                  Need a scoped commercial proposal for your ISO 27001 audit cycle?
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-600">
-                  See how OMNiGRC structures your Annex A crosswalks, risk treatments, and evidence workpapers before auditor review.
+                <p className="text-xs sm:text-sm text-stone-600 max-w-2xl">
+                  Schedule a 20-minute walkthrough to review your target framework scope, team size, and deployment model. We provide custom commercial terms following the session.
                 </p>
               </div>
               <a
                 href="#lead-form"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2e936f] hover:bg-[#25785a] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow transition-all shrink-0 cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#2e936f] hover:bg-[#25785a] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow transition-all shrink-0 cursor-pointer"
               >
                 <span>Book a 20-Min Demo</span>
                 <ArrowRight className="w-4 h-4" />
@@ -394,7 +402,7 @@ export default function IsoLandingPage() {
         </section>
       </main>
 
-      {/* 9. Minimal Landing Page Footer */}
+      {/* 10. Minimal Landing Page Footer */}
       <footer className="w-full bg-white border-t border-[#f7d7b0]/80 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <p>© {new Date().getFullYear()} OMNiGRC. All rights reserved.</p>
