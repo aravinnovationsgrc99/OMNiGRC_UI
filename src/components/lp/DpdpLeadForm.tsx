@@ -267,7 +267,8 @@ export const DpdpLeadForm: React.FC = () => {
   return (
     <div
       id="lead-form"
-      className="w-full bg-white dark:bg-[#16233F]/95 border border-slate-200 dark:border-navy-700/80 rounded-2xl p-5 sm:p-7 shadow-xl backdrop-blur-md relative"
+      tabIndex={-1}
+      className="w-full bg-white dark:bg-[#16233F]/95 border border-slate-200 dark:border-navy-700/80 rounded-2xl p-5 sm:p-7 shadow-xl backdrop-blur-md relative focus:outline-none"
     >
       {/* Lead Form Header */}
       <div className="mb-5">
