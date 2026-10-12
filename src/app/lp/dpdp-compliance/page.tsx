@@ -9,10 +9,8 @@ import {
   ShieldCheck,
   Lock,
   ArrowRight,
-  Database,
   Layers,
   FileCheck2,
-  BellRing
 } from "lucide-react";
 import { DpdpLandingHeader } from "@/components/lp/DpdpLandingHeader";
 import { DpdpLeadForm } from "@/components/lp/DpdpLeadForm";
@@ -38,7 +36,7 @@ export default function DpdpLandingPage() {
       <main className="flex-1 w-full">
         {/* ── 1. HERO AND LEAD FORM (Two-Column Desktop / Linear Stack Mobile) ── */}
         <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 pb-10 sm:pb-14 overflow-hidden">
-          {/* Ambient Lighting Accents */}
+          {/* Ambient Depth Accents */}
           <div
             aria-hidden="true"
             className="absolute top-10 left-1/4 w-80 h-80 bg-teal-500/10 dark:bg-teal-500/15 rounded-full blur-3xl pointer-events-none -z-10"
@@ -97,7 +95,7 @@ export default function DpdpLandingPage() {
                         Vendor and Third-Party Oversight
                       </h2>
                       <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">
-                        Maintain real-time Data Processor registers, track executed DPAs, and monitor technical safeguards across third-party supply chains.
+                        Maintain structured Data Processor registers, track executed DPAs, and monitor technical safeguards across third-party supply chains.
                       </p>
                     </div>
                   </div>
@@ -111,7 +109,7 @@ export default function DpdpLandingPage() {
                         Breach Readiness and Evidence
                       </h2>
                       <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">
-                        Structure incident response workflows, track Section 8 security safeguards, and capture immutable evidence trails ready for inspection.
+                        Structure incident response workflows, track Section 8 security safeguards, and capture verifiable evidence trails ready for inspection.
                       </p>
                     </div>
                   </div>
@@ -171,8 +169,8 @@ export default function DpdpLandingPage() {
                     Consent and Notice Records
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Organise consent mechanisms, itemised privacy notices, and data principal preference records across
-                    your applications. Maintain timestamped audit records of consent notices presented to users and log
+                    Organise consent notices, itemised purpose notices, and data principal interaction logs across your
+                    applications. Maintain timestamped audit records of privacy notices presented to users and track
                     withdrawal requests without relying on scattered spreadsheets.
                   </p>
                 </div>
@@ -194,7 +192,7 @@ export default function DpdpLandingPage() {
                     Vendor and Third-Party Oversight
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Maintain a unified Data Processor register documenting every third-party service receiving personal data.
+                    Maintain a unified Data Processor register documenting third-party services processing personal data.
                     Track executed Data Processing Agreements (DPAs), verify technical safeguards, and monitor vendor
                     SOC 2 / ISO certifications to meet Data Fiduciary oversight duties.
                   </p>
@@ -219,21 +217,76 @@ export default function DpdpLandingPage() {
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Establish structured internal escalation paths and operational incident procedures. Track Section 8
                     reasonable security safeguards (access controls, encryption, backup verification), and maintain
-                    tamper-evident audit logs demonstrating active risk treatment.
+                    auditable logs demonstrating active risk treatment.
                   </p>
                 </div>
                 <div className="mt-5 pt-4 border-t border-slate-100 dark:border-navy-800 text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-                  Supported: Incident response workflows &amp; immutable testing records
+                  Supported: Incident response workflows &amp; auditable testing records
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── 3. PRODUCT SCREENSHOTS AND SUPPORTING WORKFLOW EXPLANATION ── */}
+        {/* ── 3. AUDIENCE POSITIONING: WHO OMNIGRC IS BUILT FOR ── */}
+        <section className="w-full py-12 sm:py-14 border-t border-slate-200/80 dark:border-navy-700/80 bg-slate-50/50 dark:bg-navy-950/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#2E936F] dark:text-teal-400">
+                AUDIENCE FIT
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight mt-1">
+                Who OMNiGRC Is Built For
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Designed specifically for teams handling digital personal data who need clear operational oversight without legacy software bloat.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-5 rounded-2xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/90 shadow-sm space-y-2.5">
+                <div className="p-2.5 rounded-xl bg-orange-500/10 text-[#F15E1C] w-fit">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 dark:text-white">
+                  Lean Security &amp; GRC Teams
+                </h3>
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Small security and compliance teams that must maintain risk registers, oversee vendor agreements, and prepare for audits without hiring expensive external consulting armies.
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/90 shadow-sm space-y-2.5">
+                <div className="p-2.5 rounded-xl bg-[#2E936F]/10 text-[#2E936F] dark:text-teal w-fit">
+                  <Layers className="w-5 h-5" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 dark:text-white">
+                  Growing SaaS &amp; Cloud Products
+                </h3>
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Technology platforms processing user PII that require structured consent logs, technical sub-processor oversight, and defensible security safeguard controls in production.
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/90 shadow-sm space-y-2.5">
+                <div className="p-2.5 rounded-xl bg-[#FAB60A]/20 text-navy-900 dark:text-amber w-fit">
+                  <FileCheck2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 dark:text-white">
+                  Multi-Framework Compliance Leads
+                </h3>
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Organizations managing DPDP Act duties alongside ISO 27001 or SOC 2 who want to link technical controls once rather than running duplicate siloed spreadsheets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4. PRODUCT SCREENSHOTS AND SUPPORTING WORKFLOW EXPLANATION ── */}
         <DpdpProductVisuals />
 
-        {/* ── 4. RELEVANT FRAMEWORK OR STATUTORY DETAILS ── */}
+        {/* ── 5. RELEVANT FRAMEWORK OR STATUTORY DETAILS ── */}
         <section className="w-full py-12 sm:py-16 border-t border-slate-200/80 dark:border-navy-700/80 bg-white/70 dark:bg-navy-950/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
@@ -334,7 +387,36 @@ export default function DpdpLandingPage() {
           </div>
         </section>
 
-        {/* ── 5. REMAINING FAQ AND LEGAL DISCLAIMER ── */}
+        {/* ── 6. COMMERCIAL SCOPING & ONBOARDING PROPOSALS ── */}
+        <section className="w-full py-10 sm:py-12 border-t border-slate-200/80 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/40">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/90 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-2 text-center md:text-left">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#D4521A] dark:text-amber">
+                  TRANSPARENT COMMERCIAL SCOPING
+                </span>
+                <h3 className="text-xl sm:text-2xl font-black text-navy-900 dark:text-white">
+                  Custom Proposals Tailored to Your Deployment Scope
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+                  Commercial proposals are structured around your operational architecture (Shared SaaS, Private dedicated instance, or Customer-controlled container), target frameworks, and entity complexity without hidden fees.
+                </p>
+              </div>
+
+              <div className="shrink-0">
+                <a
+                  href="#lead-form"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#F15E1C] hover:bg-[#D4521A] text-white font-bold text-xs shadow-md hover:shadow-lg transition-all"
+                >
+                  <span>Request Custom Proposal</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 7. REMAINING FAQ AND LEGAL DISCLAIMER ── */}
         <DpdpFaq />
       </main>
 

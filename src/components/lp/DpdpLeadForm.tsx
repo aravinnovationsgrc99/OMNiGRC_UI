@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -60,6 +60,9 @@ export const DpdpLeadForm: React.FC = () => {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState(false);
   const [submittedData, setSubmittedData] = useState<FormState | null>(null);
+
+  // Conversion tracking ref ensures event fires exactly once per confirmed lead
+  const hasFiredConversionRef = useRef(false);
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
@@ -147,6 +150,32 @@ export const DpdpLeadForm: React.FC = () => {
         throw new Error(data.error || "We could not submit your request. Please try again.");
       }
 
+      // Safe non-PII Google conversion event dispatch upon verified API acceptance
+      if (typeof window !== "undefined" && typeof window.gtag === "function" && !hasFiredConversionRef.current) {
+        hasFiredConversionRef.current = true;
+        try {
+          // Standard lead generation event without PII
+          window.gtag("event", "generate_lead", {
+            event_category: "Lead Generation",
+            event_label: "DPDP Google Ads Landing Page",
+            value: 1,
+          });
+
+          // Google Ads conversion event if conversion label configured via env
+          const adsTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "AW-18503231155";
+          const adsConversionLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+          if (adsConversionLabel) {
+            window.gtag("event", "conversion", {
+              send_to: `${adsTagId}/${adsConversionLabel}`,
+              value: 1.0,
+              currency: "INR",
+            });
+          }
+        } catch (trackingErr) {
+          console.warn("Analytics event dispatch notice:", trackingErr);
+        }
+      }
+
       setSubmittedData({ ...formData });
       setIsSuccess(true);
     } catch (err: any) {
@@ -168,11 +197,13 @@ export const DpdpLeadForm: React.FC = () => {
     setSubmitError(null);
     setIsSuccess(false);
     setSubmittedData(null);
+    hasFiredConversionRef.current = false;
   };
 
   if (isSuccess && submittedData) {
     return (
       <div
+        id="lead-form"
         className="w-full bg-white dark:bg-[#16233F] border border-teal-500/40 dark:border-teal-500/50 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden"
         role="region"
         aria-live="polite"
@@ -196,7 +227,7 @@ export const DpdpLeadForm: React.FC = () => {
 
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-md mx-auto">
             Thank you, <strong className="text-navy-900 dark:text-white">{submittedData.fullName}</strong>. A dedicated
-            OMNiGRC privacy engineer will review your organisation ({submittedData.companyName}) and share walkthrough
+            OMNiGRC privacy specialist will review your organisation ({submittedData.companyName}) and share walkthrough
             scheduling options.
           </p>
 
@@ -234,7 +265,10 @@ export const DpdpLeadForm: React.FC = () => {
   }
 
   return (
-    <div className="w-full bg-white dark:bg-[#16233F]/95 border border-slate-200 dark:border-navy-700/80 rounded-2xl p-5 sm:p-7 shadow-xl backdrop-blur-md relative">
+    <div
+      id="lead-form"
+      className="w-full bg-white dark:bg-[#16233F]/95 border border-slate-200 dark:border-navy-700/80 rounded-2xl p-5 sm:p-7 shadow-xl backdrop-blur-md relative"
+    >
       {/* Lead Form Header */}
       <div className="mb-5">
         <div className="flex items-center justify-between mb-1">
@@ -257,6 +291,7 @@ export const DpdpLeadForm: React.FC = () => {
       {submitError && (
         <div
           role="alert"
+          aria-live="assertive"
           className="mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/60 text-xs text-red-700 dark:text-red-300 flex items-start gap-2"
         >
           <AlertCircle className="w-4 h-4 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 interface FaqItem {
   question: string;
@@ -10,29 +10,39 @@ interface FaqItem {
 
 const FAQ_ITEMS: FaqItem[] = [
   {
-    question: "Does OMNiGRC guarantee DPDP Act 2023 legal compliance?",
+    question: "How is pricing structured for OMNiGRC's DPDP software?",
     answer:
-      "No software can guarantee statutory compliance or replace legal counsel. OMNiGRC provides an operational workspace to organise privacy risk registers, track vendor processing agreements, operationalise security safeguards, and maintain defensible evidence trails for internal and external audits.",
+      "OMNiGRC uses transparent commercial scoping based on your chosen deployment architecture (Shared multi-tenant SaaS, Private dedicated instance, or Customer-controlled container), target framework scope, and entity complexity. Submit the demo request form on this page to receive a tailored commercial proposal without hidden consultant fees.",
   },
   {
-    question: "How does OMNiGRC help teams organise Section 8(5) reasonable security safeguards?",
+    question: "How do I schedule a product demonstration?",
     answer:
-      "Under Section 8(5), Data Fiduciaries must implement reasonable security safeguards to prevent personal data breaches. OMNiGRC allows teams to document technical and organizational controls (access controls, encryption, backup verification, and incident escalation), assign responsible owners, and enforce periodic testing cadences.",
+      "Complete the demo booking form at the top of this page with your work email and contact details. A privacy and compliance specialist will follow up within one business day with walkthrough options tailored to your technical environment and DPDP readiness scope.",
   },
   {
-    question: "Can we track third-party vendors and sub-processors?",
+    question: "What does the onboarding and implementation timeline look like?",
     answer:
-      "Yes. OMNiGRC includes a dedicated vendor and third-party inventory. You can categorize technical processors, record executed Data Processing Agreements (DPAs) and contractual terms, and evaluate their security controls.",
+      "Onboarding focuses on cataloging your asset and cloud inventory, configuring your third-party vendor register, and cross-walking baseline security safeguards. For cloud-hosted SaaS deployments, initial setup typically takes days rather than the months required by legacy enterprise GRC suites.",
   },
   {
     question: "Can we cross-walk DPDP controls with ISO 27001 or SOC 2?",
     answer:
-      "Yes. OMNiGRC's multi-framework mapping engine allows organizations to link a single technical safeguard (such as MFA or database encryption) simultaneously across ISO 27001, SOC 2, and DPDP Act provisions, eliminating duplicate administrative overhead.",
+      "Yes. OMNiGRC's multi-framework mapping engine allows organizations to link common technical safeguards—such as access control, encryption, and operational testing—simultaneously across ISO 27001, SOC 2, and DPDP Act provisions, eliminating duplicate administrative overhead.",
   },
   {
-    question: "Where is our compliance data and evidence stored?",
+    question: "How does OMNiGRC handle consent records, vendor registers, and breach workflows?",
     answer:
-      "OMNiGRC is built for security-conscious teams, supporting single-tenant isolated database architectures and Indian regional data residency so your sensitive audit documentation and vendor data stay protected.",
+      "The platform centralises versioned records of privacy notices, maintains a structured Data Processor inventory with executed DPAs, and organizes internal incident response escalation procedures with timestamped evidence for compliance review.",
+  },
+  {
+    question: "Where is our compliance data hosted and how is tenant isolation maintained?",
+    answer:
+      "OMNiGRC supports application-level tenant isolation boundaries and Indian regional data residency. Sensitive context is protected within your perimeter, ensuring your organizational compliance records remain isolated and secure.",
+  },
+  {
+    question: "Does using OMNiGRC guarantee DPDP Act 2023 statutory compliance?",
+    answer:
+      "No software platform can guarantee legal compliance or replace legal counsel. OMNiGRC is an operational management tool designed to organize controls, vendor records, and audit evidence. Organizations should consult qualified legal professionals for statutory legal interpretations.",
   },
 ];
 
@@ -55,7 +65,7 @@ export const DpdpFaq: React.FC = () => {
             Common Questions on DPDP Compliance Software
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1.5">
-            Key questions on how OMNiGRC handles consent records, vendor governance, and audit readiness.
+            Key questions regarding commercial proposals, walkthrough scheduling, workflows, and legal boundaries.
           </p>
         </div>
 

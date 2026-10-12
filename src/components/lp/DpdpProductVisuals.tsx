@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck, FileCheck2, Eye, Lock } from "lucide-react";
 
 interface VisualCard {
   title: string;
@@ -23,9 +22,9 @@ const PRODUCT_VISUALS: VisualCard[] = [
   },
   {
     title: "Defensible Audit Trails & Recordkeeping",
-    subtitle: "Immutable Compliance Timeline",
+    subtitle: "Auditable Compliance Timeline",
     imageSrc: "/hero-audit-trail.png",
-    altText: "OMNiGRC immutable audit trail capturing compliance updates, policies, and vendor reviews",
+    altText: "OMNiGRC timestamped audit trail capturing compliance updates, policies, and vendor reviews",
     caption:
       "Defensible History: Every policy update, risk assessment change, and vendor review generates an auditable, timestamped record for compliance review.",
     badge: "Audit Evidence",
