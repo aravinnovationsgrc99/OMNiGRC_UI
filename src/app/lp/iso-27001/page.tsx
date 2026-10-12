@@ -48,7 +48,7 @@ export default function IsoLandingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-2 text-center text-xs text-stone-700">
             <Info className="w-3.5 h-3.5 text-[#f15e1c] shrink-0" />
             <span>
-              <strong>Get audit-ready faster.</strong> Certification is issued by an accredited certification body.
+              <strong>Get audit-ready faster.</strong> Certification is issued by an accredited body.
             </span>
           </div>
         </div>
@@ -324,10 +324,10 @@ export default function IsoLandingPage() {
                 Audience Fit
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
-                Built for SaaS and IT Teams That Need a Structured Approach to Information Security
+                Built for SaaS and IT Teams Without a Full Compliance Department
               </h2>
               <p className="text-sm sm:text-base text-stone-600 mt-2">
-                Designed to support teams preparing for Stage 1, Stage 2, or surveillance audits without multiplying administrative overhead.
+                Designed to help lean engineering and security teams organize risks, Annex A controls, and audit workpapers without managing fragmented spreadsheets or hiring an army of consultants.
               </p>
             </div>
 
@@ -384,10 +384,10 @@ export default function IsoLandingPage() {
                   Transparent Commercial Proposal
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-stone-900">
-                  Need a scoped commercial proposal for your ISO 27001 audit cycle?
+                  Need a tailored commercial quote for your ISO 27001 audit cycle?
                 </h3>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-2xl">
-                  Schedule a 20-minute walkthrough to review your target framework scope, team size, and deployment model. We provide custom commercial terms following the session.
+                  Pricing depends on your requirements. Schedule a 20-minute walkthrough to review your target framework scope, team size, and deployment model. We provide a transparent, tailored quote following the session.
                 </p>
               </div>
               <a

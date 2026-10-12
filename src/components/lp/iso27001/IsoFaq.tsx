@@ -12,7 +12,7 @@ const FAQS: FaqItem[] = [
   {
     question: "How much does OMNiGRC cost?",
     answer:
-      "Pricing is customized based on your organization's specific scope—such as framework requirements (ISO 27001 standalone or cross-mapped with SOC 2/DPDP), user accounts, and deployment preference (Multi-Tenant SaaS or Dedicated Stack). Following your 20-minute product walkthrough, we provide a transparent, tailored commercial proposal reflecting your exact architecture.",
+      "Pricing depends on your requirements—including target framework scope (ISO 27001 standalone or cross-mapped with SOC 2/DPDP), user accounts, and deployment model (Multi-Tenant SaaS or Dedicated Stack). Following your 20-minute product walkthrough, we provide a transparent, tailored quote reflecting your exact architecture.",
   },
   {
     question: "What happens during the 20-minute demo?",
@@ -37,7 +37,7 @@ const FAQS: FaqItem[] = [
   {
     question: "Does OMNiGRC issue an ISO 27001 certificate?",
     answer:
-      "No. OMNiGRC is a compliance management software platform, not an accredited certification body. Official ISO/IEC 27001 certification audits are performed exclusively by accredited third-party certification bodies (such as BSI, TÜV, or Bureau Veritas). OMNiGRC helps you organize your risk register, SoA, and evidence workpapers so your team is audit-ready.",
+      "No. OMNiGRC is a compliance management software platform, not an accredited body. Official ISO/IEC 27001 certification audits are performed exclusively by accredited third-party certification bodies (such as BSI, TÜV, or Bureau Veritas). OMNiGRC helps you organize your risk register, SoA, and evidence workpapers so your team is audit-ready.",
   },
   {
     question: "What information is needed to get started?",
