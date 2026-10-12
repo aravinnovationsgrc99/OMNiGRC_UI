@@ -158,17 +158,23 @@ export const DpdpLeadForm: React.FC = () => {
           window.gtag("event", "generate_lead", {
             event_category: "Lead Generation",
             event_label: "DPDP Google Ads Landing Page",
+            source_page: "/lp/dpdp-compliance",
+            framework: "DPDP",
             value: 1,
           });
 
-          // Google Ads conversion event if conversion label configured via env
+          // Google Ads conversion event with route-specific or general fallback label
           const adsTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "AW-18503231155";
-          const adsConversionLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+          const adsConversionLabel =
+            process.env.NEXT_PUBLIC_GOOGLE_ADS_DPDP_CONVERSION_LABEL ||
+            process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+
           if (adsConversionLabel) {
             window.gtag("event", "conversion", {
               send_to: `${adsTagId}/${adsConversionLabel}`,
               value: 1.0,
               currency: "INR",
+              source_page: "/lp/dpdp-compliance",
             });
           }
         } catch (trackingErr) {

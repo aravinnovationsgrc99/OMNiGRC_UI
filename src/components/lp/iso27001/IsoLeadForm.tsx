@@ -134,19 +134,27 @@ export const IsoLeadForm: React.FC = () => {
       if (typeof window !== "undefined" && typeof (window as any).gtag === "function" && !hasFiredConversionRef.current) {
         hasFiredConversionRef.current = true;
         try {
+          // Standard lead generation event without PII
           (window as any).gtag("event", "generate_lead", {
             event_category: "Lead Generation",
             event_label: "ISO 27001 Google Ads Landing Page",
+            source_page: "/lp/iso-27001",
+            framework: "ISO 27001",
             value: 1,
           });
 
+          // Google Ads conversion event with route-specific or general fallback label
           const adsTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "AW-18503231155";
-          const adsConversionLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+          const adsConversionLabel =
+            process.env.NEXT_PUBLIC_GOOGLE_ADS_ISO_CONVERSION_LABEL ||
+            process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+
           if (adsConversionLabel) {
             (window as any).gtag("event", "conversion", {
               send_to: `${adsTagId}/${adsConversionLabel}`,
               value: 1.0,
               currency: "INR",
+              source_page: "/lp/iso-27001",
             });
           }
         } catch (trackingErr) {
