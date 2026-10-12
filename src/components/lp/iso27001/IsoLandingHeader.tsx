@@ -43,7 +43,7 @@ export const IsoLandingHeader: React.FC = () => {
           <button
             type="button"
             onClick={handleScrollToForm}
-            className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#f15e1c] hover:bg-[#d85016] text-white font-bold text-xs shadow-xs hover:shadow-sm transition-all cursor-pointer group"
+            className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#f15e1c] hover:bg-[#d85016] text-white font-bold text-xs shadow-xs hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[#f15e1c] focus:ring-offset-2 transition-all cursor-pointer group"
             aria-label="Scroll to demo booking form"
           >
             <span>Book a 20-Min Demo</span>

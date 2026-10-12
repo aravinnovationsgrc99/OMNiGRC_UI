@@ -75,7 +75,7 @@ export const IsoProductVisuals: React.FC = () => {
               </div>
 
               {/* Screenshot Preview */}
-              <div className="relative aspect-16/10 w-full bg-stone-100 overflow-hidden border-b border-[#f7d7b0]/40">
+              <div className="relative aspect-[16/10] w-full bg-stone-100 overflow-hidden border-b border-[#f7d7b0]/40">
                 <Image
                   src={item.imageSrc}
                   alt={item.altText}

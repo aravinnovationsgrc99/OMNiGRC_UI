@@ -107,7 +107,7 @@ export default function IsoLandingPage() {
                 <div className="block lg:hidden pt-2">
                   <a
                     href="#lead-form"
-                    className="inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl bg-[#f15e1c] text-white font-bold text-sm shadow-sm hover:shadow transition-all"
+                    className="inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl bg-[#f15e1c] text-white font-bold text-sm shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[#f15e1c] focus:ring-offset-2 transition-all"
                   >
                     <span>Book a 20-Min Demo</span>
                     <ArrowRight className="w-4 h-4" />
@@ -392,7 +392,7 @@ export default function IsoLandingPage() {
               </div>
               <a
                 href="#lead-form"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#2e936f] hover:bg-[#25785a] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow transition-all shrink-0 cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#2e936f] hover:bg-[#25785a] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow focus:outline-none focus:ring-2 focus:ring-[#2e936f] focus:ring-offset-2 transition-all shrink-0 cursor-pointer"
               >
                 <span>Book a 20-Min Demo</span>
                 <ArrowRight className="w-4 h-4" />

@@ -185,7 +185,8 @@ export const IsoLeadForm: React.FC = () => {
     return (
       <div
         id="lead-form"
-        className="w-full bg-white border border-[#2e936f]/40 rounded-2xl p-6 sm:p-8 shadow-sm relative overflow-hidden"
+        tabIndex={-1}
+        className="w-full bg-white border border-[#2e936f]/40 rounded-2xl p-6 sm:p-8 shadow-sm relative overflow-hidden focus:outline-none"
         role="region"
         aria-live="polite"
         aria-label="Demo request confirmation"
@@ -232,7 +233,8 @@ export const IsoLeadForm: React.FC = () => {
   return (
     <div
       id="lead-form"
-      className="w-full bg-white border border-[#f7d7b0] rounded-2xl p-5 sm:p-7 shadow-sm backdrop-blur-md relative"
+      tabIndex={-1}
+      className="w-full bg-white border border-[#f7d7b0] rounded-2xl p-5 sm:p-7 shadow-sm backdrop-blur-md relative focus:outline-none"
     >
       {/* Lead Form Header */}
       <div className="mb-5">
@@ -442,7 +444,7 @@ export const IsoLeadForm: React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#f15e1c] hover:bg-[#d85016] text-white font-bold text-sm shadow-sm hover:shadow transition-all disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer group"
+            className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#f15e1c] hover:bg-[#d85016] text-white font-bold text-sm shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[#f15e1c] focus:ring-offset-2 transition-all disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer group"
           >
             {isSubmitting ? (
               <>
