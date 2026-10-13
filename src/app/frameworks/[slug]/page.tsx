@@ -59,6 +59,8 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
     notFound();
   }
 
+  const isIso42001 = fw.slug === "iso-42001";
+
   return (
     <div className="min-h-screen bg-transparent text-[#0d1b36] dark:text-slate-100 selection:bg-[#F15E1C]/20 selection:text-[#0d1b36] dark:selection:text-white dark:selection:bg-teal/30 antialiased flex flex-col justify-between">
       <Header />
@@ -171,11 +173,17 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         {/* SECTION 2: APPLICABILITY */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
+            <div className={`text-center max-w-2xl mx-auto ${isIso42001 ? "mb-8 sm:mb-10 px-1 sm:px-0" : "mb-10"}`}>
+              <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block">
                 TARGET APPLICABILITY
               </span>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2">
+              <h2
+                className={
+                  isIso42001
+                    ? "text-[1.3rem] min-[375px]:text-[1.375rem] sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-center relative z-10"
+                    : "text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2"
+                }
+              >
                 Who Needs {fw.name}?
               </h2>
             </div>
@@ -196,7 +204,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
         {/* SECTION 3: KEY REQUIREMENTS & CONTROL DOMAINS */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-10">
+            <div className={`text-center max-w-3xl mx-auto ${isIso42001 ? "mb-8 sm:mb-10 px-1 sm:px-0" : "mb-10"}`}>
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
                 STRUCTURED CONTROL DOMAINS
               </span>
@@ -210,8 +218,16 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
             {/* Control Domains Grid */}
             <div className="mb-10">
-              <h3 className="font-mono text-xs text-[#0d1b36] dark:text-slate-300 uppercase font-bold tracking-wider mb-4 text-center">
-                Primary Control Domains (`controlDomains`)
+              <h3
+                className={
+                  isIso42001
+                    ? "font-mono text-xs sm:text-xs text-[#0d1b36] dark:text-slate-300 uppercase font-bold tracking-wide sm:tracking-wider mb-4 sm:mb-5 text-center whitespace-nowrap"
+                    : "font-mono text-xs text-[#0d1b36] dark:text-slate-300 uppercase font-bold tracking-wider mb-4 text-center"
+                }
+              >
+                {isIso42001
+                  ? "Primary Control Domains"
+                  : "Primary Control Domains (`controlDomains`)"}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {fw.controlDomains.map((domain, idx) => (
@@ -229,8 +245,16 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
             {/* Target Clauses / Controls */}
             <div>
-              <h3 className="font-mono text-xs text-[#0d1b36] dark:text-slate-300 uppercase font-bold tracking-wider mb-4 text-center">
-                Sample Requirement Mappings (`controls`)
+              <h3
+                className={
+                  isIso42001
+                    ? "font-mono text-xs sm:text-xs text-[#0d1b36] dark:text-slate-300 uppercase font-bold tracking-wide sm:tracking-wider mb-4 text-center whitespace-nowrap"
+                    : "font-mono text-xs text-[#0d1b36] dark:text-slate-300 uppercase font-bold tracking-wider mb-4 text-center"
+                }
+              >
+                {isIso42001
+                  ? "Sample Requirement Mappings"
+                  : "Sample Requirement Mappings (`controls`)"}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {fw.controls.map((ctrl, idx) => (
@@ -319,7 +343,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
             {/* OmniWorkflow Banner */}
             <div className="p-6 rounded-2xl bg-[#172a4d] border border-slate-700 mb-8">
               <span className="font-mono text-xs text-[#F15E1C] uppercase font-bold tracking-wider block mb-2">
-                Core Connected Workflow (`omniWorkflow`)
+                {isIso42001 ? "Core Connected Workflow" : "Core Connected Workflow (`omniWorkflow`)"}
               </span>
               <p className="text-sm sm:text-base text-slate-100 font-medium leading-relaxed">
                 "{fw.omniWorkflow}"

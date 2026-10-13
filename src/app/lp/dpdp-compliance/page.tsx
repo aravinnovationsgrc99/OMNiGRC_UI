@@ -162,7 +162,7 @@ export default function DpdpLandingPage() {
                   <div className="p-3 rounded-xl bg-[#2E936F]/10 dark:bg-teal/15 text-[#2E936F] dark:text-teal w-fit">
                     <FileText className="w-6 h-6" />
                   </div>
-                  <span className="font-mono text-[10px] font-bold uppercase text-[#2E936F] dark:text-teal-400 block">
+                  <span className="inline-flex items-center text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#2E936F]/10 text-[#1E6048] dark:bg-teal-950/40 dark:text-teal-300 border border-[#2E936F]/30 dark:border-teal-700/50 w-fit">
                     CONSENT TRACKING
                   </span>
                   <h3 className="text-lg font-bold text-navy-900 dark:text-white">
@@ -185,7 +185,7 @@ export default function DpdpLandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAB60A]/20 dark:bg-amber/15 text-navy-900 dark:text-amber w-fit">
                     <Users2 className="w-6 h-6" />
                   </div>
-                  <span className="font-mono text-[10px] font-bold uppercase text-[#D4521A] dark:text-amber block">
+                  <span className="inline-flex items-center text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FAB60A]/15 text-[#915B00] dark:bg-amber-950/40 dark:text-amber-300 border border-[#FAB60A]/30 dark:border-amber-800/50 w-fit">
                     VENDOR REGISTER
                   </span>
                   <h3 className="text-lg font-bold text-navy-900 dark:text-white">
@@ -208,7 +208,7 @@ export default function DpdpLandingPage() {
                   <div className="p-3 rounded-xl bg-[#F15E1C]/10 dark:bg-orange-500/15 text-[#F15E1C] w-fit">
                     <AlertTriangle className="w-6 h-6" />
                   </div>
-                  <span className="font-mono text-[10px] font-bold uppercase text-[#F15E1C] block">
+                  <span className="inline-flex items-center text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#F15E1C]/10 text-[#D4521A] dark:bg-orange-950/40 dark:text-orange-300 border border-[#F15E1C]/30 dark:border-orange-800/50 w-fit">
                     BREACH WORKFLOW
                   </span>
                   <h3 className="text-lg font-bold text-navy-900 dark:text-white">
@@ -304,11 +304,11 @@ export default function DpdpLandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {/* Provision 1 */}
               <div className="p-5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/80 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber">
+                <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1.5 xs:gap-2 mb-1">
+                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber tracking-tight">
                     DPDP Section 5 &amp; 6
                   </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300">
+                  <span className="self-start xs:self-auto inline-flex items-center text-[10.5px] sm:text-xs font-mono font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-[#2E936F]/10 text-[#1E6048] dark:bg-teal-950/50 dark:text-teal-300 border border-[#2E936F]/30 dark:border-teal-700/50 whitespace-nowrap shadow-2xs">
                     Consent &amp; Notice
                   </span>
                 </div>
@@ -323,11 +323,11 @@ export default function DpdpLandingPage() {
 
               {/* Provision 2 */}
               <div className="p-5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/80 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber">
+                <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1.5 xs:gap-2 mb-1">
+                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber tracking-tight">
                     DPDP Section 8(1) &amp; 8(2)
                   </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300">
+                  <span className="self-start xs:self-auto inline-flex items-center text-[10.5px] sm:text-xs font-mono font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-[#2E936F]/10 text-[#1E6048] dark:bg-teal-950/50 dark:text-teal-300 border border-[#2E936F]/30 dark:border-teal-700/50 whitespace-nowrap shadow-2xs">
                     Processor Oversight
                   </span>
                 </div>
@@ -342,11 +342,11 @@ export default function DpdpLandingPage() {
 
               {/* Provision 3 */}
               <div className="p-5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/80 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber">
+                <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1.5 xs:gap-2 mb-1">
+                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber tracking-tight">
                     DPDP Section 8(5)
                   </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300">
+                  <span className="self-start xs:self-auto inline-flex items-center text-[10.5px] sm:text-xs font-mono font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-[#2E936F]/10 text-[#1E6048] dark:bg-teal-950/50 dark:text-teal-300 border border-[#2E936F]/30 dark:border-teal-700/50 whitespace-nowrap shadow-2xs">
                     Security Safeguards
                   </span>
                 </div>
@@ -361,11 +361,11 @@ export default function DpdpLandingPage() {
 
               {/* Provision 4 */}
               <div className="p-5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/80 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber">
+                <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1.5 xs:gap-2 mb-1">
+                  <span className="font-mono text-xs font-bold text-[#D4521A] dark:text-amber tracking-tight">
                     DPDP Section 8(6)
                   </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-600 dark:text-slate-300">
+                  <span className="self-start xs:self-auto inline-flex items-center text-[10.5px] sm:text-xs font-mono font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-[#2E936F]/10 text-[#1E6048] dark:bg-teal-950/50 dark:text-teal-300 border border-[#2E936F]/30 dark:border-teal-700/50 whitespace-nowrap shadow-2xs">
                     Breach Notification
                   </span>
                 </div>
@@ -392,7 +392,7 @@ export default function DpdpLandingPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/90 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="space-y-2 text-center md:text-left">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#D4521A] dark:text-amber">
+                <span className="inline-flex items-center text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FAB60A]/15 text-[#915B00] dark:bg-amber-950/40 dark:text-amber-300 border border-[#FAB60A]/30 dark:border-amber-800/50 w-fit mb-2">
                   TRANSPARENT COMMERCIAL SCOPING
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-navy-900 dark:text-white">
