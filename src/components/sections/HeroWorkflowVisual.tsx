@@ -100,7 +100,7 @@ export const HeroWorkflowVisual: React.FC = () => {
       />
 
       {/* LIGHT-THEMED MAIN CONTAINER CARD */}
-      <div className="relative z-10 w-full rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-4 sm:p-6 md:p-8 shadow-2xl text-navy-900 dark:text-white flex flex-col justify-between gap-5 sm:gap-6">
+      <div className="relative z-10 w-full rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-4 sm:p-6 lg:p-6 xl:p-7 shadow-2xl text-navy-900 dark:text-white flex flex-col justify-between gap-5 sm:gap-6">
         
         {/* HEADER BAR: 3 STEP SELECTOR TABS */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-200 dark:border-navy-800 shrink-0">
@@ -187,7 +187,7 @@ export const HeroWorkflowVisual: React.FC = () => {
                     {/* Metric Card */}
                     <div className="h-[76px] sm:h-[84px] p-3.5 sm:p-4 rounded-xl bg-[#F8FAFC] dark:bg-navy-950 border border-slate-200 dark:border-navy-800 flex items-center justify-between gap-4 shadow-sm shrink-0">
                       <div className="min-w-0">
-                        <span className="text-[10px] sm:text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold truncate">
+                        <span className="text-[10px] sm:text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">
                           {s.highlightMetric.label}
                         </span>
                         <span className="text-2xl sm:text-3xl font-extrabold text-[#2E936F] leading-none block mt-1">
@@ -207,23 +207,23 @@ export const HeroWorkflowVisual: React.FC = () => {
                       return (
                         <div
                           key={itemIdx}
-                          className="h-[72px] sm:h-[76px] px-3 sm:px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-colors flex items-center justify-between gap-2.5 sm:gap-3 text-left shadow-sm"
+                          className="min-h-[72px] sm:min-h-[76px] px-3 sm:px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-colors flex items-center justify-between gap-2.5 sm:gap-3 text-left shadow-sm"
                         >
                           <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#E6F4EF] dark:bg-navy-900 border border-[#2E936F]/30 flex items-center justify-center shrink-0 text-[#2E936F]">
                               <ItemIcon className="h-4 w-4 sm:h-5 sm:w-5" />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <h4 className="text-xs sm:text-sm font-extrabold text-navy-900 dark:text-white leading-snug truncate">
+                              <h4 className="text-xs sm:text-sm font-extrabold text-navy-900 dark:text-white leading-snug">
                                 {item.label}
                               </h4>
-                              <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium leading-normal truncate">
+                              <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium leading-normal">
                                 {item.sub}
                               </p>
                             </div>
                           </div>
 
-                          <span className="px-2 sm:px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-[10px] sm:text-xs font-mono font-bold shrink-0 min-w-[70px] sm:min-w-[86px] text-center">
+                          <span className="px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-[10px] sm:text-xs font-mono font-bold shrink-0 whitespace-nowrap">
                             ✓ {item.status}
                           </span>
                         </div>
