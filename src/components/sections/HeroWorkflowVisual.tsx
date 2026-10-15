@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   Server,
   Zap,
@@ -34,7 +33,7 @@ const STEPS: StepData[] = [
     stepNumber: "01",
     badge: "INPUT",
     title: "Connect Infrastructure",
-    subtitle: "Cloud, databases, SaaS, and identity auto-linked into one inventory.",
+    subtitle: "Cloud, databases, SaaS, and identity auto-linked into one unified inventory.",
     icon: Server,
     accentColor: "#F15E1C",
     badgeBg: "bg-[#F15E1C]/10 border-[#F15E1C]/30 text-[#F15E1C]",
@@ -56,7 +55,7 @@ const STEPS: StepData[] = [
     badgeBg: "bg-[#2E936F]/10 border-[#2E936F]/30 text-[#2E936F]",
     visualItems: [
       { label: "ISO 27001 & ISO 42001", sub: "Access & Data Security Clauses", icon: CheckCircle2, status: "Mapped" },
-      { label: "SOC 2 Type II", sub: "Trust Services Criteria CC6.1 & CC9.1", icon: CheckCircle2, status: "Mapped" },
+      { label: "SOC 2 Type II", sub: "CC6.1 & CC9.1 Trust Criteria", icon: CheckCircle2, status: "Mapped" },
       { label: "GDPR & DPDP Act 2023", sub: "Data Protection Safeguards", icon: CheckCircle2, status: "Mapped" },
     ],
     highlightMetric: { value: "6-in-1", label: "Framework Crosswalk" },
@@ -66,7 +65,7 @@ const STEPS: StepData[] = [
     stepNumber: "03",
     badge: "OUTPUT",
     title: "Audit-Ready Posture",
-    subtitle: "Automated evidence gathering with zero last-minute audit stress.",
+    subtitle: "Automated evidence gathering with continuous proof and zero audit panic.",
     icon: ShieldCheck,
     accentColor: "#FAB60A",
     badgeBg: "bg-[#FAB60A]/15 border-[#FAB60A]/40 text-[#D4521A]",
@@ -92,10 +91,8 @@ export const HeroWorkflowVisual: React.FC = () => {
     return () => clearInterval(interval);
   }, [isPlaying]);
 
-  const current = STEPS[activeStep];
-
   return (
-    <div className="relative w-full max-w-5xl 2xl:max-w-6xl mx-auto my-3 sm:my-6 px-2 sm:px-4">
+    <div className="relative w-full max-w-5xl 2xl:max-w-6xl mx-auto my-3 sm:my-6 px-1 sm:px-2">
       {/* Soft Ambient Warm Aura */}
       <div
         aria-hidden="true"
@@ -103,19 +100,20 @@ export const HeroWorkflowVisual: React.FC = () => {
       />
 
       {/* LIGHT-THEMED MAIN CONTAINER CARD */}
-      <div className="relative z-10 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-4 sm:p-6 md:p-8 shadow-2xl text-navy-900 dark:text-white space-y-6">
+      <div className="relative z-10 w-full rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-4 sm:p-6 md:p-8 shadow-2xl text-navy-900 dark:text-white flex flex-col justify-between gap-5 sm:gap-6">
         
         {/* HEADER BAR: 3 STEP SELECTOR TABS */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-navy-800">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-200 dark:border-navy-800 shrink-0">
           <div className="flex items-center justify-between sm:justify-start gap-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F4EF] dark:bg-navy-800 border border-[#2E936F]/30 text-[#2E936F] dark:text-teal text-xs font-bold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F4EF] dark:bg-navy-800 border border-[#2E936F]/30 text-[#2E936F] dark:text-teal text-xs font-bold shrink-0">
               <span className="w-2 h-2 rounded-full bg-[#2E936F]" />
               <span>Compliance Pipeline</span>
             </div>
 
             <button
+              type="button"
               onClick={() => setIsPlaying(!isPlaying)}
-              className="sm:hidden text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-navy-900 flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-navy-800 border border-slate-200 dark:border-navy-700 font-semibold"
+              className="sm:hidden text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-navy-800 border border-slate-200 dark:border-navy-700 font-semibold"
             >
               {isPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
               <span>{isPlaying ? "Pause" : "Play"}</span>
@@ -123,117 +121,130 @@ export const HeroWorkflowVisual: React.FC = () => {
           </div>
 
           {/* Step Buttons (Desktop & Mobile Tabs) */}
-          <div className="grid grid-cols-3 gap-1.5 bg-slate-100 dark:bg-navy-950 p-1.5 rounded-xl border border-slate-200 dark:border-navy-800">
+          <div className="w-full sm:w-[320px] shrink-0 grid grid-cols-3 gap-1 sm:gap-1.5 bg-slate-100 dark:bg-navy-950 p-1 sm:p-1.5 rounded-xl border border-slate-200 dark:border-navy-800">
             {STEPS.map((s, idx) => {
               const isActive = activeStep === idx;
               const buttonText = idx === 0 ? "Connect" : idx === 1 ? "Map" : "Audit";
               return (
                 <button
                   key={s.id}
+                  type="button"
                   onClick={() => {
                     setActiveStep(idx);
                     setIsPlaying(false);
                   }}
-                  className={`flex items-center justify-center gap-1 sm:gap-2 px-2 sm:px-4 py-2.5 rounded-lg text-xs sm:text-sm font-extrabold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-1 sm:gap-1.5 px-1.5 sm:px-3 py-2 rounded-lg text-xs sm:text-sm font-bold transition-colors duration-150 select-none ${
                     isActive
-                      ? "bg-[#2E936F] text-white shadow-md scale-[1.01]"
+                      ? "bg-[#2E936F] text-white shadow-sm"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60"
                   }`}
                 >
-                  <span className="font-mono text-[10px] sm:text-xs opacity-80 shrink-0">{s.stepNumber}.</span>
-                  <span className="whitespace-normal text-center leading-snug">{buttonText}</span>
+                  <span className="font-mono text-[10px] sm:text-xs opacity-75 shrink-0">{s.stepNumber}.</span>
+                  <span className="whitespace-nowrap leading-none">{buttonText}</span>
                 </button>
               );
             })}
           </div>
         </div>
 
-        {/* ACTIVE STEP SPOTLIGHT CONTENT */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
-          >
-            {/* LEFT SIDE: STEP DETAILS & METRIC (5 COLS) */}
-            <div className="lg:col-span-5 space-y-4 text-left">
-              <div className="space-y-2">
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-mono font-extrabold border ${current.badgeBg}`}>
-                  STEP {current.stepNumber} • {current.badge}
-                </span>
-
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
-                  {current.title}
-                </h3>
-
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-                  {current.subtitle}
-                </p>
-              </div>
-
-              {/* Metric Card */}
-              <div className="p-4 rounded-xl bg-[#F8FAFC] dark:bg-navy-950 border border-slate-200 dark:border-navy-800 flex items-center justify-between gap-4 shadow-sm">
-                <div>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">
-                    {current.highlightMetric.label}
-                  </span>
-                  <span className="text-2xl sm:text-3xl font-extrabold text-[#2E936F]">
-                    {current.highlightMetric.value}
-                  </span>
-                </div>
-                <div className="w-10 h-10 rounded-xl bg-[#E6F4EF] dark:bg-[#2E936F]/20 border border-[#2E936F]/30 flex items-center justify-center shrink-0">
-                  <Check className="h-5 w-5 text-[#2E936F]" />
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT SIDE: 3 VISUAL EXPRESSIVE CARDS (7 COLS) */}
-            <div className="lg:col-span-7 space-y-3">
-              {current.visualItems.map((item, idx) => {
-                const ItemIcon = item.icon;
-                return (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, x: 15 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: idx * 0.08 }}
-                    className="p-3.5 sm:p-4 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-left shadow-sm"
-                  >
-                    <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="w-10 h-10 rounded-xl bg-[#E6F4EF] dark:bg-navy-900 border border-[#2E936F]/30 flex items-center justify-center shrink-0 text-[#2E936F]">
-                        <ItemIcon className="h-5 w-5" />
+        {/* ACTIVE STEP SPOTLIGHT CONTENT - STACKED GRID CELL (Zero Height Collapse / Constant Dimensions) */}
+        <div className="relative w-full grid grid-cols-1 grid-rows-1">
+          {STEPS.map((s, idx) => {
+            const isCurrent = activeStep === idx;
+            return (
+              <div
+                key={s.id}
+                className={`col-start-1 col-end-2 row-start-1 row-end-2 w-full transition-all duration-300 ease-in-out ${
+                  isCurrent
+                    ? "opacity-100 translate-y-0 pointer-events-auto z-10"
+                    : "opacity-0 translate-y-1 pointer-events-none z-0 invisible select-none"
+                }`}
+                aria-hidden={!isCurrent}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
+                  {/* LEFT SIDE: STEP DETAILS & METRIC (5 COLS) */}
+                  <div className="lg:col-span-5 flex flex-col justify-between space-y-4 text-left">
+                    <div className="space-y-2">
+                      <div className="h-6 flex items-center">
+                        <span className={`inline-block px-3 py-0.5 rounded-full text-xs font-mono font-extrabold border leading-none ${s.badgeBg}`}>
+                          STEP {s.stepNumber} • {s.badge}
+                        </span>
                       </div>
-                      <div className="min-w-0 flex-1">
-                        <h4 className="text-sm sm:text-base font-extrabold text-navy-900 dark:text-white leading-snug">
-                          {item.label}
-                        </h4>
-                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium leading-normal">
-                          {item.sub}
+
+                      <div className="min-h-[3.25rem] sm:min-h-[4.25rem] flex items-center">
+                        <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight sm:leading-snug">
+                          {s.title}
+                        </h3>
+                      </div>
+
+                      <div className="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
+                        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                          {s.subtitle}
                         </p>
                       </div>
                     </div>
 
-                    <span className="self-start sm:self-auto px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-xs font-mono font-bold shrink-0">
-                      ✓ {item.status}
-                    </span>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+                    {/* Metric Card */}
+                    <div className="h-[76px] sm:h-[84px] p-3.5 sm:p-4 rounded-xl bg-[#F8FAFC] dark:bg-navy-950 border border-slate-200 dark:border-navy-800 flex items-center justify-between gap-4 shadow-sm shrink-0">
+                      <div className="min-w-0">
+                        <span className="text-[10px] sm:text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold truncate">
+                          {s.highlightMetric.label}
+                        </span>
+                        <span className="text-2xl sm:text-3xl font-extrabold text-[#2E936F] leading-none block mt-1">
+                          {s.highlightMetric.value}
+                        </span>
+                      </div>
+                      <div className="w-10 h-10 rounded-xl bg-[#E6F4EF] dark:bg-[#2E936F]/20 border border-[#2E936F]/30 flex items-center justify-center shrink-0">
+                        <Check className="h-5 w-5 text-[#2E936F]" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* RIGHT SIDE: 3 VISUAL EXPRESSIVE CARDS (7 COLS) */}
+                  <div className="lg:col-span-7 space-y-3 flex flex-col justify-between">
+                    {s.visualItems.map((item, itemIdx) => {
+                      const ItemIcon = item.icon;
+                      return (
+                        <div
+                          key={itemIdx}
+                          className="h-[72px] sm:h-[76px] px-3 sm:px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-colors flex items-center justify-between gap-2.5 sm:gap-3 text-left shadow-sm"
+                        >
+                          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#E6F4EF] dark:bg-navy-900 border border-[#2E936F]/30 flex items-center justify-center shrink-0 text-[#2E936F]">
+                              <ItemIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-xs sm:text-sm font-extrabold text-navy-900 dark:text-white leading-snug truncate">
+                                {item.label}
+                              </h4>
+                              <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium leading-normal truncate">
+                                {item.sub}
+                              </p>
+                            </div>
+                          </div>
+
+                          <span className="px-2 sm:px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-[10px] sm:text-xs font-mono font-bold shrink-0 min-w-[70px] sm:min-w-[86px] text-center">
+                            ✓ {item.status}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
         {/* BOTTOM PROGRESS TRACKER & CONTROLS */}
-        <div className="pt-2 border-t border-slate-200 dark:border-navy-800 flex items-center justify-between text-xs font-mono text-slate-500 dark:text-slate-400">
+        <div className="pt-3 border-t border-slate-200 dark:border-navy-800 flex items-center justify-between text-xs font-mono text-slate-500 dark:text-slate-400 shrink-0">
           <div className="flex items-center gap-3">
             <span className="hidden sm:inline font-semibold">Click any step to explore:</span>
             <div className="flex items-center gap-1.5">
               {STEPS.map((_, idx) => (
                 <button
                   key={idx}
+                  type="button"
                   onClick={() => {
                     setActiveStep(idx);
                     setIsPlaying(false);
@@ -248,8 +259,9 @@ export const HeroWorkflowVisual: React.FC = () => {
           </div>
 
           <button
+            type="button"
             onClick={() => setIsPlaying(!isPlaying)}
-            className="hidden sm:flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-navy-900 transition-colors font-bold"
+            className="hidden sm:flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white transition-colors font-bold"
           >
             {isPlaying ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
             <span>{isPlaying ? "Pause Auto-Cycle" : "Play Auto-Cycle"}</span>

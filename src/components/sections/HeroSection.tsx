@@ -141,7 +141,7 @@ export const HeroSection: React.FC = () => {
           {/* RIGHT VISUAL: Compliance Pipeline Product Visual */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-6 w-full overflow-hidden flex items-center justify-center pt-0"
+            className="lg:col-span-6 w-full overflow-visible flex items-center justify-center pt-0"
           >
             <HeroWorkflowVisual />
           </motion.div>
