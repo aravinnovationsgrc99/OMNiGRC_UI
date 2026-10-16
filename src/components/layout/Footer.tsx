@@ -195,9 +195,9 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow OMNiGRC on X (formerly Twitter) (opens in new tab)"
-              className="w-11 h-11 rounded-xl bg-slate-900/10 dark:bg-slate-100/10 text-slate-900 dark:text-slate-100 border border-slate-900/20 dark:border-slate-100/30 hover:bg-slate-950 dark:hover:bg-white hover:text-white dark:hover:text-slate-950 hover:border-slate-950 dark:hover:border-white hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-slate-900/20 flex items-center justify-center transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[#F15E1C] shrink-0"
+              className="group w-11 h-11 rounded-xl bg-white/10 dark:bg-white/15 border border-white/25 dark:border-white/35 hover:bg-white dark:hover:bg-white hover:border-white dark:hover:border-white hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-white/20 flex items-center justify-center transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[#F15E1C] shrink-0"
             >
-              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 fill-white group-hover:!fill-black transition-colors duration-200" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </a>

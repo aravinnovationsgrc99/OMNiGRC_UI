@@ -6,9 +6,11 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
+  ChevronRight,
   Menu,
   X,
   Shield,
+  ShieldCheck,
   Sparkles,
   ArrowRight,
   Server,
@@ -107,46 +109,185 @@ export const Header: React.FC = () => {
                       <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4521A] dark:text-amber font-mono">
                         Ten Connected GRC Workflows
                       </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2.5">
-                        <Link href="/products/risk-register" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Risk Register</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">5x5 Scoring &amp; residual tracking</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                        <Link
+                          href="/products/risk-register"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                            <ShieldAlert className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Risk Register</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              5x5 Scoring &amp; residual tracking
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/asset-inventory" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Server className="h-3.5 w-3.5 text-[#2E936F]" /> Asset &amp; Inventory</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Cloud infra discovery &amp; ownership</p>
+
+                        <Link
+                          href="/products/asset-inventory"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                            <Server className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Asset &amp; Inventory</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Cloud infra discovery &amp; ownership
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/control-mapping" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Sparkles className="h-3.5 w-3.5 text-[#F15E1C]" /> Control Mapping</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Map once across frameworks</p>
+
+                        <Link
+                          href="/products/control-mapping"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                            <Sparkles className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Control Mapping</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Map once across frameworks
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/compliance-board" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><CalendarCheck className="h-3.5 w-3.5 text-[#2E936F]" /> Compliance Board</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">30/60/90-day testing cadence</p>
+
+                        <Link
+                          href="/products/compliance-board"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                            <CalendarCheck className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Compliance Board</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              30/60/90-day testing cadence
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/vulnerabilities" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><ShieldAlert className="h-3.5 w-3.5 text-[#F15E1C]" /> Vulnerabilities</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Asset-linked finding governance</p>
+
+                        <Link
+                          href="/products/vulnerabilities"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                            <ShieldAlert className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Vulnerabilities</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Asset-linked finding governance
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/vendors" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Globe className="h-3.5 w-3.5 text-[#2E936F]" /> Vendors</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Third-party supply chain risk</p>
+
+                        <Link
+                          href="/products/vendors"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                            <Globe className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Vendors</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Third-party supply chain risk
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/policies" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#F15E1C]" /> Policies</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Centralized review lifecycle</p>
+
+                        <Link
+                          href="/products/policies"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                            <FileCheck2 className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Policies</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Centralized review lifecycle
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/audits" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Award className="h-3.5 w-3.5 text-[#2E936F]" /> Audits</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Structured assessments &amp; workpapers</p>
+
+                        <Link
+                          href="/products/audits"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                            <Award className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Audits</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Structured assessments &amp; workpapers
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/remediation" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-[#F15E1C]" /> Remediation</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">Corrective action SLA tracking</p>
+
+                        <Link
+                          href="/products/remediation"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                            <Shield className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Remediation</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              Corrective action SLA tracking
+                            </p>
+                          </div>
                         </Link>
-                        <Link href="/products/evidence" className="p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 hover:border-teal/50 hover:shadow-md transition-all group">
-                          <div className="font-bold text-xs text-navy-900 dark:text-white group-hover:text-[#2E936F] flex items-center gap-1.5"><FileCheck2 className="h-3.5 w-3.5 text-[#2E936F]" /> Evidence References</div>
-                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">External evidence reference/index layer</p>
+
+                        <Link
+                          href="/products/evidence"
+                          className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                        >
+                          <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                            <FileCheck2 className="h-4 w-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                              <span className="truncate">Evidence References</span>
+                              <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                            </div>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                              External evidence reference/index layer
+                            </p>
+                          </div>
                         </Link>
                       </div>
                     </div>
@@ -194,44 +335,130 @@ export const Header: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[92vw] max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-teal/30 bg-white/95 dark:bg-[#16233F] p-6 shadow-2xl backdrop-blur-xl"
                   >
                     <div className="flex items-center justify-between border-b border-slate-200 dark:border-navy-700/60 pb-3 mb-4">
                       <div>
+                        <span className="font-mono text-xs uppercase tracking-wider text-[#D4521A] dark:text-amber font-semibold block mb-0.5">
+                          SUPPORTED STANDARDS
+                        </span>
                         <h4 className="font-bold text-navy-900 dark:text-white text-sm">Documented Framework Support</h4>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">Map once and align across core standards</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">Map once and align across core compliance baselines</p>
                       </div>
                       <Link
                         href="/frameworks"
-                        className="text-xs font-semibold text-[#2E936F] dark:text-teal hover:underline flex items-center gap-1"
+                        className="text-xs font-semibold text-[#2E936F] dark:text-teal hover:underline flex items-center gap-1 group shrink-0 ml-3"
                       >
-                        All Frameworks <ArrowRight className="h-3.5 w-3.5" />
+                        All Frameworks <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                       </Link>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      <Link href="/frameworks/iso-27001" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
-                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">ISO 27001:2022</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">ISMS Information Security Governance</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                      <Link
+                        href="/frameworks/iso-27001"
+                        className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                      >
+                        <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                          <ShieldCheck className="h-4 w-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                            <span className="truncate">ISO 27001:2022</span>
+                            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                            ISMS Information Security Governance
+                          </p>
+                        </div>
                       </Link>
-                      <Link href="/frameworks/soc-2" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
-                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">SOC 2 Type II</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">AICPA Trust Services Criteria</p>
+
+                      <Link
+                        href="/frameworks/soc-2"
+                        className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                      >
+                        <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                          <FileCheck2 className="h-4 w-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                            <span className="truncate">SOC 2 Type II</span>
+                            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                            AICPA Trust Services Criteria
+                          </p>
+                        </div>
                       </Link>
-                      <Link href="/frameworks/iso-42001" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
-                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">ISO 42001:2023</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">Artificial Intelligence Management (AIMS)</p>
+
+                      <Link
+                        href="/frameworks/iso-42001"
+                        className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                      >
+                        <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                          <Sparkles className="h-4 w-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                            <span className="truncate">ISO 42001:2023</span>
+                            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                            Artificial Intelligence Management (AIMS)
+                          </p>
+                        </div>
                       </Link>
-                      <Link href="/frameworks/gdpr" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
-                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">GDPR &amp; UK GDPR</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">EU &amp; UK Data Protection Governance</p>
+
+                      <Link
+                        href="/frameworks/gdpr"
+                        className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                      >
+                        <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                          <Globe className="h-4 w-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                            <span className="truncate">GDPR &amp; UK GDPR</span>
+                            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                            EU &amp; UK Data Protection Governance
+                          </p>
+                        </div>
                       </Link>
-                      <Link href="/frameworks/dpdp" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
-                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">DPDP Act 2023</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">Digital Personal Data Protection (India)</p>
+
+                      <Link
+                        href="/frameworks/dpdp"
+                        className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#2E936F]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                      >
+                        <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15 group-hover:scale-105 transition-transform">
+                          <Shield className="h-4 w-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#2E936F] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                            <span className="truncate">DPDP Act 2023</span>
+                            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#2E936F] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                            Digital Personal Data Protection (India)
+                          </p>
+                        </div>
                       </Link>
-                      <Link href="/frameworks/hipaa" className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-50 dark:bg-navy-900/60 hover:border-[#2E936F]/60 dark:hover:border-teal/60 hover:bg-[#F7D7B0]/30 transition-all">
-                        <span className="font-bold text-navy-900 dark:text-white text-xs block mb-0.5">HIPAA Security Rule</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">Healthcare ePHI Protection</p>
+
+                      <Link
+                        href="/frameworks/hipaa"
+                        className="group flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/60 hover:bg-white dark:hover:bg-navy-800/90 hover:border-[#F15E1C]/40 dark:hover:border-teal/50 hover:shadow-md transition-all"
+                      >
+                        <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15 group-hover:scale-105 transition-transform">
+                          <Award className="h-4 w-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-navy-900 dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-teal transition-colors flex items-center justify-between">
+                            <span className="truncate">HIPAA Security Rule</span>
+                            <ChevronRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-[#F15E1C] dark:group-hover:text-teal group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0 ml-1" />
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                            Healthcare ePHI Protection
+                          </p>
+                        </div>
                       </Link>
                     </div>
                   </motion.div>
@@ -383,46 +610,96 @@ export const Header: React.FC = () => {
               </button>
               {mobileExpandedSection === "workflows" && (
                 <div className="space-y-2 my-2 pl-2">
-                  <div className="grid grid-cols-1 gap-2">
-                    <Link href="/products/risk-register" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><ShieldAlert className="h-4 w-4 text-[#F15E1C]" /> Risk Register</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">5x5 Scoring &amp; residual tracking</p>
+                  <div className="grid grid-cols-1 gap-2.5">
+                    <Link href="/products/risk-register" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15">
+                        <ShieldAlert className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Risk Register</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">5x5 Scoring &amp; residual tracking</p>
+                      </div>
                     </Link>
-                    <Link href="/products/asset-inventory" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Server className="h-4 w-4 text-[#2E936F]" /> Asset &amp; Inventory</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Cloud infra discovery &amp; ownership</p>
+                    <Link href="/products/asset-inventory" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15">
+                        <Server className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Asset &amp; Inventory</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Cloud infra discovery &amp; ownership</p>
+                      </div>
                     </Link>
-                    <Link href="/products/control-mapping" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Sparkles className="h-4 w-4 text-[#F15E1C]" /> Control Mapping</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Map once across frameworks</p>
+                    <Link href="/products/control-mapping" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15">
+                        <Sparkles className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Control Mapping</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Map once across frameworks</p>
+                      </div>
                     </Link>
-                    <Link href="/products/compliance-board" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><CalendarCheck className="h-4 w-4 text-[#2E936F]" /> Compliance Board</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">30/60/90-day testing cadence</p>
+                    <Link href="/products/compliance-board" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15">
+                        <CalendarCheck className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Compliance Board</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">30/60/90-day testing cadence</p>
+                      </div>
                     </Link>
-                    <Link href="/products/vulnerabilities" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><ShieldAlert className="h-4 w-4 text-[#F15E1C]" /> Vulnerabilities</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Asset-linked finding governance</p>
+                    <Link href="/products/vulnerabilities" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15">
+                        <ShieldAlert className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Vulnerabilities</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Asset-linked finding governance</p>
+                      </div>
                     </Link>
-                    <Link href="/products/vendors" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Globe className="h-4 w-4 text-[#2E936F]" /> Vendors</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Third-party supply chain risk</p>
+                    <Link href="/products/vendors" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15">
+                        <Globe className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Vendors</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Third-party supply chain risk</p>
+                      </div>
                     </Link>
-                    <Link href="/products/policies" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><FileCheck2 className="h-4 w-4 text-[#F15E1C]" /> Policies</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Centralized review lifecycle</p>
+                    <Link href="/products/policies" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15">
+                        <FileCheck2 className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Policies</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Centralized review lifecycle</p>
+                      </div>
                     </Link>
-                    <Link href="/products/audits" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Award className="h-4 w-4 text-[#2E936F]" /> Audits</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Structured assessments &amp; workpapers</p>
+                    <Link href="/products/audits" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15">
+                        <Award className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Audits</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Structured assessments &amp; workpapers</p>
+                      </div>
                     </Link>
-                    <Link href="/products/remediation" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><Shield className="h-4 w-4 text-[#F15E1C]" /> Remediation</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Corrective action SLA tracking</p>
+                    <Link href="/products/remediation" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] shrink-0 mt-0.5 border border-orange-500/15">
+                        <Shield className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Remediation</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Corrective action SLA tracking</p>
+                      </div>
                     </Link>
-                    <Link href="/products/evidence" onClick={() => setMobileMenuOpen(false)} className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block">
-                      <div className="font-bold text-xs text-navy-900 dark:text-white flex items-center gap-2"><FileCheck2 className="h-4 w-4 text-[#2E936F]" /> Evidence References</div>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">External evidence reference layer</p>
+                    <Link href="/products/evidence" onClick={() => setMobileMenuOpen(false)} className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all">
+                      <div className="p-2 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal shrink-0 mt-0.5 border border-emerald-500/15">
+                        <FileCheck2 className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-bold text-xs text-navy-900 dark:text-white">Evidence References</div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">External evidence reference layer</p>
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -438,16 +715,27 @@ export const Header: React.FC = () => {
               </button>
               {mobileExpandedSection === "frameworks" && (
                 <div className="space-y-2 my-2 pl-2">
-                  <div className="grid grid-cols-1 gap-2">
-                    {FRAMEWORKS.map((fw) => (
+                  <div className="grid grid-cols-1 gap-2.5">
+                    {FRAMEWORKS.map((fw, idx) => (
                       <Link
                         key={fw.code}
                         href={`/frameworks/${fw.slug}`}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="p-3 rounded-xl border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-900/90 block"
+                        className="flex items-start gap-3 p-3 rounded-xl border border-slate-200/90 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/90 hover:bg-white dark:hover:bg-navy-800 transition-all"
                       >
-                        <span className="font-bold text-xs text-navy-900 dark:text-white block">{fw.name}</span>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{fw.oneLiner}</p>
+                        <div
+                          className={`p-2 rounded-lg shrink-0 mt-0.5 border ${
+                            idx % 2 === 0
+                              ? "bg-emerald-500/10 dark:bg-emerald-500/20 text-[#2E936F] dark:text-teal border-emerald-500/15"
+                              : "bg-orange-500/10 dark:bg-orange-500/20 text-[#F15E1C] border-orange-500/15"
+                          }`}
+                        >
+                          {idx % 2 === 0 ? <ShieldCheck className="h-4 w-4" /> : <Shield className="h-4 w-4" />}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <span className="font-bold text-xs text-navy-900 dark:text-white block">{fw.name}</span>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{fw.oneLiner}</p>
+                        </div>
                       </Link>
                     ))}
                   </div>

@@ -8,7 +8,6 @@ import {
   UserCheck,
   ArrowRight,
   ArrowDown,
-  Sparkles,
   Database,
 } from "lucide-react";
 
@@ -90,10 +89,6 @@ export const ControlMapping3DGraph: React.FC = () => {
     <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-4 sm:p-6 lg:p-8 shadow-xl overflow-hidden">
       {/* Section Header */}
       <div className="text-left w-full space-y-2 mb-4 sm:mb-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-amber-300/60 dark:border-amber-700/50 bg-[#FFFBEB] dark:bg-amber-950/30 text-amber-900 dark:text-amber-300 font-mono text-xs font-bold uppercase tracking-wider shadow-xs">
-          <Sparkles className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
-          <span>DATA MINIMIZATION ARCHITECTURE</span>
-        </div>
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug w-full">
           The Auditable AI Control Mapping Pipeline
         </h3>

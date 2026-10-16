@@ -336,14 +336,14 @@ footer h4 {
   font-weight: 700;
 }
 
-footer a {
+footer a:not(.shrink-0) {
   color: #94A3B8;
   transition: color 0.15s ease;
   min-height: unset;
   display: inline;
 }
 
-footer a:hover { color: #E2E8F0; }
+footer a:not(.shrink-0):hover { color: #E2E8F0; }
 
 html:not(.dark) footer {
   background-color: #0F172A !important;
@@ -352,8 +352,8 @@ html:not(.dark) footer {
 }
 
 html:not(.dark) footer h4 { color: #FFFFFF !important; }
-html:not(.dark) footer a  { color: #94A3B8; }
-html:not(.dark) footer a:hover { color: #E2E8F0; }
+html:not(.dark) footer a:not(.shrink-0)  { color: #94A3B8; }
+html:not(.dark) footer a:not(.shrink-0):hover { color: #E2E8F0; }
 
 /* ─────────────────────────────────────────────────────────
    GLASSMORPHISM & CARD STYLES

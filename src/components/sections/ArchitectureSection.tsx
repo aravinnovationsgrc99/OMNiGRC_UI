@@ -44,9 +44,9 @@ export const ArchitectureSection: React.FC = () => {
               <span className="px-3.5 py-1.5 rounded-full bg-[#FAB60A]/20 dark:bg-[#FAB60A]/25 border border-[#FAB60A]/40 dark:border-[#FAB60A]/50 text-[#b07d00] dark:text-[#FAB60A] text-xs font-mono font-black uppercase tracking-wider shadow-sm">
                 Core Operating Principle
               </span>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-900 dark:text-white tracking-tight leading-none">
-                AI ASSISTS. <br />
-                <span className="text-[#2E936F] dark:text-[#36B386]">HUMANS DECIDE.</span>
+              <h3 className="text-[22px] min-[360px]:text-2xl min-[410px]:text-[26px] sm:text-4xl lg:text-5xl font-black text-navy-900 dark:text-white tracking-tight leading-tight sm:leading-none">
+                <span className="block whitespace-nowrap">AI ASSISTS.</span>
+                <span className="block whitespace-nowrap text-[#2E936F] dark:text-[#36B386]">HUMANS DECIDE.</span>
               </h3>
               <p className="text-base sm:text-lg text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
                 OMNiGRC never makes unsupervised compliance decisions. AI provides advisory clause correlations, accompanied by confidence indicators. Human approval is mandatory.
