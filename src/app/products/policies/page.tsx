@@ -65,10 +65,10 @@ export default function PoliciesPage() {
       <main className="flex-1 w-full pt-16">
       <div className="flex flex-col w-full">
         {/*  SECTION 1: HERO & POLICY GOVERNANCE OVERVIEW  */}
-        <section className="relative w-full bg-[#faf8ff] dark:bg-[#0A111F] bg-grid-mesh-adaptive overflow-hidden">
-          {/* Ambient glow accents */}
-          <div aria-hidden="true" className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#F15E1C]/5 dark:bg-teal/8 blur-3xl pointer-events-none" />
-          <div aria-hidden="true" className="absolute top-1/2 -left-16 w-80 h-80 rounded-full bg-[#2E936F]/6 dark:bg-teal/5 blur-2xl pointer-events-none" />
+        <section className="relative w-full bg-transparent bg-grid-mesh-adaptive overflow-hidden">
+          {/* Ambient glowing motion orbs matching other pages */}
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 dark:bg-teal/10 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
+          <div className="absolute bottom-0 left-10 w-80 h-80 bg-[#2E936F]/10 dark:bg-teal/5 rounded-full blur-3xl pointer-events-none -z-10" />
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/*  Left Column: Copy & CTAs  */}
@@ -88,27 +88,27 @@ export default function PoliciesPage() {
                   <BookOpen className="h-4 w-4 shrink-0" />
                   <span>Explore Policy Manager Demo</span>
                 </a>
-                <a className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" href="/demo">
+                <a className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-white/80 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center border border-slate-200 dark:border-navy-700" href="/demo">
                   <FileText className="h-4 w-4 shrink-0" />
                   <span>View Sample Policy Library</span>
                 </a>
               </div>
               <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 overflow-hidden shadow-sm">
                   <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
                     <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Structured</span>
                   </div>
                   <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Version Control &amp; Diffs</span>
                 </div>
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 overflow-hidden shadow-sm">
                   <div className="flex items-center justify-center sm:justify-start gap-1 text-primary">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
                     <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Annual</span>
                   </div>
                   <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Automated Review Cadence</span>
                 </div>
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 overflow-hidden shadow-sm">
                   <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
                     <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Mapped</span>
@@ -120,7 +120,7 @@ export default function PoliciesPage() {
 
             {/*  Right Column: Visual Policy Preview Card  */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
+              <div className="relative w-full rounded-xl bg-white/90 dark:bg-[#0A111F]/95 backdrop-blur-sm p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>

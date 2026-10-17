@@ -38,14 +38,14 @@ export default function EvidencePage() {
             <div className="absolute top-48 left-10 w-80 h-80 bg-amber-600/10 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
             {/* Context Status Bar */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2 w-full">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-1 sm:pb-2 w-full">
               <div className="flex items-center justify-end gap-2 pb-2">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 font-mono text-xs font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
                     LIVE EVIDENCE INDEX
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-medium border border-slate-300 dark:border-navy-700">
+                  <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-medium border border-slate-300 dark:border-navy-700">
                     <Database className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal" />
                     APPEND-ONLY POSTGRESQL TIMELINE
                   </span>
@@ -54,10 +54,10 @@ export default function EvidencePage() {
             </section>
 
             {/* Hero Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-6 pb-6 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 w-max mb-4 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold mx-auto lg:mx-0">
+                  <div className="hidden sm:inline-flex items-center gap-2 w-max mb-4 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold mx-auto lg:mx-0">
                     <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                     Zero Proprietary Binary Storage Lock-In
                   </div>
@@ -152,8 +152,8 @@ export default function EvidencePage() {
             </section>
 
             {/* Architecture Comparison: Legacy Vaults vs OMNiGRC Pointer Model */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full">
-              <div className="text-center max-w-3xl mx-auto mb-10">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
+              <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
                 <span className="text-xs text-[#F15E1C] uppercase tracking-widest font-mono font-bold">
                   ARCHITECTURAL PRINCIPLE
                 </span>
@@ -169,10 +169,6 @@ export default function EvidencePage() {
                 {/* Legacy Way */}
                 <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-rose-200 dark:border-rose-950/60 shadow-md flex flex-col justify-between">
                   <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 text-rose-800 dark:text-rose-300 text-xs font-bold mb-6">
-                      <XCircle className="h-4 w-4 text-rose-600 dark:text-rose-400" />
-                      Traditional Heavyweight GRC Binary Uploads
-                    </div>
                     <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-left">
                       Duplicate PDFs, Data Leaks &amp; Orphaned Files
                     </h3>
@@ -199,10 +195,6 @@ export default function EvidencePage() {
                 {/* OMNiGRC Pointer Layer */}
                 <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-amber-200 dark:border-amber-950/60 shadow-md flex flex-col justify-between">
                   <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-amber-800 dark:text-amber-300 text-xs font-bold mb-6">
-                      <CheckCircle2 className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-                      OMNiGRC External Pointer &amp; Reference Layer
-                    </div>
                     <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-left">
                       Point Directly to Authoritative Systems of Record
                     </h3>
@@ -229,8 +221,8 @@ export default function EvidencePage() {
             </section>
 
             {/* 4-Step Pipeline */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full">
-              <div className="mb-8 text-center sm:text-left">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
+              <div className="mb-4 sm:mb-8 text-center sm:text-left">
                 <span className="text-xs text-[#2E936F] dark:text-teal uppercase tracking-widest font-mono font-bold">DETERMINISTIC LIFECYCLE</span>
                 <h2 className="text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold mt-1 text-left">
                   The 4-Step External Evidence Governance Pipeline
@@ -304,8 +296,8 @@ export default function EvidencePage() {
             </section>
 
             {/* Interactive Live Evidence Catalog Table View */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full">
-              <div className="bg-white dark:bg-navy-900 rounded-2xl shadow-md border border-slate-200 dark:border-navy-700 p-6 sm:p-8">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl shadow-md border border-slate-200 dark:border-navy-700 p-4 sm:p-8">
                 {/* Header & Controls */}
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
                   <div>
@@ -505,13 +497,9 @@ export default function EvidencePage() {
             </section>
 
             {/* Bottom CTA Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full">
-              <div className="p-8 sm:p-12 rounded-3xl bg-slate-900 dark:bg-black text-white border border-slate-800 shadow-xl text-center">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
+              <div className="p-6 sm:p-12 rounded-3xl bg-slate-900 dark:bg-black text-white border border-slate-800 shadow-xl text-center">
                 <div className="max-w-2xl mx-auto">
-                  <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-4">
-                    <CheckCircle2 className="h-4 w-4" />
-                    High-Assurance Compliance Indexing
-                  </span>
                   <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-left w-full">
                     Organize Evidence Without Spreadsheet Chaos or File-Dump Risks
                   </h2>
