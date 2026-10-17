@@ -51,10 +51,6 @@ export const HomeBlogSection: React.FC = async () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFEFE7] dark:bg-orange-950/40 border border-[#F15E1C]/30 text-[#F15E1C] text-xs font-mono font-extrabold uppercase tracking-wider">
-              <BookOpen className="h-3.5 w-3.5 shrink-0" />
-              <span>Editorial &amp; Insights</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
               From the GRC{" "}
               <span className="text-[#F15E1C]">Operations Desk.</span>

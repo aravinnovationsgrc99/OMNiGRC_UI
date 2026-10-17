@@ -69,51 +69,51 @@ export default function PoliciesPage() {
           {/* Ambient glow accents */}
           <div aria-hidden="true" className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#F15E1C]/5 dark:bg-teal/8 blur-3xl pointer-events-none" />
           <div aria-hidden="true" className="absolute top-1/2 -left-16 w-80 h-80 rounded-full bg-[#2E936F]/6 dark:bg-teal/5 blur-2xl pointer-events-none" />
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/*  Left Column: Copy & CTAs  */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
-              <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-label-sm text-label-sm uppercase tracking-wider">
-                <FileText className="h-5 w-5 shrink-0" />
+            <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider">
+                <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 04: POLICY GOVERNANCE &amp; REVIEW CADENCE</span>
               </div>
-              <h1 className="font-headline-xl text-headline-xl text-slate-900 dark:text-white font-bold tracking-tight">
-                Centralized Policy Lifecycle, Ownership &amp; <span className="text-primary">Review Cadence</span>
+              <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+                Centralized Policy Lifecycle, <span className="text-primary">Ownership &amp; Review Cadence</span>
               </h1>
-              <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 max-w-2xl">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
                 Bridge the gap between static policy documents and operational execution. OMNiGRC links corporate policies directly to regulatory framework clauses, technical controls, and employee attestation tracking.
               </p>
-              <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all" href="#policy-explorer">
-                  <BookOpen className="h-5 w-5 shrink-0" />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
+                <a className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center" href="#policy-explorer">
+                  <BookOpen className="h-4 w-4 shrink-0" />
                   <span>Explore Policy Manager Demo</span>
                 </a>
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-label-md text-label-md font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors" href="/demo">
-                  <FileText className="h-5 w-5 shrink-0" />
+                <a className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" href="/demo">
+                  <FileText className="h-4 w-4 shrink-0" />
                   <span>View Sample Policy Library</span>
                 </a>
               </div>
-              <div className="grid grid-cols-3 gap-space-sm pt-space-md w-full max-w-xl">
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
-                  <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Structured</span>
+              <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Structured</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Version Control &amp; Diffs</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Version Control &amp; Diffs</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
-                  <div className="flex items-center gap-1 text-primary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Annual</span>
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 text-primary">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Annual</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Automated Review Cadence</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Automated Review Cadence</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
-                  <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Mapped</span>
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Mapped</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Control &amp; Framework Bindings</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Control &amp; Framework Bindings</span>
                 </div>
               </div>
             </div>
@@ -168,8 +168,10 @@ export default function PoliciesPage() {
               <History className="h-5 w-5 shrink-0" />
               <span>End-to-End Governance</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">The 5-Stage Policy Governance Lifecycle</h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl">Transform policy management from isolated PDF storage into an active, auditable governance workflow.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              The 5-Stage Policy Governance Lifecycle
+            </h2>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">Transform policy management from isolated PDF storage into an active, auditable governance workflow.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
@@ -217,8 +219,10 @@ export default function PoliciesPage() {
               <BookOpen className="h-5 w-5 shrink-0" />
               <span>Interactive Policy Manager</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">Active Policy Explorer &amp; Detail Matrix</h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl">Select a corporate policy below to inspect current versions, staff attestation progress, and linked framework safeguards.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              Active Policy Explorer &amp; Detail Matrix
+            </h2>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">Select a corporate policy below to inspect current versions, staff attestation progress, and linked framework safeguards.</p>
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
@@ -265,7 +269,7 @@ export default function PoliciesPage() {
               {/*  Card 3: POL-OPS-08  */}
               <div 
                 onClick={() => setSelectedPolicyId('POL-OPS-08')}
-                className={`cursor-pointer p-space-md rounded-xl bg-white dark:bg-[#0A111F] border transition-all ${selectedPolicyId === 'POL-OPS-08' ? 'border-primary ring-2 ring-primary/20 shadow-md border-l-4' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md'}`}
+                className={`cursor-pointer p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all ${selectedPolicyId === 'POL-OPS-08' ? 'border-primary ring-2 ring-primary/20 shadow-md border-l-4' : ''}`}
               >
                 <div className="flex items-start justify-between">
                   <div>
@@ -328,21 +332,23 @@ export default function PoliciesPage() {
               <ShieldCheck className="h-5 w-5 shrink-0" />
               <span>Architectural Rigor</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">Core Capabilities Built for Governance Rigor</h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">Ensure policy compliance is auditable, actionable, and aligned across all organizational departments.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              Core Capabilities Built for Governance Rigor
+            </h2>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Ensure policy compliance is auditable, actionable, and aligned across all organizational departments.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Framework Clause Binding</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Map specific policy clauses directly to ISO 27001, SOC 2, and DPDP Act requirements to demonstrate complete coverage to auditors.</p>
+              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Framework Clause Binding</h3>
+              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Map specific policy clauses directly to ISO 27001, SOC 2, and DPDP Act requirements to demonstrate complete coverage to auditors.</p>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Automated Attestation Workflows</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Track staff policy sign-offs and send automated reminders to ensure high employee attestation rates across departments.</p>
+              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Automated Attestation Workflows</h3>
+              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Track staff policy sign-offs and send automated reminders to ensure high employee attestation rates across departments.</p>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Revision Audit History</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Maintain an unbroken history of policy edits, owner reviews, and executive approvals for external audit inspection.</p>
+              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Revision Audit History</h3>
+              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Maintain an unbroken history of policy edits, owner reviews, and executive approvals for external audit inspection.</p>
             </div>
           </div>
         </section>
@@ -350,8 +356,10 @@ export default function PoliciesPage() {
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="font-headline-lg text-headline-lg font-bold">Bring Structure to Organizational Policies</h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Connect policies directly to your active controls and framework requirements in OMNiGRC.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+              Bring Structure to Organizational Policies
+            </h2>
+            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Connect policies directly to your active controls and framework requirements in OMNiGRC.</p>
             <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
               <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
                 Schedule Policy Governance Demo

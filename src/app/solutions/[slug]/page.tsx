@@ -254,12 +254,12 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
 
       <main className="w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             {/* Left Content */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
                 <span className="font-mono text-xs font-semibold tracking-wider uppercase">
@@ -267,26 +267,26 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-6">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center sm:text-left">
                 {sol.title}
               </h1>
 
-              <p className="text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mb-8 leading-relaxed">
+              <p className="text-left text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mb-6 sm:mb-8 leading-relaxed">
                 {sol.desc}
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-2.5 sm:gap-4 mb-6 sm:mb-8 w-full">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-center"
                 >
                   <CalendarCheck className="h-4 w-4" />
                   <span>Request Solution Walkthrough</span>
                 </Link>
                 <a
                   href="#solution-details"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all border border-slate-200 dark:border-navy-700/60"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all border border-slate-200 dark:border-navy-700/60 text-center"
                 >
                   <span>Explore Capabilities</span>
                   <ArrowRight className="h-4 w-4" />
@@ -294,7 +294,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               </div>
 
               {/* Pillars */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 sm:gap-3">
                 {sol.heroPillars.map((p, pIdx) => (
                   <div key={pIdx} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm text-xs font-mono font-semibold text-[#0d1b36] dark:text-slate-200">
                     <CheckCircle2 className="h-3.5 w-3.5 text-[#006c4d] dark:text-teal-400" />
@@ -306,7 +306,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
 
             {/* Right Telemetry Visual Card */}
             <div className="lg:col-span-5 relative">
-              <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
+              <div className="p-5 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#006c4d] dark:bg-teal-500" />
@@ -359,23 +359,23 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 2: THE PROBLEM VS SOLUTION */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 OPERATIONAL TRANSFORM
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white mt-2">
                 From Friction &amp; Drift to Connected Governance
               </h2>
-              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
+              <p className="text-left sm:text-center text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
                 See how OMNiGRC addresses core team friction with structured, automated workflows.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* Challenges Card */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-5 sm:p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 font-mono text-xs font-bold mb-6">
                     <AlertTriangle className="h-3.5 w-3.5" /> Traditional Operational Friction
@@ -386,9 +386,9 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                         <div className="p-1 rounded-full bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 mt-0.5 shrink-0">
                           <AlertTriangle className="h-4 w-4" />
                         </div>
-                        <div>
-                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">{c.title}</h4>
-                          <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed">{c.desc}</p>
+                        <div className="w-full">
+                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-center sm:text-left">{c.title}</h4>
+                          <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left">{c.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -397,7 +397,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               </div>
 
               {/* Solutions Card */}
-              <div className="bg-white dark:bg-navy-900 rounded-2xl p-space-card border border-[#ffdbcf] dark:border-orange-500/20 shadow-sm flex flex-col justify-between">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl p-5 sm:p-space-card border border-[#ffdbcf] dark:border-orange-500/20 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#95f6cb] dark:bg-teal-950/40 text-[#00513a] dark:text-teal-400 font-mono text-xs font-bold mb-6">
                     <CheckCircle2 className="h-3.5 w-3.5" /> Connected OMNiGRC Solution
@@ -408,9 +408,9 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                         <div className="p-1 rounded-full bg-[#95f6cb] dark:bg-teal-950/50 text-[#00513a] dark:text-teal-400 mt-0.5 shrink-0">
                           <CheckCircle2 className="h-4 w-4" />
                         </div>
-                        <div>
-                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">{s.title}</h4>
-                          <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed">{s.desc}</p>
+                        <div className="w-full">
+                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-center sm:text-left">{s.title}</h4>
+                          <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left">{s.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -422,13 +422,13 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 3: CAPABILITY MODULES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 CORE CAPABILITY MODULES
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white mt-2">
                 Everything Connected to Your Lifecycle
               </h2>
             </div>
@@ -437,7 +437,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               {sol.capabilities.map((cap, capIdx) => {
                 const IconComponent = cap.icon;
                 return (
-                  <div key={capIdx} className="bg-[#f1f3ff] dark:bg-navy-950/50 rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div key={capIdx} className="bg-[#f1f3ff] dark:bg-navy-950/50 rounded-2xl p-5 sm:p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <div className="p-2.5 rounded-xl bg-white dark:bg-navy-900 text-[#F15E1C] dark:text-orange-400 shadow-sm border border-slate-200 dark:border-navy-700/60">
@@ -447,8 +447,8 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                           {cap.tag}
                         </span>
                       </div>
-                      <h3 className="text-base font-bold text-[#0d1b36] dark:text-white mb-2">{cap.title}</h3>
-                      <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed">{cap.desc}</p>
+                      <h3 className="text-base font-bold text-[#0d1b36] dark:text-white mb-2 text-center sm:text-left">{cap.title}</h3>
+                      <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed text-left">{cap.desc}</p>
                     </div>
                   </div>
                 );
@@ -458,18 +458,18 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4">
               Ready to see {sol.title}?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
               Schedule a focused demonstration with a GRC specialist tailored to your team&apos;s operational scope.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-center"
               >
                 <span>Request Solution Walkthrough</span>
                 <ArrowRight className="ml-2 h-4 w-4" />

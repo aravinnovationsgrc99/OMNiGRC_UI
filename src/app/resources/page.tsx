@@ -84,28 +84,28 @@ export default function ResourcesHubPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm">
               <BookOpen className="h-4 w-4 text-[#F15E1C]" />
               <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                 GRC RESOURCE & KNOWLEDGE HUB
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
               Practical guides & operational frameworks for lean GRC teams.
             </h1>
 
-            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
+            <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-left sm:text-center">
               Explore canonical framework guides, product workflow walkthroughs, and practical GRC implementation methodologies.
             </p>
 
-            <div className="max-w-xl mx-auto p-4 rounded-2xl bg-white dark:bg-navy-900 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-md flex items-center justify-between gap-4">
-              <div className="flex items-center gap-3 text-left">
-                <div className="p-2.5 rounded-xl bg-[#ffdbcf] dark:bg-orange-950/40 text-[#F15E1C]">
+            <div className="max-w-xl mx-auto p-4 rounded-2xl bg-white dark:bg-navy-900 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3 text-left w-full sm:w-auto">
+                <div className="p-2.5 rounded-xl bg-[#ffdbcf] dark:bg-orange-950/40 text-[#F15E1C] shrink-0">
                   <Sparkles className="h-5 w-5" />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ export default function ResourcesHubPage() {
               </div>
               <Link
                 href="/resources/blog"
-                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors flex items-center gap-1 shrink-0"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors flex items-center justify-center gap-1 shrink-0 text-center"
               >
                 <span>Visit Blog</span>
                 <ChevronRight className="h-3.5 w-3.5" />
@@ -125,20 +125,20 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* FEATURED EDITORIAL ARTICLES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-10 text-center sm:text-left">
               <div>
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block">
                   FEATURED EDITORIAL ARTICLES
                 </span>
-                <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                   In-Depth Strategy &amp; GRC Best Practices
                 </h2>
               </div>
               <Link
                 href="/resources/blog"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
+                className="inline-flex items-center justify-center sm:justify-start gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
               >
                 <span>Browse All Articles</span>
                 <ChevronRight className="h-4 w-4" />
@@ -213,20 +213,20 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 1: CANONICAL FRAMEWORK GUIDES INDEX */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-10 text-center sm:text-left">
               <div>
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block">
                   CANONICAL FRAMEWORK GUIDES
                 </span>
-                <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                   Educational Framework Taxonomies
                 </h2>
               </div>
               <Link
                 href="/frameworks"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
+                className="inline-flex items-center justify-center sm:justify-start gap-1.5 text-xs font-bold text-[#F15E1C] dark:text-orange-400 hover:text-[#ce4700] dark:hover:text-orange-300 transition-colors"
               >
                 <span>View Frameworks Hub</span>
                 <ChevronRight className="h-4 w-4" />
@@ -238,7 +238,7 @@ export default function ResourcesHubPage() {
                 <Link
                   key={fw.code}
                   href={`/frameworks/${fw.slug}`}
-                  className="p-space-card rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-5 sm:p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
@@ -250,11 +250,11 @@ export default function ResourcesHubPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-1">
+                    <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-1 text-left">
                       {fw.name}
                     </h3>
-                    <p className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-semibold mb-2">{fw.headerDesc}</p>
-                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">{fw.oneLiner}</p>
+                    <p className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-semibold mb-2 text-left">{fw.headerDesc}</p>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-left">{fw.oneLiner}</p>
                   </div>
 
                   <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-xs font-bold text-[#F15E1C] dark:text-orange-400">
@@ -268,16 +268,16 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 2: CANONICAL WORKFLOW MODULES INDEX */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
                 WORKFLOW & PRODUCT MODULES
               </span>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                 10 Connected GRC Operating Modules
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left sm:text-center">
                 Detailed product documentation for OMNiGRC's core workflow modules.
               </p>
             </div>
@@ -289,7 +289,7 @@ export default function ResourcesHubPage() {
                   href={`/products/${p.slug}`}
                   className="p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
-                  <div>
+                  <div className="text-left">
                     <span className="font-mono text-[10px] text-[#F15E1C] font-bold uppercase tracking-wider block mb-1">
                       MODULE {p.badge}
                     </span>
@@ -311,21 +311,21 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 3: OPERATIONAL METHODOLOGY GUIDES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest">
                 OPERATIONAL WHITEPAPERS
               </span>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight">
                 Practical Implementation Guidance
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 sm:mb-12">
               {whitepapers.map((wp, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-[#faf8ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
-                  <div>
+                <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-[#faf8ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
+                  <div className="text-left">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-2.5 py-0.5 rounded bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold">
                         {wp.category}
@@ -335,7 +335,7 @@ export default function ResourcesHubPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white mb-2">{wp.title}</h3>
+                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white mb-2">{wp.title}</h3>
                     <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-6">{wp.desc}</p>
                   </div>
 
@@ -351,17 +351,17 @@ export default function ResourcesHubPage() {
             </div>
 
             {/* Planned Resources (Clearly tagged) */}
-            <div className="p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-200 dark:border-navy-700/60">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#f1f3ff] dark:bg-navy-950/40 border border-slate-200 dark:border-navy-700/60">
               <div className="flex items-center gap-2 mb-4">
                 <Clock className="h-4 w-4 text-[#F15E1C]" />
-                <h3 className="font-mono text-xs font-bold text-[#0d1b36] dark:text-slate-200 uppercase tracking-wider">
+                <h3 className="font-mono text-xs font-bold text-[#0d1b36] dark:text-slate-200 uppercase tracking-wider text-left">
                   Upcoming & Planned Resources (In Development)
                 </h3>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {plannedResources.map((pr, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60">
+                  <div key={idx} className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 text-left">
                     <span className="px-2 py-0.5 rounded bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-mono text-[9px] font-bold uppercase mb-2 inline-block">
                       {pr.status}
                     </span>
@@ -375,21 +375,23 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4 text-center leading-tight">
               Need custom framework mapping assistance?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto text-left sm:text-center">
               Our team can walk you through crosswalking your existing policies and asset registers across target frameworks.
             </p>
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
-            >
-              <span>Request Framework Walkthrough</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <div className="flex justify-center w-full">
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
+              >
+                <span>Request Framework Walkthrough</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

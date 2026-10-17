@@ -75,11 +75,11 @@ export const DeploymentSection: React.FC = () => {
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-4 sm:space-y-6">
         {/* Section Header */}
         <div className="w-full text-left space-y-1.5">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
+          <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full text-left">
             Deploy Your Way: <span className="text-[#2E936F]">Cloud Speed Or Air-Gapped Sovereignty.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl md:mx-auto">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl text-left">
             From fast multi-tenant SaaS onboarding to fully isolated, regulator-grade infrastructure, pick the model that matches your compliance posture.
           </p>
         </div>
@@ -99,11 +99,11 @@ export const DeploymentSection: React.FC = () => {
               >
                 <Link
                   href={model.href}
-                  className={`h-full p-6 sm:p-8 rounded-3xl border bg-white dark:bg-navy-900/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${model.border} ${
+                  className={`h-full p-5 sm:p-7 rounded-3xl border bg-white dark:bg-navy-900/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${model.border} ${
                     model.featured ? "ring-2 ring-[#2E936F]/30" : ""
                   }`}
                 >
-                  <div className="space-y-5">
+                  <div className="space-y-4 sm:space-y-5">
                     {/* Header Badges */}
                     <div className="flex items-center justify-between gap-2">
                       <span className="text-xs font-mono font-extrabold text-slate-400 uppercase tracking-wider">
@@ -117,10 +117,10 @@ export const DeploymentSection: React.FC = () => {
                     {/* Model Title & Icon */}
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors text-left">
                           {model.title}
                         </h3>
-                        <p className="text-xs font-mono text-slate-400 mt-0.5 font-bold">{model.speed}</p>
+                        <p className="text-xs font-mono text-slate-400 mt-0.5 font-bold text-left">{model.speed}</p>
                       </div>
                       <div className={`p-3 rounded-2xl bg-slate-100 dark:bg-navy-800 ${model.accent} shrink-0`}>
                         <Icon className="h-6 w-6" />

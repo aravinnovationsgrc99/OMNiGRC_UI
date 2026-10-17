@@ -85,45 +85,45 @@ export default function DemoPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
               <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                 EXPERIENCE CONNECTED GRC
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
               Request a walkthrough of the OMNiGRC platform.
             </h1>
 
-            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
+            <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-left sm:text-center">
               See how OMNiGRC unifies risk registers, asset inventories, control mapping, and compliance testing in one connected operating workflow for lean teams.
             </p>
           </div>
         </section>
 
         {/* SECTION: INTAKE FORM & WALKTHROUGH SCOPE */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column: Expectations & Benefits */}
-            <div className="lg:col-span-6 space-y-8">
-              <div>
+            <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+              <div className="text-center sm:text-left">
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block mb-2">
                   WHAT TO EXPECT
                 </span>
-                <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight">
                   Tailored Technical Walkthrough
                 </h2>
-                <p className="text-sm text-[#5a4138] dark:text-slate-400 mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 mt-2 leading-relaxed text-left">
                   Our walkthroughs focus on operational capabilities, data isolation boundaries, and practical framework alignment without aggressive sales pitches.
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {[
                   "Live demonstration mapped to your target frameworks (ISO 27001, ISO 42001, SOC 2, GDPR, DPDP, HIPAA)",
                   "See the 5x5 Risk Matrix connected directly to asset repositories and protective controls",
@@ -135,15 +135,15 @@ export default function DemoPage() {
                     <div className="p-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 shrink-0 mt-0.5">
                       <CheckCircle2 className="h-4 w-4 text-[#F15E1C]" />
                     </div>
-                    <span className="text-[#0d1b36] dark:text-slate-200 text-xs font-semibold leading-relaxed">{benefit}</span>
+                    <span className="text-[#0d1b36] dark:text-slate-200 text-xs font-semibold leading-relaxed text-left">{benefit}</span>
                   </div>
                 ))}
               </div>
 
               {/* Product Truth Boundary Notice */}
-              <div className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 flex items-start gap-3">
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 flex items-start gap-3">
                 <Lock className="h-5 w-5 text-[#F15E1C] shrink-0 mt-0.5" />
-                <div>
+                <div className="text-left">
                   <p className="text-xs font-mono font-bold text-[#F15E1C] uppercase mb-0.5">CONFIDENTIAL & TENANT ISOLATED</p>
                   <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed">
                     Your request details remain confidential. OMNiGRC adheres strictly to application-level tenant isolation and data minimization standards.
@@ -154,11 +154,11 @@ export default function DemoPage() {
 
             {/* Right Column: Intake Form Card */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl border border-slate-300 dark:border-navy-700/60 bg-[#f1f3ff] dark:bg-navy-950/30 p-space-card shadow-xl">
-                <h3 className="text-2xl font-bold text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
-                <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
+              <div className="rounded-3xl border border-slate-300 dark:border-navy-700/60 bg-[#f1f3ff] dark:bg-navy-950/30 p-5 sm:p-6 md:p-8 shadow-xl">
+                <h3 className="text-xl sm:text-2xl font-bold text-center sm:text-left text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
+                <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 text-left">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 text-left">
                   <div>
                     <label className="block text-xs font-semibold text-[#0d1b36] dark:text-slate-300 mb-1">Full Name *</label>
                     <input

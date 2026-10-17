@@ -63,24 +63,24 @@ export const FinalCtaSection: React.FC = () => {
             transition={{ duration: 0.4 }}
             className="lg:col-span-8 w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/80 bg-gradient-to-b from-slate-50/90 via-white to-white dark:from-navy-900/90 dark:via-[#0D1626] dark:to-[#0A111F] p-6 sm:p-8 lg:p-10 shadow-xl backdrop-blur-md text-left flex flex-col justify-between"
           >
-            <div>
+            <div className="flex flex-col items-start text-left">
               {/* Primary Headline */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full mb-4">
+              <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full mb-3 sm:mb-4 text-left">
                 Your Next Audit Shouldn&apos;t Start With a Spreadsheet.
               </h2>
 
               {/* Subheading */}
-              <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full mb-6">
+              <p className="text-xs sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full mb-5 sm:mb-6 text-left">
                 Bring risk, assets, and controls into one workflow, built for lean security teams, built for SOC 2 Type II readiness, tenant isolation, and AI that drafts while your team approves.
               </p>
             </div>
 
             {/* CTAs Row */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4 w-full pt-2">
+            <div className="flex flex-col sm:flex-row items-start justify-start gap-3 sm:gap-4 w-full pt-2">
               {/* Primary CTA */}
               <Link
                 href="/demo"
-                className="w-full sm:w-auto h-[48px] sm:h-[54px] px-6 sm:px-7 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-md shadow-[#2E936F]/20 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group shrink-0"
+                className="w-full sm:w-auto max-w-sm h-[48px] sm:h-[54px] px-6 sm:px-7 rounded-xl bg-[#2E936F] hover:bg-[#237457] text-white font-extrabold text-xs sm:text-base flex items-center justify-center gap-2 shadow-md shadow-[#2E936F]/20 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 group text-center"
               >
                 <span>Request a Demo</span>
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -89,7 +89,7 @@ export const FinalCtaSection: React.FC = () => {
               {/* Secondary CTA */}
               <Link
                 href="/pricing"
-                className="w-full sm:w-auto h-[48px] sm:h-[54px] px-6 sm:px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-sm sm:text-base flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200 shrink-0"
+                className="w-full sm:w-auto max-w-sm h-[48px] sm:h-[54px] px-6 sm:px-7 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/80 text-navy-900 dark:text-slate-200 font-semibold text-xs sm:text-base flex items-center justify-center hover:border-[#2E936F] dark:hover:border-teal/50 hover:text-[#2E936F] dark:hover:text-white transition-all duration-200 text-center"
               >
                 <span>Explore Pricing &amp; Calculator</span>
               </Link>
@@ -116,7 +116,7 @@ export const FinalCtaSection: React.FC = () => {
               </span>
 
               {/* Newsletter Title */}
-              <h3 className="text-base sm:text-lg lg:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug">
+              <h3 className="text-base sm:text-lg lg:text-xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug text-left">
                 Monthly GRC insights on frameworks, clauses, and practical security operations.
               </h3>
 

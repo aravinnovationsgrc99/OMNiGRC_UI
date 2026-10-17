@@ -19,76 +19,82 @@ export default function AboutUsPage() {
           subtitle="We built OMNiGRC to eliminate operational chaos between disconnected spreadsheets and overly complex enterprise suites. We believe GRC should be structured, connected, and human-supervised."
           visual={<GenericHeroMotif type="about" />}
           cta={
-            <Link
-              href="/get-a-demo"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#D4521A] dark:bg-teal text-white font-bold text-xs hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-lg shadow-[#F15E1C]/20 dark:shadow-teal/20"
-            >
-              Learn More &amp; Request Demo <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="flex justify-center sm:justify-start w-full">
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#D4521A] dark:bg-teal text-white font-bold text-xs hover:bg-[#B8451A] dark:hover:bg-teal/90 shadow-lg shadow-[#F15E1C]/20 dark:shadow-teal/20 text-center"
+              >
+                <span>Learn More &amp; Request Demo</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           }
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
 
           {/* Pillars of Purpose Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-16">
             {[
               { label: "Core Documented Workflows", val: "4 Pillars" },
               { label: "Target Frameworks", val: "5 Standards" },
               { label: "Human Oversight", val: "Mandatory" },
               { label: "External Data Transmission", val: "Minimized" },
             ].map((stat, idx) => (
-              <div key={idx} className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 text-center">
-                <p className="text-2xl sm:text-3xl font-extrabold text-teal mb-1">{stat.val}</p>
-                <p className="text-xs font-mono text-slate-500 dark:text-slate-400">{stat.label}</p>
+              <div key={idx} className="p-4 sm:p-5 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 text-center">
+                <p className="text-xl min-[360px]:text-2xl sm:text-3xl font-extrabold text-teal mb-1">{stat.val}</p>
+                <p className="text-[11px] sm:text-xs font-mono text-slate-500 dark:text-slate-400">{stat.label}</p>
               </div>
             ))}
           </div>
 
           {/* Values Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <TiltCard className="p-space-card border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-16">
+            <TiltCard className="p-5 sm:p-6 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70 text-left">
               <Zap className="h-8 w-8 text-teal mb-4" />
-              <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Connected Workflows</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-navy-900 dark:text-white mb-2">Connected Workflows</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Risk registers, asset inventories, controls, and compliance testing belong together in one continuous operating layer.
               </p>
             </TiltCard>
 
-            <TiltCard className="p-space-card border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
+            <TiltCard className="p-5 sm:p-6 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70 text-left">
               <Lock className="h-8 w-8 text-amber mb-4" />
-              <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Data Minimization</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-navy-900 dark:text-white mb-2">Data Minimization</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 We believe external AI tools should receive only sanitized control text, keeping sensitive organizational data strictly isolated.
               </p>
             </TiltCard>
 
-            <TiltCard className="p-space-card border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70">
+            <TiltCard className="p-5 sm:p-6 border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/70 text-left">
               <Shield className="h-8 w-8 text-teal mb-4" />
-              <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Defensible Auditability</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-navy-900 dark:text-white mb-2">Defensible Auditability</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Compliance shouldn&apos;t be an annual scramble. Every review and decision is logged with full version history and auditor-ready proof.
               </p>
             </TiltCard>
           </div>
 
-          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-8 sm:p-12 text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-6 sm:p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center">
             <div className="mb-6 inline-flex items-center transition-transform hover:scale-[1.02]">
               <Image
                 src="/images/Powered-By-AravInnovation.png"
                 alt="Powered by Arav Innovations"
                 width={300}
                 height={90}
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-9 sm:h-12 w-auto object-contain"
               />
             </div>
-            <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">Ready to experience OMNiGRC?</h2>
-            <p className="text-slate-600 dark:text-slate-300 text-sm mb-6 max-w-xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white mb-3 text-center leading-tight">Ready to experience OMNiGRC?</h2>
+            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-6 max-w-xl mx-auto text-left sm:text-center">
               Schedule a personalized demonstration tailored to your target frameworks and team structure.
             </p>
-            <Link href="/get-a-demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20">
-              Request a Demo <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="flex justify-center w-full">
+              <Link href="/demo" className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20 text-center">
+                <span>Request a Demo</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </main>

@@ -25,51 +25,51 @@ export default function AuditsPage() {
           {/* Ambient glow accents */}
           <div aria-hidden="true" className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#2E936F]/5 dark:bg-teal/8 blur-3xl pointer-events-none" />
           <div aria-hidden="true" className="absolute bottom-0 right-8 w-72 h-72 rounded-full bg-[#F15E1C]/5 dark:bg-amber/5 blur-2xl pointer-events-none" />
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/*  Left Column: Copy & Actions  */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
-              <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-label-sm text-label-sm uppercase tracking-wider">
-                <ClipboardCheck className="h-5 w-5 shrink-0" />
+            <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider">
+                <ClipboardCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 07: INTERNAL &amp; EXTERNAL AUDIT MANAGEMENT</span>
               </div>
-              <h1 className="font-headline-xl text-headline-xl text-slate-900 dark:text-white font-bold tracking-tight">
-                Structured Internal &amp; External Audit <span className="text-primary">Orchestration</span>
+              <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+                Structured Internal &amp; External <span className="text-primary">Audit Orchestration</span>
               </h1>
-              <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 max-w-2xl">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
                 Streamline internal security assessments and external auditor workpaper requests. OMNiGRC links framework clauses directly to evidence records, sample testing sets, and corrective action items (CAPA).
               </p>
-              <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all" href="#workpaper-preview">
-                  <ClipboardCheck className="h-5 w-5 shrink-0" />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
+                <a className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center" href="#workpaper-preview">
+                  <ClipboardCheck className="h-4 w-4 shrink-0" />
                   <span>Explore Audit Workpaper Demo</span>
                 </a>
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-label-md text-label-md font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors" href="/demo">
-                  <FileText className="h-5 w-5 shrink-0" />
+                <a className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" href="/demo">
+                  <FileText className="h-4 w-4 shrink-0" />
                   <span>Request Auditor Portal Walkthrough</span>
                 </a>
               </div>
-              <div className="grid grid-cols-3 gap-space-sm pt-space-md w-full max-w-xl">
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
-                  <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Read-Only</span>
+              <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Read-Only</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Auditor Workspace Access</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Auditor Workspace Access</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
-                  <div className="flex items-center gap-1 text-primary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Linked</span>
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 text-primary">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Linked</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">CAPA &amp; Finding Tracking</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">CAPA &amp; Finding Tracking</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
-                  <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Structured</span>
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Structured</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Workpaper Evidence Index</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Workpaper Evidence Index</span>
                 </div>
               </div>
             </div>
@@ -124,8 +124,10 @@ export default function AuditsPage() {
               <History className="h-5 w-5 shrink-0" />
               <span>Structured Audit Execution</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">The Operational Audit Lifecycle</h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl">From initial audit scoping and evidence sampling to finding creation and final auditor verification.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              The Operational Audit Lifecycle
+            </h2>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">From initial audit scoping and evidence sampling to finding creation and final auditor verification.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
@@ -181,8 +183,10 @@ export default function AuditsPage() {
                 <FileText className="h-5 w-5 shrink-0" />
                 <span>Auditor Workpaper Workspace</span>
               </div>
-              <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">Structured Audit Workpaper Entry</h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">Experience how OMNiGRC organizes audit testing steps, evidence artifacts, and finding exceptions into clean auditor workpapers.</p>
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+                Structured Audit Workpaper Entry
+              </h2>
+              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">Experience how OMNiGRC organizes audit testing steps, evidence artifacts, and finding exceptions into clean auditor workpapers.</p>
             </div>
             <button 
               onClick={() => setShowMetadata(!showMetadata)}
@@ -248,35 +252,37 @@ export default function AuditsPage() {
               <Zap className="h-5 w-5 shrink-0" />
               <span>Audit Capabilities</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">4 Core Functional Audit Capabilities</h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">Purpose-built for compliance managers, internal auditors, and external audit partners.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              4 Core Functional Audit Capabilities
+            </h2>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Purpose-built for compliance managers, internal auditors, and external audit partners.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Auditor Workspace</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Grant external auditors read-only access to scoped evidence packages, sampling lists, and test workpapers.</p>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Auditor Workspace</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Grant external auditors read-only access to scoped evidence packages, sampling lists, and test workpapers.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Read-Only Auditor Portal</span>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Sample Population Management</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Generate and log sample populations (users, servers, pull requests) directly linked to control tests.</p>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Sample Population Management</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Generate and log sample populations (users, servers, pull requests) directly linked to control tests.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Sample List Indexing</span>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Finding &amp; CAPA Tracking</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Transform audit exceptions directly into assigned corrective action remediation items with SLA deadlines.</p>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Finding &amp; CAPA Tracking</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Transform audit exceptions directly into assigned corrective action remediation items with SLA deadlines.</p>
               </div>
               <span className="font-code-sm text-code-sm text-primary font-bold mt-space-md">Corrective Action Workflow</span>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">Multi-Framework Workpapers</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Reuse completed audit workpapers across ISO 27001, SOC 2, HIPAA, and DPDP Act compliance reviews.</p>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Multi-Framework Workpapers</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Reuse completed audit workpapers across ISO 27001, SOC 2, HIPAA, and DPDP Act compliance reviews.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Zero Duplicate Workpapers</span>
             </div>
@@ -286,8 +292,10 @@ export default function AuditsPage() {
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="font-headline-lg text-headline-lg font-bold">Organize Audits with Operational Precision</h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Eliminate pre-audit panic by connecting framework controls directly to audit workpapers and evidence in OMNiGRC.</p>
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+              Organize Audits with Operational Precision
+            </h2>
+            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Eliminate pre-audit panic by connecting framework controls directly to audit workpapers and evidence in OMNiGRC.</p>
             <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
               <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
                 Schedule Audit Management Demo

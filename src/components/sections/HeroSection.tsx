@@ -69,42 +69,33 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-6 lg:gap-12 items-center">
           
           {/* LEFT CONTENT: Heading, Supporting Copy, CTAs */}
-          <div className="lg:col-span-6 space-y-6 text-left">
+          <div className="lg:col-span-6 space-y-4 sm:space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left w-full">
             {/* 1. Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.12] sm:leading-[1.10] text-left"
+              className="text-[1.65rem] min-[360px]:text-[1.82rem] min-[385px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.14] text-center lg:text-left w-full"
             >
-              Unified Risk, Asset, And Control Management for{" "}
-              <span className="inline-block relative text-[#F15E1C] dark:text-[#2E936F] mt-1 sm:mt-0">
-                Lean GRC Teams.
-                <svg
-                  className="absolute bottom-[-3px] sm:bottom-[-6px] left-0 w-full h-[4px] sm:h-[6px] overflow-visible pointer-events-none opacity-85"
-                  viewBox="0 0 100 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M1 5.5C25 2 75 7.5 99 2.5"
-                    stroke="#2E936F"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
+              <span className="block whitespace-nowrap">Unified Risk, Asset</span>
+              <span className="block whitespace-nowrap">And Control Management</span>
+              <span className="block whitespace-nowrap">
+                <span className="inline-block relative pb-1 sm:pb-1.5">
+                  <span>for </span>
+                  <span className="text-[#F15E1C] dark:text-[#F15E1C]">Lean GRC Teams.</span>
+                  <span className="absolute bottom-0 left-0 right-0 h-[2.5px] sm:h-[3px] bg-[#2E936F] rounded-full" />
+                </span>
               </span>
             </motion.h1>
 
             {/* 2. Supporting Copy */}
-            <motion.div variants={itemVariants} className="space-y-2 sm:space-y-3">
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-navy-900 dark:text-white tracking-tight leading-snug">
+            <motion.div variants={itemVariants} className="space-y-2.5 sm:space-y-3 w-full text-center lg:text-left">
+              <p className="text-base sm:text-xl md:text-2xl font-bold text-navy-900 dark:text-white tracking-tight leading-snug text-center lg:text-left">
                 AI does the heavy lifting.{" "}
                 <span className="text-[#F15E1C] font-extrabold">
                   You keep the final say.
                 </span>
               </p>
 
-              <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-md sm:max-w-lg lg:max-w-xl text-center lg:text-left mx-auto lg:mx-0">
                 Unified risk, asset, and control management, where Advisory AI drafts and recommends, and your team approves every action.
               </p>
             </motion.div>
@@ -112,14 +103,14 @@ export const HeroSection: React.FC = () => {
             {/* 3. Hero CTAs */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2"
+              className="flex flex-col sm:flex-row items-center lg:items-start justify-start gap-3 sm:gap-3.5 pt-2 sm:pt-3 w-full"
             >
               <Link href="/get-a-demo" className="w-full sm:w-auto">
                 <Button
                   variant="primary"
                   size="lg"
-                  className="w-full sm:w-auto h-[50px] sm:h-13 px-7 text-sm sm:text-base font-bold shadow-lg shadow-[#F15E1C]/20 hover:-translate-y-0.5 transition-all duration-200"
-                  rightIcon={<CalendarCheck className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
+                  className="w-full sm:w-auto h-[52px] sm:h-13 px-6 sm:px-7 text-sm sm:text-base font-bold rounded-2xl shadow-lg shadow-[#F15E1C]/20 hover:-translate-y-0.5 transition-all duration-200 text-center justify-center"
+                  rightIcon={<CalendarCheck className="h-5 w-5 shrink-0 ml-1" />}
                 >
                   Request A Walkthrough
                 </Button>
@@ -129,8 +120,8 @@ export const HeroSection: React.FC = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto h-[50px] sm:h-13 px-6 text-sm sm:text-base font-semibold border-slate-300 dark:border-navy-700/80 bg-white/80 dark:bg-navy-900/80 hover:bg-slate-100 dark:hover:bg-navy-800 hover:-translate-y-0.5 transition-all duration-200"
-                  rightIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />}
+                  className="w-full sm:w-auto h-[52px] sm:h-13 px-5 sm:px-6 text-sm sm:text-base font-bold rounded-2xl border-slate-300/80 dark:border-navy-700/80 bg-[#F5ECE5]/90 dark:bg-navy-900/80 hover:bg-[#EFE3D9] dark:hover:bg-navy-800 hover:-translate-y-0.5 transition-all duration-200 text-center justify-center text-navy-900 dark:text-slate-100"
+                  rightIcon={<ArrowRight className="h-5 w-5 shrink-0 ml-1" />}
                 >
                   See How It Works
                 </Button>

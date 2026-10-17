@@ -130,7 +130,7 @@ export function BlogListingClient({ initialPosts }: BlogListingClientProps) {
             </div>
           </div>
 
-          <div className="lg:col-span-5 p-space-card flex flex-col justify-between">
+          <div className="lg:col-span-5 p-5 sm:p-6 md:p-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-medium mb-3">
                 <span className="px-2.5 py-0.5 rounded-md bg-[#ffdbcf] dark:bg-orange-950/40 text-[#F15E1C] dark:text-orange-400 font-mono text-[11px] font-bold">

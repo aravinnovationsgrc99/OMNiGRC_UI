@@ -98,11 +98,11 @@ export const AudienceSection: React.FC = () => {
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
         {/* Section Header */}
         <div className="w-full text-left space-y-1.5">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
+          <h2 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full text-left">
             One workflow. <span className="text-[#F15E1C]">Every team size.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl text-left">
             From solo practitioner to security lead, OMNiGRC organizes risk, controls, and evidence around how you actually work.
           </p>
         </div>

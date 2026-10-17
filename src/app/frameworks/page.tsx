@@ -39,28 +39,28 @@ export default function FrameworksHubPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
               <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                 UNIFIED GOVERNANCE ARCHITECTURE
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
               Documented framework coverage. Map once across global standards.
             </h1>
 
-            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
+            <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-left sm:text-center">
               Maintain a single operational control baseline that crosswalks cleanly across ISO 27001, SOC 2, ISO 42001, GDPR, DPDP, and HIPAA. Advisory AI suggests; human oversight approves.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
               <Link
                 href="/demo"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
               >
                 <span>Request Framework Walkthrough</span>
                 <ArrowRight className="h-4 w-4" />
@@ -70,13 +70,13 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* INTERACTIVE 3D ORRERY SECTION */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-6">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 INTERACTIVE FRAMEWORK ORRERY
               </span>
-              <h2 className="text-2xl font-bold text-[#0d1b36] dark:text-white mt-1">Explore Framework Correlations</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#0d1b36] dark:text-white mt-1">Explore Framework Correlations</h2>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]">
               <FrameworkOrrery title="Documented Framework Alignment" />
@@ -85,24 +85,24 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* 6 FRAMEWORK GUIDES GRID */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 SUBSTANTIVE FRAMEWORK GUIDES
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
                 Explore Core Framework Taxonomies
               </h2>
-              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left sm:text-center">
                 Detailed educational and operational guides for security, data privacy, and artificial intelligence standards.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {FRAMEWORKS.map((fw) => (
-                <div key={fw.code} className="bg-[#f1f3ff] dark:bg-[#0A111F] rounded-2xl p-space-card border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                  <div>
+                <div key={fw.code} className="bg-[#f1f3ff] dark:bg-[#0A111F] rounded-2xl p-5 sm:p-6 border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div className="text-left">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-2.5 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-slate-300 font-mono text-[10px] font-bold uppercase border border-slate-200 dark:border-navy-700/60">
                         {fw.region}
@@ -147,18 +147,18 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* COMPARISON MATRIX TABLE */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 MAP-ONCE CROSSWALK MATRIX
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
                 Framework Taxonomies at a Glance
               </h2>
             </div>
 
-            <div className="bg-white dark:bg-navy-900 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-navy-700/60 overflow-x-auto">
+            <div className="bg-white dark:bg-navy-900 rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 dark:border-navy-700/60 overflow-x-auto">
               <table className="w-full text-left font-body-sm text-xs">
                 <thead className="bg-[#f1f3ff] dark:bg-navy-950/50 font-mono text-xs text-[#0d1b36] dark:text-white border-b border-slate-200 dark:border-navy-700/60">
                   <tr>
@@ -188,21 +188,23 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4 text-center leading-tight">
               Map once and satisfy global compliance standards.
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto text-left sm:text-center">
               Schedule a technical demonstration to see how OMNiGRC streamlines framework crosswalks with human oversight.
             </p>
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
-            >
-              <span>Request Framework Walkthrough</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <div className="flex justify-center w-full">
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
+              >
+                <span>Request Framework Walkthrough</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

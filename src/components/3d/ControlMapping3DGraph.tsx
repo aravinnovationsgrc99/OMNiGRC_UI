@@ -50,20 +50,20 @@ export const ControlMapping3DGraph: React.FC = () => {
   const renderCardContent = (s: typeof workflowSteps[0]) => {
     const Icon = s.icon;
     return (
-      <div className="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full space-y-3.5">
+      <div className="p-3 sm:p-4.5 rounded-2xl border border-slate-200/90 dark:border-navy-700/80 bg-white dark:bg-navy-900/90 shadow-sm flex flex-col justify-between h-full space-y-2.5 sm:space-y-3">
         {/* TOP SECTION: Icon on Left, STAGE + Title + Desc on Right */}
-        <div className="flex items-start gap-3 sm:gap-4 w-full">
+        <div className="flex items-start gap-3 sm:gap-3.5 w-full">
           {/* Soft Green Icon Square */}
-          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#E8F8F0] dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
-            <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+          <div className="w-9.5 h-9.5 sm:w-11 sm:h-11 rounded-xl bg-[#E8F8F0] dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
+            <Icon className="h-4.5 w-4.5 sm:h-5.5 sm:w-5.5" />
           </div>
 
           {/* Text Info */}
-          <div className="space-y-1 min-w-0 flex-1">
-            <span className="text-xs font-mono font-bold text-[#F15E1C] dark:text-amber uppercase tracking-wider block">
+          <div className="space-y-0.5 min-w-0 flex-1">
+            <span className="text-[11px] sm:text-xs font-mono font-bold text-[#F15E1C] dark:text-amber uppercase tracking-wider block">
               STAGE {s.step}
             </span>
-            <h4 className="font-extrabold text-base sm:text-lg text-navy-900 dark:text-white leading-snug">
+            <h4 className="font-extrabold text-sm sm:text-base lg:text-lg text-navy-900 dark:text-white leading-snug">
               {s.title}
             </h4>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium pt-0.5">
@@ -73,11 +73,11 @@ export const ControlMapping3DGraph: React.FC = () => {
         </div>
 
         {/* BOTTOM SECTION: Scope on Left, Pill Badge on Right */}
-        <div className="pt-2.5 sm:pt-3 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
-          <span className="text-xs font-mono text-slate-500 dark:text-slate-400 font-medium">
+        <div className="pt-2 sm:pt-2.5 border-t border-slate-100 dark:border-navy-700/60 flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
+          <span className="text-[11px] sm:text-xs font-mono text-slate-500 dark:text-slate-400 font-medium">
             {s.scope}
           </span>
-          <span className="text-xs font-mono font-semibold text-[#2E936F] dark:text-teal bg-[#E8F8F0] dark:bg-teal/15 px-2.5 sm:px-3 py-1 rounded-lg shrink-0">
+          <span className="text-[11px] sm:text-xs font-mono font-semibold text-[#2E936F] dark:text-teal bg-[#E8F8F0] dark:bg-teal/15 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-lg shrink-0">
             {s.badge}
           </span>
         </div>
@@ -86,13 +86,13 @@ export const ControlMapping3DGraph: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-4 sm:p-6 lg:p-8 shadow-xl overflow-hidden">
+    <div className="relative w-full rounded-3xl border border-slate-200/90 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]/95 p-3.5 sm:p-6 lg:p-8 shadow-xl overflow-hidden">
       {/* Section Header */}
       <div className="text-left w-full space-y-2 mb-4 sm:mb-6">
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug w-full">
+        <h3 className="text-xl min-[380px]:text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-snug w-full">
           The Auditable AI Control Mapping Pipeline
         </h3>
-        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium w-full">
+        <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium w-full">
           Explore each architectural stage to see how sensitive context is isolated before external model evaluation.
         </p>
       </div>
@@ -153,7 +153,7 @@ export const ControlMapping3DGraph: React.FC = () => {
       </div>
 
       {/* MOBILE UI TIMELINE LAYOUT (Cards stacked directly without side timeline) */}
-      <div className="space-y-3.5 sm:space-y-4 relative z-10 mb-6 md:hidden">
+      <div className="space-y-2.5 sm:space-y-3 relative z-10 mb-4 sm:mb-6 md:hidden">
         {workflowSteps.map((s, idx) => (
           <div key={idx} className="w-full">
             {renderCardContent(s)}
@@ -162,14 +162,14 @@ export const ControlMapping3DGraph: React.FC = () => {
       </div>
 
       {/* Bottom Callout Bar (2 Equal Columns on Desktop, Stacked on Mobile) */}
-      <div className="p-4 sm:p-5 rounded-2xl border border-[#D0F2E3] dark:border-navy-700/60 bg-[#F2FBF7] dark:bg-navy-900/90 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 items-center">
+      <div className="p-3 sm:p-4.5 rounded-2xl border border-[#D0F2E3] dark:border-navy-700/60 bg-[#F2FBF7] dark:bg-navy-900/90 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5 items-center">
         {/* Left Column: OMNIGRC CONTROLLED VPC & DATABASE */}
-        <div className="flex items-center gap-3.5">
-          <div className="w-10 h-10 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/60 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
-            <Database className="h-5 w-5" />
+        <div className="flex items-center gap-3 sm:gap-3.5">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/60 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
+            <Database className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
           </div>
           <div className="space-y-0.5 min-w-0">
-            <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal uppercase tracking-wider block">
+            <span className="text-[11px] sm:text-xs font-mono font-bold text-[#2E936F] dark:text-teal uppercase tracking-wider block">
               OMNiGRC CONTROLLED VPC &amp; DATABASE
             </span>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-snug">
@@ -179,12 +179,12 @@ export const ControlMapping3DGraph: React.FC = () => {
         </div>
 
         {/* Right Column: EXTERNAL STATELESS AI BOUNDARY */}
-        <div className="flex items-center gap-3.5 md:border-l border-[#D0F2E3] dark:border-navy-700/60 md:pl-5">
-          <div className="w-10 h-10 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/60 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
-            <Shield className="h-5 w-5" />
+        <div className="flex items-center gap-3 sm:gap-3.5 md:border-l border-[#D0F2E3] dark:border-navy-700/60 md:pl-5">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/60 text-[#2E936F] dark:text-teal-400 flex items-center justify-center shrink-0 border border-[#2E936F]/20">
+            <Shield className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
           </div>
           <div className="space-y-0.5 min-w-0">
-            <span className="text-xs font-mono font-bold text-[#2E936F] dark:text-teal uppercase tracking-wider block">
+            <span className="text-[11px] sm:text-xs font-mono font-bold text-[#2E936F] dark:text-teal uppercase tracking-wider block">
               EXTERNAL STATELESS AI BOUNDARY
             </span>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-snug">

@@ -69,39 +69,39 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-space-section overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
-            <div className={`${slug === "control-mapping" ? "lg:col-span-5" : "lg:col-span-7"} flex flex-col items-start text-left`}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
+            <div className={`${slug === "control-mapping" ? "lg:col-span-5" : "lg:col-span-7"} flex flex-col items-center lg:items-start text-center lg:text-left`}>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm mx-auto lg:mx-0">
                 <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
                 <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                   OMNiGRC WORKFLOW • {pillar.code}
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-[48px] lg:leading-[56px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-6">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center sm:text-left w-full">
                 {pillar.name}
               </h1>
 
-              <p className="text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mb-8 leading-relaxed">
+              <p className="text-xs sm:text-base text-[#5a4138] dark:text-slate-300 font-medium mb-6 leading-relaxed text-left w-full">
                 {pillar.desc}
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 w-full sm:w-auto mb-6">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
                 >
                   <CalendarCheck className="h-4 w-4" />
                   <span>Request Workflow Walkthrough</span>
                 </Link>
                 <a
                   href="#workflow-capabilities"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all border border-slate-200 dark:border-navy-700/60"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all border border-slate-200 dark:border-navy-700/60 text-xs sm:text-sm text-center shadow-sm"
                 >
                   <span>Explore Capabilities</span>
                   <ArrowRight className="h-4 w-4" />
@@ -175,9 +175,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   <div className="p-2.5 rounded-xl bg-[#ffdbcf] dark:bg-orange-950/30 text-[#F15E1C] dark:text-orange-400 shrink-0 font-mono text-xs font-bold">
                     0{idx + 1}
                   </div>
-                  <div>
-                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5">{feat.title}</h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed font-medium">{feat.desc}</p>
+                  <div className="w-full">
+                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5 text-center sm:text-left">{feat.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed font-medium text-left">{feat.desc}</p>
                   </div>
                 </div>
               ))}

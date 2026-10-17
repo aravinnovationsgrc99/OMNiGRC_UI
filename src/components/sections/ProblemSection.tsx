@@ -86,24 +86,25 @@ export const ProblemSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Heading & Subtitle (Vertically Centered on Desktop) */}
           <div className="lg:col-span-5 text-left space-y-3 sm:space-y-4 my-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
-              Compliance Doesn&apos;t Fail on Frameworks,<br className="hidden lg:block" />{" "}
-              <span className="text-[#F15E1C]">It Fails on Fragmentation.</span>
+            <h2 className="text-[1.55rem] min-[360px]:text-[1.75rem] min-[390px]:text-[1.95rem] min-[420px]:text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-left">
+              <span className="block whitespace-nowrap">Compliance Doesn&apos;t</span>
+              <span className="block whitespace-nowrap">Fail on Frameworks,</span>
+              <span className="block text-[#F15E1C] whitespace-nowrap">It Fails on Fragmentation.</span>
             </h2>
 
-            <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+            <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed text-left">
               OMNiGRC bridges the gap between disconnected spreadsheets and heavy enterprise suites.
             </p>
           </div>
 
           {/* Right Column: Toggle Button Bar + Card Table */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             {/* Top Segmented Tab Switcher */}
             <div className="flex justify-center lg:justify-start">
               <div className="w-full max-w-xl p-1.5 rounded-2xl bg-slate-200/80 dark:bg-navy-900 border border-slate-300/80 dark:border-navy-700/80 grid grid-cols-2 gap-1.5 shadow-inner">
                 <button
                   onClick={() => setViewState("fragmented")}
-                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                     viewState === "fragmented"
                       ? "bg-white dark:bg-navy-800 text-[#F15E1C] shadow-md border border-[#F15E1C]/30"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
@@ -114,7 +115,7 @@ export const ProblemSection: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setViewState("connected")}
-                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                     viewState === "connected"
                       ? "bg-[#2E936F] text-white shadow-md shadow-[#2E936F]/30"
                       : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
@@ -136,12 +137,12 @@ export const ProblemSection: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.35 }}
-                    className="rounded-3xl border border-amber-200/80 dark:border-rose-900/40 bg-[#FFFDFB] dark:bg-[#0D1526] p-5 sm:p-8 shadow-xl relative space-y-4 sm:space-y-5"
+                    className="rounded-2xl sm:rounded-3xl border border-amber-200/80 dark:border-rose-900/40 bg-[#FFFDFB] dark:bg-[#0D1526] p-4 sm:p-6 shadow-xl relative space-y-3 sm:space-y-4"
                   >
                     {/* Header Line inside Card */}
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 pb-4 border-b border-amber-200/60 dark:border-navy-700/80">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 pb-2.5 sm:pb-3 border-b border-amber-200/60 dark:border-navy-700/80">
                       <div className="flex items-center gap-2">
-                        <XCircle className="h-5 w-5 text-[#F15E1C] shrink-0" />
+                        <XCircle className="h-4 w-4 sm:h-5 sm:w-5 text-[#F15E1C] shrink-0" />
                         <span className="text-xs sm:text-sm font-mono font-black uppercase tracking-wider text-[#F15E1C]">
                           DISCONNECTED SYSTEMS &amp; FRICTION
                         </span>
@@ -152,28 +153,28 @@ export const ProblemSection: React.FC = () => {
                     </div>
 
                     {/* Vertical Stack of 4 Cards */}
-                    <div className="space-y-3">
+                    <div className="space-y-2 sm:space-y-2.5">
                       {fragmentedItems.map((item, idx) => {
                         const Icon = item.icon;
                         return (
                           <div
                             key={idx}
-                            className="p-4 sm:p-5 rounded-2xl border border-amber-200/60 dark:border-navy-800 bg-white dark:bg-[#0A111F]/80 flex items-start sm:items-center gap-3.5 sm:gap-4 shadow-sm hover:border-[#F15E1C]/40 transition-colors"
+                            className="p-3 sm:p-3.5 rounded-xl border border-amber-200/60 dark:border-navy-800 bg-white dark:bg-[#0A111F]/80 flex items-start sm:items-center gap-3 shadow-sm hover:border-[#F15E1C]/40 transition-colors"
                           >
-                            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFEFEA] dark:bg-rose-950/40 text-[#F15E1C] flex items-center justify-center shrink-0 border border-[#F15E1C]/20">
-                              <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FFEFEA] dark:bg-rose-950/40 text-[#F15E1C] flex items-center justify-center shrink-0 border border-[#F15E1C]/20">
+                              <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <div className="flex items-center justify-between gap-2 mb-1">
+                              <div className="flex items-center justify-between gap-2 mb-0.5">
                                 <h4 className="font-mono text-xs sm:text-sm font-extrabold text-[#F15E1C] uppercase tracking-wider truncate">
                                   {item.label}
                                 </h4>
-                                <span className="px-2.5 py-0.5 rounded-md bg-[#FFE4DE] dark:bg-rose-950/80 text-[#E5484D] dark:text-rose-300 text-[10px] sm:text-xs font-mono font-bold shrink-0">
+                                <span className="px-2 py-0.5 rounded-md bg-[#FFE4DE] dark:bg-rose-950/80 text-[#E5484D] dark:text-rose-300 text-[10px] sm:text-[11px] font-mono font-bold shrink-0">
                                   {item.badge}
                                 </span>
                               </div>
-                              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                              <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                                 {item.detail}
                               </p>
                             </div>
@@ -183,9 +184,9 @@ export const ProblemSection: React.FC = () => {
                     </div>
 
                     {/* Bottom Impact Banner Card */}
-                    <div className="p-4 sm:p-5 rounded-2xl border border-[#FDBAAB] dark:border-rose-900/60 bg-[#FFECE8] dark:bg-rose-950/30 flex items-center gap-3.5 sm:gap-4">
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FDBAAB]/40 dark:bg-rose-900/50 text-[#E5484D] dark:text-rose-300 flex items-center justify-center shrink-0">
-                        <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6" />
+                    <div className="p-3 sm:p-3.5 rounded-xl border border-[#FDBAAB] dark:border-rose-900/60 bg-[#FFECE8] dark:bg-rose-950/30 flex items-center gap-3">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FDBAAB]/40 dark:bg-rose-900/50 text-[#E5484D] dark:text-rose-300 flex items-center justify-center shrink-0">
+                        <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5" />
                       </div>
                       <p className="text-xs sm:text-sm font-extrabold text-[#E5484D] dark:text-rose-300 leading-snug">
                         Resulting Impact: Duplicate work, audit scrambles &amp; low posture confidence.
@@ -199,12 +200,12 @@ export const ProblemSection: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.35 }}
-                    className="rounded-3xl border border-[#2E936F]/40 dark:border-[#2E936F]/60 bg-[#F5FDF9] dark:bg-[#0A1A14] p-5 sm:p-8 shadow-xl relative space-y-4 sm:space-y-5"
+                    className="rounded-2xl sm:rounded-3xl border border-[#2E936F]/40 dark:border-[#2E936F]/60 bg-[#F5FDF9] dark:bg-[#0A1A14] p-4 sm:p-6 shadow-xl relative space-y-3 sm:space-y-4"
                   >
                     {/* Header Line inside Card */}
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 pb-4 border-b border-[#2E936F]/30 dark:border-[#2E936F]/30">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 pb-2.5 sm:pb-3 border-b border-[#2E936F]/30 dark:border-[#2E936F]/30">
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-[#2E936F] shrink-0" />
+                        <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-[#2E936F] shrink-0" />
                         <span className="text-xs sm:text-sm font-mono font-black uppercase tracking-wider text-[#2E936F] dark:text-teal-300">
                           OMNiGRC OPERATING LAYER
                         </span>
@@ -215,28 +216,28 @@ export const ProblemSection: React.FC = () => {
                     </div>
 
                     {/* Vertical Stack of 4 Cards */}
-                    <div className="space-y-3">
+                    <div className="space-y-2 sm:space-y-2.5">
                       {connectedItems.map((item, idx) => {
                         const Icon = item.icon;
                         return (
                           <div
                             key={idx}
-                            className="p-4 sm:p-5 rounded-2xl border border-[#2E936F]/30 dark:border-teal/30 bg-white dark:bg-[#0C241C] flex items-start sm:items-center gap-3.5 sm:gap-4 shadow-sm hover:border-[#2E936F] transition-colors"
+                            className="p-3 sm:p-3.5 rounded-xl border border-[#2E936F]/30 dark:border-teal/30 bg-white dark:bg-[#0C241C] flex items-start sm:items-center gap-3 shadow-sm hover:border-[#2E936F] transition-colors"
                           >
-                            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#E6F4EF] dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-400 flex items-center justify-center shrink-0 border border-[#2E936F]/30">
-                              <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#E6F4EF] dark:bg-emerald-950/60 text-[#2E936F] dark:text-emerald-400 flex items-center justify-center shrink-0 border border-[#2E936F]/30">
+                              <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <div className="flex items-center justify-between gap-2 mb-1">
+                              <div className="flex items-center justify-between gap-2 mb-0.5">
                                 <h4 className="font-mono text-xs sm:text-sm font-extrabold text-[#2E936F] dark:text-teal-300 uppercase tracking-wider truncate">
                                   {item.label}
                                 </h4>
-                                <span className="px-2.5 py-0.5 rounded-md bg-[#E6F4EF] dark:bg-emerald-950 text-[#2E936F] dark:text-emerald-300 text-[10px] sm:text-xs font-mono font-bold shrink-0">
+                                <span className="px-2 py-0.5 rounded-md bg-[#E6F4EF] dark:bg-emerald-950 text-[#2E936F] dark:text-emerald-300 text-[10px] sm:text-[11px] font-mono font-bold shrink-0">
                                   {item.badge}
                                 </span>
                               </div>
-                              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                              <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                                 {item.detail}
                               </p>
                             </div>
@@ -246,9 +247,9 @@ export const ProblemSection: React.FC = () => {
                     </div>
 
                     {/* Bottom Impact Banner Card */}
-                    <div className="p-4 sm:p-5 rounded-2xl border border-[#2E936F]/40 bg-[#E6F4EF] dark:bg-emerald-950/40 flex items-center gap-3.5 sm:gap-4">
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#2E936F]/20 text-[#2E936F] dark:text-emerald-300 flex items-center justify-center shrink-0">
-                        <Sparkles className="h-5 w-5 sm:h-6 sm:w-6" />
+                    <div className="p-3 sm:p-3.5 rounded-xl border border-[#2E936F]/40 bg-[#E6F4EF] dark:bg-emerald-950/40 flex items-center gap-3">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#2E936F]/20 text-[#2E936F] dark:text-emerald-300 flex items-center justify-center shrink-0">
+                        <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
                       </div>
                       <p className="text-xs sm:text-sm font-extrabold text-[#2E936F] dark:text-emerald-300 leading-snug">
                         Resulting Impact: Continuous audit readiness, zero scrambles &amp; live compliance.

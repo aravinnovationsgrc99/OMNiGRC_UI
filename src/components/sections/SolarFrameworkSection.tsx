@@ -24,11 +24,11 @@ export const SolarFrameworkSection: React.FC = () => {
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4">
         {/* Full-Width Aligned Section Header */}
         <div className="w-full text-left space-y-1.5">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full">
+          <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full text-left">
             Map once. <span className="text-[#2E936F] dark:text-[#36B386]">Satisfy six global standards.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl">
+          <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl text-left">
             Interactive control crosswalk engine aligning controls across ISO 27001, SOC 2, GDPR, HIPAA, DPDP, and ISO 42001.
           </p>
         </div>

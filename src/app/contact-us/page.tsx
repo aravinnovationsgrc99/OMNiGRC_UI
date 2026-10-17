@@ -66,14 +66,14 @@ export default function ContactUsPage() {
           visual={<GenericHeroMotif type="contact" />}
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-space-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {/* Contact Details */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-space-card rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4 shadow-sm">
+              <div className="p-5 sm:p-6 rounded-2xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/60 space-y-4 shadow-sm text-left">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal">
+                  <div className="p-2.5 rounded-xl bg-[#2E936F]/15 dark:bg-teal/15 text-[#2E936F] dark:text-teal shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
@@ -83,7 +83,7 @@ export default function ContactUsPage() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-[#FAB60A]/20 dark:bg-amber/15 text-navy-900 dark:text-amber">
+                  <div className="p-2.5 rounded-xl bg-[#FAB60A]/20 dark:bg-amber/15 text-navy-900 dark:text-amber shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -93,7 +93,7 @@ export default function ContactUsPage() {
                 </div>
               </div>
 
-              <div className="p-space-card rounded-2xl border border-[#2E936F]/30 dark:border-teal/30 bg-[#2E936F]/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80">
+              <div className="p-5 sm:p-6 rounded-2xl border border-[#2E936F]/30 dark:border-teal/30 bg-[#2E936F]/5 dark:bg-gradient-to-b dark:from-teal/10 dark:to-slate-900/80 text-left">
                 <Lock className="h-6 w-6 text-teal mb-2" />
                 <h4 className="font-bold text-navy-900 dark:text-white text-sm mb-1">Confidential &amp; Tenant-Isolated</h4>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -104,11 +104,11 @@ export default function ContactUsPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-7">
-              <div className="rounded-3xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 p-space-card shadow-xl">
+              <div className="rounded-3xl border border-cardBorderWarm dark:border-slate-800 bg-cardWarm dark:bg-slate-900/80 p-5 sm:p-6 md:p-8 shadow-xl text-left">
                 {submitted ? (
-                  <div className="p-8 text-center space-y-4">
+                  <div className="p-6 sm:p-8 text-center space-y-4">
                     <CheckCircle2 className="h-12 w-12 text-teal mx-auto" />
-                    <h3 className="text-2xl font-bold text-navy-900 dark:text-white">Message Sent!</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-navy-900 dark:text-white">Message Sent!</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300">
                       Thank you for reaching out to OMNiGRC. A GRC architect will respond within 2 business hours.
                     </p>

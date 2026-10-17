@@ -80,23 +80,23 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="w-full max-w-7xl 2xl:max-w-[1700px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight mb-3">
+            <div className="lg:col-span-7 text-center lg:text-left">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight mb-3 text-center lg:text-left leading-tight">
                 {fw.name} Framework Guide
               </h1>
 
-              <p className="font-mono text-sm text-[#F15E1C] dark:text-orange-400 font-semibold mb-2">
+              <p className="font-mono text-xs sm:text-sm text-[#F15E1C] dark:text-orange-400 font-semibold mb-2 text-center lg:text-left">
                 {fw.headerDesc}
               </p>
 
-              <p className="text-base sm:text-lg text-[#5a4138] dark:text-slate-300 leading-relaxed mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 leading-relaxed mb-4 text-left">
                 {fw.desc}
               </p>
 
               {/* Citations Preview Pill */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm mb-5">
-                <span className="font-mono text-xs text-[#5a4138] dark:text-slate-400 font-medium">Selected Framework Citations:</span>
-                <div className="flex items-center gap-1.5">
+              <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-3 sm:px-4 py-1.5 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm mb-5">
+                <span className="font-mono text-xs text-[#5a4138] dark:text-slate-400 font-medium">Selected Citations:</span>
+                <div className="flex flex-wrap items-center gap-1.5">
                   {fw.citations.map((c, idx) => (
                     <span key={idx} className="px-2 py-0.5 rounded bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-xs font-semibold">
                       {c}
@@ -105,17 +105,17 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-3 w-full">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-sm"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-sm text-center"
                 >
                   <span>Request Framework Walkthrough</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/frameworks"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 border border-slate-200 dark:border-navy-700/60 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all text-sm"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-[#0d1b36] dark:text-slate-200 bg-white dark:bg-navy-950 border border-slate-200 dark:border-navy-700/60 hover:bg-slate-50 dark:hover:bg-navy-900 transition-all text-sm text-center"
                 >
                   <span>View All Frameworks</span>
                 </Link>
@@ -442,21 +442,23 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
         {/* SECTION 10: CTA BANNER */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8">
-          <div className="w-full max-w-7xl 2xl:max-w-[1700px] mx-auto text-left">
-            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2.5 leading-tight break-words">
-              <span className="block">Operationalize {fw.name}</span>
-              <span className="block">with OMNiGRC.</span>
+          <div className="w-full max-w-7xl 2xl:max-w-[1700px] mx-auto text-center sm:text-left">
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2.5 leading-tight break-words text-center sm:text-left">
+              <span>Operationalize {fw.name} </span>
+              <span>with OMNiGRC.</span>
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 max-w-2xl leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 max-w-2xl leading-relaxed text-left sm:text-left">
               Schedule a technical demonstration to see how your controls and assets map to {fw.name} with Advisory AI and human review.
             </p>
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm"
-            >
-              <span>Request Framework Walkthrough</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <div className="flex justify-center sm:justify-start w-full">
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
+              >
+                <span>Request Framework Walkthrough</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

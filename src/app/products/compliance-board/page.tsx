@@ -29,8 +29,7 @@ import {
   Circle,
   AlertTriangle,
   Shield,
-  FileText,
-  Zap
+  FileText
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -45,26 +44,26 @@ export default function ComplianceBoardPage() {
       <main className="flex-1 w-full pt-16 bg-transparent min-h-screen">
 <div className="flex flex-col w-full">
 {/*  Top Hero Header Section with Asymmetric Balance  */}
-<section className="relative w-full overflow-hidden bg-white dark:bg-[#0A111F] bg-grid-mesh-adaptive py-space-section">
-<div className="max-w-[1440px] mx-auto px-8">
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<section className="relative w-full overflow-hidden bg-white dark:bg-[#0A111F] bg-grid-mesh-adaptive py-6 sm:py-10 md:py-16">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
 {/*  Text Column (7 Cols)  */}
-<div className="lg:col-span-7 flex flex-col items-start">
-<div className="inline-flex items-center gap-2 px-space-sm py-space-xs rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs tracking-wider uppercase mb-6">
-<Circle className="h-5 w-5 shrink-0" />
+<div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left">
+<div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-[10px] sm:text-xs tracking-wider uppercase mb-4 sm:mb-6 mx-auto sm:mx-0">
+<Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
             CORE WORKFLOW 04: OPERATIONAL TESTING &amp; CADENCE
           </div>
-<h1 className="text-4xl text-slate-900 dark:text-white tracking-tight mb-6 font-bold max-w-2xl">
-            Replace Pre-Audit Panic with a Continuous Compliance Board.
-          </h1>
-<p className="text-lg text-slate-600 dark:text-slate-300 max-w-xl mb-8 leading-relaxed">Eliminate pre-audit panic. OMNiGRC turns control tests, evidence collection, and vendor sign-offs into a predictable 30/60/90-day operational cadence.</p>
-<div className="flex flex-wrap items-center gap-4 mb-12">
-<a className="inline-flex items-center justify-center gap-2 px-space-lg py-4 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-sm hover:bg-teal-600 dark:hover:bg-teal-400 transition-all shadow-md" data-path="request-demo" href="#">
-<Circle className="h-5 w-5 shrink-0" />
+<h1 className="text-xl min-[360px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white tracking-tight mb-3 sm:mb-6 font-bold max-w-2xl leading-tight text-center sm:text-left">
+  Replace Pre-Audit Panic with a <span className="text-[#006c4d] dark:text-teal-400">Continuous Compliance Board.</span>
+</h1>
+<p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mb-6 sm:mb-8 leading-relaxed text-left">Eliminate pre-audit panic. OMNiGRC turns control tests, evidence collection, and vendor sign-offs into a predictable 30/60/90-day operational cadence.</p>
+<div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 mb-8 sm:mb-12 w-full [&>*]:w-full [&>*]:sm:w-auto [&>*]:max-w-sm [&>*]:text-center">
+<a className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-xs sm:text-sm font-semibold hover:bg-teal-700 dark:hover:bg-teal-400 transition-all shadow-md text-center" data-path="request-demo" href="/demo">
+<Circle className="h-4 w-4 shrink-0" />
               Explore Compliance Board Demo
             </a>
-<a className="inline-flex items-center justify-center gap-2 px-space-lg py-4 rounded-lg bg-slate-50 dark:bg-[#16233F] text-slate-900 dark:text-white text-sm hover:bg-slate-100 dark:bg-navy-800 transition-colors" href="#board-section">
-<Circle className="h-5 w-5 shrink-0" />
+<a className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-lg bg-slate-50 dark:bg-[#16233F] text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-100 dark:bg-navy-800 transition-colors shadow-sm text-center" href="#board-section">
+<Circle className="h-4 w-4 shrink-0" />
               See How It Works
             </a>
 </div>
@@ -96,51 +95,53 @@ export default function ComplianceBoardPage() {
 </div>
 </div>
 {/*  Operational Metrics Bar (Illustrative Sample Values)  */}
-<div className="mt-8 pt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-6 flex items-start gap-6 shadow-sm">
-<div className="p-space-xs rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300">
-<Circle className="h-5 w-5 shrink-0" />
+<div className="mt-6 sm:mt-8 pt-4 sm:pt-6 grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-4 sm:p-5 lg:p-6 flex items-start gap-4 sm:gap-6 shadow-sm">
+<div className="p-2 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 shrink-0">
+<Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
 </div>
 <div>
-<div className="text-xs text-slate-600 dark:text-slate-300 uppercase tracking-wider">Cadence Architecture</div>
-<div className="text-xl text-slate-900 dark:text-white font-semibold">Rolling 30 / 60 / 90 Days</div>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-space-xs">Quarterly audits transformed into deterministic weekly sync rituals.</p>
+<div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-wider font-semibold">Cadence Architecture</div>
+<div className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold">Rolling 30 / 60 / 90 Days</div>
+<p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">Quarterly audits transformed into deterministic weekly sync rituals.</p>
 </div>
 </div>
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-6 flex items-start gap-6 shadow-sm">
-<div className="p-space-xs rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300">
-<Network className="h-5 w-5 shrink-0" />
-</div>
-<div>
-<div className="text-xs text-slate-600 dark:text-slate-300 uppercase tracking-wider">Deterministic Flow</div>
-<div className="text-xl text-slate-900 dark:text-white font-semibold">Req → Task → Owner → Proof</div>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-space-xs">Unbroken accountability from auditor request to engineering output.</p>
-</div>
-</div>
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-6 flex items-start gap-6 shadow-sm">
-<div className="p-space-xs rounded-lg bg-tertiary-fixed text-on-tertiary-fixed">
-<Circle className="h-5 w-5 shrink-0" />
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-4 sm:p-5 lg:p-6 flex items-start gap-4 sm:gap-6 shadow-sm">
+<div className="p-2 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 shrink-0">
+<Network className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
 </div>
 <div>
-<div className="text-xs text-slate-600 dark:text-slate-300 uppercase tracking-wider">Defensible Posture</div>
-<div className="text-xl text-slate-900 dark:text-white font-semibold">Defensible Historical Record</div>
-<p className="text-sm text-slate-600 dark:text-slate-300 mt-space-xs">Structured timestamps and logs ready for zero-friction sampling.</p>
+<div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-wider font-semibold">Deterministic Flow</div>
+<div className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold">Req → Task → Owner → Proof</div>
+<p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">Unbroken accountability from auditor request to engineering output.</p>
+</div>
+</div>
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-4 sm:p-5 lg:p-6 flex items-start gap-4 sm:gap-6 shadow-sm">
+<div className="p-2 rounded-lg bg-teal-50 dark:bg-teal-950/40 text-teal-800 dark:text-teal-300 shrink-0">
+<Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+</div>
+<div>
+<div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-wider font-semibold">Defensible Posture</div>
+<div className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold">Defensible Historical Record</div>
+<p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">Structured timestamps and logs ready for zero-friction sampling.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 {/*  Interactive 30/60/90 Compliance Board Feature Section  */}
-<section className="w-full py-16 md:py-24 bg-surface" id="board-section">
-<div className="max-w-[1440px] mx-auto px-8">
+<section className="w-full py-6 sm:py-10 md:py-16 bg-surface" id="board-section">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 {/*  Section Header  */}
-<div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+<div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
 <div>
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Interactive Workbench Preview</span>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-space-xs">Continuous Compliance Operational Board</h2>
-<p className="text-base text-slate-600 dark:text-slate-300 mt-space-xs">Click on any card to inspect control mapping, historical evidence hashes, and verification audit trails.</p>
+<span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest block text-center sm:text-left">Interactive Workbench Preview</span>
+<h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-2 sm:mt-3 tracking-tight leading-tight text-center sm:text-left">
+  Continuous Compliance Operational Board
+</h2>
+<p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-left">Click on any card to inspect control mapping, historical evidence hashes, and verification audit trails.</p>
 </div>
-<div className="flex items-center gap-2 self-start md:self-auto bg-white dark:bg-[#0A111F] p-space-xs rounded-lg shadow-sm">
+<div className="flex items-center gap-2 self-center sm:self-start md:self-auto bg-white dark:bg-[#0A111F] p-space-xs rounded-lg shadow-sm">
 <span className="inline-flex items-center gap-2 px-space-sm py-space-xs rounded bg-slate-200 dark:bg-navy-700 text-xs text-slate-900 dark:text-white font-medium">
 <span className="w-2 h-2 rounded-full bg-amber-600 dark:bg-amber-500"></span> Live Demo Sandbox
           </span>
@@ -152,123 +153,124 @@ export default function ComplianceBoardPage() {
 </div>
 </section>
 {/*  Editorial Section: The 7-Stage Continuous Compliance Lifecycle  */}
-<section className="w-full py-16 md:py-24 bg-white dark:bg-[#0A111F]">
-<div className="max-w-[1440px] mx-auto px-8">
-<div className="max-w-3xl mb-12">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Architectural Methodology</span>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-space-xs">The 7-Stage Continuous Compliance Lifecycle</h2>
-<p className="text-base text-slate-600 dark:text-slate-300 mt-space-xs">
+<section className="w-full py-6 sm:py-10 md:py-16 bg-white dark:bg-[#0A111F]">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-3xl mb-6 sm:mb-10 text-center sm:text-left">
+<span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest block">Architectural Methodology</span>
+<h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-2 sm:mt-3 tracking-tight leading-tight text-center sm:text-left">
+  The 7-Stage Continuous Compliance Lifecycle
+</h2>
+<p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-left leading-relaxed">
           Instead of episodic compliance sprints, every requirement is grounded in a deterministic operational lifecycle that moves reliably toward audit certainty.
         </p>
 </div>
 {/*  7-Stage Grid Sequence  */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 01</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Regulatory Clause</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Deconstruct SOC 2, ISO 27001, HIPAA, and DPDP mandates into concrete rules.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-slate-900 dark:text-white font-bold">Deterministic Mapping</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 02</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Operational Task</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Convert legal mandates into scheduled recurring 30/60/90-day sprint cards.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-slate-900 dark:text-white font-bold">Cadence Automation</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 03</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Assigned Owner</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Route each task directly to an engineer or lead with explicit SLA timelines.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-slate-900 dark:text-white font-bold">Role-Based SLA</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 04</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Evidence Vault</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Collect system configs, logs, and screenshots stamped with recorded timestamps.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-slate-900 dark:text-white font-bold">Proof Ingestion</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 05</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Testing &amp; Sanity</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Run automated checks and peer reviews to confirm full control efficacy.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-slate-900 dark:text-white font-bold">Dual-Control Audit</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 06</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Remediation Loop</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Auto-flag deviations and assign fixes before external auditors enter the room.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-slate-900 dark:text-white font-bold">Closed Feedback</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-6 rounded-xl shadow-sm flex flex-col justify-between lg:col-span-2"><div><div className="flex items-center justify-between mb-4"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">STAGE 07</span><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Audit-Ready Certified State</h3><p className="text-sm text-slate-900 dark:text-white font-medium">Export tamper-proof audit packages ready for instant external assessor sign-off.</p></div><div className="mt-6 pt-space-xs font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">Continuous Certification</div></div></div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6"><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 01</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Regulatory Clause</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Deconstruct SOC 2, ISO 27001, HIPAA, and DPDP mandates into concrete rules.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Deterministic Mapping</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 02</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Operational Task</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Convert legal mandates into scheduled recurring 30/60/90-day sprint cards.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Cadence Automation</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 03</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Assigned Owner</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Route each task directly to an engineer or lead with explicit SLA timelines.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Role-Based SLA</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 04</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Evidence Vault</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Collect system configs, logs, and screenshots stamped with recorded timestamps.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Proof Ingestion</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 05</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Testing &amp; Sanity</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Run automated checks and peer reviews to confirm full control efficacy.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Dual-Control Audit</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 06</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Remediation Loop</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Auto-flag deviations and assign fixes before external auditors enter the room.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Closed Feedback</div></div><div className="bg-slate-50 dark:bg-[#16233F] p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between lg:col-span-2"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">STAGE 07</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-center sm:text-left">Audit-Ready Certified State</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Export tamper-proof audit packages ready for instant external assessor sign-off.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">Continuous Certification</div></div></div>
 </div>
 </section>
 {/*  Editorial Visual Storytelling Section  */}
-<section className="w-full py-16 md:py-24 bg-surface">
-<div className="max-w-[1440px] mx-auto px-8">
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<section className="w-full py-6 sm:py-10 md:py-16 bg-surface">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
 <div className="lg:col-span-6">
-<img className="w-full h-96 object-cover rounded-xl shadow-md" data-alt="A modern enterprise security operations room with software engineers reviewing continuous compliance telemetry monitors, warm natural sunlight through floor to ceiling windows, deep slate and peach UI accents, professional high-assurance corporate technology atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6HdgaARVLFnE4KC7RQJAlAsSfE47ssBBdNQdRMbzA0aT0eo2YNwpSP6QKbWNkPEuPd47zsLKrXMFeWGibcMPPu-MwnM0MmNk0_ZAI0suc1c75Egygb0GlbsPcQ3JgPAgpplC3n7QcnsX5paKqMlKn94eXrbQ66o4tXct9WDcbzTjUJmb2xZAWgAqB94ejKwyIUbAjBAdfqTjDTa2mM6dQqoyjK2YyRXz4O0oyaaRKnplItxoAcrYezg" />
+<img className="w-full h-56 sm:h-72 lg:h-96 object-cover rounded-xl shadow-md" data-alt="A modern enterprise security operations room with software engineers reviewing continuous compliance telemetry monitors, warm natural sunlight through floor to ceiling windows, deep slate and peach UI accents, professional high-assurance corporate technology atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6HdgaARVLFnE4KC7RQJAlAsSfE47ssBBdNQdRMbzA0aT0eo2YNwpSP6QKbWNkPEuPd47zsLKrXMFeWGibcMPPu-MwnM0MmNk0_ZAI0suc1c75Egygb0GlbsPcQ3JgPAgpplC3n7QcnsX5paKqMlKn94eXrbQ66o4tXct9WDcbzTjUJmb2xZAWgAqB94ejKwyIUbAjBAdfqTjDTa2mM6dQqoyjK2YyRXz4O0oyaaRKnplItxoAcrYezg" />
 </div>
-<div className="lg:col-span-6 flex flex-col gap-6">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Procedural Assurance</span>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold leading-tight">
-            Stop Treating Audits as Annual Crises. Build Continuous Institutional Trust.
-          </h2>
-<p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            Standard compliance operations rely on spreadsheets that grow obsolete the moment they are saved. OMNiGRC keeps evidence live, verifiable, and synchronised across product cycles, ensuring that external audits become mere verification walkthroughs instead of all-hands scrambles.
-          </p>
-<div className="flex items-center gap-6 pt-space-xs">
-<div className="flex items-center gap-2 text-sm text-slate-900 dark:text-white">
-<Circle className="h-5 w-5 shrink-0" /> Zero Spreadsheets
-            </div>
-<div className="flex items-center gap-2 text-sm text-slate-900 dark:text-white">
-<Circle className="h-5 w-5 shrink-0" /> Automated Cadence
-            </div>
-<div className="flex items-center gap-2 text-sm text-slate-900 dark:text-white">
-<Circle className="h-5 w-5 shrink-0" /> Audit Ready
-            </div>
+<div className="lg:col-span-6 flex flex-col gap-3 sm:gap-6">
+<span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest block text-center sm:text-left">Procedural Assurance</span>
+<h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+  Stop Treating Audits as Annual Crises. <span className="text-[#006c4d] dark:text-teal-400">Build Continuous Institutional Trust.</span>
+</h2>
+<p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify sm:text-left">
+  Standard compliance operations rely on spreadsheets that grow obsolete the moment they are saved. OMNiGRC keeps evidence live, verifiable, and synchronised across product cycles, ensuring that external audits become mere verification walkthroughs instead of all-hands scrambles.
+</p>
+<div className="flex flex-wrap items-center gap-3 sm:gap-6 pt-1">
+<div className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-900 dark:text-white font-medium">
+<Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-teal-600 dark:text-teal-400" /> Zero Spreadsheets
+</div>
+<div className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-900 dark:text-white font-medium">
+<Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-teal-600 dark:text-teal-400" /> Automated Cadence
+</div>
+<div className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-900 dark:text-white font-medium">
+<Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-teal-600 dark:text-teal-400" /> Audit Ready
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 {/*  Practical Team Benefits  */}
-<section className="w-full py-16 md:py-24 bg-white dark:bg-[#0A111F]">
-<div className="max-w-[1440px] mx-auto px-8">
-<div className="text-center max-w-2xl mx-auto mb-12">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Built for Security Teams &amp; Leaders</span>
-<h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-space-xs">Engineered for Frictionless Governance</h2>
-<p className="text-base text-slate-600 dark:text-slate-300 mt-space-xs">Practical design choices that directly improve how cross-functional engineering teams handle recurring compliance obligations.</p>
+<section className="w-full py-6 sm:py-10 md:py-16 bg-white dark:bg-[#0A111F]">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
+<span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Built for Security Teams &amp; Leaders</span>
+<h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-2 sm:mt-3 tracking-tight leading-tight sm:leading-snug text-center">
+  Engineered for Frictionless Governance
+</h2>
+<p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-center leading-relaxed">Practical design choices that directly improve how cross-functional engineering teams handle recurring compliance obligations.</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div className="bg-slate-50 dark:bg-[#16233F] p-8 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Transparent Ownership</h3><p className="text-base text-slate-900 dark:text-white font-medium leading-relaxed">Every control is mapped to a designated team lead with clear deadlines and exact proof requirements.</p></div><div className="mt-6 pt-space-xs text-sm text-teal-600 dark:text-teal-400 font-bold flex items-center gap-1">Zero Unowned Controls <ArrowRight className="h-5 w-5 shrink-0" /></div></div><div className="bg-slate-50 dark:bg-[#16233F] p-8 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="w-12 h-12 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Evidence Reference Linking</h3><p className="text-base text-slate-900 dark:text-white font-medium leading-relaxed">Proof logs, CLI transcripts, and architecture diagrams link directly to requirements in the evidence index.</p></div><div className="mt-6 pt-space-xs text-sm text-amber-600 dark:text-amber-500 font-bold flex items-center gap-1">Deterministic Traceability <ArrowRight className="h-5 w-5 shrink-0" /></div></div><div className="bg-slate-50 dark:bg-[#16233F] p-8 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="w-12 h-12 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-6"><Circle className="h-5 w-5 shrink-0" /></div><h3 className="text-xl text-slate-900 dark:text-white font-bold mb-space-xs">Continuous Posture Visibility</h3><p className="text-base text-slate-900 dark:text-white font-medium leading-relaxed">Security executives get live, automated compliance health scores without interrupting engineering sprint cycles.</p></div><div className="mt-6 pt-space-xs text-sm text-tertiary font-bold flex items-center gap-1">Instant Audit Readiness <ArrowRight className="h-5 w-5 shrink-0" /></div></div></div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"><div className="bg-slate-50 dark:bg-[#16233F] p-5 sm:p-6 lg:p-8 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 flex items-center justify-center mb-4 sm:mb-6"><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Transparent Ownership</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Every control is mapped to a designated team lead with clear deadlines and exact proof requirements.</p></div><div className="mt-4 sm:mt-6 pt-1 text-xs sm:text-sm text-teal-600 dark:text-teal-400 font-bold flex items-center justify-center sm:justify-start gap-1">Zero Unowned Controls <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div></div><div className="bg-slate-50 dark:bg-[#16233F] p-5 sm:p-6 lg:p-8 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 flex items-center justify-center mb-4 sm:mb-6"><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Evidence Reference Linking</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Proof logs, CLI transcripts, and architecture diagrams link directly to requirements in the evidence index.</p></div><div className="mt-4 sm:mt-6 pt-1 text-xs sm:text-sm text-amber-600 dark:text-amber-500 font-bold flex items-center justify-center sm:justify-start gap-1">Deterministic Traceability <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div></div><div className="bg-slate-50 dark:bg-[#16233F] p-5 sm:p-6 lg:p-8 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-teal-50 dark:bg-teal-950/40 text-teal-800 dark:text-teal-300 flex items-center justify-center mb-4 sm:mb-6"><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Continuous Posture Visibility</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Security executives get live, automated compliance health scores without interrupting engineering sprint cycles.</p></div><div className="mt-4 sm:mt-6 pt-1 text-xs sm:text-sm text-teal-600 dark:text-teal-400 font-bold flex items-center justify-center sm:justify-start gap-1">Instant Audit Readiness <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div></div></div>
 </div>
 </section>
 {/*  Technical Context Image & Architecture Accent  */}
-<section className="w-full py-16 md:py-24 bg-surface">
-<div className="max-w-[1440px] mx-auto px-8">
-<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-8 shadow-sm">
+<section className="w-full py-6 sm:py-10 md:py-16 bg-surface">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="bg-slate-50 dark:bg-[#16233F] rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 <div className="lg:col-span-5 flex flex-col gap-4">
-<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Continuous Evidence Vault Pipeline</span>
-<h3 className="font-headline-md text-headline-md text-slate-900 dark:text-white font-bold">Direct Orchestration to Verification Repositories</h3>
-<p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+<span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest text-center sm:text-left">Continuous Evidence Vault Pipeline</span>
+<h3 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center sm:text-left">Direct Orchestration to Verification Repositories</h3>
+<p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-left">
               Every card on the Compliance Board is connected to structured logs in the evidence index. Auditing bodies can independently verify timestamps, reviewer attestations, and remediation commits.
             </p>
 <div className="p-4 bg-white dark:bg-[#0A111F] rounded-lg font-mono text-xs text-slate-900 dark:text-white flex flex-col gap-1 mt-space-xs"><span className="text-amber-600 dark:text-amber-500 font-bold font-mono text-xs">// CLI Verification Hook</span><span className="text-slate-900 dark:text-white font-bold font-mono text-xs">$ omnigrc verify --board CAD-2025-Q2 --control CTRL-004</span><span className="text-amber-600 dark:text-amber-500 font-bold font-mono text-xs">&gt; Verification successful: Record status confirmed valid.</span></div>
 </div>
 <div className="lg:col-span-7">
-<img className="w-full h-80 object-cover rounded-lg shadow-sm" data-alt="High-resolution interface demonstration showing cloud infrastructure control pipelines, data hash signatures, evidence record tokens, modern slate and warm amber enterprise UI styling, clean typography and sharp data density." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXQRruDnyYbhOxt82gbQjg4SPjEONfbETSfRW3knYIM2hnddOTpYuHOtovl5-KvIilbnO4vTvSIVUwm8vzW3yaL1Qis7t9iYj4zOPknrsl88cjiqse2NmZGhHYHIA3eK6h5P5A3JCL_evmySy1t9XI-Iwx-MCJAA_xvEP_TYg6E-2GaQvaY9EVDIYr9lK5YergcHlJDic_IgSWo5reLzLMKjAx6s3GtePKshETvY9412MTG2Xgr14nJg" />
+<img className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-sm" data-alt="High-resolution interface demonstration showing cloud infrastructure control pipelines, data hash signatures, evidence record tokens, modern slate and warm amber enterprise UI styling, clean typography and sharp data density." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXQRruDnyYbhOxt82gbQjg4SPjEONfbETSfRW3knYIM2hnddOTpYuHOtovl5-KvIilbnO4vTvSIVUwm8vzW3yaL1Qis7t9iYj4zOPknrsl88cjiqse2NmZGhHYHIA3eK6h5P5A3JCL_evmySy1t9XI-Iwx-MCJAA_xvEP_TYg6E-2GaQvaY9EVDIYr9lK5YergcHlJDic_IgSWo5reLzLMKjAx6s3GtePKshETvY9412MTG2Xgr14nJg" />
 </div>
 </div>
 </div>
 </div>
 </section>
 {/*  High-Intent Conversion CTA Banner  */}
-<section className="w-full py-16 md:py-24 bg-white dark:bg-[#0A111F]">
-<div className="max-w-[1440px] mx-auto px-8">
-<div className="relative overflow-hidden bg-gradient-to-br from-surface-container-low via-surface-container-high to-surface-container-low p-12 rounded-xl shadow-md text-center flex flex-col items-center">
-<span className="inline-flex items-center gap-2 px-space-sm py-space-xs rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs uppercase tracking-wider mb-4">
-<Zap className="h-5 w-5 shrink-0" /> Seamless Onboarding
-        </span>
-<h2 className="text-4xl text-slate-900 dark:text-white font-bold max-w-2xl mb-4">
-          Ready to bring clarity to your compliance cadence?
-        </h2>
-<p className="text-lg text-slate-600 dark:text-slate-300 max-w-xl mb-8">
-          Transform fragmented audit preparation into a calm, continuous operational discipline. Schedule a technical briefing with our GRC engineering leads.
-        </p>
-<div className="flex flex-wrap items-center justify-center gap-4">
-<a className="inline-flex items-center justify-center gap-2 px-space-xl py-4 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-sm hover:bg-teal-600 dark:bg-teal-500-container transition-all shadow-md" data-path="request-demo" href="#">
+<section className="w-full py-6 sm:py-10 md:py-16 bg-white dark:bg-[#0A111F]">
+<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div className="relative overflow-hidden bg-gradient-to-br from-surface-container-low via-surface-container-high to-surface-container-low p-4 sm:p-8 lg:p-10 rounded-xl shadow-md text-center flex flex-col items-center">
+<h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold max-w-2xl mb-3 sm:mb-4 tracking-tight leading-tight sm:leading-snug text-center">
+  Ready to bring clarity to your compliance cadence?
+</h2>
+<p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mb-5 sm:mb-6 text-center leading-relaxed">
+  Transform fragmented audit preparation into a calm, continuous operational discipline. Schedule a technical briefing with our GRC engineering leads.
+</p>
+<div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 w-full sm:w-auto">
+<a className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-xs sm:text-sm font-semibold hover:bg-teal-700 dark:hover:bg-teal-400 transition-all shadow-md text-center" data-path="request-demo" href="#">
             Request a Technical Demo
           </a>
-<a className="inline-flex items-center justify-center gap-2 px-space-lg py-4 rounded-lg bg-white dark:bg-[#0A111F] text-slate-900 dark:text-white text-sm hover:bg-slate-100 dark:bg-navy-800 transition-colors shadow-sm" data-path="vulnerabilities" href="#">
-            View Vulnerability Management <ArrowRight className="h-5 w-5 shrink-0" />
+<a className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-lg bg-white dark:bg-[#0A111F] text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-100 dark:hover:bg-navy-800 transition-colors shadow-sm text-center" data-path="vulnerabilities" href="#">
+            View Vulnerability Management <ArrowRight className="h-4 w-4 shrink-0" />
 </a>
 </div>
-<div className="mt-8 flex items-center justify-center gap-8 text-slate-600 dark:text-slate-300 font-mono text-xs">
-<span className="flex items-center gap-1"><Circle className="h-5 w-5 shrink-0" /> Zero AI Retention</span>
-<span className="flex items-center gap-1"><Circle className="h-5 w-5 shrink-0" /> SOC 2 Type II Certified</span>
-<span className="flex items-center gap-1"><Circle className="h-5 w-5 shrink-0" /> Self-Host Option</span>
+<div className="mt-5 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-slate-600 dark:text-slate-300 font-mono text-[10px] sm:text-xs">
+<span className="flex items-center gap-1.5"><Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-teal-600 dark:text-teal-400" /> Zero AI Retention</span>
+<span className="flex items-center gap-1.5"><Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-teal-600 dark:text-teal-400" /> SOC 2 Type II Certified</span>
+<span className="flex items-center gap-1.5"><Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-teal-600 dark:text-teal-400" /> Self-Host Option</span>
 </div>
 </div>
 </div>
 </section>
 
         {/* Related Article Banner */}
-        <section className="w-full max-w-[1440px] mx-auto px-8 py-space-section">
-          <div className="p-space-card rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <span className="px-2.5 py-1 rounded bg-[#2E936F]/10 text-[#2E936F] dark:text-teal font-mono text-xs font-bold uppercase">COMPLIANCE ESSENTIALS</span>
+        <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-10 pt-0">
+          <div className="p-3.5 sm:p-5 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-300 dark:border-navy-700/60 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#2E936F]/10 text-[#2E936F] dark:text-teal font-mono text-[10px] sm:text-xs font-bold uppercase shrink-0">COMPLIANCE ESSENTIALS</span>
               <div>
-                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Compliance vs. Pre-Audit Preparation: What Businesses Need to Know</h4>
-                <p className="text-xs text-slate-600 dark:text-slate-400">Why businesses should move from frantic audit scrambles to continuous readiness.</p>
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Compliance vs. Pre-Audit Preparation: What Businesses Need to Know</h4>
+                <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-0.5">Why businesses should move from frantic audit scrambles to continuous readiness.</p>
               </div>
             </div>
             <Link
               href="/resources/blog/compliance-vs-pre-audit-preparation-what-businesses-need-to-know"
-              className="px-4 py-2 rounded-lg bg-[#2E936F] text-white text-xs font-bold hover:bg-[#2E936F]/90 transition-colors shrink-0"
+              className="w-full sm:w-auto text-center px-4 py-2 rounded-lg bg-[#2E936F] text-white text-xs font-bold hover:bg-[#2E936F]/90 transition-colors shrink-0"
             >
               Read Article &rarr;
             </Link>

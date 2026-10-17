@@ -101,29 +101,29 @@ export default function PricingPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 md:pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
+          <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
-              <span className="font-mono text-xs font-semibold tracking-wider uppercase">
-                COMMERCIAL SCOPING & DEPLOYMENT MODELS
+              <span className="font-mono text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
+                COMMERCIAL SCOPING &amp; DEPLOYMENT MODELS
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-3xl sm:text-5xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-6">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
               Practical commercial scoping for practical GRC operations.
             </h1>
 
-            <p className="max-w-3xl text-base sm:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-8 leading-relaxed">
+            <p className="max-w-3xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-left sm:text-center">
               Transparent deployment models tailored to your team infrastructure: Shared multi-tenant SaaS, dedicated Private MSSP instances, or customer-controlled container runtimes.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
               <Link
                 href="/demo"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
               >
                 <span>Request Proposal Walkthrough</span>
                 <ArrowRight className="h-4 w-4" />
@@ -133,27 +133,27 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 1: DEPLOYMENT TIERS GRID */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <span className="font-mono text-[10px] sm:text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 DEPLOYMENT MODELS
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-center">
                 Select Your Operational Architecture
               </h2>
-              <p className="text-sm text-[#5a4138] dark:text-slate-300 mt-2">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left sm:text-center">
                 All models include core 5x5 risk matrix scoring, map-once control crosswalks, and human oversight controls.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
               {deploymentTiers.map((plan) => (
                 <div
                   key={plan.code}
-                  className={`rounded-2xl p-space-card flex flex-col justify-between transition-all duration-300 relative ${
+                  className={`w-full max-w-md lg:max-w-none mx-auto rounded-2xl p-space-card flex flex-col justify-between transition-all duration-300 relative ${
                     plan.popular
-                      ? "bg-white dark:bg-navy-900 border-2 border-[#F15E1C] shadow-xl scale-[1.02]"
+                      ? "bg-white dark:bg-navy-900 border-2 border-[#F15E1C] shadow-xl lg:scale-[1.02]"
                       : "bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md"
                   }`}
                 >

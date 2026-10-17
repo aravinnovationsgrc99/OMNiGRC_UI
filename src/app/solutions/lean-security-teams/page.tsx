@@ -38,35 +38,35 @@ export default function LeanSecurityTeamsPage() {
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7 flex flex-col items-start gap-5">
+            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-5">
               {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-primary font-mono text-xs uppercase tracking-wider border border-slate-300 dark:border-navy-700">
-                <Users className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider border border-slate-300 dark:border-navy-700 mx-auto lg:mx-0">
+                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>SOLUTIONS FOR LEAN SECURITY TEAMS</span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-[50px] lg:leading-[58px] text-slate-900 dark:text-white font-bold tracking-tight">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[46px] lg:leading-[54px] text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left w-full">
                 Stop spreadsheet sprawl. Run GRC with a <span className="text-primary">lean, connected workflow</span>.
               </h1>
 
               {/* Subhead */}
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+              <p className="text-xs sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left w-full">
                 When one or two practitioners manage risk, vendor reviews, and recurring testing, fragmented sheets cause instant drift. OMNiGRC unites your core governance in one operating layer.
               </p>
 
               {/* CTA cluster */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 w-full sm:w-auto pt-1 sm:pt-2">
                 <a
                   href="#operating-model"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-white font-medium text-sm hover:bg-primary/90 transition-all shadow-md"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3.5 rounded-lg bg-primary text-white font-medium text-xs sm:text-sm hover:bg-primary/90 transition-all shadow-md text-center"
                 >
                   <span>See the GRC Workflow</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-900 dark:text-white font-medium text-sm transition-all border border-slate-200 dark:border-navy-700"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3 sm:py-3.5 rounded-lg bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-900 dark:text-white font-medium text-xs sm:text-sm transition-all border border-slate-200 dark:border-navy-700 shadow-sm text-center"
                 >
                   <Calendar className="w-4 h-4 text-slate-500 dark:text-slate-400" />
                   <span>Request a Walkthrough</span>
@@ -74,16 +74,16 @@ export default function LeanSecurityTeamsPage() {
               </div>
 
               {/* Value Badges Bar */}
-              <div className="pt-4 flex flex-wrap gap-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800/80 border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-slate-200 font-mono text-xs">
+              <div className="pt-2 sm:pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800/80 border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-slate-200 font-mono text-[10px] sm:text-xs">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>Zero Consultant Bloat</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800/80 border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-slate-200 font-mono text-xs">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800/80 border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-slate-200 font-mono text-[10px] sm:text-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>Human Verification Required</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800/80 border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-slate-200 font-mono text-xs">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800/80 border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-slate-200 font-mono text-[10px] sm:text-xs">
                   <Terminal className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>Structured Application Logging</span>
                 </div>
@@ -149,14 +149,14 @@ export default function LeanSecurityTeamsPage() {
         {/* SECTION 2: THE CAPACITY REALITY (PAIN POINTS) */}
         <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mb-12">
+            <div className="max-w-3xl mb-12 text-center sm:text-left">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 THE CAPACITY REALITY
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Limited team bandwidth shouldn't mean pre-audit panic.
               </h2>
-              <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed text-left">
                 Lean teams spend most of their time reconciling stale rows instead of safeguarding infrastructure.
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function LeanSecurityTeamsPage() {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                     <Grid className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Disconnected Spreadsheets</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Disconnected Spreadsheets</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Risk registers in Excel drift from actual asset reality within days. Cloud resources scale up, but formulas stay frozen in v3_final.xlsx.
                   </p>
@@ -183,7 +183,7 @@ export default function LeanSecurityTeamsPage() {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                     <Clock className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Scattered Evidence Work</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Scattered Evidence Work</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Chasing engineers for screenshots over messaging and email creates friction. Assets change, timestamps mismatch, and auditor trust erodes.
                   </p>
@@ -199,7 +199,7 @@ export default function LeanSecurityTeamsPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <AlertTriangle className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Missed Cadences</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Missed Cadences</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Recurring access reviews, backup recovery drills, and policy sign-offs slip silently without an operational cadence scheduler.
                   </p>
@@ -215,14 +215,14 @@ export default function LeanSecurityTeamsPage() {
 
         {/* SECTION 3: HOW OMNiGRC ADDRESSES LEAN CONSTRAINTS */}
         <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-12 text-center sm:text-left">
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               ENGINEERED FOR LEAN TEAMS
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               One unified engine. Connected risk, assets, controls, and testing.
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed text-left">
               Built so a solo practitioner can maintain enterprise-grade posture without adding administrative headcount.
             </p>
           </div>
@@ -238,7 +238,7 @@ export default function LeanSecurityTeamsPage() {
                     MODULE: RSK-CORE
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">5×5 Risk Scoring &amp; Direct Asset Linkage</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">5×5 Risk Scoring &amp; Direct Asset Linkage</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Quantify residual risk with intuitive likelihood and impact matrices. Every risk directly binds to cloud instances, SaaS vendors, or data tiers so you immediately understand business blast radius.
                 </p>
@@ -259,7 +259,7 @@ export default function LeanSecurityTeamsPage() {
                     ADVISORY AI ASSISTED
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Map Once Across Standards</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Map Once Across Standards</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Define one baseline security safeguard (e.g., MFA Enforcement) and let advisory AI suggest mappings across ISO 27001, SOC 2, HIPAA, and DPDP. Human review is strictly mandatory before any framework commits.
                 </p>
@@ -280,7 +280,7 @@ export default function LeanSecurityTeamsPage() {
                     CADENCE BOARD
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Rolling 30/60/90-Day Compliance Board</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Rolling 30/60/90-Day Compliance Board</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   A pragmatic Kanban-style cadence tracker for monthly user access reviews, quarterly backup drills, and annual third-party penetration tests. Prevent forgotten operational controls.
                 </p>
@@ -301,7 +301,7 @@ export default function LeanSecurityTeamsPage() {
                     EVIDENCE INDEX
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Centralized Evidence References</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Centralized Evidence References</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Index external document URLs, S3 buckets, Datadog dashboard snapshots, and verification logs without file storage bloat. Your cloud storage remains your single source of truth.
                 </p>
@@ -571,14 +571,14 @@ export default function LeanSecurityTeamsPage() {
 
         {/* SECTION 5: RELEVANT MODULES TO EXPLORE NEXT */}
         <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-12 text-center sm:text-left">
             <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
               MODULAR ARCHITECTURE
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Explore Core GRC Workflows
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed text-left">
               Adopt modules incrementally as your lean team expands governance breadth.
             </p>
           </div>
@@ -590,7 +590,7 @@ export default function LeanSecurityTeamsPage() {
             >
               <div>
                 <ShieldAlert className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Risk Register</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Risk Register</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   5x5 scoring bound directly to cloud infrastructure assets.
                 </p>
@@ -606,7 +606,7 @@ export default function LeanSecurityTeamsPage() {
             >
               <div>
                 <Kanban className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Compliance Board</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Compliance Board</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   30/60/90-day task tracking for recurring operational cadences.
                 </p>
@@ -622,7 +622,7 @@ export default function LeanSecurityTeamsPage() {
             >
               <div>
                 <Network className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Control Mapping</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Control Mapping</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Map-once crosswalk across SOC 2, ISO 27001, HIPAA, and DPDP.
                 </p>
@@ -638,7 +638,7 @@ export default function LeanSecurityTeamsPage() {
             >
               <div>
                 <FileCheck className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Evidence Index</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Evidence Index</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Index external cloud URL pointers without binary storage overhead.
                 </p>

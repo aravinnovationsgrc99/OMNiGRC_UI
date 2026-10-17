@@ -171,14 +171,14 @@ export const HeroWorkflowVisual: React.FC = () => {
                         </span>
                       </div>
 
-                      <div className="min-h-[3.25rem] sm:min-h-[4.25rem] flex items-center">
-                        <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight sm:leading-snug">
+                      <div className="min-h-[2.75rem] sm:min-h-[4rem] flex items-center justify-center sm:justify-start">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-center sm:text-left">
                           {s.title}
                         </h3>
                       </div>
 
-                      <div className="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
-                        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                      <div className="min-h-[3rem] sm:min-h-[4rem] flex items-start">
+                        <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed text-left">
                           {s.subtitle}
                         </p>
                       </div>

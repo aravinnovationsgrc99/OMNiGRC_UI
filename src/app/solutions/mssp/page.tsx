@@ -95,7 +95,7 @@ export default function MSSPSolutionPage() {
           <div className="absolute top-48 right-[-10%] w-[420px] h-[420px] bg-emerald-500/10 dark:bg-amber/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
           {/* Section 1: Hero */}
-          <section className="w-full max-w-7xl mx-auto px-6 py-space-section bg-grid-mesh-adaptive">
+          <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 bg-grid-mesh-adaptive">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Eyebrow Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-slate-900 dark:text-white shadow-sm mb-6 border border-slate-300 dark:border-navy-700">
@@ -106,28 +106,28 @@ export default function MSSPSolutionPage() {
               </div>
 
               {/* Hero Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-4xl text-slate-900 dark:text-white tracking-tight font-bold mb-6">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white tracking-tight font-bold mb-4 sm:mb-6 text-center">
                 Coordinate multi-client governance without{" "}
                 <span className="text-primary">administrative chaos</span>.
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mb-8 leading-relaxed">
+              <p className="text-left sm:text-center text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mb-6 sm:mb-8 leading-relaxed">
                 Empower your vCISO and security advisory practice with centralized client tenancy, delegated operational workflows, and isolated client governance environments.
               </p>
 
               {/* CTA Cluster */}
-              <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 mb-8 sm:mb-10 w-full">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow-md transition-all"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow-md transition-all text-center"
                 >
                   <span>Request Partner Walkthrough</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/how-it-works"
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-900 dark:text-white font-medium text-sm shadow-sm transition-all border border-slate-200 dark:border-navy-700"
+                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-900 dark:text-white font-medium text-sm shadow-sm transition-all border border-slate-200 dark:border-navy-700 text-center"
                 >
                   <Network className="w-4 h-4 text-slate-500 dark:text-slate-400" />
                   <span>Explore Architecture</span>
@@ -158,7 +158,7 @@ export default function MSSPSolutionPage() {
         </div>
 
         {/* Hero Visual Accent: Interactive Partner Cockpit Preview */}
-        <section className="w-full max-w-7xl mx-auto px-6 -mt-8 mb-24">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 -mt-4 sm:-mt-8 mb-12 sm:mb-16 md:mb-20">
           <div className="relative bg-white dark:bg-[#16233F] rounded-2xl shadow-xl p-space-card overflow-hidden border border-slate-300 dark:border-navy-700">
             {/* Cockpit Bar */}
             <div className="flex flex-wrap items-center justify-between gap-4 pb-4 bg-slate-50 dark:bg-[#0A111F] px-4 py-3 rounded-xl mb-6 border border-slate-200/60 dark:border-navy-800">
@@ -314,7 +314,7 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* SECTION 1.5: SECURITY OPERATIONS VISUAL BANNER */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-6">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-6">
           <div className="relative rounded-3xl overflow-hidden border border-slate-300 dark:border-navy-700 shadow-xl bg-slate-900">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
               <div className="lg:col-span-7 relative h-[260px] sm:h-[340px] w-full">
@@ -333,7 +333,7 @@ export default function MSSPSolutionPage() {
                 <h3 className="text-2xl font-bold tracking-tight text-white">
                   Multi-Client Operations with Isolated Tenant Boundaries
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed text-left">
                   Manage multiple client environments simultaneously while ensuring strict application-level tenant isolation, auditable sign-offs, and client-specific evidence indexing.
                 </p>
               </div>
@@ -342,16 +342,16 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 2: The MSSP Problem */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mb-12">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-y border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="text-center sm:text-left max-w-3xl mb-8 sm:mb-12">
               <div className="text-xs text-primary uppercase tracking-wider mb-2 font-semibold font-mono">
                 THE MULTI-TENANT CHALLENGE
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Delivering GRC across clients is broken by disconnected workspaces.
               </h2>
-              <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
                 Consultants lose billable hours each week maintaining ad-hoc spreadsheets, toggling conflicting client logins, and manually reconstructing the same baseline controls.
               </p>
             </div>
@@ -362,7 +362,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <EyeOff className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Scattered Client Portals &amp; Sheets</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Scattered Client Portals &amp; Sheets</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Juggling disparate client spreadsheets and tenant credentials introduces data leakage risks, human version errors, and operational drag across advisory staff.
                   </p>
@@ -378,7 +378,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Clock className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Repetitive Baseline Setup</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Repetitive Baseline Setup</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Re-authoring baseline control standards, audit questions, and compliance cadences from scratch for every newly signed client wastes high-value consulting capacity.
                   </p>
@@ -394,7 +394,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <AlertTriangle className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Opaque Multi-Client Status</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Opaque Multi-Client Status</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Lack of a single operational view to assess which client is approaching an audit window, which risks need mitigation review, or which control tests elapsed.
                   </p>
@@ -409,15 +409,15 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 3: How OMNiGRC Resolves It */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
-          <div className="max-w-3xl mb-12">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+          <div className="text-center sm:text-left max-w-3xl mb-8 sm:mb-12">
             <div className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold font-mono">
               PURPOSE-BUILT MSSP ARCHITECTURE
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Centralized partner operations with strict organizational isolation.
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
               OMNiGRC structures compliance delivery the way advisory firms operate: top-level partner supervision over clearly separated client organizations.
             </p>
           </div>
@@ -428,7 +428,7 @@ export default function MSSPSolutionPage() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
                   <Building2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Client Organization Hierarchy</h3>
+                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Client Organization Hierarchy</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Provider-level administration managing discrete client organizations with dedicated data boundaries. Ensure lead advisors access authorized client records.
                 </p>
@@ -444,7 +444,7 @@ export default function MSSPSolutionPage() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
                   <RefreshCw className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg text-slate-900 dark:text-[#16233F] font-bold mb-2">Context Switching</h3>
+                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Context Switching</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Navigation between client workspaces within authorized partner scopes. Jump directly into a client's risk board or compliance tracker in one click.
                 </p>
@@ -460,7 +460,7 @@ export default function MSSPSolutionPage() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
                   <Workflow className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Standardized Framework Baselines</h3>
+                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Standardized Framework Baselines</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Propagate standard control templates across clients while preserving client-specific policies, custom risk scorings, and independent evidence links.
                 </p>
@@ -474,17 +474,17 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 4: Meaningful Workflow Visualization */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-y border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-mono text-xs mb-3 border border-slate-200 dark:border-navy-700">
                 <Workflow className="w-3.5 h-3.5 text-primary" />
                 <span>CANONICAL MSSP OPERATING WORKFLOW</span>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 MSSP Provider Console → Client Context Selection → Client Governance Data → Delegated Action &amp; Sign-off
               </h2>
-              <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-relaxed">
                 How an advisory team governs a client engagement securely from partner-level oversight down to audit-grade execution.
               </p>
             </div>
@@ -505,7 +505,7 @@ export default function MSSPSolutionPage() {
                     <Building2 className="w-5 h-5 text-primary" />
                   </div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white mb-1">MSSP Provider Console</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-left">
                     Partner leadership reviews aggregate health across client tenants, active audit targets, and global task queues.
                   </p>
                 </div>
@@ -530,7 +530,7 @@ export default function MSSPSolutionPage() {
                     <RefreshCw className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white mb-1">Client Context Selection</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-left">
                     Select <span className="font-semibold text-slate-900 dark:text-white">{selectedClient.name}</span>. System establishes application-level tenant isolation parameters.
                   </p>
                 </div>
@@ -554,7 +554,7 @@ export default function MSSPSolutionPage() {
                     <FileCheck className="w-5 h-5 text-primary" />
                   </div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white mb-1">Client Governance Data</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-left">
                     Access client's 5x5 Risk Register, SOC 2/ISO cross-walk, and 90-Day Cadence Board.
                   </p>
                 </div>
@@ -584,7 +584,7 @@ export default function MSSPSolutionPage() {
                     <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <h4 className="text-base font-semibold text-slate-900 dark:text-white mb-1">Delegated Action &amp; Sign-off</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-left">
                     vCISO reviews Advisory AI clause recommendations, assigns corrective owners, and logs defensible audit records.
                   </p>
                 </div>
@@ -600,20 +600,20 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 5: Core Workflows for MSSPs */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div className="max-w-2xl">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
+            <div className="max-w-2xl text-center sm:text-left">
               <div className="text-xs text-primary uppercase tracking-wider mb-2 font-semibold font-mono">
                 POWERFUL MODULAR ENGINES
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Core Workflows Purpose-Built for Advisory Practices
               </h2>
-              <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
                 Equip your advisory teams with specialized tools needed to deliver high-margin continuous governance.
               </p>
             </div>
-            <div className="mt-4 md:mt-0">
+            <div className="mt-4 md:mt-0 text-center sm:text-left">
               <Link
                 href="/how-it-works"
                 className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-sm font-semibold"
@@ -696,16 +696,16 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 6: Deployment & Isolation Architecture */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-y border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mb-12">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-y border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="text-center sm:text-left max-w-3xl mb-8 sm:mb-12">
               <div className="text-xs text-primary uppercase tracking-wider mb-2 font-semibold font-mono">
                 INFRASTRUCTURE ISOLATION
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Deployment models crafted for regulated partner environments.
               </h2>
-              <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
                 Deliver the exact security assurances your most demanding institutional, fintech, or defense-adjacent clients require.
               </p>
             </div>
@@ -795,15 +795,15 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 7: Fit Assessment Matrix */}
-        <section className="w-full max-w-7xl mx-auto px-6 py-space-section">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             <div className="text-xs text-primary uppercase tracking-wider mb-2 font-semibold font-mono">
               PARTNERSHIP EVALUATION
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Is OMNiGRC the right partner platform for your advisory practice?
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-relaxed">
               We believe in complete transparency. We built OMNiGRC for disciplined human-led advisory, not autopilot gimmicks.
             </p>
           </div>
@@ -815,7 +815,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-8 h-8 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white flex items-center justify-center">
                     <Check className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold">Ideal Partner Fit</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold text-center sm:text-left">Ideal Partner Fit</h3>
                 </div>
                 <ul className="flex flex-col gap-4 text-sm text-slate-900 dark:text-slate-100">
                   <li className="flex items-start gap-2.5">
@@ -855,7 +855,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-navy-800 text-slate-600 dark:text-slate-300 flex items-center justify-center border border-slate-300 dark:border-navy-700">
                     <X className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold">Not Designed For</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold text-center sm:text-left">Not Designed For</h3>
                 </div>
                 <ul className="flex flex-col gap-4 text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-start gap-2.5">
@@ -892,39 +892,39 @@ export default function MSSPSolutionPage() {
         </section>
 
         {/* Section 8: Final Conversion CTA Section */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-space-section border-t border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-t border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-[#0A111F] text-slate-900 dark:text-white font-mono text-xs shadow-sm mb-4 border border-slate-200 dark:border-navy-700">
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
                   PARTNER PROGRAM ENROLLMENT
                 </div>
-                <h2 className="text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight mb-3 sm:mb-4">
                   Elevate your client governance operations.
                 </h2>
-                <p className="text-base text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">
                   Deliver structured, auditable GRC advisory services with confidence. Schedule a 1-on-1 walkthrough of the multi-client provider console with our architecture team.
                 </p>
 
-                <div className="flex flex-wrap items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
                   <Link
                     href="/demo"
-                    className="inline-flex items-center gap-2 px-6 py-4 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow-lg transition-all"
+                    className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow-lg transition-all text-center"
                   >
                     <Calendar className="w-4 h-4" />
                     <span>Request Partner Walkthrough</span>
                   </Link>
                   <Link
                     href="/trust"
-                    className="inline-flex items-center gap-2 px-5 py-4 rounded-lg bg-white dark:bg-[#0A111F] hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-900 dark:text-white font-medium text-sm shadow-sm transition-all border border-slate-200 dark:border-navy-700"
+                    className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-4 rounded-lg bg-white dark:bg-[#0A111F] hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-900 dark:text-white font-medium text-sm shadow-sm transition-all border border-slate-200 dark:border-navy-700 text-center"
                   >
                     <Shield className="w-4 h-4 text-slate-500 dark:text-slate-400" />
                     <span>View Security &amp; Trust Specs</span>
                   </Link>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-slate-200/60 dark:border-navy-800 flex flex-wrap items-center justify-center gap-6 text-slate-600 dark:text-slate-300 font-mono text-xs">
+                <div className="mt-8 sm:mt-10 pt-6 border-t border-slate-200/60 dark:border-navy-800 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-slate-600 dark:text-slate-300 font-mono text-xs">
                   <span className="flex items-center gap-1">
                     <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     Application-Level Tenant Isolation

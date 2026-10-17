@@ -54,35 +54,35 @@ export default function EvidencePage() {
             </section>
 
             {/* Hero Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full bg-grid-mesh-adaptive">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-8 flex flex-col">
-                  <div className="inline-flex items-center gap-2 w-max mb-4 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold">
+                <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+                  <div className="inline-flex items-center gap-2 w-max mb-4 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold mx-auto lg:mx-0">
                     <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                     Zero Proprietary Binary Storage Lock-In
                   </div>
-                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
-                    Evidence References &amp; Records: Connect external proof without binary lock-in.
+                  <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 sm:mb-6 leading-tight text-center sm:text-left w-full">
+                    Evidence References &amp; Records: <span className="text-[#F15E1C]">External Proof Without Binary Lock-in</span>
                   </h1>
-                  <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-8">
+                  <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-6 text-left w-full">
                     Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record (AWS, Okta, GitHub, Jira) while preserving complete clear chain of custody for external auditors.
                   </p>
-                  <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 w-full sm:w-auto">
                     <Link
                       href="/demo"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#F15E1C] hover:bg-[#ce4700] text-white text-sm font-bold shadow-md transition-all duration-150"
+                      className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#F15E1C] hover:bg-[#ce4700] text-white text-xs sm:text-sm font-bold shadow-md transition-all duration-150 text-center"
                     >
                       <CheckCircle2 className="h-4 w-4" />
                       <span>Schedule Walkthrough</span>
                     </Link>
                     <Link
                       href="/resources/blog/compliance-vs-pre-audit-preparation-what-businesses-need-to-know"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-navy-800 text-slate-900 dark:text-white text-sm font-semibold hover:bg-slate-100 dark:hover:bg-navy-700 transition-all duration-150 border border-slate-200 dark:border-navy-700 shadow-sm"
+                      className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-100 dark:hover:bg-navy-700 transition-all duration-150 border border-slate-200 dark:border-navy-700 shadow-sm text-center"
                     >
                       <span>Explore Audit Workpapers &rarr;</span>
                     </Link>
-                    <div className="flex items-center gap-2 pl-2 font-mono text-xs text-slate-500 dark:text-slate-400">
-                      <Lock className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                    <div className="flex items-center justify-center gap-2 font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 pt-1 sm:pt-0">
+                      <Lock className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-600 dark:text-emerald-400" />
                       <span>RFC 3339 Timestamped</span>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ export default function EvidencePage() {
                 <h2 className="text-2xl sm:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight">
                   Why Centralized Binary Upload Vaults Fail Modern Security
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 text-justify sm:text-center">
                   Storing duplicate corporate files in a multi-tenant compliance vendor&apos;s database creates unmanageable attack surfaces, version drift, and massive migration overhead.
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function EvidencePage() {
                       <XCircle className="h-4 w-4 text-rose-600 dark:text-rose-400" />
                       Traditional Heavyweight GRC Binary Uploads
                     </div>
-                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4">
+                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-center sm:text-left">
                       Duplicate PDFs, Data Leaks &amp; Orphaned Files
                     </h3>
                     <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
@@ -203,7 +203,7 @@ export default function EvidencePage() {
                       <CheckCircle2 className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                       OMNiGRC External Pointer &amp; Reference Layer
                     </div>
-                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4">
+                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-center sm:text-left">
                       Point Directly to Authoritative Systems of Record
                     </h3>
                     <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
@@ -230,7 +230,7 @@ export default function EvidencePage() {
 
             {/* 4-Step Pipeline */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full">
-              <div className="mb-8">
+              <div className="mb-8 text-center sm:text-left">
                 <span className="text-xs text-[#2E936F] dark:text-teal uppercase tracking-widest font-mono font-bold">DETERMINISTIC LIFECYCLE</span>
                 <h2 className="text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold mt-1">
                   The 4-Step External Evidence Governance Pipeline
@@ -243,7 +243,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-[#2E936F] px-2 py-0.5 rounded">STEP 01</span>
                       <Cloud className="h-5 w-5 text-[#2E936F]" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Discover &amp; Point</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Discover &amp; Point</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Ingest or link external URIs: customer S3 ARNs, Jira ticket keys, Okta log export queries, or signed Git commit SHAs.
                     </p>
@@ -259,7 +259,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-[#D4521A] px-2 py-0.5 rounded">STEP 02</span>
                       <Shield className="h-5 w-5 text-[#D4521A]" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Advisory AI Crosswalk</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Advisory AI Crosswalk</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Advisory AI analyzes URI semantics and metadata to propose matching SOC 2, ISO 27001, and HIPAA control clauses. Human signs off.
                     </p>
@@ -275,7 +275,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-indigo-600 px-2 py-0.5 rounded">STEP 03</span>
                       <Clock className="h-5 w-5 text-indigo-500" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Assign Cadence &amp; Owner</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Assign Cadence &amp; Owner</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Bind the pointer to a technical custodian and testing cadence (30d, 90d, Annual). Triggers proactive re-attestation alerts.
                     </p>
@@ -291,7 +291,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-slate-900 dark:bg-black px-2 py-0.5 rounded">STEP 04</span>
                       <FileText className="h-5 w-5 text-slate-700 dark:text-slate-300" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2">Auditor Workpapers</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Auditor Workpapers</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Package verified references into time-restricted, read-only workpaper dossiers for independent CPA firm or ISO registrar review.
                     </p>
@@ -309,8 +309,8 @@ export default function EvidencePage() {
                 {/* Header & Controls */}
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
                   <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Live Evidence Index</h3>
+                    <div className="flex items-center justify-center sm:justify-start gap-2">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-center sm:text-left">Live Evidence Index</h3>
                       <span className="px-2.5 py-0.5 rounded-full bg-[#2E936F] text-white font-mono text-xs font-bold">142 RECORDS</span>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
@@ -513,9 +513,9 @@ export default function EvidencePage() {
                     High-Assurance Compliance Indexing
                   </span>
                   <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4">
-                    Ready to organize evidence without spreadsheet chaos or file-dump risks?
+                    Organize Evidence Without Spreadsheet Chaos or File-Dump Risks
                   </h2>
-                  <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed text-justify sm:text-center">
                     Join modern security teams who connect cloud proof directly to their compliance posture with zero data lock-in and structured event logs.
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-4">

@@ -61,51 +61,51 @@ export default function VendorsPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & SUPPLY CHAIN GOVERNANCE OVERVIEW  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-section overflow-hidden bg-grid-mesh-adaptive">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 overflow-hidden bg-grid-mesh-adaptive">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/*  Left Column: Copy & Actions  */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
-              <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-label-sm text-label-sm uppercase tracking-wider">
-                <Building2 className="h-5 w-5 shrink-0" />
+            <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider">
+                <Building2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 06: THIRD-PARTY RISK &amp; VENDOR GOVERNANCE</span>
               </div>
-              <h1 className="font-headline-xl text-headline-xl text-slate-900 dark:text-white font-bold tracking-tight">
-                Control Third-Party Exposure Across Your <span className="text-primary">Entire Supply Chain</span>
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+                Control Third-Party Exposure <span className="text-primary">Across Your Entire Supply Chain</span>
               </h1>
-              <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 max-w-2xl">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
                 Automate vendor onboarding, security questionnaire evaluations, SOC 2 report parsing, and continuous subprocessor DPA tracking. Mapped directly to ISO 27001 A.15, SOC 2 CC9, and DPDP Act 2023 Section 8.
               </p>
-              <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all" href="#directory">
-                  <Building2 className="h-5 w-5 shrink-0" />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
+                <a className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center" href="#directory">
+                  <Building2 className="h-4 w-4 shrink-0" />
                   <span>Explore Vendor Directory Demo</span>
                 </a>
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-label-md text-label-md font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors" href="/demo">
-                  <FileText className="h-5 w-5 shrink-0" />
+                <a className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" href="/demo">
+                  <FileText className="h-4 w-4 shrink-0" />
                   <span>Request Assessment Templates</span>
                 </a>
               </div>
-              <div className="grid grid-cols-3 gap-space-sm pt-space-md w-full max-w-xl">
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
+              <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
+                <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
                   <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Structured</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Structured</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">DPA &amp; SCC Alignment</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight">DPA &amp; SCC Alignment</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
+                <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
                   <div className="flex items-center gap-1 text-primary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Auto-Parse</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Auto-Parse</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">SOC 2 Report Ingestion</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight">SOC 2 Report Ingestion</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
+                <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
                   <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Annual</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Annual</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Recertification Cadence</span>
+                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight">Recertification Cadence</span>
                 </div>
               </div>
             </div>
@@ -161,10 +161,10 @@ export default function VendorsPage() {
               <div className="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-primary-fixed text-on-primary-fixed font-code-sm text-code-sm rounded-full mb-space-xs font-bold">
                 Interactive Operational Directory
               </div>
-              <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white tracking-tight font-bold">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
                 Third-Party Risk &amp; Assessment Explorer
               </h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">
+              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">
                 Select any cataloged subprocessor below to inspect security safeguards, contractual DPA provisions, and continuous reassessment cadences.
               </p>
             </div>
@@ -319,8 +319,11 @@ export default function VendorsPage() {
               <History className="h-5 w-5 shrink-0" />
               <span>End-to-End Governance</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">The 6-Stage Vendor Governance Lifecycle</h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl">From initial security intake to contract termination and data deletion attestation.</p>
+            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">
+              <span className="block">The 6-Stage Vendor</span>
+              <span className="block">Governance Lifecycle</span>
+            </h2>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">From initial security intake to contract termination and data deletion attestation.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
@@ -369,56 +372,62 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 4: MULTI-FRAMEWORK REGULATORY DEFENSIBILITY  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter">
-            <div className="flex flex-col gap-space-xs mb-space-lg">
-              <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-                <Scale className="h-5 w-5 shrink-0" />
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 md:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
+              <div className="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-xs text-primary uppercase font-bold tracking-wider">
+                <Scale className="h-4 w-4 shrink-0" />
                 <span>Framework Alignment</span>
               </div>
-              <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">Built for Multi-Framework Regulatory Defensibility</h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl">Satisfy third-party risk management requirements across major global standards without duplicate efforts.</p>
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+                Built for Multi-Framework Regulatory Defensibility
+              </h2>
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl text-left leading-relaxed">Satisfy third-party risk management requirements across major global standards without duplicate efforts.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-              <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">ISO 27001:2022 A.15</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Supplier Relationships: Enforce security requirements in supplier agreements and regularly monitor service delivery.</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6">
+              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 text-center sm:text-left">ISO 27001:2022 A.15</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">Supplier Relationships: Enforce security requirements in supplier agreements and regularly monitor service delivery.</p>
               </div>
-              <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">SOC 2 Type II CC9.2</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Vendor Risk Management: Assess and manage risks associated with vendors and subprocessors that hold customer data.</p>
+              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 text-center sm:text-left">SOC 2 Type II CC9.2</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">Vendor Risk Management: Assess and manage risks associated with vendors and subprocessors that hold customer data.</p>
               </div>
-              <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1">DPDP Act 2023 §8</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300">Data Fiduciary Obligations: Ensure technical processors maintain reasonable security safeguards and report data breaches.</p>
+              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 text-center sm:text-left">DPDP Act 2023 §8</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">Data Fiduciary Obligations: Ensure technical processors maintain reasonable security safeguards and report data breaches.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/*  SECTION 5: DETERMINISTIC VENDOR EVIDENCE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="p-space-xl rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-xl">
-            <div className="space-y-space-xs max-w-2xl">
-              <h2 className="font-headline-lg text-headline-lg font-bold">Structured vendor evidence, gathered without spreadsheet fatigue.</h2>
-              <p className="font-body-lg text-body-lg text-slate-300">Maintain an active subprocessor register, track SOC 2 expiration dates, and satisfy external auditors without manual overhead.</p>
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
+          <div className="p-5 sm:p-8 lg:p-10 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+            <div className="space-y-2 max-w-2xl text-center md:text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center md:text-left">
+                Structured Vendor Evidence, Without Spreadsheet Fatigue
+              </h2>
+              <p className="text-xs sm:text-base text-slate-300 leading-relaxed text-center md:text-left">Maintain an active subprocessor register, track SOC 2 expiration dates, and satisfy external auditors without manual overhead.</p>
             </div>
-            <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all shrink-0">
+            <a href="/demo" className="w-full sm:w-auto text-center px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all shrink-0">
               Request Vendor Governance Walkthrough
             </a>
           </div>
         </section>
 
         {/*  SECTION 6: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="font-headline-lg text-headline-lg font-bold">Streamline third-party compliance without spreadsheet chaos.</h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Centralize your vendor security reviews, DPAs, and SOC 2 reports into OMNiGRC's connected GRC workspace.</p>
-            <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
-              <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-8 sm:py-12 md:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-4 sm:gap-6">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+              Streamline Third-Party Compliance Without Spreadsheet Chaos
+            </h2>
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl text-center leading-relaxed">Centralize your vendor security reviews, DPAs, and SOC 2 reports into OMNiGRC's connected GRC workspace.</p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
+              <a href="/demo" className="px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Vendor Risk Demo
               </a>
-              <a href="/contact-us" className="px-space-md py-3 rounded-lg bg-slate-800 text-white font-label-md text-label-md font-semibold hover:bg-slate-700 transition-colors">
+              <a href="/contact-us" className="px-5 py-3 rounded-lg bg-slate-800 text-white text-xs sm:text-sm font-semibold hover:bg-slate-700 transition-colors text-center">
                 Speak with a Third-Party Risk Lead
               </a>
             </div>

@@ -79,57 +79,60 @@ export default function VulnerabilitiesPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & EXTERNALLY SOURCED INGESTION HEADER  */}
-        <section className="relative w-full max-w-7xl mx-auto px-gutter py-space-section overflow-hidden bg-grid-mesh-adaptive">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 overflow-hidden bg-grid-mesh-adaptive">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/*  Left Column: Copy & CTAs  */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
-              <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-label-sm text-label-sm uppercase tracking-wider">
-                <Bug className="h-5 w-5 shrink-0" />
+            <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider">
+                <Bug className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 05: VULNERABILITY INGESTION &amp; SLA GOVERNANCE</span>
               </div>
-              <h1 className="font-headline-xl text-headline-xl text-slate-900 dark:text-white font-bold tracking-tight">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
                 Connect External Scanner Findings to <span className="text-primary">Quantified Risk Registers</span>
               </h1>
-              <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 max-w-2xl">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
                 OMNiGRC ingests findings from external security scanners (Qualys, Snyk, AWS GuardDuty, CrowdStrike, and Datadog) to automatically prioritize CVEs against business asset criticalities and enforce policy SLA clocks.
               </p>
-              <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
                 <button 
                   onClick={() => {
                     setScenarioId(scenarioId === 1 ? 2 : 1);
                     setIsVerified(false);
                   }}
-                  className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all"
+                  className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center"
                 >
-                  <Activity className="h-5 w-5 shrink-0" />
+                  <Activity className="h-4 w-4 shrink-0" />
                   <span>Toggle Sample Scenario ({scenarioId === 1 ? "Switch to RDS Ingress" : "Switch to RCE CVE"})</span>
                 </button>
-                <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-label-md text-label-md font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors" href="/demo">
-                  <FileText className="h-5 w-5 shrink-0" />
+                <a 
+                  className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" 
+                  href="/demo"
+                >
+                  <FileText className="h-4 w-4 shrink-0" />
                   <span>View Scanner Integration Specs</span>
                 </a>
               </div>
-              <div className="grid grid-cols-3 gap-space-sm pt-space-md w-full max-w-xl">
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
+              <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
+                <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
                   <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Extensive</span>
+                    <CheckCircle className="h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="text-[11px] sm:text-xs md:text-sm font-bold truncate">Extensive</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Scanner Ingestion</span>
+                  <span className="text-[10px] sm:text-xs text-slate-900 dark:text-white font-medium mt-1 leading-snug">Scanner Ingestion</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
+                <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
                   <div className="flex items-center gap-1 text-primary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Actionable</span>
+                    <CheckCircle className="h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="text-[11px] sm:text-xs md:text-sm font-bold truncate">Actionable</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Policy Countdown Clocks</span>
+                  <span className="text-[10px] sm:text-xs text-slate-900 dark:text-white font-medium mt-1 leading-snug">Policy Countdown Clocks</span>
                 </div>
-                <div className="flex flex-col p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F]">
+                <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
                   <div className="flex items-center gap-1 text-secondary">
-                    <CheckCircle className="h-5 w-5 shrink-0" />
-                    <span className="font-code-md text-code-md font-bold">Auditor Proof</span>
+                    <CheckCircle className="h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0" />
+                    <span className="text-[11px] sm:text-xs md:text-sm font-bold truncate">Auditor Proof</span>
                   </div>
-                  <span className="font-label-sm text-label-sm text-slate-900 dark:text-white font-medium mt-1">Defensible Patch Evidence</span>
+                  <span className="text-[10px] sm:text-xs text-slate-900 dark:text-white font-medium mt-1 leading-snug">Defensible Patch Evidence</span>
                 </div>
               </div>
             </div>
@@ -176,12 +179,13 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 2: INTERACTIVE TOPOLOGY & SCENARIO EXPLORER  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="vulnerability-topology">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16" id="vulnerability-topology">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
             <div>
-              <div className="font-code-sm text-code-sm text-primary font-bold uppercase tracking-wider mb-space-xs">Defensible Linkage Pipeline</div>
-              <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">Interactive Vulnerability-to-Asset Topology</h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-xl mt-space-xs">
+              <h2 className="text-[18px] min-[360px]:text-[20px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+                Interactive Vulnerability-to-Asset Topology
+              </h2>
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mt-2 text-left leading-relaxed">
                 Experience how ingested CVEs transform into context-aware risk items, complete with assigned engineers, framework clauses, and SLA clocks.
               </p>
             </div>
@@ -244,19 +248,14 @@ export default function VulnerabilitiesPage() {
           {/*  Main Topology Explorer Card  */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
             {/*  Interactive Findings Table & Detail Matrix (Col 8)  */}
-            <div className="lg:col-span-8 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-300 dark:border-navy-700 shadow-md p-space-card">
-              <div className="flex items-center justify-between pb-space-sm mb-space-md border-b border-slate-100 dark:border-navy-800">
-                <div>
-                  <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm font-semibold ${current.tagStyle}`} id="scenario-tag">
-                    {current.tag}
-                  </span>
-                  <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1" id="scenario-title">
-                    {current.title}
-                  </h3>
-                </div>
-                <span className="px-space-sm py-1 rounded bg-[#FFF5EB] font-code-sm text-code-sm text-primary font-bold shrink-0 ml-2" id="scenario-badge">
-                  {current.badge}
+            <div className="lg:col-span-8 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-300 dark:border-navy-700 shadow-md p-4 sm:p-6 lg:p-8">
+              <div className="pb-3 sm:pb-4 mb-4 sm:mb-6 border-b border-slate-100 dark:border-navy-800">
+                <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-mono text-[10px] sm:text-xs font-semibold ${current.tagStyle}`} id="scenario-tag">
+                  {current.tag}
                 </span>
+                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mt-1.5 tracking-tight leading-snug" id="scenario-title">
+                  {current.title}
+                </h3>
               </div>
               {/*  Structured Traceability Grid  */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-lg">
@@ -384,97 +383,95 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 3: THREE FUNCTIONAL PILLARS SECTION  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="text-center max-w-3xl mx-auto mb-space-xl">
-            <span className="font-code-sm text-code-sm text-primary font-bold uppercase tracking-widest">Architectural Pillars</span>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold mt-space-xs">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center">
               Purpose-Built for GRC Defensibility, Not Log Flooding
             </h2>
-            <p className="font-body-lg text-body-lg text-slate-600 dark:text-slate-300 mt-space-sm">
+            <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-center leading-relaxed">
               Scanners detect bugs. OMNiGRC transforms those findings into contextual corporate risk models, automated team escalations, and certified auditor workpapers.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-            <div className="flex flex-col p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-space-md">
-                <Network className="h-6 w-6 shrink-0" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="flex flex-col p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
+                <Network className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-xs">Asset-Centric Prioritization</h3>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 mb-space-md flex-1 leading-relaxed">Triage vulnerabilities by business criticality, data classifications, and regulatory scope, not theoretical CVSS scores alone.</p>
-              <div className="p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between">
-                <span className="font-code-sm text-code-sm text-slate-900 dark:text-white font-semibold">Scope Context</span>
-                <span className="font-code-sm text-code-sm text-secondary font-bold">Configurable Scope Tiers</span>
-              </div>
-            </div>
-            <div className="flex flex-col p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-space-md">
-                <Zap className="h-6 w-6 shrink-0" />
-              </div>
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-xs">Actionable Remediation SLAs</h3>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 mb-space-md flex-1 leading-relaxed">Automate remediation countdowns aligned to policy. Trigger team notifications and CISO approvals before breach limits hit.</p>
-              <div className="p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between">
-                <span className="font-code-sm text-code-sm text-slate-900 dark:text-white font-semibold">Enforcement Policy</span>
-                <span className="font-code-sm text-code-sm text-primary font-bold">Policy Escalations</span>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Asset-Centric Prioritization</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Triage vulnerabilities by business criticality, data classifications, and regulatory scope, not theoretical CVSS scores alone.</p>
+              <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
+                <span className="text-slate-900 dark:text-white font-semibold">Scope Context</span>
+                <span className="text-secondary font-bold">Configurable Scope Tiers</span>
               </div>
             </div>
-            <div className="flex flex-col p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-space-md">
-                <Lock className="h-6 w-6 shrink-0" />
+            <div className="flex flex-col p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
               </div>
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-xs">Defensible Audit Closure</h3>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 mb-space-md flex-1 leading-relaxed">Store patch proof, diffs, and verified commit hashes directly in GRC audit logs for auditor review.</p>
-              <div className="p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between">
-                <span className="font-code-sm text-code-sm text-slate-900 dark:text-white font-semibold">Audit Proof</span>
-                <span className="font-code-sm text-code-sm text-secondary font-bold">Verified Evidence</span>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Actionable Remediation SLAs</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Automate remediation countdowns aligned to policy. Trigger team notifications and CISO approvals before breach limits hit.</p>
+              <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
+                <span className="text-slate-900 dark:text-white font-semibold">Enforcement Policy</span>
+                <span className="text-primary font-bold">Policy Escalations</span>
+              </div>
+            </div>
+            <div className="flex flex-col p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
+                <Lock className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Defensible Audit Closure</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Store patch proof, diffs, and verified commit hashes directly in GRC audit logs for auditor review.</p>
+              <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
+                <span className="text-slate-900 dark:text-white font-semibold">Audit Proof</span>
+                <span className="text-secondary font-bold">Verified Evidence</span>
               </div>
             </div>
           </div>
         </section>
 
         {/*  SECTION 4: COMPARISON SECTION  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter">
-            <div className="text-center max-w-2xl mx-auto mb-space-lg">
-              <span className="font-code-sm text-code-sm text-primary font-bold uppercase tracking-wider">Methodology Contrast</span>
-              <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold mt-1">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 md:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center">
                 Raw Scanner Noise vs. Connected GRC Prioritization
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
-              <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm">
-                <div className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-sm flex items-center gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm">
+                <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-center sm:justify-start gap-2">
                   <XCircle className="h-5 w-5 text-error shrink-0" /> Uncontextualized Scanner Approach
                 </div>
-                <ul className="space-y-space-sm font-body-md text-body-md text-slate-600 dark:text-slate-300">
+                <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-start gap-2">
-                    <X className="h-4 w-4 text-error shrink-0 mt-1" />
+                    <X className="h-4 w-4 text-error shrink-0 mt-0.5" />
                     <span>Flood engineering teams with raw uncontextualized scanner logs.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <X className="h-4 w-4 text-error shrink-0 mt-1" />
+                    <X className="h-4 w-4 text-error shrink-0 mt-0.5" />
                     <span>No visibility into whether affected host carries sensitive data scope.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <X className="h-4 w-4 text-error shrink-0 mt-1" />
+                    <X className="h-4 w-4 text-error shrink-0 mt-0.5" />
                     <span>Manual spreadsheet tracking for audit evidence during SOC 2 reviews.</span>
                   </li>
                 </ul>
               </div>
-              <div className="p-space-card rounded-xl bg-white dark:bg-[#0A111F] border border-secondary/40 shadow-md">
-                <div className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-space-sm flex items-center gap-2">
+              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-secondary/40 shadow-md">
+                <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-center sm:justify-start gap-2">
                   <CheckCircle className="h-5 w-5 text-secondary shrink-0" /> Connected OMNiGRC Workflow
                 </div>
-                <ul className="space-y-space-sm font-body-md text-body-md text-slate-600 dark:text-slate-300">
+                <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-start gap-2">
-                    <Check className="h-4 w-4 text-secondary shrink-0 mt-1" />
+                    <Check className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                     <span>Ingest scanner data and automatically elevate findings affecting critical assets.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="h-4 w-4 text-secondary shrink-0 mt-1" />
+                    <Check className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                     <span>Enforce automated SLA countdown clocks tied directly to corporate governance policy.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="h-4 w-4 text-secondary shrink-0 mt-1" />
+                    <Check className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                     <span>Store verified patch evidence and audit logs directly in the GRC workpaper vault.</span>
                   </li>
                 </ul>
@@ -484,15 +481,17 @@ export default function VulnerabilitiesPage() {
         </section>
 
         {/*  SECTION 5: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="font-headline-lg text-headline-lg font-bold">Connect technical findings to compliance truth.</h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>
-            <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
-              <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-8 sm:py-12 md:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-4 sm:gap-6">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+              Connect technical findings to compliance truth.
+            </h2>
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
+              <a href="/demo" className="px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Vulnerability Governance Demo
               </a>
-              <a href="/contact-us" className="px-space-md py-3 rounded-lg bg-slate-800 text-white font-label-md text-label-md font-semibold hover:bg-slate-700 transition-colors">
+              <a href="/contact-us" className="px-5 py-3 rounded-lg bg-slate-800 text-white text-xs sm:text-sm font-semibold hover:bg-slate-700 transition-colors text-center">
                 Speak with an AppSec Specialist
               </a>
             </div>
