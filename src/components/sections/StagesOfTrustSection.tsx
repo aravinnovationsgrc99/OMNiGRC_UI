@@ -85,12 +85,12 @@ export const StagesOfTrustSection: React.FC = () => {
 
       {/* Content: z-10, above both canvas and mask */}
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left max-w-3xl mb-8 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[13px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold text-left"
+            className="text-[13px] font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold"
           >
             PRACTICAL GRC MATURITY
           </motion.p>
@@ -99,7 +99,7 @@ export const StagesOfTrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-left"
+            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight"
           >
             Built for how security teams actually grow.
           </motion.h2>

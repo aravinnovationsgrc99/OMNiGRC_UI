@@ -66,7 +66,7 @@ export default function IsoLandingPage() {
                 </div>
 
                 {/* Exact Headline */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900 leading-[1.15] text-center w-full">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900 leading-[1.15]">
                   Run ISO 27001 Without Spreadsheets.{" "}
                   <span className="text-[#f15e1c]">
                     Risk Register, SoA and Evidence in One Platform
@@ -128,14 +128,14 @@ export default function IsoLandingPage() {
         {/* 4. Lead With Business Outcomes (Three Primary Benefits) */}
         <section className="py-14 sm:py-18 bg-white border-t border-[#f7d7b0]/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-left max-w-3xl mb-12 sm:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/40 border border-[#fab60a]/50 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
                 Operational Outcomes
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight text-left">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight">
                 Three Ways OMNiGRC Simplifies Your ISO 27001 Program
               </h2>
-              <p className="text-sm sm:text-base text-stone-600 mt-2 text-left">
+              <p className="text-sm sm:text-base text-stone-600 mt-2">
                 Move from fragmented audit prep to continuous, structured ISMS governance.
               </p>
             </div>
@@ -222,14 +222,14 @@ export default function IsoLandingPage() {
         {/* 6. Annex A Framework Details (Below main product-benefit section) */}
         <section className="py-14 sm:py-18 bg-white border-b border-[#f7d7b0]/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-left max-w-3xl mb-10 sm:mb-14">
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/40 border border-[#fab60a]/50 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
                 Framework Architecture
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight text-left">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
                 Structured Around the 4 Core Control Themes of ISO/IEC 27001:2022
               </h2>
-              <p className="text-sm sm:text-base text-stone-600 mt-2 text-left">
+              <p className="text-sm sm:text-base text-stone-600 mt-2">
                 Manage all 93 Annex A controls categorized across four distinct operational domains.
               </p>
             </div>
@@ -319,14 +319,14 @@ export default function IsoLandingPage() {
         {/* 7. Audience Relevance: Built for SaaS & IT Teams */}
         <section className="py-14 sm:py-18 bg-[#f7d7b0]/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl text-left mb-10 sm:mb-12">
+            <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/50 border border-[#fab60a]/60 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
                 Audience Fit
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight text-left">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
                 Built for SaaS and IT Teams Without a Full Compliance Department
               </h2>
-              <p className="text-sm sm:text-base text-stone-600 mt-2 text-left">
+              <p className="text-sm sm:text-base text-stone-600 mt-2">
                 Designed to help lean engineering and security teams organize risks, Annex A controls, and audit workpapers without managing fragmented spreadsheets or hiring an army of consultants.
               </p>
             </div>
@@ -378,15 +378,15 @@ export default function IsoLandingPage() {
         <section className="py-12 bg-[#f7d7b0]/25 border-y border-[#f7d7b0]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="space-y-1.5 text-left">
+              <div className="space-y-1.5 text-center md:text-left">
                 <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f15e1c] uppercase tracking-wider">
                   <ShieldCheck className="w-3.5 h-3.5" />
                   Transparent Commercial Proposal
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-stone-900 text-left">
+                <h3 className="text-base sm:text-lg font-bold text-stone-900">
                   Need a tailored commercial quote for your ISO 27001 audit cycle?
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-2xl text-left">
+                <p className="text-xs sm:text-sm text-stone-600 max-w-2xl">
                   Pricing depends on your requirements. Schedule a 20-minute walkthrough to review your target framework scope, team size, and deployment model. We provide a transparent, tailored quote following the session.
                 </p>
               </div>

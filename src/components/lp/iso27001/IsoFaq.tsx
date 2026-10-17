@@ -56,14 +56,14 @@ export const IsoFaq: React.FC = () => {
   return (
     <section className="py-14 sm:py-18 bg-white border-t border-[#f7d7b0]/80" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left max-w-3xl mb-10 sm:mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/40 border border-[#fab60a]/50 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
             Frequently Asked Questions
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight text-left">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
             Everything You Need to Know About OMNiGRC for ISO 27001
           </h2>
-          <p className="text-sm sm:text-base text-stone-600 mt-2 text-left">
+          <p className="text-sm sm:text-base text-stone-600 mt-2">
             Transparent answers on pricing, platform capabilities, audit preparation, and certification.
           </p>
         </div>

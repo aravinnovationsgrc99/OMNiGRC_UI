@@ -49,14 +49,14 @@ export const UnifiedPlatformSection: React.FC = () => {
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] sm:h-[700px] w-[90vw] max-w-[900px] rounded-full bg-teal/10 blur-[140px]" />
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left max-w-3xl mb-8 sm:mb-16">
-          <p className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold text-left">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <p className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold">
             THE FOUR CORE WORKFLOWS
           </p>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4 text-left">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
             Everything Connects. Nothing Lives in Isolation.
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg text-left">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg">
             Explore how OMNiGRC brings risk, assets, control mapping, and compliance testing into one unified workflow.
           </p>
         </div>

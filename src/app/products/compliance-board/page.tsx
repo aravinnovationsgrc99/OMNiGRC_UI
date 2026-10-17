@@ -207,7 +207,7 @@ export default function ComplianceBoardPage() {
 <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
 <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest">Built for Security Teams &amp; Leaders</span>
-<h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-2 sm:mt-3 tracking-tight leading-tight sm:leading-snug text-left">
+<h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-2 sm:mt-3 tracking-tight leading-tight sm:leading-snug text-center">
   Engineered for Frictionless Governance
 </h2>
 <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-center leading-relaxed">Practical design choices that directly improve how cross-functional engineering teams handle recurring compliance obligations.</p>
@@ -222,7 +222,7 @@ export default function ComplianceBoardPage() {
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 <div className="lg:col-span-5 flex flex-col gap-4">
 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest text-center sm:text-left">Continuous Evidence Vault Pipeline</span>
-<h3 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">Direct Orchestration to Verification Repositories</h3>
+<h3 className="text-xl sm:text-2xl lg:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center sm:text-left">Direct Orchestration to Verification Repositories</h3>
 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-left">
               Every card on the Compliance Board is connected to structured logs in the evidence index. Auditing bodies can independently verify timestamps, reviewer attestations, and remediation commits.
             </p>
@@ -239,7 +239,7 @@ export default function ComplianceBoardPage() {
 <section className="w-full py-6 sm:py-10 md:py-16 bg-transparent border-t border-slate-200/60 dark:border-navy-700/60">
 <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 <div className="relative overflow-hidden bg-gradient-to-br from-surface-container-low via-surface-container-high to-surface-container-low p-4 sm:p-8 lg:p-10 rounded-xl shadow-md text-center flex flex-col items-center">
-<h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold max-w-2xl mb-3 sm:mb-4 tracking-tight leading-tight sm:leading-snug text-left w-full">
+<h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold max-w-2xl mb-3 sm:mb-4 tracking-tight leading-tight sm:leading-snug text-center">
   Ready to bring clarity to your compliance cadence?
 </h2>
 <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mb-5 sm:mb-6 text-center leading-relaxed">

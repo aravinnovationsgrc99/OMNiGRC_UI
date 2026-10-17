@@ -172,7 +172,7 @@ export const HeroWorkflowVisual: React.FC = () => {
                       </div>
 
                       <div className="min-h-[2.75rem] sm:min-h-[4rem] flex items-center justify-center sm:justify-start">
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-left">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-center sm:text-left">
                           {s.title}
                         </h3>
                       </div>

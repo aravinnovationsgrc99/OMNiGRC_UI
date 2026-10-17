@@ -267,7 +267,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                 </span>
               </div>
 
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center w-full">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center sm:text-left">
                 {sol.title}
               </h1>
 
@@ -365,7 +365,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 OPERATIONAL TRANSFORM
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white mt-2 text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white mt-2">
                 From Friction &amp; Drift to Connected Governance
               </h2>
               <p className="text-left sm:text-center text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
@@ -387,7 +387,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                           <AlertTriangle className="h-4 w-4" />
                         </div>
                         <div className="w-full">
-                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-left">{c.title}</h4>
+                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-center sm:text-left">{c.title}</h4>
                           <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left">{c.desc}</p>
                         </div>
                       </div>
@@ -409,7 +409,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                           <CheckCircle2 className="h-4 w-4" />
                         </div>
                         <div className="w-full">
-                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-left">{s.title}</h4>
+                          <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-center sm:text-left">{s.title}</h4>
                           <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left">{s.desc}</p>
                         </div>
                       </div>
@@ -428,7 +428,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 CORE CAPABILITY MODULES
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white mt-2 text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white mt-2">
                 Everything Connected to Your Lifecycle
               </h2>
             </div>
@@ -447,7 +447,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                           {cap.tag}
                         </span>
                       </div>
-                      <h3 className="text-base font-bold text-[#0d1b36] dark:text-white mb-2 text-left">{cap.title}</h3>
+                      <h3 className="text-base font-bold text-[#0d1b36] dark:text-white mb-2 text-center sm:text-left">{cap.title}</h3>
                       <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed text-left">{cap.desc}</p>
                     </div>
                   </div>
@@ -460,7 +460,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         {/* SECTION 4: CTA BANNER */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4 text-left w-full">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4">
               Ready to see {sol.title}?
             </h2>
             <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">

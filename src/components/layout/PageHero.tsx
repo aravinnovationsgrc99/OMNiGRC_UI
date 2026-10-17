@@ -45,7 +45,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
                 </div>
               )}
 
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-navy-900 dark:text-white tracking-tight leading-[1.12] text-center w-full max-w-none">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-navy-900 dark:text-white tracking-tight leading-[1.12] text-center lg:text-left w-full max-w-none">
                 {title}
               </h1>
 

@@ -42,10 +42,10 @@ export default function TrustPage() {
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="w-full max-w-5xl xl:max-w-6xl mx-auto text-center">
-            <h1 className="text-3xl min-[360px]:text-[32px] min-[400px]:text-[36px] sm:text-5xl lg:text-6xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center w-full leading-[1.16] sm:leading-[1.12]">
-              <span className="block">Transparent</span>
-              <span className="block">security boundaries.</span>
-              <span className="block text-[#F15E1C] dark:text-orange-500">Human-governed AI.</span>
+            <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center w-full leading-tight">
+              <span className="block sm:inline">Transparent </span>
+              <span className="block sm:inline">security boundaries. </span>
+              <span className="block sm:inline text-[#F15E1C] dark:text-orange-500">Human-governed AI.</span>
             </h1>
 
             <p className="max-w-xl sm:max-w-2xl md:max-w-3xl text-xs min-[360px]:text-sm sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-center px-2 sm:px-0">
@@ -67,14 +67,14 @@ export default function TrustPage() {
         {/* SECTION 1: CORE ARCHITECTURE PILLARS */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <div className="text-left max-w-3xl xl:max-w-4xl mb-6 sm:mb-8">
+            <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
                 VERIFIED SECURITY PRINCIPLES
               </span>
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
                 Architectural Foundations
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left sm:text-center">
                 Clear technical parameters defining how OMNiGRC handles data, AI evaluation, and tenant isolation.
               </p>
             </div>
@@ -194,14 +194,14 @@ export default function TrustPage() {
         {/* SECTION 2: DEPLOYMENT MODEL ARCHITECTURE */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <div className="text-left max-w-3xl xl:max-w-4xl mb-6 sm:mb-8">
+            <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
                 DEPLOYMENT ARCHITECTURE
               </span>
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
                 Deployment Models & Operational Boundaries
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left sm:text-center">
                 Accurate deployment classifications tailored to team infrastructure requirements.
               </p>
             </div>
@@ -291,14 +291,14 @@ export default function TrustPage() {
         {/* SECTION 3: PRODUCT TRUTH BOUNDARIES */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <div className="text-left max-w-3xl xl:max-w-4xl mb-6 sm:mb-8">
+            <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
               <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
                 PRODUCT TRUTH & BOUNDARIES
               </span>
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
                 What We Do & Do Not Claim
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left sm:text-center">
                 Honest, audit-defensible capabilities without marketing hyperbole.
               </p>
             </div>
@@ -371,14 +371,14 @@ export default function TrustPage() {
 
         {/* SECTION 4: CTA BANNER */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8 sm:py-10 md:py-12">
-          <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left">
+          <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-center">
               Discuss your security & architecture requirements.
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl text-left">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto text-center">
               Schedule a technical walkthrough to review tenant boundaries, advisory AI data minimization, and deployment options.
             </p>
-            <div className="flex justify-start w-full">
+            <div className="flex justify-center w-full">
               <Link
                 href="/demo"
                 className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center"

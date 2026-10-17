@@ -112,7 +112,7 @@ export default function PricingPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center w-full leading-tight">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
               Practical commercial scoping for practical GRC operations.
             </h1>
 
@@ -135,14 +135,14 @@ export default function PricingPage() {
         {/* SECTION 1: DEPLOYMENT TIERS GRID */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-left max-w-3xl mb-8 sm:mb-12">
-              <span className="font-mono text-[10px] sm:text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <span className="font-mono text-[10px] sm:text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 DEPLOYMENT MODELS
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-left">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-center">
                 Select Your Operational Architecture
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left sm:text-center">
                 All models include core 5x5 risk matrix scoring, map-once control crosswalks, and human oversight controls.
               </p>
             </div>
@@ -216,11 +216,11 @@ export default function PricingPage() {
         {/* SECTION 2: FAQS ACCORDION */}
         <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-3xl mx-auto">
-            <div className="text-left max-w-2xl mb-10">
+            <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-white font-mono text-xs font-bold uppercase mb-2 border border-slate-200 dark:border-navy-700/60">
                 <HelpCircle className="h-3.5 w-3.5 text-[#F15E1C]" /> COMMERCIAL FAQ
               </div>
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold text-left">
+              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold">
                 Frequently Asked Commercial Questions
               </h2>
             </div>
@@ -251,23 +251,21 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 3: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section">
-          <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 text-left">
+        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Ready for a transparent proposal?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl text-left">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Schedule a technical demonstration to discuss framework scoping, deployment models, and custom onboarding.
             </p>
-            <div className="flex justify-start w-full">
-              <Link
-                href="/demo"
-                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-center"
-              >
-                <span>Request Proposal Walkthrough</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
+            <Link
+              href="/demo"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
+            >
+              <span>Request Proposal Walkthrough</span>
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </div>
         </section>
       </main>

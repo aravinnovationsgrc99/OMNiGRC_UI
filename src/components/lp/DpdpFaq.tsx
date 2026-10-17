@@ -57,14 +57,14 @@ export const DpdpFaq: React.FC = () => {
     <section className="w-full py-12 sm:py-16 border-t border-slate-200/80 dark:border-navy-700/80 bg-slate-50/50 dark:bg-[#0A111F]/60">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="text-left mb-8 sm:mb-10">
-          <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#D4521A] dark:text-amber block">
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#D4521A] dark:text-amber">
             FREQUENTLY ASKED QUESTIONS
           </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight mt-1 text-left">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight mt-1">
             Common Questions on DPDP Compliance Software
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1.5 text-left">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1.5">
             Key questions regarding commercial proposals, walkthrough scheduling, workflows, and legal boundaries.
           </p>
         </div>

@@ -157,7 +157,7 @@ export default function EvidencePage() {
                 <span className="text-xs text-[#F15E1C] uppercase tracking-widest font-mono font-bold">
                   ARCHITECTURAL PRINCIPLE
                 </span>
-                <h2 className="text-2xl sm:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-left">
+                <h2 className="text-2xl sm:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-center">
                   Why Centralized Binary Upload Vaults Fail Modern Security
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 text-justify sm:text-center">
@@ -500,7 +500,7 @@ export default function EvidencePage() {
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
               <div className="p-6 sm:p-12 rounded-3xl bg-slate-900 dark:bg-black text-white border border-slate-800 shadow-xl text-center">
                 <div className="max-w-2xl mx-auto">
-                  <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-left w-full">
+                  <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-center w-full">
                     Organize Evidence Without Spreadsheet Chaos or File-Dump Risks
                   </h2>
                   <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed text-justify sm:text-center">

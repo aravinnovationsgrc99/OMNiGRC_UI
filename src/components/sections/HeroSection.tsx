@@ -73,7 +73,7 @@ export const HeroSection: React.FC = () => {
             {/* 1. Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-[1.65rem] min-[360px]:text-[1.82rem] min-[385px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.14] text-center w-full"
+              className="text-[1.65rem] min-[360px]:text-[1.82rem] min-[385px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.14] text-center lg:text-left w-full"
             >
               <span className="block whitespace-nowrap">Unified Risk, Asset</span>
               <span className="block whitespace-nowrap">And Control Management</span>

@@ -39,7 +39,7 @@ export default function SecurityLeadersPage() {
               </div>
 
               {/* Headline */}
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight text-center w-full">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left">
                 Executive Risk Visibility Without <span className="text-primary">Operational Blind Spots</span>
               </h1>
 
@@ -102,7 +102,7 @@ export default function SecurityLeadersPage() {
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 THE EXECUTIVE CHALLENGE
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Bridging the gap between board reporting and operational truth.
               </h2>
               <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -116,7 +116,7 @@ export default function SecurityLeadersPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <AlertTriangle className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Subjective Risk Dashboards</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Subjective Risk Dashboards</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Color-coded heatmaps detached from actual technical assets create false confidence right before third-party audits.
                   </p>
@@ -132,7 +132,7 @@ export default function SecurityLeadersPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Clock className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Unclear SLA Accountability</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Unclear SLA Accountability</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Vulnerability findings and audit CAPAs stall across engineering teams without clear ownership or governance tracking.
                   </p>
@@ -148,7 +148,7 @@ export default function SecurityLeadersPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <FileCheck className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Audit Fire Drills</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Audit Fire Drills</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Scrambling for evidence right before annual audit fieldwork distracts engineering and delays strategic security initiatives.
                   </p>
@@ -168,7 +168,7 @@ export default function SecurityLeadersPage() {
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               EXECUTIVE GOVERNANCE ENGINES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Defensible GRC oversight built on connected telemetry.
             </h2>
             <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -185,7 +185,7 @@ export default function SecurityLeadersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-200 dark:border-navy-700">CAP-01</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">5×5 Risk Scoring &amp; Asset Mapping</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">5×5 Risk Scoring &amp; Asset Mapping</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Calculate inherent vs. residual risk grounded in technical asset dependencies, vendor relationships, and threat scenarios.
                 </p>
@@ -204,7 +204,7 @@ export default function SecurityLeadersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-200 dark:border-navy-700">CAP-02</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Vulnerability Remediation Governance</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Vulnerability Remediation Governance</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Governance layer over scanner findings, tracking remediation owners and target SLAs with executive sign-off before SLA expiration.
                 </p>
@@ -223,7 +223,7 @@ export default function SecurityLeadersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-200 dark:border-navy-700">CAP-03</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Incident-to-Asset Traceability</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Incident-to-Asset Traceability</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Governed incident records linked directly to technical assets, audit workpapers, and regulatory notification timelines.
                 </p>
@@ -242,7 +242,7 @@ export default function SecurityLeadersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-200 dark:border-navy-700">CAP-04</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Advisory AI with Human Verification</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Advisory AI with Human Verification</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Secure advisory control mapping where AI assists clause correlations and humans retain absolute sign-off authority.
                 </p>
@@ -290,7 +290,7 @@ export default function SecurityLeadersPage() {
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 ILLUSTRATIVE EXECUTIVE FLOW (DEMO DATA)
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Risk → Exposure → Action → Verification
               </h2>
               <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
@@ -476,7 +476,7 @@ export default function SecurityLeadersPage() {
             <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
               ORCHESTRATED MODULES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Executive Modules Built for Clarity
             </h2>
             <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -491,7 +491,7 @@ export default function SecurityLeadersPage() {
             >
               <div>
                 <ShieldAlert className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Risk Register</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Risk Register</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Asset-centric risk scoring for executive visibility.
                 </p>
@@ -507,7 +507,7 @@ export default function SecurityLeadersPage() {
             >
               <div>
                 <Clock className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Remediation Register</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Remediation Register</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Unified SLA tracking across vulnerability findings and CAPA items.
                 </p>
@@ -523,7 +523,7 @@ export default function SecurityLeadersPage() {
             >
               <div>
                 <FileCheck className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Audit Management</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Audit Management</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Structured workpapers and read-only auditor access.
                 </p>
@@ -539,7 +539,7 @@ export default function SecurityLeadersPage() {
             >
               <div>
                 <Layers className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Control Mapping</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Control Mapping</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Unified controls mapped across SOC 2, ISO 27001, and HIPAA.
                 </p>
@@ -556,7 +556,7 @@ export default function SecurityLeadersPage() {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4 text-left w-full">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">
                   Bring defensible oversight to your security program.
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">

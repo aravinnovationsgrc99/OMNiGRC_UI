@@ -45,14 +45,14 @@ export const DpdpProductVisuals: React.FC = () => {
     <section className="w-full py-12 sm:py-16 border-t border-slate-200/80 dark:border-navy-700/80 bg-white/40 dark:bg-navy-950/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="max-w-3xl text-left mb-10 sm:mb-12">
-          <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#D4521A] dark:text-amber block">
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
+          <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#D4521A] dark:text-amber">
             OPERATIONAL WORKFLOWS IN PRACTICE
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy-900 dark:text-white tracking-tight mt-1.5 text-left">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy-900 dark:text-white tracking-tight mt-1.5">
             How OMNiGRC Supports Your Workflow
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-left">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
             Real product workflows showing how lean security and compliance teams structure risk registers,
             vendor boundaries, and verifiable audit history.
           </p>

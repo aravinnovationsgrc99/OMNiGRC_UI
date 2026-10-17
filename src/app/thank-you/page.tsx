@@ -24,7 +24,7 @@ export default function ThankYouPage() {
             <CheckCircle2 className="h-8 w-8 sm:h-10 sm:w-10 text-[#F15E1C] stroke-[2.5]" />
           </div>
 
-          <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight leading-tight mb-4 text-center w-full">
+          <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight leading-tight mb-4 text-center">
             Demo Request Received!
           </h1>
 

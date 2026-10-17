@@ -82,7 +82,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 </span>
               </div>
 
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center w-full">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center sm:text-left w-full">
                 {pillar.name}
               </h1>
 
@@ -157,14 +157,14 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         {/* WORKFLOW CAPABILITIES & FEATURES */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60" id="workflow-capabilities">
           <div className="max-w-7xl mx-auto">
-            <div className="text-left max-w-3xl mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest text-left">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
                 OPERATIONAL CAPABILITIES
               </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-left">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
                 {pillar.name} Core Features
               </h2>
-              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2 text-left">
+              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
                 Designed to operate cleanly within the broader OMNiGRC lifecycle.
               </p>
             </div>
@@ -175,8 +175,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   <div className="p-2.5 rounded-xl bg-[#ffdbcf] dark:bg-orange-950/30 text-[#F15E1C] dark:text-orange-400 shrink-0 font-mono text-xs font-bold">
                     0{idx + 1}
                   </div>
-                  <div className="w-full text-left">
-                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5 text-left">{feat.title}</h3>
+                  <div className="w-full">
+                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5 text-center sm:text-left">{feat.title}</h3>
                     <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed font-medium text-left">{feat.desc}</p>
                   </div>
                 </div>
@@ -197,12 +197,12 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         </section>
 
         {/* CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-left">
-          <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 text-left">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Experience {pillar.name} in Action
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl text-left">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Schedule a focused demonstration tailored to your team&apos;s GRC operations and target frameworks.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">

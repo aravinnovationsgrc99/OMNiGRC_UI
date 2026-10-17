@@ -44,14 +44,14 @@ export const TestimonialsSection: React.FC = () => {
   return (
     <section className="relative bg-white dark:bg-[#0A111F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left max-w-3xl mb-8 sm:mb-16">
-          <p className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold text-left">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <p className="text-xs font-mono uppercase tracking-widest text-[#D4521A] dark:text-amber mb-3 font-semibold">
             PRACTICAL GRC OPERATIONS
           </p>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-left">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
             How Lean Teams Operate in Practice.
           </h2>
-          <p className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg mt-3 leading-relaxed text-left">
+          <p className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg mt-3 leading-relaxed">
             Real-world workflows demonstrating how OMNiGRC removes friction from everyday compliance, asset, and risk management.
           </p>
         </div>

@@ -75,7 +75,7 @@ export default function AboutUsPage() {
             </TiltCard>
           </div>
 
-          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-6 sm:p-8 md:p-12 text-left max-w-4xl mx-auto flex flex-col items-start">
+          <div className="rounded-3xl border border-teal/40 bg-cardWarm dark:bg-slate-900/90 p-6 sm:p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center">
             <div className="mb-6 inline-flex items-center transition-transform hover:scale-[1.02]">
               <Image
                 src="/images/Powered-By-AravInnovation.png"
@@ -85,11 +85,11 @@ export default function AboutUsPage() {
                 className="h-9 sm:h-12 w-auto object-contain"
               />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white mb-3 text-left leading-tight">Ready to experience OMNiGRC?</h2>
-            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-6 max-w-xl text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white mb-3 text-center leading-tight">Ready to experience OMNiGRC?</h2>
+            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-6 max-w-xl mx-auto text-left sm:text-center">
               Schedule a personalized demonstration tailored to your target frameworks and team structure.
             </p>
-            <div className="flex justify-start w-full">
+            <div className="flex justify-center w-full">
               <Link href="/demo" className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-teal text-white font-bold text-xs hover:bg-teal/90 shadow-lg shadow-teal/20 text-center">
                 <span>Request a Demo</span>
                 <ArrowRight className="h-4 w-4" />

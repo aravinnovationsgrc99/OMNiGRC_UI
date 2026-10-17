@@ -36,7 +36,7 @@ export default function SaaSGrowingOrganizationsPage() {
                 <span>SOLUTIONS FOR GROWING SAAS ORGANIZATIONS</span>
               </div>
 
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight text-center w-full">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left">
                 Scale Governance alongside your <span className="text-primary">Company Growth</span>
               </h1>
 
@@ -97,7 +97,7 @@ export default function SaaSGrowingOrganizationsPage() {
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 THE SAAS SCALING CHALLENGE
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Governance complexity shouldn't slow down product momentum.
               </h2>
               <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -111,7 +111,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Building2 className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Enterprise Deal Friction</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Enterprise Deal Friction</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Prospects demand SOC 2 Type II and ISO 27001 proof before signing contracts, stalling sales velocity.
                   </p>
@@ -127,7 +127,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Network className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Vendor &amp; Sub-processor Sprawl</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Vendor &amp; Sub-processor Sprawl</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Adopting new cloud tools without structured third-party risk tracking introduces unmonitored supply-chain risks.
                   </p>
@@ -143,7 +143,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Scale className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Multi-Framework Overlap</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Multi-Framework Overlap</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Adding HIPAA, ISO 42001, or DPDP Act compliance on top of SOC 2 causes duplicate work when managed manually.
                   </p>
@@ -164,7 +164,7 @@ export default function SaaSGrowingOrganizationsPage() {
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               GROWTH GOVERNANCE CAPABILITIES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Built to scale with your architecture and customer requirements.
             </h2>
             <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -181,7 +181,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-200 dark:border-navy-700">REUSABLE BASELINES</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Reusable Control Baselines</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Reusable Control Baselines</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Establish core safeguards once and map them across expanding customer requirements and security frameworks.
                 </p>
@@ -200,7 +200,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-200 dark:border-navy-700">VENDOR RISK</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Vendor &amp; Sub-processor Governance</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Vendor &amp; Sub-processor Governance</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Track SaaS vendor dependencies, security attestations, and DPDP sub-processor agreements in a single inventory.
                 </p>
@@ -220,7 +220,7 @@ export default function SaaSGrowingOrganizationsPage() {
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 ILLUSTRATIVE SCALING PIPELINE (DEMO DATA)
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Growth Milestone → Governance Requirement → Safeguard → Audit Readiness
               </h2>
               <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
@@ -371,7 +371,7 @@ export default function SaaSGrowingOrganizationsPage() {
             >
               <div>
                 <Network className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Control Mapping</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Control Mapping</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Map-once crosswalk across SOC 2, ISO 27001, and HIPAA.
                 </p>
@@ -387,7 +387,7 @@ export default function SaaSGrowingOrganizationsPage() {
             >
               <div>
                 <Building2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Vendor Risk</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Vendor Risk</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Third-party SaaS and sub-processor governance inventory.
                 </p>
@@ -403,7 +403,7 @@ export default function SaaSGrowingOrganizationsPage() {
             >
               <div>
                 <Link2 className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Evidence Index</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Evidence Index</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Centralized cloud URI pointers with verification logs.
                 </p>
@@ -419,7 +419,7 @@ export default function SaaSGrowingOrganizationsPage() {
             >
               <div>
                 <FileCheck className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Audit Management</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Audit Management</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Workpaper dossier packaging and auditor portals.
                 </p>
@@ -436,7 +436,7 @@ export default function SaaSGrowingOrganizationsPage() {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4 text-left w-full">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">
                   Scale your SaaS security governance with confidence.
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">

@@ -59,13 +59,13 @@ export const CustomerTrustSection: React.FC = () => {
   return (
     <section className="relative border-y border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#131C38] section-rhythm transition-colors duration-200 overflow-hidden">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left max-w-3xl mb-6 sm:mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-14">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight text-left"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight"
           >
             Built Around the Workflows{" "}
             <span className="relative inline-block text-orange-600 dark:text-teal-400">
