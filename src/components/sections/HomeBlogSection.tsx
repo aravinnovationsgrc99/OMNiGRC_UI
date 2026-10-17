@@ -51,7 +51,7 @@ export const HomeBlogSection: React.FC = async () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-left">
               From the GRC{" "}
               <span className="text-[#F15E1C]">Operations Desk.</span>
             </h2>
@@ -117,7 +117,7 @@ export const HomeBlogSection: React.FC = async () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-extrabold text-base sm:text-lg text-navy-900 dark:text-white leading-snug group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors line-clamp-2">
+                    <h3 className="font-extrabold text-base sm:text-lg text-navy-900 dark:text-white leading-snug group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors line-clamp-2 text-left">
                       {post.title}
                     </h3>
 

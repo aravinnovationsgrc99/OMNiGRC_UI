@@ -81,7 +81,7 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
           <div className="w-full max-w-7xl 2xl:max-w-[1700px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 text-center lg:text-left">
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight mb-3 text-center lg:text-left leading-tight">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight mb-3 text-center w-full leading-tight">
                 {fw.name} Framework Guide
               </h1>
 
@@ -442,15 +442,15 @@ export default function FrameworkDetailPage({ params }: { params: { slug: string
 
         {/* SECTION 10: CTA BANNER */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8">
-          <div className="w-full max-w-7xl 2xl:max-w-[1700px] mx-auto text-center sm:text-left">
-            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2.5 leading-tight break-words text-center sm:text-left">
+          <div className="w-full max-w-7xl 2xl:max-w-[1700px] mx-auto text-left">
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2.5 leading-tight break-words text-left">
               <span>Operationalize {fw.name} </span>
               <span>with OMNiGRC.</span>
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 max-w-2xl leading-relaxed text-left sm:text-left">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 max-w-2xl leading-relaxed text-left">
               Schedule a technical demonstration to see how your controls and assets map to {fw.name} with Advisory AI and human review.
             </p>
-            <div className="flex justify-center sm:justify-start w-full">
+            <div className="flex justify-start w-full">
               <Link
                 href="/demo"
                 className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"

@@ -35,7 +35,7 @@ export default function ComplianceManagersPage() {
                 <span>SOLUTIONS FOR COMPLIANCE MANAGERS &amp; GRC LEADS</span>
               </div>
 
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[46px] lg:leading-[54px] text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[46px] lg:leading-[54px] text-slate-900 dark:text-white font-bold tracking-tight text-center w-full">
                 Continuous Compliance Without <span className="text-primary">Audit Season Chaos</span>
               </h1>
 
@@ -96,7 +96,7 @@ export default function ComplianceManagersPage() {
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 THE COMPLIANCE CHALLENGE
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Eliminating duplicated effort across overlapping frameworks.
               </h2>
               <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -110,7 +110,7 @@ export default function ComplianceManagersPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Scale className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Redundant Framework Audits</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Redundant Framework Audits</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Testing access controls separately for SOC 2, ISO 27001, and HIPAA creates massive internal audit fatigue.
                   </p>
@@ -126,7 +126,7 @@ export default function ComplianceManagersPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Link2 className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Stale Evidence Files</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Stale Evidence Files</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Local PDF uploads become obsolete within weeks, forcing compliance teams to re-request screenshots.
                   </p>
@@ -142,7 +142,7 @@ export default function ComplianceManagersPage() {
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <FileCheck className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Unorganized Auditor Requests</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Unorganized Auditor Requests</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Managing auditor requests over email attachments leads to missing workpapers and delayed audit completion.
                   </p>
@@ -163,7 +163,7 @@ export default function ComplianceManagersPage() {
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               COMPLIANCE OPERATING CAPABILITIES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Structured framework mapping and automated cadence tracking.
             </h2>
             <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -180,7 +180,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">CROSSWALK ENGINE</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Map-Once Framework Crosswalk</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Map-Once Framework Crosswalk</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Map single internal safeguards to ISO 27001, SOC 2, HIPAA, and DPDP. Human review ratifies every mapping before audit commit.
                 </p>
@@ -199,7 +199,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">EVIDENCE INDEX</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Centralized Evidence Reference Index</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Centralized Evidence Reference Index</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Index external cloud log URLs, S3 bucket pointers, and Jira ticket references with integrity verification and human sign-off.
                 </p>
@@ -218,7 +218,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">CADENCE BOARD</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">30/60/90-Day Cadence Scheduler</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">30/60/90-Day Cadence Scheduler</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Schedule periodic access reviews, policy attestations, and penetration test remediations to run automatically on cadence.
                 </p>
@@ -237,7 +237,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">AUDITOR DOSSIERS</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Read-Only Auditor Access Dossiers</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Read-Only Auditor Access Dossiers</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Package verified evidence references and workpapers into clean read-only digital binders for CPA firms and ISO registrars.
                 </p>
@@ -257,7 +257,7 @@ export default function ComplianceManagersPage() {
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 ILLUSTRATIVE COMPLIANCE PIPELINE (DEMO DATA)
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Framework Mandate → Safeguard Mapping → Evidence Index → Audit Dossier
               </h2>
               <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
@@ -408,7 +408,7 @@ export default function ComplianceManagersPage() {
             >
               <div>
                 <Network className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Control Mapping</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Control Mapping</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Map-once crosswalk engine across SOC 2, ISO, and HIPAA.
                 </p>
@@ -424,7 +424,7 @@ export default function ComplianceManagersPage() {
             >
               <div>
                 <Link2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Evidence Index</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Evidence Index</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Centralized external pointer index with verification log trace.
                 </p>
@@ -440,7 +440,7 @@ export default function ComplianceManagersPage() {
             >
               <div>
                 <Kanban className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Compliance Board</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Compliance Board</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Kanban cadence scheduler for recurring testing cycles.
                 </p>
@@ -456,7 +456,7 @@ export default function ComplianceManagersPage() {
             >
               <div>
                 <FileCheck className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Audit Management</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Audit Management</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Workpaper packaging and auditor read-only portals.
                 </p>
@@ -473,7 +473,7 @@ export default function ComplianceManagersPage() {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4 text-left w-full">
                   Streamline your framework compliance program.
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">

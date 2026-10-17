@@ -87,7 +87,7 @@ export default function VulnerabilitiesPage() {
                 <Bug className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 05: VULNERABILITY INGESTION &amp; SLA GOVERNANCE</span>
               </div>
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Connect External Scanner Findings to <span className="text-primary">Quantified Risk Registers</span>
               </h1>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
@@ -182,7 +182,7 @@ export default function VulnerabilitiesPage() {
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16" id="vulnerability-topology">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
             <div>
-              <h2 className="text-[18px] min-[360px]:text-[20px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              <h2 className="text-[18px] min-[360px]:text-[20px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Interactive Vulnerability-to-Asset Topology
               </h2>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mt-2 text-left leading-relaxed">
@@ -385,7 +385,7 @@ export default function VulnerabilitiesPage() {
         {/*  SECTION 3: THREE FUNCTIONAL PILLARS SECTION  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left w-full">
               Purpose-Built for GRC Defensibility, Not Log Flooding
             </h2>
             <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-center leading-relaxed">
@@ -397,7 +397,7 @@ export default function VulnerabilitiesPage() {
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
                 <Network className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Asset-Centric Prioritization</h3>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Asset-Centric Prioritization</h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Triage vulnerabilities by business criticality, data classifications, and regulatory scope, not theoretical CVSS scores alone.</p>
               <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
                 <span className="text-slate-900 dark:text-white font-semibold">Scope Context</span>
@@ -408,7 +408,7 @@ export default function VulnerabilitiesPage() {
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
                 <Zap className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Actionable Remediation SLAs</h3>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Actionable Remediation SLAs</h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Automate remediation countdowns aligned to policy. Trigger team notifications and CISO approvals before breach limits hit.</p>
               <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
                 <span className="text-slate-900 dark:text-white font-semibold">Enforcement Policy</span>
@@ -419,7 +419,7 @@ export default function VulnerabilitiesPage() {
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
                 <Lock className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Defensible Audit Closure</h3>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Defensible Audit Closure</h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Store patch proof, diffs, and verified commit hashes directly in GRC audit logs for auditor review.</p>
               <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
                 <span className="text-slate-900 dark:text-white font-semibold">Audit Proof</span>
@@ -433,7 +433,7 @@ export default function VulnerabilitiesPage() {
         <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left w-full">
                 Raw Scanner Noise vs. Connected GRC Prioritization
               </h2>
             </div>
@@ -483,7 +483,7 @@ export default function VulnerabilitiesPage() {
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-8 sm:py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-4 sm:gap-6">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left w-full">
               Connect technical findings to compliance truth.
             </h2>
             <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>

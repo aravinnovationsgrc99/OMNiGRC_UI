@@ -33,7 +33,7 @@ export default function AuditsPage() {
                 <ClipboardCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 07: INTERNAL &amp; EXTERNAL AUDIT MANAGEMENT</span>
               </div>
-              <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+              <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Structured Internal &amp; External <span className="text-primary">Audit Orchestration</span>
               </h1>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
@@ -124,7 +124,7 @@ export default function AuditsPage() {
               <History className="h-5 w-5 shrink-0" />
               <span>Structured Audit Execution</span>
             </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
               The Operational Audit Lifecycle
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">From initial audit scoping and evidence sampling to finding creation and final auditor verification.</p>
@@ -183,7 +183,7 @@ export default function AuditsPage() {
                 <FileText className="h-5 w-5 shrink-0" />
                 <span>Auditor Workpaper Workspace</span>
               </div>
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Structured Audit Workpaper Entry
               </h2>
               <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">Experience how OMNiGRC organizes audit testing steps, evidence artifacts, and finding exceptions into clean auditor workpapers.</p>
@@ -252,7 +252,7 @@ export default function AuditsPage() {
               <Zap className="h-5 w-5 shrink-0" />
               <span>Audit Capabilities</span>
             </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
               4 Core Functional Audit Capabilities
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Purpose-built for compliance managers, internal auditors, and external audit partners.</p>
@@ -260,28 +260,28 @@ export default function AuditsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Auditor Workspace</h3>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Auditor Workspace</h3>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Grant external auditors read-only access to scoped evidence packages, sampling lists, and test workpapers.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Read-Only Auditor Portal</span>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Sample Population Management</h3>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Sample Population Management</h3>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Generate and log sample populations (users, servers, pull requests) directly linked to control tests.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Sample List Indexing</span>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Finding &amp; CAPA Tracking</h3>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Finding &amp; CAPA Tracking</h3>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Transform audit exceptions directly into assigned corrective action remediation items with SLA deadlines.</p>
               </div>
               <span className="font-code-sm text-code-sm text-primary font-bold mt-space-md">Corrective Action Workflow</span>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Multi-Framework Workpapers</h3>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Multi-Framework Workpapers</h3>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Reuse completed audit workpapers across ISO 27001, SOC 2, HIPAA, and DPDP Act compliance reviews.</p>
               </div>
               <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Zero Duplicate Workpapers</span>
@@ -292,7 +292,7 @@ export default function AuditsPage() {
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left w-full">
               Organize Audits with Operational Precision
             </h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Eliminate pre-audit panic by connecting framework controls directly to audit workpapers and evidence in OMNiGRC.</p>

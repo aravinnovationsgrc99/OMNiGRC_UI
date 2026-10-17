@@ -61,7 +61,7 @@ export default function EvidencePage() {
                     <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                     Zero Proprietary Binary Storage Lock-In
                   </div>
-                  <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 sm:mb-6 leading-tight text-center sm:text-left w-full">
+                  <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 sm:mb-6 leading-tight text-center w-full">
                     Evidence References &amp; Records: <span className="text-[#F15E1C]">External Proof Without Binary Lock-in</span>
                   </h1>
                   <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-6 text-left w-full">
@@ -157,7 +157,7 @@ export default function EvidencePage() {
                 <span className="text-xs text-[#F15E1C] uppercase tracking-widest font-mono font-bold">
                   ARCHITECTURAL PRINCIPLE
                 </span>
-                <h2 className="text-2xl sm:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight">
+                <h2 className="text-2xl sm:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-left">
                   Why Centralized Binary Upload Vaults Fail Modern Security
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 text-justify sm:text-center">
@@ -173,7 +173,7 @@ export default function EvidencePage() {
                       <XCircle className="h-4 w-4 text-rose-600 dark:text-rose-400" />
                       Traditional Heavyweight GRC Binary Uploads
                     </div>
-                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-center sm:text-left">
+                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-left">
                       Duplicate PDFs, Data Leaks &amp; Orphaned Files
                     </h3>
                     <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
@@ -203,7 +203,7 @@ export default function EvidencePage() {
                       <CheckCircle2 className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                       OMNiGRC External Pointer &amp; Reference Layer
                     </div>
-                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-center sm:text-left">
+                    <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-left">
                       Point Directly to Authoritative Systems of Record
                     </h3>
                     <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
@@ -232,7 +232,7 @@ export default function EvidencePage() {
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 w-full">
               <div className="mb-8 text-center sm:text-left">
                 <span className="text-xs text-[#2E936F] dark:text-teal uppercase tracking-widest font-mono font-bold">DETERMINISTIC LIFECYCLE</span>
-                <h2 className="text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold mt-1">
+                <h2 className="text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold mt-1 text-left">
                   The 4-Step External Evidence Governance Pipeline
                 </h2>
               </div>
@@ -243,7 +243,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-[#2E936F] px-2 py-0.5 rounded">STEP 01</span>
                       <Cloud className="h-5 w-5 text-[#2E936F]" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Discover &amp; Point</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Discover &amp; Point</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Ingest or link external URIs: customer S3 ARNs, Jira ticket keys, Okta log export queries, or signed Git commit SHAs.
                     </p>
@@ -259,7 +259,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-[#D4521A] px-2 py-0.5 rounded">STEP 02</span>
                       <Shield className="h-5 w-5 text-[#D4521A]" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Advisory AI Crosswalk</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Advisory AI Crosswalk</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Advisory AI analyzes URI semantics and metadata to propose matching SOC 2, ISO 27001, and HIPAA control clauses. Human signs off.
                     </p>
@@ -275,7 +275,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-indigo-600 px-2 py-0.5 rounded">STEP 03</span>
                       <Clock className="h-5 w-5 text-indigo-500" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Assign Cadence &amp; Owner</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Assign Cadence &amp; Owner</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Bind the pointer to a technical custodian and testing cadence (30d, 90d, Annual). Triggers proactive re-attestation alerts.
                     </p>
@@ -291,7 +291,7 @@ export default function EvidencePage() {
                       <span className="font-mono text-xs font-bold text-white bg-slate-900 dark:bg-black px-2 py-0.5 rounded">STEP 04</span>
                       <FileText className="h-5 w-5 text-slate-700 dark:text-slate-300" />
                     </div>
-                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Auditor Workpapers</h4>
+                    <h4 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Auditor Workpapers</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       Package verified references into time-restricted, read-only workpaper dossiers for independent CPA firm or ISO registrar review.
                     </p>
@@ -310,7 +310,7 @@ export default function EvidencePage() {
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
                   <div>
                     <div className="flex items-center justify-center sm:justify-start gap-2">
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-center sm:text-left">Live Evidence Index</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-left">Live Evidence Index</h3>
                       <span className="px-2.5 py-0.5 rounded-full bg-[#2E936F] text-white font-mono text-xs font-bold">142 RECORDS</span>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
@@ -512,7 +512,7 @@ export default function EvidencePage() {
                     <CheckCircle2 className="h-4 w-4" />
                     High-Assurance Compliance Indexing
                   </span>
-                  <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4">
+                  <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-left w-full">
                     Organize Evidence Without Spreadsheet Chaos or File-Dump Risks
                   </h2>
                   <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed text-justify sm:text-center">

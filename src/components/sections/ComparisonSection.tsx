@@ -74,18 +74,18 @@ export const ComparisonSection: React.FC = () => {
   return (
     <section className="relative bg-white dark:bg-[#0A111F] section-rhythm border-t border-slate-200 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+        <div className="text-left max-w-3xl mb-8 sm:mb-16">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber mb-3 font-bold"
+            className="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber mb-3 font-bold text-left"
           >
             WHY OMNiGRC
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4 text-left"
           >
             The Sweet Spot for Lean GRC Teams.
           </motion.h2>
@@ -93,7 +93,7 @@ export const ComparisonSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed"
+            className="text-[#334155] dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed text-left"
           >
             More connected and structured than manual spreadsheets. Far simpler and more practical than heavyweight enterprise GRC suites.
           </motion.p>

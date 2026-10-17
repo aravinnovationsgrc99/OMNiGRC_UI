@@ -78,7 +78,7 @@ export default function RemediationPage() {
                 <Sliders className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 08: UNIFIED CORRECTIVE ACTION TRACKING (CAPA)</span>
               </div>
-              <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+              <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Turn GRC Findings into Defensible, <span className="text-primary">Closed-Loop Actions</span>
               </h1>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
@@ -165,7 +165,7 @@ export default function RemediationPage() {
         {/*  SECTION 2: DEFENSIBLE REMEDIATION LIFECYCLE  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
           <div className="flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
-            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left">
               Defensible Remediation Lifecycle
             </h2>
             <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-left">From problem identification (risk, vulnerability, audit finding) to human sign-off and closed-loop verification.</p>
@@ -173,36 +173,36 @@ export default function RemediationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-center sm:text-left block">STAGE 01</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Finding Origin</h4>
+                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 01</span>
+                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Finding Origin</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Ingest exception items from audit workpapers, risk registers, or external scanners.</p>
               </div>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-center sm:text-left block">STAGE 02</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Action &amp; SLA Assignment</h4>
+                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 02</span>
+                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Action &amp; SLA Assignment</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Assign corrective action to designated engineer with policy due date clock.</p>
               </div>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-center sm:text-left block">STAGE 03</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Patch / Fix Execution</h4>
+                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 03</span>
+                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Patch / Fix Execution</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Engineer applies code fix, configuration update, or security policy modification.</p>
               </div>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-center sm:text-left block">STAGE 04</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Evidence Attachment</h4>
+                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 04</span>
+                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Evidence Attachment</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Attach pull request diff, commit hash, or configuration output to evidence vault.</p>
               </div>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-center sm:text-left block">STAGE 05</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Human Verification Lock</h4>
+                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 05</span>
+                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Human Verification Lock</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">CISO or Lead Auditor verifies evidence and signs off on closure record.</p>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function RemediationPage() {
                 <ListChecks className="h-5 w-5 shrink-0" />
                 <span>Interactive Remediation Register</span>
               </div>
-              <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+              <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left">
                 Unified Corrective Action Register
               </h2>
               <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-left">Filter remediation items by finding origin and select any action to inspect linked evidence records, assigned owners, and sign-off status.</p>
@@ -267,7 +267,7 @@ export default function RemediationPage() {
                         <span className="font-code-sm text-code-sm text-primary font-bold">ACT-104</span>
                         <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm uppercase">Audit Exception</span>
                       </div>
-                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Rotate Staging VPC Root Bastion Credentials</h3>
+                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Rotate Staging VPC Root Bastion Credentials</h3>
                       <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Origin: Q2 SOC 2 Internal Audit finding FND-2026-03</p>
                     </div>
                     <span className="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm font-semibold shrink-0 ml-2">VERIFIED</span>
@@ -291,7 +291,7 @@ export default function RemediationPage() {
                         <span className="font-code-sm text-code-sm text-primary font-bold">ACT-098</span>
                         <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm uppercase">Risk Treatment</span>
                       </div>
-                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Deploy MFA Enforcement on Legacy Internal Wiki</h3>
+                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Deploy MFA Enforcement on Legacy Internal Wiki</h3>
                       <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Origin: Risk Register (RSK-042: Legacy Unauthenticated Portal)</p>
                     </div>
                     <span className="px-2 py-0.5 rounded bg-error-container text-on-error-container font-code-sm text-code-sm font-semibold shrink-0 ml-2">TRIAGE PENDING</span>
@@ -315,7 +315,7 @@ export default function RemediationPage() {
                         <span className="font-code-sm text-code-sm text-primary font-bold">ACT-112</span>
                         <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm uppercase">Scanner CVE</span>
                       </div>
-                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Patch Node.js Dependency in Auth Microservice</h3>
+                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Patch Node.js Dependency in Auth Microservice</h3>
                       <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Origin: Ingested Scanner Finding (CVE-2025-XXXX prototype pollution)</p>
                     </div>
                     <span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-sm text-code-sm font-semibold shrink-0 ml-2">OPEN REMEDIATION</span>
@@ -338,7 +338,7 @@ export default function RemediationPage() {
               </div>
 
               <div>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold text-center sm:text-left" id="drawer-title">{currentAction.title}</h4>
+                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold text-left" id="drawer-title">{currentAction.title}</h4>
                 <div className="mt-1 font-body-sm text-body-sm text-slate-600 dark:text-slate-300 flex items-center gap-1" id="drawer-origin">
                   <FileText className="h-4 w-4 text-primary shrink-0" />
                   <span>{currentAction.origin}</span>
@@ -382,22 +382,22 @@ export default function RemediationPage() {
               <CheckCircle className="h-5 w-5 shrink-0" />
               <span>Closed-Loop Traceability</span>
             </div>
-            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left">
               Structured Governance, Not Spreadsheet Chaos
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Connect corrective action plans directly to regulatory framework obligations and evidence artifacts.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Unified Action Centralization</h3>
+              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Unified Action Centralization</h3>
               <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Eliminate fragmented remediation tracking across Jira, spreadsheets, and Slack. Consolidate all CAPA tasks into one workspace.</p>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Policy SLA Enforcement</h3>
+              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Policy SLA Enforcement</h3>
               <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Set remediation countdown clocks tied directly to corporate governance policies and regulatory severity thresholds.</p>
             </div>
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Auditor-Verifiable Closure</h3>
+              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-left">Auditor-Verifiable Closure</h3>
               <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Require mandatory evidence attachments and human sign-offs before closing audit exception items.</p>
             </div>
           </div>
@@ -406,7 +406,7 @@ export default function RemediationPage() {
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
           <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-left w-full">
               Close the Loop on Compliance Findings
             </h2>
             <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Transform audit findings, risk treatments, and vulnerability items into verified corrective action records in OMNiGRC.</p>

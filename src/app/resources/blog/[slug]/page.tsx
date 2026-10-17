@@ -85,7 +85,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight leading-tight mb-6 text-center w-full">
               {post.title}
             </h1>
 

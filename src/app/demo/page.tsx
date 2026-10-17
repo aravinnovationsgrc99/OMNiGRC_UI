@@ -96,7 +96,7 @@ export default function DemoPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center w-full leading-tight">
               Request a walkthrough of the OMNiGRC platform.
             </h1>
 
@@ -111,11 +111,11 @@ export default function DemoPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column: Expectations & Benefits */}
             <div className="lg:col-span-6 space-y-6 sm:space-y-8">
-              <div className="text-center sm:text-left">
+              <div className="text-left">
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block mb-2">
                   WHAT TO EXPECT
                 </span>
-                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
                   Tailored Technical Walkthrough
                 </h2>
                 <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 mt-2 leading-relaxed text-left">
@@ -155,7 +155,7 @@ export default function DemoPage() {
             {/* Right Column: Intake Form Card */}
             <div className="lg:col-span-6">
               <div className="rounded-3xl border border-slate-300 dark:border-navy-700/60 bg-[#f1f3ff] dark:bg-navy-950/30 p-5 sm:p-6 md:p-8 shadow-xl">
-                <h3 className="text-xl sm:text-2xl font-bold text-center sm:text-left text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-left text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
                 <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 text-left">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4 text-left">

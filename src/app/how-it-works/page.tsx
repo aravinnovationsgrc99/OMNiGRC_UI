@@ -268,7 +268,7 @@ export default function HowItWorksPage() {
       <main className="w-full pt-16">
         {/* Section 1: Hero Zone */}
         <section className="relative w-full pt-4 sm:pt-6 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-center bg-grid-mesh-adaptive">
-          <h1 className="max-w-5xl xl:max-w-6xl text-2xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-4 text-center">
+          <h1 className="max-w-5xl xl:max-w-6xl text-2xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-4 text-center w-full">
             The Connected GRC <span className="text-[#F15E1C]">Operating Lifecycle</span>
           </h1>
 
@@ -331,7 +331,7 @@ export default function HowItWorksPage() {
               <span className="px-2.5 py-0.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 font-mono text-[11px] text-[#F15E1C] dark:text-orange-400 font-semibold uppercase">
                 Operating Architecture
               </span>
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight mt-1">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight mt-1 text-left">
                 The 9-Stage Operating Lifecycle
               </h2>
               <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-0.5">
@@ -527,21 +527,23 @@ export default function HowItWorksPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 text-center border-t border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 border-t border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left">
               Ready to experience the 9-stage operating lifecycle?
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 max-w-2xl text-left">
               Schedule a technical walkthrough with a GRC specialist today.
             </p>
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm"
-            >
-              <span>Request Workflow Walkthrough</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <div className="flex justify-start w-full">
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center"
+              >
+                <span>Request Workflow Walkthrough</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

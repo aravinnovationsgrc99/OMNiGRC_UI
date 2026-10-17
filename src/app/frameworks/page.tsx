@@ -49,7 +49,7 @@ export default function FrameworksHubPage() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center w-full leading-tight">
               Documented framework coverage. Map once across global standards.
             </h1>
 
@@ -72,11 +72,11 @@ export default function FrameworksHubPage() {
         {/* INTERACTIVE 3D ORRERY SECTION */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-6">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
+            <div className="text-left max-w-2xl mb-6">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
                 INTERACTIVE FRAMEWORK ORRERY
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0d1b36] dark:text-white mt-1">Explore Framework Correlations</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#0d1b36] dark:text-white mt-1 text-left">Explore Framework Correlations</h2>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-[#0A111F]">
               <FrameworkOrrery title="Documented Framework Alignment" />
@@ -87,14 +87,14 @@ export default function FrameworksHubPage() {
         {/* 6 FRAMEWORK GUIDES GRID */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
+            <div className="text-left max-w-3xl mb-8 sm:mb-12">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
                 SUBSTANTIVE FRAMEWORK GUIDES
               </span>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-left">
                 Explore Core Framework Taxonomies
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left sm:text-center">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left">
                 Detailed educational and operational guides for security, data privacy, and artificial intelligence standards.
               </p>
             </div>
@@ -149,11 +149,11 @@ export default function FrameworksHubPage() {
         {/* COMPARISON MATRIX TABLE */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
+            <div className="text-left max-w-3xl mb-8 sm:mb-12">
+              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
                 MAP-ONCE CROSSWALK MATRIX
               </span>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-left">
                 Framework Taxonomies at a Glance
               </h2>
             </div>
@@ -188,15 +188,15 @@ export default function FrameworksHubPage() {
         </section>
 
         {/* CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4 text-center leading-tight">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+          <div className="max-w-4xl mx-auto text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-3 sm:mb-4 text-left leading-tight">
               Map once and satisfy global compliance standards.
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto text-left sm:text-center">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl text-left">
               Schedule a technical demonstration to see how OMNiGRC streamlines framework crosswalks with human oversight.
             </p>
-            <div className="flex justify-center w-full">
+            <div className="flex justify-start w-full">
               <Link
                 href="/demo"
                 className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"

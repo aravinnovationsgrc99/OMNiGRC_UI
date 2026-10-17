@@ -59,7 +59,7 @@ export default function DpdpLandingPage() {
                 </div>
 
                 {/* Exact Headline Required */}
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-black text-navy-900 dark:text-white tracking-tight leading-[1.18]">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-black text-navy-900 dark:text-white tracking-tight leading-[1.18] text-center w-full">
                   DPDP Compliance Software. Track Consent, Vendors and Breaches in One Place
                 </h1>
 
@@ -231,14 +231,14 @@ export default function DpdpLandingPage() {
         {/* ── 3. AUDIENCE POSITIONING: WHO OMNIGRC IS BUILT FOR ── */}
         <section className="w-full py-12 sm:py-14 border-t border-slate-200/80 dark:border-navy-700/80 bg-slate-50/50 dark:bg-navy-950/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#2E936F] dark:text-teal-400">
+            <div className="max-w-3xl text-left mb-8 sm:mb-10">
+              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#2E936F] dark:text-teal-400 block">
                 AUDIENCE FIT
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight mt-1">
+              <h2 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight mt-1 text-left">
                 Who OMNiGRC Is Built For
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-left">
                 Designed specifically for teams handling digital personal data who need clear operational oversight without legacy software bloat.
               </p>
             </div>
@@ -289,14 +289,14 @@ export default function DpdpLandingPage() {
         {/* ── 5. RELEVANT FRAMEWORK OR STATUTORY DETAILS ── */}
         <section className="w-full py-12 sm:py-16 border-t border-slate-200/80 dark:border-navy-700/80 bg-white/70 dark:bg-navy-950/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
-              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#2E936F] dark:text-teal-400">
+            <div className="max-w-3xl text-left mb-10 sm:mb-12">
+              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#2E936F] dark:text-teal-400 block">
                 STATUTORY STRUCTURE ALIGNMENT
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy-900 dark:text-white tracking-tight mt-1.5">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy-900 dark:text-white tracking-tight mt-1.5 text-left">
                 Key DPDP Act 2023 Provisions Mapped in OMNiGRC
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-left">
                 How OMNiGRC helps Data Fiduciaries organize internal controls to support core statutory duties.
               </p>
             </div>
@@ -391,14 +391,14 @@ export default function DpdpLandingPage() {
         <section className="w-full py-10 sm:py-12 border-t border-slate-200/80 dark:border-navy-700/80 bg-slate-50/70 dark:bg-navy-900/40">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-navy-700/80 bg-white dark:bg-[#16233F]/90 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="space-y-2 text-center md:text-left">
+              <div className="space-y-2 text-left">
                 <span className="inline-flex items-center text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FAB60A]/15 text-[#915B00] dark:bg-amber-950/40 dark:text-amber-300 border border-[#FAB60A]/30 dark:border-amber-800/50 w-fit mb-2">
                   TRANSPARENT COMMERCIAL SCOPING
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-navy-900 dark:text-white">
+                <h3 className="text-xl sm:text-2xl font-black text-navy-900 dark:text-white text-left">
                   Custom Proposals Tailored to Your Deployment Scope
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed text-left">
                   Commercial proposals are structured around your operational architecture (Shared SaaS, Private dedicated instance, or Customer-controlled container), target frameworks, and entity complexity without hidden fees.
                 </p>
               </div>

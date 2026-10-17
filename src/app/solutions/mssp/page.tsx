@@ -106,7 +106,7 @@ export default function MSSPSolutionPage() {
               </div>
 
               {/* Hero Headline */}
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white tracking-tight font-bold mb-4 sm:mb-6 text-center">
+              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white tracking-tight font-bold mb-4 sm:mb-6 text-center w-full">
                 Coordinate multi-client governance without{" "}
                 <span className="text-primary">administrative chaos</span>.
               </h1>
@@ -348,7 +348,7 @@ export default function MSSPSolutionPage() {
               <div className="text-xs text-primary uppercase tracking-wider mb-2 font-semibold font-mono">
                 THE MULTI-TENANT CHALLENGE
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Delivering GRC across clients is broken by disconnected workspaces.
               </h2>
               <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -362,7 +362,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <EyeOff className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Scattered Client Portals &amp; Sheets</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Scattered Client Portals &amp; Sheets</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Juggling disparate client spreadsheets and tenant credentials introduces data leakage risks, human version errors, and operational drag across advisory staff.
                   </p>
@@ -378,7 +378,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Clock className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Repetitive Baseline Setup</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Repetitive Baseline Setup</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Re-authoring baseline control standards, audit questions, and compliance cadences from scratch for every newly signed client wastes high-value consulting capacity.
                   </p>
@@ -394,7 +394,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <AlertTriangle className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Opaque Multi-Client Status</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Opaque Multi-Client Status</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Lack of a single operational view to assess which client is approaching an audit window, which risks need mitigation review, or which control tests elapsed.
                   </p>
@@ -414,7 +414,7 @@ export default function MSSPSolutionPage() {
             <div className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold font-mono">
               PURPOSE-BUILT MSSP ARCHITECTURE
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Centralized partner operations with strict organizational isolation.
             </h2>
             <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
@@ -428,7 +428,7 @@ export default function MSSPSolutionPage() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
                   <Building2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Client Organization Hierarchy</h3>
+                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Client Organization Hierarchy</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Provider-level administration managing discrete client organizations with dedicated data boundaries. Ensure lead advisors access authorized client records.
                 </p>
@@ -444,7 +444,7 @@ export default function MSSPSolutionPage() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
                   <RefreshCw className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Context Switching</h3>
+                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Context Switching</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Navigation between client workspaces within authorized partner scopes. Jump directly into a client's risk board or compliance tracker in one click.
                 </p>
@@ -460,7 +460,7 @@ export default function MSSPSolutionPage() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
                   <Workflow className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-center sm:text-left">Standardized Framework Baselines</h3>
+                <h3 className="text-lg text-slate-900 dark:text-white font-bold mb-2 text-left">Standardized Framework Baselines</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Propagate standard control templates across clients while preserving client-specific policies, custom risk scorings, and independent evidence links.
                 </p>
@@ -481,7 +481,7 @@ export default function MSSPSolutionPage() {
                 <Workflow className="w-3.5 h-3.5 text-primary" />
                 <span>CANONICAL MSSP OPERATING WORKFLOW</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 MSSP Provider Console → Client Context Selection → Client Governance Data → Delegated Action &amp; Sign-off
               </h2>
               <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-relaxed">
@@ -800,7 +800,7 @@ export default function MSSPSolutionPage() {
             <div className="text-xs text-primary uppercase tracking-wider mb-2 font-semibold font-mono">
               PARTNERSHIP EVALUATION
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Is OMNiGRC the right partner platform for your advisory practice?
             </h2>
             <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-relaxed">
@@ -815,7 +815,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-8 h-8 rounded-full bg-emerald-600 dark:bg-emerald-500 text-white flex items-center justify-center">
                     <Check className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold text-center sm:text-left">Ideal Partner Fit</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold text-left">Ideal Partner Fit</h3>
                 </div>
                 <ul className="flex flex-col gap-4 text-sm text-slate-900 dark:text-slate-100">
                   <li className="flex items-start gap-2.5">
@@ -855,7 +855,7 @@ export default function MSSPSolutionPage() {
                   <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-navy-800 text-slate-600 dark:text-slate-300 flex items-center justify-center border border-slate-300 dark:border-navy-700">
                     <X className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg text-slate-900 dark:text-white font-bold text-center sm:text-left">Not Designed For</h3>
+                  <h3 className="text-lg text-slate-900 dark:text-white font-bold text-left">Not Designed For</h3>
                 </div>
                 <ul className="flex flex-col gap-4 text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-start gap-2.5">
@@ -900,7 +900,7 @@ export default function MSSPSolutionPage() {
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
                   PARTNER PROGRAM ENROLLMENT
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight mb-3 sm:mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight mb-3 sm:mb-4 text-left w-full">
                   Elevate your client governance operations.
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">

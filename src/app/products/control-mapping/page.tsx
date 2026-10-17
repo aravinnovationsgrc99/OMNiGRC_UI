@@ -92,7 +92,7 @@ export default function ControlMappingPage() {
                 <span className="text-center">CORE WORKFLOW 03: ADVISORY AI CONTROL CROSSWALKS</span>
               </div>
               {/*  Main Headline  */}
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left w-full">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Map Once, Satisfy Seven Frameworks with <span className="text-primary">Advisory AI</span>
               </h1>
               {/*  Sub-headline  */}
@@ -192,7 +192,7 @@ export default function ControlMappingPage() {
         {/*  SECTION 2: MAP-ONCE CAPABILITY OVERVIEW  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <div className="flex flex-col gap-1.5 mb-3 sm:mb-5 text-left">
-            <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center sm:text-left">
+            <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
               Map Once. Satisfy Seven Frameworks with Advisory AI.
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-left mt-0.5">
@@ -405,8 +405,9 @@ export default function ControlMappingPage() {
                 <span>Compliance Principle</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left">
-                <span className="block">Why OMNiGRC Rejects</span>
-                <span className="block">Unsupervised Autonomous Agents</span>
+                <span className="block">Why OMNiGRC</span>
+                <span className="block whitespace-nowrap sm:whitespace-normal">Rejects Unsupervised</span>
+                <span className="block">Autonomous Agents</span>
               </h2>
               <p className="text-xs sm:text-base text-slate-300 text-left leading-relaxed">
                 In compliance, hallucinations create audit risks. Autonomous agents that silently rewrite controls introduce unquantifiable regulatory liability. OMNiGRC position: AI is advisory; human compliance officers govern all decisions.
@@ -500,7 +501,7 @@ export default function ControlMappingPage() {
         {/*  SECTION 7: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-6 sm:py-10 md:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-3 sm:gap-4">
-            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-center">
+            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left w-full">
               Ready to eliminate duplicate compliance controls?
             </h2>
             <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">Upload your current framework policies into OMNiGRC and experience human-governed advisory AI control mapping in real time.</p>
