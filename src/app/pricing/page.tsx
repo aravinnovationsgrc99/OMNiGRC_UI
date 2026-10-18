@@ -105,18 +105,13 @@ export default function PricingPage() {
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
-              <span className="font-mono text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
-                COMMERCIAL SCOPING &amp; DEPLOYMENT MODELS
-              </span>
-            </div>
-
             <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
-              Practical commercial scoping for practical GRC operations.
+              <span className="block">Practical Commercial</span>
+              <span className="block">Scoping for Practical</span>
+              <span className="block">GRC Operations</span>
             </h1>
 
-            <p className="max-w-3xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-left sm:text-center">
+            <p className="max-w-3xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-justify">
               Transparent deployment models tailored to your team infrastructure: Shared multi-tenant SaaS, dedicated Private MSSP instances, or customer-controlled container runtimes.
             </p>
 
@@ -135,14 +130,11 @@ export default function PricingPage() {
         {/* SECTION 1: DEPLOYMENT TIERS GRID */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-              <span className="font-mono text-[10px] sm:text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
-                DEPLOYMENT MODELS
-              </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight text-center">
+            <div className="text-left max-w-3xl mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
                 Select Your Operational Architecture
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-left sm:text-center">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-justify">
                 All models include core 5x5 risk matrix scoring, map-once control crosswalks, and human oversight controls.
               </p>
             </div>
@@ -170,7 +162,7 @@ export default function PricingPage() {
                     </div>
 
                     <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white mb-2">{plan.name}</h3>
-                    <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 leading-relaxed">{plan.desc}</p>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 leading-relaxed text-justify">{plan.desc}</p>
 
                     <div className="border-t border-b border-slate-200 dark:border-navy-700/60 py-4 mb-6">
                       <p className="text-base font-bold text-[#D4521A] dark:text-orange-400">{plan.scope}</p>
@@ -205,8 +197,8 @@ export default function PricingPage() {
             {/* Self-Hosted Truth Note */}
             <div className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900/40 border border-slate-200 dark:border-navy-700/60 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed max-w-4xl mx-auto flex items-start gap-3">
               <Info className="h-5 w-5 text-[#F15E1C] shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-[#0d1b36] dark:text-slate-200 font-semibold block mb-0.5">Self-Hosted Deployment Truth:</strong>
+              <div className="text-justify">
+                <strong className="text-[#0d1b36] dark:text-slate-200 font-semibold block mb-0.5 text-left">Self-Hosted Deployment Truth:</strong>
                 "Customer controls infrastructure and runtime operations, but receives only Arav-distributed executable container artifacts, not the source repository or build/signing infrastructure."
               </div>
             </div>
@@ -216,8 +208,8 @@ export default function PricingPage() {
         {/* SECTION 2: FAQS ACCORDION */}
         <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold">
+            <div className="text-left max-w-3xl mb-10">
+              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold text-left">
                 Frequently Asked Commercial Questions
               </h2>
             </div>
@@ -237,7 +229,7 @@ export default function PricingPage() {
                     />
                   </button>
                   {openFaq === idx && (
-                    <div className="p-5 pt-0 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-navy-800">
+                    <div className="p-5 pt-0 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-navy-800 text-justify">
                       {faq.a}
                     </div>
                   )}
@@ -248,21 +240,23 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 3: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
+        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section text-left">
+          <div className="max-w-4xl mx-auto text-left">
+            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 text-left">
               Ready for a transparent proposal?
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl text-left text-justify">
               Schedule a technical demonstration to discuss framework scoping, deployment models, and custom onboarding.
             </p>
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md"
-            >
-              <span>Request Proposal Walkthrough</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <div className="flex justify-start w-full">
+              <Link
+                href="/demo"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
+              >
+                <span>Request Proposal Walkthrough</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>
