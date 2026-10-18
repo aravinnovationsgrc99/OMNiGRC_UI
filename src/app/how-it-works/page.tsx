@@ -328,9 +328,6 @@ export default function HowItWorksPage() {
         <section className="w-full py-4 sm:py-6 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto" id="lifecycle-stages">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 pb-2.5 border-b border-slate-200 dark:border-navy-700/60">
             <div>
-              <span className="px-2.5 py-0.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 font-mono text-[11px] text-[#F15E1C] dark:text-orange-400 font-semibold uppercase">
-                Operating Architecture
-              </span>
               <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight mt-1">
                 The 9-Stage Operating Lifecycle
               </h2>

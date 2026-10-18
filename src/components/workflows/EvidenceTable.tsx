@@ -61,7 +61,6 @@ export function EvidenceTable() {
         <div>
           <div className="flex items-center gap-3">
             <h3 className="text-2xl text-[#0d1b36] dark:text-white font-bold">Live Evidence Index</h3>
-            <span className="px-2.5 py-1 rounded bg-[#2E936F] dark:bg-teal-900/40 text-white dark:text-teal-400 font-mono text-[10px] font-bold">142 RECORDS</span>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
             Deterministic database catalog of external pointers, signed attestations, and cross-framework control links.

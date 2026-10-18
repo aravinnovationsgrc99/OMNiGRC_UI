@@ -74,10 +74,6 @@ export default function RemediationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/*  Left Column: Copy & Actions  */}
             <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider">
-                <Sliders className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
-                <span>CORE WORKFLOW 08: UNIFIED CORRECTIVE ACTION TRACKING (CAPA)</span>
-              </div>
               <h1 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Turn GRC Findings into Defensible, <span className="text-primary">Closed-Loop Actions</span>
               </h1>
@@ -213,10 +209,6 @@ export default function RemediationPage() {
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="remediation-register">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
             <div>
-              <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-                <ListChecks className="h-5 w-5 shrink-0" />
-                <span>Interactive Remediation Register</span>
-              </div>
               <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left">
                 Unified Corrective Action Register
               </h2>
@@ -428,10 +420,6 @@ export default function RemediationPage() {
         {/*  SECTION 4: STRUCTURED GOVERNANCE, NOT GUESSWORK  */}
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
           <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-              <CheckCircle className="h-5 w-5 shrink-0" />
-              <span>Closed-Loop Traceability</span>
-            </div>
             <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left">
               Structured Governance, Not Spreadsheet Chaos
             </h2>

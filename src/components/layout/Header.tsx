@@ -295,10 +295,7 @@ export const Header: React.FC = () => {
                     <div className="w-full border-t border-slate-200 dark:border-navy-700/60 pt-5">
                       <div className="w-full rounded-xl bg-gradient-to-r from-[#2E936F]/10 via-[#F7D7B0]/20 to-[#2E936F]/10 dark:from-teal/20 dark:via-navy-800/80 dark:to-teal/20 p-5 border border-[#2E936F]/30 dark:border-teal/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                         <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1.5">
-                            <Badge variant="ai" icon={<Sparkles className="h-3 w-3" />}>
-                              Advisory AI Engine
-                            </Badge>
+                          <div className="mb-1.5">
                             <h4 className="text-sm font-bold text-navy-900 dark:text-white">AI Assists. Humans Decide.</h4>
                           </div>
                           <p className="text-2xs sm:text-xs text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">

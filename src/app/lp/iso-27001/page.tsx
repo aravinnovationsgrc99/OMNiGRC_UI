@@ -129,9 +129,6 @@ export default function IsoLandingPage() {
         <section className="py-14 sm:py-18 bg-white border-t border-[#f7d7b0]/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/40 border border-[#fab60a]/50 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
-                Operational Outcomes
-              </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight">
                 Three Ways OMNiGRC Simplifies Your ISO 27001 Program
               </h2>
@@ -223,9 +220,6 @@ export default function IsoLandingPage() {
         <section className="py-14 sm:py-18 bg-white border-b border-[#f7d7b0]/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/40 border border-[#fab60a]/50 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
-                Framework Architecture
-              </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
                 Structured Around the 4 Core Control Themes of ISO/IEC 27001:2022
               </h2>
@@ -320,9 +314,6 @@ export default function IsoLandingPage() {
         <section className="py-14 sm:py-18 bg-[#f7d7b0]/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/50 border border-[#fab60a]/60 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
-                Audience Fit
-              </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
                 Built for SaaS and IT Teams Without a Full Compliance Department
               </h2>

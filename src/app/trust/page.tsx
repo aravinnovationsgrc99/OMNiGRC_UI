@@ -68,9 +68,6 @@ export default function TrustPage() {
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
             <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
-                VERIFIED SECURITY PRINCIPLES
-              </span>
               <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
                 Architectural Foundations
               </h2>
@@ -249,9 +246,6 @@ export default function TrustPage() {
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
             <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
-                DEPLOYMENT ARCHITECTURE
-              </span>
               <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
                 Deployment Models & Operational Boundaries
               </h2>
@@ -346,9 +340,6 @@ export default function TrustPage() {
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
             <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest block">
-                PRODUCT TRUTH & BOUNDARIES
-              </span>
               <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
                 What We Do & Do Not Claim
               </h2>

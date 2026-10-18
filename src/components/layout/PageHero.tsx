@@ -39,12 +39,6 @@ export const PageHero: React.FC<PageHeroProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
             {/* Left Column: Headline / Eyebrow / Subhead / CTAs */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-6 text-left flex flex-col items-center lg:items-start text-center lg:text-left">
-              {eyebrow && (
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#D4521A] dark:border-teal/40 dark:bg-teal/10 dark:text-amber font-mono text-[10px] sm:text-xs tracking-widest uppercase font-semibold mx-auto lg:mx-0">
-                  <span>{eyebrow}</span>
-                </div>
-              )}
-
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-navy-900 dark:text-white tracking-tight leading-[1.12] text-center lg:text-left w-full max-w-none">
                 {title}
               </h1>
@@ -67,12 +61,6 @@ export const PageHero: React.FC<PageHeroProps> = ({
           </div>
         ) : (
           <div className="max-w-4xl lg:max-w-5xl mx-auto space-y-4 sm:space-y-6 text-center flex flex-col items-center">
-            {eyebrow && (
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2E936F]/40 bg-[#2E936F]/10 text-[#D4521A] dark:border-teal/40 dark:bg-teal/10 dark:text-amber font-mono text-[10px] sm:text-xs tracking-widest uppercase font-semibold">
-                <span>{eyebrow}</span>
-              </div>
-            )}
-
             <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-navy-900 dark:text-white tracking-tight leading-[1.12] text-center w-full max-w-4xl">
               {title}
             </h1>

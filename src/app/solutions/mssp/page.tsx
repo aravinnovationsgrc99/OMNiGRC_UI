@@ -97,14 +97,6 @@ export default function MSSPSolutionPage() {
           {/* Section 1: Hero */}
           <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 bg-grid-mesh-adaptive">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-slate-900 dark:text-white shadow-sm mb-6 border border-slate-300 dark:border-navy-700">
-                <Network className="w-4 h-4 text-primary" />
-                <span className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white">
-                  SOLUTIONS FOR MANAGED SERVICE PROVIDERS &amp; vCISOs
-                </span>
-              </div>
-
               {/* Hero Headline */}
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white tracking-tight font-bold mb-4 sm:mb-6 text-center">
                 Coordinate multi-client governance without{" "}
@@ -327,9 +319,6 @@ export default function MSSPSolutionPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/40 to-slate-900 hidden lg:block" />
               </div>
               <div className="lg:col-span-5 p-6 sm:p-10 bg-slate-900 text-white space-y-4">
-                <span className="px-3 py-1 rounded-full bg-teal-500/20 text-teal-400 font-mono text-xs font-bold uppercase tracking-wider">
-                  SECURITY OPERATIONS & CONTROL
-                </span>
                 <h3 className="text-2xl font-bold tracking-tight text-white">
                   Multi-Client Operations with Isolated Tenant Boundaries
                 </h3>
@@ -477,10 +466,6 @@ export default function MSSPSolutionPage() {
         <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-mono text-xs mb-3 border border-slate-200 dark:border-navy-700">
-                <Workflow className="w-3.5 h-3.5 text-primary" />
-                <span>CANONICAL MSSP OPERATING WORKFLOW</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 MSSP Provider Console → Client Context Selection → Client Governance Data → Delegated Action &amp; Sign-off
               </h2>
@@ -896,10 +881,6 @@ export default function MSSPSolutionPage() {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
               <div className="relative z-10 max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-[#0A111F] text-slate-900 dark:text-white font-mono text-xs shadow-sm mb-4 border border-slate-200 dark:border-navy-700">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                  PARTNER PROGRAM ENROLLMENT
-                </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight mb-3 sm:mb-4">
                   Elevate your client governance operations.
                 </h2>

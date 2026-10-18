@@ -159,9 +159,6 @@ export function AdminRequestsTableClient({ initialRequests }: AdminRequestsTable
       {/* Header Banner */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl bg-navy-900 border border-navy-800 shadow-xl">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F15E1C]/20 text-[#F15E1C] font-mono text-xs font-bold uppercase mb-2">
-            <Sparkles className="w-3.5 h-3.5" /> INBOUND PIPELINE
-          </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Demo &amp; Lead Request Management
           </h1>

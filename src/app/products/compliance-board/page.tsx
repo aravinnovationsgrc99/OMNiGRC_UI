@@ -53,10 +53,6 @@ export default function ComplianceBoardPage() {
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
 {/*  Text Column (7 Cols)  */}
 <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left">
-<div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-[10px] sm:text-xs tracking-wider uppercase mb-4 sm:mb-6 mx-auto sm:mx-0">
-<Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
-            CORE WORKFLOW 04: OPERATIONAL TESTING &amp; CADENCE
-          </div>
 <h1 className="text-xl min-[360px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white tracking-tight mb-3 sm:mb-6 font-bold max-w-2xl leading-tight text-center w-full">
   Replace Pre-Audit Panic with a <span className="text-[#006c4d] dark:text-teal-400">Continuous Compliance Board.</span>
 </h1>

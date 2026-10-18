@@ -305,13 +305,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
   return (
     <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto">
-      {/* HEADER BAR: FRAMEWORK TAXONOMIES BADGE + FRAMEWORK SELECTOR TABS */}
+      {/* HEADER BAR: FRAMEWORK SELECTOR TABS */}
       <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#F15E1C]/30 bg-[#FFF0E5] dark:bg-[#1A2642] text-[#F15E1C] dark:text-[#FF7A3D] text-xs font-mono font-extrabold uppercase tracking-wider shadow-sm shrink-0">
-          <Compass className="h-4 w-4 text-[#F15E1C] dark:text-[#FF7A3D] shrink-0" />
-          <span>{title}</span>
-        </div>
-
         <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
           {FRAMEWORKS.map((fw, idx) => {
             const active = activeIndex === idx;

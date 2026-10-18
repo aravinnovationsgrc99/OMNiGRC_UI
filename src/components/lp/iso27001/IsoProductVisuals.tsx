@@ -45,9 +45,6 @@ export const IsoProductVisuals: React.FC = () => {
     <section className="py-12 sm:py-16 bg-[#f7d7b0]/15 border-y border-[#f7d7b0]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f7d7b0]/50 border border-[#fab60a]/60 text-[#f15e1c] text-xs font-bold uppercase tracking-wider mb-2">
-            Verified Product Proof
-          </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
             Inside OMNiGRC: Designed for Real-World ISMS Operations
           </h2>

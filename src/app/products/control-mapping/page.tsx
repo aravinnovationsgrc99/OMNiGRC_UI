@@ -86,11 +86,6 @@ export default function ControlMappingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
             {/*  Left Column: Headline & Action Buttons  */}
             <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full">
-              {/*  Category Eyebrow  */}
-              <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary text-xs uppercase tracking-wider font-semibold mx-auto sm:mx-0 text-center">
-                <ArrowRightLeft className="h-4 w-4 shrink-0" />
-                <span className="text-center">CORE WORKFLOW 03: ADVISORY AI CONTROL CROSSWALKS</span>
-              </div>
               {/*  Main Headline  */}
               <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Map Once, Satisfy Seven Frameworks with <span className="text-primary">Advisory AI</span>
@@ -400,10 +395,6 @@ export default function ControlMappingPage() {
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-10 text-left">
           <div className="p-4 sm:p-8 lg:p-10 rounded-2xl bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8 shadow-xl text-left">
             <div className="flex flex-col items-start gap-3 sm:gap-4 max-w-2xl text-left">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800 text-primary text-xs uppercase tracking-wider font-semibold text-left">
-                <ShieldCheck className="h-4 w-4 shrink-0" />
-                <span>Compliance Principle</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left">
                 <span className="block">Why OMNiGRC</span>
                 <span className="block whitespace-nowrap sm:whitespace-normal">Rejects Unsupervised</span>

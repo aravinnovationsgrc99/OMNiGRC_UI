@@ -87,11 +87,6 @@ export default function AssetInventoryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
             {/*  Left Column: Copy & Actions  */}
             <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full">
-              {/*  Eyebrow Badge  */}
-              <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary text-xs uppercase tracking-wider font-semibold mx-auto sm:mx-0 text-center">
-                <Network className="h-4 w-4 shrink-0" />
-                <span className="text-center">CORE WORKFLOW 02: CONNECTED ASSET &amp; DATA GOVERNANCE</span>
-              </div>
               {/*  Main Headline  */}
               <h1 className="text-[20px] min-[360px]:text-[22px] min-[390px]:text-[24px] sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Every Asset Mapped to <span className="text-primary">Risks</span>, Controls &amp; Classifications
@@ -388,10 +383,6 @@ export default function AssetInventoryPage() {
         {/*  SECTION 3: FOUR CORE ASSET DIMENSIONS  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <div className="flex flex-col gap-1.5 mb-4 sm:mb-6">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-              <Layers className="h-5 w-5 shrink-0" />
-              <span>Comprehensive Inventory Scope</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug">
               <span className="block">Four Dimensions of</span>
               <span className="block">GRC Asset Visibility</span>
@@ -449,10 +440,6 @@ export default function AssetInventoryPage() {
         <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-1.5 mb-4 sm:mb-6">
-              <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-                <Share2 className="h-5 w-5 shrink-0" />
-                <span>Lineage &amp; Classification Matrix</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug">
                 <span className="block">Data Sensitivity &amp;</span>
                 <span className="block">Regulatory Mapping</span>
@@ -508,10 +495,6 @@ export default function AssetInventoryPage() {
         {/*  SECTION 5: INTEGRATION ECOSYSTEM  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <div className="flex flex-col items-center text-center gap-1.5 mb-4 sm:mb-6">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-              <Zap className="h-5 w-5 shrink-0" />
-              <span>Supported Integrations</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug">
               <span className="block">Supported External Systems &amp;</span>
               <span className="block">Cloud References</span>

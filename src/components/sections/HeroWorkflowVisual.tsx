@@ -105,10 +105,7 @@ export const HeroWorkflowVisual: React.FC = () => {
         {/* HEADER BAR: 3 STEP SELECTOR TABS */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-200 dark:border-navy-800 shrink-0">
           <div className="flex items-center justify-between sm:justify-start gap-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F4EF] dark:bg-navy-800 border border-[#2E936F]/30 text-[#2E936F] dark:text-teal text-xs font-bold shrink-0">
-              <span className="w-2 h-2 rounded-full bg-[#2E936F]" />
-              <span>Compliance Pipeline</span>
-            </div>
+            <span className="text-xs sm:text-sm font-bold text-navy-900 dark:text-white">Compliance Pipeline</span>
 
             <button
               type="button"
@@ -165,12 +162,6 @@ export const HeroWorkflowVisual: React.FC = () => {
                   {/* LEFT SIDE: STEP DETAILS & METRIC (5 COLS) */}
                   <div className="lg:col-span-5 flex flex-col justify-between space-y-4 text-left">
                     <div className="space-y-2">
-                      <div className="h-6 flex items-center">
-                        <span className={`inline-block px-3 py-0.5 rounded-full text-xs font-mono font-extrabold border leading-none ${s.badgeBg}`}>
-                          STEP {s.stepNumber} • {s.badge}
-                        </span>
-                      </div>
-
                       <div className="min-h-[2.75rem] sm:min-h-[4rem] flex items-center justify-center sm:justify-start">
                         <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-center sm:text-left">
                           {s.title}

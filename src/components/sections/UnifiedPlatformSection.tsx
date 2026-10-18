@@ -50,9 +50,6 @@ export const UnifiedPlatformSection: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
-          <p className="text-xs font-mono uppercase tracking-widest text-amber mb-3 font-semibold">
-            THE FOUR CORE WORKFLOWS
-          </p>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight mb-4">
             Everything Connects. Nothing Lives in Isolation.
           </h2>
@@ -100,9 +97,6 @@ export const UnifiedPlatformSection: React.FC = () => {
               {/* Left Column: Pillar Details & Points */}
               <div className="lg:col-span-5 space-y-6">
                 <div>
-                  <span className="text-xs font-mono font-bold tracking-widest text-teal uppercase bg-teal/10 px-3 py-1 rounded-full inline-block mb-3">
-                    {pillars[activePillar].tag}
-                  </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 dark:text-white mb-3">
                     {pillars[activePillar].title}
                   </h3>

@@ -217,9 +217,6 @@ export default function PricingPage() {
         <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-3xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-navy-900 text-[#0d1b36] dark:text-white font-mono text-xs font-bold uppercase mb-2 border border-slate-200 dark:border-navy-700/60">
-                <HelpCircle className="h-3.5 w-3.5 text-[#F15E1C]" /> COMMERCIAL FAQ
-              </div>
               <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold">
                 Frequently Asked Commercial Questions
               </h2>

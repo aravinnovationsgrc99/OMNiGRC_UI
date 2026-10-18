@@ -89,13 +89,6 @@ export default function DemoPage() {
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
-              <span className="font-mono text-xs font-semibold tracking-wider uppercase">
-                EXPERIENCE CONNECTED GRC
-              </span>
-            </div>
-
             <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
               Request a walkthrough of the OMNiGRC platform.
             </h1>
@@ -112,9 +105,6 @@ export default function DemoPage() {
             {/* Left Column: Expectations & Benefits */}
             <div className="lg:col-span-6 space-y-6 sm:space-y-8">
               <div className="text-center sm:text-left">
-                <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block mb-2">
-                  WHAT TO EXPECT
-                </span>
                 <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight">
                   Tailored Technical Walkthrough
                 </h2>

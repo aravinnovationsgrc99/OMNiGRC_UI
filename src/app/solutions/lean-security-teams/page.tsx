@@ -39,12 +39,6 @@ export default function LeanSecurityTeamsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-5">
-              {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-primary font-mono text-[10px] sm:text-xs uppercase tracking-wider border border-slate-300 dark:border-navy-700 mx-auto lg:mx-0">
-                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>SOLUTIONS FOR LEAN SECURITY TEAMS</span>
-              </div>
-
               {/* Headline */}
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-[46px] lg:leading-[54px] text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left w-full">
                 Stop spreadsheet sprawl. Run GRC with a <span className="text-primary">lean, connected workflow</span>.

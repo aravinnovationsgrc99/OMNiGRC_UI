@@ -75,13 +75,6 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className={`${slug === "control-mapping" ? "lg:col-span-5" : "lg:col-span-7"} flex flex-col items-center lg:items-start text-center lg:text-left`}>
-              <div className={`${(pillar.code === 'ASSET' || pillar.code === 'CONTROL' || slug === 'asset-inventory' || slug === 'control-mapping') ? 'hidden sm:inline-flex' : 'inline-flex'} items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm mx-auto lg:mx-0`}>
-                <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
-                <span className="font-mono text-xs font-semibold tracking-wider uppercase">
-                  OMNiGRC WORKFLOW • {pillar.code}
-                </span>
-              </div>
-
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center w-full">
                 {pillar.name}
               </h1>

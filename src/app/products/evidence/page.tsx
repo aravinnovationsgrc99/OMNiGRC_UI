@@ -42,10 +42,6 @@ export default function EvidencePage() {
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 md:pt-14 pb-6 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
-                  <div className="hidden sm:inline-flex items-center gap-2 w-max mb-4 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold mx-auto lg:mx-0">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                    Zero Proprietary Binary Storage Lock-In
-                  </div>
                   <h1 className="text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-5xl lg:text-[52px] xl:text-[56px] font-black tracking-tight leading-[1.08] sm:leading-[1.1] text-center lg:text-left mb-4 sm:mb-6 w-full">
                     <span className="block text-slate-900 dark:text-white">
                       Evidence
@@ -296,7 +292,6 @@ export default function EvidencePage() {
                   <div>
                     <div className="flex items-center justify-center sm:justify-start gap-2">
                       <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-left">Live Evidence Index</h3>
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#2E936F] text-white font-mono text-xs font-bold">142 RECORDS</span>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
                       Deterministic PostgreSQL catalog of external pointers, signed attestations, and cross-framework control links.

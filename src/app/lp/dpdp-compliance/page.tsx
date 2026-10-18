@@ -50,14 +50,6 @@ export default function DpdpLandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12 items-start">
               {/* ── LEFT COLUMN: Headline, Copy, Summary Benefits ── */}
               <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                {/* Eyebrow Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/40 text-[#380d00] dark:text-orange-300 border border-[#F15E1C]/20 shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
-                  <span className="font-mono text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
-                    INDIA DPDP ACT 2023 READINESS
-                  </span>
-                </div>
-
                 {/* Exact Headline Required */}
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-black text-navy-900 dark:text-white tracking-tight leading-[1.18]">
                   DPDP Compliance Software. Track Consent, Vendors and Breaches in One Place

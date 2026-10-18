@@ -260,13 +260,6 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
 
             {/* Left Content */}
             <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-6 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
-                <span className="font-mono text-xs font-semibold tracking-wider uppercase">
-                  {sol.eyebrow}
-                </span>
-              </div>
-
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center sm:text-left">
                 {sol.title}
               </h1>

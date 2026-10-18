@@ -32,12 +32,6 @@ export default function SecurityLeadersPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-5">
-              {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-primary font-mono text-xs uppercase tracking-wider border border-slate-300 dark:border-navy-700">
-                <ShieldCheck className="w-4 h-4" />
-                <span>SOLUTIONS FOR CISOS &amp; SECURITY LEADERSHIP</span>
-              </div>
-
               {/* Headline */}
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left">
                 Executive Risk Visibility Without <span className="text-primary">Operational Blind Spots</span>
@@ -269,9 +263,6 @@ export default function SecurityLeadersPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/40 to-slate-900 hidden lg:block" />
               </div>
               <div className="lg:col-span-5 p-6 sm:p-10 bg-slate-900 text-white space-y-4">
-                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
-                  LEADERSHIP COLLABORATION
-                </span>
                 <h3 className="text-2xl font-bold tracking-tight text-white">
                   Align Board Reporting with Operational Security Reality
                 </h3>

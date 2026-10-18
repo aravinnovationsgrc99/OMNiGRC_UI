@@ -31,11 +31,6 @@ export default function SaaSGrowingOrganizationsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200 dark:bg-navy-800 text-primary font-mono text-xs uppercase tracking-wider border border-slate-300 dark:border-navy-700">
-                <TrendingUp className="w-4 h-4" />
-                <span>SOLUTIONS FOR GROWING SAAS ORGANIZATIONS</span>
-              </div>
-
               <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left">
                 Scale Governance alongside your <span className="text-primary">Company Growth</span>
               </h1>
