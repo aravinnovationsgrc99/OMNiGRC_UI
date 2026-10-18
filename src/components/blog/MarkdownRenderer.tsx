@@ -277,10 +277,10 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         blocks.push(
           <h2
             key={`h2-${i}`}
-            className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-12 mb-6 tracking-tight border-b border-slate-200 dark:border-slate-800 pb-3 flex items-center gap-2.5"
+            className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-12 mb-6 tracking-tight border-b border-slate-200 dark:border-slate-800 pb-3 flex items-start gap-2.5 text-justify"
           >
-            <span className="w-2 h-7 rounded-full bg-[#F15E1C]" />
-            <span>{renderFormattedInline(line.replace("## ", ""))}</span>
+            <span className="w-2 h-7 rounded-full bg-[#F15E1C] shrink-0 mt-1" />
+            <span className="text-justify leading-snug">{renderFormattedInline(line.replace("## ", ""))}</span>
           </h2>
         );
         i++;
@@ -383,7 +383,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       // 9. Paragraph
       if (line.trim().length > 0) {
         blocks.push(
-          <p key={`p-${i}`} className="my-5 text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+          <p key={`p-${i}`} className="my-5 text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300 text-justify">
             {renderFormattedInline(line)}
           </p>
         );
@@ -395,8 +395,18 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
     return blocks;
   };
 
-  // Inline formatting parser (bold, italic, code, links)
+  // Inline formatting parser (bold, italic, code, links, line breaks)
   const renderFormattedInline = (text: string): React.ReactNode => {
+    if (/<br\s*\/?>/i.test(text)) {
+      const parts = text.split(/<br\s*\/?>/i);
+      return parts.map((part, pIdx) => (
+        <React.Fragment key={pIdx}>
+          {pIdx > 0 && <br />}
+          {renderFormattedInline(part)}
+        </React.Fragment>
+      ));
+    }
+
     const parts: React.ReactNode[] = [];
     let keyCounter = 0;
 
