@@ -136,11 +136,11 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
           <div className="max-w-4xl mx-auto">
             {/* Cover Image */}
             {post.coverImage && (
-              <div className="relative w-full h-[280px] sm:h-[420px] rounded-3xl overflow-hidden shadow-xl mb-12 border border-slate-300 dark:border-navy-700">
+              <div className="relative w-full aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl mb-8 sm:mb-12 border border-slate-200 dark:border-navy-700/80 bg-slate-50 dark:bg-navy-950/60">
                 <img
                   src={post.coverImage}
                   alt={post.coverImageAlt || post.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             )}

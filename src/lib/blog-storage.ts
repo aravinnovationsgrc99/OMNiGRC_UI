@@ -33,19 +33,19 @@ export function mapDbRowToBlogPost(row: any): BlogPost {
     title: row.title,
     excerpt: row.excerpt || "",
     content: row.content || "",
-    coverImage: row.cover_image || "",
-    coverImageAlt: row.cover_image_alt || row.title,
+    coverImage: row.cover_image || row.coverImage || "",
+    coverImageAlt: row.cover_image_alt || row.coverImageAlt || row.title,
     author: typeof row.author === "string" ? JSON.parse(row.author) : row.author || { name: "OMNiGRC Editorial Team", role: "Compliance & Risk Operations" },
     category: row.category || "GRC Operations",
     tags: Array.isArray(row.tags) ? row.tags : [],
-    readingTime: row.reading_time || calculateReadingTime(row.content || ""),
+    readingTime: row.reading_time || row.readingTime || calculateReadingTime(row.content || ""),
     status: row.status as PostStatus,
-    publishedAt: row.published_at || "",
-    updatedAt: row.updated_at || row.created_at || "",
-    createdAt: row.created_at || "",
-    seoTitle: row.seo_title || `${row.title} | OMNiGRC`,
-    seoDescription: row.seo_description || row.excerpt || "",
-    ogImage: row.og_image || row.cover_image || ""
+    publishedAt: row.published_at || row.publishedAt || "",
+    updatedAt: row.updated_at || row.updatedAt || row.created_at || row.createdAt || "",
+    createdAt: row.created_at || row.createdAt || "",
+    seoTitle: row.seo_title || row.seoTitle || `${row.title} | OMNiGRC`,
+    seoDescription: row.seo_description || row.seoDescription || row.excerpt || "",
+    ogImage: row.og_image || row.ogImage || row.cover_image || row.coverImage || ""
   };
 }
 
