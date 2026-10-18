@@ -83,14 +83,15 @@ export default function AssetInventoryPage() {
         </div>
 
         {/*  SECTION 1: HERO & CORE VALUE STATEMENTS  */}
-        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-6 sm:pb-8 overflow-hidden bg-grid-mesh-adaptive">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+        <section className="relative w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-3 sm:pb-6 lg:pb-6 xl:pb-8 overflow-hidden bg-grid-mesh-adaptive">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-stretch">
             {/*  Left Column: Copy & Actions  */}
-            <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full">
-              {/*  Main Headline  */}
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[390px]:text-[24px] sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
-                Every Asset Mapped to <span className="text-primary">Risks</span>, Controls &amp; Classifications
-              </h1>
+            <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left justify-between gap-3 sm:gap-4 w-full">
+              <div className="flex flex-col gap-2.5 sm:gap-3.5 w-full">
+                {/*  Main Headline  */}
+                <h1 className="text-[20px] min-[360px]:text-[22px] min-[390px]:text-[24px] sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left w-full">
+                  Every Asset Mapped to <span className="text-primary">Risks</span>, Controls &amp; Classifications
+                </h1>
               {/*  Subtitle  */}
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left mx-auto sm:mx-0">
                 Eliminate static CMDB blind spots. OMNiGRC links cloud infrastructure, microservices, databases, and third-party vendors directly into active compliance controls and risk quantification.
@@ -105,6 +106,7 @@ export default function AssetInventoryPage() {
                   <Circle className="h-4 w-4 shrink-0" />
                   <span>Connect Cloud Sources</span>
                 </a>
+              </div>
               </div>
               {/*  Telemetry Proof Badges  */}
               <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
@@ -132,8 +134,8 @@ export default function AssetInventoryPage() {
               </div>
             </div>
             {/*  Right Column: Visual Demonstration Card  */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
+            <div className="lg:col-span-5 relative flex flex-col justify-center">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col justify-between gap-space-md border border-slate-300 dark:border-navy-700 h-full">
                 <div className="flex items-center justify-between pb-space-xs">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -191,15 +193,15 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 2: INTERACTIVE TOPOLOGY DIAGRAM & INSPECTION DRAWER  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10" id="topology-diagram">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7" id="topology-diagram">
           <div className="flex flex-col gap-1.5 mb-4 sm:mb-6 text-left">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
               Asset-to-Risk Lineage &amp; Inventory Mappings
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-justify sm:text-left">Explore sample asset inventory mappings, risk scoring contexts, and associated mitigating control linkages across infrastructure. Click nodes below to inspect sample profiles.</p>
           </div>
           {/*  Main Topology Interactive Canvas  */}
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 items-start">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 items-stretch">
             {/*  Interactive Flow Nodes (8 Cols)  */}
             <div className="xl:col-span-8 flex flex-col gap-2.5 sm:gap-3">
               {/*  Step 1: Production Asset Node  */}
@@ -328,7 +330,7 @@ export default function AssetInventoryPage() {
             </div>
 
             {/*  Right Column: Interactive Inspectable Asset Drawer (4 Cols)  */}
-            <div className="xl:col-span-4 sticky top-28 bg-white dark:bg-[#0A111F] p-4 sm:p-5 rounded-xl shadow-lg flex flex-col gap-3.5 sm:gap-4 border border-slate-200 dark:border-navy-700">
+            <div className="xl:col-span-4 bg-white dark:bg-[#0A111F] p-4 sm:p-5 rounded-xl shadow-lg flex flex-col justify-between border border-slate-200 dark:border-navy-700 h-full">
               <div className="flex items-center justify-between pb-2.5 border-b border-slate-100 dark:border-navy-800 gap-2">
                 <div className="flex items-center gap-2 min-w-0">
                   <Search className="h-4 w-4 text-[#F15E1C] shrink-0" />
@@ -381,19 +383,18 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 3: FOUR CORE ASSET DIMENSIONS  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
-          <div className="flex flex-col gap-1.5 mb-4 sm:mb-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug">
-              <span className="block">Four Dimensions of</span>
-              <span className="block">GRC Asset Visibility</span>
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="flex flex-col gap-1.5 mb-4 sm:mb-6 text-left">
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
+              Four Dimensions of GRC Asset Visibility
             </h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">
               Compliance failures stem from unmapped shadow IT. OMNiGRC ingests physical, virtual, jurisdictional, and outsourced boundaries in a unified graph.
             </p>
           </div>
           {/*  4 Cards Grid  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 items-stretch">
+            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <Cloud className="h-5 w-5 shrink-0" />
@@ -403,7 +404,7 @@ export default function AssetInventoryPage() {
               </div>
               <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-2.5 sm:mt-4">Configuration Hook Sync</span>
             </div>
-            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <Key className="h-5 w-5 shrink-0" />
@@ -413,7 +414,7 @@ export default function AssetInventoryPage() {
               </div>
               <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-2.5 sm:mt-4">Identity Graph Bound</span>
             </div>
-            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <Building2 className="h-5 w-5 shrink-0" />
@@ -423,7 +424,7 @@ export default function AssetInventoryPage() {
               </div>
               <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-2.5 sm:mt-4">DPA Alignment Verified</span>
             </div>
-            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <Cpu className="h-5 w-5 shrink-0" />
@@ -437,14 +438,13 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 4: DATA SENSITIVITY & LINEAGE MATRIX  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-1.5 mb-4 sm:mb-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug">
-                <span className="block">Data Sensitivity &amp;</span>
-                <span className="block">Regulatory Mapping</span>
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 text-left">
+            <div className="flex flex-col gap-1.5 mb-4 sm:mb-6 text-left">
+              <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
+                Data Sensitivity &amp; Regulatory Mapping
               </h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">Every asset entry maintains a structured data classification tag that directly maps to legal obligations across major global frameworks.</p>
+              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Every asset entry maintains a structured data classification tag that directly maps to legal obligations across major global frameworks.</p>
             </div>
             <div className="overflow-x-auto rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-[#0A111F] shadow-sm">
               <table className="w-full text-left border-collapse">
@@ -493,15 +493,14 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 5: INTEGRATION ECOSYSTEM  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
           <div className="flex flex-col items-center text-center gap-1.5 mb-4 sm:mb-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug">
-              <span className="block">Supported External Systems &amp;</span>
-              <span className="block">Cloud References</span>
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center lg:whitespace-nowrap">
+              Supported External Systems &amp; Cloud References
             </h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-center">Ingest metadata from supported external cloud providers, identity platforms, and infrastructure sources.</p>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-center">Ingest metadata from supported external cloud providers, identity platforms, and infrastructure sources.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4 text-center items-stretch">
             <div className="p-3 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm flex flex-col items-center justify-center gap-1.5 sm:gap-2">
               <Cloud className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               <span className="text-xs sm:text-sm text-slate-900 dark:text-white font-semibold">AWS CloudWatch</span>
@@ -530,9 +529,9 @@ export default function AssetInventoryPage() {
         </section>
 
         {/*  SECTION 6: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-6 sm:py-10 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start text-left gap-3 sm:gap-4">
-            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-4 sm:py-8 lg:py-8 xl:py-9">
+          <div className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex flex-col items-start text-left gap-3 sm:gap-4">
+            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
               Tired of stale CMDB spreadsheets and audit scrambles?
             </h2>
             <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">Connect your AWS, Azure, GCP, and Kubernetes clusters in minutes. Experience automated cloud asset discovery mapped straight to active controls.</p>

@@ -65,125 +65,129 @@ export function RiskMatrix() {
   const activeScore = activeRisk.l * activeRisk.i;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-stretch">
       {/* 5x5 Grid Card */}
-      <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-3.5 sm:p-5 lg:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-navy-700/60 space-y-3.5 sm:space-y-6">
-        <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4">
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-xs sm:text-sm text-[#0d1b36] dark:text-white">Likelihood vs. Impact</span>
-            <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">(1 = Minor, 5 = Catastrophic)</span>
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
-              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-green-500"></span> Low
-            </span>
-            <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
-              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-yellow-500"></span> Med
-            </span>
-            <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
-              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-orange-500"></span> High
-            </span>
-            <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
-              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-red-500"></span> Crit
-            </span>
-          </div>
-        </div>
-
-        <div className="relative pt-2 pl-6 sm:pl-8 pb-2 sm:pb-4">
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-[10px] sm:text-2xs uppercase tracking-widest text-slate-400 font-bold w-28 -ml-11 sm:w-32 sm:-ml-12 text-center">
-            Likelihood
-          </div>
-          
-          <div className="grid grid-rows-5 gap-1.5 sm:gap-2 select-none">
-            {[5, 4, 3, 2, 1].map((l) => (
-              <div key={`row-${l}`} className="grid grid-cols-5 gap-1.5 sm:gap-2 h-12 sm:h-16">
-                {[1, 2, 3, 4, 5].map((i) => {
-                  const r = risks.find(risk => risk.l === l && risk.i === i);
-                  if (!r) return <div key={`empty-${l}-${i}`} className="bg-slate-50 rounded-lg"></div>;
-                  const score = l * i;
-                  const isSelected = selectedRisk === r.id;
-                  
-                  return (
-                    <button
-                      key={r.id}
-                      onClick={() => setSelectedRisk(r.id)}
-                      className={`p-1 sm:p-2 rounded-lg flex flex-col justify-between hover:scale-[1.02] transition-transform text-left border ${getScoreColor(score)} ${isSelected ? 'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-navy-900 ring-teal-500 dark:ring-teal-400' : ''}`}
-                    >
-                      <div className="flex justify-between items-start w-full">
-                        <span className="text-[11px] sm:text-xs font-bold font-mono">{score}</span>
-                        {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>}
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            ))}
+      <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-3.5 sm:p-5 lg:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-navy-700/60 flex flex-col justify-between h-full">
+        <div className="space-y-3 sm:space-y-4 lg:space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-xs sm:text-sm text-[#0d1b36] dark:text-white">Likelihood vs. Impact</span>
+              <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">(1 = Minor, 5 = Catastrophic)</span>
+            </div>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-green-500"></span> Low
+              </span>
+              <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-yellow-500"></span> Med
+              </span>
+              <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-orange-500"></span> High
+              </span>
+              <span className="inline-flex items-center gap-1 text-[11px] sm:text-2xs font-medium text-slate-600 dark:text-slate-300">
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded bg-red-500"></span> Crit
+              </span>
+            </div>
           </div>
 
-          <div className="mt-2.5 sm:mt-4 text-center text-[10px] sm:text-2xs uppercase tracking-widest text-slate-400 font-bold">
-            Impact <span className="font-normal">(1 = Minor • 5 = Catastrophic)</span>
+          <div className="relative pt-2 pl-6 sm:pl-8 pb-1 sm:pb-2">
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-[10px] sm:text-2xs uppercase tracking-widest text-slate-400 font-bold w-28 -ml-11 sm:w-32 sm:-ml-12 text-center">
+              Likelihood
+            </div>
+            
+            <div className="grid grid-rows-5 gap-1.5 sm:gap-2 select-none">
+              {[5, 4, 3, 2, 1].map((l) => (
+                <div key={`row-${l}`} className="grid grid-cols-5 gap-1.5 sm:gap-2 h-12 sm:h-16 lg:h-[66px]">
+                  {[1, 2, 3, 4, 5].map((i) => {
+                    const r = risks.find(risk => risk.l === l && risk.i === i);
+                    if (!r) return <div key={`empty-${l}-${i}`} className="bg-slate-50 rounded-lg"></div>;
+                    const score = l * i;
+                    const isSelected = selectedRisk === r.id;
+                    
+                    return (
+                      <button
+                        key={r.id}
+                        onClick={() => setSelectedRisk(r.id)}
+                        className={`p-1 sm:p-2 rounded-lg flex flex-col justify-between hover:scale-[1.02] transition-transform text-left border ${getScoreColor(score)} ${isSelected ? 'ring-2 ring-offset-2 ring-offset-white dark:ring-offset-navy-900 ring-teal-500 dark:ring-teal-400' : ''}`}
+                      >
+                        <div className="flex justify-between items-start w-full">
+                          <span className="text-[11px] sm:text-xs font-bold font-mono">{score}</span>
+                          {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-2 sm:mt-3 text-center text-[10px] sm:text-2xs uppercase tracking-widest text-slate-400 font-bold">
+              Impact <span className="font-normal">(1 = Minor • 5 = Catastrophic)</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Selected Risk Detail Drawer Card */}
-      <div className="lg:col-span-5 bg-white dark:bg-navy-900 p-3.5 sm:p-5 lg:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-navy-700/60 space-y-3.5 sm:space-y-6">
-        <div className="flex flex-wrap items-center justify-between pb-4 border-b border-slate-100 dark:border-navy-800 gap-3">
-          <div className="flex items-center gap-3">
-            <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#F15E1C]/10 dark:bg-orange-500/20 text-[#F15E1C] dark:text-orange-400">
-              {activeRisk.id}
+      <div className="lg:col-span-5 bg-white dark:bg-navy-900 p-3.5 sm:p-5 lg:p-5 rounded-2xl shadow-sm border border-slate-200 dark:border-navy-700/60 flex flex-col justify-between h-full">
+        <div className="space-y-3 lg:space-y-2.5">
+          <div className="flex flex-wrap items-center justify-between pb-3 lg:pb-2.5 border-b border-slate-100 dark:border-navy-800 gap-2">
+            <div className="flex items-center gap-2.5">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F15E1C]/10 dark:bg-orange-500/20 text-[#F15E1C] dark:text-orange-400">
+                {activeRisk.id}
+              </span>
+              <span className="text-xs uppercase text-slate-500 font-semibold tracking-wider">Detail Drawer</span>
+            </div>
+            <span className="px-2 py-0.5 rounded text-2xs font-bold bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 border border-teal-200 dark:border-teal-800">
+              {activeRisk.strategy}
             </span>
-            <span className="text-xs uppercase text-slate-500 font-semibold tracking-wider">Detail Drawer</span>
           </div>
-          <span className="px-2 py-1 rounded text-2xs font-bold bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 border border-teal-200 dark:border-teal-800">
-            {activeRisk.strategy}
-          </span>
-        </div>
-        
-        <div>
-          <h3 className="text-lg text-[#0d1b36] dark:text-white font-bold leading-snug text-left">
-            {activeRisk.title}
-          </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 text-justify">
-            Dynamic risk scenario calibrated via real-time telemetry from associated assets.
-          </p>
-        </div>
+          
+          <div>
+            <h3 className="text-base sm:text-lg text-[#0d1b36] dark:text-white font-bold leading-snug text-left">
+              {activeRisk.title}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 text-justify">
+              Dynamic risk scenario calibrated via real-time telemetry from associated assets.
+            </p>
+          </div>
 
-        <div className="p-4 rounded-xl bg-[#f8f9fc] dark:bg-navy-950/50 space-y-3">
-          <span className="text-2xs font-semibold text-slate-500 uppercase tracking-wider">Calibrated Risk Score</span>
-          <div className="flex items-baseline gap-3">
-            <span className="text-3xl font-extrabold text-[#0d1b36] dark:text-white">{activeScore}</span>
-            <span className="text-sm text-slate-500">[{activeRisk.l} Likelihood × {activeRisk.i} Impact]</span>
+          <div className="p-3 lg:p-3 rounded-xl bg-[#f8f9fc] dark:bg-navy-950/50 space-y-2 lg:space-y-1.5">
+            <span className="text-2xs font-semibold text-slate-500 uppercase tracking-wider">Calibrated Risk Score</span>
+            <div className="flex items-baseline gap-2.5">
+              <span className="text-2xl sm:text-3xl font-extrabold text-[#0d1b36] dark:text-white">{activeScore}</span>
+              <span className="text-xs sm:text-sm text-slate-500">[{activeRisk.l} Likelihood × {activeRisk.i} Impact]</span>
+            </div>
+            <div className="w-full bg-slate-200 dark:bg-navy-800 rounded-full h-1.5 overflow-hidden">
+              <div className={`h-full ${getScoreBgClass(activeScore)}`} style={{ width: `${(activeScore / 25) * 100}%` }}></div>
+            </div>
           </div>
-          <div className="w-full bg-slate-200 dark:bg-navy-800 rounded-full h-1.5 overflow-hidden">
-            <div className={`h-full ${getScoreBgClass(activeScore)}`} style={{ width: `${(activeScore / 25) * 100}%` }}></div>
-          </div>
-        </div>
 
-        <div className="space-y-2 text-sm">
-          <div className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-slate-50 dark:bg-navy-800/50">
-            <span className="text-slate-500 font-medium">Linked Asset</span>
-            <span className="font-mono text-xs text-[#0d1b36] dark:text-white font-semibold">{activeRisk.asset}</span>
-          </div>
-          <div className="flex items-center justify-between py-2.5 px-3 rounded-lg">
-            <span className="text-slate-500 font-medium">Risk Owner</span>
-            <span className="text-[#0d1b36] dark:text-white font-semibold">{activeRisk.owner}</span>
-          </div>
-          <div className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-slate-50 dark:bg-navy-800/50">
-            <span className="text-slate-500 font-medium">Audit Evidence Record</span>
-            <span className="font-mono text-[11px] text-[#2E936F] font-semibold">{activeRisk.evidence}</span>
+          <div className="space-y-1.5 text-xs sm:text-sm">
+            <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-slate-50 dark:bg-navy-800/50">
+              <span className="text-slate-500 font-medium">Linked Asset</span>
+              <span className="font-mono text-xs text-[#0d1b36] dark:text-white font-semibold">{activeRisk.asset}</span>
+            </div>
+            <div className="flex items-center justify-between py-2 px-3 rounded-lg">
+              <span className="text-slate-500 font-medium">Risk Owner</span>
+              <span className="text-[#0d1b36] dark:text-white font-semibold">{activeRisk.owner}</span>
+            </div>
+            <div className="flex items-center justify-between py-2 px-3 rounded-lg bg-slate-50 dark:bg-navy-800/50">
+              <span className="text-slate-500 font-medium">Audit Evidence Record</span>
+              <span className="font-mono text-[11px] text-[#2E936F] font-semibold">{activeRisk.evidence}</span>
+            </div>
           </div>
         </div>
 
-        <div className="pt-2 space-y-2">
+        <div className="pt-2 lg:pt-1 space-y-2">
           <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-            <span className="font-medium">Workflow Automation:</span>
+            <span className="font-medium text-[11px] sm:text-xs">Workflow Automation:</span>
             <span className="font-mono text-[10px] text-teal-600 dark:text-teal-400">Simulates telemetry recalculation</span>
           </div>
           <button
             onClick={handleRecalibrate}
             disabled={isRecalibrating}
-            className="w-full py-3 rounded-xl bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-400 text-white text-sm font-semibold transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer"
+            className="w-full py-2.5 sm:py-3 rounded-xl bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-400 text-white text-xs sm:text-sm font-semibold transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer"
           >
             {isRecalibrating ? (
               <>
@@ -198,9 +202,9 @@ export function RiskMatrix() {
             )}
           </button>
           {recalibratedAt && (
-            <div className="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs text-center flex items-center justify-center gap-1.5 font-medium animate-fadeIn">
+            <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs text-center flex items-center justify-center gap-1.5 font-medium animate-fadeIn">
               <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-              <span>Demo Mode: Recalibration simulated against telemetry stream ({recalibratedAt})</span>
+              <span>Demo Mode: Recalibration simulated ({recalibratedAt})</span>
             </div>
           )}
         </div>

@@ -44,33 +44,37 @@ export default function RiskRegisterPage() {
       <main className="flex-1 w-full pt-16 bg-transparent min-h-screen">
 <div className="flex flex-col w-full">
         {/*  Hero Section (Clean Analytical Typography Focus)  */}
-        <section className="w-full px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 bg-grid-mesh-adaptive text-center overflow-hidden">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full">
-            <div className="lg:col-span-7 flex flex-col items-center text-center space-y-4 sm:space-y-5 mx-auto w-full max-w-full min-w-0">
-              <h1 className="text-[26px] min-[360px]:text-[29px] min-[390px]:text-[32px] min-[410px]:text-[34px] min-[430px]:text-[36px] sm:text-4xl md:text-5xl lg:text-[52px] xl:text-6xl font-black tracking-tight leading-[1.12] text-center w-full max-w-2xl mx-auto">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-4 sm:pb-6 lg:pb-6 xl:pb-8 bg-grid-mesh-adaptive text-center lg:text-left overflow-hidden">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 items-center">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-4 sm:space-y-5 lg:space-y-5 xl:space-y-6 mx-auto lg:mx-0 w-full max-w-full min-w-0">
+              <h1 className="text-[26px] min-[360px]:text-[29px] min-[390px]:text-[32px] min-[410px]:text-[34px] min-[430px]:text-[36px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[56px] 2xl:text-[62px] font-black tracking-tight leading-[1.12] lg:leading-[1.06] text-center lg:text-left w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0">
                 <span className="block whitespace-nowrap min-[480px]:whitespace-normal text-slate-900 dark:text-white">
-                  Calibrated Risk Registers
+                  Calibrated Risk<br className="hidden lg:inline" /> Registers
                 </span>
-                <span className="block mt-1 sm:mt-1.5 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
+                <span className="block mt-1 sm:mt-1.5 lg:mt-1 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
                   Directly Connected
                 </span>
-                <span className="block mt-0.5 sm:mt-1 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
+                <span className="block mt-0.5 sm:mt-1 lg:mt-0.5 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
                   to Assets
                 </span>
               </h1>
-              <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-sm sm:max-w-lg leading-relaxed text-center mx-auto px-2">
+              <p className="text-xs sm:text-sm md:text-base lg:text-[15.5px] xl:text-[16.5px] text-slate-600 dark:text-slate-300 max-w-sm sm:max-w-lg lg:max-w-[540px] xl:max-w-[580px] leading-relaxed text-center lg:text-left mx-auto lg:mx-0 px-2 lg:px-0">
                 Maintain continuous risk registers with calibrated 5×5 Likelihood × Impact scoring mapped directly to tracked infrastructure assets.
               </p>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full max-w-md mx-auto pt-1 sm:pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 lg:gap-4 w-full max-w-md lg:max-w-none mx-auto lg:mx-0 pt-1 sm:pt-2">
                 <a 
-                  className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#005f4e] hover:bg-[#004d3f] text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all text-center" 
+                  className="w-full sm:w-auto flex-1 lg:flex-initial inline-flex items-center justify-center gap-2.5 px-6 py-3.5 lg:px-5 lg:py-2.5 rounded-2xl bg-[#005f4e] hover:bg-[#004d3f] text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all text-center lg:text-left" 
                   href="#matrix-view"
                 >
                   <Circle className="h-5 w-5 shrink-0 stroke-[2.2]" />
-                  <span>Explore Risk Register Demo</span>
+                  <span className="lg:hidden">Explore Risk Register Demo</span>
+                  <span className="hidden lg:flex flex-col leading-tight">
+                    <span>Explore Risk</span>
+                    <span>Register Demo</span>
+                  </span>
                 </a>
                 <a 
-                  className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-bold hover:bg-slate-50 dark:hover:bg-navy-700 transition-colors text-center border border-slate-200/90 dark:border-navy-700 shadow-sm" 
+                  className="w-full sm:w-auto flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3.5 lg:px-6 lg:py-3.5 rounded-2xl bg-white dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-bold hover:bg-slate-50 dark:hover:bg-navy-700 transition-colors text-center border border-slate-200/90 dark:border-navy-700 shadow-sm whitespace-nowrap" 
                   href="#audit-log"
                 >
                   <span>View Audit Logging</span>
@@ -78,33 +82,33 @@ export default function RiskRegisterPage() {
                 </a>
               </div>
               {/*  Metric strip  */}
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 lg:gap-4 w-full pt-2 sm:pt-3 max-w-xl mx-auto">
-                <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
-                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Tracked Risks</span>
-                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl font-black text-slate-900 dark:text-white my-1 sm:my-1.5 text-center">142</span>
-                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs text-amber-700 dark:text-amber-400 font-semibold leading-tight text-center">
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 lg:gap-4 xl:gap-5 w-full pt-2 sm:pt-3 lg:pt-3 max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                <div className="p-3 sm:p-4 lg:py-4 lg:px-3 xl:py-5 xl:px-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
+                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs lg:text-[11px] xl:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Tracked Risks</span>
+                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl lg:text-3xl xl:text-4xl font-black text-slate-900 dark:text-white my-1 sm:my-1.5 lg:my-1 text-center">142</span>
+                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs lg:text-xs text-amber-700 dark:text-amber-400 font-semibold leading-tight text-center">
                     100% bound
                   </span>
                 </div>
-                <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
-                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Asset Coverage</span>
-                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl font-black text-slate-900 dark:text-white my-1 sm:my-1.5 text-center">94.2%</span>
-                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-medium leading-tight text-center">
+                <div className="p-3 sm:p-4 lg:py-4 lg:px-3 xl:py-5 xl:px-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
+                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs lg:text-[11px] xl:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Asset Coverage</span>
+                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl lg:text-3xl xl:text-4xl font-black text-slate-900 dark:text-white my-1 sm:my-1.5 lg:my-1 text-center">94.2%</span>
+                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs lg:text-xs text-slate-600 dark:text-slate-300 font-medium leading-tight text-center">
                     Asset linked
                   </span>
                 </div>
-                <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
-                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Recalc Latency</span>
-                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl font-black text-teal-700 dark:text-teal-400 my-1 sm:my-1.5 text-center">&lt; 1.2s</span>
-                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-medium leading-tight text-center">
+                <div className="p-3 sm:p-4 lg:py-4 lg:px-3 xl:py-5 xl:px-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
+                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs lg:text-[11px] xl:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Recalc Latency</span>
+                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl lg:text-3xl xl:text-4xl font-black text-teal-700 dark:text-teal-400 my-1 sm:my-1.5 lg:my-1 text-center">&lt; 1.2s</span>
+                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs lg:text-xs text-slate-600 dark:text-slate-300 font-medium leading-tight text-center">
                     Live sync
                   </span>
                 </div>
               </div>
             </div>
             {/*  Hero Visual Card with Visual Asset  */}
-            <div className="lg:col-span-5 relative w-full min-w-0">
-              <div className="rounded-xl overflow-hidden shadow-xl bg-white dark:bg-[#0A111F] p-3.5 sm:p-6 space-y-3 sm:space-y-4 text-center border border-slate-200 dark:border-navy-700/60">
+            <div className="relative w-full min-w-0">
+              <div className="rounded-xl lg:rounded-2xl overflow-hidden shadow-xl lg:shadow-2xl bg-white dark:bg-[#0A111F] p-3.5 sm:p-6 lg:p-6 space-y-3 sm:space-y-4 lg:space-y-4 text-center border border-slate-200 dark:border-navy-700/60">
                 <div className="flex items-center justify-between gap-2 min-w-0">
                   <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
                     <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-600 dark:bg-red-500 shrink-0"></span>
@@ -114,7 +118,7 @@ export default function RiskRegisterPage() {
                   </div>
                   <span className="font-mono text-[10px] sm:text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white shrink-0">v3.42-hotpatch</span>
                 </div>
-                <div className="relative rounded-lg overflow-hidden h-48 sm:h-60 w-full">
+                <div className="relative rounded-lg lg:rounded-xl overflow-hidden h-48 sm:h-60 lg:h-64 xl:h-72 w-full">
                   <img className="w-full h-full object-cover" data-alt="Enterprise SecOps monitoring center showing security analysts analyzing cloud infrastructure risk heatmaps and live telemetry dashboards in a warm modern light-filled engineering workspace with architectural orange and slate accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0pJsovCAqksc75OL5Qhrqv--cbsqwpwipwejm2s_DWsuq2I2gss2xKY0Vlz9P9yLWsOIO9GUXUWV_Xml0-H2TjrOfYqD5BiXxQwzdLVCsX6QPRQWt0als3LpyX-QKUVuvewJHzH8FsiS22fD1HnkoiPwidNbYjpf80EqR5DIrJfjw36NEcpg1j5Lwtpw8wH2-lyFitRhOr-dDa9ywcrZf7UoqnCbMD_Vr8GRiQ6zppyFtWMBM6bP5cA" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex items-end justify-center p-3 sm:p-6 text-center">
                     <div className="text-white text-center w-full">
@@ -123,11 +127,9 @@ export default function RiskRegisterPage() {
                     </div>
                   </div>
                 </div>
-                <div className="p-2.5 sm:p-4 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between gap-2 min-w-0">
-                  <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-                    <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-teal-600 dark:text-teal-400" />
-                    <span className="text-xs sm:text-sm font-medium text-slate-900 dark:text-white truncate">Auto-Evidence Ledger attached</span>
-                  </div>
+                <div className="p-2.5 sm:p-4 rounded-lg lg:rounded-xl bg-slate-50 dark:bg-[#16233F] flex items-center justify-start gap-2.5 min-w-0">
+                  <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-teal-600 dark:text-teal-400" />
+                  <span className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white truncate">Auto-Evidence Ledger attached</span>
                 </div>
               </div>
             </div>
@@ -135,14 +137,14 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Interactive 5x5 Matrix Section  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 bg-slate-50 dark:bg-[#16233F] text-left" id="matrix-view">
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-50 dark:bg-[#16233F] text-left" id="matrix-view">
           <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 text-left">
-            <div className="flex flex-col items-start text-left gap-2 sm:gap-3 max-w-3xl">
+            <div className="flex flex-col items-start text-left gap-2 sm:gap-3 max-w-3xl lg:max-w-none">
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Dynamic Risk Calibration</span>
                 <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-slate-200 dark:bg-navy-700 text-slate-600 dark:text-slate-300 text-left">(Illustrative Demo Data)</span>
               </div>
-              <h2 className="text-[19px] min-[350px]:text-[21px] min-[390px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight leading-snug text-left">
+              <h2 className="text-[19px] min-[350px]:text-[21px] min-[390px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 Interactive 5×5 Likelihood × Impact Heatmap
               </h2>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mt-1 leading-relaxed text-justify">
@@ -159,11 +161,11 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Risk Treatments Explained Section  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 text-left">
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 text-left">
           <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 text-left">
-            <div className="text-left max-w-3xl space-y-1.5 sm:space-y-2">
+            <div className="text-left max-w-3xl lg:max-w-none space-y-1.5 sm:space-y-2">
               <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Operational Treatment Taxonomy</span>
-              <h2 className="text-[19px] min-[350px]:text-[21px] min-[390px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
+              <h2 className="text-[19px] min-[350px]:text-[21px] min-[390px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 The Four Core Risk Treatments, Automated
               </h2>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl mt-1 sm:mt-2">
@@ -174,7 +176,8 @@ export default function RiskRegisterPage() {
               {/*  Card 1: Mitigate  */}
               <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
                 <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
-                  <div className="flex items-center justify-between gap-2 w-full">
+                  {/* Mobile header (< lg) - preserved */}
+                  <div className="flex lg:hidden items-center justify-between gap-2 w-full">
                     <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                       <div className="w-8 h-8 rounded-lg bg-amber-600 dark:bg-amber-500 flex items-center justify-center text-white shrink-0">
                         <CheckCircle2 className="h-4 w-4 shrink-0" />
@@ -184,6 +187,20 @@ export default function RiskRegisterPage() {
                     <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-amber-600 dark:bg-amber-500 text-white shrink-0 whitespace-nowrap">
                       STRATEGY: MITIGATE
                     </span>
+                  </div>
+                  {/* Desktop header (>= lg) - fully visible without truncation */}
+                  <div className="hidden lg:flex flex-col gap-2.5 w-full">
+                    <div className="flex items-center justify-between gap-2 w-full">
+                      <div className="w-8 h-8 rounded-lg bg-amber-600 dark:bg-amber-500 flex items-center justify-center text-white shrink-0">
+                        <CheckCircle2 className="h-4 w-4 shrink-0" />
+                      </div>
+                      <span className="px-2 py-0.5 rounded font-mono text-[10px] xl:text-[11px] font-semibold bg-amber-600 dark:bg-amber-500 text-white shrink-0 whitespace-nowrap">
+                        STRATEGY: MITIGATE
+                      </span>
+                    </div>
+                    <h3 className="text-base text-slate-900 dark:text-white font-bold leading-snug">
+                      Control Safeguards
+                    </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Direct mapping to technical, physical, or administrative controls with continuous test verification and dynamic score suppression.
@@ -198,7 +215,8 @@ export default function RiskRegisterPage() {
               {/*  Card 2: Accept  */}
               <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
                 <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
-                  <div className="flex items-center justify-between gap-2 w-full">
+                  {/* Mobile header (< lg) - preserved */}
+                  <div className="flex lg:hidden items-center justify-between gap-2 w-full">
                     <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                       <div className="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
                         <Circle className="h-4 w-4 shrink-0" />
@@ -208,6 +226,20 @@ export default function RiskRegisterPage() {
                     <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-tertiary text-on-tertiary shrink-0 whitespace-nowrap">
                       STRATEGY: ACCEPT
                     </span>
+                  </div>
+                  {/* Desktop header (>= lg) - fully visible without truncation */}
+                  <div className="hidden lg:flex flex-col gap-2.5 w-full">
+                    <div className="flex items-center justify-between gap-2 w-full">
+                      <div className="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+                        <Circle className="h-4 w-4 shrink-0" />
+                      </div>
+                      <span className="px-2 py-0.5 rounded font-mono text-[10px] xl:text-[11px] font-semibold bg-tertiary text-on-tertiary shrink-0 whitespace-nowrap">
+                        STRATEGY: ACCEPT
+                      </span>
+                    </div>
+                    <h3 className="text-base text-slate-900 dark:text-white font-bold leading-snug">
+                      Executive Sign-Off
+                    </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Formal risk acceptance with documented business justification, non-delegable CISO authorization, and strict expiration date alerts.
@@ -222,7 +254,8 @@ export default function RiskRegisterPage() {
               {/*  Card 3: Transfer  */}
               <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
                 <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
-                  <div className="flex items-center justify-between gap-2 w-full">
+                  {/* Mobile header (< lg) - preserved */}
+                  <div className="flex lg:hidden items-center justify-between gap-2 w-full">
                     <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                       <div className="w-8 h-8 rounded-lg bg-slate-200 dark:bg-navy-700 flex items-center justify-center text-slate-900 dark:text-white shrink-0">
                         <Circle className="h-4 w-4 shrink-0" />
@@ -232,6 +265,20 @@ export default function RiskRegisterPage() {
                     <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-slate-200 dark:bg-navy-700est text-slate-900 dark:text-white shrink-0 whitespace-nowrap">
                       STRATEGY: TRANSFER
                     </span>
+                  </div>
+                  {/* Desktop header (>= lg) - fully visible without truncation */}
+                  <div className="hidden lg:flex flex-col gap-2.5 w-full">
+                    <div className="flex items-center justify-between gap-2 w-full">
+                      <div className="w-8 h-8 rounded-lg bg-slate-200 dark:bg-navy-700 flex items-center justify-center text-slate-900 dark:text-white shrink-0">
+                        <Circle className="h-4 w-4 shrink-0" />
+                      </div>
+                      <span className="px-2 py-0.5 rounded font-mono text-[10px] xl:text-[11px] font-semibold bg-slate-200 dark:bg-navy-700est text-slate-900 dark:text-white shrink-0 whitespace-nowrap">
+                        STRATEGY: TRANSFER
+                      </span>
+                    </div>
+                    <h3 className="text-base text-slate-900 dark:text-white font-bold leading-snug">
+                      Contractual Offload
+                    </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Cyber insurance underwriting and third-party vendor indemnification contracts linked directly into our automated Vendor Inventory.
@@ -246,7 +293,8 @@ export default function RiskRegisterPage() {
               {/*  Card 4: Avoid  */}
               <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
                 <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
-                  <div className="flex items-center justify-between gap-2 w-full">
+                  {/* Mobile header (< lg) - preserved */}
+                  <div className="flex lg:hidden items-center justify-between gap-2 w-full">
                     <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                       <div className="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center text-teal-800 dark:text-teal-300 shrink-0">
                         <Circle className="h-4 w-4 shrink-0" />
@@ -256,6 +304,20 @@ export default function RiskRegisterPage() {
                     <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-teal-600 dark:bg-teal-500 text-white shrink-0 whitespace-nowrap">
                       STRATEGY: AVOID
                     </span>
+                  </div>
+                  {/* Desktop header (>= lg) - fully visible without truncation */}
+                  <div className="hidden lg:flex flex-col gap-2.5 w-full">
+                    <div className="flex items-center justify-between gap-2 w-full">
+                      <div className="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center text-teal-800 dark:text-teal-300 shrink-0">
+                        <Circle className="h-4 w-4 shrink-0" />
+                      </div>
+                      <span className="px-2 py-0.5 rounded font-mono text-[10px] xl:text-[11px] font-semibold bg-teal-600 dark:bg-teal-500 text-white shrink-0 whitespace-nowrap">
+                        STRATEGY: AVOID
+                      </span>
+                    </div>
+                    <h3 className="text-base text-slate-900 dark:text-white font-bold leading-snug">
+                      Sunset &amp; Decommission
+                    </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Permanently eliminating exposure by terminating high-risk microservices, unmaintained legacy software, or risky geographical routes.
@@ -271,7 +333,7 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Continuous vs Point-in-Time Comparison & PostgreSQL Audit Log  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 bg-slate-50 dark:bg-[#16233F] text-left" id="audit-log">
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-50 dark:bg-[#16233F] text-left" id="audit-log">
           <div className="max-w-7xl mx-auto space-y-4 sm:space-y-8 text-left">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center text-left">
               <div className="lg:col-span-5 space-y-3 sm:space-y-4 flex flex-col items-start text-left">
@@ -377,13 +439,13 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Cross-Workflow Linkage Diagram  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 text-left">
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 text-left">
           <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 text-left">
-            <div className="text-left max-w-3xl space-y-1.5 sm:space-y-2">
+            <div className="text-left max-w-3xl lg:max-w-none space-y-1.5 sm:space-y-2">
               <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Total Ecosystem Interoperability</span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
-                <span className="block">The Continuous</span>
-                <span className="block">Assurance Lifecycle</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
+                <span className="block lg:inline">The Continuous </span>
+                <span className="block lg:inline">Assurance Lifecycle</span>
               </h2>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl mt-1 sm:mt-2">
                 How an identified risk traverses every workflow module inside OMNiGRC, turning raw technical signals into indisputable audit evidence.
@@ -564,7 +626,7 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Bottom Conversion CTA Banner  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 bg-slate-200 dark:bg-navy-700 text-left">
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-200 dark:bg-navy-700 text-left">
           <div className="max-w-7xl mx-auto rounded-xl bg-white dark:bg-[#0A111F] p-4 sm:p-8 lg:p-12 shadow-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-8 text-left">
             <div className="space-y-2 sm:space-y-3 max-w-2xl flex flex-col items-start text-left">
               <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 text-xs">
@@ -591,7 +653,7 @@ export default function RiskRegisterPage() {
         </section>
 
         {/* Related Article Banner */}
-        <section className="w-full px-4 sm:px-8 pb-6 sm:pb-12 text-left">
+        <section className="w-full px-4 sm:px-8 pb-6 sm:pb-12 lg:pb-8 text-left">
           <div className="max-w-7xl mx-auto p-3.5 sm:p-5 lg:p-6 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-left gap-3 sm:gap-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-3 text-left">
               <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-[10px] sm:text-xs font-bold uppercase text-left shrink-0">EDITORIAL GUIDE</span>

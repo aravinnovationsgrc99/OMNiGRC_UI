@@ -39,9 +39,9 @@ export default function EvidencePage() {
             <div className="absolute bottom-10 right-10 w-80 h-80 bg-amber-200/20 dark:bg-amber-500/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
             {/* Hero Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 md:pt-14 pb-6 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-3 sm:pb-6 lg:pb-6 xl:pb-8 w-full bg-grid-mesh-adaptive">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-stretch">
+                <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left justify-between gap-3 sm:gap-4">
                   <h1 className="text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-5xl lg:text-[52px] xl:text-[56px] font-black tracking-tight leading-[1.08] sm:leading-[1.1] text-center lg:text-left mb-4 sm:mb-6 w-full">
                     <span className="block text-slate-900 dark:text-white">
                       Evidence
@@ -78,8 +78,8 @@ export default function EvidencePage() {
                 </div>
 
                 {/* Status Snapshot Panel */}
-                <div className="lg:col-span-4 w-full flex flex-col gap-6">
-                  <div className="p-6 rounded-2xl bg-slate-900 dark:bg-black text-white shadow-xl border border-slate-800 relative overflow-hidden">
+                <div className="lg:col-span-4 w-full flex flex-col justify-between gap-4 h-full">
+                  <div className="p-5 sm:p-6 rounded-2xl bg-slate-900 dark:bg-black text-white shadow-xl border border-slate-800 relative overflow-hidden flex flex-col justify-between h-full">
                     <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
                       <div className="flex items-center gap-2">
                         <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
@@ -141,12 +141,12 @@ export default function EvidencePage() {
             </section>
 
             {/* Architecture Comparison: Legacy Vaults vs OMNiGRC Pointer Model */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
-              <div className="text-left w-full mb-6 sm:mb-10">
+            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 w-full">
+              <div className="text-left w-full mb-4 sm:mb-6">
                 <span className="text-xs text-[#F15E1C] uppercase tracking-widest font-mono font-bold block text-left">
                   ARCHITECTURAL PRINCIPLE
                 </span>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-left leading-tight w-full">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-left leading-tight w-full lg:whitespace-nowrap">
                   Why Centralized Binary Upload Vaults Fail Modern Security
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 text-left leading-relaxed max-w-3xl">
@@ -154,7 +154,7 @@ export default function EvidencePage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
                 {/* Legacy Way */}
                 <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-rose-200 dark:border-rose-950/60 shadow-md flex flex-col justify-between">
                   <div>
@@ -210,14 +210,14 @@ export default function EvidencePage() {
             </section>
 
             {/* 4-Step Pipeline */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
-              <div className="mb-4 sm:mb-8 text-center sm:text-left">
+            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 w-full">
+              <div className="mb-4 sm:mb-6 text-center sm:text-left">
                 <span className="text-xs text-[#2E936F] dark:text-teal uppercase tracking-widest font-mono font-bold">DETERMINISTIC LIFECYCLE</span>
-                <h2 className="text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold mt-1 text-left">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold mt-1 text-left lg:whitespace-nowrap">
                   The 4-Step External Evidence Governance Pipeline
                 </h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
                 <div className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -285,7 +285,7 @@ export default function EvidencePage() {
             </section>
 
             {/* Interactive Live Evidence Catalog Table View */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
+            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 w-full">
               <div className="bg-white dark:bg-navy-900 rounded-2xl shadow-md border border-slate-200 dark:border-navy-700 p-4 sm:p-8">
                 {/* Header & Controls */}
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
@@ -485,10 +485,10 @@ export default function EvidencePage() {
             </section>
 
             {/* Bottom CTA Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
+            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-8 lg:py-8 xl:py-9 w-full">
               <div className="p-6 sm:p-12 rounded-3xl bg-slate-900 dark:bg-black text-white border border-slate-800 shadow-xl text-center">
                 <div className="max-w-2xl mx-auto">
-                  <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-center w-full">
+                  <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-center w-full lg:whitespace-nowrap">
                     Organize Evidence Without Spreadsheet Chaos or File-Dump Risks
                   </h2>
                   <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed text-justify sm:text-center">

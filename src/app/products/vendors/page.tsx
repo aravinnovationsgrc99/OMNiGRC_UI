@@ -61,25 +61,27 @@ export default function VendorsPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/*  SECTION 1: HERO & SUPPLY CHAIN GOVERNANCE OVERVIEW  */}
-        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 overflow-hidden bg-grid-mesh-adaptive">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+        <section className="relative w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-3 sm:pb-6 lg:pb-6 xl:pb-8 overflow-hidden bg-grid-mesh-adaptive">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-stretch">
             {/*  Left Column: Copy & Actions  */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4">
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
-                Control Third-Party Exposure <span className="text-primary">Across Your Entire Supply Chain</span>
-              </h1>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">
-                Automate vendor onboarding, security questionnaire evaluations, SOC 2 report parsing, and continuous subprocessor DPA tracking. Mapped directly to ISO 27001 A.15, SOC 2 CC9, and DPDP Act 2023 Section 8.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
-                <a className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center" href="#directory">
-                  <Building2 className="h-4 w-4 shrink-0" />
-                  <span>Explore Vendor Directory Demo</span>
-                </a>
-                <a className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" href="/demo">
-                  <FileText className="h-4 w-4 shrink-0" />
-                  <span>Request Assessment Templates</span>
-                </a>
+            <div className="lg:col-span-7 flex flex-col items-start justify-between gap-3 sm:gap-4">
+              <div className="flex flex-col gap-2.5 sm:gap-3.5 w-full">
+                <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left w-full">
+                  Control Third-Party Exposure <span className="text-primary">Across Your Entire Supply Chain</span>
+                </h1>
+                <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">
+                  Automate vendor onboarding, security questionnaire evaluations, SOC 2 report parsing, and continuous subprocessor DPA tracking. Mapped directly to ISO 27001 A.15, SOC 2 CC9, and DPDP Act 2023 Section 8.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
+                  <a className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center" href="#directory">
+                    <Building2 className="h-4 w-4 shrink-0" />
+                    <span>Explore Vendor Directory Demo</span>
+                  </a>
+                  <a className="w-full sm:w-auto max-w-md inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center" href="/demo">
+                    <FileText className="h-4 w-4 shrink-0" />
+                    <span>Request Assessment Templates</span>
+                  </a>
+                </div>
               </div>
               <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
                 <div className="flex flex-col p-2 sm:p-space-sm rounded-lg bg-slate-50 dark:bg-[#16233F] overflow-hidden">
@@ -107,8 +109,8 @@ export default function VendorsPage() {
             </div>
 
             {/*  Right Column: Visual Subprocessor Perimeter Map  */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col gap-space-md border border-slate-300 dark:border-navy-700">
+            <div className="lg:col-span-5 relative flex flex-col justify-center">
+              <div className="relative w-full rounded-xl bg-white dark:bg-[#0A111F] p-space-card shadow-xl flex flex-col justify-between gap-space-md border border-slate-300 dark:border-navy-700 h-full">
                 <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                   <div className="flex items-center gap-space-xs">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
@@ -151,10 +153,10 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 2: INTERACTIVE DIRECTORY & RELATIONSHIP DRAWER  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="directory">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7" id="directory">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 sm:mb-6 gap-3 sm:gap-4">
             <div className="text-left">
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left lg:whitespace-nowrap">
                 Third-Party Risk &amp; Assessment Explorer
               </h2>
               <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left mt-2">
@@ -167,9 +169,9 @@ export default function VendorsPage() {
           </div>
 
           {/*  Main Layout: Table + Relationship Drawer  */}
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 items-stretch">
             {/*  Interactive Directory Table  */}
-            <div className="xl:col-span-7 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-sm overflow-hidden">
+            <div className="xl:col-span-7 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-sm overflow-hidden flex flex-col justify-between h-full">
               <div className="px-space-md py-space-sm bg-slate-100 dark:bg-navy-800 flex items-center justify-between border-b border-slate-200 dark:border-navy-700">
                 <span className="font-label-md text-label-md text-slate-900 dark:text-white font-bold">Subprocessor Register</span>
                 <span className="font-code-sm text-code-sm text-slate-600 dark:text-slate-300">Click a row to trigger Relationship Drawer</span>
@@ -261,7 +263,7 @@ export default function VendorsPage() {
             </div>
 
             {/*  Interactive Vendor Deep-Dive Drawer (Col 5)  */}
-            <div className="xl:col-span-5 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-xl p-space-md flex flex-col gap-space-md">
+            <div className="xl:col-span-5 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-xl p-space-md flex flex-col justify-between h-full gap-space-md">
               <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
                 <div className="space-y-0.5">
                   <span className="font-code-sm text-code-sm text-slate-600 dark:text-slate-300 font-bold" id="drawer-vendor-id">{activeVendor.id}</span>
@@ -306,55 +308,54 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 3: 6-STAGE VENDOR LIFECYCLE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="flex flex-col gap-space-xs mb-4 sm:mb-6 text-left">
             <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <History className="h-5 w-5 shrink-0" />
               <span>End-to-End Governance</span>
             </div>
-            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold">
-              <span className="block">The 6-Stage Vendor</span>
-              <span className="block">Governance Lifecycle</span>
+            <h2 className="font-headline-lg text-headline-lg text-slate-900 dark:text-white font-bold text-left lg:whitespace-nowrap">
+              The 6-Stage Vendor Governance Lifecycle
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">From initial security intake to contract termination and data deletion attestation.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 01</span>
                 <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1">Vendor Intake &amp; Triage</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Evaluate vendor data access tier, subprocessor dependencies, and business criticality prior to contract signing.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 02</span>
                 <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1">Security Questionnaire Dispatch</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Dispatch SIG Lite, CAIQ, or custom questionnaires directly to vendor security contacts.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 03</span>
                 <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1">SOC 2 &amp; Evidence Parsing</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Ingest vendor SOC 2 Type II reports, ISO certificates, and penetration testing executive summaries into the evidence vault.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 04</span>
                 <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1">Contractual DPA Execution</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Verify executed Data Processing Agreements, Standard Contractual Clauses (SCCs), and DPDP technical safeguards.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 05</span>
                 <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1">Continuous Monitoring</h4>
                 <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1">Track annual recertification dates, bridge letters, and security posture changes.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
               <div>
                 <span className="font-code-sm text-code-sm text-primary font-bold">STAGE 06</span>
                 <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1">Offboarding &amp; Data Deletion</h4>
@@ -365,17 +366,17 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 4: MULTI-FRAMEWORK REGULATORY DEFENSIBILITY  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8 text-left">
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left text-justify">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
+            <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6 text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left lg:whitespace-nowrap">
                 Built for Multi-Framework Regulatory Defensibility
               </h2>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl text-left text-justify leading-relaxed">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl text-left leading-relaxed">
                 Satisfy third-party risk management requirements across major global standards without duplicate efforts.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-stretch">
               <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">ISO 27001:2022 A.15</h3>
@@ -399,10 +400,10 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 5: DETERMINISTIC VENDOR EVIDENCE  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
           <div className="p-5 sm:p-8 lg:p-10 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-start justify-between gap-6 shadow-xl text-left">
             <div className="space-y-2 max-w-2xl text-left">
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left lg:whitespace-nowrap">
                 Structured Vendor Evidence, Without Spreadsheet Fatigue
               </h2>
               <p className="text-xs sm:text-base text-slate-300 leading-relaxed text-justify sm:text-left">Maintain an active subprocessor register, track SOC 2 expiration dates, and satisfy external auditors without manual overhead.</p>
@@ -414,9 +415,9 @@ export default function VendorsPage() {
         </section>
 
         {/*  SECTION 6: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-8 sm:py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start text-left gap-4 sm:gap-6">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-4 sm:py-8 lg:py-8 xl:py-9">
+          <div className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex flex-col items-start text-left gap-3 sm:gap-4">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left lg:whitespace-nowrap">
               Streamline Third-Party Compliance Without Spreadsheet Chaos
             </h2>
             <p className="text-xs sm:text-base text-slate-300 max-w-2xl text-justify sm:text-left leading-relaxed">Centralize your vendor security reviews, DPAs, and SOC 2 reports into OMNiGRC's connected GRC workspace.</p>
