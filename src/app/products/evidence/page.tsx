@@ -146,14 +146,14 @@ export default function EvidencePage() {
 
             {/* Architecture Comparison: Legacy Vaults vs OMNiGRC Pointer Model */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 md:pb-24 w-full">
-              <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-                <span className="text-xs text-[#F15E1C] uppercase tracking-widest font-mono font-bold">
+              <div className="text-left w-full mb-6 sm:mb-10">
+                <span className="text-xs text-[#F15E1C] uppercase tracking-widest font-mono font-bold block text-left">
                   ARCHITECTURAL PRINCIPLE
                 </span>
-                <h2 className="text-2xl sm:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-center">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight text-left leading-tight w-full">
                   Why Centralized Binary Upload Vaults Fail Modern Security
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 text-justify sm:text-center">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 text-left leading-relaxed max-w-3xl">
                   Storing duplicate corporate files in a multi-tenant compliance vendor&apos;s database creates unmanageable attack surfaces, version drift, and massive migration overhead.
                 </p>
               </div>
