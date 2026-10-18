@@ -75,7 +75,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className={`${slug === "control-mapping" ? "lg:col-span-5" : "lg:col-span-7"} flex flex-col items-center lg:items-start text-center lg:text-left`}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm mx-auto lg:mx-0">
+              <div className={`${(pillar.code === 'ASSET' || pillar.code === 'CONTROL' || slug === 'asset-inventory' || slug === 'control-mapping') ? 'hidden sm:inline-flex' : 'inline-flex'} items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 mb-4 sm:mb-6 shadow-sm mx-auto lg:mx-0`}>
                 <span className="w-2 h-2 rounded-full bg-[#F15E1C] animate-pulse" />
                 <span className="font-mono text-xs font-semibold tracking-wider uppercase">
                   OMNiGRC WORKFLOW • {pillar.code}
@@ -199,7 +199,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         {/* CTA BANNER */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4">
               Experience {pillar.name} in Action
             </h2>
             <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl mx-auto">

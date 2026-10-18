@@ -88,7 +88,7 @@ export default function AssetInventoryPage() {
             {/*  Left Column: Copy & Actions  */}
             <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full">
               {/*  Eyebrow Badge  */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary text-xs uppercase tracking-wider font-semibold mx-auto sm:mx-0 text-center">
+              <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary text-xs uppercase tracking-wider font-semibold mx-auto sm:mx-0 text-center">
                 <Network className="h-4 w-4 shrink-0" />
                 <span className="text-center">CORE WORKFLOW 02: CONNECTED ASSET &amp; DATA GOVERNANCE</span>
               </div>

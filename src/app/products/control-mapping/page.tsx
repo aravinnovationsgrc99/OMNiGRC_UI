@@ -82,12 +82,12 @@ export default function ControlMappingPage() {
         )}
 
         {/*  SECTION 1: HERO & MAP-ONCE VALUE PROPOSITION  */}
-        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-6 sm:pb-8 overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-3 sm:pb-8 overflow-hidden bg-grid-mesh-adaptive">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
             {/*  Left Column: Headline & Action Buttons  */}
             <div className="lg:col-span-7 flex flex-col items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full">
               {/*  Category Eyebrow  */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary text-xs uppercase tracking-wider font-semibold mx-auto sm:mx-0 text-center">
+              <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-navy-700 text-primary text-xs uppercase tracking-wider font-semibold mx-auto sm:mx-0 text-center">
                 <ArrowRightLeft className="h-4 w-4 shrink-0" />
                 <span className="text-center">CORE WORKFLOW 03: ADVISORY AI CONTROL CROSSWALKS</span>
               </div>
@@ -190,7 +190,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 2: MAP-ONCE CAPABILITY OVERVIEW  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-10">
           <div className="flex flex-col gap-1.5 mb-3 sm:mb-5 text-left">
             <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center sm:text-left">
               Map Once. Satisfy Seven Frameworks with Advisory AI.
@@ -235,7 +235,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 3: INTERACTIVE CLAUSE CORRELATION EXPLORER  */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 text-left" id="clause-correlation">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F] py-3 sm:py-10 text-left" id="clause-correlation">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
             <div className="flex flex-col gap-1.5 mb-3 sm:mb-5 text-left">
               <div className="inline-flex items-center gap-1.5 text-xs text-primary uppercase font-bold tracking-wider text-left">
@@ -392,12 +392,12 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 4: DATA PAYLOAD MINIMIZATION PIPELINE  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10" id="pipeline-architecture">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-10" id="pipeline-architecture">
           <ControlMapping3DGraph />
         </section>
 
         {/*  SECTION 5: ADVISORY AI PRINCIPLES & GOVERNANCE  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 text-left">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-10 text-left">
           <div className="p-4 sm:p-8 lg:p-10 rounded-2xl bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8 shadow-xl text-left">
             <div className="flex flex-col items-start gap-3 sm:gap-4 max-w-2xl text-left">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800 text-primary text-xs uppercase tracking-wider font-semibold text-left">
@@ -441,7 +441,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 6: FRAMEWORK CROSSWALK MATRIX TABLE  */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 text-left">
+        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-10 text-left">
           <div className="flex flex-col gap-1.5 mb-3 sm:mb-5 text-left">
             <div className="inline-flex items-center gap-1.5 text-xs text-primary uppercase font-bold tracking-wider text-left">
               <Scale className="h-4 w-4 shrink-0" />
@@ -499,7 +499,7 @@ export default function ControlMappingPage() {
         </section>
 
         {/*  SECTION 7: BOTTOM CTA  */}
-        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-6 sm:py-10 md:py-12">
+        <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-4 sm:py-10 md:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-3 sm:gap-4">
             <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-center">
               Ready to eliminate duplicate compliance controls?

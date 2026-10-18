@@ -182,7 +182,7 @@ export default function VulnerabilitiesPage() {
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16" id="vulnerability-topology">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 sm:gap-6">
             <div>
-              <h2 className="text-[18px] min-[360px]:text-[20px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Interactive Vulnerability-to-Asset Topology
               </h2>
               <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-xl mt-2 text-left leading-relaxed">

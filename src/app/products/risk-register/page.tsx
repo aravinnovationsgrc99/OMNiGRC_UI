@@ -44,49 +44,60 @@ export default function RiskRegisterPage() {
       <main className="flex-1 w-full pt-16 bg-transparent min-h-screen">
 <div className="flex flex-col w-full">
         {/*  Hero Section (Clean Analytical Typography Focus)  */}
-        <section className="w-full px-3.5 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 bg-grid-mesh-adaptive text-center overflow-hidden">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center w-full">
-            <div className="lg:col-span-7 flex flex-col items-center text-center space-y-3 sm:space-y-4 mx-auto w-full max-w-full min-w-0">
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] text-center w-full max-w-full">
-                Calibrated Risk Registers <span className="bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent">Directly Connected to Assets</span>
+        <section className="w-full px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-6 bg-grid-mesh-adaptive text-center overflow-hidden">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full">
+            <div className="lg:col-span-7 flex flex-col items-center text-center space-y-4 sm:space-y-5 mx-auto w-full max-w-full min-w-0">
+              <h1 className="text-[26px] min-[360px]:text-[29px] min-[390px]:text-[32px] min-[410px]:text-[34px] min-[430px]:text-[36px] sm:text-4xl md:text-5xl lg:text-[52px] xl:text-6xl font-black tracking-tight leading-[1.12] text-center w-full max-w-2xl mx-auto">
+                <span className="block whitespace-nowrap min-[480px]:whitespace-normal text-slate-900 dark:text-white">
+                  Calibrated Risk Registers
+                </span>
+                <span className="block mt-1 sm:mt-1.5 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
+                  Directly Connected
+                </span>
+                <span className="block mt-0.5 sm:mt-1 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
+                  to Assets
+                </span>
               </h1>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md sm:max-w-lg leading-relaxed text-justify mx-auto px-2">
+              <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-sm sm:max-w-lg leading-relaxed text-center mx-auto px-2">
                 Maintain continuous risk registers with calibrated 5×5 Likelihood × Impact scoring mapped directly to tracked infrastructure assets.
               </p>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto max-w-sm sm:max-w-none mx-auto">
-                <a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-teal-600 dark:bg-teal-500 text-white text-xs sm:text-sm font-semibold hover:bg-teal-700 dark:hover:bg-teal-600 transition-all duration-150 shadow-md hover:shadow-lg text-center" href="#matrix-view">
-                  <Circle className="h-4 w-4 shrink-0" />
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full max-w-md mx-auto pt-1 sm:pt-2">
+                <a 
+                  className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#005f4e] hover:bg-[#004d3f] text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all text-center" 
+                  href="#matrix-view"
+                >
+                  <Circle className="h-5 w-5 shrink-0 stroke-[2.2]" />
                   <span>Explore Risk Register Demo</span>
                 </a>
-                <a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors text-center border border-slate-200 dark:border-navy-700" href="#audit-log">
+                <a 
+                  className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-bold hover:bg-slate-50 dark:hover:bg-navy-700 transition-colors text-center border border-slate-200/90 dark:border-navy-700 shadow-sm" 
+                  href="#audit-log"
+                >
                   <span>View Audit Logging</span>
-                  <ArrowRight className="h-4 w-4 shrink-0" />
+                  <ArrowRight className="h-4 w-4 shrink-0 stroke-[2.2]" />
                 </a>
               </div>
               {/*  Metric strip  */}
-              <div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-4 w-full pt-2 sm:pt-3 max-w-xl mx-auto">
-                <div className="p-2 sm:p-3 rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700 flex flex-col items-center text-center justify-between min-w-0 shadow-sm">
-                  <span className="block font-mono text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-semibold truncate w-full text-center">Tracked Risks</span>
-                  <span className="block text-base min-[360px]:text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white my-0.5 text-center">142</span>
-                  <span className="block text-[8px] min-[360px]:text-[9.5px] sm:text-xs text-amber-600 dark:text-amber-500 font-medium leading-tight text-center">
-                    <span className="sm:hidden">100% bound</span>
-                    <span className="hidden sm:inline">100% telemetry bound</span>
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 lg:gap-4 w-full pt-2 sm:pt-3 max-w-xl mx-auto">
+                <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
+                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Tracked Risks</span>
+                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl font-black text-slate-900 dark:text-white my-1 sm:my-1.5 text-center">142</span>
+                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs text-amber-700 dark:text-amber-400 font-semibold leading-tight text-center">
+                    100% bound
                   </span>
                 </div>
-                <div className="p-2 sm:p-3 rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700 flex flex-col items-center text-center justify-between min-w-0 shadow-sm">
-                  <span className="block font-mono text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-semibold truncate w-full text-center">Asset Coverage</span>
-                  <span className="block text-base min-[360px]:text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white my-0.5 text-center">94.2%</span>
-                  <span className="block text-[8px] min-[360px]:text-[9.5px] sm:text-xs text-slate-600 dark:text-slate-300 leading-tight text-center">
-                    <span className="sm:hidden">Asset linked</span>
-                    <span className="hidden sm:inline">Direct Asset-to-Risk linkage</span>
+                <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
+                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Asset Coverage</span>
+                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl font-black text-slate-900 dark:text-white my-1 sm:my-1.5 text-center">94.2%</span>
+                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-medium leading-tight text-center">
+                    Asset linked
                   </span>
                 </div>
-                <div className="p-2 sm:p-3 rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700 flex flex-col items-center text-center justify-between min-w-0 shadow-sm">
-                  <span className="block font-mono text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-semibold truncate w-full text-center">Recalc Latency</span>
-                  <span className="block text-base min-[360px]:text-lg sm:text-2xl font-extrabold text-teal-600 dark:text-teal-400 my-0.5 text-center">&lt; 1.2s</span>
-                  <span className="block text-[8px] min-[360px]:text-[9.5px] sm:text-xs text-slate-600 dark:text-slate-300 leading-tight text-center">
-                    <span className="sm:hidden">Live sync</span>
-                    <span className="hidden sm:inline">Post-control calibration</span>
+                <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/60 shadow-md shadow-slate-200/50 dark:shadow-none flex flex-col items-center text-center justify-between min-w-0 transition-transform hover:-translate-y-0.5">
+                  <span className="block font-mono text-[9.5px] min-[360px]:text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 uppercase tracking-tight font-bold truncate w-full text-center">Recalc Latency</span>
+                  <span className="block text-2xl min-[360px]:text-[26px] sm:text-3xl font-black text-teal-700 dark:text-teal-400 my-1 sm:my-1.5 text-center">&lt; 1.2s</span>
+                  <span className="block text-[10.5px] min-[360px]:text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-medium leading-tight text-center">
+                    Live sync
                   </span>
                 </div>
               </div>
@@ -159,81 +170,100 @@ export default function RiskRegisterPage() {
                 Every quantified entry in OMNiGRC is bound to an actionable, legally defensible treatment path. No ambiguity, no neglected risks forgotten in spreadsheets.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-left">
               {/*  Card 1: Mitigate  */}
-              <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-white dark:bg-[#0A111F] shadow-md flex flex-col items-start text-left justify-between space-y-3 sm:space-y-4 hover:-translate-y-1 transition-transform border border-slate-200/80 dark:border-navy-700/60">
-                <div className="space-y-2.5 sm:space-y-3 flex flex-col items-start text-left w-full">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-600 dark:bg-amber-500 flex items-center justify-center text-white">
-                    <CheckCircle2 className="h-5 w-5 shrink-0" />
+              <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
+                <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
+                  <div className="flex items-center justify-between gap-2 w-full">
+                    <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-amber-600 dark:bg-amber-500 flex items-center justify-center text-white shrink-0">
+                        <CheckCircle2 className="h-4 w-4 shrink-0" />
+                      </div>
+                      <h3 className="text-sm sm:text-base text-slate-900 dark:text-white font-bold truncate">Control Safeguards</h3>
+                    </div>
+                    <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-amber-600 dark:bg-amber-500 text-white shrink-0 whitespace-nowrap">
+                      STRATEGY: MITIGATE
+                    </span>
                   </div>
-                  <div className="inline-block px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-amber-600 dark:bg-amber-500 text-white text-left">
-                    STRATEGY: MITIGATE
-                  </div>
-                  <h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold text-left">Control Safeguards</h3>
-                  <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Direct mapping to technical, physical, or administrative controls with continuous test verification and dynamic score suppression.
                   </p>
                 </div>
-                <div className="pt-2 sm:pt-3 bg-slate-50 dark:bg-[#16233F] p-3 sm:p-4 rounded-lg w-full text-left mt-2">
-                  <span className="block font-mono text-xs text-slate-900 dark:text-white font-semibold text-left">Active: 104 Risks</span>
-                  <span className="block text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Continuous API checks</span>
+                <div className="py-1.5 sm:py-2 px-2.5 rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex flex-wrap items-center justify-between gap-x-2 gap-y-0.5 w-full mt-1 sm:mt-1.5">
+                  <span className="font-mono text-[11px] sm:text-xs text-slate-900 dark:text-white font-semibold">Active: 104 Risks</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">Continuous API checks</span>
                 </div>
               </div>
+
               {/*  Card 2: Accept  */}
-              <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-white dark:bg-[#0A111F] shadow-md flex flex-col items-start text-left justify-between space-y-3 sm:space-y-4 hover:-translate-y-1 transition-transform border border-slate-200/80 dark:border-navy-700/60">
-                <div className="space-y-2.5 sm:space-y-3 flex flex-col items-start text-left w-full">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
-                    <Circle className="h-5 w-5 shrink-0" />
+              <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
+                <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
+                  <div className="flex items-center justify-between gap-2 w-full">
+                    <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+                        <Circle className="h-4 w-4 shrink-0" />
+                      </div>
+                      <h3 className="text-sm sm:text-base text-slate-900 dark:text-white font-bold truncate">Executive Sign-Off</h3>
+                    </div>
+                    <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-tertiary text-on-tertiary shrink-0 whitespace-nowrap">
+                      STRATEGY: ACCEPT
+                    </span>
                   </div>
-                  <div className="inline-block px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-tertiary text-on-tertiary text-left">
-                    STRATEGY: ACCEPT
-                  </div>
-                  <h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold text-left">Executive Sign-Off</h3>
-                  <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Formal risk acceptance with documented business justification, non-delegable CISO authorization, and strict expiration date alerts.
                   </p>
                 </div>
-                <div className="pt-2 sm:pt-3 bg-slate-50 dark:bg-[#16233F] p-3 sm:p-4 rounded-lg w-full text-left mt-2">
-                  <span className="block font-mono text-xs text-slate-900 dark:text-white font-semibold text-left">Active: 18 Risks</span>
-                  <span className="block text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">90-day review cycles</span>
+                <div className="py-1.5 sm:py-2 px-2.5 rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex flex-wrap items-center justify-between gap-x-2 gap-y-0.5 w-full mt-1 sm:mt-1.5">
+                  <span className="font-mono text-[11px] sm:text-xs text-slate-900 dark:text-white font-semibold">Active: 18 Risks</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">90-day review cycles</span>
                 </div>
               </div>
+
               {/*  Card 3: Transfer  */}
-              <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-white dark:bg-[#0A111F] shadow-md flex flex-col items-start text-left justify-between space-y-3 sm:space-y-4 hover:-translate-y-1 transition-transform border border-slate-200/80 dark:border-navy-700/60">
-                <div className="space-y-2.5 sm:space-y-3 flex flex-col items-start text-left w-full">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-200 dark:bg-navy-700 flex items-center justify-center text-slate-900 dark:text-white">
-                    <Circle className="h-5 w-5 shrink-0" />
+              <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
+                <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
+                  <div className="flex items-center justify-between gap-2 w-full">
+                    <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-slate-200 dark:bg-navy-700 flex items-center justify-center text-slate-900 dark:text-white shrink-0">
+                        <Circle className="h-4 w-4 shrink-0" />
+                      </div>
+                      <h3 className="text-sm sm:text-base text-slate-900 dark:text-white font-bold truncate">Contractual Offload</h3>
+                    </div>
+                    <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-slate-200 dark:bg-navy-700est text-slate-900 dark:text-white shrink-0 whitespace-nowrap">
+                      STRATEGY: TRANSFER
+                    </span>
                   </div>
-                  <div className="inline-block px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-slate-200 dark:bg-navy-700est text-slate-900 dark:text-white text-left">
-                    STRATEGY: TRANSFER
-                  </div>
-                  <h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold text-left">Contractual Offload</h3>
-                  <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Cyber insurance underwriting and third-party vendor indemnification contracts linked directly into our automated Vendor Inventory.
                   </p>
                 </div>
-                <div className="pt-2 sm:pt-3 bg-slate-50 dark:bg-[#16233F] p-3 sm:p-4 rounded-lg w-full text-left mt-2">
-                  <span className="block font-mono text-xs text-slate-900 dark:text-white font-semibold text-left">Active: 12 Risks</span>
-                  <span className="block text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">SLA policy linked</span>
+                <div className="py-1.5 sm:py-2 px-2.5 rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex flex-wrap items-center justify-between gap-x-2 gap-y-0.5 w-full mt-1 sm:mt-1.5">
+                  <span className="font-mono text-[11px] sm:text-xs text-slate-900 dark:text-white font-semibold">Active: 12 Risks</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">SLA policy linked</span>
                 </div>
               </div>
+
               {/*  Card 4: Avoid  */}
-              <div className="p-4 sm:p-6 md:p-8 rounded-xl bg-white dark:bg-[#0A111F] shadow-md flex flex-col items-start text-left justify-between space-y-3 sm:space-y-4 hover:-translate-y-1 transition-transform border border-slate-200/80 dark:border-navy-700/60">
-                <div className="space-y-2.5 sm:space-y-3 flex flex-col items-start text-left w-full">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center text-teal-800 dark:text-teal-300">
-                    <Circle className="h-5 w-5 shrink-0" />
+              <div className="p-3.5 sm:p-4 md:p-5 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 hover:-translate-y-0.5 transition-all border border-slate-200/80 dark:border-navy-700/60">
+                <div className="flex flex-col gap-2 sm:gap-2.5 w-full">
+                  <div className="flex items-center justify-between gap-2 w-full">
+                    <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center text-teal-800 dark:text-teal-300 shrink-0">
+                        <Circle className="h-4 w-4 shrink-0" />
+                      </div>
+                      <h3 className="text-sm sm:text-base text-slate-900 dark:text-white font-bold truncate">Sunset &amp; Decommission</h3>
+                    </div>
+                    <span className="px-2 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold bg-teal-600 dark:bg-teal-500 text-white shrink-0 whitespace-nowrap">
+                      STRATEGY: AVOID
+                    </span>
                   </div>
-                  <div className="inline-block px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-teal-600 dark:bg-teal-500 text-white text-left">
-                    STRATEGY: AVOID
-                  </div>
-                  <h3 className="text-lg sm:text-xl text-slate-900 dark:text-white font-bold text-left">Sunset &amp; Decommission</h3>
-                  <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-snug sm:leading-relaxed text-justify sm:text-left">
                     Permanently eliminating exposure by terminating high-risk microservices, unmaintained legacy software, or risky geographical routes.
                   </p>
                 </div>
-                <div className="pt-2 sm:pt-3 bg-slate-50 dark:bg-[#16233F] p-3 sm:p-4 rounded-lg w-full text-left mt-2">
-                  <span className="block font-mono text-xs text-slate-900 dark:text-white font-semibold text-left">Active: 8 Risks</span>
-                  <span className="block text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Tear-down completed</span>
+                <div className="py-1.5 sm:py-2 px-2.5 rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex flex-wrap items-center justify-between gap-x-2 gap-y-0.5 w-full mt-1 sm:mt-1.5">
+                  <span className="font-mono text-[11px] sm:text-xs text-slate-900 dark:text-white font-semibold">Active: 8 Risks</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">Tear-down completed</span>
                 </div>
               </div>
             </div>
@@ -360,78 +390,95 @@ export default function RiskRegisterPage() {
               </p>
             </div>
             {/*  Process Diagram Strip  */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 relative text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4 relative text-left">
               {/*  Step 1  */}
-              <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col items-start justify-between space-y-2 sm:space-y-3 hover:shadow-md transition-shadow text-left">
-                <div className="space-y-1.5 sm:space-y-2 flex flex-col items-start text-left">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
+                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
                   <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">01 / DISCOVERY</span>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
-                    <Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
+                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
+                      <Circle className="h-4 w-4 shrink-0" />
+                    </div>
+                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Risk Identified</h4>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold text-left">Risk Identified</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify">Threat modeled or ingested via threat feeds.</p>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Threat modeled or ingested via threat feeds.</p>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-slate-900 dark:text-white font-mono text-left pt-1">RSK-042</span>
+                <span className="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium text-left pt-1">RSK-042</span>
               </div>
+
               {/*  Step 2  */}
-              <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col items-start justify-between space-y-2 sm:space-y-3 hover:shadow-md transition-shadow text-left">
-                <div className="space-y-1.5 sm:space-y-2 flex flex-col items-start text-left">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
+                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
                   <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">02 / MAPPING</span>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
-                    <Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
+                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
+                      <Circle className="h-4 w-4 shrink-0" />
+                    </div>
+                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Asset Linked</h4>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold text-left">Asset Linked</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify">Direct Asset-to-Risk linkage for targeted impact evaluation.</p>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Direct Asset-to-Risk linkage for targeted impact evaluation.</p>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-slate-900 dark:text-white font-mono text-left pt-1">AST-059</span>
+                <span className="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium text-left pt-1">AST-059</span>
               </div>
+
               {/*  Step 3  */}
-              <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col items-start justify-between space-y-2 sm:space-y-3 hover:shadow-md transition-shadow text-left">
-                <div className="space-y-1.5 sm:space-y-2 flex flex-col items-start text-left">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
+                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
                   <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">03 / QUANTIFY</span>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
-                    <Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
+                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
+                      <Circle className="h-4 w-4 shrink-0" />
+                    </div>
+                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Vulnerability Scored</h4>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold text-left">Vulnerability Scored</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify">CVSS / EPSS factors calibrate inherent score.</p>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">CVSS / EPSS factors calibrate inherent score.</p>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-red-600 dark:text-red-400 font-mono text-left pt-1">Score: 16 (High)</span>
+                <span className="font-mono text-[10px] sm:text-xs text-red-600 dark:text-red-400 font-medium text-left pt-1">Score: 16 (High)</span>
               </div>
+
               {/*  Step 4  */}
-              <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col items-start justify-between space-y-2 sm:space-y-3 hover:shadow-md transition-shadow text-left">
-                <div className="space-y-1.5 sm:space-y-2 flex flex-col items-start text-left">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
+                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
                   <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">04 / DEFENSE</span>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-amber-600 dark:text-amber-500">
-                    <Shield className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
+                    <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-amber-600 dark:text-amber-500 shrink-0">
+                      <Shield className="h-4 w-4 shrink-0" />
+                    </div>
+                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Control Mitigated</h4>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold text-left">Control Mitigated</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify">Automated tests suppress residual likelihood.</p>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Automated tests suppress residual likelihood.</p>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-amber-600 dark:text-amber-500 font-mono text-left pt-1">CTRL-012 PASS</span>
+                <span className="font-mono text-[10px] sm:text-xs text-amber-600 dark:text-amber-500 font-medium text-left pt-1">CTRL-012 PASS</span>
               </div>
+
               {/*  Step 5  */}
-              <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col items-start justify-between space-y-2 sm:space-y-3 hover:shadow-md transition-shadow text-left">
-                <div className="space-y-1.5 sm:space-y-2 flex flex-col items-start text-left">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
+                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
                   <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">05 / POSTURE</span>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
-                    <Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
+                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
+                      <Circle className="h-4 w-4 shrink-0" />
+                    </div>
+                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Compliance Board</h4>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold text-left">Compliance Board</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify">ISO 27001 Annex A.8.13 reflected as Green.</p>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">ISO 27001 Annex A.8.13 reflected as Green.</p>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-amber-600 dark:text-amber-500 font-mono text-left pt-1">Status: 99.4%</span>
+                <span className="font-mono text-[10px] sm:text-xs text-amber-600 dark:text-amber-500 font-medium text-left pt-1">Status: 99.4%</span>
               </div>
+
               {/*  Step 6  */}
-              <div className="p-3.5 sm:p-5 lg:p-6 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col items-start justify-between space-y-2 sm:space-y-3 hover:shadow-md transition-shadow text-left">
-                <div className="space-y-1.5 sm:space-y-2 flex flex-col items-start text-left">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
+                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
                   <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">06 / VERIFIED</span>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-amber-600 dark:text-amber-500">
-                    <Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
+                    <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-amber-600 dark:text-amber-500 shrink-0">
+                      <Circle className="h-4 w-4 shrink-0" />
+                    </div>
+                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Auditor Evidence</h4>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-semibold text-left">Auditor Evidence</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify">Recorded evidence status stored in Evidence Vault.</p>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Recorded evidence status stored in Evidence Vault.</p>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-slate-900 dark:text-white font-mono text-left pt-1">ev-drill-2026</span>
+                <span className="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium text-left pt-1">ev-drill-2026</span>
               </div>
             </div>
             {/*  Additional visual element with high-contrast scrim overlay  */}
