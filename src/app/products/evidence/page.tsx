@@ -32,39 +32,32 @@ export default function EvidencePage() {
       <Header />
       <main className="flex-1 w-full pt-16 bg-transparent min-h-screen">
         <div className="flex flex-col w-full">
-          {/* Subtle ambient backdrop */}
+          {/* Subtle ambient backdrop with mint-green, soft yellow, and peach translucent abstract shapes */}
           <div className="relative w-full overflow-hidden">
-            <div className="absolute top-0 right-1/4 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/20 rounded-full blur-3xl pointer-events-none -z-10" />
-            <div className="absolute top-48 left-10 w-80 h-80 bg-amber-600/10 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
-
-            {/* Context Status Bar */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-1 sm:pb-2 w-full">
-              <div className="flex items-center justify-end gap-2 pb-2">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 font-mono text-xs font-semibold">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                    LIVE EVIDENCE INDEX
-                  </span>
-                  <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-medium border border-slate-300 dark:border-navy-700">
-                    <Database className="h-3.5 w-3.5 text-[#2E936F] dark:text-teal" />
-                    APPEND-ONLY POSTGRESQL TIMELINE
-                  </span>
-                </div>
-              </div>
-            </section>
+            <div className="absolute -top-10 right-1/4 w-96 h-96 bg-[#ffdbcf]/35 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
+            <div className="absolute top-36 -left-10 w-96 h-96 bg-[#2E936F]/15 dark:bg-teal/10 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-2" />
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-amber-200/20 dark:bg-amber-500/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
             {/* Hero Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-6 pb-6 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 md:pt-14 pb-6 sm:pb-12 md:pb-16 w-full bg-grid-mesh-adaptive">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
                   <div className="hidden sm:inline-flex items-center gap-2 w-max mb-4 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold mx-auto lg:mx-0">
                     <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                     Zero Proprietary Binary Storage Lock-In
                   </div>
-                  <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 sm:mb-6 leading-tight text-center w-full">
-                    Evidence References &amp; Records: <span className="text-[#F15E1C]">External Proof Without Binary Lock-in</span>
+                  <h1 className="text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-5xl lg:text-[52px] xl:text-[56px] font-black tracking-tight leading-[1.08] sm:leading-[1.1] text-center lg:text-left mb-4 sm:mb-6 w-full">
+                    <span className="block text-slate-900 dark:text-white">
+                      Evidence
+                    </span>
+                    <span className="block text-slate-900 dark:text-white mt-0.5 sm:mt-1">
+                      References &amp; Records:
+                    </span>
+                    <span className="block text-[#F15E1C] mt-0.5 sm:mt-1">
+                      External Proof
+                    </span>
                   </h1>
-                  <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-6 text-left w-full">
+                  <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-6 text-center lg:text-left w-full">
                     Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record (AWS, Okta, GitHub, Jira) while preserving complete clear chain of custody for external auditors.
                   </p>
                   <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 w-full sm:w-auto">
