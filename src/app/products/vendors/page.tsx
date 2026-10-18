@@ -157,14 +157,11 @@ export default function VendorsPage() {
         {/*  SECTION 2: INTERACTIVE DIRECTORY & RELATIONSHIP DRAWER  */}
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="directory">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
-            <div>
-              <div className="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-primary-fixed text-on-primary-fixed font-code-sm text-code-sm rounded-full mb-space-xs font-bold">
-                Interactive Operational Directory
-              </div>
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <div className="text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Third-Party Risk &amp; Assessment Explorer
               </h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">
+              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left mt-2">
                 Select any cataloged subprocessor below to inspect security safeguards, contractual DPA provisions, and continuous reassessment cadences.
               </p>
             </div>
@@ -374,15 +371,17 @@ export default function VendorsPage() {
         {/*  SECTION 4: MULTI-FRAMEWORK REGULATORY DEFENSIBILITY  */}
         <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-xs text-primary uppercase font-bold tracking-wider">
+            <div className="flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8 text-left">
+              <div className="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-xs text-primary uppercase font-bold tracking-wider text-left">
                 <Scale className="h-4 w-4 shrink-0" />
                 <span>Framework Alignment</span>
               </div>
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left text-justify">
                 Built for Multi-Framework Regulatory Defensibility
               </h2>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl text-left leading-relaxed">Satisfy third-party risk management requirements across major global standards without duplicate efforts.</p>
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl text-left text-justify leading-relaxed">
+                Satisfy third-party risk management requirements across major global standards without duplicate efforts.
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6">
               <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">

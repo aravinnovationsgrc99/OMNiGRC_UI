@@ -170,7 +170,182 @@ export default function ComplianceBoardPage() {
 </p>
 </div>
 {/*  7-Stage Grid Sequence  */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6"><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 01</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Regulatory Clause</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Deconstruct SOC 2, ISO 27001, HIPAA, and DPDP mandates into concrete rules.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Deterministic Mapping</div></div><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 02</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Operational Task</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Convert legal mandates into scheduled recurring 30/60/90-day sprint cards.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Cadence Automation</div></div><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 03</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Assigned Owner</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Route each task directly to an engineer or lead with explicit SLA timelines.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Role-Based SLA</div></div><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 04</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Evidence Vault</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Collect system configs, logs, and screenshots stamped with recorded timestamps.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Proof Ingestion</div></div><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 05</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Testing &amp; Sanity</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Run automated checks and peer reviews to confirm full control efficacy.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Dual-Control Audit</div></div><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold">STAGE 06</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Remediation Loop</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Auto-flag deviations and assign fixes before external auditors enter the room.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-slate-900 dark:text-white font-bold">Closed Feedback</div></div><div className="bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700/60 p-4 sm:p-5 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between lg:col-span-2"><div><div className="flex items-center justify-between mb-3"><span className="font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">STAGE 07</span><Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" /></div><h3 className="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-white font-bold mb-1.5 text-left">Audit-Ready Certified State</h3><p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">Export tamper-proof audit packages ready for instant external assessor sign-off.</p></div><div className="mt-4 sm:mt-6 pt-1 font-mono text-xs text-amber-600 dark:text-amber-500 font-bold">Continuous Certification</div></div></div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 items-stretch">
+  {/* Stage 01 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">STAGE 01</span>
+        <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Regulatory Clause
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+          Deconstruct SOC 2, ISO 27001, HIPAA, and DPDP mandates into concrete rules.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+        Deterministic Mapping
+      </span>
+    </div>
+  </div>
+
+  {/* Stage 02 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">STAGE 02</span>
+        <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Operational Task
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+          Convert legal mandates into scheduled recurring 30/60/90-day sprint cards.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+        Cadence Automation
+      </span>
+    </div>
+  </div>
+
+  {/* Stage 03 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">STAGE 03</span>
+        <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Assigned Owner
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+          Route each task directly to an engineer or lead with explicit SLA timelines.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+        Role-Based SLA
+      </span>
+    </div>
+  </div>
+
+  {/* Stage 04 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">STAGE 04</span>
+        <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Evidence Vault
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+          Collect system configs, logs, and screenshots stamped with recorded timestamps.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+        Proof Ingestion
+      </span>
+    </div>
+  </div>
+
+  {/* Stage 05 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">STAGE 05</span>
+        <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Testing &amp; Sanity
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+          Run automated checks and peer reviews to confirm full control efficacy.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+        Dual-Control Audit
+      </span>
+    </div>
+  </div>
+
+  {/* Stage 06 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">STAGE 06</span>
+        <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Remediation Loop
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+          Auto-flag deviations and assign fixes before external auditors enter the room.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+        Closed Feedback
+      </span>
+    </div>
+  </div>
+
+  {/* Stage 07 */}
+  <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 md:col-span-2 lg:col-span-2">
+    <div>
+      <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+        <span className="font-mono text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-500">STAGE 07</span>
+        <div className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-500 flex items-center justify-center shrink-0">
+          <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
+        </div>
+      </div>
+      <div className="pt-3 pb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+          Audit-Ready Certified State
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left max-w-xl">
+          Export tamper-proof audit packages ready for instant external assessor sign-off.
+        </p>
+      </div>
+    </div>
+    <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+      <span className="font-mono text-xs font-bold text-amber-600 dark:text-amber-500 tracking-tight">
+        Continuous Certification
+      </span>
+    </div>
+  </div>
+</div>
 </div>
 </section>
 {/*  Editorial Visual Storytelling Section  */}

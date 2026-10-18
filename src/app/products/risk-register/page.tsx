@@ -390,95 +390,155 @@ export default function RiskRegisterPage() {
               </p>
             </div>
             {/*  Process Diagram Strip  */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4 relative text-left">
-              {/*  Step 1  */}
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
-                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
-                  <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">01 / DISCOVERY</span>
-                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
-                      <Circle className="h-4 w-4 shrink-0" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 items-stretch">
+              {/* Step 1 */}
+              <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+                <div>
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">01 / DISCOVERY</span>
+                    <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+                      <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
                     </div>
-                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Risk Identified</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Threat modeled or ingested via threat feeds.</p>
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+                      Risk Identified
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                      Threat modeled or ingested via threat feeds.
+                    </p>
+                  </div>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium text-left pt-1">RSK-042</span>
+                <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+                    RSK-042
+                  </span>
+                </div>
               </div>
 
-              {/*  Step 2  */}
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
-                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
-                  <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">02 / MAPPING</span>
-                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
-                      <Circle className="h-4 w-4 shrink-0" />
+              {/* Step 2 */}
+              <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+                <div>
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">02 / MAPPING</span>
+                    <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+                      <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
                     </div>
-                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Asset Linked</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Direct Asset-to-Risk linkage for targeted impact evaluation.</p>
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+                      Asset Linked
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                      Direct Asset-to-Risk linkage for targeted impact evaluation.
+                    </p>
+                  </div>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium text-left pt-1">AST-059</span>
+                <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+                    AST-059
+                  </span>
+                </div>
               </div>
 
-              {/*  Step 3  */}
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
-                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
-                  <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">03 / QUANTIFY</span>
-                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
-                      <Circle className="h-4 w-4 shrink-0" />
+              {/* Step 3 */}
+              <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+                <div>
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">03 / QUANTIFY</span>
+                    <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+                      <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
                     </div>
-                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Vulnerability Scored</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">CVSS / EPSS factors calibrate inherent score.</p>
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+                      Vulnerability Scored
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                      CVSS / EPSS factors calibrate inherent score.
+                    </p>
+                  </div>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-red-600 dark:text-red-400 font-medium text-left pt-1">Score: 16 (High)</span>
+                <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-red-600 dark:text-red-400 tracking-tight">
+                    Score: 16 (High)
+                  </span>
+                </div>
               </div>
 
-              {/*  Step 4  */}
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
-                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
-                  <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">04 / DEFENSE</span>
-                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-amber-600 dark:text-amber-500 shrink-0">
-                      <Shield className="h-4 w-4 shrink-0" />
+              {/* Step 4 */}
+              <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+                <div>
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">04 / DEFENSE</span>
+                    <div className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-500 flex items-center justify-center shrink-0">
+                      <Shield className="h-4 w-4 shrink-0 stroke-[2.2]" />
                     </div>
-                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Control Mitigated</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Automated tests suppress residual likelihood.</p>
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+                      Control Mitigated
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                      Automated tests suppress residual likelihood.
+                    </p>
+                  </div>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-amber-600 dark:text-amber-500 font-medium text-left pt-1">CTRL-012 PASS</span>
+                <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-amber-600 dark:text-amber-500 tracking-tight">
+                    CTRL-012 PASS
+                  </span>
+                </div>
               </div>
 
-              {/*  Step 5  */}
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
-                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
-                  <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">05 / POSTURE</span>
-                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                    <div className="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-950/40 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
-                      <Circle className="h-4 w-4 shrink-0" />
+              {/* Step 5 */}
+              <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+                <div>
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">05 / POSTURE</span>
+                    <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
+                      <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
                     </div>
-                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Compliance Board</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">ISO 27001 Annex A.8.13 reflected as Green.</p>
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+                      Compliance Board
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                      ISO 27001 Annex A.8.13 reflected as Green.
+                    </p>
+                  </div>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-amber-600 dark:text-amber-500 font-medium text-left pt-1">Status: 99.4%</span>
+                <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-teal-600 dark:text-teal-400 tracking-tight">
+                    Status: 99.4%
+                  </span>
+                </div>
               </div>
 
-              {/*  Step 6  */}
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white dark:bg-[#0A111F] shadow-sm hover:shadow-md flex flex-col justify-between gap-2.5 sm:gap-3 transition-all border border-slate-200/80 dark:border-navy-700/60 text-left">
-                <div className="flex flex-col gap-2 sm:gap-2.5 text-left w-full">
-                  <span className="font-mono text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-bold text-left">06 / VERIFIED</span>
-                  <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-amber-600 dark:text-amber-500 shrink-0">
-                      <Circle className="h-4 w-4 shrink-0" />
+              {/* Step 6 */}
+              <div className="bg-white/90 dark:bg-[#16233F]/95 backdrop-blur-md border border-slate-200/90 dark:border-navy-700/70 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+                <div>
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800/80">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">06 / VERIFIED</span>
+                    <div className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-500 flex items-center justify-center shrink-0">
+                      <Circle className="h-4 w-4 shrink-0 stroke-[2.2]" />
                     </div>
-                    <h4 className="text-base sm:text-lg text-slate-900 dark:text-white font-bold text-left leading-snug">Auditor Evidence</h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left leading-relaxed">Recorded evidence status stored in Evidence Vault.</p>
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left mb-2">
+                      Auditor Evidence
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                      Recorded evidence status stored in Evidence Vault.
+                    </p>
+                  </div>
                 </div>
-                <span className="font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium text-left pt-1">ev-drill-2026</span>
+                <div className="pt-3 mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold text-slate-900 dark:text-white tracking-tight">
+                    ev-drill-2026
+                  </span>
+                </div>
               </div>
             </div>
             {/*  Additional visual element with high-contrast scrim overlay  */}

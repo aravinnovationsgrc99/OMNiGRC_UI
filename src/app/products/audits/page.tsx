@@ -118,16 +118,12 @@ export default function AuditsPage() {
         </section>
 
         {/*  SECTION 2: OPERATIONAL AUDIT LIFECYCLE  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-              <History className="h-5 w-5 shrink-0" />
-              <span>Structured Audit Execution</span>
-            </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+        <section className="w-full max-w-7xl mx-auto px-gutter pt-space-section pb-4 sm:pb-6 md:pb-8">
+          <div className="flex flex-col gap-space-xs mb-space-lg text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
               The Operational Audit Lifecycle
             </h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">From initial audit scoping and evidence sampling to finding creation and final auditor verification.</p>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left mt-1">From initial audit scoping and evidence sampling to finding creation and final auditor verification.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-md">
             <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
@@ -176,17 +172,13 @@ export default function AuditsPage() {
         </section>
 
         {/*  SECTION 3: INTERACTIVE WORKPAPER DEMONSTRATION  */}
-        <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="workpaper-preview">
+        <section className="w-full max-w-7xl mx-auto px-gutter pt-4 sm:pt-6 md:pt-8 pb-space-section" id="workpaper-preview">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
-            <div>
-              <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-                <FileText className="h-5 w-5 shrink-0" />
-                <span>Auditor Workpaper Workspace</span>
-              </div>
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <div className="text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Structured Audit Workpaper Entry
               </h2>
-              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left">Experience how OMNiGRC organizes audit testing steps, evidence artifacts, and finding exceptions into clean auditor workpapers.</p>
+              <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-justify sm:text-left mt-2">Experience how OMNiGRC organizes audit testing steps, evidence artifacts, and finding exceptions into clean auditor workpapers.</p>
             </div>
             <button 
               onClick={() => setShowMetadata(!showMetadata)}
@@ -247,44 +239,48 @@ export default function AuditsPage() {
 
         {/*  SECTION 4: CORE FUNCTIONAL CAPABILITIES  */}
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
-              <Zap className="h-5 w-5 shrink-0" />
-              <span>Audit Capabilities</span>
-            </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+          <div className="flex flex-col gap-space-xs mb-space-lg text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
               4 Core Functional Audit Capabilities
             </h2>
-            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Purpose-built for compliance managers, internal auditors, and external audit partners.</p>
+            <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left text-justify leading-relaxed mt-1">Purpose-built for compliance managers, internal auditors, and external audit partners.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 items-stretch">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Auditor Workspace</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Grant external auditors read-only access to scoped evidence packages, sampling lists, and test workpapers.</p>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Auditor Workspace</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Grant external auditors read-only access to scoped evidence packages, sampling lists, and test workpapers.</p>
               </div>
-              <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Read-Only Auditor Portal</span>
+              <div className="pt-3 mt-3 sm:mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                <span className="font-mono text-xs text-secondary font-bold text-left">Read-Only Auditor Portal</span>
+              </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Sample Population Management</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Generate and log sample populations (users, servers, pull requests) directly linked to control tests.</p>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Sample Population Management</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Generate and log sample populations (users, servers, pull requests) directly linked to control tests.</p>
               </div>
-              <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Sample List Indexing</span>
+              <div className="pt-3 mt-3 sm:mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                <span className="font-mono text-xs text-secondary font-bold text-left">Sample List Indexing</span>
+              </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Finding &amp; CAPA Tracking</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Transform audit exceptions directly into assigned corrective action remediation items with SLA deadlines.</p>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Finding &amp; CAPA Tracking</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Transform audit exceptions directly into assigned corrective action remediation items with SLA deadlines.</p>
               </div>
-              <span className="font-code-sm text-code-sm text-primary font-bold mt-space-md">Corrective Action Workflow</span>
+              <div className="pt-3 mt-3 sm:mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                <span className="font-mono text-xs text-primary font-bold text-left">Corrective Action Workflow</span>
+              </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Multi-Framework Workpapers</h3>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Reuse completed audit workpapers across ISO 27001, SOC 2, HIPAA, and DPDP Act compliance reviews.</p>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Multi-Framework Workpapers</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Reuse completed audit workpapers across ISO 27001, SOC 2, HIPAA, and DPDP Act compliance reviews.</p>
               </div>
-              <span className="font-code-sm text-code-sm text-secondary font-bold mt-space-md">Zero Duplicate Workpapers</span>
+              <div className="pt-3 mt-3 sm:mt-4 border-t border-slate-100 dark:border-navy-800/80 flex items-center justify-between">
+                <span className="font-mono text-xs text-secondary font-bold text-left">Zero Duplicate Workpapers</span>
+              </div>
             </div>
           </div>
         </section>

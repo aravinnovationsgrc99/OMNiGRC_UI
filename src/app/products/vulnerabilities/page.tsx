@@ -384,46 +384,87 @@ export default function VulnerabilitiesPage() {
 
         {/*  SECTION 3: THREE FUNCTIONAL PILLARS SECTION  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
-          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center">
+          <div className="text-left max-w-3xl mb-6 sm:mb-10">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
               Purpose-Built for GRC Defensibility, Not Log Flooding
             </h2>
-            <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-center leading-relaxed">
+            <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 text-left leading-relaxed">
               Scanners detect bugs. OMNiGRC transforms those findings into contextual corporate risk models, automated team escalations, and certified auditor workpapers.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <div className="flex flex-col p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
-                <Network className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+            {/* Card 1: Asset-Centric Prioritization */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200/90 dark:border-navy-700/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+              <div>
+                <div className="flex items-center gap-3.5 sm:gap-4 text-left">
+                  <div className="w-12 h-12 rounded-xl bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center shrink-0">
+                    <Network className="h-6 w-6 shrink-0" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug text-left">
+                    Asset-Centric Prioritization
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed text-left">
+                  Triage vulnerabilities by business criticality, data classifications, and regulatory scope, not theoretical CVSS scores alone.
+                </p>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Asset-Centric Prioritization</h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Triage vulnerabilities by business criticality, data classifications, and regulatory scope, not theoretical CVSS scores alone.</p>
-              <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
-                <span className="text-slate-900 dark:text-white font-semibold">Scope Context</span>
-                <span className="text-secondary font-bold">Configurable Scope Tiers</span>
+              <div className="mt-5 p-3 rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex items-center justify-between text-xs sm:text-sm">
+                <span className="text-slate-900 dark:text-white font-bold">Scope Context</span>
+                <div className="h-4 w-px bg-slate-200 dark:bg-navy-700 mx-2 sm:mx-3"></div>
+                <span className="text-secondary font-bold inline-flex items-center gap-1.5 ml-auto">
+                  Configurable Scope Tiers
+                  <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
+                </span>
               </div>
             </div>
-            <div className="flex flex-col p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
-                <Zap className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
+
+            {/* Card 2: Actionable Remediation SLAs */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200/90 dark:border-navy-700/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+              <div>
+                <div className="flex items-center gap-3.5 sm:gap-4 text-left">
+                  <div className="w-12 h-12 rounded-xl bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center shrink-0">
+                    <Zap className="h-6 w-6 shrink-0" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug text-left">
+                    Actionable Remediation SLAs
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed text-left">
+                  Automate remediation countdowns aligned to policy. Trigger team notifications and CISO approvals before breach limits hit.
+                </p>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Actionable Remediation SLAs</h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Automate remediation countdowns aligned to policy. Trigger team notifications and CISO approvals before breach limits hit.</p>
-              <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
-                <span className="text-slate-900 dark:text-white font-semibold">Enforcement Policy</span>
-                <span className="text-primary font-bold">Policy Escalations</span>
+              <div className="mt-5 p-3 rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex items-center justify-between text-xs sm:text-sm">
+                <span className="text-slate-900 dark:text-white font-bold">Enforcement Policy</span>
+                <div className="h-4 w-px bg-slate-200 dark:bg-navy-700 mx-2 sm:mx-3"></div>
+                <span className="text-primary font-bold inline-flex items-center gap-1.5 ml-auto">
+                  Policy Escalations
+                  <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
+                </span>
               </div>
             </div>
-            <div className="flex flex-col p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center mb-3 sm:mb-4">
-                <Lock className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
+
+            {/* Card 3: Defensible Audit Closure */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200/90 dark:border-navy-700/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full group hover:-translate-y-0.5 text-left">
+              <div>
+                <div className="flex items-center gap-3.5 sm:gap-4 text-left">
+                  <div className="w-12 h-12 rounded-xl bg-[#FFF5EB] dark:bg-navy-800 text-primary flex items-center justify-center shrink-0">
+                    <Lock className="h-6 w-6 shrink-0" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug text-left">
+                    Defensible Audit Closure
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed text-left">
+                  Store patch proof, diffs, and verified commit hashes directly in GRC audit logs for auditor review.
+                </p>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Defensible Audit Closure</h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4 flex-1 leading-relaxed text-left">Store patch proof, diffs, and verified commit hashes directly in GRC audit logs for auditor review.</p>
-              <div className="p-2.5 sm:p-3 rounded-lg bg-slate-50 dark:bg-[#16233F] flex items-center justify-between text-xs">
-                <span className="text-slate-900 dark:text-white font-semibold">Audit Proof</span>
-                <span className="text-secondary font-bold">Verified Evidence</span>
+              <div className="mt-5 p-3 rounded-xl bg-slate-50 dark:bg-[#16233F] border border-slate-100 dark:border-navy-700/50 flex items-center justify-between text-xs sm:text-sm">
+                <span className="text-slate-900 dark:text-white font-bold">Audit Proof</span>
+                <div className="h-4 w-px bg-slate-200 dark:bg-navy-700 mx-2 sm:mx-3"></div>
+                <span className="text-secondary font-bold inline-flex items-center gap-1.5 ml-auto">
+                  Verified Evidence
+                  <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
+                </span>
               </div>
             </div>
           </div>

@@ -163,12 +163,12 @@ export default function PoliciesPage() {
 
         {/*  SECTION 2: STRUCTURED POLICY LIFECYCLE  */}
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+          <div className="flex flex-col gap-space-xs mb-space-lg text-left">
+            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider text-left">
               <History className="h-5 w-5 shrink-0" />
               <span>End-to-End Governance</span>
             </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left sm:text-left">
               The 5-Stage Policy Governance Lifecycle
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">Transform policy management from isolated PDF storage into an active, auditable governance workflow.</p>
@@ -214,12 +214,12 @@ export default function PoliciesPage() {
 
         {/*  SECTION 3: INTERACTIVE ACTIVE POLICY EXPLORER  */}
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section" id="policy-explorer">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+          <div className="flex flex-col gap-space-xs mb-space-lg text-left">
+            <div className="hidden sm:inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <BookOpen className="h-5 w-5 shrink-0" />
               <span>Interactive Policy Manager</span>
             </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left sm:text-left">
               Active Policy Explorer &amp; Detail Matrix
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-3xl text-justify sm:text-left">Select a corporate policy below to inspect current versions, staff attestation progress, and linked framework safeguards.</p>
@@ -327,12 +327,12 @@ export default function PoliciesPage() {
 
         {/*  SECTION 4: CORE CAPABILITIES BUILT FOR RIGOR  */}
         <section className="w-full max-w-7xl mx-auto px-gutter py-space-section">
-          <div className="flex flex-col gap-space-xs mb-space-lg">
-            <div className="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+          <div className="flex flex-col gap-space-xs mb-space-lg text-left">
+            <div className="hidden sm:inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
               <ShieldCheck className="h-5 w-5 shrink-0" />
               <span>Architectural Rigor</span>
             </div>
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center sm:text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left sm:text-left">
               Core Capabilities Built for Governance Rigor
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Ensure policy compliance is auditable, actionable, and aligned across all organizational departments.</p>
