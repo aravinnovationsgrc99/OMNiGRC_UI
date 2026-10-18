@@ -19,7 +19,6 @@ export default async function BlogPage() {
       <Header />
       <main className="flex-1">
         <PageHero
-          eyebrow="PRACTICAL GRC INSIGHTS"
           title="Articles, guides, and engineering notes."
           subtitle="Explore practical guides on multi-framework control mapping, asset inventory risk scoring, and zero-retention AI architecture."
         />

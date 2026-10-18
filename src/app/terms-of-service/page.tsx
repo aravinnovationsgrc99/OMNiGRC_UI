@@ -14,7 +14,6 @@ export default function TermsOfServicePage() {
       <Header />
       <main className="flex-1">
         <PageHero
-          eyebrow="LEGAL & OPERATIONAL TERMS"
           title="Terms of Service"
           subtitle="Governing terms for access and use of the OMNiGRC platform, advisory AI assistance, tenant isolation, and risk/control operating workflows."
           visual={<GenericHeroMotif type="terms" />}

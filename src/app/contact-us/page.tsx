@@ -60,7 +60,6 @@ export default function ContactUsPage() {
       <Header />
       <main className="flex-1">
         <PageHero
-          eyebrow="CONNECT WITH US"
           title="Talk to our GRC architects."
           subtitle="Have questions about multi-framework control mapping, asset inventory integration, or risk scoring? Reach out directly."
           visual={<GenericHeroMotif type="contact" />}

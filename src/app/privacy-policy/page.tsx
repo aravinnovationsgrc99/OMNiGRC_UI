@@ -14,7 +14,6 @@ export default function PrivacyPolicyPage() {
       <Header />
       <main className="flex-1">
         <PageHero
-          eyebrow="DATA PROTECTION & TRUST"
           title="Privacy Policy"
           subtitle="Our explicit commitment to zero-retention compliance AI, payload sanitization, tenant isolation, and regulatory data protection."
           visual={<GenericHeroMotif type="privacy" />}
