@@ -245,8 +245,8 @@ export default function AuditsPage() {
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left text-justify leading-relaxed mt-1">Purpose-built for compliance managers, internal auditors, and external audit partners.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 items-stretch">
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left h-full">
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Auditor Workspace</h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Grant external auditors read-only access to scoped evidence packages, sampling lists, and test workpapers.</p>
@@ -255,7 +255,7 @@ export default function AuditsPage() {
                 <span className="font-mono text-xs text-secondary font-bold text-left">Read-Only Auditor Portal</span>
               </div>
             </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left h-full">
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Sample Population Management</h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Generate and log sample populations (users, servers, pull requests) directly linked to control tests.</p>
@@ -264,7 +264,7 @@ export default function AuditsPage() {
                 <span className="font-mono text-xs text-secondary font-bold text-left">Sample List Indexing</span>
               </div>
             </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left h-full">
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Finding &amp; CAPA Tracking</h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Transform audit exceptions directly into assigned corrective action remediation items with SLA deadlines.</p>
@@ -273,7 +273,7 @@ export default function AuditsPage() {
                 <span className="font-mono text-xs text-primary font-bold text-left">Corrective Action Workflow</span>
               </div>
             </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-left h-full">
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Multi-Framework Workpapers</h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed">Reuse completed audit workpapers across ISO 27001, SOC 2, HIPAA, and DPDP Act compliance reviews.</p>
@@ -287,12 +287,12 @@ export default function AuditsPage() {
 
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-start text-left gap-space-md">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
               Organize Audits with Operational Precision
             </h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Eliminate pre-audit panic by connecting framework controls directly to audit workpapers and evidence in OMNiGRC.</p>
-            <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
+            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-justify sm:text-left leading-relaxed">Eliminate pre-audit panic by connecting framework controls directly to audit workpapers and evidence in OMNiGRC.</p>
+            <div className="flex flex-wrap items-center justify-start gap-space-sm pt-space-xs">
               <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
                 Schedule Audit Management Demo
               </a>

@@ -92,11 +92,11 @@ export default function ControlMappingPage() {
                 <span className="text-center">CORE WORKFLOW 03: ADVISORY AI CONTROL CROSSWALKS</span>
               </div>
               {/*  Main Headline  */}
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left w-full">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Map Once, Satisfy Seven Frameworks with <span className="text-primary">Advisory AI</span>
               </h1>
               {/*  Sub-headline  */}
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-center sm:text-left mx-auto sm:mx-0">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left mx-auto sm:mx-0">
                 Eliminate duplicate control testing. OMNiGRC ingests regulatory frameworks (ISO 27001, SOC 2, HIPAA, DPDP Act 2023, GDPR, and ISO 42001) to recommend unified control crosswalks with mandatory human-in-the-loop ratification.
               </p>
               {/*  CTA Button Row  */}
@@ -192,44 +192,44 @@ export default function ControlMappingPage() {
         {/*  SECTION 2: MAP-ONCE CAPABILITY OVERVIEW  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-10">
           <div className="flex flex-col gap-1.5 mb-3 sm:mb-5 text-left">
-            <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center sm:text-left">
+            <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
               Map Once. Satisfy Seven Frameworks with Advisory AI.
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-left mt-0.5">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-justify sm:text-left mt-0.5">
               Traditional GRC forces organizations to test the same security control five separate times for five separate auditors. OMNiGRC unifies framework requirements into a single canonical control hierarchy.
             </p>
           </div>
           {/*  3 Pillar Cards Grid  */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 text-left">
-            <div className="p-3.5 sm:p-5 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between text-left h-full">
               <div>
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <Bot className="h-5 w-5 shrink-0" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white text-left">Semantic Embedding Alignment</h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 sm:mt-1.5 leading-relaxed text-left">Advisory AI parses framework regulatory intent using specialized legal LLM embeddings to propose high-confidence control overlaps.</p>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 sm:mt-1.5 leading-relaxed text-justify sm:text-left">Advisory AI parses framework regulatory intent using specialized legal LLM embeddings to propose high-confidence control overlaps.</p>
               </div>
-              <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-2.5 sm:mt-4 text-left">Advisory Precision Alignment</span>
+              <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-3 sm:mt-4 text-left">Advisory Precision Alignment</span>
             </div>
-            <div className="p-3.5 sm:p-5 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between text-left">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between text-left h-full">
               <div>
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <UserCheck className="h-5 w-5 shrink-0" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white text-left">Mandatory Human Ratification</h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 sm:mt-1.5 leading-relaxed text-left">No autonomous AI decisions. Compliance leads must explicitly ratify every proposed crosswalk before auditor workpapers generate.</p>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 sm:mt-1.5 leading-relaxed text-justify sm:text-left">No autonomous AI decisions. Compliance leads must explicitly ratify every proposed crosswalk before auditor workpapers generate.</p>
               </div>
-              <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-2.5 sm:mt-4 text-left">Auditor-Defensible Record</span>
+              <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-3 sm:mt-4 text-left">Auditor-Defensible Record</span>
             </div>
-            <div className="p-3.5 sm:p-5 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between text-left">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between text-left h-full">
               <div>
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-slate-100 dark:bg-navy-800 flex items-center justify-center text-primary mb-2.5 sm:mb-3">
                   <Scale className="h-5 w-5 shrink-0" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white text-left">Canonical Evidence Propagation</h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 sm:mt-1.5 leading-relaxed text-left">Upload evidence once to CTRL-SEC-04 and automatically satisfy evidence requests across ISO, SOC 2, HIPAA, and DPDP audits.</p>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 sm:mt-1.5 leading-relaxed text-justify sm:text-left">Upload evidence once to CTRL-SEC-04 and automatically satisfy evidence requests across ISO, SOC 2, HIPAA, and DPDP audits.</p>
               </div>
-              <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-2.5 sm:mt-4 text-left">Zero Duplicate Collection</span>
+              <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold mt-3 sm:mt-4 text-left">Zero Duplicate Collection</span>
             </div>
           </div>
         </section>
@@ -500,12 +500,12 @@ export default function ControlMappingPage() {
 
         {/*  SECTION 7: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-4 sm:py-10 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-3 sm:gap-4">
-            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start text-left gap-3 sm:gap-4">
+            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left">
               Ready to eliminate duplicate compliance controls?
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">Upload your current framework policies into OMNiGRC and experience human-governed advisory AI control mapping in real time.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">Upload your current framework policies into OMNiGRC and experience human-governed advisory AI control mapping in real time.</p>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
               <a href="/demo" className="w-full sm:w-auto px-5 py-2.5 sm:py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Advisory AI Crosswalk Demo
               </a>

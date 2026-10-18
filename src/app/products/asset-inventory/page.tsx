@@ -93,11 +93,11 @@ export default function AssetInventoryPage() {
                 <span className="text-center">CORE WORKFLOW 02: CONNECTED ASSET &amp; DATA GOVERNANCE</span>
               </div>
               {/*  Main Headline  */}
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[390px]:text-[24px] sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left w-full">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[390px]:text-[24px] sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Every Asset Mapped to <span className="text-primary">Risks</span>, Controls &amp; Classifications
               </h1>
               {/*  Subtitle  */}
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-center sm:text-left mx-auto sm:mx-0">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left mx-auto sm:mx-0">
                 Eliminate static CMDB blind spots. OMNiGRC links cloud infrastructure, microservices, databases, and third-party vendors directly into active compliance controls and risk quantification.
               </p>
               {/*  CTA Cluster  */}
@@ -197,11 +197,11 @@ export default function AssetInventoryPage() {
 
         {/*  SECTION 2: INTERACTIVE TOPOLOGY DIAGRAM & INSPECTION DRAWER  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10" id="topology-diagram">
-          <div className="flex flex-col gap-1.5 mb-4 sm:mb-6">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-center sm:text-left">
+          <div className="flex flex-col gap-1.5 mb-4 sm:mb-6 text-left">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
               Asset-to-Risk Lineage &amp; Inventory Mappings
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">Explore sample asset inventory mappings, risk scoring contexts, and associated mitigating control linkages across infrastructure. Click nodes below to inspect sample profiles.</p>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-justify sm:text-left">Explore sample asset inventory mappings, risk scoring contexts, and associated mitigating control linkages across infrastructure. Click nodes below to inspect sample profiles.</p>
           </div>
           {/*  Main Topology Interactive Canvas  */}
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 items-start">
@@ -548,12 +548,12 @@ export default function AssetInventoryPage() {
 
         {/*  SECTION 6: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-6 sm:py-10 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-3 sm:gap-4">
-            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start text-left gap-3 sm:gap-4">
+            <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left">
               Tired of stale CMDB spreadsheets and audit scrambles?
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">Connect your AWS, Azure, GCP, and Kubernetes clusters in minutes. Experience automated cloud asset discovery mapped straight to active controls.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">Connect your AWS, Azure, GCP, and Kubernetes clusters in minutes. Experience automated cloud asset discovery mapped straight to active controls.</p>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
               <a href="/demo" className="w-full sm:w-auto px-5 py-2.5 sm:py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Asset Mapping Demo
               </a>

@@ -437,30 +437,36 @@ export default function RemediationPage() {
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Connect corrective action plans directly to regulatory framework obligations and evidence artifacts.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1 text-left">Unified Action Centralization</h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Eliminate fragmented remediation tracking across Jira, spreadsheets, and Slack. Consolidate all CAPA tasks into one workspace.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Unified Action Centralization</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify sm:text-left leading-relaxed">Eliminate fragmented remediation tracking across Jira, spreadsheets, and Slack. Consolidate all CAPA tasks into one workspace.</p>
+              </div>
             </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1 text-left">Policy SLA Enforcement</h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Set remediation countdown clocks tied directly to corporate governance policies and regulatory severity thresholds.</p>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Policy SLA Enforcement</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify sm:text-left leading-relaxed">Set remediation countdown clocks tied directly to corporate governance policies and regulatory severity thresholds.</p>
+              </div>
             </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1 text-left">Auditor-Verifiable Closure</h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Require mandatory evidence attachments and human sign-offs before closing audit exception items.</p>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Auditor-Verifiable Closure</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-justify sm:text-left leading-relaxed">Require mandatory evidence attachments and human sign-offs before closing audit exception items.</p>
+              </div>
             </div>
           </div>
         </section>
 
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-center">
+          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-start text-left gap-space-md">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-left">
               Close the Loop on Compliance Findings
             </h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Transform audit findings, risk treatments, and vulnerability items into verified corrective action records in OMNiGRC.</p>
-            <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
+            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-justify sm:text-left leading-relaxed">Transform audit findings, risk treatments, and vulnerability items into verified corrective action records in OMNiGRC.</p>
+            <div className="flex flex-wrap items-center justify-start gap-space-sm pt-space-xs">
               <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
                 Schedule Remediation Register Demo
               </a>

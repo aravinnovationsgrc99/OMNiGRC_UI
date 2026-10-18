@@ -337,30 +337,36 @@ export default function PoliciesPage() {
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Ensure policy compliance is auditable, actionable, and aligned across all organizational departments.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Framework Clause Binding</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Map specific policy clauses directly to ISO 27001, SOC 2, and DPDP Act requirements to demonstrate complete coverage to auditors.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-2 text-left">Framework Clause Binding</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-justify sm:text-left leading-relaxed">Map specific policy clauses directly to ISO 27001, SOC 2, and DPDP Act requirements to demonstrate complete coverage to auditors.</p>
+              </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Automated Attestation Workflows</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Track staff policy sign-offs and send automated reminders to ensure high employee attestation rates across departments.</p>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-2 text-left">Automated Attestation Workflows</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-justify sm:text-left leading-relaxed">Track staff policy sign-offs and send automated reminders to ensure high employee attestation rates across departments.</p>
+              </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Revision Audit History</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Maintain an unbroken history of policy edits, owner reviews, and executive approvals for external audit inspection.</p>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-2 text-left">Revision Audit History</h3>
+                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-justify sm:text-left leading-relaxed">Maintain an unbroken history of policy edits, owner reviews, and executive approvals for external audit inspection.</p>
+              </div>
             </div>
           </div>
         </section>
 
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-space-section">
-          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-center text-center gap-space-md">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+          <div className="max-w-7xl mx-auto px-gutter flex flex-col items-start text-left gap-space-md">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
               Bring Structure to Organizational Policies
             </h2>
-            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-center">Connect policies directly to your active controls and framework requirements in OMNiGRC.</p>
-            <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
+            <p className="font-body-lg text-body-lg text-slate-300 max-w-2xl text-justify sm:text-left leading-relaxed">Connect policies directly to your active controls and framework requirements in OMNiGRC.</p>
+            <div className="flex flex-wrap items-center justify-start gap-space-sm pt-space-xs">
               <a href="/demo" className="px-space-md py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-md transition-all">
                 Schedule Policy Governance Demo
               </a>

@@ -69,10 +69,10 @@ export default function VendorsPage() {
                 <Building2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 06: THIRD-PARTY RISK &amp; VENDOR GOVERNANCE</span>
               </div>
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Control Third-Party Exposure <span className="text-primary">Across Your Entire Supply Chain</span>
               </h1>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">
                 Automate vendor onboarding, security questionnaire evaluations, SOC 2 report parsing, and continuous subprocessor DPA tracking. Mapped directly to ISO 27001 A.15, SOC 2 CC9, and DPDP Act 2023 Section 8.
               </p>
               <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
@@ -383,18 +383,24 @@ export default function VendorsPage() {
                 Satisfy third-party risk management requirements across major global standards without duplicate efforts.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6">
-              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 text-center sm:text-left">ISO 27001:2022 A.15</h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">Supplier Relationships: Enforce security requirements in supplier agreements and regularly monitor service delivery.</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">ISO 27001:2022 A.15</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify sm:text-left">Supplier Relationships: Enforce security requirements in supplier agreements and regularly monitor service delivery.</p>
+                </div>
               </div>
-              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 text-center sm:text-left">SOC 2 Type II CC9.2</h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">Vendor Risk Management: Assess and manage risks associated with vendors and subprocessors that hold customer data.</p>
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">SOC 2 Type II CC9.2</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify sm:text-left">Vendor Risk Management: Assess and manage risks associated with vendors and subprocessors that hold customer data.</p>
+                </div>
               </div>
-              <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 text-center sm:text-left">DPDP Act 2023 §8</h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">Data Fiduciary Obligations: Ensure technical processors maintain reasonable security safeguards and report data breaches.</p>
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">DPDP Act 2023 §8</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify sm:text-left">Data Fiduciary Obligations: Ensure technical processors maintain reasonable security safeguards and report data breaches.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -402,12 +408,12 @@ export default function VendorsPage() {
 
         {/*  SECTION 5: DETERMINISTIC VENDOR EVIDENCE  */}
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16">
-          <div className="p-5 sm:p-8 lg:p-10 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-            <div className="space-y-2 max-w-2xl text-center md:text-left">
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center md:text-left">
+          <div className="p-5 sm:p-8 lg:p-10 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-start justify-between gap-6 shadow-xl text-left">
+            <div className="space-y-2 max-w-2xl text-left">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Structured Vendor Evidence, Without Spreadsheet Fatigue
               </h2>
-              <p className="text-xs sm:text-base text-slate-300 leading-relaxed text-center md:text-left">Maintain an active subprocessor register, track SOC 2 expiration dates, and satisfy external auditors without manual overhead.</p>
+              <p className="text-xs sm:text-base text-slate-300 leading-relaxed text-justify sm:text-left">Maintain an active subprocessor register, track SOC 2 expiration dates, and satisfy external auditors without manual overhead.</p>
             </div>
             <a href="/demo" className="w-full sm:w-auto text-center px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all shrink-0">
               Request Vendor Governance Walkthrough
@@ -417,12 +423,12 @@ export default function VendorsPage() {
 
         {/*  SECTION 6: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-8 sm:py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-4 sm:gap-6">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start text-left gap-4 sm:gap-6">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
               Streamline Third-Party Compliance Without Spreadsheet Chaos
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-2xl text-center leading-relaxed">Centralize your vendor security reviews, DPAs, and SOC 2 reports into OMNiGRC's connected GRC workspace.</p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl text-justify sm:text-left leading-relaxed">Centralize your vendor security reviews, DPAs, and SOC 2 reports into OMNiGRC's connected GRC workspace.</p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
               <a href="/demo" className="px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Vendor Risk Demo
               </a>

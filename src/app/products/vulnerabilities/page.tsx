@@ -87,10 +87,10 @@ export default function VulnerabilitiesPage() {
                 <Bug className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
                 <span>CORE WORKFLOW 05: VULNERABILITY INGESTION &amp; SLA GOVERNANCE</span>
               </div>
-              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+              <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center w-full">
                 Connect External Scanner Findings to <span className="text-primary">Quantified Risk Registers</span>
               </h1>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">
                 OMNiGRC ingests findings from external security scanners (Qualys, Snyk, AWS GuardDuty, CrowdStrike, and Datadog) to automatically prioritize CVEs against business asset criticalities and enforce policy SLA clocks.
               </p>
               <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
@@ -473,47 +473,47 @@ export default function VulnerabilitiesPage() {
         {/*  SECTION 4: COMPARISON SECTION  */}
         <section className="w-full bg-slate-50 dark:bg-[#16233F] py-6 sm:py-10 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-center">
+            <div className="text-left max-w-3xl mb-6 sm:mb-8">
+              <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight sm:leading-snug text-left">
                 Raw Scanner Noise vs. Connected GRC Prioritization
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-slate-300 dark:border-navy-700 shadow-sm">
-                <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-center sm:justify-start gap-2">
+                <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-start gap-2 text-left">
                   <XCircle className="h-5 w-5 text-error shrink-0" /> Uncontextualized Scanner Approach
                 </div>
                 <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-start gap-2">
                     <X className="h-4 w-4 text-error shrink-0 mt-0.5" />
-                    <span>Flood engineering teams with raw uncontextualized scanner logs.</span>
+                    <span className="text-justify sm:text-left">Flood engineering teams with raw uncontextualized scanner logs.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <X className="h-4 w-4 text-error shrink-0 mt-0.5" />
-                    <span>No visibility into whether affected host carries sensitive data scope.</span>
+                    <span className="text-justify sm:text-left">No visibility into whether affected host carries sensitive data scope.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <X className="h-4 w-4 text-error shrink-0 mt-0.5" />
-                    <span>Manual spreadsheet tracking for audit evidence during SOC 2 reviews.</span>
+                    <span className="text-justify sm:text-left">Manual spreadsheet tracking for audit evidence during SOC 2 reviews.</span>
                   </li>
                 </ul>
               </div>
               <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-[#0A111F] border border-secondary/40 shadow-md">
-                <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-center sm:justify-start gap-2">
+                <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-start gap-2 text-left">
                   <CheckCircle className="h-5 w-5 text-secondary shrink-0" /> Connected OMNiGRC Workflow
                 </div>
                 <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
-                    <span>Ingest scanner data and automatically elevate findings affecting critical assets.</span>
+                    <span className="text-justify sm:text-left">Ingest scanner data and automatically elevate findings affecting critical assets.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
-                    <span>Enforce automated SLA countdown clocks tied directly to corporate governance policy.</span>
+                    <span className="text-justify sm:text-left">Enforce automated SLA countdown clocks tied directly to corporate governance policy.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
-                    <span>Store verified patch evidence and audit logs directly in the GRC workpaper vault.</span>
+                    <span className="text-justify sm:text-left">Store verified patch evidence and audit logs directly in the GRC workpaper vault.</span>
                   </li>
                 </ul>
               </div>
@@ -523,12 +523,12 @@ export default function VulnerabilitiesPage() {
 
         {/*  SECTION 5: BOTTOM CTA  */}
         <section className="w-full bg-slate-900 dark:bg-[#070D19] text-white py-8 sm:py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-4 sm:gap-6">
-            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start text-left gap-4 sm:gap-6">
+            <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight sm:leading-snug text-left">
               Connect technical findings to compliance truth.
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
               <a href="/demo" className="px-5 py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Vulnerability Governance Demo
               </a>
