@@ -372,8 +372,9 @@ export default function TrustPage() {
         {/* SECTION 4: CTA BANNER */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8 sm:py-10 md:py-12">
           <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-center">
-              Discuss your security & architecture requirements.
+            <h2 className="text-[21px] min-[360px]:text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-center leading-tight">
+              <span className="block sm:inline">Discuss your Security &amp; </span>
+              <span className="block sm:inline whitespace-nowrap">Architecture Requirements.</span>
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto text-center">
               Schedule a technical walkthrough to review tenant boundaries, advisory AI data minimization, and deployment options.
