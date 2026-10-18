@@ -44,7 +44,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
               </h1>
 
               {subtitle && (
-                <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl text-left w-full">
+                <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl text-justify w-full">
                   {subtitle}
                 </p>
               )}
@@ -66,7 +66,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
             </h1>
 
             {subtitle && (
-              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-base md:text-lg leading-relaxed font-normal max-w-3xl text-left sm:text-center w-full">
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-base md:text-lg leading-relaxed font-normal max-w-3xl text-justify w-full">
                 {subtitle}
               </p>
             )}
