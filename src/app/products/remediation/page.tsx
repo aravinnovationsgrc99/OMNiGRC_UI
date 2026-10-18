@@ -95,26 +95,26 @@ export default function RemediationPage() {
                 </a>
               </div>
               <div className="grid grid-cols-3 gap-2 sm:gap-space-sm pt-space-md w-full max-w-xl">
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 overflow-hidden shadow-sm">
-                  <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm justify-between min-w-0">
+                  <div className="flex flex-col min-[380px]:flex-row items-center sm:items-center justify-center sm:justify-start gap-0.5 min-[380px]:gap-1 text-secondary min-w-0">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Unified</span>
+                    <span className="text-[11px] sm:text-code-md font-bold tracking-tight">Unified</span>
                   </div>
-                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">CAPA Action Register</span>
+                  <span className="text-[9.5px] min-[360px]:text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">CAPA Action Register</span>
                 </div>
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 overflow-hidden shadow-sm">
-                  <div className="flex items-center justify-center sm:justify-start gap-1 text-primary">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm justify-between min-w-0">
+                  <div className="flex flex-col min-[380px]:flex-row items-center sm:items-center justify-center sm:justify-start gap-0.5 min-[380px]:gap-1 text-primary min-w-0">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Human-Governed</span>
+                    <span className="text-[10px] min-[350px]:text-[10.5px] min-[400px]:text-xs sm:text-code-md font-bold tracking-tight whitespace-normal text-center sm:text-left">Human-Governed</span>
                   </div>
-                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Verification Sign-off</span>
+                  <span className="text-[9.5px] min-[360px]:text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Verification Sign-off</span>
                 </div>
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 overflow-hidden shadow-sm">
-                  <div className="flex items-center justify-center sm:justify-start gap-1 text-secondary">
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-space-sm rounded-lg bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm justify-between min-w-0">
+                  <div className="flex flex-col min-[380px]:flex-row items-center sm:items-center justify-center sm:justify-start gap-0.5 min-[380px]:gap-1 text-secondary min-w-0">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-                    <span className="font-code-md text-xs sm:text-code-md font-bold truncate">Evidence</span>
+                    <span className="text-[11px] sm:text-code-md font-bold tracking-tight">Evidence</span>
                   </div>
-                  <span className="text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Bound Patch Verification</span>
+                  <span className="text-[9.5px] min-[360px]:text-[10px] sm:text-label-sm text-slate-900 dark:text-white font-medium mt-1 leading-tight text-center sm:text-left">Bound Patch Verification</span>
                 </div>
               </div>
             </div>
@@ -171,39 +171,39 @@ export default function RemediationPage() {
             <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-left">From problem identification (risk, vulnerability, audit finding) to human sign-off and closed-loop verification.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 01</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Finding Origin</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Ingest exception items from audit workpapers, risk registers, or external scanners.</p>
+                <span className="font-mono text-xs text-primary font-bold text-left block">STAGE 01</span>
+                <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1 text-left">Finding Origin</h4>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed text-left">Ingest exception items from audit workpapers, risk registers, or external scanners.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 02</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Action &amp; SLA Assignment</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Assign corrective action to designated engineer with policy due date clock.</p>
+                <span className="font-mono text-xs text-primary font-bold text-left block">STAGE 02</span>
+                <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1 text-left">Action &amp; SLA Assignment</h4>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed text-left">Assign corrective action to designated engineer with policy due date clock.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 03</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Patch / Fix Execution</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Engineer applies code fix, configuration update, or security policy modification.</p>
+                <span className="font-mono text-xs text-primary font-bold text-left block">STAGE 03</span>
+                <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1 text-left">Patch / Fix Execution</h4>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed text-left">Engineer applies code fix, configuration update, or security policy modification.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 04</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Evidence Attachment</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Attach pull request diff, commit hash, or configuration output to evidence vault.</p>
+                <span className="font-mono text-xs text-primary font-bold text-left block">STAGE 04</span>
+                <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1 text-left">Evidence Attachment</h4>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed text-left">Attach pull request diff, commit hash, or configuration output to evidence vault.</p>
               </div>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-code-sm text-code-sm text-primary font-bold text-left block">STAGE 05</span>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-left">Human Verification Lock</h4>
-                <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">CISO or Lead Auditor verifies evidence and signs off on closure record.</p>
+                <span className="font-mono text-xs text-primary font-bold text-left block">STAGE 05</span>
+                <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1 text-left">Human Verification Lock</h4>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed text-left">CISO or Lead Auditor verifies evidence and signs off on closure record.</p>
               </div>
             </div>
           </div>
@@ -254,27 +254,44 @@ export default function RemediationPage() {
 
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
             {/*  Left Column: Action Item Cards (7 cols)  */}
-            <div className="xl:col-span-7 space-y-space-md">
+            <div className="xl:col-span-7 space-y-3.5 sm:space-y-4">
               {/*  Card 1: ACT-104 (Audit)  */}
               {(selectedCategory === 'all' || selectedCategory === 'audit') && (
                 <div 
                   onClick={() => setSelectedActionKey('act-104')}
-                  className={`action-item-card cursor-pointer p-space-md rounded-xl bg-white dark:bg-[#0A111F] border transition-all ${selectedActionKey === 'act-104' ? 'border-primary ring-2 ring-primary/20 shadow-md border-l-4' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md'}`}
+                  className={`action-item-card cursor-pointer p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border transition-all text-left shadow-sm hover:shadow-md ${selectedActionKey === 'act-104' ? 'border-primary ring-2 ring-primary/20 shadow-md' : 'border-slate-200 dark:border-navy-700'}`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-code-sm text-code-sm text-primary font-bold">ACT-104</span>
-                        <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm uppercase">Audit Exception</span>
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Rotate Staging VPC Root Bastion Credentials</h3>
-                      <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Origin: Q2 SOC 2 Internal Audit finding FND-2026-03</p>
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-2.5">
+                      <span className="font-mono text-sm sm:text-base font-bold text-amber-600 dark:text-amber-500">
+                        ACT-104
+                      </span>
+                      <span className="px-3 py-1 rounded-md bg-[#eef2f6] dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-bold uppercase text-[10px] sm:text-xs tracking-wider">
+                        AUDIT EXCEPTION
+                      </span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-sm text-code-sm font-semibold shrink-0 ml-2">VERIFIED</span>
+                    <span className="px-3 py-1 rounded-md bg-[#d1fae5] dark:bg-emerald-950/60 text-[#047857] dark:text-emerald-400 font-bold uppercase text-[10px] sm:text-xs tracking-wider">
+                      VERIFIED
+                    </span>
                   </div>
-                  <div className="mt-space-sm pt-space-xs border-t border-slate-100 dark:border-navy-800 flex items-center justify-between font-code-sm text-code-sm text-slate-600 dark:text-slate-300">
-                    <span>Owner: Alex C. (DevOps Lead)</span>
-                    <span className="text-secondary font-semibold">Sign-off: Lead Auditor</span>
+
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug mt-3 sm:mt-4 text-left">
+                    Rotate Staging VPC Root Bastion Credentials
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
+                    Origin: Q2 SOC 2 Internal Audit finding FND-2026-03
+                  </p>
+
+                  <div className="border-t border-slate-100 dark:border-navy-800/80 my-3.5 sm:my-4"></div>
+
+                  <div className="flex items-center justify-between gap-3 text-xs sm:text-sm">
+                    <span className="text-slate-600 dark:text-slate-300 font-medium leading-snug">
+                      Owner: Alex C. (DevOps Lead)
+                    </span>
+                    <div className="text-right shrink-0">
+                      <span className="block text-[#047857] dark:text-emerald-400 font-bold leading-tight">Sign-off:</span>
+                      <span className="block text-[#047857] dark:text-emerald-400 font-bold leading-tight">Lead Auditor</span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -283,22 +300,39 @@ export default function RemediationPage() {
               {(selectedCategory === 'all' || selectedCategory === 'risk') && (
                 <div 
                   onClick={() => setSelectedActionKey('act-098')}
-                  className={`action-item-card cursor-pointer p-space-md rounded-xl bg-white dark:bg-[#0A111F] border transition-all ${selectedActionKey === 'act-098' ? 'border-primary ring-2 ring-primary/20 shadow-md border-l-4' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md'}`}
+                  className={`action-item-card cursor-pointer p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border transition-all text-left shadow-sm hover:shadow-md ${selectedActionKey === 'act-098' ? 'border-primary ring-2 ring-primary/20 shadow-md' : 'border-slate-200 dark:border-navy-700'}`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-code-sm text-code-sm text-primary font-bold">ACT-098</span>
-                        <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm uppercase">Risk Treatment</span>
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Deploy MFA Enforcement on Legacy Internal Wiki</h3>
-                      <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Origin: Risk Register (RSK-042: Legacy Unauthenticated Portal)</p>
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-2.5">
+                      <span className="font-mono text-sm sm:text-base font-bold text-amber-600 dark:text-amber-500">
+                        ACT-098
+                      </span>
+                      <span className="px-3 py-1 rounded-md bg-[#eef2f6] dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-bold uppercase text-[10px] sm:text-xs tracking-wider">
+                        RISK TREATMENT
+                      </span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-error-container text-on-error-container font-code-sm text-code-sm font-semibold shrink-0 ml-2">TRIAGE PENDING</span>
+                    <span className="px-3 py-1 rounded-md bg-[#ffe4e6] dark:bg-rose-950/60 text-[#be123c] dark:text-rose-400 font-bold uppercase text-[10px] sm:text-xs tracking-wider">
+                      TRIAGE PENDING
+                    </span>
                   </div>
-                  <div className="mt-space-sm pt-space-xs border-t border-slate-100 dark:border-navy-800 flex items-center justify-between font-code-sm text-code-sm text-slate-600 dark:text-slate-300">
-                    <span>Owner: Marcus K. (Infrastructure Admin)</span>
-                    <span className="text-primary font-semibold">Sign-off: IT Security Director</span>
+
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug mt-3 sm:mt-4 text-left">
+                    Deploy MFA Enforcement on Legacy Internal Wiki
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
+                    Origin: Risk Register (RSK-042: Legacy Unauthenticated Portal)
+                  </p>
+
+                  <div className="border-t border-slate-100 dark:border-navy-800/80 my-3.5 sm:my-4"></div>
+
+                  <div className="flex items-center justify-between gap-3 text-xs sm:text-sm">
+                    <span className="text-slate-600 dark:text-slate-300 font-medium leading-snug">
+                      Owner: Marcus K. (Infrastructure Admin)
+                    </span>
+                    <div className="text-right shrink-0">
+                      <span className="block text-amber-600 dark:text-amber-500 font-bold leading-tight">Sign-off:</span>
+                      <span className="block text-amber-600 dark:text-amber-500 font-bold leading-tight">IT Security Director</span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -307,66 +341,82 @@ export default function RemediationPage() {
               {(selectedCategory === 'all' || selectedCategory === 'vulnerability') && (
                 <div 
                   onClick={() => setSelectedActionKey('act-112')}
-                  className={`action-item-card cursor-pointer p-space-md rounded-xl bg-white dark:bg-[#0A111F] border transition-all ${selectedActionKey === 'act-112' ? 'border-primary ring-2 ring-primary/20 shadow-md border-l-4' : 'border-slate-200 dark:border-navy-700 shadow-sm hover:shadow-md'}`}
+                  className={`action-item-card cursor-pointer p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border transition-all text-left shadow-sm hover:shadow-md ${selectedActionKey === 'act-112' ? 'border-primary ring-2 ring-primary/20 shadow-md' : 'border-slate-200 dark:border-navy-700'}`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-code-sm text-code-sm text-primary font-bold">ACT-112</span>
-                        <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm uppercase">Scanner CVE</span>
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mt-1 text-center sm:text-left">Patch Node.js Dependency in Auth Microservice</h3>
-                      <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 mt-1 text-left">Origin: Ingested Scanner Finding (CVE-2025-XXXX prototype pollution)</p>
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-2.5">
+                      <span className="font-mono text-sm sm:text-base font-bold text-amber-600 dark:text-amber-500">
+                        ACT-112
+                      </span>
+                      <span className="px-3 py-1 rounded-md bg-[#eef2f6] dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-bold uppercase text-[10px] sm:text-xs tracking-wider">
+                        SCANNER CVE
+                      </span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-sm text-code-sm font-semibold shrink-0 ml-2">OPEN REMEDIATION</span>
+                    <span className="px-3 py-1 rounded-md bg-[#fef3c7] dark:bg-amber-950/60 text-[#b45309] dark:text-amber-400 font-bold uppercase text-[10px] sm:text-xs tracking-wider">
+                      OPEN REMEDIATION
+                    </span>
                   </div>
-                  <div className="mt-space-sm pt-space-xs border-t border-slate-100 dark:border-navy-800 flex items-center justify-between font-code-sm text-code-sm text-slate-600 dark:text-slate-300">
-                    <span>Owner: Elena R. (AppSec Engineer)</span>
-                    <span className="text-slate-900 dark:text-white font-semibold">PR Open</span>
+
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug mt-3 sm:mt-4 text-left">
+                    Patch Node.js Dependency in Auth Microservice
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
+                    Origin: Ingested Scanner Finding (CVE-2025-XXXX prototype pollution)
+                  </p>
+
+                  <div className="border-t border-slate-100 dark:border-navy-800/80 my-3.5 sm:my-4"></div>
+
+                  <div className="flex items-center justify-between gap-3 text-xs sm:text-sm">
+                    <span className="text-slate-600 dark:text-slate-300 font-medium leading-snug">
+                      Owner: Elena R. (AppSec Engineer)
+                    </span>
+                    <div className="text-right shrink-0">
+                      <span className="block text-slate-900 dark:text-white font-bold leading-tight">PR Open</span>
+                    </div>
                   </div>
                 </div>
               )}
             </div>
 
             {/*  Right Column: Action Detail Drawer (5 cols)  */}
-            <div className="xl:col-span-5 bg-white dark:bg-[#0A111F] rounded-xl border border-slate-200 dark:border-navy-700 shadow-xl p-space-md flex flex-col gap-space-md">
-              <div className="flex items-center justify-between pb-space-xs border-b border-slate-100 dark:border-navy-800">
-                <span className="font-code-sm text-code-sm text-slate-600 dark:text-slate-300 font-bold" id="drawer-action-code">{currentAction.code}</span>
-                <span className={`px-2 py-0.5 rounded font-code-sm text-code-sm font-semibold ${currentAction.badgeColor}`} id="drawer-verify-badge">
+            <div className="xl:col-span-5 bg-white dark:bg-[#0A111F] rounded-2xl border border-slate-200 dark:border-navy-700 shadow-xl p-5 sm:p-6 flex flex-col gap-4">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800">
+                <span className="font-mono text-xs sm:text-sm font-bold text-amber-600 dark:text-amber-500" id="drawer-action-code">{currentAction.code}</span>
+                <span className={`px-2.5 py-1 rounded-md font-bold uppercase text-[10px] sm:text-xs tracking-wider ${currentAction.badgeColor}`} id="drawer-verify-badge">
                   {currentAction.verifyBadge}
                 </span>
               </div>
 
               <div>
-                <h4 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold text-center sm:text-left" id="drawer-title">{currentAction.title}</h4>
-                <div className="mt-1 font-body-sm text-body-sm text-slate-600 dark:text-slate-300 flex items-center gap-1" id="drawer-origin">
+                <h4 className="text-base sm:text-lg lg:text-xl font-bold text-slate-900 dark:text-white tracking-tight text-left" id="drawer-title">{currentAction.title}</h4>
+                <div className="mt-1.5 text-xs sm:text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1.5" id="drawer-origin">
                   <FileText className="h-4 w-4 text-primary shrink-0" />
                   <span>{currentAction.origin}</span>
                 </div>
               </div>
 
-              <div className="space-y-space-sm">
+              <div className="space-y-3">
                 <div>
-                  <span className="font-label-sm text-label-sm text-slate-600 dark:text-slate-300">Associated Safeguard Control</span>
-                  <p className="font-code-sm text-code-sm text-secondary font-bold mt-0.5" id="drawer-safeguard">{currentAction.safeguard}</p>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Associated Safeguard Control</span>
+                  <p className="font-mono text-xs sm:text-sm text-secondary font-bold mt-0.5" id="drawer-safeguard">{currentAction.safeguard}</p>
                 </div>
 
                 <div>
-                  <span className="font-label-sm text-label-sm text-slate-600 dark:text-slate-300">Action Lead &amp; Approval Requirement</span>
-                  <p className="font-body-sm text-body-sm text-slate-900 dark:text-white font-semibold mt-0.5" id="drawer-owner">{currentAction.owner}</p>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Action Lead &amp; Approval Requirement</span>
+                  <p className="text-xs sm:text-sm text-slate-900 dark:text-white font-semibold mt-0.5" id="drawer-owner">{currentAction.owner}</p>
                 </div>
 
                 <div>
-                  <span className="font-label-sm text-label-sm text-slate-600 dark:text-slate-300">Evidence Record &amp; Commit Diff</span>
-                  <p className="font-body-sm text-body-sm text-slate-900 dark:text-white mt-0.5" id="drawer-evidence-desc">{currentAction.evidenceDesc}</p>
-                  <div className="p-space-xs rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white font-code-sm text-code-sm font-mono mt-1" id="drawer-evidence-code">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Evidence Record &amp; Commit Diff</span>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-0.5" id="drawer-evidence-desc">{currentAction.evidenceDesc}</p>
+                  <div className="p-2.5 rounded-lg bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white text-xs font-mono mt-1 overflow-x-auto" id="drawer-evidence-code">
                     {currentAction.evidenceCode}
                   </div>
                 </div>
 
                 <div>
-                  <span className="font-label-sm text-label-sm text-slate-600 dark:text-slate-300">Closure Verification Status</span>
-                  <div className="p-space-xs rounded bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-white font-body-sm text-body-sm font-medium mt-1" id="drawer-verification-text">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Closure Verification Status</span>
+                  <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700 text-slate-900 dark:text-white text-xs sm:text-sm font-medium mt-1" id="drawer-verification-text">
                     {currentAction.verifyStatus}
                   </div>
                 </div>
@@ -382,23 +432,23 @@ export default function RemediationPage() {
               <CheckCircle className="h-5 w-5 shrink-0" />
               <span>Closed-Loop Traceability</span>
             </div>
-            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-center sm:text-left">
+            <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left">
               Structured Governance, Not Spreadsheet Chaos
             </h2>
             <p className="font-body-md text-body-md text-slate-600 dark:text-slate-300 max-w-2xl text-left">Connect corrective action plans directly to regulatory framework obligations and evidence artifacts.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Unified Action Centralization</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Eliminate fragmented remediation tracking across Jira, spreadsheets, and Slack. Consolidate all CAPA tasks into one workspace.</p>
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1 text-left">Unified Action Centralization</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Eliminate fragmented remediation tracking across Jira, spreadsheets, and Slack. Consolidate all CAPA tasks into one workspace.</p>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Policy SLA Enforcement</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Set remediation countdown clocks tied directly to corporate governance policies and regulatory severity thresholds.</p>
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1 text-left">Policy SLA Enforcement</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Set remediation countdown clocks tied directly to corporate governance policies and regulatory severity thresholds.</p>
             </div>
-            <div className="p-space-md rounded-xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
-              <h3 className="font-headline-sm text-headline-sm text-slate-900 dark:text-white font-bold mb-1 text-center sm:text-left">Auditor-Verifiable Closure</h3>
-              <p className="font-body-sm text-body-sm text-slate-600 dark:text-slate-300 text-left">Require mandatory evidence attachments and human sign-offs before closing audit exception items.</p>
+            <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700 shadow-sm">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1 text-left">Auditor-Verifiable Closure</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-left">Require mandatory evidence attachments and human sign-offs before closing audit exception items.</p>
             </div>
           </div>
         </section>
