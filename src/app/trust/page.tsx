@@ -81,26 +81,26 @@ export default function TrustPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {/* Pillar 1 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/60 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 shrink-0 group-hover:scale-105 transition-transform duration-200">
-                    <Lock className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.2]" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/80 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <Lock className="h-7 w-7 stroke-[2.2]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
                       Application-Level Tenant Isolation
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 sm:mt-2 leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
                       Logical data boundaries enforced at the application tier ensure strict authorization controls and data segregation between organization workspaces.
                     </p>
                   </div>
                 </div>
-                <div className="mt-3.5 sm:mt-4 pt-3 sm:pt-3.5 border-t border-slate-100 dark:border-navy-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
+                <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-6 h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-teal-400 font-bold tracking-tight">
+                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-emerald-400 font-bold tracking-tight">
                       Workspace Scoped Boundaries
                     </span>
                   </div>
@@ -108,26 +108,26 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 2 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/60 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 shrink-0 group-hover:scale-105 transition-transform duration-200">
-                    <Cpu className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.2]" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/80 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <Cpu className="h-7 w-7 stroke-[2.2]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
                       Advisory AI Data Minimization
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 sm:mt-2 leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
                       Tenant-sensitive payloads and PII are stripped prior to AI clause correlation requests. AI outputs remain strictly advisory until explicitly approved by human analysts.
                     </p>
                   </div>
                 </div>
-                <div className="mt-3.5 sm:mt-4 pt-3 sm:pt-3.5 border-t border-slate-100 dark:border-navy-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
+                <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-6 h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-teal-400 font-bold tracking-tight">
+                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-emerald-400 font-bold tracking-tight">
                       AI Assists, Humans Decide
                     </span>
                   </div>
@@ -135,26 +135,26 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 3 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/60 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 shrink-0 group-hover:scale-105 transition-transform duration-200">
-                    <UserCheck className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.2]" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/80 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <UserCheck className="h-7 w-7 stroke-[2.2]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
                       Human-in-the-Loop Governance
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 sm:mt-2 leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
                       Automated workflows generate recommendations, but all risk acceptances, control mappings, policy sign-offs, and evidence reviews require human confirmation.
                     </p>
                   </div>
                 </div>
-                <div className="mt-3.5 sm:mt-4 pt-3 sm:pt-3.5 border-t border-slate-100 dark:border-navy-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
+                <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-6 h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-teal-400 font-bold tracking-tight">
+                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-emerald-400 font-bold tracking-tight">
                       Mandatory Human Sign-Off
                     </span>
                   </div>
@@ -162,26 +162,26 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 4 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/60 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 shrink-0 group-hover:scale-105 transition-transform duration-200">
-                    <FileCheck2 className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.2]" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/80 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <FileCheck2 className="h-7 w-7 stroke-[2.2]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
                       External Evidence Index Model
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 sm:mt-2 leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
                       Instead of copying sensitive customer files into platform storage, OMNiGRC indexes external reference links and metadata for auditor verification.
                     </p>
                   </div>
                 </div>
-                <div className="mt-3.5 sm:mt-4 pt-3 sm:pt-3.5 border-t border-slate-100 dark:border-navy-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
+                <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-6 h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-teal-400 font-bold tracking-tight">
+                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-emerald-400 font-bold tracking-tight">
                       Reference Pointer Indexing
                     </span>
                   </div>
@@ -189,26 +189,26 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 5 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/60 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 shrink-0 group-hover:scale-105 transition-transform duration-200">
-                    <Eye className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.2]" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/80 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <Eye className="h-7 w-7 stroke-[2.2]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
                       Event & Audit Traceability
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 sm:mt-2 leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
                       Structured operational event logs record control changes, risk evaluation updates, and user actions for audit workpaper generation.
                     </p>
                   </div>
                 </div>
-                <div className="mt-3.5 sm:mt-4 pt-3 sm:pt-3.5 border-t border-slate-100 dark:border-navy-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
+                <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-6 h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-teal-400 font-bold tracking-tight">
+                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-emerald-400 font-bold tracking-tight">
                       Auditing Workpaper Ready
                     </span>
                   </div>
@@ -216,26 +216,26 @@ export default function TrustPage() {
               </div>
 
               {/* Pillar 6 */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/60 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 shrink-0 group-hover:scale-105 transition-transform duration-200">
-                    <Server className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.2]" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#ffede3] dark:bg-navy-950 border border-[#ffdbcf]/80 dark:border-navy-800 text-[#F15E1C] dark:text-orange-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                    <Server className="h-7 w-7 stroke-[2.2]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white tracking-tight leading-snug text-left">
                       Containerized Deployment Options
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 sm:mt-2 leading-relaxed text-left">
+                    <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed text-left">
                       Flexible options for shared SaaS, private single-tenant MSSP instances, or customer-controlled container runtime environments.
                     </p>
                   </div>
                 </div>
-                <div className="mt-3.5 sm:mt-4 pt-3 sm:pt-3.5 border-t border-slate-100 dark:border-navy-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
+                <div className="mt-4 pt-3.5 border-t border-slate-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-6 h-6 rounded-full bg-[#d1fae5] dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/40 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-emerald-400 stroke-[2.5]" />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-teal-400 font-bold tracking-tight">
+                    <span className="text-xs sm:text-sm text-[#006c4d] dark:text-emerald-400 font-bold tracking-tight">
                       Docker Container Support
                     </span>
                   </div>
