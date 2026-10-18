@@ -157,17 +157,28 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         {/* WORKFLOW CAPABILITIES & FEATURES */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60" id="workflow-capabilities">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
-                OPERATIONAL CAPABILITIES
-              </span>
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
-                {pillar.name} Core Features
-              </h2>
-              <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
-                Designed to operate cleanly within the broader OMNiGRC lifecycle.
-              </p>
-            </div>
+            {pillar.code === 'ASSET' || slug === 'asset-inventory' ? (
+              <div className="text-left max-w-5xl mx-auto mb-8 sm:mb-12">
+                <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
+                  {pillar.name} Core Features
+                </h2>
+                <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2 text-left">
+                  Designed to operate cleanly within the broader OMNiGRC lifecycle.
+                </p>
+              </div>
+            ) : (
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <span className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-bold uppercase tracking-widest">
+                  OPERATIONAL CAPABILITIES
+                </span>
+                <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold mt-2 tracking-tight">
+                  {pillar.name} Core Features
+                </h2>
+                <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2">
+                  Designed to operate cleanly within the broader OMNiGRC lifecycle.
+                </p>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
               {pillar.features.map((feat, idx) => (
@@ -176,7 +187,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     0{idx + 1}
                   </div>
                   <div className="w-full">
-                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5 text-center sm:text-left">{feat.title}</h3>
+                    <h3 className="font-extrabold text-base text-[#0d1b36] dark:text-white mb-1.5 text-left">{feat.title}</h3>
                     <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed font-medium text-left">{feat.desc}</p>
                   </div>
                 </div>
