@@ -85,30 +85,30 @@ export default function DemoPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-8 md:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
+            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-6 text-center leading-tight">
               Request a walkthrough of the OMNiGRC platform.
             </h1>
 
-            <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-left sm:text-center">
+            <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-1 sm:mb-4 leading-relaxed text-justify sm:text-center">
               See how OMNiGRC unifies risk registers, asset inventories, control mapping, and compliance testing in one connected operating workflow for lean teams.
             </p>
           </div>
         </section>
 
         {/* SECTION: INTAKE FORM & WALKTHROUGH SCOPE */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 pt-4 sm:pt-10 md:pt-14 pb-8 sm:pb-12 md:pb-16 border-b border-slate-200 dark:border-navy-700/60">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column: Expectations & Benefits */}
             <div className="lg:col-span-6 space-y-6 sm:space-y-8">
-              <div className="text-center sm:text-left">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight">
+              <div className="text-left">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
                   Tailored Technical Walkthrough
                 </h2>
-                <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 mt-2 leading-relaxed text-left">
+                <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 mt-2 leading-relaxed text-left text-justify">
                   Our walkthroughs focus on operational capabilities, data isolation boundaries, and practical framework alignment without aggressive sales pitches.
                 </p>
               </div>
@@ -135,7 +135,7 @@ export default function DemoPage() {
                 <Lock className="h-5 w-5 text-[#F15E1C] shrink-0 mt-0.5" />
                 <div className="text-left">
                   <p className="text-xs font-mono font-bold text-[#F15E1C] uppercase mb-0.5">CONFIDENTIAL & TENANT ISOLATED</p>
-                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed">
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed text-justify">
                     Your request details remain confidential. OMNiGRC adheres strictly to application-level tenant isolation and data minimization standards.
                   </p>
                 </div>
@@ -145,8 +145,8 @@ export default function DemoPage() {
             {/* Right Column: Intake Form Card */}
             <div className="lg:col-span-6">
               <div className="rounded-3xl border border-slate-300 dark:border-navy-700/60 bg-[#f1f3ff] dark:bg-navy-950/30 p-5 sm:p-6 md:p-8 shadow-xl">
-                <h3 className="text-xl sm:text-2xl font-bold text-center sm:text-left text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
-                <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 text-left">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-left text-[#0d1b36] dark:text-white mb-2">Request Your Demo Walkthrough</h3>
+                <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 text-left text-justify">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4 text-left">
                   <div>
