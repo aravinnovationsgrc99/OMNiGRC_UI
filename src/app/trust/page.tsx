@@ -38,14 +38,14 @@ export default function TrustPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-3 min-[360px]:px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="w-full max-w-5xl xl:max-w-6xl mx-auto text-center">
-            <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center w-full leading-tight">
-              <span className="block sm:inline">Transparent </span>
-              <span className="block sm:inline">security boundaries. </span>
-              <span className="block sm:inline text-[#F15E1C] dark:text-orange-500">Human-governed AI.</span>
+            <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center w-full max-w-full md:max-w-4xl lg:max-w-5xl leading-[1.12] sm:leading-tight">
+              <span className="block md:inline">Transparent </span>
+              <span className="block md:inline whitespace-nowrap min-[768px]:whitespace-normal">security boundaries. </span>
+              <span className="block md:inline text-[#F15E1C] dark:text-orange-500 whitespace-nowrap min-[768px]:whitespace-normal">Human-governed AI.</span>
             </h1>
 
             <p className="max-w-xl sm:max-w-2xl md:max-w-3xl text-xs min-[360px]:text-sm sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-center px-2 sm:px-0">
