@@ -267,12 +267,12 @@ export default function HowItWorksPage() {
 
       <main className="w-full pt-16">
         {/* Section 1: Hero Zone */}
-        <section className="relative w-full pt-4 sm:pt-6 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-center bg-grid-mesh-adaptive">
+        <section className="relative w-full pt-4 sm:pt-6 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-6 xl:px-8 max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto text-center bg-grid-mesh-adaptive">
           <h1 className="max-w-5xl xl:max-w-6xl text-2xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-4 text-center">
             The Connected GRC <span className="text-[#F15E1C]">Operating Lifecycle</span>
           </h1>
 
-          <p className="max-w-4xl xl:max-w-5xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-left sm:text-center">
+          <p className="max-w-4xl xl:max-w-5xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-center">
             See how OMNiGRC unites risk registers, assets, control mapping, policies, compliance tasks, audits, evidence references, remediation, and governance intelligence into one coherent operating model.
           </p>
 
@@ -325,13 +325,13 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Section 2: The 9-Stage Operating Lifecycle */}
-        <section className="w-full py-4 sm:py-6 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto" id="lifecycle-stages">
+        <section className="w-full py-4 sm:py-6 px-4 sm:px-6 lg:px-6 xl:px-8 max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto" id="lifecycle-stages">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 pb-2.5 border-b border-slate-200 dark:border-navy-700/60">
             <div>
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight mt-1">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight mt-1 text-left">
                 The 9-Stage Operating Lifecycle
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-0.5">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1 text-left">
                 Risk → Assets → Controls → Policies → Compliance → Audits → Evidence → Remediation → Governance Intelligence
               </p>
             </div>
@@ -360,9 +360,9 @@ export default function HowItWorksPage() {
           </div>
 
           {/* Stage Detail Display Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
             {/* Stage Narrative (7 Cols) */}
-            <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-4 sm:p-6 rounded-2xl border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between hover:border-[#F15E1C]/30 transition-colors">
+            <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-5 sm:p-6 rounded-2xl border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between hover:border-[#F15E1C]/30 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-mono text-xs font-bold text-[#F15E1C] dark:text-orange-400 uppercase tracking-wider bg-[#ffdbcf] dark:bg-orange-950/40 px-3 py-1 rounded-full">
@@ -373,22 +373,22 @@ export default function HowItWorksPage() {
                   </span>
                 </div>
 
-                <h3 className="text-lg sm:text-2xl font-bold text-[#0d1b36] dark:text-white mb-2">
+                <h3 className="text-lg sm:text-2xl font-bold text-[#0d1b36] dark:text-white mb-2 text-left">
                   {activeData.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed mb-4">
+                <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 leading-relaxed mb-4 text-left text-justify">
                   {activeData.desc}
                 </p>
 
-                <div className="space-y-2.5 bg-[#f1f3ff] dark:bg-navy-950/50 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-navy-700/60">
-                  <span className="font-mono text-xs text-[#0d1b36] dark:text-slate-200 font-bold block uppercase tracking-wider mb-1.5">
+                <div className="space-y-2.5 bg-[#f1f3ff] dark:bg-navy-950/50 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-navy-700/60 text-left">
+                  <span className="font-mono text-xs text-[#0d1b36] dark:text-slate-200 font-bold block uppercase tracking-wider mb-1.5 text-left">
                     Key Deliverables &amp; Operational Guardrails
                   </span>
                   {activeData.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2.5 text-xs text-[#0d1b36] dark:text-slate-300">
+                    <div key={pIdx} className="flex items-start gap-2.5 text-xs text-[#0d1b36] dark:text-slate-300 text-left">
                       <CheckCircle2 className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
-                      <span>{pt}</span>
+                      <span className="text-left">{pt}</span>
                     </div>
                   ))}
                 </div>
@@ -406,22 +406,24 @@ export default function HowItWorksPage() {
             </div>
 
             {/* Stage Data Record Schema (5 Cols) */}
-            <div className="lg:col-span-5 bg-[#23304c] text-white p-4 sm:p-6 rounded-2xl shadow-xl border border-[#23304c] flex flex-col">
-              <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#006c4d] inline-block" />
-                  <span className="font-mono text-xs text-slate-300 ml-2">{activeData.schemaTitle}</span>
+            <div className="lg:col-span-5 bg-[#23304c] text-white p-5 sm:p-6 rounded-2xl shadow-xl border border-[#23304c] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#006c4d] inline-block" />
+                    <span className="font-mono text-xs text-slate-300 ml-2">{activeData.schemaTitle}</span>
+                  </div>
+                  <span className="font-mono px-2 py-0.5 rounded bg-white/10 text-[#95f6cb] font-medium text-[11px]">
+                    EVENT LOG RECORD
+                  </span>
                 </div>
-                <span className="font-mono px-2 py-0.5 rounded bg-white/10 text-[#95f6cb] font-medium text-[11px]">
-                  EVENT LOG RECORD
-                </span>
-              </div>
 
-              <pre className="font-mono text-xs text-[#edf0ff] bg-black/30 p-3 sm:p-4 rounded-xl overflow-x-auto leading-relaxed max-h-[320px]">
-                {JSON.stringify(activeData.telemetry, null, 2)}
-              </pre>
+                <pre className="font-mono text-xs text-[#edf0ff] bg-black/30 p-3 sm:p-4 rounded-xl overflow-x-auto leading-relaxed max-h-[340px]">
+                  {JSON.stringify(activeData.telemetry, null, 2)}
+                </pre>
+              </div>
 
               <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
                 <span>Pipeline: <code className="text-[#ffb59a] font-mono">{activeData.pipeline}</code></span>
@@ -434,16 +436,16 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Section 3: AI Assists. Humans Decide Architectural Panel */}
-        <section className="w-full py-4 sm:py-6 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 bg-transparent border-y border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
+        <section className="w-full py-4 sm:py-6 px-4 sm:px-6 lg:px-6 xl:px-8 bg-transparent border-y border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
             <div className="bg-white dark:bg-navy-900 p-5 sm:p-7 rounded-2xl border border-slate-200 dark:border-navy-700/60 shadow-sm">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4 sm:mb-6">
                 <div>
                   <span className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-[#95f6cb] dark:bg-teal-950/50 text-[#00513a] dark:text-teal-400 font-mono text-xs font-semibold mb-1.5">
                     <CheckCircle2 className="h-3.5 w-3.5" /> OPERATING PRINCIPLE
                   </span>
-                  <h2 className="text-xl sm:text-3xl font-bold text-[#0d1b36] dark:text-white">AI Assists. Humans Decide.</h2>
-                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 max-w-3xl xl:max-w-5xl mt-1 leading-relaxed">
+                  <h2 className="text-xl sm:text-3xl font-bold text-[#0d1b36] dark:text-white text-left">AI Assists. Humans Decide.</h2>
+                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 max-w-4xl xl:max-w-5xl mt-1 leading-relaxed text-left text-justify">
                     Advisory AI operates strictly as a recommendation copilot. It suggests control overlaps, highlights potential policy gaps, and drafts audit narratives. Every proposal requires explicit human approval before touching your governance records.
                   </p>
                 </div>
@@ -461,18 +463,18 @@ export default function HowItWorksPage() {
                 <div className="bg-[#faf8ff] dark:bg-navy-900/60 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-navy-700/60 hover:border-[#006c4d]/40 transition-colors">
                   <div className="flex items-center gap-2 mb-2.5 text-[#006c4d] dark:text-teal-400">
                     <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <h3 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white">Sanitized Advisory Payloads</h3>
+                    <h3 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white text-left">Sanitized Advisory Payloads</h3>
                   </div>
-                  <ul className="space-y-2 text-xs text-[#0d1b36] dark:text-slate-300">
-                    <li className="flex items-start gap-2">
+                  <ul className="space-y-2.5 text-xs text-[#0d1b36] dark:text-slate-300 text-left">
+                    <li className="flex items-start gap-2 text-justify">
                       <Check className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
                       <span><strong>Framework Standard Mapping:</strong> Public clause taxonomies correlated for semantic equivalence.</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2 text-justify">
                       <Check className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
                       <span><strong>Drafting Policy Text:</strong> Suggestions for standard procedure wording based on recognized baselines.</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2 text-justify">
                       <Check className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
                       <span><strong>Remediation Options:</strong> General corrective actions suggested for common control testing deficiencies.</span>
                     </li>
@@ -482,18 +484,18 @@ export default function HowItWorksPage() {
                 <div className="bg-[#faf8ff] dark:bg-navy-900/60 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 transition-colors">
                   <div className="flex items-center gap-2 mb-2.5 text-[#F15E1C] dark:text-orange-400">
                     <Lock className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <h3 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white">Mandatory Human Gatekeeper</h3>
+                    <h3 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white text-left">Mandatory Human Gatekeeper</h3>
                   </div>
-                  <ul className="space-y-2 text-xs text-[#0d1b36] dark:text-slate-300">
-                    <li className="flex items-start gap-2">
+                  <ul className="space-y-2.5 text-xs text-[#0d1b36] dark:text-slate-300 text-left">
+                    <li className="flex items-start gap-2 text-justify">
                       <Lock className="h-4 w-4 text-[#F15E1C] dark:text-orange-400 shrink-0 mt-0.5" />
                       <span><strong>No Automated Pass/Fail Decisions:</strong> Advisory AI can never mark an audit item as &quot;Satisfied&quot;.</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2 text-justify">
                       <Lock className="h-4 w-4 text-[#F15E1C] dark:text-orange-400 shrink-0 mt-0.5" />
                       <span><strong>Explicit Reviewer Sign-Off:</strong> Compliance leads and auditors must review, edit, or reject proposed mappings.</span>
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2 text-justify">
                       <Lock className="h-4 w-4 text-[#F15E1C] dark:text-orange-400 shrink-0 mt-0.5" />
                       <span><strong>Customer Document Boundary:</strong> Proprietary client policies stay in customer boundary stores and are not used for LLM retraining.</span>
                     </li>
@@ -505,13 +507,13 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Related Article Banner */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-4 sm:py-5 border-t border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto p-4 sm:p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-5 border-t border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto p-4 sm:p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <span className="px-2.5 py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-xs font-bold uppercase">EXECUTIVE STRATEGY</span>
               <div>
-                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Why GRC Matters for Modern Businesses</h4>
-                <p className="text-xs text-slate-600 dark:text-slate-400">Discover how GRC creates clear accountability, improves risk visibility, and builds long-term resilience.</p>
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white text-left">Why GRC Matters for Modern Businesses</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 text-left">Discover how GRC creates clear accountability, improves risk visibility, and builds long-term resilience.</p>
               </div>
             </div>
             <Link
@@ -524,12 +526,12 @@ export default function HowItWorksPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 text-center border-t border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-6 sm:py-8 text-center border-t border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-center">
               Ready to experience the 9-stage operating lifecycle?
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 max-w-2xl mx-auto text-center">
               Schedule a technical walkthrough with a GRC specialist today.
             </p>
             <Link

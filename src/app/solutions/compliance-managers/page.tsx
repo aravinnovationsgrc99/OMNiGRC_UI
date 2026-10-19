@@ -24,48 +24,65 @@ export default function ComplianceManagersPage() {
       <Header />
       <div className="flex flex-col w-full pt-16">
         {/* SECTION 1: HERO */}
-        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 overflow-hidden bg-grid-mesh-adaptive">
+        <section className="relative w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-3 sm:pb-6 lg:pb-6 xl:pb-8 overflow-hidden bg-grid-mesh-adaptive">
           <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary/5 dark:bg-teal/10 blur-3xl pointer-events-none -z-10"></div>
           <div className="absolute left-1/3 bottom-0 w-72 h-72 rounded-full bg-secondary/10 dark:bg-amber/10 blur-3xl pointer-events-none -z-10"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-5">
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[46px] lg:leading-[54px] text-slate-900 dark:text-white font-bold tracking-tight text-center sm:text-left">
-                Continuous Compliance Without <span className="text-primary">Audit Season Chaos</span>
-              </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-stretch">
+            <div className="lg:col-span-7 flex flex-col justify-between items-start text-left gap-4 sm:gap-5">
+              <div className="flex flex-col gap-2.5 sm:gap-3.5 w-full">
+                <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] lg:leading-[1.15] text-slate-900 dark:text-white font-bold tracking-tight text-left">
+                  Continuous Compliance Without <span className="text-primary">Audit Season Chaos</span>
+                </h1>
 
-              <p className="text-left text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-                Transform once-a-year audit panics into continuous, predictable compliance operations. Map controls once across ISO 27001, SOC 2, HIPAA, and DPDP while keeping evidence indices continuously updated.
-              </p>
+                <p className="text-left text-sm sm:text-base lg:text-[17px] text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify">
+                  Transform once-a-year audit panics into continuous, predictable compliance operations. Map controls once across ISO 27001, SOC 2, HIPAA, and DPDP while keeping evidence indices continuously updated.
+                </p>
 
-              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full">
-                <Link
-                  href="/demo"
-                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-white font-medium text-sm hover:bg-primary/90 transition-all shadow-md text-center"
-                >
-                  <Calendar className="w-4 h-4" />
-                  <span>Request Compliance Walkthrough</span>
-                </Link>
-                <a
-                  href="#operating-model"
-                  className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-900 dark:text-white font-medium text-sm transition-all border border-slate-300 dark:border-navy-700 text-center"
-                >
-                  <span>See Compliance Pipeline</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-2.5 sm:gap-3.5 pt-1 w-full">
+                  <Link
+                    href="/demo"
+                    className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-white font-medium text-sm hover:bg-primary/90 transition-all shadow-md text-center"
+                  >
+                    <Calendar className="w-4 h-4" />
+                    <span>Request Compliance Walkthrough</span>
+                  </Link>
+                  <a
+                    href="#operating-model"
+                    className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-slate-100 dark:bg-navy-800 hover:bg-slate-200 dark:hover:bg-navy-700 text-slate-900 dark:text-white font-medium text-sm transition-all border border-slate-300 dark:border-navy-700 text-center"
+                  >
+                    <span>See Compliance Pipeline</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="w-full pt-4 border-t border-slate-200/80 dark:border-navy-700/80 grid grid-cols-3 gap-2 sm:gap-3">
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white/70 dark:bg-[#16233F]/70 border border-slate-200 dark:border-navy-700">
+                  <div className="text-xs font-mono text-slate-500 dark:text-slate-400">Map Once</div>
+                  <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Multi-Framework</div>
+                </div>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white/70 dark:bg-[#16233F]/70 border border-slate-200 dark:border-navy-700">
+                  <div className="text-xs font-mono text-slate-500 dark:text-slate-400">Evidence</div>
+                  <div className="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400">Zero Duplication</div>
+                </div>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white/70 dark:bg-[#16233F]/70 border border-slate-200 dark:border-navy-700">
+                  <div className="text-xs font-mono text-slate-500 dark:text-slate-400">Auditor Portals</div>
+                  <div className="text-xs sm:text-sm font-bold text-primary">Read-Only Ready</div>
+                </div>
               </div>
             </div>
 
             {/* Hero Visual */}
-            <div className="lg:col-span-5 relative">
-              <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col gap-4 border border-slate-300 dark:border-navy-700">
+            <div className="lg:col-span-5 relative h-full flex flex-col justify-between">
+              <div className="h-full p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-xl flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-navy-800">
                   <span className="font-mono text-xs font-bold text-slate-900 dark:text-white">COMPLIANCE ENGINE COCKPIT</span>
                   <span className="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-mono text-[11px] font-semibold">
                     MULTI-FRAMEWORK
                   </span>
                 </div>
-                <div className="space-y-2.5">
+                <div className="space-y-2.5 my-auto py-3">
                   <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0A111F] flex items-center justify-between font-mono text-xs border border-slate-300/60 dark:border-navy-800">
                     <span className="text-slate-800 dark:text-slate-200 font-medium">Framework Crosswalk</span>
                     <span className="text-emerald-600 dark:text-emerald-400 font-bold">MAP-ONCE ACTIVE</span>
@@ -79,33 +96,37 @@ export default function ComplianceManagersPage() {
                     <span className="text-primary font-bold">READ-ONLY DOSSIERS</span>
                   </div>
                 </div>
+                <div className="pt-3 border-t border-slate-100 dark:border-navy-800 flex items-center justify-between text-xs font-mono text-slate-500 dark:text-slate-400">
+                  <span>Target Standard</span>
+                  <span className="text-slate-800 dark:text-slate-200 font-semibold">SOC 2 / ISO 27001 / DPDP</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 2: PAIN POINTS */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-y border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="text-center sm:text-left max-w-3xl mb-8 sm:mb-12">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-y border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
+            <div className="text-left max-w-3xl mb-4 sm:mb-6">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 THE COMPLIANCE CHALLENGE
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Eliminating duplicated effort across overlapping frameworks.
               </h2>
-              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
                 Compliance managers spend a significant portion of their time re-collecting the same evidence for different auditors and standards.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Scale className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Redundant Framework Audits</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Redundant Framework Audits</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Testing access controls separately for SOC 2, ISO 27001, and HIPAA creates massive internal audit fatigue.
                   </p>
@@ -116,12 +137,12 @@ export default function ComplianceManagersPage() {
                 </div>
               </div>
 
-              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <Link2 className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Stale Evidence Files</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Stale Evidence Files</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Local PDF uploads become obsolete within weeks, forcing compliance teams to re-request screenshots.
                   </p>
@@ -132,12 +153,12 @@ export default function ComplianceManagersPage() {
                 </div>
               </div>
 
-              <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] shadow-sm flex flex-col justify-between border border-slate-300 dark:border-navy-700">
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
                     <FileCheck className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Unorganized Auditor Requests</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Unorganized Auditor Requests</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Managing auditor requests over email attachments leads to missing workpapers and delayed audit completion.
                   </p>
@@ -152,22 +173,21 @@ export default function ComplianceManagersPage() {
         </section>
 
         {/* SECTION 3: SOLUTION ENGINES */}
-        {/* SECTION 3: SOLUTION ENGINES */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
-          <div className="text-center sm:text-left max-w-3xl mb-8 sm:mb-12">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="text-left max-w-3xl mb-4 sm:mb-6">
             <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
               COMPLIANCE OPERATING CAPABILITIES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Structured framework mapping and automated cadence tracking.
             </h2>
-            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
               Equip your GRC practice with reusable controls, evidence indexing, and structured auditor workpaper dossiers.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -175,7 +195,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">CROSSWALK ENGINE</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Map-Once Framework Crosswalk</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Map-Once Framework Crosswalk</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Map single internal safeguards to ISO 27001, SOC 2, HIPAA, and DPDP. Human review ratifies every mapping before audit commit.
                 </p>
@@ -186,7 +206,7 @@ export default function ComplianceManagersPage() {
               </div>
             </div>
 
-            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -194,7 +214,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">EVIDENCE INDEX</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Centralized Evidence Reference Index</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Centralized Evidence Reference Index</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Index external cloud log URLs, S3 bucket pointers, and Jira ticket references with integrity verification and human sign-off.
                 </p>
@@ -205,7 +225,7 @@ export default function ComplianceManagersPage() {
               </div>
             </div>
 
-            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -213,7 +233,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">CADENCE BOARD</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">30/60/90-Day Cadence Scheduler</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">30/60/90-Day Cadence Scheduler</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Schedule periodic access reviews, policy attestations, and penetration test remediations to run automatically on cadence.
                 </p>
@@ -224,7 +244,7 @@ export default function ComplianceManagersPage() {
               </div>
             </div>
 
-            <div className="p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm flex flex-col justify-between gap-4 border border-slate-300 dark:border-navy-700">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
@@ -232,7 +252,7 @@ export default function ComplianceManagersPage() {
                   </div>
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">AUDITOR DOSSIERS</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Read-Only Auditor Access Dossiers</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Read-Only Auditor Access Dossiers</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   Package verified evidence references and workpapers into clean read-only digital binders for CPA firms and ISO registrars.
                 </p>
@@ -246,24 +266,24 @@ export default function ComplianceManagersPage() {
         </section>
 
         {/* SECTION 4: INTERACTIVE COMPLIANCE PIPELINE */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
+            <div className="text-left max-w-3xl mb-4 sm:mb-6">
               <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
                 ILLUSTRATIVE COMPLIANCE PIPELINE (DEMO DATA)
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Framework Mandate → Safeguard Mapping → Evidence Index → Audit Dossier
               </h2>
-              <p className="text-left sm:text-center text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
                 Click each step below to inspect how a compliance mandate turns into an auditor-verified workpaper dossier.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-5">
               <button
                 onClick={() => setActiveStep(1)}
-                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
+                className={`text-left p-4 sm:p-5 rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
                   activeStep === 1
                     ? "bg-white dark:bg-[#0A111F] border-primary ring-2 ring-primary/20 text-slate-900 dark:text-white"
                     : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
@@ -276,7 +296,7 @@ export default function ComplianceManagersPage() {
 
               <button
                 onClick={() => setActiveStep(2)}
-                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
+                className={`text-left p-4 sm:p-5 rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
                   activeStep === 2
                     ? "bg-white dark:bg-[#0A111F] border-emerald-500 ring-2 ring-emerald-500/20 text-slate-900 dark:text-white"
                     : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
@@ -289,7 +309,7 @@ export default function ComplianceManagersPage() {
 
               <button
                 onClick={() => setActiveStep(3)}
-                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
+                className={`text-left p-4 sm:p-5 rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
                   activeStep === 3
                     ? "bg-white dark:bg-[#0A111F] border-primary ring-2 ring-primary/20 text-slate-900 dark:text-white"
                     : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
@@ -302,7 +322,7 @@ export default function ComplianceManagersPage() {
 
               <button
                 onClick={() => setActiveStep(4)}
-                className={`text-left p-space-card rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
+                className={`text-left p-4 sm:p-5 rounded-2xl shadow-md transition-all flex flex-col gap-1 border ${
                   activeStep === 4
                     ? "bg-white dark:bg-[#0A111F] border-emerald-500 ring-2 ring-emerald-500/20 text-slate-900 dark:text-white"
                     : "bg-white dark:bg-[#0A111F] border-slate-300 dark:border-navy-700 hover:border-slate-300 dark:hover:border-navy-600 text-slate-900 dark:text-white opacity-75 hover:opacity-100"
@@ -314,13 +334,13 @@ export default function ComplianceManagersPage() {
               </button>
             </div>
 
-            <div className="p-space-card rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-300 dark:border-navy-700">
+            <div className="p-5 sm:p-6 lg:p-7 rounded-2xl bg-white dark:bg-[#0A111F] shadow-lg border border-slate-300 dark:border-navy-700">
               {activeStep === 1 && (
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-primary">STEP 01: FRAMEWORK MANDATE</span>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">SOC 2 CC6.1 Logical Access Controls</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Deconstruct compliance mandates into structured internal rules and operational requirements.
                     </p>
                   </div>
@@ -336,7 +356,7 @@ export default function ComplianceManagersPage() {
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">STEP 02: SAFEGUARD CROSSWALK</span>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Multi-Framework Advisory Mapping</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Advisory AI proposes crosswalks to ISO 27001:2022 A.5.15 and HIPAA §164.312(a). Compliance officer explicitly ratifies the mapping.
                     </p>
                   </div>
@@ -352,7 +372,7 @@ export default function ComplianceManagersPage() {
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-primary">STEP 03: EVIDENCE REFERENCE INDEX</span>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">External Log Export Pointer Indexed</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Index customer Okta S3 export log reference with verification timestamp and pointer. Zero raw file re-hosting required.
                     </p>
                   </div>
@@ -368,7 +388,7 @@ export default function ComplianceManagersPage() {
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">STEP 04: AUDITOR WORKPAPER DOSSIER</span>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Read-Only Auditor Access Granted</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Time-bounded digital workpaper package compiled for external CPA firm sign-off.
                     </p>
                   </div>
@@ -383,28 +403,28 @@ export default function ComplianceManagersPage() {
         </section>
 
         {/* SECTION 5: RELEVANT MODULES */}
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
-          <div className="text-center sm:text-left max-w-3xl mb-8 sm:mb-12">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="text-left max-w-3xl mb-4 sm:mb-6">
             <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
               ORCHESTRATED MODULES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Core Modules for Compliance Teams
             </h2>
-            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
               Explore the specialized GRC modules designed to streamline framework governance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             <Link
               href="/products/control-mapping"
-              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Network className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Control Mapping</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Control Mapping</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   Map-once crosswalk engine across SOC 2, ISO, and HIPAA.
                 </p>
               </div>
@@ -415,12 +435,12 @@ export default function ComplianceManagersPage() {
 
             <Link
               href="/products/evidence"
-              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Link2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Evidence Index</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Evidence Index</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   Centralized external pointer index with verification log trace.
                 </p>
               </div>
@@ -431,12 +451,12 @@ export default function ComplianceManagersPage() {
 
             <Link
               href="/products/compliance-board"
-              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <Kanban className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Compliance Board</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Compliance Board</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   Kanban cadence scheduler for recurring testing cycles.
                 </p>
               </div>
@@ -447,12 +467,12 @@ export default function ComplianceManagersPage() {
 
             <Link
               href="/products/audits"
-              className="group p-space-card rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
+              className="group p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#16233F] shadow-sm hover:shadow-md transition-all border border-slate-300 dark:border-navy-700 flex flex-col justify-between"
             >
               <div>
                 <FileCheck className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center sm:text-left">Audit Management</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Audit Management</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   Workpaper packaging and auditor read-only portals.
                 </p>
               </div>
@@ -464,14 +484,14 @@ export default function ComplianceManagersPage() {
         </section>
 
         {/* SECTION 6: BOTTOM CTA */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-8 sm:py-12 md:py-16 border-t border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-space-card text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
-              <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-t border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-8 lg:p-10 text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
+              <div className="relative z-10 max-w-4xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-3">
                   Streamline your framework compliance program.
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-5 sm:mb-6 leading-relaxed">
                   Deliver predictable audit outcomes with OMNiGRC's connected compliance operating layer.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">

@@ -41,99 +41,104 @@ export default function EvidencePage() {
             {/* Hero Section */}
             <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-3 sm:pb-6 lg:pb-6 xl:pb-8 w-full bg-grid-mesh-adaptive">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-stretch">
-                <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left justify-between gap-3 sm:gap-4">
-                  <h1 className="text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-5xl lg:text-[52px] xl:text-[56px] font-black tracking-tight leading-[1.08] sm:leading-[1.1] text-center lg:text-left mb-4 sm:mb-6 w-full">
-                    <span className="block text-slate-900 dark:text-white">
-                      Evidence
-                    </span>
-                    <span className="block text-slate-900 dark:text-white mt-0.5 sm:mt-1">
-                      References &amp; Records:
-                    </span>
-                    <span className="block text-[#F15E1C] mt-0.5 sm:mt-1">
-                      External Proof
-                    </span>
-                  </h1>
-                  <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-6 text-center lg:text-left w-full">
-                    Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record (AWS, Okta, GitHub, Jira) while preserving complete clear chain of custody for external auditors.
-                  </p>
-                  <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 w-full sm:w-auto">
-                    <Link
-                      href="/demo"
-                      className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#F15E1C] hover:bg-[#ce4700] text-white text-xs sm:text-sm font-bold shadow-md transition-all duration-150 text-center"
-                    >
-                      <CheckCircle2 className="h-4 w-4" />
-                      <span>Schedule Walkthrough</span>
-                    </Link>
-                    <Link
-                      href="/resources/blog/compliance-vs-pre-audit-preparation-what-businesses-need-to-know"
-                      className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-100 dark:hover:bg-navy-700 transition-all duration-150 border border-slate-200 dark:border-navy-700 shadow-sm text-center"
-                    >
-                      <span>Explore Audit Workpapers &rarr;</span>
-                    </Link>
-                    <div className="flex items-center justify-center gap-2 font-mono text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 pt-1 sm:pt-0">
-                      <Lock className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-600 dark:text-emerald-400" />
-                      <span>RFC 3339 Timestamped</span>
+                {/* Left Column: Copy, Actions & Key Metrics */}
+                <div className="lg:col-span-7 flex flex-col justify-between items-start gap-4 sm:gap-5 w-full">
+                  <div className="flex flex-col gap-2.5 sm:gap-3.5 w-full">
+                    <h1 className="text-[22px] min-[360px]:text-2xl min-[400px]:text-[28px] sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left w-full">
+                      Evidence References &amp; Records:{" "}
+                      <span className="text-[#F15E1C] block sm:inline">External Proof</span>
+                    </h1>
+                    <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
+                      Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record (AWS, Okta, GitHub, Jira) while preserving complete clear chain of custody for external auditors.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
+                      <Link
+                        href="/demo"
+                        className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-lg bg-[#F15E1C] hover:bg-[#ce4700] text-white text-xs sm:text-sm font-semibold shadow-md transition-all text-center"
+                      >
+                        <CheckCircle2 className="h-4 w-4 shrink-0" />
+                        <span>Schedule Walkthrough</span>
+                      </Link>
+                      <Link
+                        href="/resources/blog/compliance-vs-pre-audit-preparation-what-businesses-need-to-know"
+                        className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-lg bg-white/80 dark:bg-navy-800 text-slate-900 dark:text-white text-xs sm:text-sm font-semibold hover:bg-slate-200 dark:hover:bg-navy-700 transition-colors shadow-sm text-center border border-slate-200 dark:border-navy-700"
+                      >
+                        <span>Explore Audit Workpapers &rarr;</span>
+                      </Link>
+                      <div className="flex items-center justify-center gap-1.5 font-mono text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 self-center sm:self-auto pt-1 sm:pt-2">
+                        <Lock className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                        <span>RFC 3339 Timestamped</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Fast Stat Cards 4-Col Row */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-1 w-full">
+                    <div className="p-3 sm:p-3.5 rounded-xl bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                      <div className="text-xl sm:text-2xl font-black text-[#2E936F] dark:text-teal mb-0.5">100%</div>
+                      <div className="text-xs text-slate-900 dark:text-white font-bold leading-tight">External Pointers</div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Zero binary lock-in</div>
+                    </div>
+                    <div className="p-3 sm:p-3.5 rounded-xl bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                      <div className="text-xl sm:text-2xl font-black text-[#D4521A] dark:text-amber mb-0.5">AUDIT</div>
+                      <div className="text-xs text-slate-900 dark:text-white font-bold leading-tight">Event History</div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Structured log trail</div>
+                    </div>
+                    <div className="p-3 sm:p-3.5 rounded-xl bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                      <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-0.5">1 : N</div>
+                      <div className="text-xs text-slate-900 dark:text-white font-bold leading-tight">Control Reuse</div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">SOC 2, ISO, HIPAA</div>
+                    </div>
+                    <div className="p-3 sm:p-3.5 rounded-xl bg-white/85 dark:bg-[#16233F]/90 backdrop-blur-sm border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                      <div className="text-xl sm:text-2xl font-black text-indigo-600 dark:text-indigo-400 mb-0.5">Scoped</div>
+                      <div className="text-xs text-slate-900 dark:text-white font-bold leading-tight">Workpapers</div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Read-only access</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Status Snapshot Panel */}
-                <div className="lg:col-span-4 w-full flex flex-col justify-between gap-4 h-full">
+                {/* Right Column: Status Snapshot Panel */}
+                <div className="lg:col-span-5 relative flex flex-col justify-center">
                   <div className="p-5 sm:p-6 rounded-2xl bg-slate-900 dark:bg-black text-white shadow-xl border border-slate-800 relative overflow-hidden flex flex-col justify-between h-full">
-                    <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
-                        <span className="font-mono text-xs text-amber-400 font-bold uppercase tracking-wider">INDEX STATE ENGINE</span>
+                    <div>
+                      <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+                        <div className="flex items-center gap-2">
+                          <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
+                          <span className="font-mono text-xs text-amber-400 font-bold uppercase tracking-wider">INDEX STATE ENGINE</span>
+                        </div>
+                        <span className="font-mono text-[11px] text-slate-300 bg-slate-800 px-2 py-0.5 rounded border border-slate-700">pg_crypto::v14</span>
                       </div>
-                      <span className="font-mono text-[11px] text-slate-300 bg-slate-800 px-2 py-0.5 rounded border border-slate-700">pg_crypto::v14</span>
+                      <div className="space-y-3 font-mono text-xs mb-5">
+                        <div className="flex justify-between items-center py-1 border-b border-slate-800/60">
+                          <span className="text-slate-300">Active Tracked Pointers:</span>
+                          <span className="text-emerald-400 font-bold">142 validated</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-slate-800/60">
+                          <span className="text-slate-300">External Evidence Pointers:</span>
+                          <span className="text-amber-400 font-bold">Verified Reference</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-slate-800/60">
+                          <span className="text-slate-300">Direct Binaries Ingested:</span>
+                          <span className="text-emerald-300 font-bold bg-emerald-950/80 border border-emerald-800 px-2 py-0.5 rounded">0 bytes (Isolated)</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1">
+                          <span className="text-slate-300">Human Custodian Sign-Off:</span>
+                          <span className="text-white font-bold">100% Required</span>
+                        </div>
+                      </div>
+                      <div className="p-2.5 rounded-lg bg-slate-800/60 border border-slate-700/70 font-mono text-[11px] text-slate-300 flex items-center justify-between">
+                        <span className="text-slate-400">Stream Sync:</span>
+                        <span className="text-emerald-400 font-semibold flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                          Postgres WAL Active
+                        </span>
+                      </div>
                     </div>
-                    <div className="space-y-2.5 font-mono text-xs mb-6">
-                      <div className="flex justify-between items-center py-0.5">
-                        <span className="text-slate-300">Active Tracked Pointers:</span>
-                        <span className="text-emerald-400 font-bold">142 validated</span>
-                      </div>
-                      <div className="flex justify-between items-center py-0.5">
-                        <span className="text-slate-300">External Evidence Pointers:</span>
-                        <span className="text-amber-400 font-bold">Verified Reference</span>
-                      </div>
-                      <div className="flex justify-between items-center py-0.5">
-                        <span className="text-slate-300">Direct Binaries Ingested:</span>
-                        <span className="text-emerald-300 font-bold bg-emerald-950/80 border border-emerald-800 px-2 py-0.5 rounded">0 bytes (Isolated)</span>
-                      </div>
-                      <div className="flex justify-between items-center py-0.5">
-                        <span className="text-slate-300">Human Custodian Sign-Off:</span>
-                        <span className="text-white font-bold">100% Required</span>
-                      </div>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-slate-800/90 dark:bg-navy-950 border border-slate-700 text-slate-200 text-xs flex items-start gap-2.5 leading-relaxed">
+                    <div className="p-3.5 rounded-xl bg-slate-800/90 dark:bg-navy-950 border border-slate-700 text-slate-200 text-xs flex items-start gap-2.5 leading-relaxed mt-4">
                       <Shield className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
                       <span>
                         <strong className="text-amber-400">&ldquo;AI assists. Humans decide.&rdquo;</strong> Advisory AI correlates telemetry; human compliance officers explicitly approve validity.
                       </span>
-                    </div>
-                  </div>
-
-                  {/* Fast Stat Cards 2x2 Grid */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
-                      <div className="text-2xl font-black text-[#2E936F] dark:text-teal mb-0.5">100%</div>
-                      <div className="text-xs text-slate-900 dark:text-white font-bold">External Pointers</div>
-                      <div className="text-2xs text-slate-500 dark:text-slate-400">Zero binary lock-in</div>
-                    </div>
-                    <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
-                      <div className="text-2xl font-black text-[#D4521A] dark:text-amber mb-0.5">AUDIT</div>
-                      <div className="text-xs text-slate-900 dark:text-white font-bold">Event History</div>
-                      <div className="text-2xs text-slate-500 dark:text-slate-400">Structured log trail</div>
-                    </div>
-                    <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
-                      <div className="text-2xl font-black text-slate-900 dark:text-white mb-0.5">1 : N</div>
-                      <div className="text-xs text-slate-900 dark:text-white font-bold">Control Reuse</div>
-                      <div className="text-2xs text-slate-500 dark:text-slate-400">SOC 2, ISO, HIPAA</div>
-                    </div>
-                    <div className="p-4 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm">
-                      <div className="text-2xl font-black text-indigo-600 dark:text-indigo-400 mb-0.5">Scoped</div>
-                      <div className="text-xs text-slate-900 dark:text-white font-bold">Auditor Workpapers</div>
-                      <div className="text-2xs text-slate-500 dark:text-slate-400">Read-only access</div>
                     </div>
                   </div>
                 </div>
@@ -156,12 +161,12 @@ export default function EvidencePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
                 {/* Legacy Way */}
-                <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-rose-200 dark:border-rose-950/60 shadow-md flex flex-col justify-between">
+                <div className="p-5 sm:p-6 lg:p-7 rounded-2xl bg-white dark:bg-navy-900 border border-rose-200 dark:border-rose-950/60 shadow-md flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-left">
                       Duplicate PDFs, Data Leaks &amp; Orphaned Files
                     </h3>
-                    <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                    <ul className="space-y-3 sm:space-y-3.5 text-sm text-slate-600 dark:text-slate-300">
                       <li className="flex items-start gap-3">
                         <XCircle className="h-5 w-5 text-rose-500 shrink-0 mt-0.5" />
                         <span><strong>Security &amp; Data Leak Exposure:</strong> Uploading sensitive production logs, IAM dumps, and architecture diagrams into a 3rd party vendor database increases corporate blast radius.</span>
@@ -176,18 +181,18 @@ export default function EvidencePage() {
                       </li>
                     </ul>
                   </div>
-                  <div className="mt-8 bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/40 p-4 rounded-xl font-mono text-xs text-rose-900 dark:text-rose-300 font-medium">
+                  <div className="mt-5 sm:mt-6 bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/40 p-3.5 sm:p-4 rounded-xl font-mono text-xs text-rose-900 dark:text-rose-300 font-medium">
                     Result: Costly vendor file lock-in, data sovereignty violations, and unverified point-in-time claims.
                   </div>
                 </div>
 
                 {/* OMNiGRC Pointer Layer */}
-                <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-navy-900 border border-amber-200 dark:border-amber-950/60 shadow-md flex flex-col justify-between">
+                <div className="p-5 sm:p-6 lg:p-7 rounded-2xl bg-white dark:bg-navy-900 border border-amber-200 dark:border-amber-950/60 shadow-md flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl text-slate-900 dark:text-white font-bold mb-4 text-left">
                       Point Directly to Authoritative Systems of Record
                     </h3>
-                    <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                    <ul className="space-y-3 sm:space-y-3.5 text-sm text-slate-600 dark:text-slate-300">
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
                         <span><strong>Zero Binary Data Migration:</strong> Proof lives safely inside your customer-owned AWS S3 buckets, Okta system logs, GitHub commits, and internal Confluence spaces.</span>
@@ -202,7 +207,7 @@ export default function EvidencePage() {
                       </li>
                     </ul>
                   </div>
-                  <div className="mt-8 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-4 rounded-xl font-mono text-xs text-amber-900 dark:text-amber-300 font-semibold">
+                  <div className="mt-5 sm:mt-6 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-3.5 sm:p-4 rounded-xl font-mono text-xs text-amber-900 dark:text-amber-300 font-semibold">
                     Outcome: Seamless external auditor review via read-only workpapers while zero raw binaries ever leave your control.
                   </div>
                 </div>
@@ -218,7 +223,7 @@ export default function EvidencePage() {
                 </h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
-                <div className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-mono text-xs font-bold text-white bg-[#2E936F] px-2 py-0.5 rounded">STEP 01</span>
@@ -229,12 +234,12 @@ export default function EvidencePage() {
                       Ingest or link external URIs: customer S3 ARNs, Jira ticket keys, Okta log export queries, or signed Git commit SHAs.
                     </p>
                   </div>
-                  <div className="mt-6 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
+                  <div className="mt-4 sm:mt-5 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
                     Target: s3://gov-audit-prod-01/
                   </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-mono text-xs font-bold text-white bg-[#D4521A] px-2 py-0.5 rounded">STEP 02</span>
@@ -245,12 +250,12 @@ export default function EvidencePage() {
                       Advisory AI analyzes URI semantics and metadata to propose matching SOC 2, ISO 27001, and HIPAA control clauses. Human signs off.
                     </p>
                   </div>
-                  <div className="mt-6 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
+                  <div className="mt-4 sm:mt-5 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
                     Suggestion: CC6.1 + ISO A.8.24
                   </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-mono text-xs font-bold text-white bg-indigo-600 px-2 py-0.5 rounded">STEP 03</span>
@@ -261,12 +266,12 @@ export default function EvidencePage() {
                       Bind the pointer to a technical custodian and testing cadence (30d, 90d, Annual). Triggers proactive re-attestation alerts.
                     </p>
                   </div>
-                  <div className="mt-6 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
+                  <div className="mt-4 sm:mt-5 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
                     Cadence: 90 Days &bull; SecOps Lead
                   </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
+                <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700 shadow-sm flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-mono text-xs font-bold text-white bg-slate-900 dark:bg-black px-2 py-0.5 rounded">STEP 04</span>
@@ -277,7 +282,7 @@ export default function EvidencePage() {
                       Package verified references into time-restricted, read-only workpaper dossiers for independent CPA firm or ISO registrar review.
                     </p>
                   </div>
-                  <div className="mt-6 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
+                  <div className="mt-4 sm:mt-5 font-mono text-[11px] text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-navy-800 font-semibold p-2.5 rounded-lg border border-slate-200 dark:border-navy-700">
                     Dossier: SOC2_TypeII_2026.zip
                   </div>
                 </div>
@@ -286,7 +291,7 @@ export default function EvidencePage() {
 
             {/* Interactive Live Evidence Catalog Table View */}
             <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 w-full">
-              <div className="bg-white dark:bg-navy-900 rounded-2xl shadow-md border border-slate-200 dark:border-navy-700 p-4 sm:p-8">
+              <div className="bg-white dark:bg-navy-900 rounded-2xl shadow-md border border-slate-200 dark:border-navy-700 p-4 sm:p-6 lg:p-7">
                 {/* Header & Controls */}
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
                   <div>
@@ -485,13 +490,13 @@ export default function EvidencePage() {
             </section>
 
             {/* Bottom CTA Section */}
-            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-8 lg:py-8 xl:py-9 w-full">
-              <div className="p-6 sm:p-12 rounded-3xl bg-slate-900 dark:bg-black text-white border border-slate-800 shadow-xl text-center">
+            <section className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 w-full">
+              <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-slate-900 dark:bg-black text-white border border-slate-800 shadow-xl text-center">
                 <div className="max-w-2xl mx-auto">
                   <h2 className="text-2xl sm:text-4xl text-white font-extrabold tracking-tight mb-4 text-center w-full lg:whitespace-nowrap">
                     Organize Evidence Without Spreadsheet Chaos or File-Dump Risks
                   </h2>
-                  <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed text-justify sm:text-center">
+                  <p className="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed text-justify sm:text-center">
                     Join modern security teams who connect cloud proof directly to their compliance posture with zero data lock-in and structured event logs.
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-4">

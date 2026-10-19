@@ -15,7 +15,9 @@ import {
   HardDrive,
   HelpCircle,
   Sparkles,
-  Info
+  Info,
+  Cloud,
+  Server
 } from "lucide-react";
 
 export default function PricingPage() {
@@ -101,57 +103,107 @@ export default function PricingPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-12 md:pb-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-6 xl:px-8 pt-5 sm:pt-7 lg:pt-9 pb-8 sm:pb-12 md:pb-14 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
-          <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
-            <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-6 text-center leading-tight">
-              <span className="block">Practical Commercial</span>
-              <span className="block">Scoping for Practical</span>
-              <span className="block">GRC Operations</span>
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto text-center flex flex-col items-center">
+            {/* 2-Line Heading with Orange GRC Operations */}
+            <h1 className="w-full max-w-6xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[68px] 2xl:text-[72px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center leading-[1.08]">
+              <span className="block">Practical Commercial Scoping for</span>
+              <span className="block text-[#F15E1C]">GRC Operations</span>
             </h1>
 
-            <p className="max-w-3xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-justify">
+            {/* Subtitle Paragraph */}
+            <p className="max-w-3xl lg:max-w-4xl xl:max-w-5xl text-xs sm:text-base md:text-lg lg:text-[20px] xl:text-[21px] text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed sm:leading-[1.45] text-center px-2">
               Transparent deployment models tailored to your team infrastructure: Shared multi-tenant SaaS, dedicated Private MSSP instances, or customer-controlled container runtimes.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+            {/* Centered CTA Button */}
+            <div className="flex items-center justify-center w-full mb-6 sm:mb-8 lg:mb-10">
               <Link
                 href="/demo"
-                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
+                className="inline-flex items-center justify-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm md:text-base text-center"
               >
                 <span>Request Proposal Walkthrough</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
+            </div>
+
+            {/* Three Deployment Cards in 1 Row on Desktop */}
+            <div className="w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+              {/* Card 1: Shared SaaS */}
+              <div className="bg-white dark:bg-[#0A111F] rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all flex items-center gap-4 text-left min-h-[90px] sm:min-h-[105px]">
+                <div className="w-12 h-12 rounded-full bg-[#dcfce7] dark:bg-emerald-950/60 border border-[#bbf7d0] dark:border-emerald-800/50 text-[#16a34a] dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <Cloud className="h-6 w-6 stroke-[2.2]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white leading-tight">
+                    Shared SaaS
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 truncate">
+                    Multi-tenant deployment
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2: Private MSSP */}
+              <div className="bg-white dark:bg-[#0A111F] rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all flex items-center gap-4 text-left min-h-[90px] sm:min-h-[105px]">
+                <div className="w-12 h-12 rounded-full bg-[#dcfce7] dark:bg-emerald-950/60 border border-[#bbf7d0] dark:border-emerald-800/50 text-[#16a34a] dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="h-6 w-6 stroke-[2.2]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white leading-tight">
+                    Private MSSP
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 truncate">
+                    Dedicated instance
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Customer-Controlled */}
+              <div className="bg-white dark:bg-[#0A111F] rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all flex items-center gap-4 text-left min-h-[90px] sm:min-h-[105px]">
+                <div className="w-12 h-12 rounded-full bg-[#dcfce7] dark:bg-emerald-950/60 border border-[#bbf7d0] dark:border-emerald-800/50 text-[#16a34a] dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <Server className="h-6 w-6 stroke-[2.2]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white leading-tight">
+                    Customer-Controlled
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 truncate">
+                    Container runtime
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 1: DEPLOYMENT TIERS GRID */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-left max-w-3xl mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl xl:max-w-4xl mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
                 Select Your Operational Architecture
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-2 text-justify">
+              <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mt-1.5 text-left text-justify">
                 All models include core 5x5 risk matrix scoring, map-once control crosswalks, and human oversight controls.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6 items-stretch">
               {deploymentTiers.map((plan) => (
                 <div
                   key={plan.code}
-                  className={`w-full max-w-md lg:max-w-none mx-auto rounded-2xl p-space-card flex flex-col justify-between transition-all duration-300 relative ${
+                  className={`w-full rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 relative ${
                     plan.popular
-                      ? "bg-white dark:bg-navy-900 border-2 border-[#F15E1C] shadow-xl lg:scale-[1.02]"
+                      ? "bg-white dark:bg-navy-900 border-2 border-[#F15E1C] shadow-xl"
                       : "bg-[#f1f3ff] dark:bg-navy-950/50 border border-slate-300 dark:border-navy-700/60 shadow-sm hover:shadow-md"
                   }`}
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold uppercase">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-2.5 py-0.5 rounded-full bg-[#ffdbcf] dark:bg-orange-950/30 text-[#380d00] dark:text-orange-400 font-mono text-[10px] font-bold uppercase">
                         {plan.code}
                       </span>
                       {plan.popular && (
@@ -161,19 +213,19 @@ export default function PricingPage() {
                       )}
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white mb-2">{plan.name}</h3>
-                    <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 leading-relaxed text-justify">{plan.desc}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white mb-2 text-left">{plan.name}</h3>
+                    <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 mb-4 leading-relaxed text-justify">{plan.desc}</p>
 
-                    <div className="border-t border-b border-slate-200 dark:border-navy-700/60 py-4 mb-6">
-                      <p className="text-base font-bold text-[#D4521A] dark:text-orange-400">{plan.scope}</p>
-                      <p className="text-[11px] text-[#5a4138] dark:text-slate-400 font-mono mt-0.5">Custom proposal based on team goals</p>
+                    <div className="border-t border-b border-slate-200 dark:border-navy-700/60 py-3 mb-4">
+                      <p className="text-sm sm:text-base font-bold text-[#D4521A] dark:text-orange-400 text-left">{plan.scope}</p>
+                      <p className="text-[11px] text-[#5a4138] dark:text-slate-400 font-mono mt-0.5 text-left">Custom proposal based on team goals</p>
                     </div>
 
-                    <ul className="space-y-3 mb-8 text-xs text-[#0d1b36] dark:text-slate-200">
+                    <ul className="space-y-2.5 mb-6 text-xs sm:text-sm text-[#0d1b36] dark:text-slate-200">
                       {plan.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start gap-2.5">
+                        <li key={fIdx} className="flex items-start gap-2.5 text-left">
                           <Check className="h-4 w-4 text-[#006c4d] dark:text-teal-400 shrink-0 mt-0.5" />
-                          <span>{feat}</span>
+                          <span className="text-left">{feat}</span>
                         </li>
                       ))}
                     </ul>
@@ -181,7 +233,7 @@ export default function PricingPage() {
 
                   <Link
                     href="/demo"
-                    className={`w-full py-3.5 rounded-xl font-bold text-xs text-center transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full py-3 rounded-xl font-bold text-xs sm:text-sm text-center transition-all flex items-center justify-center gap-2 ${
                       plan.popular
                         ? "bg-gradient-to-r from-[#F15E1C] to-[#D4521A] text-white hover:shadow-lg shadow-md"
                         : "bg-white dark:bg-navy-950 text-[#0d1b36] dark:text-slate-200 border border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-900"
@@ -195,41 +247,41 @@ export default function PricingPage() {
             </div>
 
             {/* Self-Hosted Truth Note */}
-            <div className="p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900/40 border border-slate-200 dark:border-navy-700/60 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed max-w-4xl mx-auto flex items-start gap-3">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#faf8ff] dark:bg-navy-900/40 border border-slate-200 dark:border-navy-700/60 text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed w-full flex items-start gap-3">
               <Info className="h-5 w-5 text-[#F15E1C] shrink-0 mt-0.5" />
-              <div className="text-justify">
+              <div className="text-justify flex-1">
                 <strong className="text-[#0d1b36] dark:text-slate-200 font-semibold block mb-0.5 text-left">Self-Hosted Deployment Truth:</strong>
-                "Customer controls infrastructure and runtime operations, but receives only Arav-distributed executable container artifacts, not the source repository or build/signing infrastructure."
+                &ldquo;Customer controls infrastructure and runtime operations, but receives only Arav-distributed executable container artifacts, not the source repository or build/signing infrastructure.&rdquo;
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 2: FAQS ACCORDION */}
-        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-left max-w-3xl mb-10">
-              <h2 className="text-2xl sm:text-3xl text-[#0d1b36] dark:text-white font-bold text-left">
+        <section className="w-full bg-[#f1f3ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-3xl font-bold text-[#0d1b36] dark:text-white text-left">
                 Frequently Asked Commercial Questions
               </h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {faqs.map((faq, idx) => (
                 <div key={idx} className="rounded-2xl border border-slate-300 dark:border-navy-700/60 bg-white dark:bg-navy-900 overflow-hidden shadow-sm">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left font-bold text-sm text-[#0d1b36] dark:text-slate-200 hover:text-[#F15E1C] dark:hover:text-orange-400 transition-colors"
+                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-bold text-xs sm:text-sm text-[#0d1b36] dark:text-slate-200 hover:text-[#F15E1C] dark:hover:text-orange-400 transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`h-4 w-4 text-[#F15E1C] transition-transform ${
+                      className={`h-4 w-4 text-[#F15E1C] transition-transform shrink-0 ml-2 ${
                         openFaq === idx ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {openFaq === idx && (
-                    <div className="p-5 pt-0 text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-navy-800 text-justify">
+                    <div className="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-navy-800 text-justify">
                       {faq.a}
                     </div>
                   )}
@@ -240,22 +292,26 @@ export default function PricingPage() {
         </section>
 
         {/* SECTION 3: CTA BANNER */}
-        <section className="w-full bg-[#faf8ff] dark:bg-navy-950/30 px-4 sm:px-6 lg:px-8 py-space-section text-left">
-          <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 text-left">
-              Ready for a transparent proposal?
-            </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl text-left text-justify">
-              Schedule a technical demonstration to discuss framework scoping, deployment models, and custom onboarding.
-            </p>
-            <div className="flex justify-start w-full">
-              <Link
-                href="/demo"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
-              >
-                <span>Request Proposal Walkthrough</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-8">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] border border-slate-300 dark:border-navy-700 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1 min-w-0 pr-4 sm:pr-6 text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left leading-tight">
+                  Ready for a transparent proposal?
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 text-left text-justify leading-relaxed max-w-2xl">
+                  Schedule a technical demonstration to discuss framework scoping, deployment models, and custom onboarding.
+                </p>
+              </div>
+              <div className="flex sm:justify-start md:justify-end shrink-0">
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center whitespace-nowrap"
+                >
+                  <span>Request Proposal Walkthrough</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

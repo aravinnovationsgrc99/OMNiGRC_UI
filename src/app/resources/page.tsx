@@ -83,17 +83,15 @@ export default function ResourcesHubPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-3 min-[360px]:px-4 sm:px-6 lg:px-8 pt-5 sm:pt-6 pb-6 sm:pb-8 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-6 xl:px-8 pt-5 sm:pt-6 pb-6 sm:pb-8 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="w-full max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-5 text-center leading-[1.25] sm:leading-tight px-1 sm:px-0">
-              <span className="block sm:inline">Practical Guides &amp; </span>
-              <span className="block sm:inline">Operational Frameworks </span>
-              <span className="block sm:inline">for lean GRC Teams .</span>
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto text-center">
+            <h1 className="w-full max-w-5xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-5 text-center leading-[1.25] sm:leading-tight px-1 sm:px-0">
+              Practical Guides &amp; Operational Frameworks <span className="text-[#F15E1C]">for Lean GRC Teams.</span>
             </h1>
 
-            <p className="max-w-3xl text-xs sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-center px-1">
+            <p className="max-w-4xl text-xs sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-center px-1">
               Explore canonical framework guides, product workflow walkthroughs, and practical GRC implementation methodologies.
             </p>
 
@@ -103,8 +101,8 @@ export default function ResourcesHubPage() {
                   <Sparkles className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white">OMNiGRC Editorial Blog</h4>
-                  <p className="text-xs text-[#5a4138] dark:text-slate-400">Read in-depth articles on risk registers, audit readiness &amp; GRC strategy.</p>
+                  <h4 className="text-sm font-bold text-[#0d1b36] dark:text-white text-left">OMNiGRC Editorial Blog</h4>
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 text-left">Read in-depth articles on risk registers, audit readiness &amp; GRC strategy.</p>
                 </div>
               </div>
               <Link
@@ -119,9 +117,9 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* FEATURED EDITORIAL ARTICLES */}
-        <section className="w-full bg-transparent px-3 min-[360px]:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8 text-left">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 text-left">
               <div>
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block text-left">
                   FEATURED EDITORIAL ARTICLES
@@ -139,19 +137,19 @@ export default function ResourcesHubPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <Link
                 href="/resources/blog/how-to-build-effective-cybersecurity-risk-register"
-                className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/40 text-amber-800 dark:text-amber-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
                     RISK MANAGEMENT
                   </span>
-                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2 text-left">
                     How to Build an Effective Cybersecurity Risk Register
                   </h3>
-                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-justify">
                     A step-by-step guide to identifying, assessing, prioritizing, and managing digital risks with a structured risk register.
                   </p>
                 </div>
@@ -163,16 +161,16 @@ export default function ResourcesHubPage() {
 
               <Link
                 href="/resources/blog/compliance-vs-pre-audit-preparation-what-businesses-need-to-know"
-                className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <span className="px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-950/40 text-teal-800 dark:text-teal-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
                     COMPLIANCE
                   </span>
-                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2 text-left">
                     Compliance vs. Pre-Audit Preparation: What Businesses Need to Know
                   </h3>
-                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-justify">
                     Why businesses should move from frantic pre-audit scrambles to continuous compliance management using GRC software.
                   </p>
                 </div>
@@ -184,16 +182,16 @@ export default function ResourcesHubPage() {
 
               <Link
                 href="/resources/blog/why-grc-matters-for-modern-businesses"
-                className="p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <span className="px-2.5 py-0.5 rounded-full bg-orange-100 dark:bg-orange-950/40 text-orange-800 dark:text-orange-400 font-mono text-[10px] font-bold uppercase mb-3 inline-block">
                     GOVERNANCE
                   </span>
-                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2 text-left">
                     Why GRC Matters for Modern Businesses
                   </h3>
-                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4">
+                  <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-justify">
                     How Governance, Risk, and Compliance creates clear accountability, improves risk visibility, and builds long-term resilience.
                   </p>
                 </div>
@@ -207,9 +205,9 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 1: CANONICAL FRAMEWORK GUIDES INDEX */}
-        <section className="w-full bg-transparent px-3 min-[360px]:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8 text-left">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6 text-left">
               <div>
                 <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block text-left">
                   CANONICAL FRAMEWORK GUIDES
@@ -227,7 +225,7 @@ export default function ResourcesHubPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {FRAMEWORKS.map((fw) => (
                 <Link
                   key={fw.code}
@@ -248,7 +246,7 @@ export default function ResourcesHubPage() {
                       {fw.name}
                     </h3>
                     <p className="font-mono text-xs text-[#F15E1C] dark:text-orange-400 font-semibold mb-2 text-left">{fw.headerDesc}</p>
-                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-left">{fw.oneLiner}</p>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-left text-justify">{fw.oneLiner}</p>
                   </div>
 
                   <div className="pt-3 border-t border-slate-200 dark:border-navy-700/60 flex items-center justify-between text-xs font-bold text-[#F15E1C] dark:text-orange-400">
@@ -262,35 +260,35 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 2: CANONICAL WORKFLOW MODULES INDEX */}
-        <section className="w-full bg-transparent px-3 min-[360px]:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-left max-w-3xl mb-6 sm:mb-8">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl xl:max-w-4xl mb-4 sm:mb-6">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block text-left">
-                WORKFLOW & PRODUCT MODULES
+                WORKFLOW &amp; PRODUCT MODULES
               </span>
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
                 10 Connected GRC Operating Modules
               </h2>
               <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1 sm:mt-2 text-left">
-                Detailed product documentation for OMNiGRC's core workflow modules.
+                Detailed product documentation for OMNiGRC&apos;s core workflow modules.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4">
               {PILLARS.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className="p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className="text-left">
                     <span className="font-mono text-[10px] text-[#F15E1C] font-bold uppercase tracking-wider block mb-1">
                       MODULE {p.badge}
                     </span>
-                    <h3 className="text-base font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2">
+                    <h3 className="text-base font-bold text-[#0d1b36] dark:text-white group-hover:text-[#F15E1C] dark:group-hover:text-orange-400 transition-colors mb-2 text-left">
                       {p.name}
                     </h3>
-                    <p className="text-2xs text-[#5a4138] dark:text-slate-400 leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-2xs text-[#5a4138] dark:text-slate-400 leading-relaxed line-clamp-3 mb-4 text-justify">
                       {p.oneLiner}
                     </p>
                   </div>
@@ -305,9 +303,9 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 3: OPERATIONAL METHODOLOGY GUIDES */}
-        <section className="w-full bg-transparent px-3 min-[360px]:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-left mb-6 sm:mb-8">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left mb-4 sm:mb-6">
               <span className="font-mono text-xs text-[#F15E1C] font-bold uppercase tracking-widest block text-left">
                 OPERATIONAL WHITEPAPERS
               </span>
@@ -316,7 +314,7 @@ export default function ResourcesHubPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 sm:mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
               {whitepapers.map((wp, idx) => (
                 <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-[#faf8ff] dark:bg-navy-950/50 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col justify-between">
                   <div className="text-left">
@@ -329,8 +327,8 @@ export default function ResourcesHubPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white mb-2">{wp.title}</h3>
-                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-6">{wp.desc}</p>
+                    <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white mb-2 text-left">{wp.title}</h3>
+                    <p className="text-xs text-[#5a4138] dark:text-slate-400 leading-relaxed mb-6 text-justify">{wp.desc}</p>
                   </div>
 
                   <Link
@@ -349,7 +347,7 @@ export default function ResourcesHubPage() {
               <div className="flex items-center gap-2 mb-4">
                 <Clock className="h-4 w-4 text-[#F15E1C]" />
                 <h3 className="font-mono text-xs font-bold text-[#0d1b36] dark:text-slate-200 uppercase tracking-wider text-left">
-                  Upcoming & Planned Resources (In Development)
+                  Upcoming &amp; Planned Resources (In Development)
                 </h3>
               </div>
 
@@ -359,8 +357,8 @@ export default function ResourcesHubPage() {
                     <span className="px-2 py-0.5 rounded bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300 font-mono text-[9px] font-bold uppercase mb-2 inline-block">
                       {pr.status}
                     </span>
-                    <h4 className="text-sm font-bold text-[#0d1b36] dark:text-slate-200 mb-1">{pr.title}</h4>
-                    <p className="text-2xs text-[#5a4138] dark:text-slate-400 leading-relaxed">{pr.desc}</p>
+                    <h4 className="text-sm font-bold text-[#0d1b36] dark:text-slate-200 mb-1 text-left">{pr.title}</h4>
+                    <p className="text-2xs text-[#5a4138] dark:text-slate-400 leading-relaxed text-justify">{pr.desc}</p>
                   </div>
                 ))}
               </div>
@@ -369,22 +367,26 @@ export default function ResourcesHubPage() {
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-3 min-[360px]:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 text-left">
-          <div className="max-w-4xl mx-auto text-left">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left leading-tight">
-              Need custom framework mapping assistance?
-            </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 max-w-2xl text-left">
-              Our team can walk you through crosswalking your existing policies and asset registers across target frameworks.
-            </p>
-            <div className="flex justify-start w-full">
-              <Link
-                href="/demo"
-                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-xs sm:text-sm text-center"
-              >
-                <span>Request Framework Walkthrough</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-8">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] border border-slate-300 dark:border-navy-700 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1 min-w-0 pr-4 sm:pr-6 text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left leading-tight">
+                  Need custom framework mapping assistance?
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 text-left text-justify leading-relaxed max-w-2xl">
+                  Our team can walk you through crosswalking your existing policies and asset registers across target frameworks.
+                </p>
+              </div>
+              <div className="flex sm:justify-start md:justify-end shrink-0">
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center whitespace-nowrap"
+                >
+                  <span>Request Framework Walkthrough</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

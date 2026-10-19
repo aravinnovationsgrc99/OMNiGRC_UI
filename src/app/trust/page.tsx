@@ -38,17 +38,15 @@ export default function TrustPage() {
 
       <main className="flex-1 w-full pt-16">
         {/* HERO SECTION */}
-        <section className="relative w-full px-3 min-[360px]:px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
+        <section className="relative w-full px-4 sm:px-6 lg:px-6 xl:px-8 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-3 sm:pb-6 lg:pb-6 xl:pb-8 overflow-hidden border-b border-slate-200 dark:border-navy-700/60 bg-grid-mesh-adaptive">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
-          <div className="w-full max-w-5xl xl:max-w-6xl mx-auto text-center">
-            <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center w-full max-w-full md:max-w-4xl lg:max-w-5xl leading-[1.12] sm:leading-tight">
-              <span className="block md:inline">Transparent </span>
-              <span className="block md:inline whitespace-nowrap min-[768px]:whitespace-normal">security boundaries. </span>
-              <span className="block md:inline text-[#F15E1C] dark:text-orange-500 whitespace-nowrap min-[768px]:whitespace-normal">Human-governed AI.</span>
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto text-center">
+            <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[40px] xl:text-[46px] 2xl:text-[50px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-4 text-center w-full lg:whitespace-nowrap leading-[1.15]">
+              Transparent security boundaries. <span className="text-[#F15E1C] dark:text-orange-500">Human-governed AI.</span>
             </h1>
 
-            <p className="max-w-xl sm:max-w-2xl md:max-w-3xl text-xs min-[360px]:text-sm sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-6 sm:mb-8 leading-relaxed text-center px-2 sm:px-0">
+            <p className="max-w-xl sm:max-w-2xl md:max-w-3xl text-xs min-[360px]:text-sm sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-center px-2 sm:px-0">
               OMNiGRC is engineered with application-level tenant isolation, advisory AI data minimization, and defensible audit trails to protect your organizational GRC telemetry.
             </p>
 
@@ -65,18 +63,18 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 1: CORE ARCHITECTURE PILLARS */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl xl:max-w-4xl mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
                 Architectural Foundations
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left sm:text-center">
+              <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
                 Clear technical parameters defining how OMNiGRC handles data, AI evaluation, and tenant isolation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 items-stretch">
               {/* Pillar 1 */}
               <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#0A111F] border border-slate-200 dark:border-navy-700/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
                 <div className="flex items-start gap-3.5 sm:gap-4">
@@ -243,18 +241,18 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 2: DEPLOYMENT MODEL ARCHITECTURE */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
-                Deployment Models & Operational Boundaries
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl xl:max-w-4xl mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
+                Deployment Models &amp; Operational Boundaries
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left sm:text-center">
+              <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
                 Accurate deployment classifications tailored to team infrastructure requirements.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 mb-5 sm:mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-5 items-stretch">
               {/* Model 1: MSSP_SHARED */}
               <div className="bg-white dark:bg-navy-900 rounded-2xl p-5 sm:p-6 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between hover:border-[#F15E1C]/40 dark:hover:border-orange-500/40 hover:shadow-md transition-all duration-200 group">
                 <div>
@@ -265,7 +263,7 @@ export default function TrustPage() {
                     <Building2 className="h-4 w-4 text-[#F15E1C] group-hover:scale-110 transition-transform duration-200" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white mb-2 text-left">Shared Multi-Tenant SaaS</h3>
-                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-justify">
+                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-left">
                     Fast deployment for lean security teams with application-level tenant isolation, automated updates, and managed infrastructure operations.
                   </p>
                 </div>
@@ -289,7 +287,7 @@ export default function TrustPage() {
                     <KeyRound className="h-4 w-4 text-[#F15E1C] group-hover:scale-110 transition-transform duration-200" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white mb-2 text-left">Dedicated Single-Tenant Instance</h3>
-                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-justify">
+                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-left">
                     Dedicated application environment for managed service providers and enterprise teams requiring dedicated runtime boundaries.
                   </p>
                 </div>
@@ -313,7 +311,7 @@ export default function TrustPage() {
                     <HardDrive className="h-4 w-4 text-[#F15E1C] group-hover:scale-110 transition-transform duration-200" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#0d1b36] dark:text-white mb-2 text-left">Customer-Controlled Docker Runtime</h3>
-                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-justify">
+                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed mb-4 text-left">
                     Customer controls infrastructure and runtime operations, receiving Arav-distributed container artifacts for internal hosting.
                   </p>
                 </div>
@@ -329,7 +327,7 @@ export default function TrustPage() {
             </div>
 
             {/* Self-Hosted Clarification Box */}
-            <div className="p-4 sm:p-5 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed w-full text-justify">
+            <div className="p-4 sm:p-5 rounded-xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 leading-relaxed w-full text-left">
               <strong className="text-[#0d1b36] dark:text-slate-200 font-semibold block mb-1 text-left">Self-Hosted Deployment Specification:</strong>
               &ldquo;Under the Self-Hosted model, the customer controls infrastructure and runtime operations, but receives only Arav-distributed executable container artifacts, not the source repository or build/signing infrastructure.&rdquo;
             </div>
@@ -337,18 +335,18 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 3: PRODUCT TRUTH BOUNDARIES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto">
-            <div className="text-left sm:text-center max-w-3xl xl:max-w-4xl mx-auto mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left sm:text-center">
-                What We Do & Do Not Claim
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl xl:max-w-4xl mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
+                What We Do &amp; Do Not Claim
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1.5 text-left sm:text-center">
+              <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
                 Honest, audit-defensible capabilities without marketing hyperbole.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-stretch">
               {/* What We Support */}
               <div className="p-5 sm:p-6 rounded-2xl bg-[#faf8ff] dark:bg-navy-900/60 border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between hover:border-[#006c4d]/40 dark:hover:border-teal-500/40 hover:shadow-md transition-all duration-200">
                 <div>
@@ -415,23 +413,26 @@ export default function TrustPage() {
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8 sm:py-10 md:py-12">
-          <div className="w-full max-w-5xl xl:max-w-[1500px] 2xl:max-w-[1750px] mx-auto text-center">
-            <h2 className="text-[21px] min-[360px]:text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-center leading-tight">
-              <span className="block sm:inline">Discuss your Security &amp; </span>
-              <span className="block sm:inline whitespace-nowrap">Architecture Requirements.</span>
-            </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto text-center">
-              Schedule a technical walkthrough to review tenant boundaries, advisory AI data minimization, and deployment options.
-            </p>
-            <div className="flex justify-center w-full">
-              <Link
-                href="/demo"
-                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center"
-              >
-                <span>Request Architecture Walkthrough</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] border border-slate-300 dark:border-navy-700 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1 min-w-0 pr-4 sm:pr-6 text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left leading-tight">
+                  Discuss your Security &amp; Architecture Requirements.
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 text-left leading-relaxed max-w-2xl">
+                  Schedule a technical walkthrough to review tenant boundaries, advisory AI data minimization, and deployment options.
+                </p>
+              </div>
+              <div className="flex sm:justify-start md:justify-end shrink-0">
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center whitespace-nowrap"
+                >
+                  <span>Request Architecture Walkthrough</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
