@@ -41,12 +41,14 @@ export default function LeanSecurityTeamsPage() {
             <div className="lg:col-span-7 flex flex-col justify-between items-start gap-4 sm:gap-5 w-full">
               <div className="flex flex-col gap-2.5 sm:gap-3.5 w-full">
                 {/* Headline */}
-                <h1 className="text-[22px] min-[360px]:text-2xl min-[400px]:text-[28px] sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left w-full">
-                  Stop spreadsheet sprawl. Run GRC with a <span className="text-primary">lean, connected workflow</span>.
+                <h1 className="text-[24px] min-[360px]:text-[28px] min-[400px]:text-[32px] sm:text-4xl lg:text-[44px] xl:text-[48px] 2xl:text-[52px] text-slate-900 dark:text-white font-extrabold tracking-tight leading-tight text-justify sm:text-left w-full">
+                  <span className="block sm:inline">Stop spreadsheet sprawl. </span>
+                  <span className="block sm:inline">Run GRC with a </span>
+                  <span className="block sm:inline text-primary">lean, connected workflow.</span>
                 </h1>
 
                 {/* Subhead */}
-                <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left w-full">
+                <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-justify sm:text-left w-full">
                   When one or two practitioners manage risk, vendor reviews, and recurring testing, fragmented sheets cause instant drift. OMNiGRC unites your core governance in one operating layer.
                 </p>
 

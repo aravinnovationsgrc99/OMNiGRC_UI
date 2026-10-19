@@ -44,9 +44,11 @@ export default function EvidencePage() {
                 {/* Left Column: Copy, Actions & Key Metrics */}
                 <div className="lg:col-span-7 flex flex-col justify-between items-start gap-4 sm:gap-5 w-full">
                   <div className="flex flex-col gap-2.5 sm:gap-3.5 w-full">
-                    <h1 className="text-[22px] min-[360px]:text-2xl min-[400px]:text-[28px] sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left w-full">
-                      Evidence References &amp; Records:{" "}
-                      <span className="text-[#F15E1C] block sm:inline">External Proof</span>
+                    <h1 className="text-[20px] min-[350px]:text-[22px] min-[400px]:text-[26px] sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left w-full">
+                      <span className="block">Evidence References &amp;</span>
+                      <span className="block">
+                        Records: <span className="text-[#F15E1C]">External Proof</span>
+                      </span>
                     </h1>
                     <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
                       Maintain an auditable, structured index of production proof, cloud telemetry references, and external workpaper links. Point directly to your existing systems of record (AWS, Okta, GitHub, Jira) while preserving complete clear chain of custody for external auditors.

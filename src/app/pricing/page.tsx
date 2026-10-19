@@ -107,9 +107,9 @@ export default function PricingPage() {
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto text-center flex flex-col items-center">
-            {/* 2-Line Heading with Orange GRC Operations */}
             <h1 className="w-full max-w-6xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[68px] 2xl:text-[72px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-4 sm:mb-5 text-center leading-[1.08]">
-              <span className="block">Practical Commercial Scoping for</span>
+              <span className="block sm:inline">Practical Commercial </span>
+              <span className="block sm:inline">Scoping for</span>
               <span className="block text-[#F15E1C]">GRC Operations</span>
             </h1>
 

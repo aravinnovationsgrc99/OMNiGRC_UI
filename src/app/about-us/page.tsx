@@ -15,12 +15,10 @@ export default function AboutUsPage() {
       <main className="flex-1">
         <PageHero
           title={
-            <>
-              <span className="block">Empowering lean</span>
-              <span className="block">GRC teams with</span>
-              <span className="block">connected, practical</span>
-              <span className="block">operations.</span>
-            </>
+            <span className="block text-center lg:text-left">
+              <span className="block sm:inline">Connecting GRC operations </span>
+              <span className="block sm:inline">for lean teams.</span>
+            </span>
           }
           subtitle="We built OMNiGRC to eliminate operational chaos between disconnected spreadsheets and overly complex enterprise suites. We believe GRC should be structured, connected, and human-supervised."
           visual={<GenericHeroMotif type="about" />}

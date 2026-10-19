@@ -90,7 +90,8 @@ export default function DemoPage() {
 
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="max-w-4xl text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mx-auto mb-3 sm:mb-6 text-center leading-tight">
-              Request a walkthrough of the OMNiGRC platform.
+              <span className="block sm:inline">Request a walkthrough of </span>
+              <span className="block sm:inline">the OMNiGRC platform.</span>
             </h1>
 
             <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-1 sm:mb-4 leading-relaxed text-justify sm:text-center">
@@ -105,7 +106,7 @@ export default function DemoPage() {
             {/* Left Column: Expectations & Benefits */}
             <div className="lg:col-span-6 space-y-6 sm:space-y-8">
               <div className="text-left">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left">
+                <h2 className="text-[17px] min-[360px]:text-lg min-[400px]:text-xl sm:text-2xl lg:text-3xl text-[#0d1b36] dark:text-white font-bold tracking-tight text-left whitespace-nowrap sm:whitespace-normal">
                   Tailored Technical Walkthrough
                 </h2>
                 <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-400 mt-2 leading-relaxed text-left text-justify">
