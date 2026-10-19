@@ -112,13 +112,13 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 2: EXECUTIVE PAIN POINTS */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-y border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3 sm:py-4.5 lg:py-5 xl:py-6 border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="w-full mb-4 sm:mb-6 text-left">
+            <div className="w-full mb-3.5 sm:mb-5 text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Bridging the gap between board reporting and operational truth.
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify max-w-3xl">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify max-w-3xl">
                 Security leaders are often forced to choose between high-level subjective surveys and overwhelming technical noise.
               </p>
             </div>
@@ -176,12 +176,12 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 3: STRATEGIC CAPABILITIES */}
-        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
-          <div className="w-full mb-4 sm:mb-6 text-left">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3 sm:py-4.5 lg:py-5 xl:py-6">
+          <div className="w-full mb-3.5 sm:mb-5 text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Defensible GRC oversight built on connected telemetry.
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify max-w-3xl">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify max-w-3xl">
               Equip your leadership team with structured controls, asset-centric risk scoring, and verified audit workpapers.
             </p>
           </div>
@@ -266,7 +266,7 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 3.5: EXECUTIVE COLLABORATION VISUAL BANNER */}
-        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3 sm:py-4.5 lg:py-5 xl:py-6">
           <div className="relative rounded-3xl overflow-hidden border border-slate-300 dark:border-navy-700 shadow-xl bg-slate-900">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
               <div className="lg:col-span-7 relative h-[260px] sm:h-[340px] w-full">
@@ -291,14 +291,14 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 4: INTERACTIVE EXECUTIVE FLOW */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3 sm:py-4.5 lg:py-5 xl:py-6 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-4 sm:mb-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-3.5 sm:mb-5">
               <div>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                   Risk → Exposure → Action → Verification
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 max-w-3xl leading-relaxed text-justify">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 max-w-3xl leading-relaxed text-justify">
                   Click each stage below to inspect how an infrastructure signal transitions through human review to an auditor-verified workpaper.
                 </p>
               </div>
@@ -477,12 +477,12 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 5: RELEVANT EXECUTIVE MODULES */}
-        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
-          <div className="w-full mb-4 sm:mb-6 text-left">
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3 sm:py-4.5 lg:py-5 xl:py-6">
+          <div className="w-full mb-3.5 sm:mb-5 text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Executive Modules Built for Clarity
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify max-w-3xl">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify max-w-3xl">
               Explore the core OMNiGRC operational workflows designed specifically for high-assurance security leaders.
             </p>
           </div>
@@ -555,25 +555,25 @@ export default function SecurityLeadersPage() {
         </section>
 
         {/* SECTION 6: BOTTOM CTA */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-5 lg:py-6 xl:py-7 border-t border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-8 lg:p-10 text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
-              <div className="relative z-10 max-w-4xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg border border-slate-300 dark:border-navy-700 flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1 min-w-0 pr-4 sm:pr-6 text-left">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-3 text-left leading-tight">
                   Bring defensible oversight to your security program.
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed max-w-2xl">
                   Connect executive risk reporting directly to operational reality with OMNiGRC.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
-                  <Link
-                    href="/demo"
-                    className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow-md transition-all text-center"
-                  >
-                    <LayoutDashboard className="w-4 h-4" />
-                    <span>Schedule CISO Executive Briefing</span>
-                  </Link>
-                </div>
+              </div>
+              <div className="flex sm:justify-start md:justify-end shrink-0">
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center whitespace-nowrap"
+                >
+                  <LayoutDashboard className="w-4 h-4" />
+                  <span>Schedule CISO Executive Briefing</span>
+                </Link>
               </div>
             </div>
           </div>

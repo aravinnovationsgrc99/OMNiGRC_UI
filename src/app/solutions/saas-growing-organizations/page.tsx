@@ -107,16 +107,13 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 2: PAIN POINTS */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-y border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3 sm:py-4.5 lg:py-5 xl:py-6 border-y border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="text-left max-w-3xl mb-4 sm:mb-6">
-              <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
-                THE SAAS SCALING CHALLENGE
-              </div>
+            <div className="text-left max-w-3xl mb-3.5 sm:mb-5">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Governance complexity shouldn't slow down product momentum.
               </h2>
-              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify">
                 Growing SaaS teams face mounting customer security questionnaires, vendor reviews, and multi-framework demands.
               </p>
             </div>
@@ -128,7 +125,7 @@ export default function SaaSGrowingOrganizationsPage() {
                     <Building2 className="w-5 h-5" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Enterprise Deal Friction</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                     Prospects demand SOC 2 Type II and ISO 27001 proof before signing contracts, stalling sales velocity.
                   </p>
                 </div>
@@ -144,7 +141,7 @@ export default function SaaSGrowingOrganizationsPage() {
                     <Network className="w-5 h-5" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Vendor &amp; Sub-processor Sprawl</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                     Adopting new cloud tools without structured third-party risk tracking introduces unmonitored supply-chain risks.
                   </p>
                 </div>
@@ -160,7 +157,7 @@ export default function SaaSGrowingOrganizationsPage() {
                     <Scale className="w-5 h-5" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Multi-Framework Overlap</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                     Adding HIPAA, ISO 42001, or DPDP Act compliance on top of SOC 2 causes duplicate work when managed manually.
                   </p>
                 </div>
@@ -174,15 +171,12 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 3: SOLUTION CAPABILITIES */}
-        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
-          <div className="text-left max-w-3xl mb-4 sm:mb-6">
-            <div className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold">
-              GROWTH GOVERNANCE CAPABILITIES
-            </div>
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3 sm:py-4.5 lg:py-5 xl:py-6">
+          <div className="text-left max-w-3xl mb-3.5 sm:mb-5">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Built to scale with your architecture and customer requirements.
             </h2>
-            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
+            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify">
               Structure reusable controls, manage vendor dependencies, and maintain continuous audit readiness.
             </p>
           </div>
@@ -197,7 +191,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">REUSABLE BASELINES</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Reusable Control Baselines</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   Establish core safeguards once and map them across expanding customer requirements and security frameworks.
                 </p>
               </div>
@@ -216,7 +210,7 @@ export default function SaaSGrowingOrganizationsPage() {
                   <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-navy-800 text-slate-900 dark:text-white border border-slate-300 dark:border-navy-700">VENDOR RISK</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-left">Vendor &amp; Sub-processor Governance</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                   Track SaaS vendor dependencies, security attestations, and DPDP sub-processor agreements in a single inventory.
                 </p>
               </div>
@@ -229,16 +223,13 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 4: INTERACTIVE SCALING PIPELINE */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3 sm:py-4.5 lg:py-5 xl:py-6 border-y border-slate-200 dark:border-navy-700/60" id="operating-model">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="text-left max-w-3xl mb-4 sm:mb-6">
-              <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
-                ILLUSTRATIVE SCALING PIPELINE (DEMO DATA)
-              </div>
+            <div className="text-left max-w-3xl mb-3.5 sm:mb-5">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
                 Growth Milestone → Governance Requirement → Safeguard → Audit Readiness
               </h2>
-              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
+              <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify">
                 Click each step below to inspect how organizational growth triggers structured governance expansion.
               </p>
             </div>
@@ -302,8 +293,8 @@ export default function SaaSGrowingOrganizationsPage() {
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-primary">STEP 01: GROWTH MILESTONE</span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Moving Up-Market to Enterprise Clients</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-left">Moving Up-Market to Enterprise Clients</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Securing enterprise deals requires proving security posture and continuous control maintenance.
                     </p>
                   </div>
@@ -318,8 +309,8 @@ export default function SaaSGrowingOrganizationsPage() {
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">STEP 02: GOVERNANCE REQUIREMENT</span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">SOC 2 Type II &amp; ISO 27001 Alignment</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-left">SOC 2 Type II &amp; ISO 27001 Alignment</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Establish baseline framework requirements without building isolated spreadsheet silos.
                     </p>
                   </div>
@@ -334,8 +325,8 @@ export default function SaaSGrowingOrganizationsPage() {
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-primary">STEP 03: REUSABLE SAFEGUARD</span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Unified Control Execution</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-left">Unified Control Execution</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Define baseline controls once and let Advisory AI suggest crosswalks to SOC 2 and ISO 27001 clauses.
                     </p>
                   </div>
@@ -350,8 +341,8 @@ export default function SaaSGrowingOrganizationsPage() {
                 <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                   <div className="flex flex-col gap-3 max-w-xl">
                     <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">STEP 04: AUDIT READINESS</span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Auditor-Verified Workpaper Dossiers</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white text-left">Auditor-Verified Workpaper Dossiers</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                       Package evidence references into read-only dossiers for auditor fieldwork.
                     </p>
                   </div>
@@ -366,15 +357,12 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 5: RELEVANT MODULES */}
-        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
-          <div className="text-left max-w-3xl mb-4 sm:mb-6">
-            <div className="font-mono text-xs text-primary uppercase tracking-wider mb-2 font-semibold">
-              ORCHESTRATED MODULES
-            </div>
+        <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3 sm:py-4.5 lg:py-5 xl:py-6">
+          <div className="text-left max-w-3xl mb-3.5 sm:mb-5">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-left">
               Core Modules for Growing SaaS
             </h2>
-            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
+            <p className="text-left text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed text-justify">
               Adopt specialized GRC modules as your governance program scales.
             </p>
           </div>
@@ -447,25 +435,25 @@ export default function SaaSGrowingOrganizationsPage() {
         </section>
 
         {/* SECTION 6: BOTTOM CTA */}
-        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-t border-slate-200 dark:border-navy-700/60">
+        <section className="w-full bg-slate-50 dark:bg-[#16233F]/60 py-3.5 sm:py-5 lg:py-6 xl:py-7 border-t border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-8 lg:p-10 text-center relative overflow-hidden shadow-lg border border-slate-300 dark:border-navy-700">
-              <div className="relative z-10 max-w-4xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-3">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg border border-slate-300 dark:border-navy-700 flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1 min-w-0 pr-4 sm:pr-6 text-left">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 sm:mb-3 text-left leading-tight">
                   Scale your SaaS security governance with confidence.
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-5 sm:mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 text-left text-justify leading-relaxed max-w-2xl">
                   Accelerate enterprise deal velocity with OMNiGRC's connected governance operating layer.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
-                  <Link
-                    href="/demo"
-                    className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow-md transition-all text-center"
-                  >
-                    <Zap className="w-4 h-4" />
-                    <span>Request SaaS Growth Walkthrough</span>
-                  </Link>
-                </div>
+              </div>
+              <div className="flex sm:justify-start md:justify-end shrink-0">
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center whitespace-nowrap"
+                >
+                  <Zap className="w-4 h-4" />
+                  <span>Request SaaS Growth Walkthrough</span>
+                </Link>
               </div>
             </div>
           </div>

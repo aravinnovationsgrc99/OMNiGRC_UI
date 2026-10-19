@@ -387,13 +387,13 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 2: THE PROBLEM VS SOLUTION */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-left max-w-3xl mb-5 sm:mb-6">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-5 lg:py-5 xl:py-6 border-b border-slate-200 dark:border-navy-700/60" id="solution-details">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl mb-4 sm:mb-5">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white text-left">
                 From Friction &amp; Drift to Connected Governance
               </h2>
-              <p className="text-left text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-2 text-justify sm:text-left">
+              <p className="text-left text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mt-1.5 text-justify sm:text-left">
                 See how OMNiGRC addresses core team friction with structured, automated workflows.
               </p>
             </div>
@@ -409,7 +409,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                       </div>
                       <div className="w-full">
                         <h4 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white text-left tracking-tight mb-1">{c.title}</h4>
-                        <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left">{c.desc}</p>
+                        <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left text-justify">{c.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -426,7 +426,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                       </div>
                       <div className="w-full">
                         <h4 className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-white text-left tracking-tight mb-1">{s.title}</h4>
-                        <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left">{s.desc}</p>
+                        <p className="text-xs text-[#5a4138] dark:text-slate-300 leading-relaxed text-left text-justify">{s.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -437,9 +437,9 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 3: CAPABILITY MODULES */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 border-b border-slate-200 dark:border-navy-700/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-left max-w-3xl mb-5 sm:mb-6">
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-5 lg:py-5 xl:py-6 border-b border-slate-200 dark:border-navy-700/60">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="text-left max-w-3xl mb-4 sm:mb-5">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0d1b36] dark:text-white text-left">
                 Everything Connected to Your Lifecycle
               </h2>
@@ -462,7 +462,7 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                       <h3 className="text-sm min-[380px]:text-[15px] sm:text-base font-bold text-[#0d1b36] dark:text-white mb-1 sm:mb-2 text-left tracking-tight">
                         {cap.title}
                       </h3>
-                      <p className="text-[11.5px] min-[380px]:text-xs text-[#5a4138] dark:text-slate-400 leading-normal sm:leading-relaxed text-left">
+                      <p className="text-[11.5px] min-[380px]:text-xs text-[#5a4138] dark:text-slate-400 leading-normal sm:leading-relaxed text-left text-justify">
                         {cap.desc}
                       </p>
                     </div>
@@ -474,22 +474,26 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
         </section>
 
         {/* SECTION 4: CTA BANNER */}
-        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 text-left">
-          <div className="max-w-4xl text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left">
-              Ready to see {sol.title}?
-            </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 max-w-2xl text-left text-justify sm:text-left leading-relaxed">
-              Schedule a focused demonstration with a GRC specialist tailored to your team&apos;s operational scope.
-            </p>
-            <div className="flex flex-col sm:flex-row items-start justify-start gap-3 sm:gap-4 w-full">
-              <Link
-                href="/demo"
-                className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg transition-all shadow-md text-center"
-              >
-                <span>Request Solution Walkthrough</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+        <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-6 xl:py-7 text-left">
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
+            <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 dark:from-[#0A111F] dark:to-[#16233F] border border-slate-300 dark:border-navy-700 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1 min-w-0 pr-4 sm:pr-6 text-left">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-2 sm:mb-3 text-left leading-tight">
+                  Ready to see {sol.title}?
+                </h2>
+                <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 text-left text-justify leading-relaxed max-w-2xl">
+                  Schedule a focused demonstration with a GRC specialist tailored to your team&apos;s operational scope.
+                </p>
+              </div>
+              <div className="flex sm:justify-start md:justify-end shrink-0">
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm text-center whitespace-nowrap"
+                >
+                  <span>Request Solution Walkthrough</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
