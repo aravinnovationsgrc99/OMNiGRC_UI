@@ -629,10 +629,6 @@ export default function RiskRegisterPage() {
         <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-200 dark:bg-navy-700 text-left">
           <div className="max-w-7xl mx-auto rounded-xl bg-white dark:bg-[#0A111F] p-4 sm:p-8 lg:p-12 shadow-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-8 text-left">
             <div className="space-y-2 sm:space-y-3 max-w-2xl flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 text-xs">
-                <Circle className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
-                <span className="text-left">Zero Stale Spreadsheets</span>
-              </div>
               <h2 className="text-[18px] min-[350px]:text-[20px] min-[380px]:text-[22px] sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
                 Tired of maintaining stale risk spreadsheets?
               </h2>
@@ -656,7 +652,6 @@ export default function RiskRegisterPage() {
         <section className="w-full px-4 sm:px-8 pb-6 sm:pb-12 lg:pb-8 text-left">
           <div className="max-w-7xl mx-auto p-3.5 sm:p-5 lg:p-6 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-left gap-3 sm:gap-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-3 text-left">
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-[10px] sm:text-xs font-bold uppercase text-left shrink-0">EDITORIAL GUIDE</span>
               <div className="text-left">
                 <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white text-left">How to Build an Effective Cybersecurity Risk Register</h4>
                 <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 text-justify">Step-by-step methodology for identifying, assessing, and managing digital risks.</p>
