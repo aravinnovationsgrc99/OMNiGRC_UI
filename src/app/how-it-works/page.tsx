@@ -272,7 +272,7 @@ export default function HowItWorksPage() {
             The Connected GRC <span className="text-[#F15E1C]">Operating Lifecycle</span>
           </h1>
 
-          <p className="max-w-4xl xl:max-w-5xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-center">
+          <p className="max-w-4xl xl:max-w-5xl text-xs sm:text-base md:text-lg text-[#5a4138] dark:text-slate-300 font-medium mx-auto mb-5 sm:mb-6 leading-relaxed text-justify sm:text-center">
             See how OMNiGRC unites risk registers, assets, control mapping, policies, compliance tasks, audits, evidence references, remediation, and governance intelligence into one coherent operating model.
           </p>
 
@@ -294,32 +294,32 @@ export default function HowItWorksPage() {
           </div>
 
           {/* High-level Telemetry Bar */}
-          <div className="w-full bg-white dark:bg-navy-950/60 border border-slate-200 dark:border-navy-700/60 rounded-2xl p-4 sm:p-5 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
-            <div className="flex flex-col border-r border-slate-200 dark:border-navy-700/60 pr-2">
+          <div className="w-full bg-white dark:bg-navy-950/60 border border-slate-200 dark:border-navy-700/60 rounded-2xl p-3.5 sm:p-5 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+            <div className="flex flex-col border-r border-slate-200 dark:border-navy-700/60 pr-2 sm:pr-3">
               <span className="font-mono text-[10px] sm:text-[11px] text-[#5a4138] dark:text-slate-400 uppercase tracking-wider">Operational Cadence</span>
-              <span className="text-sm sm:text-base font-bold text-[#006c4d] dark:text-teal-400 flex items-center gap-1 mt-0.5">
-                <Clock className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> Scheduled
+              <span className="text-xs sm:text-base font-bold text-[#006c4d] dark:text-teal-400 flex items-center gap-1 mt-0.5">
+                <Clock className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" /> Scheduled
               </span>
-              <span className="text-[11px] sm:text-xs text-[#5a4138] dark:text-slate-400">Audited 30/60/90-day task runs</span>
+              <span className="text-[10px] sm:text-xs text-[#5a4138] dark:text-slate-400 mt-0.5">Audited 30/60/90-day task runs</span>
             </div>
-            <div className="flex flex-col border-r border-slate-200 dark:border-navy-700/60 pr-2">
+            <div className="flex flex-col border-r-0 md:border-r border-slate-200 dark:border-navy-700/60 pl-1 sm:pl-0 pr-0 md:pr-3">
               <span className="font-mono text-[10px] sm:text-[11px] text-[#5a4138] dark:text-slate-400 uppercase tracking-wider">Cross-Framework Reuse</span>
-              <span className="text-sm sm:text-base font-bold text-[#F15E1C] dark:text-orange-400 mt-0.5">Map Once</span>
-              <span className="text-[11px] sm:text-xs text-[#5a4138] dark:text-slate-400">Across 6 global standards</span>
+              <span className="text-xs sm:text-base font-bold text-[#F15E1C] dark:text-orange-400 mt-0.5">Map Once</span>
+              <span className="text-[10px] sm:text-xs text-[#5a4138] dark:text-slate-400 mt-0.5">Across 6 global standards</span>
             </div>
-            <div className="flex flex-col border-r border-slate-200 dark:border-navy-700/60 pr-2">
+            <div className="flex flex-col border-r border-slate-200 dark:border-navy-700/60 pr-2 sm:pr-3 border-t md:border-t-0 pt-2.5 md:pt-0">
               <span className="font-mono text-[10px] sm:text-[11px] text-[#5a4138] dark:text-slate-400 uppercase tracking-wider">Advisory AI</span>
-              <span className="text-sm sm:text-base font-bold text-[#795600] dark:text-amber-400 flex items-center gap-1 mt-0.5">
-                <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> Human Review
+              <span className="text-xs sm:text-base font-bold text-[#795600] dark:text-amber-400 flex items-center gap-1 mt-0.5">
+                <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" /> Human Review
               </span>
-              <span className="text-[11px] sm:text-xs text-[#5a4138] dark:text-slate-400">Mandatory approval on suggestions</span>
+              <span className="text-[10px] sm:text-xs text-[#5a4138] dark:text-slate-400 mt-0.5">Mandatory approval on suggestions</span>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col pl-1 sm:pl-0 border-t md:border-t-0 pt-2.5 md:pt-0">
               <span className="font-mono text-[10px] sm:text-[11px] text-[#5a4138] dark:text-slate-400 uppercase tracking-wider">Audit Records</span>
-              <span className="text-sm sm:text-base font-bold text-[#0d1b36] dark:text-slate-200 mt-0.5 flex items-center gap-1">
-                <FileCheck2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-teal-400" /> Event Logged
+              <span className="text-xs sm:text-base font-bold text-[#0d1b36] dark:text-slate-200 mt-0.5 flex items-center gap-1">
+                <FileCheck2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#006c4d] dark:text-teal-400 shrink-0" /> Event Logged
               </span>
-              <span className="text-[11px] sm:text-xs text-[#5a4138] dark:text-slate-400">Documented governance trail</span>
+              <span className="text-[10px] sm:text-xs text-[#5a4138] dark:text-slate-400 mt-0.5">Documented governance trail</span>
             </div>
           </div>
         </section>
@@ -331,7 +331,7 @@ export default function HowItWorksPage() {
               <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold tracking-tight mt-1 text-left">
                 The 9-Stage Operating Lifecycle
               </h2>
-              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1 text-left">
+              <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mt-1 text-left break-words">
                 Risk → Assets → Controls → Policies → Compliance → Audits → Evidence → Remediation → Governance Intelligence
               </p>
             </div>
@@ -364,8 +364,8 @@ export default function HowItWorksPage() {
             {/* Stage Narrative (7 Cols) */}
             <div className="lg:col-span-7 bg-white dark:bg-navy-900 p-5 sm:p-6 rounded-2xl border border-slate-300 dark:border-navy-700/60 shadow-sm flex flex-col justify-between hover:border-[#F15E1C]/30 transition-colors">
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-xs font-bold text-[#F15E1C] dark:text-orange-400 uppercase tracking-wider bg-[#ffdbcf] dark:bg-orange-950/40 px-3 py-1 rounded-full">
+                <div className="flex flex-col min-[480px]:flex-row min-[480px]:items-center justify-between gap-2 min-[480px]:gap-0 mb-3">
+                  <span className="font-mono text-xs font-bold text-[#F15E1C] dark:text-orange-400 uppercase tracking-wider bg-[#ffdbcf] dark:bg-orange-950/40 px-3 py-1 rounded-full w-fit">
                     STAGE {activeData.num} • {activeData.badge}
                   </span>
                   <span className="text-xs font-semibold text-[#006c4d] dark:text-teal-400 flex items-center gap-1">
@@ -394,7 +394,7 @@ export default function HowItWorksPage() {
                 </div>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-slate-200 dark:border-navy-700/60 flex items-center justify-between">
+              <div className="mt-5 pt-3 border-t border-slate-200 dark:border-navy-700/60 flex flex-col min-[420px]:flex-row min-[420px]:items-center justify-between gap-2 min-[420px]:gap-0">
                 <span className="text-xs font-mono text-[#5a4138] dark:text-slate-400">
                   Tenant Isolated • Human Governed Workflow
                 </span>
@@ -408,7 +408,7 @@ export default function HowItWorksPage() {
             {/* Stage Data Record Schema (5 Cols) */}
             <div className="lg:col-span-5 bg-[#23304c] text-white p-5 sm:p-6 rounded-2xl shadow-xl border border-[#23304c] flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
+                <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 sm:gap-0 pb-3 border-b border-white/10 mb-3">
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block" />
@@ -425,7 +425,7 @@ export default function HowItWorksPage() {
                 </pre>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+              <div className="mt-4 pt-3 border-t border-white/10 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 sm:gap-0 text-xs text-slate-300">
                 <span>Pipeline: <code className="text-[#ffb59a] font-mono">{activeData.pipeline}</code></span>
                 <span className="font-mono text-[#95f6cb] flex items-center gap-1 font-semibold">
                   <CheckCircle2 className="h-4 w-4" /> Validated
@@ -508,9 +508,9 @@ export default function HowItWorksPage() {
 
         {/* Related Article Banner */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-4 sm:py-5 border-t border-slate-200 dark:border-navy-700/60">
-          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto p-4 sm:p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <span className="px-2.5 py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-xs font-bold uppercase">EXECUTIVE STRATEGY</span>
+          <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto p-4 sm:p-5 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-navy-700/60 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center items-start gap-2.5 sm:gap-3 w-full sm:w-auto">
+              <span className="px-2.5 py-1 rounded bg-[#F15E1C]/10 text-[#F15E1C] font-mono text-xs font-bold uppercase shrink-0">EXECUTIVE STRATEGY</span>
               <div>
                 <h4 className="text-sm font-bold text-slate-900 dark:text-white text-left">Why GRC Matters for Modern Businesses</h4>
                 <p className="text-xs text-slate-600 dark:text-slate-400 text-left">Discover how GRC creates clear accountability, improves risk visibility, and builds long-term resilience.</p>
@@ -518,7 +518,7 @@ export default function HowItWorksPage() {
             </div>
             <Link
               href="/resources/blog/why-grc-matters-for-modern-businesses"
-              className="px-4 py-2 rounded-xl bg-[#F15E1C] text-white text-xs font-bold hover:bg-[#ce4700] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shrink-0"
+              className="w-full sm:w-auto text-center px-4 py-2.5 sm:py-2 rounded-xl bg-[#F15E1C] text-white text-xs font-bold hover:bg-[#ce4700] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shrink-0"
             >
               Read Article &rarr;
             </Link>
@@ -536,7 +536,7 @@ export default function HowItWorksPage() {
             </p>
             <Link
               href="/demo"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm"
+              className="w-full sm:w-auto max-w-sm inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md text-xs sm:text-sm"
             >
               <span>Request Workflow Walkthrough</span>
               <ArrowRight className="ml-2 h-4 w-4" />
