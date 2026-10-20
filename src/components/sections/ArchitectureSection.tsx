@@ -18,9 +18,14 @@ export const ArchitectureSection: React.FC = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-[18px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full whitespace-nowrap text-left"
+            className="text-[21px] min-[360px]:text-[25px] min-[400px]:text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full whitespace-nowrap text-left"
           >
-            AI Assists. <span className="text-[#2E936F]">Humans Decide.</span>
+            <span className="sm:hidden">
+              AI Assist <span className="text-[#2E936F]">Human Decide</span>
+            </span>
+            <span className="hidden sm:inline">
+              AI Assists. <span className="text-[#2E936F]">Humans Decide.</span>
+            </span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

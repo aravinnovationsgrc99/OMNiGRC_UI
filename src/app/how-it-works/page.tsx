@@ -441,7 +441,10 @@ export default function HowItWorksPage() {
             <div className="bg-white dark:bg-navy-900 p-5 sm:p-7 rounded-2xl border border-slate-200 dark:border-navy-700/60 shadow-sm">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4 sm:mb-6">
                 <div>
-                  <h2 className="text-xl sm:text-3xl font-bold text-[#0d1b36] dark:text-white text-left">AI Assists. Humans Decide.</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#0d1b36] dark:text-white text-left">
+                    <span className="sm:hidden">AI Assist Human Decide</span>
+                    <span className="hidden sm:inline">AI Assists. Humans Decide.</span>
+                  </h2>
                   <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 max-w-4xl xl:max-w-5xl mt-1 leading-relaxed text-left text-justify">
                     Advisory AI operates strictly as a recommendation copilot. It suggests control overlaps, highlights potential policy gaps, and drafts audit narratives. Every proposal requires explicit human approval before touching your governance records.
                   </p>
