@@ -565,6 +565,14 @@ export const Header: React.FC = () => {
 
           {/* Mobile Theme Toggle & Hamburger Button */}
           <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
+            {/* Mobile Demo CTA */}
+            <Link
+              href="/demo"
+              className="inline-flex items-center justify-center h-[38px] px-3.5 rounded-xl bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:from-[#e04f0d] hover:to-[#be420f] text-white font-bold text-xs shadow-sm hover:shadow transition-all active:scale-[0.98] shrink-0"
+            >
+              Demo
+            </Link>
+
             <button
               suppressHydrationWarning
               onClick={toggleTheme}
