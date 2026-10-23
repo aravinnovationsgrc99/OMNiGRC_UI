@@ -563,24 +563,16 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Theme Toggle & Hamburger Button */}
-          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
-            {/* Mobile Demo CTA */}
+          {/* Mobile Demo CTA & Hamburger Button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            {/* Mobile Book a Demo CTA */}
             <Link
               href="/demo"
-              className="inline-flex items-center justify-center h-[38px] px-3.5 rounded-xl bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:from-[#e04f0d] hover:to-[#be420f] text-white font-bold text-xs shadow-sm hover:shadow transition-all active:scale-[0.98] shrink-0"
+              className="inline-flex items-center justify-center gap-1.5 h-[28px] px-3 rounded-full bg-gradient-to-r from-[#F15E1C] to-[#D4521A] hover:from-[#e04f0d] hover:to-[#be420f] text-white font-bold text-[11px] leading-none shadow-sm hover:shadow transition-all active:scale-[0.98] shrink-0"
             >
-              Demo
+              <span>Book a Demo</span>
+              <ArrowRight className="h-3 w-3 stroke-[2.5] shrink-0" />
             </Link>
-
-            <button
-              suppressHydrationWarning
-              onClick={toggleTheme}
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-xl border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/60 text-[#F15E1C] dark:text-amber hover:text-[#2E936F] dark:hover:text-teal focus:outline-none focus:ring-2 focus:ring-[#2E936F]"
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            >
-              {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-[#2E936F]" />}
-            </button>
 
             <button
               suppressHydrationWarning
@@ -834,12 +826,28 @@ export const Header: React.FC = () => {
               </Link>
             </div>
 
-            <div className="pt-4 border-t border-slate-200 dark:border-navy-700/60">
-              <Link href="/demo" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="primary" className="w-full min-h-[48px] text-sm font-bold shadow-lg" rightIcon={<ArrowRight className="h-4 w-4" />}>
-                  Request Demo
-                </Button>
+            <div className="pt-4 border-t border-slate-200 dark:border-navy-700/60 flex items-center gap-3">
+              <Link
+                href="/demo"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex-1"
+              >
+                <div className="w-full h-12 px-6 rounded-full bg-[#F15E1C] hover:bg-[#D4521A] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg shadow-orange-500/20 transition-all active:scale-[0.98]">
+                  <span>Book a Demo</span>
+                  <ArrowRight className="h-4 w-4 stroke-[2.5]" />
+                </div>
               </Link>
+
+              {/* Dark Mode Toggle beside Demo Option */}
+              <button
+                suppressHydrationWarning
+                onClick={toggleTheme}
+                className="h-12 w-12 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full border border-slate-200 dark:border-navy-700/60 bg-slate-100 dark:bg-navy-900/80 text-[#F15E1C] dark:text-amber hover:text-[#2E936F] dark:hover:text-teal focus:outline-none focus:ring-2 focus:ring-[#F15E1C] shadow-sm transition-all active:scale-95 shrink-0"
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+                title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              >
+                {theme === "dark" ? <Sun className="h-5 w-5 text-amber" /> : <Moon className="h-5 w-5 text-[#2E936F]" />}
+              </button>
             </div>
           </motion.div>
         )}
