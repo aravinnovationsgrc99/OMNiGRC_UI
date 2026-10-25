@@ -192,7 +192,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 text-left">
               Experience {pillar.name} in Action
             </h2>
-            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl text-justify sm:text-left leading-relaxed">
+            <p className="text-sm sm:text-base text-[#5a4138] dark:text-slate-300 mb-8 max-w-2xl lg:max-w-none lg:whitespace-nowrap text-justify sm:text-left leading-relaxed">
               Schedule a focused demonstration tailored to your team&apos;s GRC operations and target frameworks.
             </p>
             <div className="flex flex-wrap items-center justify-start gap-4">

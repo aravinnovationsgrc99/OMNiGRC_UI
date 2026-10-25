@@ -85,8 +85,63 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight leading-tight mb-6">
-              {post.title}
+            <h1 className="text-[26px] min-[360px]:text-[27px] sm:text-4xl lg:text-5xl font-extrabold text-[#0d1b36] dark:text-white tracking-tight leading-tight mb-6 [text-wrap:balance]">
+              {post.slug === "unified-control-mapping-soc2-iso27001-nist" ? (
+                <>
+                  <span className="sm:hidden block">
+                    <span className="block">Unified Control Mapping:</span>
+                    <span className="block">Eliminating Compliance</span>
+                    <span className="block">Duplication Across SOC 2,</span>
+                    <span className="block">ISO 27001, and NIST CSF</span>
+                  </span>
+                  <span className="hidden sm:inline">{post.title}</span>
+                </>
+              ) : post.slug === "5x5-asset-risk-scoring-methodology" ? (
+                <>
+                  <span className="sm:hidden block">
+                    <span className="block">Practical 5x5 Asset Risk</span>
+                    <span className="block">Scoring: Bridging Asset</span>
+                    <span className="block">Discovery and Risk Governance</span>
+                  </span>
+                  <span className="hidden sm:inline">{post.title}</span>
+                </>
+              ) : post.slug === "ai-governance-human-in-the-loop-compliance" ? (
+                <>
+                  <span className="sm:hidden block">
+                    <span className="block">AI Assists, Humans Decide:</span>
+                    <span className="block">Building Responsible AI</span>
+                    <span className="block">Governance Workflows</span>
+                  </span>
+                  <span className="hidden sm:inline">{post.title}</span>
+                </>
+              ) : post.slug === "how-to-build-effective-cybersecurity-risk-register" ? (
+                <>
+                  <span className="sm:hidden block">
+                    <span className="block">How to Build an Effective</span>
+                    <span className="block">Cybersecurity Risk Register</span>
+                  </span>
+                  <span className="hidden sm:inline">{post.title}</span>
+                </>
+              ) : post.slug === "why-grc-matters-for-modern-businesses" ? (
+                <>
+                  <span className="sm:hidden block">
+                    <span className="block">Why GRC Matters for</span>
+                    <span className="block">Modern Businesses</span>
+                  </span>
+                  <span className="hidden sm:inline">{post.title}</span>
+                </>
+              ) : post.slug === "compliance-vs-pre-audit-preparation-what-businesses-need-to-know" ? (
+                <>
+                  <span className="sm:hidden block">
+                    <span className="block">Compliance vs. Pre-Audit</span>
+                    <span className="block">Preparation: What Businesses</span>
+                    <span className="block">Need to Know</span>
+                  </span>
+                  <span className="hidden sm:inline">{post.title}</span>
+                </>
+              ) : (
+                post.title
+              )}
             </h1>
 
             {/* Excerpt */}
@@ -168,31 +223,32 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             )}
 
             {/* Product Narrative Callout */}
-            <div className="my-12 p-space-card rounded-3xl bg-gradient-to-br from-[#ffdbcf]/40 to-[#f1f3ff] dark:from-navy-900 dark:to-navy-950 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-lg">
+            <div className="my-10 sm:my-12 p-5 sm:p-7 md:p-space-card rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#ffdbcf]/40 to-[#f1f3ff] dark:from-navy-900 dark:to-navy-950 border border-[#F15E1C]/30 dark:border-orange-500/30 shadow-lg">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-2xl bg-[#F15E1C] text-white shrink-0 hidden sm:block">
                   <Sparkles className="w-6 h-6" />
                 </div>
-                <div>
-                  <span className="font-mono text-xs font-bold text-[#F15E1C] uppercase tracking-wider block mb-1">
+                <div className="w-full">
+                  <span className="font-mono text-2xs sm:text-xs font-bold text-[#F15E1C] uppercase tracking-wider block mb-1.5">
                     APPLY THIS IN OMNIGRC
                   </span>
-                  <h3 className="text-xl font-bold text-[#0d1b36] dark:text-white mb-2">
-                    Automate control crosswalks and continuous evidence collection.
+                  <h3 className="text-base min-[360px]:text-[17px] min-[400px]:text-lg sm:text-xl font-bold text-[#0d1b36] dark:text-white mb-2.5 leading-snug tracking-tight text-left [text-wrap:balance]">
+                    <span className="sm:inline block">Automate control crosswalks and</span>{" "}
+                    <span className="sm:inline block">continuous evidence collection.</span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mb-6 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#5a4138] dark:text-slate-300 mb-5 sm:mb-6 leading-relaxed text-left">
                     OMNiGRC provides dedicated application tenant isolation, structured evidence indexing, and AI-assisted crosswalks with mandatory human approval.
                   </p>
                   <div className="flex flex-wrap items-center gap-3">
                     <Link
                       href="/demo"
-                      className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors shadow-sm"
+                      className="w-full sm:w-auto text-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#F15E1C] hover:bg-[#ce4700] transition-colors shadow-sm"
                     >
                       Request Interactive Demo
                     </Link>
                     <Link
                       href="/products/control-mapping"
-                      className="px-5 py-2.5 rounded-xl text-xs font-bold text-[#0d1b36] dark:text-white bg-white dark:bg-navy-800 border border-slate-300 dark:border-navy-700 hover:border-[#F15E1C] transition-colors"
+                      className="w-full sm:w-auto text-center px-5 py-2.5 rounded-xl text-xs font-bold text-[#0d1b36] dark:text-white bg-white dark:bg-navy-800 border border-slate-300 dark:border-navy-700 hover:border-[#F15E1C] transition-colors"
                     >
                       Explore Control Mapping Module
                     </Link>

@@ -263,10 +263,10 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         blocks.push(
           <h3
             key={`h3-${i}`}
-            className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4 tracking-tight flex items-center gap-2"
+            className="text-[17px] min-[360px]:text-[18px] min-[420px]:text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-8 sm:mt-10 mb-3 sm:mb-4 tracking-tight flex items-start sm:items-center gap-2 text-left"
           >
-            <span className="w-1.5 h-5 rounded-full bg-[#F15E1C]" />
-            <span>{renderFormattedInline(line.replace("### ", ""))}</span>
+            <span className="w-1.5 h-5 rounded-full bg-[#F15E1C] shrink-0 mt-0.5 sm:mt-0" />
+            <span className="flex-1 min-w-0 text-left leading-snug tracking-tight [word-spacing:normal]">{renderFormattedInline(line.replace("### ", ""))}</span>
           </h3>
         );
         i++;
@@ -277,10 +277,10 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         blocks.push(
           <h2
             key={`h2-${i}`}
-            className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-12 mb-6 tracking-tight border-b border-slate-200 dark:border-slate-800 pb-3 flex items-start gap-2.5 text-justify"
+            className="text-[21px] min-[380px]:text-[22px] min-[420px]:text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-8 sm:mt-12 mb-3.5 sm:mb-6 tracking-tight border-b border-slate-200 dark:border-slate-800 pb-3 flex items-start gap-2 sm:gap-2.5 text-left"
           >
-            <span className="w-2 h-7 rounded-full bg-[#F15E1C] shrink-0 mt-1" />
-            <span className="text-justify leading-snug">{renderFormattedInline(line.replace("## ", ""))}</span>
+            <span className="w-1.5 sm:w-2 h-6 sm:h-7 rounded-full bg-[#F15E1C] shrink-0 mt-0.5 sm:mt-1" />
+            <span className="flex-1 min-w-0 text-left leading-snug tracking-tight [word-spacing:normal]">{renderFormattedInline(line.replace("## ", ""))}</span>
           </h2>
         );
         i++;
@@ -383,7 +383,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       // 9. Paragraph
       if (line.trim().length > 0) {
         blocks.push(
-          <p key={`p-${i}`} className="my-5 text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300 text-justify">
+          <p key={`p-${i}`} className="my-5 text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300 text-left sm:text-justify">
             {renderFormattedInline(line)}
           </p>
         );
