@@ -194,7 +194,7 @@ export default function ControlMappingPage() {
             <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
               Map Once. Satisfy Seven Frameworks with Advisory AI.
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-left mt-0.5">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl lg:max-w-none leading-relaxed text-left mt-0.5">
               Traditional GRC forces organizations to test the same security control five separate times for five separate auditors. OMNiGRC unifies framework requirements into a single canonical control hierarchy.
             </p>
           </div>
@@ -244,7 +244,9 @@ export default function ControlMappingPage() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 Canonical Control Mapping Grid
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-left">Explore how a single technical safeguard satisfies multiple regulatory frameworks simultaneously. Click "Ratify Now" to test the human governance flow.</p>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-3xl lg:max-w-none leading-relaxed text-left">
+                Explore how a single technical safeguard satisfies multiple regulatory frameworks simultaneously. Click &quot;Ratify Now&quot; to test the human governance flow.
+              </p>
             </div>
             {/*  Grid of Mapped Framework Cards  */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 text-left items-stretch">
@@ -442,7 +444,9 @@ export default function ControlMappingPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
               Cross-Framework Regulatory Correlation
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl text-left leading-relaxed">Standardize controls across technical domains to reduce duplicate testing and lower audit review overhead.</p>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl lg:max-w-none lg:whitespace-nowrap text-left leading-relaxed">
+              Standardize controls across technical domains to reduce duplicate testing and lower audit review overhead.
+            </p>
           </div>
           <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-[#0A111F] shadow-sm">
             <table className="w-full min-w-[700px] text-left border-collapse">
@@ -495,7 +499,9 @@ export default function ControlMappingPage() {
             <h2 className="text-[19px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left">
               Ready to eliminate duplicate compliance controls?
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed text-left">Upload your current framework policies into OMNiGRC and experience human-governed advisory AI control mapping in real time.</p>
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl lg:max-w-none lg:whitespace-nowrap leading-relaxed text-left">
+              Upload your current framework policies into OMNiGRC and experience human-governed advisory AI control mapping in real time.
+            </p>
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-2.5 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
               <a href="/demo" className="w-full sm:w-auto px-5 py-2.5 sm:py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Advisory AI Crosswalk Demo

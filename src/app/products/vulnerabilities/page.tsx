@@ -87,7 +87,7 @@ export default function VulnerabilitiesPage() {
                 <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] text-slate-900 dark:text-white font-bold tracking-tight leading-tight text-left w-full">
                   Connect External Scanner Findings to <span className="text-primary">Quantified Risk Registers</span>
                 </h1>
-                <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed text-left">
+                <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl lg:max-w-none leading-relaxed text-left">
                   OMNiGRC ingests findings from external security scanners (Qualys, Snyk, AWS GuardDuty, CrowdStrike, and Datadog) to automatically prioritize CVEs against business asset criticalities and enforce policy SLA clocks.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-4 pt-1 w-full">
@@ -183,24 +183,24 @@ export default function VulnerabilitiesPage() {
 
         {/*  SECTION 2: INTERACTIVE TOPOLOGY & SCENARIO EXPLORER  */}
         <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7" id="vulnerability-topology">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-3 sm:mb-5 gap-3 sm:gap-4">
-            <div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-3 sm:mb-5 gap-3 sm:gap-6">
+            <div className="flex-1 min-w-0 pr-0 md:pr-4 lg:pr-6">
               <h2 className="text-[19px] min-[360px]:text-[21px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 Interactive Vulnerability-to-Asset Topology
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl mt-1 text-left leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl lg:max-w-none mt-1 text-left leading-relaxed">
                 Experience how ingested CVEs transform into context-aware risk items, complete with assigned engineers, framework clauses, and SLA clocks.
               </p>
             </div>
-            <div className="flex items-center gap-2 shrink-0">
-              <span className="text-xs text-slate-600 dark:text-slate-300 hidden sm:inline">Scenario:</span>
+            <div className="flex items-center gap-2 shrink-0 pb-0.5">
+              <span className="text-xs text-slate-600 dark:text-slate-300 hidden sm:inline font-medium">Scenario:</span>
               <div className="inline-flex rounded-lg bg-white dark:bg-[#0A111F] p-1 shadow-sm border border-slate-300 dark:border-navy-700">
                 <button 
                   onClick={() => {
                     setScenarioId(1);
                     setIsVerified(false);
                   }}
-                  className={`px-3 py-1 rounded text-xs font-semibold transition-all ${scenarioId === 1 ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800'}`} 
+                  className={`px-3 py-1.5 rounded text-xs font-semibold transition-all ${scenarioId === 1 ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800'}`} 
                   id="btn-vuln1"
                 >
                   CVE-2025-XXXX (High)
@@ -210,7 +210,7 @@ export default function VulnerabilitiesPage() {
                     setScenarioId(2);
                     setIsVerified(false);
                   }}
-                  className={`px-3 py-1 rounded text-xs font-semibold transition-all ${scenarioId === 2 ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800'}`} 
+                  className={`px-3 py-1.5 rounded text-xs font-semibold transition-all ${scenarioId === 2 ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-navy-800'}`} 
                   id="btn-vuln2"
                 >
                   RDS Public Ingress (Medium)
@@ -389,11 +389,11 @@ export default function VulnerabilitiesPage() {
 
         {/*  SECTION 3: THREE FUNCTIONAL PILLARS SECTION  */}
         <section className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7">
-          <div className="text-left max-w-3xl mb-3 sm:mb-5">
+          <div className="text-left max-w-3xl lg:max-w-none mb-3 sm:mb-5">
             <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
               Purpose-Built for GRC Defensibility, Not Log Flooding
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 text-left leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 text-left leading-relaxed max-w-3xl lg:max-w-none lg:whitespace-nowrap">
               Scanners detect bugs. OMNiGRC transforms those findings into contextual corporate risk models, automated team escalations, and certified auditor workpapers.
             </p>
           </div>
@@ -478,7 +478,7 @@ export default function VulnerabilitiesPage() {
         {/*  SECTION 4: COMPARISON SECTION  */}
         <section className="w-full bg-slate-50 dark:bg-[#16233F] py-3.5 sm:py-6 lg:py-6 xl:py-7">
           <div className="max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
-            <div className="text-left max-w-3xl mb-3 sm:mb-5">
+            <div className="text-left max-w-3xl lg:max-w-none mb-3 sm:mb-5">
               <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 Raw Scanner Noise vs. Connected GRC Prioritization
               </h2>
@@ -536,7 +536,9 @@ export default function VulnerabilitiesPage() {
             <h2 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
               Connect technical findings to compliance truth.
             </h2>
-            <p className="text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed text-left">Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.</p>
+            <p className="text-xs sm:text-base text-slate-300 max-w-2xl lg:max-w-none lg:whitespace-nowrap leading-relaxed text-left">
+              Integrate third-party scanners into OMNiGRC in minutes. Experience asset-contextualized vulnerability remediation.
+            </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto">
               <a href="/demo" className="px-5 py-2.5 sm:py-3 rounded-lg bg-primary text-on-primary text-xs sm:text-sm font-semibold hover:bg-primary-container shadow-md transition-all text-center">
                 Schedule Vulnerability Governance Demo

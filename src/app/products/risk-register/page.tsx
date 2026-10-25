@@ -47,14 +47,14 @@ export default function RiskRegisterPage() {
         <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 pt-4 sm:pt-6 lg:pt-6 xl:pt-8 pb-4 sm:pb-6 lg:pb-6 xl:pb-8 bg-grid-mesh-adaptive text-center lg:text-left overflow-hidden">
           <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 items-center">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-4 sm:space-y-5 lg:space-y-5 xl:space-y-6 mx-auto lg:mx-0 w-full max-w-full min-w-0">
-              <h1 className="text-[26px] min-[360px]:text-[29px] min-[390px]:text-[32px] min-[410px]:text-[34px] min-[430px]:text-[36px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[56px] 2xl:text-[62px] font-black tracking-tight leading-[1.12] lg:leading-[1.06] text-center lg:text-left w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-                <span className="block whitespace-nowrap min-[480px]:whitespace-normal text-slate-900 dark:text-white">
-                  Calibrated Risk<br className="hidden lg:inline" /> Registers
+              <h1 className="text-[26px] min-[360px]:text-[29px] min-[390px]:text-[32px] min-[410px]:text-[34px] min-[430px]:text-[36px] sm:text-4xl md:text-5xl lg:text-[42px] xl:text-[48px] 2xl:text-[54px] font-black tracking-tight leading-[1.14] lg:leading-[1.08] text-center lg:text-left w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0">
+                <span className="block whitespace-nowrap text-slate-900 dark:text-white">
+                  Calibrated Risk Registers
                 </span>
-                <span className="block mt-1 sm:mt-1.5 lg:mt-1 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
+                <span className="block mt-1 sm:mt-1.5 lg:mt-1 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap">
                   Directly Connected
                 </span>
-                <span className="block mt-0.5 sm:mt-1 lg:mt-0.5 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap min-[480px]:whitespace-normal">
+                <span className="block mt-0.5 sm:mt-1 lg:mt-0.5 bg-gradient-to-r from-[#F15E1C] via-[#ea580c] to-[#d97706] bg-clip-text text-transparent whitespace-nowrap">
                   to Assets
                 </span>
               </h1>
@@ -137,8 +137,8 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Interactive 5x5 Matrix Section  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-50 dark:bg-[#16233F] text-left" id="matrix-view">
-          <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 text-left">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-50 dark:bg-[#16233F] text-left" id="matrix-view">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto space-y-4 sm:space-y-6 text-left">
             <div className="flex flex-col items-start text-left gap-2 sm:gap-3 max-w-3xl lg:max-w-none">
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Dynamic Risk Calibration</span>
@@ -147,7 +147,7 @@ export default function RiskRegisterPage() {
               <h2 className="text-[19px] min-[350px]:text-[21px] min-[390px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold mt-1 tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 Interactive 5×5 Likelihood × Impact Heatmap
               </h2>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mt-1 leading-relaxed text-justify">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 mt-1 leading-relaxed text-left max-w-2xl lg:max-w-none lg:whitespace-nowrap">
                 Calibrated 5×5 Likelihood × Impact matrix reflecting direct Asset-to-Risk linkage. Click any cell to inspect risk scoring.
               </p>
               <div className="flex items-center gap-2 bg-white dark:bg-[#0A111F] px-3 py-2 rounded-lg shadow-sm border mt-1">
@@ -161,14 +161,14 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Risk Treatments Explained Section  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 text-left">
-          <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 text-left">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 text-left">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto space-y-4 sm:space-y-6 text-left">
             <div className="text-left max-w-3xl lg:max-w-none space-y-1.5 sm:space-y-2">
               <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Operational Treatment Taxonomy</span>
               <h2 className="text-[19px] min-[350px]:text-[21px] min-[390px]:text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 The Four Core Risk Treatments, Automated
               </h2>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl mt-1 sm:mt-2">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-left max-w-2xl lg:max-w-none lg:whitespace-nowrap mt-1 sm:mt-2">
                 Every quantified entry in OMNiGRC is bound to an actionable, legally defensible treatment path. No ambiguity, no neglected risks forgotten in spreadsheets.
               </p>
             </div>
@@ -333,8 +333,8 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Continuous vs Point-in-Time Comparison & PostgreSQL Audit Log  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-50 dark:bg-[#16233F] text-left" id="audit-log">
-          <div className="max-w-7xl mx-auto space-y-4 sm:space-y-8 text-left">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-50 dark:bg-[#16233F] text-left" id="audit-log">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto space-y-4 sm:space-y-8 text-left">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center text-left">
               <div className="lg:col-span-5 space-y-3 sm:space-y-4 flex flex-col items-start text-left">
                 <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Dynamic Architecture</span>
@@ -439,15 +439,15 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Cross-Workflow Linkage Diagram  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 text-left">
-          <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 text-left">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 text-left">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto space-y-4 sm:space-y-6 lg:space-y-8 text-left">
             <div className="text-left max-w-3xl lg:max-w-none space-y-1.5 sm:space-y-2">
               <span className="font-mono text-xs text-teal-600 dark:text-teal-400 uppercase font-bold tracking-wider text-left">Total Ecosystem Interoperability</span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left lg:whitespace-nowrap">
                 <span className="block lg:inline">The Continuous </span>
                 <span className="block lg:inline">Assurance Lifecycle</span>
               </h2>
-              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl mt-1 sm:mt-2">
+              <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed text-left max-w-2xl lg:max-w-none lg:whitespace-nowrap mt-1 sm:mt-2">
                 How an identified risk traverses every workflow module inside OMNiGRC, turning raw technical signals into indisputable audit evidence.
               </p>
             </div>
@@ -626,8 +626,8 @@ export default function RiskRegisterPage() {
         </section>
 
         {/*  Bottom Conversion CTA Banner  */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-200 dark:bg-navy-700 text-left">
-          <div className="max-w-7xl mx-auto rounded-xl bg-white dark:bg-[#0A111F] p-4 sm:p-8 lg:p-12 shadow-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-8 text-left">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-10 md:py-16 lg:py-8 xl:py-10 bg-slate-200 dark:bg-navy-700 text-left">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto rounded-xl bg-white dark:bg-[#0A111F] p-4 sm:p-8 lg:p-12 shadow-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-8 text-left">
             <div className="space-y-2 sm:space-y-3 max-w-2xl flex flex-col items-start text-left">
               <h2 className="text-[18px] min-[350px]:text-[20px] min-[380px]:text-[22px] sm:text-3xl md:text-4xl text-slate-900 dark:text-white font-bold tracking-tight leading-snug text-left">
                 Tired of maintaining stale risk spreadsheets?
@@ -649,8 +649,8 @@ export default function RiskRegisterPage() {
         </section>
 
         {/* Related Article Banner */}
-        <section className="w-full px-4 sm:px-8 pb-6 sm:pb-12 lg:pb-8 text-left">
-          <div className="max-w-7xl mx-auto p-3.5 sm:p-5 lg:p-6 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-left gap-3 sm:gap-4">
+        <section className="w-full px-3 sm:px-6 lg:px-8 xl:px-12 pb-6 sm:pb-12 lg:pb-8 text-left">
+          <div className="w-full max-w-7xl lg:max-w-[95%] xl:max-w-[94%] 2xl:max-w-[1720px] mx-auto p-3.5 sm:p-5 lg:p-6 rounded-xl bg-slate-100 dark:bg-[#16233F] border border-slate-200 dark:border-navy-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-left gap-3 sm:gap-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-3 text-left">
               <div className="text-left">
                 <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white text-left">How to Build an Effective Cybersecurity Risk Register</h4>

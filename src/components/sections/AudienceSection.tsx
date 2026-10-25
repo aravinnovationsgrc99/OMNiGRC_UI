@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   User,
   Users,
@@ -17,8 +18,42 @@ import {
 } from "lucide-react";
 
 export const AudienceSection: React.FC = () => {
-  const [activeRole, setActiveRole] = useState<string | null>("team");
+  const [selectedRole, setSelectedRole] = useState<string | null>(null);
+  const [hoveredRole, setHoveredRole] = useState<string | null>(null);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  const roleStyles: Record<
+    string,
+    {
+      expandedBorder: string;
+      expandedBg: string;
+      expandedRing: string;
+      expandedShadow: string;
+      learnMoreText: string;
+    }
+  > = {
+    solo: {
+      expandedBorder: "border-[#F15E1C]",
+      expandedBg: "bg-[#FFF0E5]/60 dark:bg-navy-800/90",
+      expandedRing: "ring-2 ring-[#F15E1C]/25",
+      expandedShadow: "shadow-lg",
+      learnMoreText: "text-[#F15E1C]",
+    },
+    team: {
+      expandedBorder: "border-[#2E936F]",
+      expandedBg: "bg-[#E6F4EF]/60 dark:bg-navy-800/90",
+      expandedRing: "ring-2 ring-[#2E936F]/25",
+      expandedShadow: "shadow-lg",
+      learnMoreText: "text-[#2E936F] dark:text-teal",
+    },
+    ciso: {
+      expandedBorder: "border-[#FAB60A]",
+      expandedBg: "bg-[#FFFBE6]/60 dark:bg-navy-800/90",
+      expandedRing: "ring-2 ring-[#FAB60A]/30",
+      expandedShadow: "shadow-lg",
+      learnMoreText: "text-[#D4521A] dark:text-amber-400",
+    },
+  };
 
   const roles = [
     {
@@ -75,9 +110,12 @@ export const AudienceSection: React.FC = () => {
   ];
 
   const handleCardClick = (roleId: string) => {
-    const nextState = activeRole === roleId ? null : roleId;
-    setActiveRole(nextState);
-    if (nextState) {
+    if (selectedRole === roleId) {
+      setSelectedRole(null);
+      setHoveredRole(null);
+    } else {
+      setSelectedRole(roleId);
+      setHoveredRole(roleId);
       setTimeout(() => {
         const el = cardRefs.current[roleId];
         if (el) {
@@ -102,7 +140,7 @@ export const AudienceSection: React.FC = () => {
             One workflow. <span className="text-[#F15E1C]">Every team size.</span>
           </h2>
 
-          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-3xl text-left">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-none text-left lg:whitespace-nowrap">
             From solo practitioner to security lead, OMNiGRC organizes risk, controls, and evidence around how you actually work.
           </p>
         </div>
@@ -151,7 +189,10 @@ export const AudienceSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full items-start">
           {roles.map((r) => {
             const Icon = r.icon;
-            const isSelected = activeRole === r.id;
+            const isExpanded =
+              hoveredRole === r.id || (hoveredRole === null && selectedRole === r.id);
+            const styles = roleStyles[r.id];
+
             return (
               <div
                 key={r.id}
@@ -160,30 +201,56 @@ export const AudienceSection: React.FC = () => {
                 }}
                 role="button"
                 tabIndex={0}
-                aria-expanded={isSelected}
+                aria-expanded={isExpanded}
                 onClick={() => handleCardClick(r.id)}
+                onMouseEnter={() => {
+                  if (
+                    typeof window !== "undefined" &&
+                    window.matchMedia("(hover: hover)").matches
+                  ) {
+                    setHoveredRole(r.id);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (
+                    typeof window !== "undefined" &&
+                    window.matchMedia("(hover: hover)").matches
+                  ) {
+                    setHoveredRole(null);
+                  }
+                }}
+                onFocus={() => setHoveredRole(r.id)}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                    setHoveredRole(null);
+                  }
+                }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
                     handleCardClick(r.id);
                   }
                 }}
-                className={`p-4 sm:p-5 rounded-2xl text-left transition-all duration-200 relative flex flex-col justify-between space-y-3 cursor-pointer select-none group w-full ${
-                  isSelected
-                    ? "border-2 border-[#2E936F] bg-[#E6F4EF]/60 dark:bg-navy-800/90 shadow-lg ring-1 ring-[#2E936F]/20"
-                    : "border border-slate-200 dark:border-navy-700 bg-white/90 dark:bg-navy-900 hover:border-slate-300 dark:hover:border-navy-600 hover:shadow-md"
+                className={`p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] relative flex flex-col justify-between cursor-pointer select-none group w-full min-h-[160px] sm:min-h-[172px] ${
+                  isExpanded
+                    ? `border ${styles.expandedBorder} ${styles.expandedBg} ${styles.expandedRing} ${styles.expandedShadow} -translate-y-1`
+                    : "border border-slate-200 dark:border-navy-700 bg-white/90 dark:bg-navy-900 hover:border-slate-300 dark:hover:border-navy-600 hover:shadow-md hover:-translate-y-0.5"
                 }`}
               >
                 <div className="space-y-3 w-full">
                   {/* TOP ROW: Icon Box on Left, Main Heading on Right of Icon */}
                   <div className="flex items-center gap-3.5 w-full">
-                    {/* Icon Box */}
-                    <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center shrink-0 ${r.iconBoxBg}`}>
-                      <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                    {/* Icon Box with Smooth Micro-Interaction */}
+                    <div
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center shrink-0 transition-transform duration-300 ease-out ${
+                        isExpanded ? "scale-105 shadow-sm" : "scale-100 group-hover:scale-102"
+                      } ${r.iconBoxBg}`}
+                    >
+                      <Icon className="h-6 w-6 sm:h-7 sm:w-7 transition-transform duration-300" />
                     </div>
 
                     {/* Main Heading to the Right of Icon */}
-                    <h3 className="font-extrabold text-base sm:text-lg lg:text-xl text-navy-900 dark:text-white leading-snug min-w-0">
+                    <h3 className="font-extrabold text-base sm:text-lg lg:text-xl text-navy-900 dark:text-white leading-snug min-w-0 transition-colors duration-200">
                       {r.title}
                     </h3>
                   </div>
@@ -197,44 +264,116 @@ export const AudienceSection: React.FC = () => {
                 </div>
 
                 {/* BOTTOM ROW: Divider Line + Scale Metrics */}
-                <div className="pt-3 border-t border-slate-200/80 dark:border-navy-700/80 flex items-center justify-between text-xs font-mono w-full">
+                <div className="pt-3 mt-3 border-t border-slate-200/80 dark:border-navy-700/80 flex items-center justify-between text-xs font-mono w-full transition-colors duration-200">
                   <span className="text-slate-500 dark:text-slate-400 font-semibold flex items-center gap-1">
-                    <Zap className="h-3.5 w-3.5 text-[#F15E1C]" /> Same workflow
+                    <Zap className="h-3.5 w-3.5 text-[#F15E1C] transition-transform duration-200 group-hover:scale-110" /> Same workflow
                   </span>
                   <span className="font-bold text-slate-500 dark:text-slate-400">
-                    <span className="text-slate-300 dark:text-slate-600 mr-1.5">|</span> Scale <span className={`font-extrabold ${r.scaleColor}`}>{r.scaleText}</span>
+                    <span className="text-slate-300 dark:text-slate-600 mr-1.5">|</span> Scale{" "}
+                    <span className={`font-extrabold transition-colors duration-200 ${r.scaleColor}`}>{r.scaleText}</span>
                   </span>
                 </div>
 
-                {/* INLINE EXPANSION CONTENT WHEN CARD IS SELECTED */}
-                {isSelected && (
-                  <div className="pt-3 mt-3 border-t border-slate-200/80 dark:border-navy-700/80 space-y-2.5">
-                    <span className="font-mono text-xs text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider block">
-                      HOW IT WORKS
-                    </span>
-                    <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
-                      {r.howItWorks.map((point, pIdx) => (
-                        <li key={pIdx} className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-[#2E936F] shrink-0 mt-0.5" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {r.learnMoreHref && (
-                      <div className="pt-2 flex items-center justify-end">
-                        <Link
-                          href={r.learnMoreHref}
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#2E936F] dark:text-teal hover:underline"
+                {/* INLINE EXPANSION CONTENT WITH HIGH-END FLUID ANIMATION */}
+                <AnimatePresence initial={false}>
+                  {isExpanded && (
+                    <motion.div
+                      key="expanded-content"
+                      initial={{ opacity: 0, height: 0, filter: "blur(3px)" }}
+                      animate={{
+                        opacity: 1,
+                        height: "auto",
+                        filter: "blur(0px)",
+                        transition: {
+                          height: { duration: 0.38, ease: [0.16, 1, 0.3, 1] },
+                          opacity: { duration: 0.28, ease: "easeOut" },
+                          filter: { duration: 0.22, ease: "easeOut" },
+                        },
+                      }}
+                      exit={{
+                        opacity: 0,
+                        height: 0,
+                        filter: "blur(3px)",
+                        transition: {
+                          height: { duration: 0.28, ease: [0.16, 1, 0.3, 1] },
+                          opacity: { duration: 0.18, ease: "easeIn" },
+                          filter: { duration: 0.18 },
+                        },
+                      }}
+                      className="overflow-hidden w-full"
+                    >
+                      <motion.div
+                        variants={{
+                          hidden: { opacity: 0 },
+                          visible: {
+                            opacity: 1,
+                            transition: {
+                              staggerChildren: 0.05,
+                              delayChildren: 0.04,
+                            },
+                          },
+                          exit: { opacity: 0, transition: { duration: 0.12 } },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="pt-3 mt-3 border-t border-slate-200/80 dark:border-navy-700/80 space-y-2.5"
+                      >
+                        <motion.span
+                          variants={{
+                            hidden: { opacity: 0, y: 4 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeOut" } },
+                          }}
+                          className="font-mono text-xs text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider block"
                         >
-                          <span>Learn more</span>
-                          <ArrowRight className="h-3.5 w-3.5" />
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                )}
+                          HOW IT WORKS
+                        </motion.span>
+                        <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                          {r.howItWorks.map((point, pIdx) => (
+                            <motion.li
+                              key={pIdx}
+                              variants={{
+                                hidden: { opacity: 0, y: 6 },
+                                visible: {
+                                  opacity: 1,
+                                  y: 0,
+                                  transition: { duration: 0.24, ease: [0.16, 1, 0.3, 1] },
+                                },
+                              }}
+                              className="flex items-start gap-2"
+                            >
+                              <CheckCircle2 className="h-4 w-4 text-[#2E936F] shrink-0 mt-0.5" />
+                              <span>{point}</span>
+                            </motion.li>
+                          ))}
+                        </ul>
+
+                        {r.learnMoreHref && (
+                          <motion.div
+                            variants={{
+                              hidden: { opacity: 0, y: 6 },
+                              visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.24, ease: [0.16, 1, 0.3, 1] },
+                              },
+                            }}
+                            className="pt-2 flex items-center justify-end"
+                          >
+                            <Link
+                              href={r.learnMoreHref}
+                              onClick={(e) => e.stopPropagation()}
+                              className={`inline-flex items-center gap-1.5 text-xs font-mono font-bold ${styles.learnMoreText} hover:underline group/link`}
+                            >
+                              <span>Learn more</span>
+                              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/link:translate-x-1" />
+                            </Link>
+                          </motion.div>
+                        )}
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}

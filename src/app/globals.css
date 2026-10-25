@@ -324,36 +324,11 @@ span[class*="rounded-full"], .badge-pill {
 }
 
 /* ─────────────────────────────────────────────────────────
-   FOOTER: always dark charcoal in both modes
+   FOOTER: visual styling scoped to Footer component
    ───────────────────────────────────────────────────────── */
-footer {
-  background-color: #0F172A !important;
-  color: #94A3B8;
-}
-
-footer h4 {
-  color: #FFFFFF !important;
-  font-weight: 700;
-}
-
-footer a:not(.shrink-0) {
-  color: #94A3B8;
-  transition: color 0.15s ease;
+footer a {
   min-height: unset;
-  display: inline;
 }
-
-footer a:not(.shrink-0):hover { color: #E2E8F0; }
-
-html:not(.dark) footer {
-  background-color: #0F172A !important;
-  color: #94A3B8;
-  border-top-color: rgba(255,255,255,0.1) !important;
-}
-
-html:not(.dark) footer h4 { color: #FFFFFF !important; }
-html:not(.dark) footer a:not(.shrink-0)  { color: #94A3B8; }
-html:not(.dark) footer a:not(.shrink-0):hover { color: #E2E8F0; }
 
 /* ─────────────────────────────────────────────────────────
    GLASSMORPHISM & CARD STYLES
