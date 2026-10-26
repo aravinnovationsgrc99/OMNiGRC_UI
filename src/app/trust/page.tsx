@@ -243,8 +243,8 @@ export default function TrustPage() {
         {/* SECTION 2: DEPLOYMENT MODEL ARCHITECTURE */}
         <section className="w-full bg-transparent px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-6 lg:py-6 xl:py-7 border-b border-slate-200 dark:border-navy-700/60">
           <div className="w-full max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px] mx-auto">
-            <div className="text-left max-w-3xl xl:max-w-4xl mb-4 sm:mb-6">
-              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left">
+            <div className="text-left max-w-3xl lg:max-w-none mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-4xl text-[#0d1b36] dark:text-white font-bold mt-1 tracking-tight text-left lg:whitespace-nowrap">
                 Deployment Models &amp; Operational Boundaries
               </h2>
               <p className="text-xs sm:text-sm md:text-base text-[#5a4138] dark:text-slate-300 mt-1.5 text-left">
