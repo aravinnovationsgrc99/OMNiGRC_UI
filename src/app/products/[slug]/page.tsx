@@ -72,16 +72,39 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <section className="relative w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 overflow-hidden border-b border-slate-200 dark:border-navy-700/60">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ffdbcf]/30 rounded-full blur-3xl pointer-events-none -z-10 ambient-motion-1" />
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className={`w-full ${slug === "control-mapping" ? "max-w-7xl lg:max-w-[96%] xl:max-w-[95%] 2xl:max-w-[1780px]" : "max-w-7xl"} mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center`}>
             {/* Left Content */}
             <div className={`${slug === "control-mapping" ? "lg:col-span-5" : "lg:col-span-7"} flex flex-col items-center lg:items-start text-center lg:text-left`}>
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center w-full">
-                {pillar.name}
-              </h1>
+              {slug === "control-mapping" ? (
+                <>
+                  {/* Mobile view remains 100% untouched */}
+                  <h1 className="lg:hidden text-2xl min-[360px]:text-3xl sm:text-4xl text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center w-full">
+                    {pillar.name}
+                  </h1>
+                  <p className="lg:hidden text-xs sm:text-base text-[#5a4138] dark:text-slate-300 font-medium mb-6 leading-relaxed text-justify sm:text-left w-full">
+                    {pillar.desc}
+                  </p>
 
-              <p className="text-xs sm:text-base text-[#5a4138] dark:text-slate-300 font-medium mb-6 leading-relaxed text-justify sm:text-left w-full">
-                {pillar.desc}
-              </p>
+                  {/* Desktop view matches Image 2 */}
+                  <h1 className="hidden lg:block text-[34px] xl:text-[42px] 2xl:text-[48px] lg:leading-[1.15] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 text-left w-full">
+                    The Auditable AI<br />
+                    <span className="whitespace-nowrap">Control Mapping <span className="text-[#F15E1C]">Pipeline</span></span>
+                  </h1>
+                  <p className="hidden lg:block text-[16px] xl:text-[17px] text-[#5a4138] dark:text-slate-300 font-medium mb-7 leading-relaxed text-left w-full max-w-xl">
+                    Explore each architectural stage to see how sensitive context is isolated before external model evaluation.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h1 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] text-[#0d1b36] dark:text-white font-extrabold tracking-tight mb-4 sm:mb-6 text-center w-full">
+                    {pillar.name}
+                  </h1>
+
+                  <p className="text-xs sm:text-base text-[#5a4138] dark:text-slate-300 font-medium mb-6 leading-relaxed text-justify sm:text-left w-full">
+                    {pillar.desc}
+                  </p>
+                </>
+              )}
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 w-full sm:w-auto mb-6">
@@ -105,7 +128,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             {/* Right Visual Container */}
             <div className={`${slug === "control-mapping" ? "lg:col-span-7" : "lg:col-span-5"} relative w-full`}>
               {slug === "control-mapping" ? (
-                <ControlMapping3DGraph />
+                <ControlMapping3DGraph hideHeader={true} />
               ) : (
                 <div className="p-space-card rounded-2xl bg-white dark:bg-navy-900 border border-slate-300 dark:border-navy-700/60 shadow-xl flex flex-col gap-6">
                   <div className="flex items-center justify-between">
