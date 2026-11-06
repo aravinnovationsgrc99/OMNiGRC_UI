@@ -82,13 +82,20 @@ export const HeroWorkflowVisual: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
 
-  // Auto-cycle steps smoothly every 4 seconds unless paused by interaction
+  // Auto-cycle steps smoothly every 5 seconds after initial 6 second idle window unless paused
   useEffect(() => {
     if (!isPlaying) return;
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % STEPS.length);
-    }, 4000);
-    return () => clearInterval(interval);
+    let interval: any;
+    const startTimer = setTimeout(() => {
+      interval = setInterval(() => {
+        setActiveStep((prev) => (prev + 1) % STEPS.length);
+      }, 5000);
+    }, 6000);
+
+    return () => {
+      clearTimeout(startTimer);
+      if (interval) clearInterval(interval);
+    };
   }, [isPlaying]);
 
   return (

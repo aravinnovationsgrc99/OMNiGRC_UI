@@ -143,11 +143,16 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
         const scale = 0.62 + d * 0.62;
         const opacity = 0.42 + d * 0.58;
-        const zIndex = Math.round(d * 100);
+        const zDepth = Math.round((d - 0.5) * 80);
 
-        discEl.style.transform = `translate3d(${x}px, ${y}px, 0px) scale(${scale})`;
+        discEl.style.transform = `translate3d(${x}px, ${y}px, ${zDepth}px) scale(${scale})`;
         discEl.style.opacity = `${opacity}`;
-        discEl.style.zIndex = `${zIndex}`;
+
+        const zTier = d > 0.5 ? "20" : "10";
+        if (discEl.dataset.ztier !== zTier) {
+          discEl.dataset.ztier = zTier;
+          discEl.style.zIndex = zTier;
+        }
 
         const distToFront = Math.abs(1 - Math.sin(a));
         if (distToFront < minDistanceToFront) {
@@ -167,8 +172,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         }
       }
 
-      // Update bottom readout text imperatively
-      if (readoutRef.current) {
+      // Update bottom readout text imperatively when interacting or seeking
+      if (readoutRef.current && (isDraggingRef.current || targetRotationRef.current !== null)) {
         const normAngle = ((rot % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
         const deg = Math.round((normAngle * 180) / Math.PI);
         readoutRef.current.textContent = `${String(closestIdx + 1).padStart(2, "0")} / ${String(N).padStart(2, "0")} · ${deg}°`;
@@ -183,7 +188,10 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
       isVisible = !document.hidden;
       if (isVisible) {
         lastTime = performance.now();
+        cancelAnimationFrame(animationFrameId);
         animationFrameId = requestAnimationFrame(animate);
+      } else {
+        cancelAnimationFrame(animationFrameId);
       }
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
@@ -196,14 +204,14 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
             lastTime = performance.now();
             cancelAnimationFrame(animationFrameId);
             animationFrameId = requestAnimationFrame(animate);
+          } else {
+            cancelAnimationFrame(animationFrameId);
           }
         });
       },
       { threshold: 0.05 }
     );
     observer.observe(container);
-
-    animationFrameId = requestAnimationFrame(animate);
 
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
@@ -361,16 +369,17 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               }
               @keyframes irisReveal {
                 0% {
-                  clip-path: circle(0% at 50% 50%);
+                  transform: scale(0.92);
                   opacity: 0.4;
                 }
                 100% {
-                  clip-path: circle(75% at 50% 50%);
+                  transform: scale(1);
                   opacity: 1;
                 }
               }
               .iris-bloom {
-                animation: irisReveal 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                animation: irisReveal 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                will-change: transform, opacity;
               }
             `}</style>
 

@@ -361,16 +361,28 @@ export const AuroraSVGBackground: React.FC = () => {
     };
     document.addEventListener("visibilitychange", handleVisibility);
 
-    if (isReducedMotion) {
-      renderFrame(performance.now());
-    } else {
-      animId = requestAnimationFrame(loop);
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+    renderFrame(performance.now());
+
+    let startTimeout: any;
+    if (!isReducedMotion && !isMobile) {
+      const startLoop = () => {
+        if (animId) return;
+        window.removeEventListener("scroll", startLoop);
+        lastRenderTime = performance.now();
+        animId = requestAnimationFrame(loop);
+      };
+
+      window.addEventListener("scroll", startLoop, { passive: true, once: true });
+      startTimeout = setTimeout(startLoop, 2000);
     }
 
     return () => {
       mediaQuery.removeEventListener("change", handleMotionChange);
       document.removeEventListener("visibilitychange", handleVisibility);
       observer.disconnect();
+      if (startTimeout) clearTimeout(startTimeout);
       if (animId) cancelAnimationFrame(animId);
     };
   }, [isMounted]);

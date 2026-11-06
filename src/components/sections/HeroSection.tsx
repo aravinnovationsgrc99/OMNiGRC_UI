@@ -7,30 +7,6 @@ import { ArrowRight, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeroWorkflowVisual } from "@/components/sections/HeroWorkflowVisual";
 
-// Staggered motion variants for smooth entrance animation sequence
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.07,
-      delayChildren: 0.03,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.45,
-      ease: [0.21, 0.47, 0.32, 0.98],
-    },
-  },
-};
-
 export const HeroSection: React.FC = () => {
   const { scrollY } = useScroll();
 
@@ -46,9 +22,6 @@ export const HeroSection: React.FC = () => {
 
       <motion.div
         style={{ opacity: heroOpacity, y: heroY }}
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
         className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8"
       >
         {/* Balanced Two-Column Composition on Desktop (lg:) / Stacked on Mobile */}
@@ -57,10 +30,7 @@ export const HeroSection: React.FC = () => {
           {/* LEFT CONTENT: Heading, Supporting Copy, CTAs */}
           <div className="lg:col-span-6 space-y-4 sm:space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left w-full">
             {/* 1. Main Heading */}
-            <motion.h1
-              variants={itemVariants}
-              className="text-[1.65rem] min-[360px]:text-[1.82rem] min-[385px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.14] text-center lg:text-left w-full"
-            >
+            <h1 className="text-[1.65rem] min-[360px]:text-[1.82rem] min-[385px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy-900 dark:text-white leading-[1.14] text-center lg:text-left w-full">
               <span className="block whitespace-nowrap">Unified Risk, Asset</span>
               <span className="block whitespace-nowrap">And Control Management</span>
               <span className="block whitespace-nowrap">
@@ -70,10 +40,10 @@ export const HeroSection: React.FC = () => {
                   <span className="absolute bottom-0 left-0 right-0 h-[2.5px] sm:h-[3px] bg-[#2E936F] rounded-full" />
                 </span>
               </span>
-            </motion.h1>
+            </h1>
 
             {/* 2. Supporting Copy */}
-            <motion.div variants={itemVariants} className="space-y-2.5 sm:space-y-3 w-full text-center lg:text-left">
+            <div className="space-y-2.5 sm:space-y-3 w-full text-center lg:text-left">
               <p className="text-base sm:text-xl md:text-2xl font-bold text-navy-900 dark:text-white tracking-tight leading-snug text-center lg:text-left">
                 AI does the heavy lifting.{" "}
                 <span className="text-[#F15E1C] font-extrabold">
@@ -84,13 +54,10 @@ export const HeroSection: React.FC = () => {
               <p className="text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed max-w-md sm:max-w-lg lg:max-w-xl text-center lg:text-left mx-auto lg:mx-0">
                 Unified risk, asset, and control management, where Advisory AI drafts and recommends, and your team approves every action.
               </p>
-            </motion.div>
+            </div>
 
             {/* 3. Hero CTAs */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center lg:items-start justify-start gap-3 sm:gap-3.5 pt-2 sm:pt-3 w-full"
-            >
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-start gap-3 sm:gap-3.5 pt-2 sm:pt-3 w-full">
               <Link href="/get-a-demo" className="w-full sm:w-auto">
                 <Button
                   variant="primary"
@@ -112,16 +79,13 @@ export const HeroSection: React.FC = () => {
                   See How It Works
                 </Button>
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* RIGHT VISUAL: Compliance Pipeline Product Visual */}
-          <motion.div
-            variants={itemVariants}
-            className="lg:col-span-6 w-full overflow-visible flex items-center justify-center pt-0 min-h-[460px] sm:min-h-[500px]"
-          >
+          <div className="lg:col-span-6 w-full overflow-visible flex items-center justify-center pt-0 min-h-[460px] sm:min-h-[500px]">
             <HeroWorkflowVisual />
-          </motion.div>
+          </div>
 
         </div>
       </motion.div>

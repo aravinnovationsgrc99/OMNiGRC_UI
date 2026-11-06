@@ -35,12 +35,26 @@ export function GoogleTag() {
     window.gtag("js", new Date());
     window.gtag("config", tagId);
 
-    const triggerLoad = () => {
-      setLoadScript(true);
+    let idleTimer: any;
+    let didTrigger = false;
+
+    const cleanup = () => {
       window.removeEventListener("scroll", triggerLoad);
       window.removeEventListener("click", triggerLoad);
       window.removeEventListener("touchstart", triggerLoad);
       window.removeEventListener("mousemove", triggerLoad);
+      if ("cancelIdleCallback" in window && typeof idleTimer === "number") {
+        (window as any).cancelIdleCallback(idleTimer);
+      } else if (idleTimer) {
+        clearTimeout(idleTimer);
+      }
+    };
+
+    const triggerLoad = () => {
+      if (didTrigger) return;
+      didTrigger = true;
+      cleanup();
+      setLoadScript(true);
     };
 
     window.addEventListener("scroll", triggerLoad, { passive: true, once: true });
@@ -48,7 +62,6 @@ export function GoogleTag() {
     window.addEventListener("touchstart", triggerLoad, { passive: true, once: true });
     window.addEventListener("mousemove", triggerLoad, { passive: true, once: true });
 
-    let idleTimer: any;
     if ("requestIdleCallback" in window) {
       idleTimer = (window as any).requestIdleCallback(
         () => {
@@ -61,15 +74,7 @@ export function GoogleTag() {
     }
 
     return () => {
-      window.removeEventListener("scroll", triggerLoad);
-      window.removeEventListener("click", triggerLoad);
-      window.removeEventListener("touchstart", triggerLoad);
-      window.removeEventListener("mousemove", triggerLoad);
-      if ("cancelIdleCallback" in window && typeof idleTimer === "number") {
-        (window as any).cancelIdleCallback(idleTimer);
-      } else {
-        clearTimeout(idleTimer);
-      }
+      cleanup();
     };
   }, [tagId]);
 
