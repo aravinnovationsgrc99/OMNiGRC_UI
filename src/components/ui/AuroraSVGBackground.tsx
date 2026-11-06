@@ -366,19 +366,27 @@ export const AuroraSVGBackground: React.FC = () => {
     renderFrame(performance.now());
 
     let startTimeout: any;
-    if (!isReducedMotion && !isMobile) {
-      const startLoop = () => {
-        if (animId) return;
-        window.removeEventListener("scroll", startLoop);
-        lastRenderTime = performance.now();
-        animId = requestAnimationFrame(loop);
-      };
+    const startLoop = () => {
+      if (animId) return;
+      window.removeEventListener("scroll", startLoop);
+      window.removeEventListener("mousemove", startLoop);
+      window.removeEventListener("click", startLoop);
+      if (startTimeout) clearTimeout(startTimeout);
+      lastRenderTime = performance.now();
+      animId = requestAnimationFrame(loop);
+    };
 
+    if (!isReducedMotion && !isMobile) {
       window.addEventListener("scroll", startLoop, { passive: true, once: true });
-      startTimeout = setTimeout(startLoop, 2000);
+      window.addEventListener("mousemove", startLoop, { passive: true, once: true });
+      window.addEventListener("click", startLoop, { passive: true, once: true });
+      startTimeout = setTimeout(startLoop, 7000);
     }
 
     return () => {
+      window.removeEventListener("scroll", startLoop);
+      window.removeEventListener("mousemove", startLoop);
+      window.removeEventListener("click", startLoop);
       mediaQuery.removeEventListener("change", handleMotionChange);
       document.removeEventListener("visibilitychange", handleVisibility);
       observer.disconnect();

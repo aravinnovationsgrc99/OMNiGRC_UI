@@ -77,7 +77,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     }
 
     let animationFrameId: number;
-    let isVisible = true;
+    let isVisible = false;
     let lastTime = performance.now();
 
     // Continuous spin speed
@@ -185,8 +185,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     };
 
     const handleVisibilityChange = () => {
-      isVisible = !document.hidden;
-      if (isVisible) {
+      const active = !document.hidden && isVisible;
+      if (active) {
         lastTime = performance.now();
         cancelAnimationFrame(animationFrameId);
         animationFrameId = requestAnimationFrame(animate);

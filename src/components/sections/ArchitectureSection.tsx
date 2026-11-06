@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { ControlMapping3DGraph } from "@/components/3d/ControlMapping3DGraph";
 
@@ -10,26 +7,17 @@ export const ArchitectureSection: React.FC = () => {
     <section className="relative bg-white dark:bg-[#0A111F] py-4 sm:py-6 border-t border-slate-200/60 dark:border-navy-700/60 overflow-hidden transition-colors duration-200">
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full text-left space-y-2 mb-4 sm:mb-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-[21px] min-[360px]:text-[25px] min-[400px]:text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full whitespace-nowrap text-left"
-          >
+          <h2 className="text-[21px] min-[360px]:text-[25px] min-[400px]:text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full whitespace-nowrap text-left">
             <span className="sm:hidden">
               AI Assist <span className="text-[#2E936F]">Human Decide</span>
             </span>
             <span className="hidden sm:inline">
               AI Assists. <span className="text-[#2E936F]">Humans Decide.</span>
             </span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-700 dark:text-slate-200 text-xs sm:text-base md:text-lg font-medium leading-relaxed w-full text-left"
-          >
+          </h2>
+          <p className="text-slate-700 dark:text-slate-200 text-xs sm:text-base md:text-lg font-medium leading-relaxed w-full text-left">
             Every AI suggestion is logged, reversible, and gated behind explicit approval: nothing writes to your compliance record without a human signing off.
-          </motion.p>
+          </p>
         </div>
 
         {/* 3D Pipeline Visualizer */}

@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   Cloud,
   ShieldCheck,
@@ -89,12 +86,8 @@ export const DeploymentSection: React.FC = () => {
           {deploymentModels.map((model, idx) => {
             const Icon = model.icon;
             return (
-              <motion.div
+              <div
                 key={model.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
                 className="relative flex flex-col"
               >
                 <Link
@@ -147,7 +140,7 @@ export const DeploymentSection: React.FC = () => {
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             );
           })}
         </div>

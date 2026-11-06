@@ -65,12 +65,12 @@ export function GoogleTag() {
     if ("requestIdleCallback" in window) {
       idleTimer = (window as any).requestIdleCallback(
         () => {
-          setTimeout(triggerLoad, 3500);
+          idleTimer = setTimeout(triggerLoad, 6000);
         },
-        { timeout: 5000 }
+        { timeout: 8000 }
       );
     } else {
-      idleTimer = setTimeout(triggerLoad, 4000);
+      idleTimer = setTimeout(triggerLoad, 8000);
     }
 
     return () => {

@@ -1,29 +1,17 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { useScroll, useTransform, motion } from "framer-motion";
 import { ArrowRight, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeroWorkflowVisual } from "@/components/sections/HeroWorkflowVisual";
 
 export const HeroSection: React.FC = () => {
-  const { scrollY } = useScroll();
-
-  // Scroll transitions for restrained feel during scroll
-  const heroOpacity = useTransform(scrollY, [0, 450], [1, 0.88]);
-  const heroY = useTransform(scrollY, [0, 450], [0, -18]);
-
   return (
     <section className="relative w-full overflow-hidden bg-transparent pt-6 sm:pt-10 md:pt-14 pb-3 sm:pb-4 transition-colors duration-300">
       {/* Subtle Ambient Radial Glows */}
       <div className="absolute top-0 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-[#2E936F]/10 dark:bg-[#2E936F]/15 rounded-full blur-3xl pointer-events-none -z-10 opacity-40 sm:opacity-100" />
       <div className="absolute top-1/3 left-4 w-40 sm:w-80 h-40 sm:h-80 bg-[#F15E1C]/10 dark:bg-[#F15E1C]/15 rounded-full blur-3xl pointer-events-none -z-10 opacity-40 sm:opacity-100" />
 
-      <motion.div
-        style={{ opacity: heroOpacity, y: heroY }}
-        className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8"
-      >
+      <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Balanced Two-Column Composition on Desktop (lg:) / Stacked on Mobile */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-6 lg:gap-12 items-center">
           
@@ -88,7 +76,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

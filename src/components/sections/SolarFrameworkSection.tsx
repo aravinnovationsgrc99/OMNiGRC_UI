@@ -1,7 +1,17 @@
-"use client";
-
 import React from "react";
-import { FrameworkOrrery } from "@/components/3d/FrameworkOrrery";
+import dynamic from "next/dynamic";
+
+const FrameworkOrrery = dynamic(
+  () => import("@/components/3d/FrameworkOrrery").then((m) => m.FrameworkOrrery),
+  {
+    loading: () => (
+      <div
+        className="w-full min-h-[480px] lg:min-h-[520px] rounded-3xl border border-slate-200/80 dark:border-navy-700/80 bg-white/50 dark:bg-navy-900/40"
+        aria-hidden="true"
+      />
+    ),
+  }
+);
 
 export const SolarFrameworkSection: React.FC = () => {
   return (
