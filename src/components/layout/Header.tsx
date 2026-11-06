@@ -32,21 +32,31 @@ export const Header: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [mobileExpandedSection, setMobileExpandedSection] = useState<string | null>(null);
 
   useEffect(() => {
+    let ticking = false;
+    const bar = document.getElementById("scroll-progress-bar");
+
     const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
-      setScrollProgress(progress);
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+          if (bar) {
+            bar.style.width = `${progress}%`;
+          }
+          if (window.scrollY > 20) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -60,9 +70,10 @@ export const Header: React.FC = () => {
     >
       {/* Subtle Scroll Progress Indicator Bar */}
       <div
+        id="scroll-progress-bar"
         aria-hidden="true"
         className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-[#F15E1C] via-[#FAB60A] to-[#2E936F] dark:from-teal dark:via-teal-300 dark:to-amber transition-all duration-150 z-50 opacity-90 shadow-sm"
-        style={{ width: `${scrollProgress}%` }}
+        style={{ width: "0%" }}
       />
       <div className="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -75,7 +86,7 @@ export const Header: React.FC = () => {
               className="flex items-center px-2 py-1 rounded-lg"
             >
               <Image
-                src="/omnigrc-logo.png"
+                src="/omnigrc-logo.webp"
                 alt="OMNiGRC - Connected GRC Platform"
                 width={200}
                 height={68}

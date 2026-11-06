@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Lock } from "lucide-react";
-import { motion } from "framer-motion";
 
 const coreWorkflows = [
   { name: "Risk Register", href: "/products/risk-register" },
@@ -71,21 +70,8 @@ export const Footer: React.FC = () => {
           }}
         />
 
-        {/* Primary Animated Wave: Smooth convex curve rising behind Trust & Security */}
-        <motion.div
-          className="absolute -bottom-2 left-[-2%] w-[105%] h-[380px] will-change-transform"
-          initial={{ y: 0, scaleY: 1 }}
-          animate={{
-            y: [-5, 5, -5],
-            scaleY: [1, 1.018, 1],
-            x: [-6, 6, -6],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
+        {/* Primary Animated Wave: Hardware accelerated CSS keyframes */}
+        <div className="absolute -bottom-2 left-[-2%] w-[105%] h-[380px] will-change-transform animate-footer-wave-1">
           <svg
             viewBox="0 0 1600 380"
             fill="none"
@@ -106,23 +92,10 @@ export const Footer: React.FC = () => {
               fill="url(#waveRefPrimarySoftBigger)"
             />
           </svg>
-        </motion.div>
+        </div>
 
         {/* Secondary Delicate Wave Ribbon for Layered Depth */}
-        <motion.div
-          className="absolute -bottom-6 left-[-4%] w-[110%] h-[400px] will-change-transform"
-          initial={{ y: 0, scaleY: 1 }}
-          animate={{
-            y: [5, -5, 5],
-            scaleY: [1.018, 0.982, 1.018],
-            x: [7, -7, 7],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
+        <div className="absolute -bottom-6 left-[-4%] w-[110%] h-[400px] will-change-transform animate-footer-wave-2">
           <svg
             viewBox="0 0 1600 400"
             fill="none"
@@ -142,21 +115,10 @@ export const Footer: React.FC = () => {
               fill="url(#waveRefSecondarySoftBigger)"
             />
           </svg>
-        </motion.div>
+        </div>
 
         {/* Translucent Highlight Ridge along the Wave Crest */}
-        <motion.div
-          className="absolute -bottom-2 left-[-2%] w-[105%] h-[380px] will-change-transform opacity-30 dark:opacity-20"
-          animate={{
-            y: [-3, 3, -3],
-            x: [-4, 4, -4],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
+        <div className="absolute -bottom-2 left-[-2%] w-[105%] h-[380px] will-change-transform opacity-30 dark:opacity-20 animate-footer-wave-3">
           <svg
             viewBox="0 0 1600 380"
             fill="none"
@@ -171,7 +133,7 @@ export const Footer: React.FC = () => {
               fill="none"
             />
           </svg>
-        </motion.div>
+        </div>
       </div>
 
       {/* 
@@ -183,15 +145,15 @@ export const Footer: React.FC = () => {
       <div className="relative z-10 w-full max-w-[1380px] 2xl:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Top Header Tagline */}
         <div className="flex justify-end items-center gap-2 mb-2.5">
-          <span className="text-[10.5px] sm:text-[11.5px] font-semibold tracking-[0.25em] text-slate-400 dark:text-slate-500 select-none uppercase font-mono">
+          <span className="text-[10.5px] sm:text-[11.5px] font-bold tracking-[0.25em] text-slate-600 dark:text-slate-300 select-none uppercase font-mono">
             SECURE
           </span>
-          <span className="text-slate-300 dark:text-slate-600 text-[10px] select-none">·</span>
-          <span className="text-[10.5px] sm:text-[11.5px] font-semibold tracking-[0.25em] text-slate-400 dark:text-slate-500 select-none uppercase font-mono">
+          <span className="text-slate-400 dark:text-slate-500 text-[10px] select-none">·</span>
+          <span className="text-[10.5px] sm:text-[11.5px] font-bold tracking-[0.25em] text-slate-600 dark:text-slate-300 select-none uppercase font-mono">
             GOVERN
           </span>
-          <span className="text-slate-300 dark:text-slate-600 text-[10px] select-none">·</span>
-          <span className="text-[10.5px] sm:text-[11.5px] font-semibold tracking-[0.25em] text-slate-400 dark:text-slate-500 select-none uppercase font-mono">
+          <span className="text-slate-400 dark:text-slate-500 text-[10px] select-none">·</span>
+          <span className="text-[10.5px] sm:text-[11.5px] font-bold tracking-[0.25em] text-slate-600 dark:text-slate-300 select-none uppercase font-mono">
             STAY AHEAD
           </span>
         </div>
@@ -209,9 +171,9 @@ export const Footer: React.FC = () => {
           {/* Column 1: CORE WORKFLOWS */}
           <div>
             <div className="w-7 h-[2.5px] bg-[#F15E1C] rounded-full mb-3" />
-            <h4 className="text-[12px] sm:text-[12.5px] font-bold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
+            <h3 className="text-[12px] sm:text-[12.5px] font-extrabold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
               CORE WORKFLOWS
-            </h4>
+            </h3>
             <ul className="flex flex-col space-y-2 text-[13px] sm:text-[13.5px]">
               {coreWorkflows.map((item) => (
                 <li key={item.name} className="leading-tight">
@@ -229,9 +191,9 @@ export const Footer: React.FC = () => {
               <li className="leading-tight">
                 <Link
                   href="/products/risk-register"
-                  className="group inline-flex items-center text-[#F15E1C] font-semibold hover:text-[#d44c0f] dark:hover:text-[#ff783e] transition-colors leading-normal py-0.5"
+                  className="group inline-flex items-center text-[#D4521A] dark:text-[#F15E1C] font-bold hover:text-[#F15E1C] dark:hover:text-[#ff783e] transition-colors leading-normal py-0.5"
                 >
-                  <span className="text-[#F15E1C] font-bold text-[11.5px] leading-none select-none mr-2.5 shrink-0 transition-transform group-hover:translate-x-0.5">
+                  <span className="font-bold text-[11.5px] leading-none select-none mr-2.5 shrink-0 transition-transform group-hover:translate-x-0.5">
                     &gt;
                   </span>
                   <span>All 10 GRC Modules &rarr;</span>
@@ -243,9 +205,9 @@ export const Footer: React.FC = () => {
           {/* Column 2: FRAMEWORKS */}
           <div>
             <div className="w-7 h-[2.5px] bg-[#F15E1C] rounded-full mb-3" />
-            <h4 className="text-[12px] sm:text-[12.5px] font-bold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
+            <h3 className="text-[12px] sm:text-[12.5px] font-extrabold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
               FRAMEWORKS
-            </h4>
+            </h3>
             <ul className="flex flex-col space-y-2 text-[13px] sm:text-[13.5px]">
               {frameworks.map((item) => (
                 <li key={item.name} className="leading-tight">
@@ -266,9 +228,9 @@ export const Footer: React.FC = () => {
           {/* Column 3: SOLUTIONS */}
           <div>
             <div className="w-7 h-[2.5px] bg-[#F15E1C] rounded-full mb-3" />
-            <h4 className="text-[12px] sm:text-[12.5px] font-bold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
+            <h3 className="text-[12px] sm:text-[12.5px] font-extrabold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
               SOLUTIONS
-            </h4>
+            </h3>
             <ul className="flex flex-col space-y-2 text-[13px] sm:text-[13.5px]">
               {solutions.map((item) => (
                 <li key={item.name} className="leading-tight">
@@ -289,9 +251,9 @@ export const Footer: React.FC = () => {
           {/* Column 4: RESOURCES */}
           <div>
             <div className="w-7 h-[2.5px] bg-[#F15E1C] rounded-full mb-3" />
-            <h4 className="text-[12px] sm:text-[12.5px] font-bold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
+            <h3 className="text-[12px] sm:text-[12.5px] font-extrabold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
               RESOURCES
-            </h4>
+            </h3>
             <ul className="flex flex-col space-y-2 text-[13px] sm:text-[13.5px]">
               {resources.map((item) => (
                 <li key={item.name} className="leading-tight">
@@ -312,20 +274,20 @@ export const Footer: React.FC = () => {
           {/* Column 5: TRUST & SECURITY (Tenant Isolated Card) */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="w-7 h-[2.5px] bg-[#F15E1C] rounded-full mb-3" />
-            <h4 className="text-[12px] sm:text-[12.5px] font-bold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
+            <h3 className="text-[12px] sm:text-[12.5px] font-extrabold text-slate-900 dark:text-slate-100 tracking-[0.06em] uppercase mb-3.5">
               TRUST &amp; SECURITY
-            </h4>
+            </h3>
 
             {/* Tenant Isolated Security Card */}
             <div className="w-full max-w-[340px] rounded-2xl bg-white/80 dark:bg-slate-900/85 backdrop-blur-md p-4 border border-white/90 dark:border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.5)] flex items-start gap-3.5 hover:shadow-[0_8px_30px_rgba(241,94,28,0.08)] transition-all duration-300">
               <div className="w-11 h-11 rounded-xl bg-[#FFF1EB] dark:bg-[#F15E1C]/15 border border-[#FDDCD0] dark:border-[#F15E1C]/30 flex items-center justify-center shrink-0">
-                <Lock className="w-5 h-5 text-[#F15E1C]" strokeWidth={2.2} />
+                <Lock className="w-5 h-5 text-[#D4521A] dark:text-[#F15E1C]" strokeWidth={2.2} />
               </div>
               <div className="space-y-1">
                 <div className="text-[13.5px] sm:text-[14px] font-bold text-slate-900 dark:text-white leading-snug">
                   Tenant Isolated
                 </div>
-                <p className="text-[11.5px] sm:text-[12px] text-slate-500 dark:text-slate-400 leading-[1.4] font-normal">
+                <p className="text-[11.5px] sm:text-[12px] text-slate-600 dark:text-slate-300 leading-[1.4] font-medium">
                   Advisory AI with data minimization. AI assists; human oversight approves.
                 </p>
               </div>
@@ -348,9 +310,8 @@ export const Footer: React.FC = () => {
               <Image
                 src="/images/Arav'sLogo.png"
                 alt="Arav Logo"
-                width={1230}
-                height={1278}
-                unoptimized
+                width={140}
+                height={140}
                 className="h-10 sm:h-11 md:h-12 w-auto object-contain dark:brightness-110 drop-shadow-sm transition-transform hover:scale-105"
                 priority={false}
               />
@@ -364,9 +325,8 @@ export const Footer: React.FC = () => {
               <Image
                 src="/images/Powered-By-AravInnovation.png"
                 alt="Powered by Arav Innovations"
-                width={2170}
-                height={725}
-                unoptimized
+                width={320}
+                height={107}
                 className="h-9 sm:h-10 md:h-[42px] w-auto object-contain dark:brightness-105 drop-shadow-sm transition-transform hover:scale-105"
                 priority={false}
               />
@@ -376,9 +336,9 @@ export const Footer: React.FC = () => {
             <div className="hidden lg:block h-7 sm:h-8 w-px bg-slate-300 dark:bg-slate-700/80 shrink-0 mx-1.5" aria-hidden="true" />
 
             {/* Tagline and Copyright */}
-            <div className="text-[12px] sm:text-[12.5px] leading-tight text-slate-500 dark:text-slate-400 font-medium text-center sm:text-left whitespace-nowrap">
-              <div className="text-slate-600 dark:text-slate-300 font-semibold">Unified Risk, Asset, And Control Management.</div>
-              <div className="text-slate-400 dark:text-slate-500 mt-0.5">
+            <div className="text-[12px] sm:text-[12.5px] leading-tight text-slate-600 dark:text-slate-300 font-medium text-center sm:text-left whitespace-nowrap">
+              <div className="text-slate-800 dark:text-slate-100 font-bold">Unified Risk, Asset, And Control Management.</div>
+              <div className="text-slate-600 dark:text-slate-300 mt-0.5">
                 © 2026 OMNiGRC. All rights reserved.
               </div>
             </div>
@@ -389,7 +349,7 @@ export const Footer: React.FC = () => {
             {/* Vertical Divider 3 */}
             <div className="hidden lg:block h-6 sm:h-7 w-px bg-slate-300 dark:bg-slate-700/80 shrink-0 mx-2" aria-hidden="true" />
 
-            {/* Social Media Links: Bigger, clearly visible icons */}
+            {/* Social Media Links: Bigger, clearly visible icons with safe 44x44 targets */}
             <div className="flex items-center gap-2.5 sm:gap-3" aria-label="Official Social Media Links">
               {/* YouTube */}
               <a
@@ -397,7 +357,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow OMNiGRC on YouTube (opens in new tab)"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
+                className="w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
               >
                 <svg className="w-5 h-3.5 fill-[#FF0000]" viewBox="0 0 24 17" aria-hidden="true">
                   <path d="M23.498 2.686A3.016 3.016 0 0 0 21.376.55C19.505.045 12 .045 12 .045s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 2.686C0 4.57 0 8.5 0 8.5s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 12.43 24 8.5 24 8.5s0-3.93-.502-5.814z" fill="#FF0000"/>
@@ -411,7 +371,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow OMNiGRC on Instagram (opens in new tab)"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
+                className="w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
                   <defs>
@@ -431,7 +391,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow OMNiGRC on X (formerly Twitter) (opens in new tab)"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
+                className="w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
               >
                 <svg className="w-4 h-4 fill-slate-900 dark:fill-white" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -444,7 +404,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow OMNiGRC on LinkedIn (opens in new tab)"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
+                className="w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-center hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shrink-0"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="3" fill="#FFFFFF" />
@@ -460,7 +420,7 @@ export const Footer: React.FC = () => {
             <div className="hidden lg:block h-6 sm:h-7 w-px bg-slate-300 dark:bg-slate-700/80 shrink-0 mx-2" aria-hidden="true" />
 
             {/* Legal Links: clearly visible */}
-            <div className="flex items-center gap-5 sm:gap-6 text-[12.5px] sm:text-[13px] font-medium text-slate-600 dark:text-slate-300">
+            <div className="flex items-center gap-5 sm:gap-6 text-[12.5px] sm:text-[13px] font-semibold text-slate-700 dark:text-slate-300">
               <Link
                 href="/privacy-policy"
                 className="hover:text-[#F15E1C] dark:hover:text-[#F15E1C] transition-colors whitespace-nowrap"

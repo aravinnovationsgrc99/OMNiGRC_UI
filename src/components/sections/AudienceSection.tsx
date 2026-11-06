@@ -140,7 +140,7 @@ export const AudienceSection: React.FC = () => {
             One workflow. <span className="text-[#F15E1C]">Every team size.</span>
           </h2>
 
-          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-none text-left lg:whitespace-nowrap">
+          <p className="text-xs sm:text-base md:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed w-full max-w-none text-left lg:whitespace-nowrap">
             From solo practitioner to security lead, OMNiGRC organizes risk, controls, and evidence around how you actually work.
           </p>
         </div>
@@ -257,7 +257,7 @@ export const AudienceSection: React.FC = () => {
 
                   {/* Description Text Below Icon & Heading Header */}
                   <div>
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed">
                       {r.subtext}
                     </p>
                   </div>
@@ -265,11 +265,11 @@ export const AudienceSection: React.FC = () => {
 
                 {/* BOTTOM ROW: Divider Line + Scale Metrics */}
                 <div className="pt-3 mt-3 border-t border-slate-200/80 dark:border-navy-700/80 flex items-center justify-between text-xs font-mono w-full transition-colors duration-200">
-                  <span className="text-slate-500 dark:text-slate-400 font-semibold flex items-center gap-1">
+                  <span className="text-slate-600 dark:text-slate-300 font-semibold flex items-center gap-1">
                     <Zap className="h-3.5 w-3.5 text-[#F15E1C] transition-transform duration-200 group-hover:scale-110" /> Same workflow
                   </span>
-                  <span className="font-bold text-slate-500 dark:text-slate-400">
-                    <span className="text-slate-300 dark:text-slate-600 mr-1.5">|</span> Scale{" "}
+                  <span className="font-bold text-slate-600 dark:text-slate-300">
+                    <span className="text-slate-400 dark:text-slate-500 mr-1.5">|</span> Scale{" "}
                     <span className={`font-extrabold transition-colors duration-200 ${r.scaleColor}`}>{r.scaleText}</span>
                   </span>
                 </div>
@@ -324,11 +324,11 @@ export const AudienceSection: React.FC = () => {
                             hidden: { opacity: 0, y: 4 },
                             visible: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeOut" } },
                           }}
-                          className="font-mono text-xs text-[#F15E1C] dark:text-amber font-bold uppercase tracking-wider block"
+                          className="font-mono text-xs text-[#D4521A] dark:text-[#FBBF24] font-bold uppercase tracking-wider block"
                         >
                           HOW IT WORKS
                         </motion.span>
-                        <ul className="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                        <ul className="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium">
                           {r.howItWorks.map((point, pIdx) => (
                             <motion.li
                               key={pIdx}

@@ -338,12 +338,28 @@ export const AuroraSVGBackground: React.FC = () => {
       ctx.restore();
     };
 
+    let lastRenderTime = 0;
+    const FRAME_INTERVAL = 1000 / 30; // 30 fps cap for smooth organic motion without CPU drain
+
     const loop = (now: number) => {
-      renderFrame(now);
-      if (!isReducedMotion) {
+      if (now - lastRenderTime >= FRAME_INTERVAL) {
+        lastRenderTime = now;
+        renderFrame(now);
+      }
+      if (!isReducedMotion && !document.hidden) {
         animId = requestAnimationFrame(loop);
       }
     };
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        if (animId) cancelAnimationFrame(animId);
+      } else if (!isReducedMotion) {
+        lastRenderTime = performance.now();
+        animId = requestAnimationFrame(loop);
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
 
     if (isReducedMotion) {
       renderFrame(performance.now());
@@ -353,6 +369,7 @@ export const AuroraSVGBackground: React.FC = () => {
 
     return () => {
       mediaQuery.removeEventListener("change", handleMotionChange);
+      document.removeEventListener("visibilitychange", handleVisibility);
       observer.disconnect();
       if (animId) cancelAnimationFrame(animId);
     };

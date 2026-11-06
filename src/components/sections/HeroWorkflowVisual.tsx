@@ -100,7 +100,7 @@ export const HeroWorkflowVisual: React.FC = () => {
       />
 
       {/* LIGHT-THEMED MAIN CONTAINER CARD */}
-      <div className="relative z-10 w-full rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-4 sm:p-6 lg:p-6 xl:p-7 shadow-2xl text-navy-900 dark:text-white flex flex-col justify-between gap-5 sm:gap-6">
+      <div className="relative z-10 w-full rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-navy-700 bg-white dark:bg-navy-900 p-4 sm:p-6 lg:p-6 xl:p-7 shadow-2xl text-navy-900 dark:text-white flex flex-col justify-between gap-5 sm:gap-6 min-h-[460px] sm:min-h-[500px]">
         
         {/* HEADER BAR: 3 STEP SELECTOR TABS */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-200 dark:border-navy-800 shrink-0">
@@ -110,7 +110,7 @@ export const HeroWorkflowVisual: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsPlaying(!isPlaying)}
-              className="sm:hidden text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-navy-800 border border-slate-200 dark:border-navy-700 font-semibold"
+              className="sm:hidden text-xs font-mono text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-navy-800 border border-slate-200 dark:border-navy-700 font-semibold"
             >
               {isPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
               <span>{isPlaying ? "Pause" : "Play"}</span>
@@ -130,10 +130,10 @@ export const HeroWorkflowVisual: React.FC = () => {
                     setActiveStep(idx);
                     setIsPlaying(false);
                   }}
-                  className={`flex items-center justify-center gap-1 sm:gap-1.5 px-1.5 sm:px-3 py-2 rounded-lg text-xs sm:text-sm font-bold transition-colors duration-150 select-none ${
+                  className={`flex items-center justify-center gap-1 sm:gap-1.5 px-1.5 sm:px-3 py-2 rounded-lg text-xs sm:text-sm font-bold transition-colors duration-150 select-none min-h-[36px] ${
                     isActive
                       ? "bg-[#2E936F] text-white shadow-sm"
-                      : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60"
+                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60"
                   }`}
                 >
                   <span className="font-mono text-[10px] sm:text-xs opacity-75 shrink-0">{s.stepNumber}.</span>
@@ -145,7 +145,7 @@ export const HeroWorkflowVisual: React.FC = () => {
         </div>
 
         {/* ACTIVE STEP SPOTLIGHT CONTENT - STACKED GRID CELL (Zero Height Collapse / Constant Dimensions) */}
-        <div className="relative w-full grid grid-cols-1 grid-rows-1">
+        <div className="relative w-full grid grid-cols-1 grid-rows-1 min-h-[290px] sm:min-h-[300px]">
           {STEPS.map((s, idx) => {
             const isCurrent = activeStep === idx;
             return (
@@ -163,13 +163,13 @@ export const HeroWorkflowVisual: React.FC = () => {
                   <div className="lg:col-span-5 flex flex-col justify-between space-y-4 text-left">
                     <div className="space-y-2">
                       <div className="min-h-[2.75rem] sm:min-h-[4rem] flex items-center justify-center sm:justify-start">
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-center sm:text-left">
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight text-center sm:text-left">
                           {s.title}
-                        </h3>
+                        </h2>
                       </div>
 
                       <div className="min-h-[3rem] sm:min-h-[4rem] flex items-start">
-                        <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed text-left">
+                        <p className="text-xs sm:text-base text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">
                           {s.subtitle}
                         </p>
                       </div>
@@ -178,15 +178,15 @@ export const HeroWorkflowVisual: React.FC = () => {
                     {/* Metric Card */}
                     <div className="h-[76px] sm:h-[84px] p-3.5 sm:p-4 rounded-xl bg-[#F8FAFC] dark:bg-navy-950 border border-slate-200 dark:border-navy-800 flex items-center justify-between gap-4 shadow-sm shrink-0">
                       <div className="min-w-0">
-                        <span className="text-[10px] sm:text-xs font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider block font-bold">
+                        <span className="text-[10px] sm:text-xs font-mono text-slate-600 dark:text-slate-300 uppercase tracking-wider block font-bold">
                           {s.highlightMetric.label}
                         </span>
-                        <span className="text-2xl sm:text-3xl font-extrabold text-[#2E936F] leading-none block mt-1">
+                        <span className="text-2xl sm:text-3xl font-extrabold text-[#2E936F] dark:text-[#34D399] leading-none block mt-1">
                           {s.highlightMetric.value}
                         </span>
                       </div>
                       <div className="w-10 h-10 rounded-xl bg-[#E6F4EF] dark:bg-[#2E936F]/20 border border-[#2E936F]/30 flex items-center justify-center shrink-0">
-                        <Check className="h-5 w-5 text-[#2E936F]" />
+                        <Check className="h-5 w-5 text-[#2E936F] dark:text-[#34D399]" />
                       </div>
                     </div>
                   </div>
@@ -201,20 +201,20 @@ export const HeroWorkflowVisual: React.FC = () => {
                           className="min-h-[72px] sm:min-h-[76px] px-3 sm:px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-800 bg-[#F8FAFC] dark:bg-navy-950 hover:border-[#2E936F]/50 transition-colors flex items-center justify-between gap-2.5 sm:gap-3 text-left shadow-sm"
                         >
                           <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
-                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#E6F4EF] dark:bg-navy-900 border border-[#2E936F]/30 flex items-center justify-center shrink-0 text-[#2E936F]">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#E6F4EF] dark:bg-navy-900 border border-[#2E936F]/30 flex items-center justify-center shrink-0 text-[#2E936F] dark:text-[#34D399]">
                               <ItemIcon className="h-4 w-4 sm:h-5 sm:w-5" />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <h4 className="text-xs sm:text-sm font-extrabold text-navy-900 dark:text-white leading-snug">
+                              <h3 className="text-xs sm:text-sm font-extrabold text-navy-900 dark:text-white leading-snug">
                                 {item.label}
-                              </h4>
-                              <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium leading-normal">
+                              </h3>
+                              <p className="text-[11px] sm:text-xs text-slate-700 dark:text-slate-300 font-medium leading-normal">
                                 {item.sub}
                               </p>
                             </div>
                           </div>
 
-                          <span className="px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#2E936F] border border-[#2E936F]/30 text-[10px] sm:text-xs font-mono font-bold shrink-0 whitespace-nowrap">
+                          <span className="px-2.5 py-1 rounded-full bg-[#E6F4EF] dark:bg-[#2E936F]/20 text-[#1B664B] dark:text-[#34D399] border border-[#2E936F]/30 text-[10px] sm:text-xs font-mono font-bold shrink-0 whitespace-nowrap">
                             ✓ {item.status}
                           </span>
                         </div>
@@ -228,10 +228,10 @@ export const HeroWorkflowVisual: React.FC = () => {
         </div>
 
         {/* BOTTOM PROGRESS TRACKER & CONTROLS */}
-        <div className="pt-3 border-t border-slate-200 dark:border-navy-800 flex items-center justify-between text-xs font-mono text-slate-500 dark:text-slate-400 shrink-0">
+        <div className="pt-3 border-t border-slate-200 dark:border-navy-800 flex items-center justify-between text-xs font-mono text-slate-600 dark:text-slate-300 shrink-0">
           <div className="flex items-center gap-3">
             <span className="hidden sm:inline font-semibold">Click any step to explore:</span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1">
               {STEPS.map((_, idx) => (
                 <button
                   key={idx}
@@ -240,11 +240,15 @@ export const HeroWorkflowVisual: React.FC = () => {
                     setActiveStep(idx);
                     setIsPlaying(false);
                   }}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    activeStep === idx ? "w-8 bg-[#2E936F]" : "w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400"
-                  }`}
+                  className="min-w-[28px] min-h-[28px] flex items-center justify-center p-1 focus:outline-none"
                   aria-label={`Go to step ${idx + 1}`}
-                />
+                >
+                  <span
+                    className={`h-2 rounded-full transition-all duration-300 pointer-events-none block ${
+                      activeStep === idx ? "w-8 bg-[#2E936F]" : "w-2.5 bg-slate-400 dark:bg-slate-600 hover:bg-slate-500"
+                    }`}
+                  />
+                </button>
               ))}
             </div>
           </div>
@@ -252,7 +256,7 @@ export const HeroWorkflowVisual: React.FC = () => {
           <button
             type="button"
             onClick={() => setIsPlaying(!isPlaying)}
-            className="hidden sm:flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white transition-colors font-bold"
+            className="hidden sm:flex items-center gap-1.5 text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white transition-colors font-bold"
           >
             {isPlaying ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
             <span>{isPlaying ? "Pause Auto-Cycle" : "Play Auto-Cycle"}</span>

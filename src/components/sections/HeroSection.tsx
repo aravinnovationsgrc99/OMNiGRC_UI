@@ -2,20 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { ArrowRight, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-
-const AuroraBackground = dynamic(
-  () => import("@/components/3d/AuroraBackground"),
-  { ssr: false }
-);
-
-const HeroWorkflowVisual = dynamic(
-  () => import("@/components/sections/HeroWorkflowVisual").then((m) => m.HeroWorkflowVisual),
-  { ssr: false }
-);
+import { HeroWorkflowVisual } from "@/components/sections/HeroWorkflowVisual";
 
 // Staggered motion variants for smooth entrance animation sequence
 const containerVariants = {
@@ -50,9 +40,6 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-transparent pt-6 sm:pt-10 md:pt-14 pb-3 sm:pb-4 transition-colors duration-300">
-      {/* Aurora Ambient Background: tuned opacity for clean readability */}
-      <AuroraBackground className="opacity-25 sm:opacity-75 dark:opacity-40 pointer-events-none" />
-
       {/* Subtle Ambient Radial Glows */}
       <div className="absolute top-0 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-[#2E936F]/10 dark:bg-[#2E936F]/15 rounded-full blur-3xl pointer-events-none -z-10 opacity-40 sm:opacity-100" />
       <div className="absolute top-1/3 left-4 w-40 sm:w-80 h-40 sm:h-80 bg-[#F15E1C]/10 dark:bg-[#F15E1C]/15 rounded-full blur-3xl pointer-events-none -z-10 opacity-40 sm:opacity-100" />
@@ -94,7 +81,7 @@ export const HeroSection: React.FC = () => {
                 </span>
               </p>
 
-              <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-md sm:max-w-lg lg:max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+              <p className="text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed max-w-md sm:max-w-lg lg:max-w-xl text-center lg:text-left mx-auto lg:mx-0">
                 Unified risk, asset, and control management, where Advisory AI drafts and recommends, and your team approves every action.
               </p>
             </motion.div>
@@ -131,7 +118,7 @@ export const HeroSection: React.FC = () => {
           {/* RIGHT VISUAL: Compliance Pipeline Product Visual */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-6 w-full overflow-visible flex items-center justify-center pt-0"
+            className="lg:col-span-6 w-full overflow-visible flex items-center justify-center pt-0 min-h-[460px] sm:min-h-[500px]"
           >
             <HeroWorkflowVisual />
           </motion.div>

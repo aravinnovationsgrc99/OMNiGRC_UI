@@ -156,8 +156,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         }
       });
 
-      // Synchronize active framework when frontmost disc changes
-      if (closestIdx !== activeIndexRef.current) {
+      // Synchronize active framework when frontmost disc changes only when user is interacting or seeking
+      if (closestIdx !== activeIndexRef.current && (isDraggingRef.current || targetRotationRef.current !== null)) {
         activeIndexRef.current = closestIdx;
         setActiveIndex(closestIdx);
         setIrisKey((prev) => prev + 1);
@@ -440,7 +440,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
                       {currentFw.code}
                     </h3>
 
-                    <span className="text-[11px] font-mono font-bold text-slate-600 dark:text-slate-300">
+                    <span className="text-[11px] font-mono font-bold text-slate-700 dark:text-slate-200">
                       {currentFw.region}
                     </span>
                   </div>
@@ -450,13 +450,20 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
                 {FRAMEWORKS.map((fw, idx) => {
                   const color = fw.accentColor || "#2E936F";
                   const isSelected = activeIndex === idx;
+                  const initialAngle = (Math.PI / 2) + idx * ((2 * Math.PI) / N);
+                  const initialX = Math.round(Math.cos(initialAngle) * 200);
+                  const initialY = Math.round(Math.sin(initialAngle) * 110);
+                  const initialD = (Math.sin(initialAngle) + 1) / 2;
+                  const initialScale = (0.62 + initialD * 0.62).toFixed(2);
+                  const initialOpacity = (0.42 + initialD * 0.58).toFixed(2);
+                  const initialZ = Math.round(initialD * 100);
 
                   return (
                     <button
                       key={fw.code}
                       ref={(el) => { discRefs.current[idx] = el; }}
                       onClick={() => seekToFramework(idx)}
-                      aria-label={fw.name}
+                      aria-label={`${fw.code} - ${fw.name}`}
                       className={`absolute w-14 h-14 sm:w-18 sm:h-18 rounded-full border-2 shadow-xl flex flex-col items-center justify-center transition-all duration-300 focus:outline-none cursor-pointer ${
                         isSelected
                           ? "border-[#F15E1C] shadow-[#F15E1C]/40 scale-110 ring-4 ring-[#F15E1C]/30"
@@ -466,6 +473,9 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
                         background: `radial-gradient(circle at 35% 35%, ${color} 0%, #16233F 100%)`,
                         left: "calc(50% - 28px)",
                         top: "calc(50% - 28px)",
+                        transform: `translate3d(${initialX}px, ${initialY}px, 0px) scale(${initialScale})`,
+                        opacity: initialOpacity,
+                        zIndex: initialZ,
                       }}
                     >
                       <span className="text-[11px] sm:text-xs font-mono font-extrabold text-white tracking-wider uppercase text-center px-1 leading-tight drop-shadow-sm">
@@ -479,7 +489,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
             {/* Bottom Readout Chrome */}
             <div className="absolute bottom-3 left-0 right-0 z-30 pointer-events-none flex items-center justify-between px-4 sm:px-6 text-xs font-mono">
-              <span className="text-slate-600 dark:text-slate-300 flex items-center gap-1.5 font-bold">
+              <span className="text-slate-700 dark:text-slate-200 flex items-center gap-1.5 font-bold">
                 <ShieldCheck className="h-4 w-4 text-[#2E936F]" />
                 <span>{FRAMEWORKS.length} Standard Taxonomies</span>
               </span>
@@ -520,7 +530,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
                   >
                     {currentFw.badge}
                   </span>
-                  <span className="text-xs font-mono text-slate-600 dark:text-slate-300 font-bold">{currentFw.region}</span>
+                  <span className="text-xs font-mono text-slate-700 dark:text-slate-200 font-bold">{currentFw.region}</span>
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-black text-navy-900 dark:text-white tracking-tight leading-snug">
@@ -529,13 +539,13 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
               </div>
 
               {/* One-Liner Description */}
-              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
+              <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-100 leading-relaxed font-semibold">
                 {currentFw.oneLiner || currentFw.desc}
               </p>
 
               {/* Mapped Control Domains */}
               <div className="space-y-1.5 pt-1">
-                <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
+                <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#D4521A] dark:text-[#FF7A3D] block">
                   Mapped Control Domains:
                 </span>
                 <ul className="space-y-1 text-xs sm:text-sm text-slate-800 dark:text-slate-100">
@@ -550,14 +560,14 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
               {/* Citations Badges */}
               <div className="space-y-1.5 pt-1">
-                <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#F15E1C] dark:text-[#FF7A3D] block">
+                <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#D4521A] dark:text-[#FF7A3D] block">
                   Authentic Clause Citations:
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {currentFw.citations.map((cit, cIdx) => (
                     <span
                       key={cIdx}
-                      className="px-2.5 py-0.5 rounded bg-[#E6F4EF] dark:bg-[#122B22] border border-[#2E936F]/40 text-[#2E936F] dark:text-[#42D49F] font-mono font-extrabold text-xs shadow-sm"
+                      className="px-2.5 py-0.5 rounded bg-[#E6F4EF] dark:bg-[#122B22] border border-[#2E936F]/40 text-[#1B664B] dark:text-[#42D49F] font-mono font-extrabold text-xs shadow-sm"
                     >
                       {cit}
                     </span>

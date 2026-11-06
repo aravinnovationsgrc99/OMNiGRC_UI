@@ -30,8 +30,8 @@ export const DeploymentSection: React.FC = () => {
         "Continuous automated compliance upgrades",
       ],
       border: "border-slate-200 dark:border-navy-700",
-      accent: "text-[#F15E1C] dark:text-amber-400",
-      badgeBg: "bg-[#F15E1C]/10 text-[#F15E1C] dark:text-amber-400",
+      accent: "text-[#D4521A] dark:text-amber-400",
+      badgeBg: "bg-[#F15E1C]/10 text-[#D4521A] dark:text-amber-300",
     },
     {
       step: "MODEL 02",
@@ -48,7 +48,7 @@ export const DeploymentSection: React.FC = () => {
         "Multi-client partner portfolio view",
       ],
       border: "border-[#2E936F] dark:border-teal-500/60",
-      accent: "text-[#2E936F] dark:text-teal-400",
+      accent: "text-[#2E936F] dark:text-[#34D399]",
       badgeBg: "bg-[#2E936F] text-white",
     },
     {
@@ -65,7 +65,7 @@ export const DeploymentSection: React.FC = () => {
         "Containerized deployment options",
       ],
       border: "border-slate-200 dark:border-navy-700",
-      accent: "text-[#FAB60A] dark:text-amber-400",
+      accent: "text-[#B5750A] dark:text-amber-400",
       badgeBg: "bg-[#FAB60A]/20 text-navy-900 dark:text-amber-300",
     },
   ];
@@ -76,10 +76,10 @@ export const DeploymentSection: React.FC = () => {
         {/* Section Header */}
         <div className="w-full text-left space-y-1.5">
           <h2 className="text-xl min-[360px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight leading-tight w-full text-left">
-            Deploy Your Way: <span className="text-[#2E936F]">Cloud Speed Or Air-Gapped Sovereignty.</span>
+            Deploy Your Way: <span className="text-[#2E936F] dark:text-[#34D399]">Cloud Speed Or Air-Gapped Sovereignty.</span>
           </h2>
 
-          <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full max-w-4xl text-left">
+          <p className="text-xs sm:text-base md:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed w-full max-w-4xl text-left">
             From fast multi-tenant SaaS onboarding to fully isolated, regulator-grade infrastructure, pick the model that matches your compliance posture.
           </p>
         </div>
@@ -106,7 +106,7 @@ export const DeploymentSection: React.FC = () => {
                   <div className="space-y-4 sm:space-y-5">
                     {/* Header Badges */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-xs font-mono font-extrabold text-slate-400 uppercase tracking-wider">
+                      <span className="text-xs font-mono font-extrabold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                         {model.step}
                       </span>
                       <span className={`text-xs font-mono px-2.5 py-1 rounded-full font-bold ${model.badgeBg}`}>
@@ -117,24 +117,24 @@ export const DeploymentSection: React.FC = () => {
                     {/* Model Title & Icon */}
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] transition-colors text-left">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight group-hover:text-[#2E936F] dark:group-hover:text-[#34D399] transition-colors text-left">
                           {model.title}
                         </h3>
-                        <p className="text-xs font-mono text-slate-400 mt-0.5 font-bold text-left">{model.speed}</p>
+                        <p className="text-xs font-mono text-slate-500 dark:text-slate-400 mt-0.5 font-bold text-left">{model.speed}</p>
                       </div>
                       <div className={`p-3 rounded-2xl bg-slate-100 dark:bg-navy-800 ${model.accent} shrink-0`}>
                         <Icon className="h-6 w-6" />
                       </div>
                     </div>
 
-                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                    <p className="text-base sm:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed">
                       {model.desc}
                     </p>
 
                     {/* Characteristics */}
                     <ul className="space-y-3 pt-2 border-t border-slate-100 dark:border-navy-800">
                       {model.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start gap-2.5 text-sm sm:text-base text-slate-700 dark:text-slate-200 font-medium">
+                        <li key={fIdx} className="flex items-start gap-2.5 text-sm sm:text-base text-slate-800 dark:text-slate-200 font-medium">
                           <CheckCircle2 className={`h-4.5 w-4.5 shrink-0 mt-0.5 ${model.accent}`} />
                           <span>{feat}</span>
                         </li>
@@ -142,7 +142,7 @@ export const DeploymentSection: React.FC = () => {
                     </ul>
                   </div>
 
-                  <div className="mt-8 pt-4 flex items-center justify-between text-xs sm:text-sm font-mono font-bold text-[#2E936F] dark:text-teal-400 group-hover:translate-x-1 transition-transform">
+                  <div className="mt-8 pt-4 flex items-center justify-between text-xs sm:text-sm font-mono font-bold text-[#2E936F] dark:text-[#34D399] group-hover:translate-x-1 transition-transform">
                     <span>Learn More</span>
                     <ArrowRight className="h-4 w-4" />
                   </div>
@@ -155,17 +155,17 @@ export const DeploymentSection: React.FC = () => {
         {/* Data Residency Note */}
         <div className="p-4 sm:p-6 rounded-2xl border border-slate-200 dark:border-navy-700 bg-white/80 dark:bg-navy-900/80 backdrop-blur-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-teal/10 text-teal shrink-0">
+            <div className="p-2 rounded-xl bg-emerald-500/10 text-[#2E936F] dark:text-[#34D399] shrink-0">
               <Globe className="h-5 w-5" />
             </div>
             <div>
               <span className="font-bold text-navy-900 dark:text-white">Regional Residency &amp; Sovereign Data Boundary:</span>
-              <p className="text-slate-600 dark:text-slate-300 mt-0.5">
+              <p className="text-slate-700 dark:text-slate-200 mt-0.5 font-medium">
                 Isolated tenant storage available in India &amp; UK cloud regions at launch, with EU &amp; Australia roadmap support.
               </p>
             </div>
           </div>
-          <span className="px-3 py-1 rounded-md bg-amber/15 text-navy-900 dark:text-amber font-mono font-bold text-[10px] uppercase shrink-0">
+          <span className="px-3 py-1 rounded-md bg-amber-500/15 text-navy-900 dark:text-[#FBBF24] font-mono font-bold text-[10px] uppercase shrink-0 border border-amber-500/30">
             Regulator Grade
           </span>
         </div>

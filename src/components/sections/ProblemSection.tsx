@@ -92,7 +92,7 @@ export const ProblemSection: React.FC = () => {
               <span className="block text-[#F15E1C] whitespace-nowrap">It Fails on Fragmentation.</span>
             </h2>
 
-            <p className="text-xs sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed text-left">
+            <p className="text-xs sm:text-base md:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed text-left">
               OMNiGRC bridges the gap between disconnected spreadsheets and heavy enterprise suites.
             </p>
           </div>
@@ -106,11 +106,11 @@ export const ProblemSection: React.FC = () => {
                   onClick={() => setViewState("fragmented")}
                   className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                     viewState === "fragmented"
-                      ? "bg-white dark:bg-navy-800 text-[#F15E1C] shadow-md border border-[#F15E1C]/30"
-                      : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
+                      ? "bg-white dark:bg-navy-800 text-[#D4521A] shadow-md border border-[#F15E1C]/30"
+                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white"
                   }`}
                 >
-                  <XCircle className="h-4 w-4 text-[#F15E1C] shrink-0" />
+                  <XCircle className="h-4 w-4 text-[#D4521A] shrink-0" />
                   <span className="whitespace-normal text-center leading-snug">Fragmented Workstreams</span>
                 </button>
                 <button
@@ -118,7 +118,7 @@ export const ProblemSection: React.FC = () => {
                   className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                     viewState === "connected"
                       ? "bg-[#2E936F] text-white shadow-md shadow-[#2E936F]/30"
-                      : "text-slate-600 dark:text-slate-400 hover:text-navy-900 dark:hover:text-white"
+                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white"
                   }`}
                 >
                   <Target className="h-4 w-4 shrink-0" />
@@ -128,7 +128,7 @@ export const ProblemSection: React.FC = () => {
             </div>
 
             {/* Visual Card Display */}
-            <div className="w-full">
+            <div className="w-full min-h-[440px] sm:min-h-[460px]">
               <AnimatePresence mode="wait">
                 {viewState === "fragmented" ? (
                   <motion.div
@@ -147,7 +147,7 @@ export const ProblemSection: React.FC = () => {
                           DISCONNECTED SYSTEMS &amp; FRICTION
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium">
+                      <span className="text-[11px] font-mono text-slate-600 dark:text-slate-300 font-semibold">
                         High Friction • Manual Work
                       </span>
                     </div>
@@ -167,14 +167,14 @@ export const ProblemSection: React.FC = () => {
 
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-2 mb-0.5">
-                                <h4 className="font-mono text-xs sm:text-sm font-extrabold text-[#F15E1C] uppercase tracking-wider truncate">
+                                <h3 className="font-mono text-xs sm:text-sm font-extrabold text-[#D4521A] dark:text-[#F15E1C] uppercase tracking-wider truncate">
                                   {item.label}
-                                </h4>
-                                <span className="px-2 py-0.5 rounded-md bg-[#FFE4DE] dark:bg-rose-950/80 text-[#E5484D] dark:text-rose-300 text-[10px] sm:text-[11px] font-mono font-bold shrink-0">
+                                </h3>
+                                <span className="px-2 py-0.5 rounded-md bg-[#FFE4DE] dark:bg-rose-950/80 text-[#991B1B] dark:text-rose-200 text-[10px] sm:text-[11px] font-mono font-bold shrink-0">
                                   {item.badge}
                                 </span>
                               </div>
-                              <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                              <p className="text-xs text-slate-700 dark:text-slate-200 font-medium leading-relaxed">
                                 {item.detail}
                               </p>
                             </div>
@@ -185,10 +185,10 @@ export const ProblemSection: React.FC = () => {
 
                     {/* Bottom Impact Banner Card */}
                     <div className="p-3 sm:p-3.5 rounded-xl border border-[#FDBAAB] dark:border-rose-900/60 bg-[#FFECE8] dark:bg-rose-950/30 flex items-center gap-3">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FDBAAB]/40 dark:bg-rose-900/50 text-[#E5484D] dark:text-rose-300 flex items-center justify-center shrink-0">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FDBAAB]/40 dark:bg-rose-900/50 text-[#991B1B] dark:text-rose-200 flex items-center justify-center shrink-0">
                         <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5" />
                       </div>
-                      <p className="text-xs sm:text-sm font-extrabold text-[#E5484D] dark:text-rose-300 leading-snug">
+                      <p className="text-xs sm:text-sm font-extrabold text-[#991B1B] dark:text-rose-200 leading-snug">
                         Resulting Impact: Duplicate work, audit scrambles &amp; low posture confidence.
                       </p>
                     </div>
@@ -210,7 +210,7 @@ export const ProblemSection: React.FC = () => {
                           OMNiGRC OPERATING LAYER
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-[#2E936F] dark:text-teal-400 font-bold">
+                      <span className="text-[11px] font-mono text-[#1B664B] dark:text-teal-300 font-bold">
                         Continuous Posture • Live Sync
                       </span>
                     </div>
@@ -230,14 +230,14 @@ export const ProblemSection: React.FC = () => {
 
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-2 mb-0.5">
-                                <h4 className="font-mono text-xs sm:text-sm font-extrabold text-[#2E936F] dark:text-teal-300 uppercase tracking-wider truncate">
+                                <h3 className="font-mono text-xs sm:text-sm font-extrabold text-[#1B664B] dark:text-teal-300 uppercase tracking-wider truncate">
                                   {item.label}
-                                </h4>
-                                <span className="px-2 py-0.5 rounded-md bg-[#E6F4EF] dark:bg-emerald-950 text-[#2E936F] dark:text-emerald-300 text-[10px] sm:text-[11px] font-mono font-bold shrink-0">
+                                </h3>
+                                <span className="px-2 py-0.5 rounded-md bg-[#E6F4EF] dark:bg-emerald-950 text-[#1B664B] dark:text-emerald-300 text-[10px] sm:text-[11px] font-mono font-bold shrink-0">
                                   {item.badge}
                                 </span>
                               </div>
-                              <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                              <p className="text-xs text-slate-700 dark:text-slate-200 font-medium leading-relaxed">
                                 {item.detail}
                               </p>
                             </div>

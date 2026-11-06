@@ -55,7 +55,7 @@ export const HomeBlogSection: React.FC = async () => {
               From the GRC{" "}
               <span className="text-[#F15E1C]">Operations Desk.</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-medium leading-relaxed max-w-2xl">
               Practical insights on risk management, compliance frameworks, and governance strategy from our editorial team.
             </p>
           </div>
@@ -90,6 +90,8 @@ export const HomeBlogSection: React.FC = async () => {
                     <img
                       src={post.coverImage}
                       alt={post.coverImageAlt || post.title}
+                      width={400}
+                      height={180}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
@@ -110,7 +112,7 @@ export const HomeBlogSection: React.FC = async () => {
                       <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase ${catStyle.bg} ${catStyle.text}`}>
                         {post.category}
                       </span>
-                      <span className="flex items-center gap-1 text-[10px] font-mono text-slate-500 dark:text-slate-400 font-medium">
+                      <span className="flex items-center gap-1 text-[10px] font-mono text-slate-600 dark:text-slate-300 font-semibold">
                         <Clock className="h-3 w-3" />
                         {post.readingTime}
                       </span>
@@ -122,7 +124,7 @@ export const HomeBlogSection: React.FC = async () => {
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2 font-medium">
+                    <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed line-clamp-2 font-medium">
                       {post.excerpt}
                     </p>
                   </div>

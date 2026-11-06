@@ -309,12 +309,18 @@ html.dark .card-elevated:hover {
 .divider-dark  { border-top: 1px solid rgba(255,255,255,0.08); }
 
 /* ─────────────────────────────────────────────────────────
-   MOBILE TOUCH TARGET MINIMUM (44×44 px)
+   MOBILE TOUCH TARGET OPTIMIZATION
    ───────────────────────────────────────────────────────── */
 button, a, [role="button"], [role="tab"] {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
+  touch-action: manipulation;
+}
+
+/* Accessible color contrast overrides for dark mode */
+html.dark .text-teal {
+  color: #34D399;
+}
+html.dark .text-amber {
+  color: #FBBF24;
 }
 
 /* Pill/badge overrides */
@@ -509,6 +515,35 @@ html.dark .bg-grid-mesh-adaptive {
 }
 
 /* ─────────────────────────────────────────────────────────
+   HARDWARE-ACCELERATED FOOTER WAVES (GPU COMPOSITED)
+   ───────────────────────────────────────────────────────── */
+@keyframes footerWave1 {
+  0%, 100% { transform: translate3d(-6px, -5px, 0) scaleY(1); }
+  50% { transform: translate3d(6px, 5px, 0) scaleY(1.018); }
+}
+@keyframes footerWave2 {
+  0%, 100% { transform: translate3d(7px, 5px, 0) scaleY(1.018); }
+  50% { transform: translate3d(-7px, -5px, 0) scaleY(0.982); }
+}
+@keyframes footerWave3 {
+  0%, 100% { transform: translate3d(-4px, -3px, 0); }
+  50% { transform: translate3d(4px, 3px, 0); }
+}
+
+.animate-footer-wave-1 {
+  animation: footerWave1 18s ease-in-out infinite;
+  will-change: transform;
+}
+.animate-footer-wave-2 {
+  animation: footerWave2 22s ease-in-out infinite;
+  will-change: transform;
+}
+.animate-footer-wave-3 {
+  animation: footerWave3 15s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ─────────────────────────────────────────────────────────
    REDUCED MOTION OVERRIDE
    ───────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
@@ -519,7 +554,8 @@ html.dark .bg-grid-mesh-adaptive {
     scroll-behavior: auto !important;
     transform: none !important;
   }
-  .ambient-motion-1, .ambient-motion-2 {
+  .ambient-motion-1, .ambient-motion-2,
+  .animate-footer-wave-1, .animate-footer-wave-2, .animate-footer-wave-3 {
     animation: none !important;
   }
 }

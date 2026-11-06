@@ -1,13 +1,7 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
-import { Compass } from "lucide-react";
-
-const FrameworkOrrery = dynamic(
-  () => import("@/components/3d/FrameworkOrrery").then((m) => m.FrameworkOrrery),
-  { ssr: false }
-);
+import { FrameworkOrrery } from "@/components/3d/FrameworkOrrery";
 
 export const SolarFrameworkSection: React.FC = () => {
   return (
@@ -30,7 +24,7 @@ export const SolarFrameworkSection: React.FC = () => {
         </div>
 
         {/* Two-Column Framework Detail Component with Header Tabs */}
-        <div className="w-full">
+        <div className="w-full min-h-[480px] lg:min-h-[520px]">
           <FrameworkOrrery title="FRAMEWORK TAXONOMIES" />
         </div>
       </div>

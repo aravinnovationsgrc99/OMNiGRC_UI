@@ -3,12 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle } from "lucide-react";
-import dynamic from "next/dynamic";
-
-const ControlMapping3DGraph = dynamic(
-  () => import("@/components/3d/ControlMapping3DGraph").then((m) => m.ControlMapping3DGraph),
-  { ssr: false }
-);
+import { ControlMapping3DGraph } from "@/components/3d/ControlMapping3DGraph";
 
 export const ArchitectureSection: React.FC = () => {
   return (
@@ -31,14 +26,14 @@ export const ArchitectureSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-600 dark:text-slate-300 text-xs sm:text-base md:text-lg font-medium leading-relaxed w-full text-left"
+            className="text-slate-700 dark:text-slate-200 text-xs sm:text-base md:text-lg font-medium leading-relaxed w-full text-left"
           >
             Every AI suggestion is logged, reversible, and gated behind explicit approval: nothing writes to your compliance record without a human signing off.
           </motion.p>
         </div>
 
         {/* 3D Pipeline Visualizer */}
-        <div className="mb-8 sm:mb-10">
+        <div className="mb-8 sm:mb-10 min-h-[300px]">
           <ControlMapping3DGraph />
         </div>
 
@@ -50,7 +45,7 @@ export const ArchitectureSection: React.FC = () => {
                 <span className="block whitespace-nowrap">AI ASSISTS.</span>
                 <span className="block whitespace-nowrap text-[#2E936F] dark:text-[#36B386]">HUMANS DECIDE.</span>
               </h3>
-              <p className="text-base sm:text-lg text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
+              <p className="text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed font-semibold">
                 OMNiGRC never makes unsupervised compliance decisions. AI provides advisory clause correlations, accompanied by confidence indicators. Human approval is mandatory.
               </p>
             </div>
@@ -58,36 +53,48 @@ export const ArchitectureSection: React.FC = () => {
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* WHAT IS SENT TO LLMS */}
               <div className="p-5 rounded-2xl bg-white dark:bg-[#122820] border-2 border-[#2E936F]/40 dark:border-[#2E936F]/60 shadow-md space-y-3">
-                <span className="text-xs sm:text-sm font-mono font-black text-[#2E936F] dark:text-[#42D49F] uppercase flex items-center gap-1.5 tracking-wider">
-                  <CheckCircle2 className="h-5 w-5 text-[#2E936F] dark:text-[#42D49F]" /> WHAT IS SENT TO LLMS:
-                </span>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-800 dark:text-slate-100 font-bold">
-                  <li className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-[#2E936F] dark:bg-[#42D49F] shrink-0" /> Generic control text
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-[#2E936F] dark:text-[#36B386] shrink-0" />
+                  <span className="text-xs font-mono font-black uppercase text-[#2E936F] dark:text-[#36B386]">
+                    SENT TO REASONING ENGINE
+                  </span>
+                </div>
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-100 font-medium">
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2E936F] shrink-0 mt-1.5" />
+                    <span>Control Safeguard Language (anonymized)</span>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-[#2E936F] dark:bg-[#42D49F] shrink-0" /> Target framework clause
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2E936F] shrink-0 mt-1.5" />
+                    <span>Framework clause requirements &amp; criteria</span>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-[#2E936F] dark:bg-[#42D49F] shrink-0" /> Taxonomy definition
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2E936F] shrink-0 mt-1.5" />
+                    <span>Confidence scoring prompts</span>
                   </li>
                 </ul>
               </div>
 
-              {/* WHAT IS NEVER SENT */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-[#2D1219] border-2 border-rose-300 dark:border-rose-700/60 shadow-md space-y-3">
-                <span className="text-xs sm:text-sm font-mono font-black text-rose-600 dark:text-rose-400 uppercase flex items-center gap-1.5 tracking-wider">
-                  <XCircle className="h-5 w-5 text-rose-500 dark:text-rose-400" /> WHAT IS NEVER SENT:
-                </span>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-800 dark:text-slate-100 font-bold">
-                  <li className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-rose-500 dark:bg-rose-400 shrink-0" /> Organization name or brand
+              {/* WHAT NEVER LEAVES YOUR BOUNDARY */}
+              <div className="p-5 rounded-2xl bg-white dark:bg-[#201016] border-2 border-rose-300 dark:border-rose-900/60 shadow-md space-y-3">
+                <div className="flex items-center gap-2">
+                  <XCircle className="h-5 w-5 text-[#E5484D] dark:text-rose-400 shrink-0" />
+                  <span className="text-xs font-mono font-black uppercase text-[#E5484D] dark:text-rose-400">
+                    NEVER LEAVES BOUNDARY
+                  </span>
+                </div>
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-100 font-medium">
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#E5484D] shrink-0 mt-1.5" />
+                    <span>Evidence files, logs &amp; artifacts</span>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-rose-500 dark:bg-rose-400 shrink-0" /> User identities &amp; employee data
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#E5484D] shrink-0 mt-1.5" />
+                    <span>PII, employee names &amp; org identifiers</span>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <span className="h-2 w-2 rounded-full bg-rose-500 dark:bg-rose-400 shrink-0" /> Unrelated risk &amp; asset records
+                  <li className="flex items-start gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#E5484D] shrink-0 mt-1.5" />
+                    <span>Tenant data (never used to train models)</span>
                   </li>
                 </ul>
               </div>

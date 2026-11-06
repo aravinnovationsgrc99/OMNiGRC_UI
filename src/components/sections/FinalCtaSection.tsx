@@ -70,7 +70,7 @@ export const FinalCtaSection: React.FC = () => {
               </h2>
 
               {/* Subheading */}
-              <p className="text-xs sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed w-full mb-5 sm:mb-6 text-left">
+              <p className="text-xs sm:text-base lg:text-lg text-slate-700 dark:text-slate-200 font-medium leading-relaxed w-full mb-5 sm:mb-6 text-left">
                 Bring risk, assets, and controls into one workflow, built for lean security teams, built for SOC 2 Type II readiness, tenant isolation, and AI that drafts while your team approves.
               </p>
             </div>
@@ -111,7 +111,7 @@ export const FinalCtaSection: React.FC = () => {
               </div>
 
               {/* GRC Newsletter Badge */}
-              <span className="font-mono text-xs text-[#F15E1C] dark:text-amber font-extrabold uppercase tracking-wider block">
+              <span className="font-mono text-xs text-[#D4521A] dark:text-[#FBBF24] font-extrabold uppercase tracking-wider block">
                 GRC NEWSLETTER
               </span>
 
@@ -121,7 +121,7 @@ export const FinalCtaSection: React.FC = () => {
               </h3>
 
               {/* Newsletter Subtitle */}
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed">
                 Get the latest updates, templates and expert insights delivered to your inbox.
               </p>
             </div>
@@ -129,20 +129,21 @@ export const FinalCtaSection: React.FC = () => {
             {/* Newsletter Form */}
             <div className="pt-4">
               {subscribed ? (
-                <div className="p-3.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-[#2E936F] dark:text-teal-300 text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 w-full">
+                <div className="p-3.5 rounded-xl bg-[#2E936F]/15 border border-[#2E936F]/40 text-[#1B664B] dark:text-teal-300 text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 w-full">
                   <CheckCircle2 className="h-4 w-4" /> Subscribed! Welcome.
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="space-y-3 w-full">
                   <div className="relative w-full">
-                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
                     <input
                       type="email"
                       required
+                      aria-label="Work email address for GRC newsletter"
                       placeholder="Enter your work email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-xs sm:text-sm text-navy-900 dark:text-white placeholder-slate-400 focus:border-[#2E936F] focus:outline-none shadow-sm"
+                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-xs sm:text-sm text-navy-900 dark:text-white placeholder-slate-500 focus:border-[#2E936F] focus:outline-none shadow-sm"
                     />
                   </div>
 
