@@ -88,8 +88,8 @@ export const Header: React.FC = () => {
               <Image
                 src="/omnigrc-logo.webp"
                 alt="OMNiGRC - Connected GRC Platform"
-                width={200}
-                height={68}
+                width={140}
+                height={100}
                 className="h-11 sm:h-12 w-auto object-contain"
                 priority
               />
