@@ -83,14 +83,14 @@ export const Header: React.FC = () => {
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="flex items-center px-2 py-1 rounded-lg"
+              className="flex items-center px-1 sm:px-2 py-1 rounded-lg shrink-0"
             >
               <Image
                 src="/omnigrc-logo.webp"
                 alt="OMNiGRC - Connected GRC Platform"
                 width={140}
                 height={100}
-                className="h-11 sm:h-12 w-auto object-contain"
+                className="h-11 sm:h-12 w-auto max-w-full object-contain aspect-[140/100] shrink-0"
                 priority
               />
             </motion.div>
