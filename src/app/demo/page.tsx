@@ -39,9 +39,37 @@ export default function DemoPage() {
     const newErrors: { [key: string]: string } = {};
 
     if (!formData.name.trim()) newErrors.name = "Full name is required";
-    if (!formData.email.trim() || !formData.email.includes("@"))
-      newErrors.email = "Valid work email is required";
+
+    // Corporate email validation (block free/personal email providers)
+    const BLOCKED_PERSONAL_EMAIL_DOMAINS = new Set([
+      "gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "live.com", "msn.com",
+      "yahoo.com", "ymail.com", "rocketmail.com", "yahoo.co.uk", "yahoo.co.in",
+      "icloud.com", "me.com", "mac.com", "aol.com", "aim.com", "proton.me", "protonmail.com",
+      "pm.me", "zoho.com", "zohomail.com", "mail.com", "gmx.com", "gmx.net", "yandex.com",
+      "yandex.ru", "rediffmail.com", "tutanota.com", "tutamail.com", "fastmail.com", "hushmail.com", "inbox.com"
+    ]);
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailTrimmed = formData.email.trim().toLowerCase();
+    const emailDomain = emailTrimmed.split("@")[1] || "";
+    if (!emailTrimmed || !emailRegex.test(emailTrimmed)) {
+      newErrors.email = "Valid corporate email is required";
+    } else if (BLOCKED_PERSONAL_EMAIL_DOMAINS.has(emailDomain)) {
+      newErrors.email = "Please use a corporate or work email address (personal providers like Gmail, Yahoo, Outlook are not accepted)";
+    }
+
     if (!formData.company.trim()) newErrors.company = "Company name is required";
+
+    // Mandatory phone number validation
+    const phoneTrimmed = formData.phone.trim();
+    const phoneDigits = phoneTrimmed.replace(/\D/g, "");
+    const phonePattern = /^\+?[0-9\s\-().]{7,25}$/;
+    if (!phoneTrimmed) {
+      newErrors.phone = "Phone number is required";
+    } else if (!phonePattern.test(phoneTrimmed) || phoneDigits.length < 7 || phoneDigits.length > 15) {
+      newErrors.phone = "Please enter a valid phone number (7-15 digits)";
+    }
+
     if (!formData.agree) newErrors.agree = "You must agree to the Privacy Policy";
 
     if (Object.keys(newErrors).length > 0) {
@@ -172,7 +200,10 @@ export default function DemoPage() {
                       type="email"
                       placeholder="alex@company.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
+                        if (errors.email) setErrors((prev) => ({ ...prev, email: "" }));
+                      }}
                       className={`w-full rounded-xl border bg-white dark:bg-navy-900 px-4 py-3 text-sm text-[#0d1b36] dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 ${
                         errors.email
                           ? "border-red-500 focus:ring-red-500"
@@ -200,14 +231,22 @@ export default function DemoPage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-[#0d1b36] dark:text-slate-300 mb-1">Phone Number</label>
+                      <label className="block text-xs font-semibold text-[#0d1b36] dark:text-slate-300 mb-1">Phone Number *</label>
                       <input
                         type="tel"
                         placeholder="+1 (555) 000-0000"
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 dark:border-navy-700/60 bg-white dark:bg-navy-900 px-4 py-3 text-sm text-[#0d1b36] dark:text-slate-200 placeholder-slate-400 focus:border-[#F15E1C] focus:outline-none focus:ring-2 focus:ring-[#F15E1C]/20"
+                        onChange={(e) => {
+                          setFormData({ ...formData, phone: e.target.value });
+                          if (errors.phone) setErrors((prev) => ({ ...prev, phone: "" }));
+                        }}
+                        className={`w-full rounded-xl border bg-white dark:bg-navy-900 px-4 py-3 text-sm text-[#0d1b36] dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 ${
+                          errors.phone
+                            ? "border-red-500 focus:ring-red-500"
+                            : "border-slate-200 dark:border-navy-700/60 focus:border-[#F15E1C] focus:ring-[#F15E1C]/20"
+                        }`}
                       />
+                      {errors.phone && <p className="text-[11px] text-red-600 mt-1 font-mono">{errors.phone}</p>}
                     </div>
                   </div>
 

@@ -50,6 +50,35 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Valid email address is required" }, { status: 400 });
     }
 
+    // Validation for demo requests: require corporate email and mandatory valid phone number
+    if (request_type === "DEMO" || source_page === "/demo") {
+      const BLOCKED_PERSONAL_EMAIL_DOMAINS = new Set([
+        "gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "live.com", "msn.com",
+        "yahoo.com", "ymail.com", "rocketmail.com", "yahoo.co.uk", "yahoo.co.in",
+        "icloud.com", "me.com", "mac.com", "aol.com", "aim.com", "proton.me", "protonmail.com",
+        "pm.me", "zoho.com", "zohomail.com", "mail.com", "gmx.com", "gmx.net", "yandex.com",
+        "yandex.ru", "rediffmail.com", "tutanota.com", "tutamail.com", "fastmail.com", "hushmail.com", "inbox.com"
+      ]);
+
+      const emailDomain = email.split("@")[1] || "";
+      if (BLOCKED_PERSONAL_EMAIL_DOMAINS.has(emailDomain)) {
+        return NextResponse.json(
+          { success: false, error: "Please provide a valid corporate email address (personal providers like Gmail, Yahoo, Outlook are not accepted)" },
+          { status: 400 }
+        );
+      }
+
+      const phoneTrimmed = phone ? phone.trim() : "";
+      const phoneDigits = phoneTrimmed.replace(/\D/g, "");
+      const phonePattern = /^\+?[0-9\s\-().]{7,25}$/;
+      if (!phoneTrimmed || !phonePattern.test(phoneTrimmed) || phoneDigits.length < 7 || phoneDigits.length > 15) {
+        return NextResponse.json(
+          { success: false, error: "A valid contact phone number (7-15 digits) is required" },
+          { status: 400 }
+        );
+      }
+    }
+
     if (name.length > 200 || email.length > 200 || company.length > 200) {
       return NextResponse.json({ success: false, error: "Input text exceeds maximum allowed length" }, { status: 400 });
     }
