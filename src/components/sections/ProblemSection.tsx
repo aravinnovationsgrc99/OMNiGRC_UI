@@ -18,7 +18,10 @@ import {
 } from "lucide-react";
 
 export const ProblemSection: React.FC = () => {
-  const [viewState, setViewState] = useState<"fragmented" | "connected">("fragmented");
+  const [selectedView, setSelectedView] = useState<"fragmented" | "connected">("fragmented");
+  const [hoveredView, setHoveredView] = useState<"fragmented" | "connected" | null>(null);
+
+  const viewState = hoveredView ?? selectedView;
 
   const fragmentedItems = [
     {
@@ -101,24 +104,37 @@ export const ProblemSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             {/* Top Segmented Tab Switcher */}
             <div className="flex justify-center lg:justify-start">
-              <div className="w-full max-w-xl p-1.5 rounded-2xl bg-slate-200/80 dark:bg-navy-900 border border-slate-300/80 dark:border-navy-700/80 grid grid-cols-2 gap-1.5 shadow-inner">
+              <div
+                onMouseLeave={() => setHoveredView(null)}
+                className="w-full max-w-xl p-1.5 rounded-2xl bg-slate-200/80 dark:bg-navy-900 border border-slate-300/80 dark:border-navy-700/80 grid grid-cols-2 gap-1.5 shadow-inner"
+              >
                 <button
-                  onClick={() => setViewState("fragmented")}
-                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                  type="button"
+                  onClick={() => {
+                    setSelectedView("fragmented");
+                    setHoveredView(null);
+                  }}
+                  onMouseEnter={() => setHoveredView("fragmented")}
+                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                     viewState === "fragmented"
-                      ? "bg-white dark:bg-navy-800 text-[#D4521A] shadow-md border border-[#F15E1C]/30"
-                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white"
+                      ? "bg-white dark:bg-navy-800 text-[#D4521A] shadow-md border border-[#F15E1C]/30 scale-[1.01]"
+                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-navy-800/50"
                   }`}
                 >
                   <XCircle className="h-4 w-4 text-[#D4521A] shrink-0" />
                   <span className="whitespace-normal text-center leading-snug">Fragmented Workstreams</span>
                 </button>
                 <button
-                  onClick={() => setViewState("connected")}
-                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                  type="button"
+                  onClick={() => {
+                    setSelectedView("connected");
+                    setHoveredView(null);
+                  }}
+                  onMouseEnter={() => setHoveredView("connected")}
+                  className={`flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                     viewState === "connected"
-                      ? "bg-[#2E936F] text-white shadow-md shadow-[#2E936F]/30"
-                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white"
+                      ? "bg-[#2E936F] text-white shadow-md shadow-[#2E936F]/30 scale-[1.01]"
+                      : "text-slate-700 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-[#2E936F]/10"
                   }`}
                 >
                   <Target className="h-4 w-4 shrink-0" />

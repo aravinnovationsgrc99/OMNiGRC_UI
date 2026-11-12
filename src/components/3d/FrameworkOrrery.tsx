@@ -36,6 +36,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
   const lastMouseTimeRef = useRef<number>(0);
   const isDraggingRef = useRef<boolean>(false);
   const isHoveredRef = useRef<boolean>(false);
+  const pauseUntilRef = useRef<number>(0);
   const activeIndexRef = useRef<number>(0);
 
   // Mouse tilt parallax target & current
@@ -59,6 +60,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
     targetRotationRef.current = currentRot + diff;
     velocityRef.current = 0;
+    pauseUntilRef.current = performance.now() + 4000;
     setKeyboardFocusedIndex(idx);
   };
 
@@ -81,7 +83,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
     let lastTime = performance.now();
 
     // Continuous spin speed
-    const BASE_SPIN_SPEED = -0.0075;
+    const BASE_SPIN_SPEED = -0.0045;
 
     const animate = (now: number) => {
       const dt = Math.min((now - lastTime) / 1000, 0.1);
@@ -102,10 +104,11 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         if (Math.abs(velocityRef.current) > 0.0001) {
           rotationRef.current += velocityRef.current * speedScale;
           velocityRef.current *= Math.pow(0.92, speedScale);
+        } else if (isHoveredRef.current || now < pauseUntilRef.current) {
+          // Pause auto-rotation when hovered or holding after user interaction
         } else {
-          // Continuous rotation: full speed normally, 40% speed on hover
-          const currentSpeed = isHoveredRef.current ? BASE_SPIN_SPEED * 0.4 : BASE_SPIN_SPEED;
-          rotationRef.current += currentSpeed * speedScale;
+          // Continuous smooth auto-rotation
+          rotationRef.current += BASE_SPIN_SPEED * speedScale;
         }
       }
 
@@ -161,8 +164,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         }
       });
 
-      // Synchronize active framework when frontmost disc changes only when user is interacting or seeking
-      if (closestIdx !== activeIndexRef.current && (isDraggingRef.current || targetRotationRef.current !== null)) {
+      // Synchronize active framework dynamically when frontmost disc changes
+      if (closestIdx !== activeIndexRef.current) {
         activeIndexRef.current = closestIdx;
         setActiveIndex(closestIdx);
         setIrisKey((prev) => prev + 1);
@@ -172,8 +175,8 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         }
       }
 
-      // Update bottom readout text imperatively when interacting or seeking
-      if (readoutRef.current && (isDraggingRef.current || targetRotationRef.current !== null)) {
+      // Update bottom readout text imperatively
+      if (readoutRef.current) {
         const normAngle = ((rot % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
         const deg = Math.round((normAngle * 180) / Math.PI);
         readoutRef.current.textContent = `${String(closestIdx + 1).padStart(2, "0")} / ${String(N).padStart(2, "0")} · ${deg}°`;
@@ -257,6 +260,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
   const handlePointerUp = () => {
     isDraggingRef.current = false;
+    pauseUntilRef.current = performance.now() + 3500;
   };
 
   const handlePointerLeave = () => {
@@ -292,6 +296,7 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
 
   const handleTouchEnd = () => {
     isDraggingRef.current = false;
+    pauseUntilRef.current = performance.now() + 3500;
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -513,7 +518,11 @@ export const FrameworkOrrery: React.FC<FrameworkOrreryProps> = ({
         </div>
 
         {/* RIGHT SIDE (5 COLS): Synchronized Highlighted Framework Detail Panel */}
-        <div className="lg:col-span-5 w-full">
+        <div
+          className="lg:col-span-5 w-full"
+          onMouseEnter={() => { isHoveredRef.current = true; }}
+          onMouseLeave={() => { isHoveredRef.current = false; }}
+        >
           <div
             key={`readout-${irisKey}`}
             className={`iris-bloom w-full ${compact ? "h-[340px] sm:h-[380px]" : "h-[420px] sm:h-[470px] lg:h-[500px]"} rounded-3xl border-2 border-slate-200/90 dark:border-[#2E936F]/50 bg-white dark:bg-[#0F1B34] p-5 sm:p-6 shadow-2xl backdrop-blur-xl flex flex-col justify-between relative overflow-hidden`}

@@ -1,10 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import {
+  getStoredAttributionClient,
+  extractCampaignParams,
+  CampaignAttributionData
+} from "@/lib/attribution";
 import {
   CheckCircle2,
   Lock,
@@ -32,6 +37,39 @@ export default function DemoPage() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [attribution, setAttribution] = useState<{
+    utm_source: string;
+    utm_medium: string;
+    utm_campaign: string;
+    utm_term: string;
+    utm_content: string;
+    gclid: string;
+  }>({
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
+    gclid: ""
+  });
+
+  // Load attribution data on mount from centralized cookie and current URL parameters
+  useEffect(() => {
+    const stored = getStoredAttributionClient();
+    let urlParams: CampaignAttributionData = {};
+    if (typeof window !== "undefined") {
+      urlParams = extractCampaignParams(new URLSearchParams(window.location.search));
+    }
+
+    setAttribution({
+      utm_source: urlParams.utm_source || stored?.utm_source || "",
+      utm_medium: urlParams.utm_medium || stored?.utm_medium || "",
+      utm_campaign: urlParams.utm_campaign || stored?.utm_campaign || "",
+      utm_term: urlParams.utm_term || stored?.utm_term || "",
+      utm_content: urlParams.utm_content || stored?.utm_content || "",
+      gclid: urlParams.gclid || stored?.gclid || ""
+    });
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,7 +128,14 @@ export default function DemoPage() {
           phone: formData.phone,
           message: `Role: ${formData.role}, Size: ${formData.size}${formData.message ? `. Priorities: ${formData.message}` : ""}`,
           request_type: "DEMO",
-          source_page: "/demo"
+          source_page: "/demo",
+          // Google Ads & UTM Attribution
+          utm_source: attribution.utm_source || undefined,
+          utm_medium: attribution.utm_medium || undefined,
+          utm_campaign: attribution.utm_campaign || undefined,
+          utm_term: attribution.utm_term || undefined,
+          utm_content: attribution.utm_content || undefined,
+          gclid: attribution.gclid || undefined
         })
       });
 
@@ -178,6 +223,14 @@ export default function DemoPage() {
                 <p className="text-xs text-[#5a4138] dark:text-slate-400 mb-6 text-left text-justify">Fill in your details and a GRC specialist will connect to coordinate a personalized session.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4 text-left">
+                  {/* Google Ads & UTM Attribution Hidden Fields */}
+                  <input type="hidden" name="utm_source" value={attribution.utm_source} />
+                  <input type="hidden" name="utm_medium" value={attribution.utm_medium} />
+                  <input type="hidden" name="utm_campaign" value={attribution.utm_campaign} />
+                  <input type="hidden" name="utm_term" value={attribution.utm_term} />
+                  <input type="hidden" name="utm_content" value={attribution.utm_content} />
+                  <input type="hidden" name="gclid" value={attribution.gclid} />
+
                   <div>
                     <label className="block text-xs font-semibold text-[#0d1b36] dark:text-slate-300 mb-1">Full Name *</label>
                     <input

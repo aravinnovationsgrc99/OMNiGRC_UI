@@ -11,6 +11,13 @@ export interface DemoRequest {
   request_type: RequestType;
   source_page: string;
   status: RequestStatus;
+  // Google Ads & UTM Campaign Attribution
+  utm_source?: string | null;
+  utm_medium?: string | null;
+  utm_campaign?: string | null;
+  utm_term?: string | null;
+  utm_content?: string | null;
+  gclid?: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -23,4 +30,11 @@ export interface CreateDemoRequestPayload {
   message?: string;
   request_type: RequestType;
   source_page: string;
+  // Google Ads & UTM Campaign Attribution (optional)
+  utm_source?: string | null;
+  utm_medium?: string | null;
+  utm_campaign?: string | null;
+  utm_term?: string | null;
+  utm_content?: string | null;
+  gclid?: string | null;
 }

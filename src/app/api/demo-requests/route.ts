@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { createSupabaseServerClient, getSupabaseServiceRoleClient } from "@/lib/supabase-server";
 import { isAuthenticatedAdmin } from "@/lib/admin-auth";
 import { RequestType } from "@/lib/demo-requests";
+import {
+  ATTRIBUTION_COOKIE_NAME,
+  parseAttributionCookie,
+  sanitizeParam,
+  CampaignParamKey,
+  CAMPAIGN_PARAM_KEYS
+} from "@/lib/attribution";
 
 const VALID_REQUEST_TYPES: RequestType[] = ["DEMO", "WALKTHROUGH", "CONTACT", "NEWSLETTER"];
 
@@ -87,7 +94,27 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Message exceeds maximum length of 5000 characters" }, { status: 400 });
     }
 
-    // 3. Save to Supabase using public server client (uses NEXT_PUBLIC_SUPABASE_ANON_KEY)
+    // 3. Extract and sanitize Google Ads & UTM Attribution parameters
+    // Check request body first; fallback to omnigrc_attribution cookie if missing from body
+    const rawCookie = request.cookies.get(ATTRIBUTION_COOKIE_NAME)?.value;
+    const cookieAttribution = parseAttributionCookie(rawCookie);
+
+    const attribution: Record<CampaignParamKey, string | null> = {
+      utm_source: null,
+      utm_medium: null,
+      utm_campaign: null,
+      utm_term: null,
+      utm_content: null,
+      gclid: null
+    };
+
+    for (const key of CAMPAIGN_PARAM_KEYS) {
+      const fromBody = sanitizeParam(body[key]);
+      const fromCookie = cookieAttribution ? sanitizeParam(cookieAttribution[key]) : null;
+      attribution[key] = fromBody || fromCookie || null;
+    }
+
+    // 4. Save to Supabase using public server client (uses NEXT_PUBLIC_SUPABASE_ANON_KEY)
     const supabase = createSupabaseServerClient();
     const { error } = await supabase
       .from("demo_requests")
@@ -100,7 +127,13 @@ export async function POST(request: NextRequest) {
           message,
           request_type,
           source_page,
-          status: "NEW"
+          status: "NEW",
+          utm_source: attribution.utm_source,
+          utm_medium: attribution.utm_medium,
+          utm_campaign: attribution.utm_campaign,
+          utm_term: attribution.utm_term,
+          utm_content: attribution.utm_content,
+          gclid: attribution.gclid
         }
       ]);
 

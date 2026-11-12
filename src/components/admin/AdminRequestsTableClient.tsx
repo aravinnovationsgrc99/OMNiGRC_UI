@@ -319,9 +319,16 @@ export function AdminRequestsTableClient({ initialRequests }: AdminRequestsTable
                     </td>
 
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-0.5 rounded bg-navy-950 text-slate-400 font-mono text-[10px] border border-navy-800">
-                        {req.source_page}
-                      </span>
+                      <div className="flex flex-col gap-1 items-start">
+                        <span className="px-2 py-0.5 rounded bg-navy-950 text-slate-400 font-mono text-[10px] border border-navy-800">
+                          {req.source_page}
+                        </span>
+                        {(req.gclid || req.utm_campaign) && (
+                          <span className="px-1.5 py-0.5 rounded bg-amber-950/60 text-amber-400 font-mono text-[9px] border border-amber-800/80 font-bold">
+                            {req.gclid ? "Google Ads" : req.utm_campaign}
+                          </span>
+                        )}
+                      </div>
                     </td>
 
                     <td className="px-6 py-4 font-mono text-[11px] text-slate-400 whitespace-nowrap">
@@ -438,6 +445,50 @@ export function AdminRequestsTableClient({ initialRequests }: AdminRequestsTable
                   {selectedRequest.message || "No additional message provided."}
                 </div>
               </div>
+
+              {/* Campaign Attribution (Google Ads & UTMs) */}
+              {(selectedRequest.utm_source ||
+                selectedRequest.utm_campaign ||
+                selectedRequest.gclid) && (
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#F15E1C] uppercase font-bold">
+                    <Sparkles className="w-4 h-4 text-[#F15E1C]" />
+                    <span>Paid Ads &amp; Campaign Attribution</span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-2xl bg-navy-950 border border-navy-800 text-xs">
+                    <div>
+                      <p className="text-[10px] font-mono text-slate-400 uppercase">Source / Medium</p>
+                      <p className="font-semibold text-white">
+                        {selectedRequest.utm_source || "direct"} / {selectedRequest.utm_medium || "none"}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-mono text-slate-400 uppercase">Campaign</p>
+                      <p className="font-semibold text-emerald-400">
+                        {selectedRequest.utm_campaign || "N/A"}
+                      </p>
+                    </div>
+                    {selectedRequest.utm_term && (
+                      <div>
+                        <p className="text-[10px] font-mono text-slate-400 uppercase">Keyword / Term</p>
+                        <p className="text-slate-300 font-mono">{selectedRequest.utm_term}</p>
+                      </div>
+                    )}
+                    {selectedRequest.utm_content && (
+                      <div>
+                        <p className="text-[10px] font-mono text-slate-400 uppercase">Ad Content</p>
+                        <p className="text-slate-300">{selectedRequest.utm_content}</p>
+                      </div>
+                    )}
+                    {selectedRequest.gclid && (
+                      <div className="sm:col-span-2 pt-1 border-t border-navy-800">
+                        <p className="text-[10px] font-mono text-slate-400 uppercase">Google Click ID (GCLID)</p>
+                        <p className="font-mono text-xs text-amber-300 break-all select-all">{selectedRequest.gclid}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
               {/* Timestamps */}
               <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-400 border-t border-navy-800 pt-4">
